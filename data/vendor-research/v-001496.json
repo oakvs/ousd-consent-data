@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://eoydc.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eoydc.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237334590",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001496",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'East Oakland Youth Development Center' (ProPublica Nonprofit Explorer, EIN 23-7334590, Oakland, California)",
+      "Located in Oakland, CA (8200 International Blvd), matching the agenda text",
+      "Website describes youth education and career pathways, arts and wellness programs for East Oakland youth, consistent with OUSD's after-school, summer learning and workplace training contracts",
+      "EIN on the organization's own About page matches the ProPublica registry record"
+    ],
+    "key": "v-001496",
+    "notes": "Neither eoydc.org page mentions OUSD directly; identity rests on name, city, registry EIN match and program fit. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "8200 International BLVD., Oakland, CA. 94621",
+      "caEntityNumber": null,
+      "ein": "23-7334590",
+      "email": "infoplease@eoydc.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "East Oakland Youth Development Center",
+      "orgType": "nonprofit",
+      "phone": "+1 (510) 569 8088",
+      "samUei": null,
+      "summary": "A nonprofit based in East Oakland, California, that has served young people since 1978. It runs youth programs in education and careers, visual and performing arts, and wellness for youth from kindergarten through adulthood. Nearly all programs are offered at no cost to families.",
+      "website": "https://eoydc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - East Oakland Youth Development Center",
+        "url": "https://eoydc.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein",
+          "legalName"
+        ],
+        "title": "About - East Oakland Youth Development Center",
+        "url": "https://eoydc.org/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Oakland Youth Development Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237334590"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001496",
+    "notes": "Name, Oakland location, EIN 23-7334590 (501(c)(3)), and youth after-school/summer/career programs match OUSD's records; contact fields, 1978 founding, program areas and K-to-adulthood range confirmed on cited pages. The 'nearly all programs at no cost' line appears on eoydc.org's homepage (not a cited source) but is accurate; no OUSD mention on the cited pages, so identity rests on name, city, EIN and program fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/264513862",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.misssey.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-misssey",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'MISSSEY, Inc. (Motivating, Inspiring, Supporting, and Serving Sexually Exploited Youth)'; ProPublica lists a registered 501(c)(3) nonprofit 'Motivating Inspiring Supporting And Serving Sexually Exploited Youth', EIN 26-4513862, in Oakland, CA",
+      "misssey.org describes the same organization (MISSSEY) with its office at 1800 55th Ave, Oakland, CA 94621, matching the agenda location of Oakland, CA",
+      "Services for youth impacted by sexual exploitation, including a drop-in center for ages 12-25, are consistent with OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "n-misssey",
+    "notes": null,
+    "profile": {
+      "address": "1800 55th Ave, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "26-4513862",
+      "email": "Info@misssey.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Motivating Inspiring Supporting And Serving Sexually Exploited Youth",
+      "orgType": "nonprofit",
+      "phone": "(510) 251-2070",
+      "samUei": null,
+      "summary": "MISSSEY is an Oakland nonprofit that supports girls and gender-expansive youth ages 12 to 25 who have been affected by sexual exploitation. It offers one-on-one coaching, a drop-in center, housing help in Alameda and Contra Costa Counties, and skills-building programs. It also provides training to community members and professionals on preventing sexual exploitation.",
+      "website": "https://www.misssey.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Motivating Inspiring Supporting And Serving Sexually Exploited Youth - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/264513862"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "MISSSEY",
+        "url": "https://www.misssey.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-misssey",
+    "notes": "The agenda's full name (Motivating, Inspiring, Supporting, and Serving Sexually Exploited Youth) matches the ProPublica 501(c)(3) record (EIN 26-4513862, Oakland, CA) and the misssey.org site (1800 55th Ave, Oakland). The summary, phone, generic info email and address are all supported and neutral, and the youth-services scope fits the district's student support category.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

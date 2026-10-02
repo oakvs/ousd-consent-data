@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.onegoal.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.onegoal.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/562369898",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009885",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Registered 501(c)(3) nonprofit 'Onegoal' in Chicago, IL (ProPublica Nonprofit Explorer, EIN 56-2369898), matching the agenda location 'Chicago, IL'",
+      "OneGoal's own contact page lists headquarters at 17 N State Street, Chicago, IL 60602",
+      "OneGoal's California page says it works in Oakland, partnering with Oakland Technical High School and Aspire Lionel Wilson College Preparatory Academy",
+      "OneGoal provides postsecondary (college and career) advising in high schools, matching OUSD's 'Classroom & academic programs' contracts with the High School Linked Learning Office and Met West High School"
+    ],
+    "key": "v-009885",
+    "notes": "Email not found on the pages fetched (contact form only). ProPublica lists the name as 'Onegoal'. California page (onegoal.org/california/) confirms Oakland work but does not name Oakland Unified specifically.",
+    "profile": {
+      "address": "17 N State Street, Suite 1890, Chicago, IL 60602",
+      "caEntityNumber": null,
+      "ein": "56-2369898",
+      "email": null,
+      "headquarters": "Chicago, IL",
+      "legalName": "OneGoal",
+      "orgType": "nonprofit",
+      "phone": "773.321.2630",
+      "samUei": null,
+      "summary": "OneGoal is a nonprofit that partners with schools and school districts to improve college and career advising for high school students. It trains teachers and school staff to help students plan for life after high school and stay on track in college. It works in more than ten states, including California.",
+      "website": "https://www.onegoal.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "ein",
+          "website"
+        ],
+        "title": "About Us | OneGoal",
+        "url": "https://www.onegoal.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | OneGoal",
+        "url": "https://www.onegoal.org/contact/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Onegoal - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/562369898"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009885",
+    "notes": "OneGoal is a Chicago-based 501(c)(3) (EIN 56-2369898 confirmed on ProPublica and its own site) and its California page lists MetWest High School in Oakland among partner schools, matching the Met West agreement and the Chicago, IL agenda location. Contact details, address, EIN and nonprofit type are confirmed by the cited pages; the summary is neutral and consistent with the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

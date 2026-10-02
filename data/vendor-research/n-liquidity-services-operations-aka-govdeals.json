@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://liquidityservices.com/company/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://liquidityservices.com/marketplace/govdeals",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/sam-entity/TAAJK6CGNL21",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-liquidity-services-operations-aka-govdeals",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "SAM.gov registration (via OpenGovUS mirror) lists 'LIQUIDITY SERVICES OPERATIONS LLC' at 6931 Arlington Rd, Bethesda, MD, matching the agenda's name and 'Bethesda, MD'",
+      "Liquidity Services' GovDeals Marketplace page describes GovDeals as an online auction marketplace for government surplus assets, matching OUSD's 'Auctioneer Services' piggyback agreement paid from a percentage of sales proceeds",
+      "Liquidity Services' Contact Us page gives the same Bethesda, MD headquarters street address (6931 Arlington Road Suite 460)"
+    ],
+    "key": "n-liquidity-services-operations-aka-govdeals",
+    "notes": "Phone and email are the parent company's (Liquidity Services) main lines, not GovDeals-specific support lines. govdeals.com blocked automated fetching, so the website listed is the GovDeals page on the parent company's site. The SAM record via OpenGovUS shows no DBA name and lists registration status as expired at the time of fetch.",
+    "profile": {
+      "address": "6931 Arlington Road Suite 460, Bethesda, MD 20814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Info@LiquidityServices.com",
+      "headquarters": "Bethesda, MD",
+      "legalName": "LIQUIDITY SERVICES OPERATIONS LLC",
+      "orgType": "company",
+      "phone": "1-800-310-4604",
+      "samUei": "TAAJK6CGNL21",
+      "summary": "Liquidity Services Operations LLC does business as GovDeals. GovDeals runs an online auction marketplace where government agencies sell surplus items such as vehicles, equipment and real estate to the public. It is part of Liquidity Services, Inc., which is based in Bethesda, Maryland.",
+      "website": "https://liquidityservices.com/marketplace/govdeals"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Liquidity Services",
+        "url": "https://liquidityservices.com/company/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "GovDeals Marketplace | Liquidity Services",
+        "url": "https://liquidityservices.com/marketplace/govdeals"
+      },
+      {
+        "supports": [
+          "legalName",
+          "samUei"
+        ],
+        "title": "System for Award Management (SAM) Registered Entities",
+        "url": "https://opengovus.com/sam-entity/TAAJK6CGNL21"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-liquidity-services-operations-aka-govdeals",
+    "notes": "The SAM record shows Liquidity Services Operations LLC at the Bethesda, MD address used in the agenda, and the GovDeals marketplace page confirms an online government-surplus auction service that fits the percentage-of-proceeds auctioneer piggyback agreement. Phone and email are the parent company's main lines, shown on its Contact Us page, and the 'does business as GovDeals' wording comes from the agenda's 'aka' rather than the SAM record, but the summary is neutral and otherwise supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

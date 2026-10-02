@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://firstteeoakland.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://firstteeoakland.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/872495490",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008329",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The organization's own website identifies 'East Bay Youth Development Foundation, Inc., DBA First Tee - Oakland', matching the agenda name 'First Tee Oakland'",
+      "Registered 501(c)(3) youth development nonprofit in Oakland, CA (ProPublica Nonprofit Explorer, EIN 87-2495490), matching the agenda location",
+      "Website describes golf and life-skills programs for Oakland kids and teens, consistent with OUSD's 'After-school & summer programs' category"
+    ],
+    "key": "v-008329",
+    "notes": "General email on the site is obfuscated (Cloudflare protection), so it was left null. No phone number is published on the pages reviewed. The site does not explicitly mention OUSD; the link rests on the registry, name and location match and the program type. CA entity number and SAM UEI were not checked (search budget exhausted).",
+    "profile": {
+      "address": "7901 Oakport Street, Ste. 4450, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "87-2495490",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Youth Development Foundation, Inc.",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "First Tee - Oakland is a nonprofit youth development organization that teaches golf together with life skills such as honesty, integrity, confidence and respect. It serves kids and teens in the Oakland area.",
+      "website": "https://firstteeoakland.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "address",
+          "headquarters",
+          "ein",
+          "orgType"
+        ],
+        "title": "First Tee - Oakland",
+        "url": "https://firstteeoakland.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein",
+          "address"
+        ],
+        "title": "About Us - First Tee - Oakland",
+        "url": "https://firstteeoakland.org/about-us/"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "East Bay Youth Development Foundation Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/872495490"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008329",
+    "notes": "The organization's site and ProPublica agree on East Bay Youth Development Foundation, Inc. DBA First Tee - Oakland, an Oakland 501(c)(3) (EIN 87-2495490, exempt since 2022) that pairs golf with life-skills programs for Oakland youth, which fits OUSD's no-cost after-school agreements from 2022-23 onward. The summary and address are supported and neutral; the sources do not name OUSD directly, but the exact name, city and program type match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

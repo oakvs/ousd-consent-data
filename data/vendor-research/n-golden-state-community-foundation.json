@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/454001645",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/45-4001645",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://community.warriors.com/foundation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://valkyries.wnba.com/news/golden-state-community-foundation-surpasses-50-million-in-cumulative-impact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-golden-state-community-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Golden State Community Foundation' (ProPublica Nonprofit Explorer, EIN 45-4001645)",
+      "The foundation's own site describes education and youth grantmaking in the Bay Area, matching OUSD's 'Classroom & academic programs' grant from 'Golden State Community Foundation Grants' (elementary literacy is a stated focus area)",
+      "A public Golden State Community Foundation news item states the foundation gives Oakland Unified School District an annual flagship grant of $250,000"
+    ],
+    "key": "n-golden-state-community-foundation",
+    "notes": "Phone and email omitted: no page fetched showed them. Foundation was formerly the Golden State Warriors Community Foundation. The specific 'Reading Champions' grant was not found in public sources, but name, funder role and OUSD grant relationship match.",
+    "profile": {
+      "address": "1 Warriors Way, San Francisco, CA 94158",
+      "caEntityNumber": null,
+      "ein": "45-4001645",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Golden State Community Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit, formerly the Golden State Warriors Community Foundation, that supports education and youth development in the Bay Area. It makes grants to nonprofits and school districts for programs such as elementary literacy, STEAM, college access and career preparation, and also refurbishes basketball courts and donates game tickets.",
+      "website": "https://community.warriors.com/foundation/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Golden State Community Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/454001645"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Golden State Community Foundation - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/45-4001645"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Golden State Community Foundation",
+        "url": "https://community.warriors.com/foundation/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Golden State Community Foundation Surpasses $50 Million In Cumulative Impact",
+        "url": "https://valkyries.wnba.com/news/golden-state-community-foundation-surpasses-50-million-in-cumulative-impact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-golden-state-community-foundation",
+    "notes": "Identity is consistent: EIN 45-4001645 nonprofit in San Francisco, an education and youth grantmaker whose news item names an annual $250,000 OUSD grant. However, the summary's claim that it was 'formerly the Golden State Warriors Community Foundation' appears in none of the cited sources or in anything else I could fetch, so the summary is not fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

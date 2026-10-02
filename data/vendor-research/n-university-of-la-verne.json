@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/api/v2/search.json?q=University+of+La+Verne",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/University_of_La_Verne",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-university-of-la-verne",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'University Of La Verne', EIN 95-1644026, La Verne, CA (ProPublica Nonprofit Explorer search)",
+      "Wikipedia describes the University of La Verne as a private university in La Verne, California with education and business colleges and regional campuses in the greater Los Angeles area, plausible for a university MOU with OUSD Talent/Human Resources (staff and hiring); no page found directly linking it to OUSD"
+    ],
+    "key": "n-university-of-la-verne",
+    "notes": "The university's own site (laverne.edu / ulv.edu) blocked automated fetching (403 / connection refused), the search tool budget was exhausted, and ProPublica organization pages were rate-limited, so contact details were not verified and are left null. Website comes from Wikipedia only. No source linked the university to OUSD directly, so confidence is capped at medium.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "95-1644026",
+      "email": null,
+      "headquarters": "La Verne, CA",
+      "legalName": "University Of La Verne",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private university in La Verne, California. It offers undergraduate and graduate degrees through several colleges, including Arts and Sciences, Business and Public Management, Education, Law, and Health and Community Well-Being. It also runs regional campuses in the greater Los Angeles area and Kern County.",
+      "website": "https://laverne.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "ProPublica Nonprofit Explorer search: University of La Verne",
+        "url": "https://projects.propublica.org/nonprofits/api/v2/search.json?q=University+of+La+Verne"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "University of La Verne - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/University_of_La_Verne"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

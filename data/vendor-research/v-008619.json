@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.qka.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.qka.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/garfield-elementary-school",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008619",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: Quattrocchi Kwok Architects (QKA), with an Oakland, CA office at 55 Harrison Street, matching the agenda location Oakland, CA",
+      "OUSD's own Garfield Elementary School project page names Quattrocchi Kwok Architects as the architect, matching the agenda's Garfield Elementary School Site Renovation agreements",
+      "Firm's website describes K-12 school architecture, matching OUSD's 'School buildings & construction' category"
+    ],
+    "key": "v-008619",
+    "notes": "Legal entity name, CA Secretary of State number, EIN and UEI not confirmed (registries not checked successfully). Headquarters left null: the firm's contact page lists Santa Rosa first but does not clearly label a headquarters. The phone number is shared by the Santa Rosa and Oakland offices.",
+    "profile": {
+      "address": "55 Harrison Street, Ste. 525, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@qka.com",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(707) 576-0829",
+      "samUei": null,
+      "summary": "Quattrocchi Kwok Architects (QKA) is an architecture firm that designs school buildings and campuses. It provides master planning, design and construction administration services, mainly for K-12 schools and higher education in Northern California. It has offices in Santa Rosa and Oakland, California, and in Colorado.",
+      "website": "https://www.qka.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - QKA",
+        "url": "https://www.qka.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "QKA",
+        "url": "https://www.qka.com/"
+      },
+      {
+        "supports": [],
+        "title": "Garfield Elementary School - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/garfield-elementary-school"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008619",
+    "notes": "Same firm: qka.com lists the Oakland office at 55 Harrison St Ste 525, and OUSD's Garfield Elementary project page names Quattrocchi Kwok Architects as the architect. Phone, email and address are on the cited contact page, and the summary is supported by QKA's own boilerplate (master planning and design for K-12 and higher education in Northern California), though not on the cited homepage itself.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

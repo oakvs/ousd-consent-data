@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.techexchange.org/contactus",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.techexchange.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/922199377",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/familycentral/home-technology-access",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-tech-exchange",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered Oakland nonprofit: 'Oakland Tech Exchange', EIN 92-2199377, Oakland, CA (ProPublica Nonprofit Explorer, GuideStar), matching the agenda name and location",
+      "Its website techexchange.org says it is formerly known as Oakland Tech Exchange West / OTX and is based at 1716 Telegraph Ave, Oakland",
+      "OUSD's own Home Technology Access page lists Tech Exchange (techexchange.org) as a partner for digital skills support, consistent with a no-cost services agreement from the Chief Academic Officer"
+    ],
+    "key": "n-oakland-tech-exchange",
+    "notes": "Legal name per IRS/ProPublica is 'Oakland Tech Exchange'; the organization brands itself 'Tech Exchange'. The 'High School Network' in the agenda title appears to be a program name; not verified. California Secretary of State entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1716 Telegraph Ave., Oakland CA, 94612",
+      "caEntityNumber": null,
+      "ein": "92-2199377",
+      "email": "Support@TechExchange.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Tech Exchange",
+      "orgType": "nonprofit",
+      "phone": "(510) 866-2260",
+      "samUei": null,
+      "summary": "Tech Exchange is an Oakland-based nonprofit that works on digital equity for families in the Bay Area. It refurbishes donated computers, offers digital skills training in several languages, promotes broadband adoption and provides tech support.",
+      "website": "https://www.techexchange.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Tech Exchange",
+        "url": "https://www.techexchange.org/contactus"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Tech Exchange",
+        "url": "https://www.techexchange.org"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Oakland Tech Exchange - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/922199377"
+      },
+      {
+        "supports": [],
+        "title": "Home Technology Access - Oakland Unified School District",
+        "url": "https://www.ousd.org/familycentral/home-technology-access"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-oakland-tech-exchange",
+    "notes": "techexchange.org (Oakland, 1716 Telegraph Ave; formerly Oakland Tech Exchange West/OTX) is an Oakland digital-equity nonprofit that OUSD's own Home Technology Access page lists as a partner, which fits a no-cost services agreement; the summary, contact details and address are supported by the cited pages. The EIN is only matched by name on ProPublica (no address or site link shown), so it is dropped as unconfirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "ein"
+    ],
+    "verdict": "confirmed"
+  }
+}

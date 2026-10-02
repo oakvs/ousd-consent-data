@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://spgtherapy.com/clinic-services/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://spgtherapy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://spgtherapy.com/school-based/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://spgtherapy.com/clinic-services/resource-center/frequently-asked-questions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-spg-therapy-and-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "SPG's own website (spgtherapy.com) shows the legal/footer name 'The Speech Pathology Group' and describes a multidisciplinary therapy provider; OUSD's earlier master contract (Legistar File 22-2317) is with 'Speech Pathology Group, Walnut Creek, CA' for special education services for students with an IEP, matching the agenda's 'SPG Therapy & Education, Walnut Creek, CA' and Special Education Department",
+      "SPG's website says it is a California-based, State Certified Nonpublic Agency (NPA), matching OUSD's 'Nonpublic, Nonsectarian School, Agency Master Contract' titles",
+      "SPG's FAQ says it operates a Walnut Creek clinic, matching the agenda location"
+    ],
+    "key": "n-spg-therapy-and-education",
+    "notes": "Agenda gives Walnut Creek, CA; SPG's website lists a Concord, CA headquarters address and also a Walnut Creek clinic. The legal name 'The Speech Pathology Group' is from the site footer; no CA Secretary of State entity number, EIN, or SAM UEI was verified, and orgType was not confirmed from a registry so it is left null.",
+    "profile": {
+      "address": "1320 Willow Pass Rd, Suite 700 | Concord, CA 94520",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@spgtherapy.com",
+      "headquarters": "Concord, CA",
+      "legalName": "The Speech Pathology Group",
+      "orgType": null,
+      "phone": "925-945-1474",
+      "samUei": null,
+      "summary": "SPG Therapy & Education is a California-based provider of therapy and education services for children and adults, including speech-language pathology, occupational therapy, physical therapy, behavior intervention, school psychology and mental health services. It offers clinic-based and school-based services and describes itself as a State Certified Nonpublic Agency that has operated since 1989.",
+      "website": "https://spgtherapy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "SPG - Contact Us",
+        "url": "https://spgtherapy.com/clinic-services/contact-us/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "SPG",
+        "url": "https://spgtherapy.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SPG - School-Based Services",
+        "url": "https://spgtherapy.com/school-based/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SPG - Frequently Asked Questions",
+        "url": "https://spgtherapy.com/clinic-services/resource-center/frequently-asked-questions/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-spg-therapy-and-education",
+    "notes": "SPG (The Speech Pathology Group) states it is a State Certified Nonpublic Agency with a Walnut Creek clinic, matching the agenda's Walnut Creek location and the NPA master-contract titles. Contact details, services and legal name are confirmed on cited pages; the 1989 date appears on the school-based page (as California roots since 1989); I could not independently re-check the Legistar 22-2317 claim because my search budget was exhausted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

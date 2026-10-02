@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/the-kdi-group-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.constrafor.com/network/california/1/the-kdi-group",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-002377",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California general corporation: 'The Kdi Group, Inc.', Oakland, CA (bizprofile.net filing information, document #3049989, active)",
+      "Located in Oakland, CA, matching the agenda text; the registry mailing address (5111 Telegraph Ave #144, Oakland, CA 94609) matches the Constrafor profile",
+      "Constrafor describes it as a construction services company in Oakland, matching OUSD's school buildings & construction contracts for inspector of record services"
+    ],
+    "key": "v-002377",
+    "notes": "Company website (kdigrp.com per Constrafor) could not be fetched, so website and email are left null. A separate site, 'KDI Inc.' (kdiinc.godaddysites.com, San Diego-area phone), was not confirmed to be the same organization and was not used.",
+    "profile": {
+      "address": "5111 Telegraph Ave #144, Oakland, CA 94609",
+      "caEntityNumber": "3049989",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "The Kdi Group, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A construction services company based in Oakland, California. It is incorporated in California as a general corporation and was formed in 2007.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "The Kdi Group, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/the-kdi-group-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "headquarters"
+        ],
+        "title": "The KDI Group Inc",
+        "url": "https://www.constrafor.com/network/california/1/the-kdi-group"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002377",
+    "notes": "Exact name, Oakland location and construction-services description match OUSD's inspector-of-record agreements, and the CA registry (entity 3049989, general corporation, formed 2007) supports the summary. The candidate's claim that the registry address matches Constrafor is wrong: the registry lists 1392 E. 31st Ave, Oakland, while Constrafor lists 5111 Telegraph Ave #144, so the address field is conflicting and should be dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
+}

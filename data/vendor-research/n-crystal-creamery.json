@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.crystalcreamery.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.crystalcreamery.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.crystalcreamery.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-crystal-creamery",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Crystal Creamery's own Contact page gives its headquarters address in Modesto, CA, matching the agenda text 'Modesto, CA'",
+      "Company makes milk, ice cream, butter, cottage cheese, sour cream and juice and sells through foodservice channels, consistent with OUSD's Nutrition Services grocery products bid (K-12 meal program)"
+    ],
+    "key": "n-crystal-creamery",
+    "notes": "Web search budget was exhausted, so no registry (CA SOS, SAM.gov) was checked; EIN, entity number and UEI left null. Identity rests on the company's own site matching Modesto and dairy/foodservice. About page says main manufacturing plant is in Sacramento; HQ address on the contact page is Modesto.",
+    "profile": {
+      "address": "529 Kansas Avenue, Modesto, CA 95351",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "customerserviceshared@crystalcreamery.com",
+      "headquarters": "Modesto, CA",
+      "legalName": "Crystal Creamery, Inc.",
+      "orgType": "company",
+      "phone": "209-576-3400",
+      "samUei": null,
+      "summary": "A California dairy company that makes and sells milk, ice cream, butter, cottage cheese, sour cream, juice and other specialty products. It serves retail, foodservice, bulk and private-label customers. It has operated for more than a century and is owned by Foster Dairy Farms.",
+      "website": "https://www.crystalcreamery.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Crystal Creamery",
+        "url": "https://www.crystalcreamery.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Crystal Creamery",
+        "url": "https://www.crystalcreamery.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Our Story | Crystal Creamery",
+        "url": "https://www.crystalcreamery.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-crystal-creamery",
+    "notes": "Crystal Creamery's own contact page lists Crystal Creamery, Inc. at 529 Kansas Avenue, Modesto, CA, matching the agenda location, and a dairy supplier fits a K-12 grocery products bid. The about page supports the products, channels, 1901 founding and Foster Dairy Farms ownership; the phone and general business email appear on the contact page. I could not independently confirm the OUSD award itself because the search budget was exhausted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

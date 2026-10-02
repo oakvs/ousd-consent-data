@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://ofcy.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ofcy.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-city-of-oakland-oakland-fund-for-children-and-youth",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The OFCY website names 'Oakland Fund for Children and Youth (OFCY)', matching the agenda text, and lists a mailing address in Oakland, CA, matching the agenda location",
+      "OFCY's About page says it operates under the 'Kids First! Oakland Children's Fund' within the City of Oakland's Human Services Department, matching OUSD's 'Grant Agreement - Kids First! - City of Oakland, Oakland Fund for Children and Youth (OFCY)' titles",
+      "The City of Oakland site lists OFCY under Child and Youth Services in the Human Services Department"
+    ],
+    "key": "n-city-of-oakland-oakland-fund-for-children-and-youth",
+    "notes": "Public program of the City of Oakland, so no EIN, state entity number or UEI is listed. No general email address was found on the pages checked. The OFCY site does not mention OUSD directly; identity rests on name, location and the Kids First! funding match. Web search budget was exhausted, so only direct page fetches were used.",
+    "profile": {
+      "address": "150 Frank H. Ogawa Plaza, Ste. 4212, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 238-6379",
+      "samUei": null,
+      "summary": "The Oakland Fund for Children and Youth (OFCY) is a City of Oakland program that gives grants to community-based organizations serving Oakland children and youth from birth to age 21. It has funded programs in areas such as education, career readiness, health and community engagement since 1996. It is paid for through the Kids First! Oakland Children's Fund and is run by the Human Services Department.",
+      "website": "https://ofcy.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Oakland Fund for Children and Youth (OFCY)",
+        "url": "https://ofcy.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - Oakland Fund for Children and Youth",
+        "url": "https://ofcy.org/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-city-of-oakland-oakland-fund-for-children-and-youth",
+    "notes": "ofcy.org and /about-us/ confirm OFCY is a City of Oakland Human Services program funded by the Kids First! Oakland Children's Fund, matching the OUSD grant agreement titles, and the summary is supported and neutral. The home page gives conflicting contact details (Suite 4216 / 510-238-3088 in the main block vs Ste. 4212 / 510.238.6379 in the footer), so phone and address are dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "phone",
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942311291",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collaborativeclassroom.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collaborativeclassroom.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collaborativeclassroom.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001014",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Center For The Collaborative Classroom' (ProPublica Nonprofit Explorer, EIN 94-2311291, Alameda, CA)",
+      "Headquartered in Alameda, CA, matching the 'Alameda, CA' location in the agenda text",
+      "Organization's own website describes literacy and social-emotional learning curricula and professional development for K-12 and early childhood educators, matching OUSD's 'Classroom & academic programs' contracts with the Chief Academic Officer and Early Childhood Development departments"
+    ],
+    "key": "v-001014",
+    "notes": "No general inbox found; contact page lists only department-specific emails, so email is null. California Secretary of State entity number and SAM.gov UEI not looked up (registry searches not reachable by fetch).",
+    "profile": {
+      "address": "1001 Marina Village Parkway, Suite 110, Alameda, CA 94501-1042",
+      "caEntityNumber": null,
+      "ein": "94-2311291",
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": "Center for the Collaborative Classroom",
+      "orgType": "nonprofit",
+      "phone": "510.533.0213",
+      "samUei": null,
+      "summary": "A nonprofit organization that develops literacy and social-emotional learning programs for early childhood through grade 12 classrooms. It publishes curricula such as Being a Reader, Being a Writer and SIPPS, and provides professional development and implementation support for teachers. It operates as Collaborative Classroom.",
+      "website": "https://www.collaborativeclassroom.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Center For The Collaborative Classroom - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942311291"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact Us - Collaborative Classroom",
+        "url": "https://www.collaborativeclassroom.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About - Collaborative Classroom",
+        "url": "https://www.collaborativeclassroom.org/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Collaborative Classroom",
+        "url": "https://www.collaborativeclassroom.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001014",
+    "notes": "Name, Alameda CA location, EIN 94-2311291 (501(c)(3)), phone and address all match the cited ProPublica and organization pages, and its literacy/SEL curricula and PD fit OUSD's academic and early childhood contracts. The summary is neutral and each stated fact is supported by the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

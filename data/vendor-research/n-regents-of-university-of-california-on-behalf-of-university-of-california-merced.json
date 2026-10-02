@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/University_of_California,_Merced",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-on-behalf-of-university-of-california-merced",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Regents of the University of California, on behalf of University of California, Merced'; Wikipedia confirms UC Merced is a campus of the University of California system, which the Regents govern",
+      "UC Merced's TK Teacher Residency Program places teacher residents at transitional kindergarten sites in Oakland Unified (per UC Merced teacher preparation program page in search results), consistent with an OUSD Talent/Human Resources agreement",
+      "A UC news page (universityofcalifornia.edu) lists a UC Merced-led early childhood teacher effort that includes Oakland Unified School District as a partner (with UC Berkeley)"
+    ],
+    "key": "n-regents-of-university-of-california-on-behalf-of-university-of-california-merced",
+    "notes": "ucmerced.edu pages (contact, HR, program pages) return 403 to automated fetching, so website, phone, email and address could not be verified and were left null. Search results indicate main campus at 5200 N. Lake Rd, Merced, CA 95343, (209) 228-4400; reviewer may add manually.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "UC Merced is a public land-grant research university in Merced County, California. It is the tenth and newest campus of the University of California system, which opened in 2005.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "University of California, Merced - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/University_of_California,_Merced"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-regents-of-university-of-california-on-behalf-of-university-of-california-merced",
+    "notes": "The agenda names the Regents of the University of California on behalf of UC Merced, a public university campus, and the profile describes exactly that campus; the Wikipedia source supports the summary (public land-grant research university in Merced County, tenth and newest UC campus, established 2005) and orgType. The summary is neutral and all other fields are null; an HR/talent MOU with a UC campus is plausible.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

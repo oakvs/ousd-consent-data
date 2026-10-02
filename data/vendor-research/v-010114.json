@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.calichi.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.calichi.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.calichi.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010114",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Headquartered in Oakland, CA (3206 Hannah Street #3), matching the agenda location 'Oakland, CA'",
+      "Firm is a civil engineering consultancy, matching the agenda's 'Civil Engineering Consulting Services' for Facilities Planning and Management",
+      "Its own website lists Oakland Unified School District as a client and says it is SLBE (Small Local Business Enterprise) certified for OUSD, and describes a rebuilt OUSD campus project"
+    ],
+    "key": "v-010114",
+    "notes": "Identity confirmed from the firm's own website only; the web search budget was exhausted so no registry (CA Secretary of State, SAM.gov) was checked. Agenda text says 'LLC' while the official title says 'Inc.'; the website shows no entity suffix, so legalName and registry IDs were left null. A general email (reco@calichi.com) was shown on the contact page but may be a person's inbox, so it was omitted.",
+    "profile": {
+      "address": "3206 Hannah Street #3, Oakland, CA 94608",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 250-7877",
+      "samUei": null,
+      "summary": "Calichi Design Group is a civil engineering firm founded in 2009. It provides site civil engineering and dry utility design for land development projects, including grading plans, drainage and stormwater management, utility coordination, fire access planning, and construction administration. It works across the western United States.",
+      "website": "https://www.calichi.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Calichi Design Group",
+        "url": "https://www.calichi.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Calichi Design Group | (510) 250-7877",
+        "url": "https://www.calichi.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Calichi — Civil Engineering Firm Since 2009",
+        "url": "https://www.calichi.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010114",
+    "notes": "The firm's own site shows an Oakland-headquartered civil engineering firm (Calichi Design Group) that lists OUSD as a client and is SLBE-certified for OUSD, matching the agenda's Oakland civil engineering consulting contract. Website, phone, address, headquarters, orgType and summary are all supported by the cited pages; the summary is neutral and no personal contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

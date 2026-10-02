@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941674865",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wi.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-wright-institute",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Wright Institute' in Berkeley, CA (ProPublica Nonprofit Explorer, EIN 94-1674865), matching the agenda's 'Wright Institute', Berkeley, CA",
+      "Organization's own website (wi.edu) shows it is a graduate institution based in Berkeley, CA that trains clinicians in clinical and counseling psychology, consistent with a Talent/Human Resources memorandum of understanding and interagency agreement (staffing and training pipeline)",
+      "The only other California 'Wright Institute' in the registry search is in Los Angeles, which does not match the Berkeley location"
+    ],
+    "key": "n-wright-institute",
+    "notes": "No page found mentioning Oakland Unified directly, so the link to the Talent/HR agreement is inferred from the name and Berkeley location matching. The institute lists two Berkeley campuses (2728 Durant Avenue, 94704 for the PsyD; 1000 Dwight Way, 94710 for the MA), so no single mailing address was chosen. No general email address was shown on the pages read. Web search budget was exhausted, so the California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1674865",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Wright Institute",
+      "orgType": "nonprofit",
+      "phone": "510.841.9230",
+      "samUei": null,
+      "summary": "The Wright Institute is a nonprofit graduate school in Berkeley, California. It was founded in 1968 and trains students to become clinicians through a Doctor of Psychology (PsyD) program in clinical psychology and a Master of Arts program in counseling psychology.",
+      "website": "https://www.wi.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Wright Institute - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941674865"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "About - The Wright Institute",
+        "url": "https://www.wi.edu/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-wright-institute",
+    "notes": "The agenda's 'Wright Institute' in Berkeley, CA matches the Berkeley 501(c)(3) graduate psychology school (EIN 94-1674865 on ProPublica; wi.edu/about confirms the 1968 founding, PsyD and MA programs, and phone). A Talent/HR MOU with a psychology graduate school is plausible, though no source links the institute to OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

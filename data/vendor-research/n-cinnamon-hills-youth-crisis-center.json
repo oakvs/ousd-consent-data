@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/870573781",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cinnamonhills.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cinnamonhills.org/about-us.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cinnamonhills.org/academics.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-cinnamon-hills-youth-crisis-center",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Cinnamon Hills Youth Crisis Center', EIN 87-0573781, St George, UT (ProPublica Nonprofit Explorer)",
+      "Located in St. George, UT, matching the agenda text 'Saint George, UT'",
+      "Website describes an accredited non-public school with IEP/special education services and certification by the California Department of Education, matching OUSD's 'Nonpublic, Nonsectarian School' special education master contract"
+    ],
+    "key": "n-cinnamon-hills-youth-crisis-center",
+    "notes": "General email on the contact page is obfuscated and could not be read, so it is omitted. Web search budget was exhausted; EIN found via ProPublica search API and confirmed on the ProPublica organization page. Out-of-state (Utah) provider contracted as a nonpublic school.",
+    "profile": {
+      "address": "770 E. St. George Blvd., St. George, UT 84770",
+      "caEntityNumber": null,
+      "ein": "87-0573781",
+      "email": null,
+      "headquarters": "St. George, UT",
+      "legalName": "Cinnamon Hills Youth Crisis Center",
+      "orgType": "nonprofit",
+      "phone": "(435) 674-0984",
+      "samUei": null,
+      "summary": "A nonprofit residential treatment program in St. George, Utah, for youth ages 12 to 17 facing behavioral and emotional challenges. It combines individual, group and family therapy with an on-site school that follows common core standards and carries out Individual Education Plans for students with special education needs.",
+      "website": "https://www.cinnamonhills.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Cinnamon Hills Youth Crisis Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/870573781"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Cinnamon Hills YCC - Home",
+        "url": "https://www.cinnamonhills.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - Cinnamon Hills YCC",
+        "url": "https://www.cinnamonhills.org/about-us.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Academics - Cinnamon Hills YCC",
+        "url": "https://www.cinnamonhills.org/academics.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-cinnamon-hills-youth-crisis-center",
+    "notes": "ProPublica confirms the 501(c)(3) Cinnamon Hills Youth Crisis Center (EIN 87-0573781) in St George, UT, and the organization's own site confirms the address, phone, ages 12-17, therapy types, IEP implementation and California Department of Education certification as a nonprofit non-public school, which fits OUSD's nonpublic school special education master contract. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

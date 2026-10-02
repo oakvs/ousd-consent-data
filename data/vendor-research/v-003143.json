@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandedfund.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/432014630",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003143",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'The Oakland Public Education Fund' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 43-2014630)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website says the organization partners with OUSD to connect volunteers to every Oakland public school, and runs school programs and fiscal sponsorship, matching OUSD's services agreements with schools and departments",
+      "Organization's own website shows the same EIN 43-2014630 as ProPublica"
+    ],
+    "key": "v-003143",
+    "notes": "Street address and mailing PO Box (PO Box 71005, Oakland, CA 94612) both appear on the website; street address used. California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "520 3rd Street, Suite 109",
+      "caEntityNumber": null,
+      "ein": "43-2014630",
+      "email": "info@oaklandedfund.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "The Oakland Public Education Fund",
+      "orgType": "nonprofit",
+      "phone": "510-221-6968",
+      "samUei": null,
+      "summary": "A nonprofit that helps bring community resources to Oakland public schools. It places volunteers in classrooms, offers small grants to educators, runs technology programs, and acts as a fiscal sponsor for school and education projects.",
+      "website": "https://www.oaklandedfund.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein",
+          "orgType"
+        ],
+        "title": "The Oakland Public Education Fund",
+        "url": "https://www.oaklandedfund.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Oakland Public Education Fund - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/432014630"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003143",
+    "notes": "The organization's website and ProPublica both show The Oakland Public Education Fund, EIN 43-2014630, in Oakland, CA. It acts as fiscal sponsor for OUSD schools and departments, which fits the school and department services agreements. All profile fields were confirmed, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

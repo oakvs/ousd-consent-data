@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sca-enviro.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sca-enviro.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sca-enviro.com/clients",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003786",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website names it 'SCA Environmental, Inc.', matching the agenda name exactly",
+      "Based in San Francisco (with an Oakland office), matching the agenda location San Francisco, CA",
+      "Its Clients page lists Oakland Unified School District among its school district clients",
+      "It offers asbestos and lead management and hazardous materials services, consistent with OUSD risk management and facilities renovation contracts"
+    ],
+    "key": "v-003786",
+    "notes": "Registry IDs not found (search budget exhausted, so the California Secretary of State and SAM.gov were not checked). General email on the contact page is obfuscated, so it was omitted.",
+    "profile": {
+      "address": "320 Justin Drive San Francisco, CA 94112",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "SCA Environmental, Inc.",
+      "orgType": "company",
+      "phone": "(415) 882-1675",
+      "samUei": null,
+      "summary": "SCA Environmental, Inc. is an environmental and engineering consulting firm founded in 1992. It provides hazardous materials management, asbestos and lead management, industrial hygiene, site assessment and environmental engineering services to government and private clients. It has offices in San Francisco and Oakland, California.",
+      "website": "https://www.sca-enviro.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "SCA Environmental, Inc.",
+        "url": "https://www.sca-enviro.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - SCA Environmental, Inc.",
+        "url": "https://www.sca-enviro.com/contact"
+      },
+      {
+        "supports": [],
+        "title": "Clients - SCA Environmental, Inc.",
+        "url": "https://www.sca-enviro.com/clients"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003786",
+    "notes": "SCA Environmental, Inc. name matches the agenda exactly, it is based in San Francisco, and its Clients page lists Oakland Unified School District; its asbestos, lead and hazmat services fit the OUSD risk management and facilities contracts. Summary, phone, address and headquarters are confirmed on the homepage and contact page, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.grouptrail.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.grouptrail.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008779",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the Grouptrail website is for 'Grouptrail', the vendor name in the agenda text",
+      "The About page says Grouptrail is headquartered in Portland, Oregon, matching the agenda location 'Portland, OR'",
+      "Grouptrail's website describes program-management software for education and workforce programs, matching OUSD's Linked Learning Department classroom and academic programs contracts",
+      "Grouptrail's website lists Oakland Unified School District among its clients"
+    ],
+    "key": "v-008779",
+    "notes": "Legal name FMYI, Inc. comes from the website copyright line; not confirmed in a state registry (search budget unavailable). The site's Contact page showed placeholder-looking details (support@example.com and a New Zealand address), so those were not used. Email hello@grouptrail.com comes from the About page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello@grouptrail.com",
+      "headquarters": "Portland, OR",
+      "legalName": "FMYI, Inc.",
+      "orgType": "company",
+      "phone": "+1.971.222.3016",
+      "samUei": null,
+      "summary": "Grouptrail is a software company that makes configurable platforms for education and workforce organizations. Its tools help schools, colleges and community partners manage programs such as career pathways, and track data, communications and outcomes.",
+      "website": "https://www.grouptrail.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "About Grouptrail",
+        "url": "https://www.grouptrail.com/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "legalName"
+        ],
+        "title": "Grouptrail",
+        "url": "https://www.grouptrail.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008779",
+    "notes": "Grouptrail (FMYI, Inc.) is Portland, OR-based program-management software for education and workforce programs, and its homepage lists Oakland Unified School District as a client, which fits the Linked Learning services agreements. Summary, contact, headquarters and legal name are all shown on the cited About and home pages; only business contacts are used.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

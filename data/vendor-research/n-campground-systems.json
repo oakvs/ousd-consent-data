@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/campground-systems-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://getcampground.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://getcampground.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-campground-systems",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California stock corporation: 'Campground Systems Inc.' at 1721 Broadway, Oakland, CA 94612 (bizprofile.net filing page, entity number shown), matching the agenda's 'Campground Systems' in Oakland, CA",
+      "The company's website getcampground.com links Terms of Use and Privacy Policy documents titled 'Campground Systems', tying the website to the registered entity",
+      "Website describes software for program managers to run and report on programs, consistent with OUSD's 'Technology' services agreement for the Adult and Career Education Department",
+      "No public page found that directly names OUSD as a customer"
+    ],
+    "key": "n-campground-systems",
+    "notes": "Registry details come from a third-party aggregator of California Secretary of State filings, not bizfileonline directly. Phone not confirmed on a fetched page, so left null. No page found directly linking the company to OUSD; identity rests on exact name, Oakland location and matching sector.",
+    "profile": {
+      "address": "1721 Broadway, Oakland, CA 94612",
+      "caEntityNumber": "5799402",
+      "ein": null,
+      "email": "admin@campground.fyi",
+      "headquarters": "Oakland, CA",
+      "legalName": "Campground Systems Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Campground Systems Inc. is a company that makes software for people who run programs, such as workforce, youth employment and community service programs. Its platform replaces spreadsheets and separate tools with one system for tracking participants, progress and outcome reports.",
+      "website": "https://getcampground.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Campground Systems Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/campground-systems-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Campground - Stop managing spreadsheets. Start running effective programs.",
+        "url": "https://getcampground.com/"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Campground contact",
+        "url": "https://getcampground.com/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-campground-systems",
+    "notes": "Exact name match to an active Oakland, CA stock corporation (Campground Systems Inc., 1721 Broadway, entity 5799402), and its program-management software for workforce and youth programs fits a Technology agreement with the Adult and Career Education Department. The website's terms document is titled 'Terms of Use - Campground Systems' and the contact page shows admin@campground.fyi; no page names OUSD directly, and the website itself does not state an Oakland address, so the identity link rests on name, location and sector.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

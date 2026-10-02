@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942992642",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.samuelmerritt.edu/discover/smu-campuses/oakland-campus",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-samuel-merritt-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) in Oakland, CA: 'Samuel Merritt University' (ProPublica Nonprofit Explorer, EIN 94-2992642)",
+      "Located in Oakland, CA (525 12th St.), matching the agenda text",
+      "Health sciences university with nursing and allied health programs, consistent with an MOU with OUSD's Talent/Human Resources department"
+    ],
+    "key": "n-samuel-merritt-university",
+    "notes": null,
+    "profile": {
+      "address": "525 12th St. Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-2992642",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Samuel Merritt University",
+      "orgType": "nonprofit",
+      "phone": "800.607.6377",
+      "samUei": null,
+      "summary": "A private nonprofit university in Oakland, California that offers health care programs from bachelor's to doctoral level. It has three colleges: Nursing, Health Sciences and Podiatric Medicine. It also has campuses in Sacramento, Fresno and Foster City.",
+      "website": "https://www.samuelmerritt.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Samuel Merritt University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942992642"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Samuel Merritt University - Oakland Campus",
+        "url": "https://www.samuelmerritt.edu/discover/smu-campuses/oakland-campus"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-samuel-merritt-university",
+    "notes": "Samuel Merritt University is a single Oakland-based 501(c)(3) (EIN 94-2992642, 525 12th St.) matching the agenda's name and Oakland location, and an MOU with OUSD's Talent department fits a health-sciences university. Name, EIN, address, phone, colleges, campuses and degree range are confirmed by the cited and university pages; the neutral summary is supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

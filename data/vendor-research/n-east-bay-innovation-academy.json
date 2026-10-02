@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/462428863",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eastbayia.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/officeofcharterschools/information-and-data-about-oakland-charter-schools",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-innovation-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'East Bay Innovation Academy' in Oakland, CA, EIN 46-2428863 (ProPublica Nonprofit Explorer)",
+      "OUSD's Office of Charter Schools page lists East Bay Innovation Academy among its OUSD-authorized charter schools, matching the agenda item from the Charter School Office",
+      "The school's own website describes a grades 6-12 charter school in Oakland, matching the charter school facilities agreement in the agenda title"
+    ],
+    "key": "n-east-bay-innovation-academy",
+    "notes": null,
+    "profile": {
+      "address": "3400 Malcolm Avenue, Oakland, CA 94605",
+      "caEntityNumber": null,
+      "ein": "46-2428863",
+      "email": "info@eastbayia.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Innovation Academy",
+      "orgType": "nonprofit",
+      "phone": "(510) 577-9557",
+      "samUei": null,
+      "summary": "East Bay Innovation Academy is a public charter school in Oakland, California, serving grades 6 through 12. It offers a college preparatory program that includes project-based learning and Advanced Placement courses. It is authorized by Oakland Unified School District and run by a nonprofit organization.",
+      "website": "https://www.eastbayia.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Bay Innovation Academy - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/462428863"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "East Bay Innovation Academy",
+        "url": "https://www.eastbayia.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Information and Data about Oakland Charter Schools",
+        "url": "https://www.ousd.org/officeofcharterschools/information-and-data-about-oakland-charter-schools"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-east-bay-innovation-academy",
+    "notes": "The agenda item is a Prop 39 facilities agreement from the OUSD Charter School Office. The OUSD charter schools page lists East Bay Innovation Academy (grades 6-12, Oakland, same phone), and ProPublica shows a matching Oakland 501(c)(3) with the EIN. The summary, address, phone and general info@ email are supported by the school's website, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://returntowork.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://returntowork.com/our-story/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003102",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name 'Norman Peterson & Associates' matches the agenda name 'Norman Peterson & Associate, Inc.' (returntowork.com)",
+      "Located in Ashland, Oregon, matching the agenda's 'Ashland, OR' (returntowork.com contact page)",
+      "Provides return-to-work services for injured employees to public and private employers, matching OUSD's Risk Management Department and Property & Liability funding for legal, insurance and risk services",
+      "Company website describes serving public-sector employers, including California school districts"
+    ],
+    "key": "v-003102",
+    "notes": "No public registry entry (Oregon Secretary of State, SAM.gov) was checked or found, so no registry IDs are given. Phone is shown as 800-497-1368 on the home page and 1-800-497-1368 on the contact page. Link to California school districts comes from partner logos on the home page, a weak signal.",
+    "profile": {
+      "address": "526 Washington Street Suite 1, Ashland, Oregon 97520",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@returntowork.com",
+      "headquarters": "Ashland, OR",
+      "legalName": "Norman Peterson & Associates",
+      "orgType": "company",
+      "phone": "1-800-497-1368",
+      "samUei": null,
+      "summary": "Norman Peterson & Associates (NPA) is a company in Ashland, Oregon that provides return-to-work services for injured employees. It helps employers, employees and physicians set up modified-work assignments so injured workers can return to work sooner. It works with private and public sector employers.",
+      "website": "https://returntowork.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact us : NPA",
+        "url": "https://returntowork.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Our story : NPA",
+        "url": "https://returntowork.com/our-story/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003102",
+    "notes": "Name (agenda 'Associate' is a typo of 'Associates') and Ashland, OR location match the cited contact page, and return-to-work/workers' compensation services fit OUSD's Risk Management Department and Property & Liability funding. Contact fields are confirmed on the contact page and the summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://oaklandea.org/about-oea/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandea.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/communications-public-affairs/newsroom/news/~board/ousd-news/post/ousd-announces-tentative-agreement-with-teachers-union-averting-strike",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-education-association-oea",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OEA's own website (oaklandea.org) describes it as the Oakland Education Association, representing nearly 3,000 K-12 teachers, counselors, early childhood educators and other staff, matching the agenda's 'Oakland Education Association (OEA)' and the early childhood workforce MOU",
+      "OUSD's own news page states OUSD and the Oakland Education Association (OEA) reached a Tentative Agreement for July 1, 2025 through June 30, 2027, matching the agenda's successor collective bargaining agreement",
+      "Located in Oakland, CA"
+    ],
+    "key": "n-oakland-education-association-oea",
+    "notes": "Labor union (teachers' union, CTA/NEA affiliate). Email omitted because the page obfuscates it. EIN, legal name, CA entity number and UEI not confirmed; a ProPublica search result for EIN 94-1330958 appears to be the California Teachers Association, not the local, so it was not used.",
+    "profile": {
+      "address": "272 E 12th St, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "other",
+      "phone": "(510) 763-4020",
+      "samUei": null,
+      "summary": "The Oakland Education Association is the union of teachers and other school staff in Oakland. Its members include K-12 teachers, counselors, psychologists, social workers, nurses, librarians, early childhood educators and substitute teachers. It bargains contracts with the Oakland Unified School District on behalf of its members.",
+      "website": "https://oaklandea.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About OEA - Oakland Education Association",
+        "url": "https://oaklandea.org/about-oea/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact - Oakland Education Association",
+        "url": "https://oaklandea.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "OUSD Announces Tentative Agreement With Teachers Union, Averting Strike",
+        "url": "https://www.ousd.org/communications-public-affairs/newsroom/news/~board/ousd-news/post/ousd-announces-tentative-agreement-with-teachers-union-averting-strike"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-oakland-education-association-oea",
+    "notes": "oaklandea.org and OUSD's own news page confirm the Oakland Education Association is the OUSD teachers' union that reached the 2025-2027 tentative agreement, matching the agenda items. The summary, website, phone, address and headquarters are shown on the cited About and Contact pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

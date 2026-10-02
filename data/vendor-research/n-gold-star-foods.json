@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.goldstarfoods.com/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.goldstarfoods.com/who-we-are-our-brands/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.goldstarfoods.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/ontario/gold-star-foods-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-gold-star-foods",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Gold Star Foods, Inc.' is a California stock corporation based in Ontario, CA, matching the agenda's location 'Ontario, CA'",
+      "Business matches the contract: Gold Star Foods is a food distributor to K-12 school nutrition programs, matching OUSD's 'Award of Bid (IFB) #26-173NS GROCERY PRODUCTS K-12 Meal Program' for Nutrition Services",
+      "Company website lists its headquarters in Ontario, California, consistent with the California registry listing for Ontario, CA"
+    ],
+    "key": "n-gold-star-foods",
+    "notes": "California entity number comes from a third-party mirror of the Secretary of State record (bizprofile.net), not bizfileonline directly. The registry record lists a principal address of 3781 E. Airport Dr., Ontario, CA 91761, which differs from the company website's headquarters address; the website address is used here. No evidence found that any page names OUSD as a customer, so identity rests on name, location and line of business.",
+    "profile": {
+      "address": "2855 E Guasti Rd, 6th floor, Ontario, CA 91761",
+      "caEntityNumber": "3052491",
+      "ein": null,
+      "email": "info@goldstarfoods.com",
+      "headquarters": "Ontario, CA",
+      "legalName": "Gold Star Foods, Inc.",
+      "orgType": "company",
+      "phone": "(800) 540-0215",
+      "samUei": null,
+      "summary": "Gold Star Foods is a food distribution company that supplies school nutrition programs. It delivers foods such as USDA commodity foods, fresh bread and fresh produce to school districts. It is headquartered in Ontario, California, and is part of GS Foods Group.",
+      "website": "https://www.goldstarfoods.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Locations - Gold Star Foods",
+        "url": "https://www.goldstarfoods.com/locations/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Who We Are: Our Brands - Gold Star Foods",
+        "url": "https://www.goldstarfoods.com/who-we-are-our-brands/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "phone",
+          "email"
+        ],
+        "title": "Gold Star Foods - Lunch is our favorite subject",
+        "url": "https://www.goldstarfoods.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Gold Star Foods, Inc. Ontario, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/ontario/gold-star-foods-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-gold-star-foods",
+    "notes": "Gold Star Foods, Inc. is a school nutrition food distributor in Ontario, CA, matching the agenda's name, location and grocery-products bid; independent search also shows Gold Star Foods supplies OUSD kitchens. Summary, contact details, address (website HQ; registry principal address differs but is noted) and CA entity number 3052491 are supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

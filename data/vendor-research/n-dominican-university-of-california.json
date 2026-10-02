@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dominican.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dominican.edu/about/maps-directions-and-contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-dominican-university-of-california",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Dominican University of California' on the university's own website (dominican.edu)",
+      "Located in San Rafael, CA (50 Acacia Avenue), matching the agenda's 'San Rafael, CA'",
+      "A university with education and professional programs is a plausible partner for a district Talent/Human Resources memorandum of understanding (staff and hiring)"
+    ],
+    "key": "n-dominican-university-of-california",
+    "notes": "ProPublica returned HTTP 429 and the web search budget was exhausted, so EIN, legal name, entity number and orgType were not registry-confirmed and are left null. The only email on the contact page is an admissions inbox (enroll@), not a general inbox, so it was omitted.",
+    "profile": {
+      "address": "50 Acacia Avenue, San Rafael, CA 94901",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Rafael, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "(415) 457-4440",
+      "samUei": null,
+      "summary": "Dominican University of California is a university in San Rafael, California, founded in 1890. It offers more than 60 undergraduate and graduate programs that combine liberal arts with professional education.",
+      "website": "https://www.dominican.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Dominican University of California",
+        "url": "https://www.dominican.edu/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Maps, Directions and Contact - Dominican University of California",
+        "url": "https://www.dominican.edu/about/maps-directions-and-contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-dominican-university-of-california",
+    "notes": "The agenda name and San Rafael location match Dominican University of California exactly, and a university is a plausible partner for a Talent/HR MOU. The cited pages confirm founding in 1890, the 60+ majors/minors/concentrations, the liberal arts and professional mix, the address, phone and website. The summary's 'programs' is a loose paraphrase of 'majors, minors and concentrations' but is not materially misleading.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

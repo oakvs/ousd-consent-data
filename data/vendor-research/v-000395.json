@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/481272959",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.americascoresbayarea.org/donate",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.americascoresbayarea.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.americascoresbayarea.org/our-vision",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandrootssc.com/news/2023/09/22/america-scores-with-support-of-oakland-roots-and-soul-sc-unite-to-inspire-brookfield-elementary-youth/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000395",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'America Scores Bay Area' (ProPublica Nonprofit Explorer, EIN 48-1272959), located in San Francisco, CA, matching the agenda location",
+      "Organization's own website describes after-school soccer, poetry and service-learning programs, matching OUSD's 'After-school & summer programs' and expanded-learning contracts",
+      "A public Oakland Roots SC page says America SCORES Bay Area partners with Oakland Unified School District at Brookfield Elementary"
+    ],
+    "key": "v-000395",
+    "notes": "General email omitted: the only email on the cited page (ida@americascores.org) looks like a named individual's address. Agenda lists San Francisco, CA; org's site is SF-focused but it serves Oakland schools per Oakland Roots page.",
+    "profile": {
+      "address": "530 Divisadero Street, Suite 741, San Francisco, CA 94117",
+      "caEntityNumber": null,
+      "ein": "48-1272959",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "America Scores Bay Area",
+      "orgType": "nonprofit",
+      "phone": "(415) 377-3887",
+      "samUei": null,
+      "summary": "America SCORES Bay Area is a nonprofit, out-of-school-time youth program. It combines soccer, poetry and service-learning to support students' healthy lifestyles, engagement in school and confidence. It partners with public elementary and middle schools and after-school providers in the San Francisco Bay Area.",
+      "website": "https://www.americascoresbayarea.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Bay Area Scores - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/481272959"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "ein"
+        ],
+        "title": "Donate — America SCORES Bay Area",
+        "url": "https://www.americascoresbayarea.org/donate"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "America SCORES Bay Area",
+        "url": "https://www.americascoresbayarea.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Our Vision — America SCORES Bay Area",
+        "url": "https://www.americascoresbayarea.org/our-vision"
+      },
+      {
+        "supports": [],
+        "title": "America SCORES and Oakland Roots and Soul SC Unite to Inspire Brookfield Elementary Youth",
+        "url": "https://www.oaklandrootssc.com/news/2023/09/22/america-scores-with-support-of-oakland-roots-and-soul-sc-unite-to-inspire-brookfield-elementary-youth/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000395",
+    "notes": "ProPublica confirms America Scores Bay Area is a San Francisco 501(c)(3) (EIN 48-1272959), the org's own site shows the same phone, address and EIN and describes the soccer/poetry/service-learning program, and the Oakland Roots page names a partnership with Oakland Unified School District. The summary is neutral and supported, and the email was correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

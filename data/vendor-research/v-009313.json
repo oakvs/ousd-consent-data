@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://volt.ai/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://volt.ai/official-information-about-volt-ai",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009313",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own contact page gives the legal name 'VOLT, Inc.' with a Bethesda, MD address, matching the agenda's 'Volt, Inc.' and 'Bethesda, MD'",
+      "Website says the company focuses heavily on K-12 and higher education and sells a technology (software) product, matching OUSD's 'Technology' contract and a Student Data Privacy Agreement handled by the Technology Services Department",
+      "Independent news coverage (WJLA) describes VOLT AI as a Bethesda, Maryland company working with school districts"
+    ],
+    "key": "v-009313",
+    "notes": "A federal contractor listing for 'VOLT INC' in Bethesda shows a residential-style address and different contact details, so it was not confirmed to be the same entity and its UEI was not used. EIN, California entity number and UEI not found.",
+    "profile": {
+      "address": "4600 East West Hwy, Suite 620, Bethesda, MD 20814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@volt.ai",
+      "headquarters": "Bethesda, MD",
+      "legalName": "VOLT, Inc.",
+      "orgType": "company",
+      "phone": "(240) 801-5603",
+      "samUei": null,
+      "summary": "VOLT AI is a technology company that makes software to analyze live feeds from existing security cameras. The software looks for safety threats such as weapons, fights, medical emergencies and unauthorized access, and staff at a security operations center verify alerts. The company serves schools, colleges and other organizations.",
+      "website": "https://volt.ai"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact VOLT: Demos, Sales and Support",
+        "url": "https://volt.ai/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "headquarters",
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "Official information about VOLT AI",
+        "url": "https://volt.ai/official-information-about-volt-ai"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009313",
+    "notes": "volt.ai/contact gives the legal name VOLT, Inc. at a Bethesda, MD address, matching the agenda's 'Volt, Inc.' and 'Bethesda, MD'. A K-12-focused software vendor fits a Technology Services Department student data privacy agreement. The summary, phone, email and address are all shown on the cited pages and the summary is neutral. I found no direct page tying OUSD to this company, so the match rests on exact name, city and service type.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

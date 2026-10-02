@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.canvasback.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/930831904",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.canvasback.org/rooted-future52ad7aa6",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-canvasback-missions",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Canvasback Missions Inc', Benicia, CA, EIN 93-0831904 (ProPublica Nonprofit Explorer)",
+      "Located in Benicia, CA (940 Adams St., Suite R), matching the agenda text",
+      "Canvasback's Rooted Future youth program page says it runs weekly clubs in Oakland high schools, matching OUSD no-cost service agreements for Oakland High School and Madison Park Academy (classroom and academic programs)"
+    ],
+    "key": "n-canvasback-missions",
+    "notes": "No general email address found on the site. No CA SOS or SAM.gov lookup done. The EIN comes from ProPublica only; the organization's own pages do not show it.",
+    "profile": {
+      "address": "940 Adams St., Suite R, Benicia, CA 94510",
+      "caEntityNumber": null,
+      "ein": "93-0831904",
+      "email": null,
+      "headquarters": "Benicia, CA",
+      "legalName": "Canvasback Missions, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(707) 746-7828",
+      "samUei": null,
+      "summary": "Canvasback Missions is a nonprofit based in Benicia, California. It brings specialty health care, health education and wellness programs, including diabetes intervention, to the people of Micronesia and the Pacific Islands. It also runs Rooted Future, a youth leadership and service program with clubs in Oakland high schools.",
+      "website": "https://www.canvasback.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Canvasback Missions",
+        "url": "https://www.canvasback.org/about"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "Canvasback Missions Inc - Nonprofit Explorer - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/930831904"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Rooted Future - Canvasback Missions",
+        "url": "https://www.canvasback.org/rooted-future52ad7aa6"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-canvasback-missions",
+    "notes": "Canvasback's own pages confirm Canvasback Missions, Inc., a 501(c)(3) at 940 Adams St., Suite R, Benicia, with weekly Rooted Future clubs in Oakland high schools, which fits the OUSD no-cost agreements. The EIN is unsupported: the organization's About page states 76-0740457, while the candidate's 93-0831904 comes only from a ProPublica listing, so the two conflict.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "ein"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/834249837",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.freedomcommunityclinic.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.freedomcommunityclinic.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.freedomcommunityclinic.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008351",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Freedom Community Clinic Inc', Oakland, CA, EIN 83-4249837 (ProPublica Nonprofit Explorer)",
+      "The organization's own website shows the same EIN (83-4249837) and an Oakland headquarters, matching the agenda location 'Oakland, CA'",
+      "Website describes community and school-based healing clinics, consistent with OUSD's Community Schools and Student Services Department agreements and health-and-wellness funding sources"
+    ],
+    "key": "v-008351",
+    "notes": "The web search budget was exhausted, so only registry and organization pages were fetched. Website does not name OUSD explicitly; school link rests on its described school-based clinics. Phone is listed with limited hours (Tue 1-6pm, Wed 1-5pm). CA SOS entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "3134 International Blvd., Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "83-4249837",
+      "email": "info@freedomcommunityclinic.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Freedom Community Clinic Inc",
+      "orgType": "nonprofit",
+      "phone": "510-768-5879",
+      "samUei": null,
+      "summary": "Freedom Community Clinic is an Oakland nonprofit that offers free and sliding-scale health and healing services, including acupuncture, herbalism and other whole-person care. It serves mostly Black, Brown and immigrant communities. It runs community and school-based healing clinics and operates sites in Oakland.",
+      "website": "https://www.freedomcommunityclinic.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Freedom Community Clinic Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/834249837"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "About - Freedom Community Clinic",
+        "url": "https://www.freedomcommunityclinic.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Contact - Freedom Community Clinic",
+        "url": "https://www.freedomcommunityclinic.org/contact"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Freedom Community Clinic",
+        "url": "https://www.freedomcommunityclinic.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008351",
+    "notes": "Name, Oakland location, EIN 83-4249837 (ProPublica 501(c)(3), Oakland) and the organization's own site match, and its school-based healing clinics fit OUSD's Community Schools/health-and-wellness agreements, though the site never names OUSD. The listed street address is only one of three sites (the site names Downtown/West Oakland as the hub), so it is dropped; the summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cordobacorp.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cordobacorp.com/an-award-winning-year-for-cordoba-corporations-education-and-facilities-sector/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-1259",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Cordoba Corporation is a construction and program management firm with a San Francisco office, matching the agenda location 'San Francisco, CA' and OUSD's construction management contract",
+      "Cordoba's website says it provided construction management services for the Fremont High School Transformation Project in East Oakland, an Oakland Unified campus",
+      "Its services (construction management, program management) match OUSD's 'School buildings & construction' contracts funded by Measure J/Y bonds"
+    ],
+    "key": "v-1259",
+    "notes": "Headquarters is Los Angeles; the agenda's San Francisco location corresponds to a regional office. Registry IDs and a general email were not found on cited pages, so left null.",
+    "profile": {
+      "address": "1401 N Broadway, Los Angeles, CA 90012",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(213) 895-0224",
+      "samUei": null,
+      "summary": "Cordoba Corporation is a California firm that provides program management, construction management and planning services for public infrastructure, including transportation, water, energy and school facilities. It was founded in 1983 and has offices across California, including San Francisco.",
+      "website": "https://www.cordobacorp.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Cordoba Corp.",
+        "url": "https://www.cordobacorp.com/about-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "An Award-Winning Year for Cordoba Corporation's Education and Facilities Sector",
+        "url": "https://www.cordobacorp.com/an-award-winning-year-for-cordoba-corporations-education-and-facilities-sector/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-1259",
+    "notes": "Cordoba Corporation's own pages state it provided construction management for OUSD's Fremont High School project and lists a San Francisco regional office, matching the agenda; a search also surfaced OUSD Legistar items for its Measure J/Y construction management contract. Summary, founding year, HQ address, phone and website are all shown on the About page and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

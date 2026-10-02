@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.leadliberated.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/474248922",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008712",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Lead Liberated' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 47-4248922), matching the agenda's 'Lead Liberated, Oakland, CA'",
+      "Website states Lead Liberated is located in Oakland, CA and provides coaching and professional development to school principals and education organizations, matching OUSD's 'Classroom & academic programs' school-level services agreements",
+      "IRS category is Educational Institutions and Related Activities / Educational Services and Schools, consistent with school-site service agreements"
+    ],
+    "key": "v-008712",
+    "notes": "No page found that names Oakland Unified directly; identity rests on name, Oakland location and education-services match. California Secretary of State and SAM.gov were not checked (web search budget exhausted).",
+    "profile": {
+      "address": "484 Lake Park Ave. #278, Oakland, Ca 94610",
+      "caEntityNumber": null,
+      "ein": "47-4248922",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Lead Liberated",
+      "orgType": "nonprofit",
+      "phone": "(510) 224-4297",
+      "samUei": null,
+      "summary": "Lead Liberated is a nonprofit based in Oakland, California that supports leaders in education. Its Antiracist Collective offers healing and professional development for principals of color in the Bay Area. Its Partnerships program provides coaching and professional development to education organizations across the country.",
+      "website": "https://www.leadliberated.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Lead Liberated",
+        "url": "https://www.leadliberated.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Lead Liberated - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/474248922"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008712",
+    "notes": "Lead Liberated is an Oakland 501(c)(3) (EIN 47-4248922, ProPublica) whose site shows principal coaching and professional development, which fits school-site services agreements for OUSD in Oakland. Summary, address, phone, website and EIN are all shown on the cited sources; no OUSD-specific page was found, but name, city and service type match with no conflicting similarly named organization.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

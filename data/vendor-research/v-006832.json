@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oneononelearning.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oneononelearning.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oneononelearning.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006832",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website lists a Miami, FL address (8900 SW 117th Ave., Suite # C-103 Miami, FL 33186) and a 305 area-code phone, matching the agenda's Miami, FL location",
+      "Website describes high-impact tutoring, professional learning and family engagement for school districts, matching OUSD's 'Classroom & academic programs' contracts",
+      "Website's district partner list includes Oakland Unified School District"
+    ],
+    "key": "v-006832",
+    "notes": "No registry (Florida Sunbiz, SAM.gov) check was possible; web search quota was exhausted and Sunbiz blocked automated fetch. Legal name shown on the company's pages is 'One on One Learning'; OUSD agenda titles sometimes say 'One on One Learning Corp'. Company type (for-profit) inferred from the website, not a registry.",
+    "profile": {
+      "address": "8900 SW 117th Ave., Suite # C-103 Miami, FL 33186",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@oneononelearning.com",
+      "headquarters": "Miami, FL",
+      "legalName": "One on One Learning",
+      "orgType": "company",
+      "phone": "(305) 273-8999",
+      "samUei": null,
+      "summary": "One on One Learning is a company based in Miami, Florida, that works with school districts. It provides tutoring, professional learning for educators, and family engagement services aimed at improving student achievement. It reports being founded in 2000.",
+      "website": "https://www.oneononelearning.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "One on One Learning",
+        "url": "https://www.oneononelearning.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "legalName"
+        ],
+        "title": "Contact - One on One Learning",
+        "url": "https://www.oneononelearning.com/contact"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Privacy Policy - One on One Learning",
+        "url": "https://www.oneononelearning.com/privacy-policy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006832",
+    "notes": "The company site lists Oakland Unified School District as a district partner, shows a Miami, FL address in the privacy policy, and offers tutoring, professional learning and family engagement, which fits OUSD's academic-program contracts. Phone, email, address, website, founding year and summary are all visible on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

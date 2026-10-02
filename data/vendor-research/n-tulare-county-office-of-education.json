@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://tcoe.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tcoe.org/About",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-tulare-county-office-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the organization's own website (tcoe.org) is titled 'Tulare County Office of Education', the same name used in the agenda text",
+      "Located in Visalia, CA, matching the agenda's location 'Visalia, CA'",
+      "tcoe.org/About describes it as a county office of education (a public education agency) serving 43 school districts, charter schools and community colleges in Tulare County, which fits a grant agreement for a high school Linked Learning office"
+    ],
+    "key": "n-tulare-county-office-of-education",
+    "notes": "WebSearch budget was exhausted, so no registry lookup (CA SOS, SAM.gov) was done; registry IDs left null (public agency, no EIN expected). No general email is published on the pages checked. The specific 'High School Linked Learning Office' was not found on tcoe.org, so identity rests on exact name plus Visalia location and the county-office-of-education role.",
+    "profile": {
+      "address": "P.O. Box 5091, Visalia, CA 93278-5091",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Visalia, CA",
+      "legalName": "Tulare County Office of Education",
+      "orgType": "public_agency",
+      "phone": "(559) 733-6300",
+      "samUei": null,
+      "summary": "The Tulare County Office of Education (TCOE) is a county office of education in Tulare County, California. It supports school districts, charter schools and community colleges in the county, and provides services such as special education, early childhood education, professional learning, school safety and student well-being programs.",
+      "website": "https://tcoe.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Tulare County Office of Education",
+        "url": "https://tcoe.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Tulare County Office of Education",
+        "url": "https://tcoe.org/About"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-tulare-county-office-of-education",
+    "notes": "The agenda names Tulare County Office of Education in Visalia, CA, and tcoe.org shows the same name, a Visalia P.O. Box address, and the (559) 733-6300 phone, and describes it as a county office of education. The summary and contact fields match the cited pages, and the summary is neutral. The OUSD grant relationship itself is not on those pages, but the agenda lists TCOE as the funding source, which fits.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

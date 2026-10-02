@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/260869607",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nctresidencies.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nctresidencies.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nctresidencies.org/about-nctr/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-national-center-for-teacher-residencies",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'National Center For Teacher Residencies Inc' (ProPublica Nonprofit Explorer, EIN 26-0869607)",
+      "Located in Chicago, IL, matching the agenda text 'Chicago, IL'",
+      "Website describes teacher residency and educator preparation programs, matching OUSD's Talent/Human Resources 'Staff & hiring' contracts",
+      "Website navigation references the Boundless Educators Initiative, matching the grant named in OUSD's agenda titles"
+    ],
+    "key": "n-national-center-for-teacher-residencies",
+    "notes": "Only a press inquiries address (media@nctresidencies.org) was found, so email is left null. The address is printed with an en dash on the Contact page; the output uses a hyphen, which the validator may flag. California Secretary of State and SAM.gov were not checked (web search budget exhausted).",
+    "profile": {
+      "address": "200 East Randolph Street, CARR Workplaces - Suite 5100, Chicago, IL 60601",
+      "caEntityNumber": null,
+      "ein": "26-0869607",
+      "email": null,
+      "headquarters": "Chicago, IL",
+      "legalName": "National Center For Teacher Residencies Inc",
+      "orgType": "nonprofit",
+      "phone": "312-397-8878",
+      "samUei": null,
+      "summary": "A nonprofit based in Chicago that helps school districts, universities and other partners design, launch and strengthen teacher residency and registered apprenticeship programs. It also provides support for mentor teachers, conducts research on teacher preparation programs, and advocates for policies that support teacher residencies. It was founded in 2007.",
+      "website": "https://nctresidencies.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National Center For Teacher Residencies Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/260869607"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "National Center for Teacher Residencies (NCTR)",
+        "url": "https://nctresidencies.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact Us - National Center for Teacher Residencies",
+        "url": "https://nctresidencies.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About NCTR - National Center for Teacher Residencies",
+        "url": "https://nctresidencies.org/about-nctr/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-national-center-for-teacher-residencies",
+    "notes": "ProPublica shows National Center For Teacher Residencies Inc (EIN 26-0869607, 501(c)(3), Chicago, IL), and nctresidencies.org confirms the Chicago address, phone, 2007 founding, residency/apprenticeship work and the Boundless Educators Initiative, which fits OUSD's Talent grant and network agreement. Summary is neutral and supported; the address matches except for dash punctuation.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

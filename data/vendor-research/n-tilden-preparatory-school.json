@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://tildenprep.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tildenprep.com/about-us/campuses/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tildenprep.com/about-us/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sd.cde.ca.gov/schooldirectory/details?cdscode=01611276138044",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-tilden-preparatory-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "California Department of Education School Directory lists Tilden Preparatory School at 1231 Solano Ave., Albany, CA 94706 with program type 'Nonpublic Certified School', matching the agenda's Albany, CA location and its Nonpublic, Nonsectarian School master contract",
+      "The school's own website says it is approved as a Nonpublic School (NPS) providing education and support for students with specialized learning needs, matching OUSD's 'Special education' contract purpose",
+      "The school's own campuses and contact pages list the same Albany address and phone (510) 525-5506 as the CDE directory"
+    ],
+    "key": "n-tilden-preparatory-school",
+    "notes": "orgType left null: the site does not say whether the school is for-profit or nonprofit. No EIN or CA Secretary of State entity was found in this light pass, so legal name and registry IDs are null. The CDE directory lists a named staff member's email, intentionally omitted; the website offers only a contact form. A Walnut Creek campus also exists; the Albany campus matches the agenda.",
+    "profile": {
+      "address": "1231 Solano Ave, Albany, CA 94706",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Albany, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "(510) 525-5506",
+      "samUei": null,
+      "summary": "Tilden Preparatory School is a private school for grades 6-12 with campuses in Albany and Walnut Creek, California. It offers one-to-one and small-group teaching of UC-approved courses, and is accredited by WASC. It is also approved as a Nonpublic School, which provides education and support for students with specialized learning needs.",
+      "website": "https://tildenprep.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Tilden Preparatory School",
+        "url": "https://tildenprep.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "School Campuses - Tilden Preparatory School",
+        "url": "https://tildenprep.com/about-us/campuses/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact - Tilden Preparatory School",
+        "url": "https://tildenprep.com/about-us/contact/"
+      },
+      {
+        "supports": [
+          "phone",
+          "website"
+        ],
+        "title": "Tilden Preparatory School - School Directory Details (CA Dept of Education)",
+        "url": "https://sd.cde.ca.gov/schooldirectory/details?cdscode=01611276138044"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-tilden-preparatory-school",
+    "notes": "The school's own site and campus/contact pages show Tilden Preparatory School at 1231 Solano Ave, Albany (510-525-5506), WASC-accredited and approved as a Nonpublic School, which matches the agenda's Albany location and the NPS special education master contract. The CDE directory page was blocked by a bot check and could not be read, but the website, phone and address are each confirmed by the school's own pages, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.arcinarisk.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.arcinarisk.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.arcinarisk.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007942",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website names itself 'Arcina Risk Group LLC', matching the agenda name exactly",
+      "Website gives Los Angeles, California as its location (835 Wilshire Blvd., Los Angeles), matching the agenda location 'Los Angeles, CA'",
+      "Website describes insurance and claims-recovery services for companies, law firms, nonprofits and public entities, matching OUSD's 'Legal, insurance & risk' category and Risk Management Department contracts"
+    ],
+    "key": "v-007942",
+    "notes": "Web search budget was exhausted, so no public registry (CA Secretary of State, SAM.gov) was checked; registry IDs left null. A general email (inquiry@arcinarisk.com) appears on the site when rendered but not in raw HTML, so it was omitted. Identity rests on the company's own website.",
+    "profile": {
+      "address": "835 Wilshire Blvd. Suite 400 Los Angeles, CA 90017",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Arcina Risk Group LLC",
+      "orgType": "company",
+      "phone": "213.234.9575",
+      "samUei": null,
+      "summary": "A Los Angeles company that helps clients find old insurance policies, sometimes called insurance archaeology, and recover money from them. It also offers claims advocacy and claims management, insurance asset reviews and due diligence support for business deals. Its clients include large companies, law firms, nonprofits and public entities.",
+      "website": "https://www.arcinarisk.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Arcina Risk Group",
+        "url": "https://www.arcinarisk.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Arcina Risk Group - About",
+        "url": "https://www.arcinarisk.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Arcina Risk Group - Contact",
+        "url": "https://www.arcinarisk.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007942",
+    "notes": "Arcina Risk Group's site (835 Wilshire Blvd, Los Angeles; insurance recovery and claims services for companies, law firms, nonprofits and public entities) fits OUSD's Los Angeles, CA vendor contracted by Risk Management; summary, phone, address, website and headquarters are supported and neutral. The 'LLC' suffix in legalName does not appear on the cited pages, so it is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}

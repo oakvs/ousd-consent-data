@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.csueastbay.edu/foundation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-state-university-east-bay-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name on the Foundation's own page is exactly 'California State University, East Bay Foundation, Inc.', matching the agenda text",
+      "Located at 25800 Carlos Bee Boulevard, Hayward, CA, matching the agenda's 'Hayward, CA'",
+      "Page says the Foundation supports the Office of Sponsored Research and Programs in administering grants from government and private sources, consistent with OUSD's grant subawards (California Regional K-16 Education Collaboratives Grant Program)"
+    ],
+    "key": "n-california-state-university-east-bay-foundation",
+    "notes": "Identity rests on the Foundation's own page only. Registry lookups (ProPublica) were rate-limited (HTTP 429) and the web search budget was exhausted, so EIN and CA entity number were not confirmed. The only email on the page is a named officer's, so email was left null.",
+    "profile": {
+      "address": "25800 Carlos Bee Boulevard, Hayward, CA 94542",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Hayward, CA",
+      "legalName": "California State University, East Bay Foundation, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(510) 885-3000",
+      "samUei": null,
+      "summary": "A nonprofit public benefit corporation that supports California State University, East Bay. It works with a bookstore operator to run the campus Pioneer Bookstore and helps the university's Office of Sponsored Research and Programs administer grants from government agencies and private foundations.",
+      "website": "https://www.csueastbay.edu/foundation/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "CSU East Bay Foundation",
+        "url": "https://www.csueastbay.edu/foundation/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-california-state-university-east-bay-foundation",
+    "notes": "The Foundation's own page shows the exact legal name, Hayward address, phone, 501(c)(3) nonprofit status, and its role administering grants via the Office of Sponsored Research and Programs, which fits OUSD's grant subawards. The summary is neutral and supported; the named officer's email was correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

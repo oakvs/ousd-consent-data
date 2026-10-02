@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.usfca.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.usfca.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.usfca.edu/education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156628",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-san-francisco",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational institution: 'University Of San Francisco' (ProPublica Nonprofit Explorer, EIN 94-1156628, San Francisco, CA)",
+      "The university's School of Education has an East Bay campus at Merritt College in Oakland, consistent with an education-sector Talent/Human Resources agreement with an Oakland school district"
+    ],
+    "key": "n-university-of-san-francisco",
+    "notes": "No page found that links USF to OUSD directly (web search budget was exhausted, so the OUSD connection was not confirmed). Agenda text gives no location. Identity rests on the exact name match to the well-known institution plus its Oakland (Merritt College) presence. Confidence set to medium for that reason. No general email found. California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2130 Fulton Street, San Francisco, CA 94117-1080",
+      "caEntityNumber": null,
+      "ein": "94-1156628",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "University of San Francisco",
+      "orgType": "nonprofit",
+      "phone": "(415) 422-5555",
+      "samUei": null,
+      "summary": "The University of San Francisco is a private Jesuit university in San Francisco, California. It offers more than 150 undergraduate and graduate programs, including education programs, and has an East Bay campus in Oakland.",
+      "website": "https://www.usfca.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "University of San Francisco",
+        "url": "https://www.usfca.edu/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "University of San Francisco Contact",
+        "url": "https://www.usfca.edu/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "School of Education",
+        "url": "https://www.usfca.edu/education"
+      },
+      {
+        "supports": [
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "University Of San Francisco - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156628"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

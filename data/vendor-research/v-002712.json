@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.marconbuilders.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002712",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name 'Mar Con Builders, Inc.' on its own website matches the agenda name 'Mar Con Builders Inc.'",
+      "Office at 8108A Capwell Drive, Oakland, CA 94621, matching the agenda location Oakland, CA",
+      "Website describes a general contractor serving education and other sectors, matching OUSD's 'School buildings & construction' contracts",
+      "Website features a testimonial from a project manager at Oakland Unified School District"
+    ],
+    "key": "v-002712",
+    "notes": "Registry lookups (California Secretary of State, SAM.gov) were not done because the web search budget was exhausted; entity number and UEI left null. No general email is listed on the website. Contractor license #829636 appears on the site but is not a profile field.",
+    "profile": {
+      "address": "8108A Capwell Drive, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Mar Con Builders, Inc.",
+      "orgType": "company",
+      "phone": "(510) 639-1914",
+      "samUei": null,
+      "summary": "A general contractor based in Oakland, California. It does commercial construction in the San Francisco Bay Area and Sacramento, including ground-up building, tenant improvements, pre-construction planning and design-build work. It serves healthcare, education and corporate clients.",
+      "website": "https://www.marconbuilders.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Mar Con Builders",
+        "url": "https://www.marconbuilders.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002712",
+    "notes": "The company site shows Mar Con Builders, Inc., an Oakland general contractor, with a testimonial from an OUSD project manager. This fits the Oakland location and the facilities construction contracts. Name, address, phone, services, sectors and regions on the page match the profile, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943123450",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oigc.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oigc.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007965",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Oakland Interfaith Gospel Choir Inc' (ProPublica Nonprofit Explorer, EIN 94-3123450)",
+      "Located in Oakland, CA, matching the agenda text (organization website and ProPublica)",
+      "Website describes youth education programs and outreach performances at schools, consistent with OUSD's 'Classroom & academic programs' arts and music contracts"
+    ],
+    "key": "v-007965",
+    "notes": "WebSearch budget was exhausted, so candidates were found by fetching the likely website and the ProPublica search API directly. No California Secretary of State or SAM.gov lookup was done, so caEntityNumber and samUei are null. Neither the site nor ProPublica explicitly mentions OUSD; the school link rests on the organization's stated school outreach and youth programs.",
+    "profile": {
+      "address": "1212 Preservation Park Way, #200, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3123450",
+      "email": "admin@oigc.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Interfaith Gospel Choir Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 839-4361",
+      "samUei": null,
+      "summary": "A nonprofit in Oakland that teaches and performs Black gospel and spiritual music traditions. It runs about 10 choirs for singers of many ages and backgrounds, offers youth education programs, and does community outreach in places such as schools, shelters and prisons.",
+      "website": "https://www.oigc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oakland Interfaith Gospel Choir Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943123450"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Oakland Interfaith Gospel Choir",
+        "url": "https://www.oigc.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "About - Oakland Interfaith Gospel Choir",
+        "url": "https://www.oigc.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007965",
+    "notes": "Agenda name matches exactly the Oakland, CA 501(c)(3) (EIN 94-3123450, ProPublica) whose website describes youth gospel music education programs and outreach at schools, consistent with OUSD's arts and music school agreements. Summary, address, phone and generic admin email were all confirmed on oigc.org; the site does not mention OUSD explicitly, but the name, city and services fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

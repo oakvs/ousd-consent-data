@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/843348176",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sife-equity.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007801",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'The Sife Equity Project Inc' (ProPublica Nonprofit Explorer, EIN 84-3348176), listed in Barrytown, NY, matching the agenda text 'Barrytown, NY'",
+      "Organization's own website describes professional development and instructional coaching for teachers of immigrant students with interrupted formal education, matching OUSD's English Language Learner and Multilingual Achievement Office and Oakland International High School contracts",
+      "Website's own nonprofit 501(c)(3) label matches the registry listing"
+    ],
+    "key": "v-007801",
+    "notes": "Website homepage text mentions Oakland while the registry lists Barrytown, NY, and B Charitable lists a New York City address; headquarters taken from ProPublica/agenda. No general phone, email or mailing address found (only named staff emails), so those fields are null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "84-3348176",
+      "email": null,
+      "headquarters": "Barrytown, NY",
+      "legalName": "The Sife Equity Project Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "The SIFE Equity Project is a nonprofit that works with teachers and schools to support immigrant students in middle and high school who have had limited or interrupted formal education (called SIFE or SLIFE students). It develops curriculum, offers workshops and coaches teachers.",
+      "website": "https://www.sife-equity.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "The Sife Equity Project Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/843348176"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "The SIFE Equity Project",
+        "url": "https://www.sife-equity.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007801",
+    "notes": "ProPublica lists 'The Sife Equity Project Inc' (EIN 84-3348176, 501(c)(3)) in Barrytown, NY, an exact name and location match to the agenda, and the organization's site describes curriculum, professional development and teacher coaching for SIFE students, consistent with the ELLMA and Oakland International High School contracts. The summary is neutral and supported (services detail is on the site's what-we-do page rather than the homepage).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

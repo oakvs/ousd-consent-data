@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ussoccer.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.ussoccer.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/United_States_Soccer_Federation",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-united-states-soccer-federation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Legal name 'United States Soccer Federation, Inc.' appears exactly on U.S. Soccer's own privacy policy page, matching the agenda text",
+      "Mailing address on that page is in Chicago, IL, matching the agenda's 'Chicago, IL'",
+      "NOT confirmed: no public page found linking U.S. Soccer to the Mini Pitch / FIFA Arena project at Montera Middle School (web search budget was exhausted)",
+      "Wikipedia lists a different headquarters (Fayetteville, Georgia) than the Chicago address, which is unresolved"
+    ],
+    "key": "n-united-states-soccer-federation",
+    "notes": "Medium confidence: name and Chicago location match, but the link to the Montera Middle School Mini Pitch project could not be confirmed and Wikipedia gives a Georgia headquarters. No EIN, CA entity number or UEI found (registry lookups blocked/unavailable). Email omitted (only a data-protection inbox was found).",
+    "profile": {
+      "address": "303 E Wacker Drive Suite 1200, Chicago, IL, 60601",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Chicago, IL",
+      "legalName": "United States Soccer Federation, Inc.",
+      "orgType": "nonprofit",
+      "phone": "+1 (312) 808.1300",
+      "samUei": null,
+      "summary": "U.S. Soccer is the national governing body of soccer in the United States. It oversees the national teams and works with professional, amateur and youth soccer across the country.",
+      "website": "https://www.ussoccer.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "U.S. Soccer Privacy Policy",
+        "url": "https://www.ussoccer.com/privacy-policy"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About U.S. Soccer",
+        "url": "http://www.ussoccer.com/about"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "United States Soccer Federation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/United_States_Soccer_Federation"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

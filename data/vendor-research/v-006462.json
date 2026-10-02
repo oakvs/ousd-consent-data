@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.smartcat.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.smartcat.com/ai-translation-software-for-schools/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006462",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Smartcat's own About page names the legal entity 'Smartcat Platform Inc.', matching the agenda name 'Smartcat Platform, Inc.' apart from a comma",
+      "Smartcat sells a translation platform marketed to school districts for documents such as IEPs (individualized education programs), which fits OUSD's Special Education and technology services contracts"
+    ],
+    "key": "v-006462",
+    "notes": "Web search budget was exhausted, so no registry (SEC/Delaware/MA, SAM.gov) or Boston location could be checked. The About page lists a Delaware registered-agent style address (Wilmington), not Boston, so the agenda's Boston, MA location is unconfirmed. No public phone or general email was found on the pages fetched. Needs human review before publication.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Smartcat Platform Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Smartcat is a company that makes an AI-assisted translation platform. It helps organizations translate content into many languages, with human review built into the workflow. It also offers its platform to school districts for translating documents such as parent letters and individualized education programs (IEPs).",
+      "website": "https://www.smartcat.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Smartcat",
+        "url": "https://www.smartcat.com/about-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "AI translation software for schools",
+        "url": "https://www.smartcat.com/ai-translation-software-for-schools/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

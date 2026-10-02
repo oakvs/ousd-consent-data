@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.seiu1021.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seiu1021.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seiu1021.org/education-council",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-service-employees-international-union-seiu-local-1021",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "SEIU 1021's own education council page describes OUSD classified staff, including the Oakland School Employees Association (OSEA) and Oakland Child Development Paraprofessional Association (OCDPA), as members of SEIU 1021, matching the agenda's tentative agreement title",
+      "seiu1021.org lists its offices in Oakland, CA, in the same city as the district",
+      "ProPublica Nonprofit Explorer lists a Service Employees International Union 1021 chapter in Oakland, CA as a labor organization"
+    ],
+    "key": "n-service-employees-international-union-seiu-local-1021",
+    "notes": "A labor union (not a company or nonprofit in the usual sense). Two Oakland offices are listed (2201 Broadway and 100 Oak Street), same phone; EIN omitted because the only ProPublica listing found is for the 'Ohlone Chapter', which may not be the whole local.",
+    "profile": {
+      "address": "2201 Broadway, Suite 725, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "other",
+      "phone": "(510) 350-9811",
+      "samUei": null,
+      "summary": "SEIU 1021 is a labor union, Local 1021 of the Service Employees International Union. It represents more than 16,000 workers across Northern California, including public-sector and school employees. In Oakland Unified it represents classified school staff through its OSEA and OCDPA chapters.",
+      "website": "https://www.seiu1021.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "SEIU 1021",
+        "url": "https://www.seiu1021.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - SEIU 1021",
+        "url": "https://www.seiu1021.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SEIU 1021 - Service Employees International Union",
+        "url": "https://www.seiu1021.org/education-council"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-service-employees-international-union-seiu-local-1021",
+    "notes": "Identity is confirmed: SEIU 1021's education council page lists OUSD classified staff via OSEA and OCDPA, and its Oakland offices, website and phone match. The summary is not supported, though: the cited homepage gives 'over 16,000' as the count of San Francisco city workers only, not the union's total membership across Northern California.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

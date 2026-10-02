@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://mcguireandhester.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mcguireandhester.com/contact/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mcguireandhester.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002799",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'McGuire and Hester' is a construction contractor headquartered at 9009 Railroad Avenue, Oakland, CA, matching the agenda location 'Oakland, CA'",
+      "Company website describes heavy civil site work, paving, concrete and landscape contracting, and lists school athletic field and school site projects, matching OUSD's 'School buildings & construction' contract for a school turf field replacement"
+    ],
+    "key": "v-002799",
+    "notes": "Legal entity name, California entity number, EIN and SAM UEI were not confirmed on a registry page, so they are left null. Phone is the Oakland office main line as shown on the company's Oakland contact page. No general email address is published on the pages checked.",
+    "profile": {
+      "address": "9009 Railroad Avenue, Oakland, CA 94603",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 632-7676",
+      "samUei": null,
+      "summary": "McGuire and Hester is a construction company based in Oakland, California, that has worked in Northern California since 1926. It does heavy civil site work and landscape contracting, including preconstruction, construction management, pipelines, grading, paving, concrete and mechanical work. The company is 100% employee-owned.",
+      "website": "https://mcguireandhester.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "McGuire and Hester",
+        "url": "https://mcguireandhester.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Oakland - McGuire and Hester",
+        "url": "https://mcguireandhester.com/contact/oakland/"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Contact - McGuire and Hester",
+        "url": "https://mcguireandhester.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002799",
+    "notes": "McGuire and Hester is an Oakland-headquartered heavy civil and landscape contractor (9009 Railroad Ave) that lists school athletic field projects, which fits OUSD's Hoover Elementary turf field replacement contract. Summary, website, phone and address are supported by the company's own pages and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://decotech.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://decotech.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001325",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website decotech.com lists its corporate office in Walnut Creek, CA, matching the agenda text 'Walnut Creek, CA'",
+      "Company name 'DecoTech Systems' matches the agenda vendor name, and the site says it is a California Corporation and a State of California licensed general, electrical and communications contractor",
+      "Website describes audio/visual, IT, network and security infrastructure work for education and government clients, matching OUSD's security improvement, camera and network infrastructure construction agreements"
+    ],
+    "key": "v-001325",
+    "notes": "Registry IDs (CA Secretary of State entity number, SAM UEI) were not looked up; legal name left null because the site shows only 'DecoTech Systems'. Third-party directories show CSLB contractor license 862324 for Decotech Systems Inc, consistent with the above, but not cited.",
+    "profile": {
+      "address": "1180 Mt Diablo Blvd. Suite 300 Walnut Creek, CA 94596",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "sales@decotech.com",
+      "headquarters": "Walnut Creek, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "925-954-1520",
+      "samUei": null,
+      "summary": "DecoTech Systems is a California corporation based in Walnut Creek that provides audio/visual and information technology systems. It works as an integrator and licensed contractor for network, security and electrical infrastructure. Its website says it serves education, state and local government, and commercial clients.",
+      "website": "https://decotech.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "orgType",
+          "website"
+        ],
+        "title": "Contact - DecoTech Systems",
+        "url": "https://decotech.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "DecoTech Systems",
+        "url": "https://decotech.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001325",
+    "notes": "decotech.com shows a California corporation headquartered in Walnut Creek (matching the agenda location), licensed as general, electrical and communications contractor (CSLB 862324), serving education and government, which fits OUSD's security, camera and network construction agreements. Phone, email, address, headquarters, website and the neutral summary are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

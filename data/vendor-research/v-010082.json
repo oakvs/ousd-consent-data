@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.climatepro.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.climatepro.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.climatepro.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010082",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ClimatePro's own website lists a mailing address in Cotati, CA, matching the Cotati, CA location in the agenda text",
+      "ClimatePro installs 3M window film, matching the agenda's 'Reflective Window Film Project' at Horace Mann Elementary",
+      "ClimatePro's About page describes a family-owned company led by the Miller-Dobbins family, matching the legal name 'Miller Dobbins Family, Inc.' in the agenda text",
+      "Website lists 'Schools & Education' as an industry served"
+    ],
+    "key": "v-010082",
+    "notes": "Agenda legal name is 'Miller Dobbins Family, Inc. dba Climate Pro'. The exact legal name and CA entity number were not confirmed on a cited page, so legalName is null.",
+    "profile": {
+      "address": "374 Blodgett Street, Suite 1, Cotati, CA 94931",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "customercare@climatepro.com",
+      "headquarters": "Cotati, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(707) 569-9098",
+      "samUei": null,
+      "summary": "ClimatePro is a family-owned company that installs 3M window film and security screens on homes and commercial buildings, including schools. Its films are used to reduce heat and glare, add privacy, block ultraviolet light and improve safety. It serves the San Francisco Bay Area.",
+      "website": "https://www.climatepro.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "ClimatePro",
+        "url": "https://www.climatepro.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - ClimatePro",
+        "url": "https://www.climatepro.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - ClimatePro",
+        "url": "https://www.climatepro.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010082",
+    "notes": "ClimatePro is a Cotati, CA 3M window film installer that serves schools and is family-owned by the Dobbins family founded by Louis Miller, matching 'Miller Dobbins Family, Inc. dba Climate Pro' and the Horace Mann reflective window film project. Summary, website, phone, email and address are supported by the cited pages and no named individuals' contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

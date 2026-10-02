@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/das/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/das/das_contactUS.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/DAS/Grants/California-Youth-Apprenticeship-Grant.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-industrial-relations-division-of-apprenticeship-standards",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California state agency: the Division of Apprenticeship Standards (DAS) is a division of the California Department of Industrial Relations (dir.ca.gov)",
+      "OUSD's grant title 'California Opportunity Youth Apprenticeship' matches the California Opportunity Youth Apprenticeship (COYA) Grant that DAS runs and lists on its own website",
+      "The grant funds Local Education Agencies such as school districts for youth pre-apprenticeship and apprenticeship programs, matching OUSD's Talent/Human Resources office and 'Staff & hiring' category",
+      "DAS headquarters is in Oakland, CA, the same city as OUSD"
+    ],
+    "key": "n-california-department-of-industrial-relations-division-of-apprenticeship-standards",
+    "notes": "Public agency, so no EIN, Secretary of State number or SAM UEI is listed. The COYA grantee lists I could read did not name OUSD; they may be incomplete or predate the award. The vendor is the state funder, and the agency identity is unambiguous. Web search budget was exhausted, so only direct dir.ca.gov page fetches were used.",
+    "profile": {
+      "address": "1515 Clay St, 19th floor, Ste 1902, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "DAS@dir.ca.gov",
+      "headquarters": "Oakland, CA",
+      "legalName": "Division of Apprenticeship Standards",
+      "orgType": "public_agency",
+      "phone": "(415) 703-4920",
+      "samUei": null,
+      "summary": "The Division of Apprenticeship Standards is part of the California Department of Industrial Relations, a state agency. It works with employers to build a skilled workforce and career pathways through apprenticeship programs. It also runs the California Opportunity Youth Apprenticeship Grant, which funds programs that open pre-apprenticeships and apprenticeships to young people who are out of school or work.",
+      "website": "https://www.dir.ca.gov/das/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Division of Apprenticeship Standards",
+        "url": "https://www.dir.ca.gov/das/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact DAS",
+        "url": "https://www.dir.ca.gov/das/das_contactUS.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "California Opportunity Youth Apprenticeship (COYA) Grant",
+        "url": "https://www.dir.ca.gov/DAS/Grants/California-Youth-Apprenticeship-Grant.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-california-department-of-industrial-relations-division-of-apprenticeship-standards",
+    "notes": "The agenda names the California Department of Industrial Relations (Division of Apprenticeship Standards) on a grant titled California Opportunity Youth Apprenticeship, which DAS itself administers per dir.ca.gov. The summary, website, phone, email and address match the cited DAS pages. The COYA grantee page does not list OUSD, but the agency is the funder and the grant title matches exactly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

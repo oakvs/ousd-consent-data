@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.linguabee.com/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linguabee.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/contract-opportunity/r6-option-sign-la-70fbr724q00000005-award-70fbr724p00000008-linguabee-llc-uei-hbnmrdlvvdj8-7765-wadsworth-blvd-746453-arvada-co-80006-f7466/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-linguabee",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Linguabee, LLC' appears on the company's own privacy policy, matching the agenda name 'Linguabee, LLC'",
+      "A federal award record lists LINGUABEE LLC at 7765 Wadsworth Blvd. #746453, Arvada CO 80006, matching the agenda location Arvada, CO",
+      "Linguabee's website describes interpreting and translation services, including K-12 education and Oakland, CA listings, consistent with OUSD's RFP for translation and interpretation services"
+    ],
+    "key": "n-linguabee",
+    "notes": "Address is a PO box-style mailing address as shown on a federal award record (third-party page); SAM.gov and CO Secretary of State were not directly checked. Phone shown is the company's main video-phone line.",
+    "profile": {
+      "address": "7765 Wadsworth Blvd. #746453, Arvada CO 80006",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@linguabee.com",
+      "headquarters": "Arvada, CO",
+      "legalName": "Linguabee, LLC",
+      "orgType": "company",
+      "phone": "855-585-5859",
+      "samUei": "HBNMRDLVVDJ8",
+      "summary": "Linguabee is a company that provides sign language interpreting services. It offers on-site American Sign Language interpreting, video remote interpreting and captioning, and serves businesses, government agencies, schools and events.",
+      "website": "https://www.linguabee.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "phone"
+        ],
+        "title": "Linguabee Privacy Policy",
+        "url": "https://www.linguabee.com/privacy-policy/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Linguabee",
+        "url": "https://www.linguabee.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "samUei"
+        ],
+        "title": "Sign Language Interpretation award - Linguabee LLC",
+        "url": "https://www.highergov.com/contract-opportunity/r6-option-sign-la-70fbr724q00000005-award-70fbr724p00000008-linguabee-llc-uei-hbnmrdlvvdj8-7765-wadsworth-blvd-746453-arvada-co-80006-f7466/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-linguabee",
+    "notes": "Legal name Linguabee, LLC and the Arvada, CO address match the agenda and a federal award record (UEI HBNMRDLVVDJ8); the company's site confirms sign language interpreting, captioning and K-12 service plus Bay Area coverage, which fits OUSD's interpretation RFP. Summary and contact fields are supported and neutral; the address is a PO-box-style mailing address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/853606710",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://robskate.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://robskate.com/partnerships/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007960",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Rob Skate Academy' based in San Leandro, CA (ProPublica Nonprofit Explorer, EIN 85-3606710)",
+      "Located in San Leandro, CA, matching the agenda text",
+      "Website lists Oakland Unified School District as a partner and describes school-based skate clubs, matching OUSD's after-school & summer program contracts"
+    ],
+    "key": "v-007960",
+    "notes": "The only listed email (rob@robskate.com) looks like a named person's address, so it was omitted. ProPublica shows tax exemption issued January 2026, though the website says the academy has operated since 2008.",
+    "profile": {
+      "address": "14492 Wicks Blvd. San Leandro, California 94577",
+      "caEntityNumber": null,
+      "ein": "85-3606710",
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": "Rob Skate Academy",
+      "orgType": "nonprofit",
+      "phone": "(510) 894-5303",
+      "samUei": null,
+      "summary": "A nonprofit based in San Leandro, California, that teaches skateboarding with a focus on mindfulness. It offers lessons, camps and school-based skate clubs for young people across the San Francisco Bay Area. It has operated since 2008.",
+      "website": "https://robskate.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Rob Skate Academy - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/853606710"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "ROB SKATE ACADEMY",
+        "url": "https://robskate.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Mindfulness Skateboarding Initiatives - ROB SKATE ACADEMY",
+        "url": "https://robskate.com/partnerships/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007960",
+    "notes": "Name, San Leandro location and services match the OUSD records, ProPublica lists the 501(c)(3) with the same name and city, and robskate.com/partnerships lists OUSD as a partner. The nonprofit's tax exemption dates only from January 2026 while the program has run since 2008 per its website, so the entity may be newer than the program, but the identity match is still strong.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

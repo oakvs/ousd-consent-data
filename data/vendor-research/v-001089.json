@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandca.gov/Government/Departments/Parks-Recreation-Youth-Development",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001089",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'City of Oakland Parks and Recreation Department' in Oakland, CA; the City of Oakland's official site lists the department 'Oakland Parks, Recreation & Youth Development' as a city department",
+      "The department's own page describes operating Town After School programs across Oakland, matching OUSD's 'After-school & summer programs' contract and Expanded Learning Opportunities Program funding"
+    ],
+    "key": "v-001089",
+    "notes": "Web search budget was exhausted, so identity rests on the City's own department page. The page does not mention OUSD. The agenda name omits 'Youth Development'; the department name appears to have changed.",
+    "profile": {
+      "address": "1 Frank H. Ogawa Plaza, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "parksandrec@oaklandca.gov",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 238-7275",
+      "samUei": null,
+      "summary": "Oakland Parks, Recreation & Youth Development is a department of the City of Oakland. It provides recreation, park and youth programs across the city, including after-school programs.",
+      "website": "https://www.oaklandca.gov/Government/Departments/Parks-Recreation-Youth-Development"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Oakland Parks, Recreation & Youth Development Department",
+        "url": "https://www.oaklandca.gov/Government/Departments/Parks-Recreation-Youth-Development"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001089",
+    "notes": "The agenda names the City of Oakland Parks and Recreation Department in Oakland, CA, and the city's official department page (Parks, Recreation & Youth Development) shows the same city agency, with the cited phone, email and address and Town After School programs matching the after-school contract. The summary is neutral and supported; the page does not mention OUSD and the department name has evidently changed, but a city department is a unique match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

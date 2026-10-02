@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.peerforward.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.peerforward.org/who-we-are/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/522007028",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-peer-forward",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: College Summit Inc, doing business as PeerForward, EIN 52-2007028, Washington, DC (ProPublica Nonprofit Explorer)",
+      "Headquartered in Washington, DC, matching the agenda text",
+      "PeerForward's own news page describes its program at Oakland Unified School District high schools, including Fremont High School",
+      "Mission of training student peer leaders for college and career readiness matches OUSD's High School Linked Learning Office and 'Classroom & academic programs' category"
+    ],
+    "key": "n-peer-forward",
+    "notes": "Operates as PeerForward, formerly College Summit. OUSD tie confirmed on https://www.peerforward.org/2025-csu-college-fair-held-at-fremont-high-school/ (not cited).",
+    "profile": {
+      "address": "1140 3rd St, NE Suite 320, Washington, DC 20002",
+      "caEntityNumber": null,
+      "ein": "52-2007028",
+      "email": "info@peerforward.org",
+      "headquarters": "Washington, DC",
+      "legalName": "College Summit, Inc",
+      "orgType": "nonprofit",
+      "phone": "202.319.1763",
+      "samUei": null,
+      "summary": "PeerForward is a nonprofit that trains student Peer Leaders in high schools and colleges serving low-income communities. The Peer Leaders help classmates take steps toward college enrollment and success. The organization is based in Washington, DC.",
+      "website": "https://www.peerforward.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - PeerForward",
+        "url": "https://www.peerforward.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Who We Are: PeerForward is a Leading College Access NonProfit",
+        "url": "https://www.peerforward.org/who-we-are/"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "College Summit Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/522007028"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-peer-forward",
+    "notes": "PeerForward (College Summit, Inc dba PeerForward, Washington DC, EIN 52-2007028) matches the agenda name and DC location, and its own site documents PeerForward programs at OUSD schools such as Fremont High. All cited profile fields are supported by the contact, who-we-are and ProPublica pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

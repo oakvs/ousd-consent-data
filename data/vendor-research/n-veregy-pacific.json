@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/201306310230",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-veregy-pacific",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a California limited liability company 'VEREGY PACIFIC, LLC' (entity number 201306310230) in OpenCorporates, which mirrors the California Secretary of State record",
+      "OpenCorporates lists an Oakland, CA address (1111 Broadway, Floor 3) for the company, matching the 'Oakland, CA' location in the agenda text"
+    ],
+    "key": "n-veregy-pacific",
+    "notes": "Registry identity is solid (California LLC, Oakland address listed), but no page could be found linking Veregy Pacific, LLC to the Veregy energy-efficiency company at veregy.com (Phoenix, AZ; phone 800.460.0995), whose site does not mention Veregy Pacific or an Oakland office. Website and contact details were therefore left null. WebSearch quota was exhausted, so no independent page confirming the Garfield Elementary project or the parent relationship was found. The CA Secretary of State record itself was not checked directly.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "201306310230",
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "VEREGY PACIFIC, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Veregy Pacific, LLC is a California limited liability company. It is registered in California and has branch registrations in Oregon and Washington.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "summary"
+        ],
+        "title": "VEREGY PACIFIC, LLC - OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/201306310230"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

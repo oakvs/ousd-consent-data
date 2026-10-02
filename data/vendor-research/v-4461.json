@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/0091817",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wm.com/us/en/location/ca/alameda-county",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-4461",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches an active California stock corporation, 'WASTE MANAGEMENT OF ALAMEDA COUNTY, INC.' (entity 0091817), a subsidiary of Waste Management, Inc. (OpenCorporates mirror of CA registry; primary CA Secretary of State and SAM.gov pages could not be read)",
+      "WM's Alameda County page describes trash, recycling and commercial services in Alameda County, consistent with OUSD's 'Solid Waste Handling & Recycling Services' agreement",
+      "No source found that names Oakland Unified School District directly, and the agenda gives no city, so the link to OUSD rests on service type and county only"
+    ],
+    "key": "v-4461",
+    "notes": "Medium confidence: legal entity name matches exactly and the services fit, but no page ties it to OUSD. The phone is WM's Alameda County customer line, not necessarily the legal entity's own line. The registered address (Houston, TX) is the parent's corporate address, so it was left out.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "0091817",
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "WASTE MANAGEMENT OF ALAMEDA COUNTY, INC.",
+      "orgType": "company",
+      "phone": "866-849-0076",
+      "samUei": null,
+      "summary": "A California corporation that is part of the WM (Waste Management) family of companies. WM provides trash and recycling services in Alameda County, including residential curbside collection, commercial dumpster service and temporary dumpster rentals.",
+      "website": "https://www.wm.com/us/en/location/ca/alameda-county"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "WASTE MANAGEMENT OF ALAMEDA COUNTY, INC. - OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/0091817"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Waste Management in Alameda County",
+        "url": "https://www.wm.com/us/en/location/ca/alameda-county"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

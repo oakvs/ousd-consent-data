@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://vikstaffing.com/connect/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://vikstaffing.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009099",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches 'Vik Staffing' (vikstaffing.com; contact page shows 'Vik Staffing LLC')",
+      "A directory listing and search result place 'Vik Staffing Bay Area' in Union City, CA, matching the agenda text, but the company's own contact page lists Walnut Creek, CA",
+      "Counter-signal: the company describes hospitality and event staffing (servers, bartenders), which does not obviously match OUSD Talent/Human Resources services agreements",
+      "No public page found linking Vik Staffing to Oakland Unified or any school district"
+    ],
+    "key": "v-009099",
+    "notes": "Plausible candidate only, not confirmed. Could not verify that this hospitality staffing firm is the vendor OUSD contracts with for Talent/HR services; the agenda says Union City while the company's contact page says Walnut Creek. No registry (CA SOS, SAM.gov) record was found or checked. Do not publish without human review.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@vikstaffing.com",
+      "headquarters": "Walnut Creek, CA",
+      "legalName": "Vik Staffing LLC",
+      "orgType": "company",
+      "phone": "925.400.8382",
+      "samUei": null,
+      "summary": "Vik Staffing is a Bay Area staffing company that supplies hospitality and event workers, such as servers and bartenders.",
+      "website": "https://vikstaffing.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Contact",
+        "url": "https://vikstaffing.com/connect/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Who we are",
+        "url": "https://vikstaffing.com/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

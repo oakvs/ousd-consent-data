@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://communityinitiatives.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://communityinitiatives.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943255070",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001155",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit exactly: 'Community Initiatives', Oakland, CA, EIN 94-3255070 (ProPublica Nonprofit Explorer)",
+      "Organization's own website lists its Northern California administrative office at 1000 Broadway, Suite #480, Oakland, CA, matching the agenda's 'Oakland, CA'",
+      "As a comprehensive fiscal sponsor hosting youth-serving projects (including an Oakland youth project), it plausibly contracts for OUSD after-school programs, but no page found names OUSD or after-school programs directly"
+    ],
+    "key": "v-001155",
+    "notes": "Medium rather than high because no page found directly connects Community Initiatives to OUSD or to after-school/expanded learning programs. Registry name match and Oakland location are strong, but the activity link to the agenda is inferred (fiscal sponsor of youth-serving projects). CA Secretary of State and SAM.gov were not checked, so those IDs are null.",
+    "profile": {
+      "address": "1000 Broadway, Suite #480, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-3255070",
+      "email": "info@communityinitiatives.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Community Initiatives",
+      "orgType": "nonprofit",
+      "phone": "(415) 230-7700",
+      "samUei": null,
+      "summary": "Community Initiatives is a nonprofit fiscal sponsor. It gives other nonprofit projects administrative and professional services such as financial management, human resources, payroll, insurance, legal services, grant management, tax compliance and online fundraising support.",
+      "website": "https://communityinitiatives.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address"
+        ],
+        "title": "About - Community Initiatives",
+        "url": "https://communityinitiatives.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - Community Initiatives",
+        "url": "https://communityinitiatives.org/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Community Initiatives - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943255070"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

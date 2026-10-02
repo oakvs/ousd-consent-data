@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandedfund.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandedfund.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/432014630",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-public-ed-fund",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'The Oakland Public Education Fund', EIN 43-2014630 (ProPublica Nonprofit Explorer)",
+      "Its own website says it develops and invests community resources in Oakland public schools, matching OUSD's 'Classroom & academic programs' contracts and the Measures N and H school-improvement budget item",
+      "Its own website lists an Oakland, CA mailing address and the same EIN shown in the registry"
+    ],
+    "key": "n-oakland-public-ed-fund",
+    "notes": "Agenda text gives no city and no OUSD mention was found on the organization's pages; identity rests on name, Oakland location, and the public-schools mission. CA Secretary of State and SAM.gov were not checked (search budget exhausted, ProPublica search blocked).",
+    "profile": {
+      "address": "PO Box 71005, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "43-2014630",
+      "email": "info@oaklandedfund.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "The Oakland Public Education Fund",
+      "orgType": "nonprofit",
+      "phone": "510-221-6968",
+      "samUei": null,
+      "summary": "A nonprofit organization in Oakland, California that raises and invests community resources in Oakland public schools. It works to support students in learning, growing and thriving. It has been a tax-exempt 501(c)(3) organization since 2003.",
+      "website": "https://www.oaklandedfund.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Contact - Oakland Public Education Fund",
+        "url": "https://www.oaklandedfund.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "ein"
+        ],
+        "title": "About - Oakland Public Education Fund",
+        "url": "https://www.oaklandedfund.org/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "The Oakland Public Education Fund - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/432014630"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-oakland-public-ed-fund",
+    "notes": "The agenda name 'Oakland Public Ed Fund' is the common short form of The Oakland Public Education Fund, an Oakland 501(c)(3) (ruling Nov 2003, EIN 43-2014630) whose mission is investing community resources in Oakland public schools, which fits a school-site program budget item; no similarly named organization turned up. Website, phone, email, address, EIN, legal name and the neutral summary are all confirmed on the cited pages, though none of them mentions OUSD, Measure N/H or Oakland High School directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

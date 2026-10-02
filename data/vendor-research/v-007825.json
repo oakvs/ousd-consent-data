@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/king-construction-inspection-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-007825",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California Secretary of State general corporation: 'King Construction Inspection, Inc.' (entity number 2679922, active), as shown on the bizprofile.net filing summary",
+      "Principal address is in Oakland, CA, matching the agenda text",
+      "Registered type of business is 'Construction Inspections', matching OUSD's Inspector of Record Services contracts for school construction projects",
+      "Search results show the company describes itself as providing DSA-certified Inspector of Record services for Bay Area school projects"
+    ],
+    "key": "v-007825",
+    "notes": "Company website (kci-inc.com) could not be fetched from this environment, so website, phone and email are left null. Search snippets show only a named individual's email, which is excluded. Registry data comes from a third-party mirror of Secretary of State filings, not bizfileonline directly.",
+    "profile": {
+      "address": "5463 Kales Ave, Oakland, CA 94618",
+      "caEntityNumber": "2679922",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "King Construction Inspection, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California corporation based in Oakland whose registered line of business is construction inspections. It provides inspector services on construction projects.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "address",
+          "headquarters",
+          "caEntityNumber"
+        ],
+        "title": "King Construction Inspection, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/king-construction-inspection-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007825",
+    "notes": "The cited filing page shows an active CA general corporation with the exact name King Construction Inspection, Inc., Oakland principal address (5463 Kales Ave), and registered business type Construction Inspections, which fits OUSD's Inspector of Record contracts. The summary stays within what the filing supports and is neutral; no individuals' contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

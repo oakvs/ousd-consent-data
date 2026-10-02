@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.shawhrconsulting.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.shawhrconsulting.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://opencorporates.com/companies/us_ca/3358453",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-shaw-hr-consulting",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered California corporation 'SHAW HR CONSULTING, INC.' (OpenCorporates, entity 3358453, active), based in Newbury Park, CA",
+      "Website says the firm serves more than 250 public sector organizations including school districts, consistent with an HR-related services agreement through OUSD's Risk Management Department",
+      "Weak or contradicting: agenda gives 'Newberry, CA' but the firm is in Newbury Park, CA (possible agenda misspelling, unconfirmed); no public page found linking the firm to OUSD"
+    ],
+    "key": "n-shaw-hr-consulting",
+    "notes": "Medium: the agenda location 'Newberry, CA' does not match Newbury Park, CA, and no page ties this firm to OUSD. Could be a misspelling or a different business. Mailing address omitted because the website spells the street 'Regno' while the state record says 'Reino'.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "3358453",
+      "ein": null,
+      "email": null,
+      "headquarters": "Newbury Park, CA",
+      "legalName": "SHAW HR CONSULTING, INC.",
+      "orgType": "company",
+      "phone": "805.498.9400",
+      "samUei": null,
+      "summary": "A human resources consulting firm based in Newbury Park, California. It helps employers follow disability laws such as the Americans with Disabilities Act and the California Fair Employment and Housing Act. It works with private companies and with public sector organizations such as cities, counties, school districts and colleges.",
+      "website": "https://www.shawhrconsulting.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Us - Shaw HR Consulting",
+        "url": "https://www.shawhrconsulting.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters"
+        ],
+        "title": "Contact - Shaw HR Consulting",
+        "url": "https://www.shawhrconsulting.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "SHAW HR CONSULTING, INC. :: California (US) :: OpenCorporates",
+        "url": "http://opencorporates.com/companies/us_ca/3358453"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

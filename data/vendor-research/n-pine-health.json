@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://pinehealthstaffing.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://pinehealthstaffing.com/about-pine-health/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://pinehealthstaffing.com/workforce-solutions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-pine-health",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Headquartered in Phoenix, AZ (2999 N. 44th St., Suite 220), matching the 'Phoenix, AZ' location in the agenda text",
+      "Website describes staffing for school districts, including special education teachers, behavior technicians and therapists, matching OUSD's Special Education contract for a nonpublic agency",
+      "Caveat: none of the fetched pages mention California or Oakland Unified, so the link to OUSD is inferred from name, city and service type only"
+    ],
+    "key": "n-pine-health",
+    "notes": "Staffing company (not a school); no registry IDs filled because only third-party aggregator pages showed them. The Phoenix location and school special-education staffing match the agenda, but no page links Pine Health to California or OUSD, so a reviewer should confirm.",
+    "profile": {
+      "address": "2999 N. 44th St., Suite 220, Phoenix, AZ 85018",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@pinehealthstaffing.com",
+      "headquarters": "Phoenix, AZ",
+      "legalName": "Pine Health",
+      "orgType": "company",
+      "phone": "602-428-6060",
+      "samUei": null,
+      "summary": "Pine Health is a healthcare staffing company based in Phoenix, Arizona. It connects healthcare professionals with clients that need them. For school districts it provides staff such as behavior technicians, instructional aides, therapists, nurses, school psychologists and special education teachers.",
+      "website": "https://pinehealthstaffing.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - Pine Health Staffing",
+        "url": "https://pinehealthstaffing.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Pine Health",
+        "url": "https://pinehealthstaffing.com/about-pine-health/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Workforce Solutions - Pine Health Staffing",
+        "url": "https://pinehealthstaffing.com/workforce-solutions/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

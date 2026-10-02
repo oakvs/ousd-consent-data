@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.woodminster.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.woodminster.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.woodminster.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941688232",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009536",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Producers Associates' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-1688232), matching the agenda's 'Producers Associates, Inc.' and Oakland, CA",
+      "Woodminster Summer Musicals website names its operator as 'Producers Associates, Inc.' and shows the same EIN (94-1688232) and an Oakland mailing address",
+      "The agenda names 'Woodminster / Producers Associates, Inc.' and the organization presents Woodminster Summer Musicals; the work is for an arts program (Prop 28 Arts and Music funding), consistent with a theater organization"
+    ],
+    "key": "v-009536",
+    "notes": "Web search quota was exhausted, so identity was confirmed by fetching the organization's own site and ProPublica directly. No page found mentions Oakland Unified or Edna Brewer. California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "5658 Grisborne Ave, Oakland, CA 94611",
+      "caEntityNumber": null,
+      "ein": "94-1688232",
+      "email": "info@woodminster.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Producers Associates, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(510) 531-9597",
+      "samUei": null,
+      "summary": "A nonprofit that presents Woodminster Summer Musicals at the Woodminster Amphitheater in Oakland's Joaquin Miller Park. It has staged three musicals each summer for more than 50 years, mixing professional and amateur performers, and says it supports theater education.",
+      "website": "https://www.woodminster.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Woodminster Summer Musicals",
+        "url": "https://www.woodminster.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein"
+        ],
+        "title": "Producers Associates Inc. — Woodminster Summer Musicals",
+        "url": "https://www.woodminster.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us — Woodminster Summer Musicals",
+        "url": "https://www.woodminster.com/contact"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Producers Associates - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941688232"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009536",
+    "notes": "The agenda names 'Woodminster / Producers Associates, Inc.' in Oakland, and woodminster.com and ProPublica show Producers Associates, Inc. (EIN 94-1688232), a 501(c)(3) in Oakland that runs Woodminster Summer Musicals and states a commitment to theater education, which fits an arts-funded school services agreement. The summary, contact fields (generic business info@ email, phone, mailing address) and EIN are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.nokidhungry.org/who-we-are",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nokidhungry.org/who-we-are/financial-information",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/521367538",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nokidhungry.org/blog/heres-list-our-emergency-grants-through-june-2020",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-share-our-strength",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Share Our Strength' headquartered in Washington, DC (ProPublica Nonprofit Explorer, EIN 52-1367538), matching the agenda location",
+      "The agenda grant title names 'No Kid Hungry', which is Share Our Strength's campaign (nokidhungry.org)",
+      "No Kid Hungry's own blog lists Oakland Unified School District as a grant recipient for community meal distribution, matching OUSD's food-related grant agreement"
+    ],
+    "key": "n-share-our-strength",
+    "notes": "Grant is from the No Kid Hungry campaign of Share Our Strength. No general email found on cited pages (contact form only). CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1401 Massachusetts Ave NW, Suite 400, Washington DC, 20005",
+      "caEntityNumber": null,
+      "ein": "52-1367538",
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "Share Our Strength",
+      "orgType": "nonprofit",
+      "phone": "(800) 969-4767",
+      "samUei": null,
+      "summary": "Share Our Strength is a national nonprofit working to solve problems of hunger and poverty in the United States and around the world. Its No Kid Hungry campaign works to end childhood hunger through school meals, summer meals, grocery benefits and home feeding support, including grants to schools and community groups.",
+      "website": "https://www.nokidhungry.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Who We Are | No Kid Hungry",
+        "url": "https://www.nokidhungry.org/who-we-are"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Charity Financial Information | No Kid Hungry",
+        "url": "https://www.nokidhungry.org/who-we-are/financial-information"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Share Our Strength - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/521367538"
+      },
+      {
+        "supports": [],
+        "title": "Here's a List of Our Emergency Grants Through June 2020",
+        "url": "https://www.nokidhungry.org/blog/heres-list-our-emergency-grants-through-june-2020"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-share-our-strength",
+    "notes": "Grant title names No Kid Hungry, the campaign of Share Our Strength (Washington, DC; EIN 52-1367538, 501(c)(3)), and the campaign's own blog lists Oakland Unified School District as a meal-funding grant recipient. Name, location, address, phone, EIN and summary are all supported by the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

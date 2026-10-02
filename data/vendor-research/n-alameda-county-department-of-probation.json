@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://probation.acgov.org/about-us/contact-us.page",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://probation.acgov.org/about-us.page",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://probation.acgov.org/juvenile-services.page",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-department-of-probation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official county site (probation.acgov.org) lists Alameda County Probation Department headquarters at 1111 Jackson Street, Oakland, CA, matching the agenda location Oakland, CA",
+      "Department's Juvenile Services page names Oakland Unified School District as a partner connecting youth and families to services, matching OUSD's MOU for student support services",
+      "Agenda name matches the county department name, and the funding sources listed are Alameda County Probation"
+    ],
+    "key": "n-alameda-county-department-of-probation",
+    "notes": "Public agency of Alameda County; no EIN, state entity number or UEI expected. No general email on contact page.",
+    "profile": {
+      "address": "PO Box 2059, 1111 Jackson Street, Oakland, CA 94607-2059",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Alameda County Probation Department",
+      "orgType": "public_agency",
+      "phone": "510-268-7050",
+      "samUei": null,
+      "summary": "A county government agency that supervises adults and juveniles placed on probation in Alameda County, California. It runs reentry programs, juvenile facilities, and youth development programs, and connects youth and families to community services.",
+      "website": "https://probation.acgov.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us | Alameda County Probation Department",
+        "url": "https://probation.acgov.org/about-us/contact-us.page"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us | Alameda County Probation Department",
+        "url": "https://probation.acgov.org/about-us.page"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Juvenile Services | Alameda County Probation Department",
+        "url": "https://probation.acgov.org/juvenile-services.page"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-alameda-county-department-of-probation",
+    "notes": "The cited probation.acgov.org pages show the Alameda County Probation Department at 1111 Jackson Street, Oakland, with the cited phone number. The Juvenile Services page names OUSD as a partner, which fits the High School Network MOU. The summary matches the About and Juvenile Services pages and is neutral; the website is the cited domain itself.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

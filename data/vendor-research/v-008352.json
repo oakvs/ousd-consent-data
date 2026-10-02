@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandserves.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandserves.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/813274257",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008352",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Oakland Serves' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 81-3274257), matching the agenda text 'Oakland Serves, Oakland, CA'",
+      "Organization's own website says it places volunteer mentors in OUSD high school classrooms to support students academically, matching OUSD's 'Classroom & academic programs' contracts with the Academics and Instruction / post-secondary counseling offices",
+      "Website states EIN 81-3274257, the same EIN as the ProPublica registry record"
+    ],
+    "key": "v-008352",
+    "notes": "Phone not published on the site. Did not check CA Secretary of State or SAM.gov (web search budget exhausted). Address is a P.O. box (mailing address).",
+    "profile": {
+      "address": "P.O. Box 19317, Oakland CA, 94619",
+      "caEntityNumber": null,
+      "ein": "81-3274257",
+      "email": "info@oaklandserves.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Serves",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Oakland Serves is a nonprofit that places volunteer mentors in high school classrooms in the Oakland Unified School District. The mentors help teachers support students, with a focus on students who are most at risk of falling behind academically.",
+      "website": "https://www.oaklandserves.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters",
+          "ein",
+          "legalName"
+        ],
+        "title": "Oakland Serves",
+        "url": "https://www.oaklandserves.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "email",
+          "address",
+          "ein"
+        ],
+        "title": "About - Oakland Serves",
+        "url": "https://www.oaklandserves.org/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Oakland Serves - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/813274257"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008352",
+    "notes": "Oakland Serves is an Oakland-based 501(c)(3) (EIN 81-3274257 confirmed on both its own site and ProPublica) that places volunteer mentors in OUSD high school classrooms, which fits the academic-support contracts; address, email, EIN, and org type are shown on its site and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

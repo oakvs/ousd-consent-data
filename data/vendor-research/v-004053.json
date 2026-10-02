@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156365",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stanford.edu/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ed.stanford.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004053",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Trustees of Stanford University' matches the registered 501(c)(3) 'The Board Of Trustees Of The Leland Stanford Junior University', EIN 94-1156365, Stanford, CA (ProPublica Nonprofit Explorer)",
+      "Agenda location Palo Alto, CA is the immediate neighbor of Stanford, CA, where the university is based",
+      "The Graduate School of Education is a school of Stanford University (ed.stanford.edu), matching an education-focused 'Classroom & academic programs' contract"
+    ],
+    "key": "v-004053",
+    "notes": "Registry match is to the university's legal entity. Could not find a public page confirming the specific 'Strategic Resource Planning' department or a Stanford-OUSD link (web search budget exhausted); identity rests on the legal-name match, the education focus of the Graduate School of Education and the Stanford-area location. No general email found (the GSE contact page lists only an admissions inbox). Contact details are for the university, not the school.",
+    "profile": {
+      "address": "450 Jane Stanford Way, Stanford, CA 94305-2004",
+      "caEntityNumber": null,
+      "ein": "94-1156365",
+      "email": null,
+      "headquarters": "Stanford, CA",
+      "legalName": "The Board Of Trustees Of The Leland Stanford Junior University",
+      "orgType": "nonprofit",
+      "phone": "(650) 723-2300",
+      "samUei": null,
+      "summary": "Stanford University is a private research university in Stanford, California. It has seven schools, including the Graduate School of Education, and offers undergraduate and graduate degrees. It also does research and operates health care facilities.",
+      "website": "https://www.stanford.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Stanford University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156365"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | Stanford University",
+        "url": "https://www.stanford.edu/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Stanford Graduate School of Education",
+        "url": "https://ed.stanford.edu/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004053",
+    "notes": "Agenda vendor 'Trustees of Stanford University (Graduate School of Education)' in Palo Alto matches the registered legal entity (EIN 94-1156365, 501(c)(3), Stanford CA) and a GSE teacher-quality services agreement fits an education contract. Legal name, EIN, phone and address were confirmed on ProPublica and stanford.edu/contact; the summary is neutral and consistent with stanford.edu sources, though the specific Strategic Resource Planning department could not be independently confirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

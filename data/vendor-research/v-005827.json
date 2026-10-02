@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.devinegong.com/ourstory",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.devinegong.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005827",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: the firm's own site is titled 'Devine and Gong, Inc.' and says it is based in Oakland, matching the agenda's 'Devine and Gong, Inc.' in Oakland, CA",
+      "Services match: the firm does affordable housing finance and development consulting, consistent with OUSD's Asset Management and Real Property Services agreement for Facilities Planning and Management",
+      "OUSD's own Legistar item 25-2903 names 'Devine and Gong, Inc., Oakland, CA' for Asset Management and Real Property Services including feasibility studies for district sites"
+    ],
+    "key": "v-005827",
+    "notes": "Contact details (phone, email, street address) were not shown on the firm's own pages as fetched, and registry IDs were not looked up, so these are null. Third-party directories list 1970 Broadway, Suite 920, Oakland, CA 94612 but were not used. OUSD Legistar item 25-2903 (a PDF) was read for identity confirmation but is not cited.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Devine and Gong, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Devine and Gong, Inc. is an Oakland-based consulting firm that works on affordable housing. It offers affordable housing financial consulting, housing development consulting and program development. The firm says it has worked on more than 50 projects in the Greater Bay Area.",
+      "website": "https://www.devinegong.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Our Story — Devine and Gong",
+        "url": "https://www.devinegong.com/ourstory"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Devine and Gong (DGI)",
+        "url": "https://www.devinegong.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-005827",
+    "notes": "Exact name match and Oakland location; the firm's own pages confirm affordable housing finance and development consulting, the 50+ project claim and Oakland base, which fits OUSD Measure Y asset management and real property work. I could not independently retrieve the Legistar item, but no conflicting similarly named entity surfaced and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

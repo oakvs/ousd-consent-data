@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.biggscardosa.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010112",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website names the firm 'Biggs Cardosa Associates, Inc.', matching the agenda name exactly",
+      "Website describes structural design, engineering and inspection services, matching OUSD's 'Structural Engineering Consulting Services at Various School Sites' contract",
+      "Website lists an Oakland office (510-625-9900), matching the agenda location of Oakland, CA"
+    ],
+    "key": "v-010112",
+    "notes": "No registry (CA Secretary of State, SAM.gov) was checked because the web search budget was exhausted; only the company's own website was fetched. Phone, email, address and headquarters left null because the site lists office phone numbers but no street addresses, no general email, and does not say which office is headquarters.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Biggs Cardosa Associates, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A company that provides structural design, engineering, project management, construction management and inspection services. It has offices in California (including San Jose, San Francisco, Oakland, Fresno and Orange County) and in Olympia, Washington. Its work includes education buildings such as college and school projects.",
+      "website": "https://www.biggscardosa.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Biggs Cardosa Associates, Inc.",
+        "url": "https://www.biggscardosa.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010112",
+    "notes": "The firm's own website (biggscardosa.com) shows the exact name Biggs Cardosa Associates, Inc., structural engineering services, an Oakland office, and school/college projects, which fits OUSD's structural engineering consulting contract. The summary matches the site and is neutral; no registry was checked, but the name, location and service match is specific.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

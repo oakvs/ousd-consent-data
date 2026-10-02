@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/481293818",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thespringstoneschool.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thespringstoneschool.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-springstone-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Springstone School', Lafayette, CA, EIN 48-1293818 (ProPublica Nonprofit Explorer)",
+      "Located in Lafayette, CA, matching the agenda text 'Lafayette, CA'",
+      "Official website describes a Nonpublic School (NPS) serving students with disabilities who attend through district referrals via the IEP process, matching OUSD's 'Nonpublic, Nonsectarian School' Special Education contract"
+    ],
+    "key": "n-springstone-school",
+    "notes": "ProPublica lists the legal name as 'Springstone School' (without 'The'). Web search quota was exhausted, so the site and registry were reached by direct fetch; the site's pages do not mention Oakland Unified by name. California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "1035 Carol Lane, Lafayette, CA 94549",
+      "caEntityNumber": null,
+      "ein": "48-1293818",
+      "email": "info@thespringstoneschool.org",
+      "headquarters": "Lafayette, CA",
+      "legalName": "Springstone School",
+      "orgType": "nonprofit",
+      "phone": "(925) 962-9660",
+      "samUei": null,
+      "summary": "The Springstone School is a nonprofit, independent nonpublic school in Lafayette, California for students in grades 6-12. It serves neurodivergent students, including those with autism, anxiety, ADHD and executive functioning challenges. It offers small classes along with social skills, occupational therapy and mindfulness support. Students attend through private placement or school district referrals under the Individualized Education Program (IEP) process.",
+      "website": "https://www.thespringstoneschool.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Springstone School - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/481293818"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "The Springstone School",
+        "url": "https://www.thespringstoneschool.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - The Springstone School",
+        "url": "https://www.thespringstoneschool.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-springstone-school",
+    "notes": "The Springstone School is an independent nonprofit nonpublic school in Lafayette, CA (ProPublica EIN 48-1293818, 501(c)(3)). It accepts district IEP referrals, which fits OUSD's nonpublic school special education master contract. The summary, contact details, and EIN all match the school's site, contact page, and ProPublica listing, and the contact details are generic business ones.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

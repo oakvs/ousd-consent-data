@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943222960",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nationalequityproject.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nationalequityproject.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003010",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'National Equity Project', Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3222960)",
+      "Located in Oakland, CA, matching the agenda text",
+      "The organization's own website footer shows the same EIN (94-3222960) as the ProPublica registry record",
+      "Website describes equity-centered education leadership work with schools and districts, matching OUSD's 'Classroom & academic programs' contracts"
+    ],
+    "key": "v-003010",
+    "notes": "Web search quota was exhausted, so identity was confirmed via direct fetches of ProPublica (by EIN) and the organization's own site. No OUSD mention was found on the fetched pages; OUSD link rests on name, Oakland location, matching EIN across sources and education focus. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "1720 Broadway, Ste. 400, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3222960",
+      "email": "info@nationalequityproject.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "National Equity Project",
+      "orgType": "nonprofit",
+      "phone": "510.208.0160",
+      "samUei": null,
+      "summary": "The National Equity Project is a nonprofit based in Oakland, California, that works with education leaders, communities and organizations to build equity-centered change in schools. Founded in 1995, it develops leaders in schools, districts and education agencies to improve conditions for students who have been historically underserved.",
+      "website": "https://nationalequityproject.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National Equity Project - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943222960"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "National Equity Project",
+        "url": "https://nationalequityproject.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - National Equity Project",
+        "url": "https://nationalequityproject.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003010",
+    "notes": "The Oakland-based 501(c)(3) National Equity Project (EIN 94-3222960, founded 1995) matches the agenda name and city, and its education-leadership work fits OUSD's classroom and academic program contracts. The summary and contact fields are supported by the organization's own site and ProPublica, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.roberthalf.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Robert_Half",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003638",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: SEC EDGAR conformed name 'ROBERT HALF INC.' and Robert Half website legal name 'Robert Half Inc.' match the agenda's 'Robert Half, Inc.' (earlier agenda items say 'Robert Half International Inc.', the company's former name per Wikipedia)",
+      "Services match the district's contract categories: Robert Half provides legal, accounting/finance and administrative staffing, consistent with OUSD's General Counsel, Talent and Accounting department agreements",
+      "Robert Half has a San Francisco Bay Area presence; no Oakland-specific branch page or page mentioning OUSD was confirmed"
+    ],
+    "key": "v-003638",
+    "notes": "Confidence is medium because the Oakland link and an OUSD link could not be confirmed (web search quota exhausted; Robert Half location pages did not list an Oakland branch). Registry IDs and contact details left null: no CA SOS or SAM.gov record was reached, and the only phone numbers found were hiring and client-service lines.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Menlo Park, CA",
+      "legalName": "Robert Half Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Robert Half is a staffing and recruitment company that places temporary and full-time professionals in fields such as finance and accounting, technology, legal, marketing and creative, and administrative work. It also offers consulting services. It operates hundreds of locations in the United States and other countries.",
+      "website": "https://www.roberthalf.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Robert Half: Staffing and Recruitment",
+        "url": "https://www.roberthalf.com/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Robert Half - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Robert_Half"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

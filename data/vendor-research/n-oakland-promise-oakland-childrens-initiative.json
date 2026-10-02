@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/542103707",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandpromise.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandpromise.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-promise-oakland-childrens-initiative",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Oakland Promise' based in Oakland, CA (ProPublica Nonprofit Explorer, EIN 54-2103707)",
+      "The organization's own website says it regrants funds through the Oakland Children's Initiative, matching the agenda's 'Oakland Promise (Oakland Children's Initiative)'",
+      "Located in Oakland, CA; programs for Oakland students and families match OUSD's 'Classroom & academic programs' / High School Linked Learning Office contract"
+    ],
+    "key": "n-oakland-promise-oakland-childrens-initiative",
+    "notes": "California SOS entity number and SAM UEI not looked up. A local news piece questioned the organization's legal structure history; not relied on.",
+    "profile": {
+      "address": "484 9th Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "54-2103707",
+      "email": "info@oaklandpromise.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Promise",
+      "orgType": "nonprofit",
+      "phone": "510-858-6054",
+      "samUei": null,
+      "summary": "Oakland Promise is a nonprofit that supports Oakland families from early childhood through college and career. It runs direct services such as college savings accounts and college scholarships, brings community partners together, and regrants funds to other organizations through the Oakland Children's Initiative.",
+      "website": "https://www.oaklandpromise.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Oakland Promise - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/542103707"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Oakland Promise",
+        "url": "https://www.oaklandpromise.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact Us - Oakland Promise",
+        "url": "https://www.oaklandpromise.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-oakland-promise-oakland-childrens-initiative",
+    "notes": "Oakland Promise is an Oakland 501(c)(3) (EIN 54-2103707 per ProPublica) whose own site says it regrants funds through the Oakland Children's Initiative, matching the agenda's OCI/Oakland Promise subcontractor item. Phone, email, address, and website are confirmed on the organization's site and contact page, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

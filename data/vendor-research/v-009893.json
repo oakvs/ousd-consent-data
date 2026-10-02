@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941279794",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bgcoakland.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009893",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Boys & Girls Clubs Of Oakland Inc', located in Oakland, CA (ProPublica Nonprofit Explorer, EIN shown), matching the agenda text 'Boys and Girls Club of Oakland' in Oakland, CA",
+      "Organization website (bgcoakland.org) describes after-school and summer programs for Oakland youth, matching OUSD's 'After-school & summer programs' contract for summer learning programs",
+      "Only Oakland, CA match among similarly named organizations (others found were in Royal Oak, MI)"
+    ],
+    "key": "v-009893",
+    "notes": "Website homepage does not mention OUSD directly; identity rests on registry name/city match and program match. Agenda name uses 'Club' singular; registry/website use 'Clubs'.",
+    "profile": {
+      "address": "3300 High Street, Oakland, CA 94619",
+      "caEntityNumber": null,
+      "ein": "94-1279794",
+      "email": "info@bgcoakland.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Boys & Girls Clubs Of Oakland Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 444-8211",
+      "samUei": null,
+      "summary": "A nonprofit youth organization in Oakland, California. It runs after-school programs, summer and break programs, academic and leadership development, arts and sports activities, and a dental clinic for Oakland youth.",
+      "website": "https://www.bgcoakland.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Boys & Girls Clubs Of Oakland Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941279794"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Boys & Girls Clubs of Oakland",
+        "url": "https://www.bgcoakland.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009893",
+    "notes": "ProPublica confirms Boys & Girls Clubs Of Oakland Inc as an Oakland, CA 501(c)(3) (EIN 94-1279794), and the organization's website confirms after-school and summer programs plus the contact details and programs in the neutral summary, matching OUSD's summer learning programs agreement. The site does not mention OUSD directly, but the name, city and service match is unambiguous.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

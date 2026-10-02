@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://antssports.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.antssports.com/partnership/after-school-enrichment/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://antssports.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007709",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The ANTS Sports website uses the exact legal name 'ANTS After School LLC / dba ANTS Sports', matching the agenda name 'ANTS After School LLC' and the 'ANTS Sports' agreement titles",
+      "ANTS' own after-school enrichment page says 'Oakland Unified has worked with ANTS for many years', matching the OUSD after-school and expanded learning contracts",
+      "The business runs after-school sports and enrichment programs at elementary schools, matching OUSD's 'After-school & summer programs' category"
+    ],
+    "key": "v-007709",
+    "notes": "Santa Rosa, CA (from the agenda) is not mentioned on the company's site, which describes Bay Area programs; headquarters and mailing address were not found and left null. No California Secretary of State record was located via search, so no entity number is given.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello@antssports.com",
+      "headquarters": null,
+      "legalName": "ANTS After School LLC",
+      "orgType": "company",
+      "phone": "510-775-6330",
+      "samUei": null,
+      "summary": "ANTS Sports is a company that runs youth sports programs for children 12 and under in the Bay Area. It offers after-school enrichment classes, summer and holiday camps, and recess programs in sports such as tennis, basketball, soccer, flag football, martial arts and yoga. It partners with elementary schools and school districts.",
+      "website": "https://antssports.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "ANTS Sports",
+        "url": "https://antssports.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "After School Enrichment for Schools - ANTS Sports",
+        "url": "https://www.antssports.com/partnership/after-school-enrichment/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact - ANTS Sports",
+        "url": "https://antssports.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007709",
+    "notes": "The ANTS Sports site states its legal name is ANTS After School LLC (dba ANTS Sports) and its enrichment page cites a long-running partnership with Oakland Unified, matching the after-school contracts; the Santa Rosa agenda address is not on the site but does not conflict with the Bay Area operations. Summary, website, phone and email are all supported by the fetched pages and are neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

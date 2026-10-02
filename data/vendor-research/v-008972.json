@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.hootreading.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.hootreading.com/terms",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008972",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name 'Hoot Reading Inc.' matches the agenda name 'Hoot Reading, Inc.' (hootreading.com terms page and footer)",
+      "Terms page gives a Winnipeg, Manitoba business address, matching the agenda location 'Winnipeg, MB'",
+      "hootreading.com homepage lists Oakland Unified School District as a partner",
+      "Homepage describes 1:1 online reading tutoring for K-12 schools, matching OUSD's tutoring and summer learning contracts"
+    ],
+    "key": "v-008972",
+    "notes": "Registry IDs and a main phone number were not found; web search was unavailable (budget exhausted), so only the company's own pages were used. Legal name is shown as 'Hoot Reading Inc.' (no comma).",
+    "profile": {
+      "address": "210-1600 Kenaston Blvd. Unit 340, Winnipeg, Manitoba, Canada, R3P 0Y4",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "help@hootreading.com",
+      "headquarters": "Winnipeg, MB",
+      "legalName": "Hoot Reading Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Hoot Reading is a company that offers one-on-one online reading tutoring for students in kindergarten through 12th grade. Its tutors are certified teachers who use structured literacy instruction. It works with schools and school districts, and with families.",
+      "website": "https://www.hootreading.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Hoot Reading",
+        "url": "https://www.hootreading.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Hoot Reading Terms",
+        "url": "https://www.hootreading.com/terms"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008972",
+    "notes": "Hoot Reading Inc. (Winnipeg, MB) matches the agenda name and location, its homepage lists Oakland Unified as a partner, and its online K-12 tutoring fits OUSD's tutoring and summer learning contracts. Summary, address, email and legal name are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

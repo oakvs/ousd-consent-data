@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.actransit.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.actransit.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-contra-costa-transit-district-ac-transit",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official site names the agency 'Alameda-Contra Costa Transit District (AC Transit)', matching the agenda name exactly",
+      "Public transit district headquartered in Oakland, CA, serving Alameda and Contra Costa counties, consistent with a transportation MOU about Line 31 bus service to Skyline High School in Oakland"
+    ],
+    "key": "n-alameda-contra-costa-transit-district-ac-transit",
+    "notes": "Web search budget was exhausted, so only the agency's own contact and about pages were fetched; no registry lookups. No general inbox found (only department emails), so email is null. Phone page lists '(510) 891-4777, option 2'; only the number is given.",
+    "profile": {
+      "address": "1600 Franklin St., Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Alameda-Contra Costa Transit District",
+      "orgType": "public_agency",
+      "phone": "(510) 891-4777",
+      "samUei": null,
+      "summary": "AC Transit is a public transit district that runs bus service in Alameda and Contra Costa counties in the East Bay. It serves about 1.5 million residents across a 364 square mile area and connects with BART, Amtrak and ferry terminals. It has operated since 1960.",
+      "website": "https://www.actransit.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "AC Transit Contact Us",
+        "url": "https://www.actransit.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "AC Transit About",
+        "url": "https://www.actransit.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-alameda-contra-costa-transit-district-ac-transit",
+    "notes": "The agenda names Alameda-Contra Costa Transit District (AC Transit) for a Line 31 service MOU serving Skyline High School in Oakland, and the agency's own contact and about pages confirm the legal name, website, phone, Oakland address, 364 sq mi / 1.5 million residents, 1960 start and BART/Amtrak/ferry connections. The summary is neutral and fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

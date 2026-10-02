@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/810231775",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.intermountain.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.intermountain.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-intermountain-deaconess-childrens-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Intermountain Deaconess Childrens Services', Helena, MT, EIN 81-0231775 (ProPublica Nonprofit Explorer), matching the agenda name and the agenda location 'Helena, MT'",
+      "Organization's own website (intermountain.org) is based in Helena, MT and describes school-based services and a Residential Day Treatment School, consistent with OUSD's special education nonpublic school contract",
+      "Search results describe Intermountain Deaconess Children's Services as the Helena, MT children's mental health provider using the Intermountain name and the intermountain.org website, consistent with the website's description"
+    ],
+    "key": "n-intermountain-deaconess-childrens-services",
+    "notes": "No general email is published (contact form only). The legal name is spelled without an apostrophe as shown in the IRS-derived ProPublica record. The agenda's California nonpublic school certification could not be checked on the CDE directory (blocked automated fetching); a search snippet suggests the Helena school entry closed in June 2026.",
+    "profile": {
+      "address": "3240 Dredge Dr, Helena, MT 59602",
+      "caEntityNumber": null,
+      "ein": "81-0231775",
+      "email": null,
+      "headquarters": "Helena, MT",
+      "legalName": "Intermountain Deaconess Childrens Services",
+      "orgType": "nonprofit",
+      "phone": "(406) 442-7920",
+      "samUei": null,
+      "summary": "A Montana nonprofit that provides behavioral health and developmental care for children and families. Its services include mental health support, occupational and speech therapy, school-based services, family and community services, and therapeutic residential care and day treatment.",
+      "website": "https://www.intermountain.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Intermountain Deaconess Childrens Services - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/810231775"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Intermountain",
+        "url": "https://www.intermountain.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Intermountain",
+        "url": "https://www.intermountain.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-intermountain-deaconess-childrens-services",
+    "notes": "ProPublica shows a 501(c)(3) named Intermountain Deaconess Childrens Services in Helena, MT (EIN 81-0231775), matching the agenda name and location. The Intermountain website (Helena, 3240 Dredge Dr, (406) 442-7920) supports the summary, phone and address, and its school-based and day treatment services fit a special education nonpublic school contract. The California certification could not be checked.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

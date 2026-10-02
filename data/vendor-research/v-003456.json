@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.professionaltutors.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.professionaltutors.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.professionaltutors.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003456",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website names 'Professional Tutors of America, Inc.' as its legal name, matching the agenda name exactly",
+      "Located in Brea, CA (3350 E. Birch St, Suite 201), matching the agenda location",
+      "Provides special education instruction and related services, matching OUSD's 'Special education' contract purpose"
+    ],
+    "key": "v-003456",
+    "notes": "Identity confirmed from the company's own website only; no public registry (CA Secretary of State, SAM.gov) was checked because the web search budget was exhausted. Registry IDs left null.",
+    "profile": {
+      "address": "3350 E. Birch St, Suite 201, Brea, CA 92821",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@professionaltutors.com",
+      "headquarters": "Brea, CA",
+      "legalName": "Professional Tutors of America, Inc.",
+      "orgType": "company",
+      "phone": "(800) 832-2487",
+      "samUei": null,
+      "summary": "A California company that has provided educational services since 1983. It offers academic tutoring, special education instruction, speech and language therapy, occupational therapy, counseling, behavioral therapy and vocational education to students and school districts.",
+      "website": "https://www.professionaltutors.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Professional Tutors of America",
+        "url": "https://www.professionaltutors.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "legalName"
+        ],
+        "title": "About | Professional Tutors of America",
+        "url": "https://www.professionaltutors.com/about"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Professional Tutors of America",
+        "url": "https://www.professionaltutors.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003456",
+    "notes": "Company site shows legal name Professional Tutors of America, Inc. at 3350 E. Birch St, Brea, CA, a CDE-certified Non-Public Agency offering special education services to school districts, matching the agenda name, city and contract purpose. Summary (since 1983, listed services) and contact fields are supported by the cited pages; no individuals' contact details or opinion content.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

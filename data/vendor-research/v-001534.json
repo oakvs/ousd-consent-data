@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://edmo.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edmo.org/about-edmo",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/770653711",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001534",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Edventuremore' (ProPublica Nonprofit Explorer, EIN 77-0653711, Berkeley, CA); the same EIN is shown on edmo.org",
+      "edmo.org (redirected from edventuremore.org and edventuremore.com) says it runs after-school, summer and year-round expanded learning programs, matching OUSD's 'After-school & summer programs' contracts",
+      "edmo.org About page says the first 'Camp Edventure More' is now known as 'EDMO'",
+      "Mismatch: the agenda gives San Leandro, CA, but the registry and website show a Berkeley, CA PO box; no cited page mentions Oakland Unified or San Leandro"
+    ],
+    "key": "v-001534",
+    "notes": "Medium confidence: the agenda lists San Leandro, CA, but the IRS/ProPublica record and EDMO's website show Berkeley, CA (PO box). Neither EDMO page cited mentions OUSD or San Leandro. The web search budget was exhausted, so no California Secretary of State or SAM.gov lookup was done and no OUSD-specific confirmation was found. Reviewer should check whether Edventure More had a San Leandro address in earlier records.",
+    "profile": {
+      "address": "PO Box 3244, Berkeley CA 94703",
+      "caEntityNumber": null,
+      "ein": "77-0653711",
+      "email": "info@edmo.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Edventuremore",
+      "orgType": "nonprofit",
+      "phone": "415.282.6673",
+      "samUei": null,
+      "summary": "EDMO (formerly Camp Edventure More) is a national education nonprofit that runs after-school, summer and year-round expanded learning programs. Its programs combine science, technology, engineering, art and math (STEAM) lessons with social-emotional learning. It works with school districts and operates across the San Francisco Bay Area and Greater Sacramento.",
+      "website": "https://edmo.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "EDMO homepage",
+        "url": "https://edmo.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About EDMO",
+        "url": "https://edmo.org/about-edmo"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Edventuremore - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/770653711"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

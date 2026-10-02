@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.eastbayconsortium.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eastbayconsortium.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001478",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Located in Oakland, CA (PO Box 31674, Oakland, CA 94604), matching the agenda location",
+      "Its site lists partner Oakland high schools (Castlemont, Life Academy, Fremont) that match the schools named in the OUSD service agreements",
+      "Provides college and academic preparation programs, consistent with OUSD's 'Classroom & academic programs' contracts"
+    ],
+    "key": "v-001478",
+    "notes": "No registry (ProPublica/CA SOS/SAM.gov) confirmation obtained: web search budget was exhausted and ProPublica returned HTTP 429. EIN, entity number and UEI left null. No general phone line published; only an individual's direct line, which was excluded. orgType set to other because nonprofit status was not confirmed. The site does not name OUSD or the Clemente Course explicitly.",
+    "profile": {
+      "address": "PO Box 31674, Oakland, CA 94604",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@eastbayconsortium.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "The East Bay Consortium of Educational Institutions, Inc.",
+      "orgType": "other",
+      "phone": null,
+      "samUei": null,
+      "summary": "The East Bay Consortium is one of sixteen California Student Opportunity and Access Programs (Cal-SOAP) administered by the California Student Aid Commission. Established in 1978, it works to increase the number of students who finish high school and enroll in college. It offers tutoring, mentoring, summer academic programs, financial aid workshops and teacher training, mainly in Oakland.",
+      "website": "https://www.eastbayconsortium.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "email",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "East Bay Consortium",
+        "url": "https://www.eastbayconsortium.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "East Bay Consortium of Educational Institutions",
+        "url": "https://www.eastbayconsortium.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001478",
+    "notes": "The cited site shows an Oakland, CA Cal-SOAP education nonprofit (est. 1978) with coordinators at Castlemont, Life Academy, Fremont and Rudsdale, matching the OUSD services agreements. Legal name, website, email, address and summary are supported; the home page says sixteen Cal-SOAP projects while the about page says fifteen, and the Clemente Course is not mentioned on the site.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

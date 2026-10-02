@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/562467645",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lunadancecreativity.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lunadancecreativity.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lunadancecreativity.org/partners-for-change/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002661",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Luna Kids Dance Inc', Berkeley, CA (ProPublica Nonprofit Explorer, EIN 56-2467645), matching the agenda's 'Luna Kids Dance, Inc. dba Luna Dance & Creativity' and Berkeley, CA",
+      "Organization's own website (Luna Dance & Creativity) is located in Berkeley, CA and describes dance education programs for children and early childhood settings, matching OUSD's Early Childhood contracts",
+      "Website says Luna's partnerships have included Oakland Unified school districts and model programs at Kaiser Early Education Center, matching OUSD agreement titles that name Kaiser Elementary / Kaiser Child Development Center"
+    ],
+    "key": "v-002661",
+    "notes": "Web search budget was exhausted; identity was confirmed by fetching the organization's site and ProPublica directly. The website lists a physical address at 931 Ashby Ave, Berkeley, CA 94710 and a mailing address at 1831 Solano Ave. #7788; the mailing address is used here. Cause IQ also lists EIN 56-2467645 as Luna Dance Institute / Luna Dance and Creativity (formerly Luna Dance Institute, per OUSD titles). California Secretary of State entity number and SAM.gov UEI were not checked.",
+    "profile": {
+      "address": "1831 Solano Ave. #7788, Berkeley, CA 94707",
+      "caEntityNumber": null,
+      "ein": "56-2467645",
+      "email": "administrator@lunadancecreativity.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Luna Kids Dance Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 883-1118",
+      "samUei": null,
+      "summary": "Luna Dance & Creativity is a Berkeley, California nonprofit that teaches dance to children and adults. It offers dance classes, professional learning for teachers and artists, and partnerships with schools, early childhood programs and social service groups. It was founded in 1992.",
+      "website": "https://lunadancecreativity.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Luna Kids Dance Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/562467645"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Luna Dance & Creativity",
+        "url": "https://lunadancecreativity.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Luna Dance & Creativity",
+        "url": "https://lunadancecreativity.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Partners for Change - Luna Dance & Creativity",
+        "url": "https://lunadancecreativity.org/partners-for-change/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002661",
+    "notes": "ProPublica lists Luna Kids Dance Inc (Luna Dance And Creativity), Berkeley CA, EIN 56-2467645, a 501(c)(3); the org site confirms the former name Luna Dance Institute, founding in 1992, and partnerships with Oakland schools, Grass Valley Elementary and Kaiser Early Education Center, matching the OUSD agreement titles. Contact details are business-level and the neutral summary is supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

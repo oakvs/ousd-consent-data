@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/rodeo/rids-brother-company-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://app2.boardontrack.com/org/XR54pr/attachment/publicDownload/244413?s=XR54pr",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-rids-brother",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California general corporation 'Rids Brother Company Inc' (entity 3805146, active) with address 301 Railroad Avenue, Rodeo, CA 94572, matching the agenda's 'Rodeo, CA'",
+      "The company's own contract document describes it as a passenger transportation company serving school districts, offering daily home-to-school special education transportation, matching OUSD's 'Special education' non-public transportation agreements"
+    ],
+    "key": "n-rids-brother",
+    "notes": "No official company website could be confirmed (ridsbrothercompanyinc.com returned 404; a mobile-app page uses an @ridsbrother.com email). Phone numbers found on directory sites were not on fetchable official pages and were omitted. Registry data comes from a third-party mirror of the California Secretary of State record (bizprofile.net); SAM.gov UEI X9GVLKBNKZJ3 appeared in search results but the page was blocked, so it was not included. Email comes from the company's own contract template hosted on a school board site.",
+    "profile": {
+      "address": "301 Railroad Avenue, Rodeo, CA 94572",
+      "caEntityNumber": "3805146",
+      "ein": null,
+      "email": "Ridsbrothercompanyinc@gmail.com",
+      "headquarters": "Rodeo, CA",
+      "legalName": "Rids Brother Company Inc",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A company based in Rodeo, California, that provides passenger transportation in the greater Bay Area. It serves school districts, senior centers and the healthcare industry, including daily home-to-school transportation for students with special needs. Its vehicles include sedans, minivans, wheelchair vans and taxis.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Rids Brother Company Inc Rodeo, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/rodeo/rids-brother-company-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "orgType"
+        ],
+        "title": "General Contract - About us (Rids Brother Company Inc)",
+        "url": "https://app2.boardontrack.com/org/XR54pr/attachment/publicDownload/244413?s=XR54pr"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-rids-brother",
+    "notes": "CA registry mirror shows Rids Brother Company Inc (entity 3805146, active, transportation) at 301 Railroad Ave, Rodeo, matching the agenda's Rodeo, CA; the company's own contract document describes school-district and special-education home-to-school transport, matching OUSD's non-public transportation agreements. Summary, address, entity number and generic company email are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156501",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lincolnfamilies.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lincolnfamilies.org/service-locations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lincolnfamilies.org/schoolbased",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002590",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists a 501(c)(3) named 'Lincoln' in Oakland, CA with EIN 94-1156501, and the same EIN appears on lincolnfamilies.org, matching the agenda name 'Lincoln' and location Oakland, CA",
+      "Lincoln's website lists school-based programs in Oakland (Oakland Freedom School summer literacy program, West Oakland Initiative for middle and high school students), matching OUSD contracts for summer learning programs at West Oakland Middle School and student support services",
+      "Main office is at 150 Linden Street, Oakland, CA, matching the agenda location"
+    ],
+    "key": "v-002590",
+    "notes": "IRS/ProPublica name is 'Lincoln'; the organization brands itself 'Lincoln Families' (formerly Lincoln Child Center). Website did not name OUSD explicitly in the pages fetched; identity rests on EIN match, Oakland location, and Oakland school-based/summer programs. CA entity number and SAM UEI not found (web search budget exhausted).",
+    "profile": {
+      "address": "150 Linden Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-1156501",
+      "email": "info@lincolnfamilies.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Lincoln",
+      "orgType": "nonprofit",
+      "phone": "510.273.4700",
+      "samUei": null,
+      "summary": "Lincoln, also known as Lincoln Families, is a nonprofit founded in 1883 that provides mental health and wellness services for children, youth and families in Alameda and Contra Costa counties. It runs school-based programs, such as behavioral and mental health supports and summer literacy programming, as well as community-based programs.",
+      "website": "https://lincolnfamilies.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Lincoln - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156501"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "ein"
+        ],
+        "title": "Lincoln Families",
+        "url": "https://lincolnfamilies.org"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Lincoln Families Locations",
+        "url": "https://lincolnfamilies.org/service-locations"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Lincoln Families School-Based Programs",
+        "url": "https://lincolnfamilies.org/schoolbased"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002590",
+    "notes": "ProPublica lists a 501(c)(3) legally named 'Lincoln' in Oakland (EIN 94-1156501), and lincolnfamilies.org shows the same EIN, a 1883 founding, Alameda/Contra Costa mental health and school-based programs, Oakland Freedom School summer literacy and West Oakland Initiative, with HQ at 150 Linden Street, Oakland. These fit OUSD's student-support and summer-program contracts. No source names OUSD explicitly, so identity rests on name, location and service fit, but the summary and contact fields are all supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

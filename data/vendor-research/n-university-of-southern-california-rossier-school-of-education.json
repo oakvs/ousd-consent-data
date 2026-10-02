@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://rossier.usc.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/951642394",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-southern-california-rossier-school-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the USC Rossier School of Education is a school of the University of Southern California, and its own site identifies it as such (rossier.usc.edu/about)",
+      "University of Southern California is a registered 501(c)(3) educational institution in Los Angeles, CA (ProPublica Nonprofit Explorer, EIN 95-1642394)",
+      "Rossier is a school of education that prepares teachers and school leaders, consistent with OUSD's Talent/Human Resources MOU for staff and hiring"
+    ],
+    "key": "n-university-of-southern-california-rossier-school-of-education",
+    "notes": "Agenda gave no location, and no Oakland-specific page was found (web search budget was exhausted). Identity rests on the unique school name, the registered parent entity, and the school's education/workforce function. Legal contracting entity is the University of Southern California; contact details are for the Rossier school.",
+    "profile": {
+      "address": "Waite Phillips Hall, 3470 Trousdale Parkway, Los Angeles, CA 90089",
+      "caEntityNumber": null,
+      "ein": "95-1642394",
+      "email": "info@rossier.usc.edu",
+      "headquarters": "Los Angeles, CA",
+      "legalName": "University Of Southern California",
+      "orgType": "nonprofit",
+      "phone": "(213) 740-0224",
+      "samUei": null,
+      "summary": "The USC Rossier School of Education is the education school of the University of Southern California, a private nonprofit university in Los Angeles. It prepares teachers and education leaders and does research and policy work aimed at educational equity, with a focus on urban and diverse communities.",
+      "website": "https://rossier.usc.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About USC Rossier School of Education",
+        "url": "https://rossier.usc.edu/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "University Of Southern California - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/951642394"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-university-of-southern-california-rossier-school-of-education",
+    "notes": "The agenda names USC Rossier School of Education exactly, a unique school of the University of Southern California, and an MOU for Talent/HR (staff and hiring) fits an education school's pipeline work. The Rossier about page confirms the phone, generic email, address, website and equity/urban-education mission, and ProPublica confirms the University of Southern California (EIN 95-1642394, Los Angeles, 501(c)(3)). No Oakland-specific source was found, but the exact name match leaves no competing organization.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

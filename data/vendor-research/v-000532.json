@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.artesteem.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.artesteem.org/overview",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943178158",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000532",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Attitudinal Healing Connection Inc' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3178158)",
+      "The organization's own website states its legal name is 'Attitudinal Healing Connection, Inc. doing business as The Center for ArtEsteem', matching the agenda's dba, and shows the same EIN",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes school-based arts programs serving at-risk schools in West Oakland and East Oakland, consistent with OUSD classroom program contracts"
+    ],
+    "key": "v-000532",
+    "notes": "Website pages do not name OUSD directly; identity rests on exact legal name/dba match with registry and website, shared EIN, Oakland location, and school-based arts programming. Address on site has no ZIP code. Search budget was exhausted, so CA SOS and SAM.gov were not checked.",
+    "profile": {
+      "address": "3111 West Street, Oakland",
+      "caEntityNumber": null,
+      "ein": "94-3178158",
+      "email": "info@artesteem.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Attitudinal Healing Connection, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(510) 652-5530",
+      "samUei": null,
+      "summary": "A nonprofit arts and healing organization based in Oakland, California, doing business as The Center for ArtEsteem. It offers creative programs in schools and communities, public art murals, exhibitions, and professional development workshops. Its stated mission is to help people be self-aware and inspired through art, creativity, and education.",
+      "website": "https://www.artesteem.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Contact - The Center for ArtEsteem",
+        "url": "https://www.artesteem.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "ein"
+        ],
+        "title": "Overview - The Center for ArtEsteem",
+        "url": "https://www.artesteem.org/overview"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Attitudinal Healing Connection Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943178158"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000532",
+    "notes": "The artesteem.org contact and overview pages state the exact legal name and dba from the agenda, EIN 94-3178158, a West Oakland base, school-based arts programming and the contact details; ProPublica independently shows the same EIN in Oakland. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

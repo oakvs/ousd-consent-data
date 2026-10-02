@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.americanstagetours.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies?q=American+Stage+Tours&jurisdiction_code=us_ca",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/199904210009",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-american-stage-tours-american-stage-tours",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "California business registry listing (via OpenCorporates) shows an active limited liability company 'AMERICAN STAGE TOURS L.L.C.' at 1488 SOCCER CT, CONCORD, CA, matching the agenda name 'American Stage Tours LLC' and the city Concord, CA",
+      "The company website (americanstagetours.com) describes a Concord, California charter bus and tour company, matching OUSD's 'Transportation Services - School Pupil Activity Bus' agreement"
+    ],
+    "key": "n-american-stage-tours-american-stage-tours",
+    "notes": "Registry data taken from OpenCorporates search results (aggregator of CA Secretary of State records); not verified directly on bizfileonline. A second, inactive stock corporation 'AMERICAN STAGE TOURS' (entity 1148820) exists at the same address; the LLC matches the agenda. General email was obfuscated on the website, so omitted. Web search budget was exhausted, so only direct page fetches were used.",
+    "profile": {
+      "address": "1488 SOCCER CT, CONCORD, CA 94518",
+      "caEntityNumber": "199904210009",
+      "ein": null,
+      "email": null,
+      "headquarters": "Concord, CA",
+      "legalName": "AMERICAN STAGE TOURS L.L.C.",
+      "orgType": "company",
+      "phone": "(925) 687-7705",
+      "samUei": null,
+      "summary": "A family-run charter bus and tour company based in Concord, California, founded in 1983. It offers escorted tours and day trips in the Western United States and charter coach service for groups.",
+      "website": "https://www.americanstagetours.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "American Stage Tours",
+        "url": "https://www.americanstagetours.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "caEntityNumber",
+          "headquarters"
+        ],
+        "title": "OpenCorporates search: American Stage Tours (California)",
+        "url": "https://opencorporates.com/companies?q=American+Stage+Tours&jurisdiction_code=us_ca"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "caEntityNumber",
+          "headquarters"
+        ],
+        "title": "AMERICAN STAGE TOURS L.L.C. - OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/199904210009"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-american-stage-tours-american-stage-tours",
+    "notes": "OpenCorporates shows an active CA LLC 'AMERICAN STAGE TOURS L.L.C.' (199904210009) at 1488 Soccer Ct, Concord, matching the agenda's LLC name and city, and the company website describes a family-run Concord charter bus operator (est. 1983) serving schools, which fits the School Pupil Activity Bus agreement. Summary, phone, website and registry fields are supported and neutral; the older inactive corporation at the same address is a separate entity and the LLC is the correct match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

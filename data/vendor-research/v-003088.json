@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/202620278",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://niroga.org/pages/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://niroga.org/pages/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003088",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Niroga Institute' (ProPublica Nonprofit Explorer, EIN 20-2620278)",
+      "Located in Alameda, CA, matching the agenda text (ProPublica listing and the organization's own Contact page)",
+      "Website describes mindfulness and social-emotional learning programs for schools, matching OUSD's 'Classroom & academic programs' contracts",
+      "Organization's About page lists an OUSD Chief of Staff to the Superintendent on its Advisory Board"
+    ],
+    "key": "v-003088",
+    "notes": "CA Secretary of State number and SAM.gov UEI not looked up (web search budget exhausted).",
+    "profile": {
+      "address": "2363 Mariner Square Drive, Suite 149, Alameda, CA 94501",
+      "caEntityNumber": null,
+      "ein": "20-2620278",
+      "email": "connect@niroga.org",
+      "headquarters": "Alameda, CA",
+      "legalName": "Niroga Institute",
+      "orgType": "nonprofit",
+      "phone": "510.451.3004",
+      "samUei": null,
+      "summary": "Niroga Institute is a nonprofit based in Alameda, California, founded in 2005. It teaches a movement-based mindfulness practice called Dynamic Mindfulness (DMind) to help people build resilience, empathy and social-emotional skills. It works with schools, workplaces, mental health clinics, juvenile justice facilities and other communities exposed to high stress.",
+      "website": "https://niroga.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Niroga Institute - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/202620278"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us – Niroga Institute",
+        "url": "https://niroga.org/pages/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Niroga Institute | Mindful Education & Social Emotional Learning",
+        "url": "https://niroga.org/pages/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003088",
+    "notes": "Niroga Institute is a 501(c)(3) in Alameda, CA (EIN 20-2620278 per ProPublica), matching the agenda name and city; its school-based Dynamic Mindfulness programs fit OUSD's classroom/counseling contracts. Contact fields and summary are supported by the cited Contact and About pages and are neutral business-level details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

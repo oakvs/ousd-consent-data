@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.hyasearch.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.hyasearch.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-hazard-young-attea-and-associates",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the firm's own About page calls itself 'Hazard, Young, Attea & Associates (HYA)', as in the agenda",
+      "Located in Arlington Heights, IL, matching the city and state in the agenda text",
+      "Firm describes superintendent search, cabinet-level search and board governance advisory for school districts, matching the agenda titles 'Superintendent of Schools Executive Search Firm' and 'Governance & board business'"
+    ],
+    "key": "n-hazard-young-attea-and-associates",
+    "notes": "No registry (Illinois Secretary of State, SAM.gov) was checked because the web search budget for this session was exhausted; EIN, entity number and UEI are left null. The firm's site does not mention Oakland, so identity rests on exact name, city/state and service type.",
+    "profile": {
+      "address": "909 W Euclid Ave #926, Arlington Heights, IL 60006",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hya@hyasearch.com",
+      "headquarters": "Arlington Heights, IL",
+      "legalName": "Hazard, Young, Attea & Associates",
+      "orgType": "company",
+      "phone": "(847) 250-7261",
+      "samUei": null,
+      "summary": "A consulting firm, established in 1987, that helps school districts find and develop leaders. Its services include superintendent and cabinet-level searches, executive coaching, strategic planning and board governance advisory.",
+      "website": "https://www.hyasearch.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About HYA",
+        "url": "https://www.hyasearch.com/about"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "HYA Search",
+        "url": "https://www.hyasearch.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-hazard-young-attea-and-associates",
+    "notes": "The firm's About page shows the exact name, Arlington Heights IL address, 1987 founding, phone, generic business email, and superintendent/cabinet search and board governance advisory services, matching the agenda's executive search and fiscal advisory items. The summary is neutral and supported; the site does not mention Oakland, so identity rests on exact name, city and service fit, which is distinctive and consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

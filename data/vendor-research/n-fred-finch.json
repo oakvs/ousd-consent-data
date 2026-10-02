@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/940474080",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fredfinch.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fredfinch.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fredfinch.org/school-and-educational",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-fred-finch",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'Fred Finch Youth Center', EIN 94-0474080 (ProPublica Nonprofit Explorer), matching the agenda's 'Fred Finch', Oakland, CA",
+      "Organization's website (Fred Finch Youth & Family Services) lists its corporate office at 3800 Coolidge Avenue, Oakland, CA and runs a California Department of Education-certified Non-Public School (Oakland Hills Academy-Avalon) in Oakland for students with disabilities, matching OUSD's 'Nonpublic, Nonsectarian School' special education contract",
+      "Website names its San Diego school 'Fred Finch Youth Center Non-Public School', tying the website's brand to the registered legal name"
+    ],
+    "key": "n-fred-finch",
+    "notes": "Website brand name is 'Fred Finch Youth & Family Services'; the registered name in ProPublica is 'Fred Finch Youth Center'. A separate registered entity, 'Fred Finch Youth Center Cares Inc' (EIN 81-4243450, Oakland), also exists and was not used. California entity number and SAM UEI not looked up (web search budget exhausted). Phone is the main line; the contact page lists it as '510-482-2244, ext. 5200'.",
+    "profile": {
+      "address": "3800 Coolidge Avenue, Oakland, CA 94602-3311",
+      "caEntityNumber": null,
+      "ein": "94-0474080",
+      "email": "info@fredfinch.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Fred Finch Youth Center",
+      "orgType": "nonprofit",
+      "phone": "510-482-2244",
+      "samUei": null,
+      "summary": "Fred Finch Youth & Family Services is a nonprofit based in Oakland, California, that provides mental health care and support services for young people and families. Its programs include family services, housing, young adult services, residential treatment, and school and educational services. It operates certified non-public schools for students with developmental disabilities and serious emotional disturbance, and provides school-based services in partnership with public school districts.",
+      "website": "https://www.fredfinch.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Fred Finch Youth Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/940474080"
+      },
+      {
+        "supports": [
+          "website",
+          "email",
+          "summary"
+        ],
+        "title": "Fred Finch Youth & Family Services",
+        "url": "https://www.fredfinch.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Fred Finch Youth & Family Services",
+        "url": "https://www.fredfinch.org/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "School & Educational Services - Fred Finch Youth & Family Services",
+        "url": "https://www.fredfinch.org/school-and-educational"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-fred-finch",
+    "notes": "ProPublica confirms Fred Finch Youth Center (EIN 94-0474080, 501(c)(3), Oakland), and fredfinch.org shows the same Oakland organization at 3800 Coolidge Ave running a CDE-certified non-public school and school-based special education partnerships, which fits OUSD's nonpublic school master contract. All profile fields are supported by the cited sources and the summary is neutral; the phone is the main line (contact page adds ext. 5200).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

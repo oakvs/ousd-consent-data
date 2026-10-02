@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.senecafoa.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942971761",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003865",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Seneca Family Of Agencies', Oakland, CA, EIN 94-2971761 (ProPublica Nonprofit Explorer)",
+      "Headquarters at 8945 Golf Links Road, Oakland, CA, matching the agenda's 'Oakland, CA'",
+      "Organization's own site describes behavioral health, education and special-education services for children and families, matching OUSD's 'Student health, support & family services' and 'Special education' contracts",
+      "Seneca's site reports a mental health partnership with Life Academy, an Oakland Unified school"
+    ],
+    "key": "v-003865",
+    "notes": "Email shown on the contact page is at the senecacenter.org domain (an older Seneca domain), not senecafoa.org. California entity number and UEI not looked up.",
+    "profile": {
+      "address": "8945 Golf Links Road, Oakland, CA 94605",
+      "caEntityNumber": null,
+      "ein": "94-2971761",
+      "email": "info@senecacenter.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Seneca Family of Agencies",
+      "orgType": "nonprofit",
+      "phone": "510-654-4004",
+      "samUei": null,
+      "summary": "Seneca Family of Agencies is a nonprofit based in Oakland, California. It provides mental health and behavioral health services, school-based and special education programs, and family support for children, youth and families. Its staff work in schools and community settings in California.",
+      "website": "https://senecafoa.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Contact Us - Seneca",
+        "url": "https://www.senecafoa.org/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Seneca Family Of Agencies - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942971761"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003865",
+    "notes": "Seneca Family of Agencies is an Oakland 501(c)(3) (EIN 94-2971761, ProPublica) at 8945 Golf Links Road; its contact page confirms address, phone 510-654-4004 and the generic info@senecacenter.org address, and Seneca's site documents school-based services at OUSD's Bridges Academy at Melrose and a nonpublic school program, matching the contract titles. The summary is neutral and consistent with the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

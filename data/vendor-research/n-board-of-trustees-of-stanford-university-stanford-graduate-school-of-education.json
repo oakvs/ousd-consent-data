@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156365",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ed.stanford.edu/about/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ed.stanford.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-board-of-trustees-of-stanford-university-stanford-graduate-school-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'The Board Of Trustees Of The Leland Stanford Junior University' (ProPublica Nonprofit Explorer, EIN 94-1156365, Stanford, CA), the legal entity behind 'Board of Trustees of Stanford University'",
+      "Located in Stanford, CA, matching the agenda text; the Graduate School of Education's mailing address is 507 Lasuen Mall, Stanford, CA 94305-3096",
+      "The Graduate School of Education's own site describes education research and programs, matching OUSD's 'Classroom & academic programs' category and the Research, Assessment, and Data agreement"
+    ],
+    "key": "n-board-of-trustees-of-stanford-university-stanford-graduate-school-of-education",
+    "notes": "Registered legal entity is the university; the agreement is with its Graduate School of Education. Email omitted because the only general address found is the admissions inbox. No page found mentioning OUSD, so identity rests on name, location and subject match. Web search budget was exhausted, so pages were fetched directly.",
+    "profile": {
+      "address": "507 Lasuen Mall, Stanford, CA 94305-3096",
+      "caEntityNumber": null,
+      "ein": "94-1156365",
+      "email": null,
+      "headquarters": "Stanford, CA",
+      "legalName": "The Board Of Trustees Of The Leland Stanford Junior University",
+      "orgType": "nonprofit",
+      "phone": "(650) 723-2109",
+      "samUei": null,
+      "summary": "The Graduate School of Education is the education school of Stanford University, a private nonprofit university in Stanford, California. It runs graduate and doctoral programs and conducts research on teaching and learning.",
+      "website": "https://ed.stanford.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Stanford University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156365"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "summary"
+        ],
+        "title": "Contact Us | Stanford Graduate School of Education",
+        "url": "https://ed.stanford.edu/about/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About | Stanford Graduate School of Education",
+        "url": "https://ed.stanford.edu/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-board-of-trustees-of-stanford-university-stanford-graduate-school-of-education",
+    "notes": "The agenda names the Board of Trustees of Stanford University (Stanford GSE) in Stanford, CA. ProPublica confirms the legal entity (Leland Stanford Junior University, EIN 94-1156365, 501(c)(3), Stanford, CA), and the GSE contact and about pages support the phone, address, website and the neutral summary. No source mentions OUSD, but the name, location and research and data agreement subject all match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

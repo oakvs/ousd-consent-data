@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.universityofcalifornia.edu/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.universityofcalifornia.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucop.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucop.edu/about/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-california",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: the University of California system, whose headquarters is the Office of the President (ucop.edu/about)",
+      "Location matches the agenda text: the Office of the President is at 1111 Franklin Street, Oakland, CA 94607 (ucop.edu)",
+      "NOT confirmed: the agenda names the 'High School Linked Learning Office', but no fetched page described that office or a school subscriber program, so the exact contracting unit is unverified"
+    ],
+    "key": "n-university-of-california",
+    "notes": "Searches were unavailable (budget exhausted), so the Linked Learning office could not be confirmed. The profile describes the whole UC system and its Oakland headquarters; the contracting unit may be a separate office. Reviewer should confirm before publishing.",
+    "profile": {
+      "address": "1111 Franklin Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "University of California",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The University of California is a public university system with 10 campuses, six academic health centers and three national laboratories, serving more than 300,000 students. It was founded in 1869. The system is governed by a Board of Regents and administered from the Office of the President in Oakland, California.",
+      "website": "https://www.universityofcalifornia.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About us | University of California",
+        "url": "https://www.universityofcalifornia.edu/about-us"
+      },
+      {
+        "supports": [
+          "website",
+          "legalName"
+        ],
+        "title": "University of California",
+        "url": "https://www.universityofcalifornia.edu/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "University of California Office of the President",
+        "url": "https://www.ucop.edu/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "About UC Office of the President",
+        "url": "https://www.ucop.edu/about/index.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

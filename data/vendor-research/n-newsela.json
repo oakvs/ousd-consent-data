@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://newsela.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://newsela.com/legal/terms",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-newsela",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Newsela's Terms of Use name the company 'Newsela, Inc.', the same name as in the OUSD agenda",
+      "Location matches: Newsela's Terms of Use give a mailing address in New York, NY, matching the agenda text 'New York, NY'",
+      "Product matches: Newsela's website describes K-12 literacy and classroom content and assessment products, matching OUSD's 'Classroom & academic programs' contract through the Chief Academic Officer"
+    ],
+    "key": "n-newsela",
+    "notes": "Web search budget was exhausted, so no registry (SAM.gov, CA Secretary of State) lookup was done; registry IDs and phone left null. Newsela's pages do not list a public phone number. No page confirming a relationship with OUSD was found.",
+    "profile": {
+      "address": "169 Madison Ave., #2770, New York, NY 10016",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@newsela.com",
+      "headquarters": "New York, NY",
+      "legalName": "Newsela, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Newsela is an education technology company that provides classroom reading content, curriculum materials and assessment tools for K-12 schools and districts. Its products cover English language arts, social studies, science and writing. The company launched in 2013.",
+      "website": "https://newsela.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Newsela",
+        "url": "https://newsela.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Newsela Terms of Use",
+        "url": "https://newsela.com/legal/terms"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-newsela",
+    "notes": "Newsela, Inc. matches the agenda name and New York, NY location, and its K-12 ELA/social studies/STEM/writing content fits an Academics and Instruction services and data sharing agreement. Name, address, support email, website and 2013 launch were confirmed on the cited pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

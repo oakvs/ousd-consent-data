@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941358309",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ebac.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ebac.org/contact_us.asp",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001473",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'East Bay Agency For Children', EIN 94-1358309, located in Oakland, CA (ProPublica Nonprofit Explorer), matching the agenda's Oakland, CA",
+      "Organization's own website (ebac.org) lists school-based services and after-school programs and an Oakland headquarters at 2828 Ford Street, matching OUSD's 'Student health, support & family services' and 'After-school & summer programs' contracts"
+    ],
+    "key": "v-001473",
+    "notes": "Website does not mention OUSD by name; identity rests on registry match plus Oakland location and matching service types. CA SOS entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2828 Ford Street Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "94-1358309",
+      "email": "info@ebac.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Agency For Children",
+      "orgType": "nonprofit",
+      "phone": "510-268-3770",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California that provides trauma-informed, culturally relevant services to children, youth and families in Alameda County. Its work includes family resource centers, school-based behavioral health services, after-school programs and youth empowerment programs.",
+      "website": "https://www.ebac.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Bay Agency For Children - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941358309"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "East Bay Agency for Children",
+        "url": "https://www.ebac.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.ebac.org/contact_us.asp"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001473",
+    "notes": "The Oakland-based 501(c)(3) East Bay Agency For Children (EIN 94-1358309) matches the agenda name and city. Its own site lists school-based behavioral health and after-school programs, which fit OUSD's contracts. The summary, phone, general email and address are all confirmed on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

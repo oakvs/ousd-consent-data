@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://schoolops.ai/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://schoolops.ai/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://schoolops.ai/features",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-schoolopsai",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website schoolops.ai lists its location as Oakland, California, matching the agenda text 'Oakland, CA'",
+      "Website describes an AI platform that aggregates school data from student information and assessment systems, matching the OUSD item for a No Cost Services Agreement and Data Sharing Agreement with SchoolOpsAI",
+      "OUSD Legistar item 25-1609 describes SchoolOpsAI as based in Oakland, California and aggregating student learning data for school leaders"
+    ],
+    "key": "n-schoolopsai",
+    "notes": "No EIN, California entity number or SAM UEI was checked or confirmed; no street address published on the site.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@schoolops.ai",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-426-6244",
+      "samUei": null,
+      "summary": "A company that makes a software platform for K-12 school districts. The platform pulls together data from student information, assessment and other school systems, and shows it in dashboards and reports so school leaders can spot students who need support and track compliance requirements.",
+      "website": "https://schoolops.ai"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "SchoolOpsAI",
+        "url": "https://schoolops.ai/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "SchoolOpsAI Contact",
+        "url": "https://schoolops.ai/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SchoolOpsAI: AI-Powered Insights for School Leaders",
+        "url": "https://schoolops.ai/features"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-schoolopsai",
+    "notes": "schoolops.ai/contact lists Oakland, California with the cited phone and generic info@ email, and the site describes a K-12 data aggregation platform matching the OUSD No Cost Services and Data Sharing Agreement. The summary is neutral and supported by the home and features pages; I could not independently load the Legistar item the candidate mentions, but no field relies on it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

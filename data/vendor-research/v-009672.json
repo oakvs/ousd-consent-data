@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.peaceinschools.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.peaceinschools.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.peaceinschools.org/our-story",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009672",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: Peace in Schools is a 501(c)(3) nonprofit whose website says it began in Portland, Oregon, matching the 'Portland, OR' location in the agenda text.",
+      "Its Mindful Studies teacher certification and partnership program matches the 'Training and Licensing Agreement' and 'No Cost Services Agreement' titles for Castlemont High School; its Our Story page says it serves high schools in Oregon and California.",
+      "Not confirmed: no registry (IRS/ProPublica, CA Secretary of State) lookup was possible and the website does not name Oakland or Oakland Unified, so the Oakland link is inferred."
+    ],
+    "key": "v-009672",
+    "notes": "Medium confidence: registry check blocked (ProPublica returned HTTP 429; web search budget exhausted), so no EIN or legal name. Website does not mention Oakland. A giving@ email exists but is for donations, so email left null.",
+    "profile": {
+      "address": "PO Box 14351 Portland, OR 97293",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Portland, OR",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": "971 800 0471",
+      "samUei": null,
+      "summary": "Peace in Schools is a nonprofit organization that provides mindfulness education for teens. Its main program, Mindful Studies, is a for-credit mindfulness class offered in public high schools. It also offers teacher certification and professional development courses for adults.",
+      "website": "https://www.peaceinschools.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Peace in Schools",
+        "url": "https://www.peaceinschools.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Peace in Schools",
+        "url": "https://www.peaceinschools.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Our Story - Peace in Schools",
+        "url": "https://www.peaceinschools.org/our-story"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

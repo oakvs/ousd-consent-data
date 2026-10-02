@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://publicservice.berkeley.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://publicservice.berkeley.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://publicservice.berkeley.edu/programs/college-corps/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005763",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the Regents of the University of California on behalf of the UC Berkeley Public Service Center; the UC Berkeley Public Service Center's own site (publicservice.berkeley.edu) describes this unit and lists a Berkeley, CA address, matching the agenda location",
+      "The agenda's second item refers to the Public Service Center's College Corps Program; the center's site has a Berkeley College Corps page describing a fellowship with a K-12 Education/Youth Work issue area, consistent with OUSD's after-school and summer program contract category",
+      "Not confirmed: no page fetched mentions Oakland Unified directly"
+    ],
+    "key": "v-005763",
+    "notes": "Legal contracting entity is the Regents of the University of California (a state public university); the profile describes the Berkeley Public Service Center unit. Registry IDs not applicable/not found. WebSearch budget was exhausted, so only the organization's own pages were used.",
+    "profile": {
+      "address": "UC Berkeley Public Service Center, 2465 Bancroft Way, Suite 218, Berkeley, CA 94720-4500",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "publicservice@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "510.642.3916",
+      "samUei": null,
+      "summary": "The Public Service Center is a unit of the University of California, Berkeley. It brings together students, faculty and community groups to support social justice, civic engagement and social change. It runs student community service programs and internships, including the Berkeley College Corps, a fellowship in which students serve with community partner organizations.",
+      "website": "https://publicservice.berkeley.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Public Service Center at UC Berkeley",
+        "url": "https://publicservice.berkeley.edu/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Public Service Center at UC Berkeley",
+        "url": "https://publicservice.berkeley.edu/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Berkeley College Corps Program",
+        "url": "https://publicservice.berkeley.edu/programs/college-corps/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-005763",
+    "notes": "The agenda names the Regents of the University of California on behalf of the UC Berkeley Public Service Center and its College Corps Program; the cited Public Service Center pages confirm the unit, its Berkeley address, shared business phone and email, and the College Corps youth/K-12 service placements. The summary and contact fields are supported and neutral; no Oakland-specific page was found, but the identity match is direct from the agenda text.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943086749",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mocha.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mocha.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002963",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'Museum Of Childrens Arts', EIN 94-3086749 (ProPublica Nonprofit Explorer), matching the agenda's Oakland, CA location",
+      "Website (mocha.org) describes school-based and after-school visual arts programs, matching OUSD's 'After-school & summer programs' and 'Classroom & academic programs' contracts",
+      "Website mentions its Community Futures School program with Castlemont High School, and an OUSD agenda title lists a Services Agreement with Museum of Children's Arts for Castlemont High School"
+    ],
+    "key": "v-002963",
+    "notes": "Legal name per ProPublica is 'Museum Of Childrens Arts'; the organization brands itself 'Museum of Children's Art' (MOCHA). Email is the general programs@ inbox shown on the site. The cited pages do not name OUSD explicitly; the Castlemont High School link is the school-level match.",
+    "profile": {
+      "address": "1221 Broadway LL-49, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3086749",
+      "email": "programs@mocha.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Museum Of Childrens Arts",
+      "orgType": "nonprofit",
+      "phone": "(510) 465-8770",
+      "samUei": null,
+      "summary": "The Museum of Children's Art (MOCHA) is an Oakland nonprofit founded in 1988 that offers arts education for children and families. It runs visual arts instruction in East Bay schools, workshops at public libraries, youth programs, and museum activities such as exhibitions, open studios, field trips and art camps.",
+      "website": "https://www.mocha.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Museum Of Childrens Arts - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943086749"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About MOCHA - Museum of Children's Art",
+        "url": "https://www.mocha.org/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "MOCHA - Museum of Children's Art",
+        "url": "https://www.mocha.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002963",
+    "notes": "Oakland 501(c)(3) 'Museum Of Childrens Arts' (EIN 94-3086749) is MOCHA, whose programs (school-based arts, after-school, Castlemont High School Community Futures School) fit the OUSD agreements. All profile fields and the neutral summary are supported by the cited ProPublica and mocha.org pages; the email is the general programs@ inbox.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

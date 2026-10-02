@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.eatlearnplay.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/831373602",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-eat-learn-play-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Eat Learn Play Foundation', Oakland, CA, EIN 83-1373602 (ProPublica Nonprofit Explorer)",
+      "Organization's own website (eatlearnplay.org) states it is based in Oakland, CA, matching the agenda location 'Oakland, CA'",
+      "Website describes school-based food, literacy, garden-style school space and play programs, consistent with OUSD grants for 'Environment, Food, and Garden Programming' and academics",
+      "EIN 83-1373602 shown on the organization's own website matches the ProPublica registry record"
+    ],
+    "key": "n-eat-learn-play-foundation",
+    "notes": "Address not found on fetched pages. WebSearch quota was exhausted, so identity was confirmed by direct fetches of the organization website and ProPublica only. The website does not explicitly mention OUSD.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-1373602",
+      "email": "info@eatlearnplay.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Eat.Learn.Play. Foundation",
+      "orgType": "nonprofit",
+      "phone": "(510) 775-2003",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that supports children's well-being through access to nutritious meals, quality reading resources and chances to play and be active. It works with schools on food, literacy tutoring and sports, and renovates school spaces such as schoolyards, cafeterias, libraries and gyms.",
+      "website": "https://www.eatlearnplay.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Eat.Learn.Play. Foundation - About",
+        "url": "https://www.eatlearnplay.org/about"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Eat Learn Play Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/831373602"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-eat-learn-play-foundation",
+    "notes": "The agenda names 'Eat.Learn.Play Foundation, Oakland, CA' as a grantor for food/garden and academic programming. The organization's site and ProPublica both show an Oakland 501(c)(3) with EIN 83-1373602 whose school-based food, literacy and play work fits those grants. The summary and contact fields are supported by the cited pages and are neutral. Neither page names OUSD directly, but the name, city and program fit leave no real doubt.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

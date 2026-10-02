@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.laeuropaacademy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.laeuropaacademy.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.laeuropaacademy.com/admissions",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-la-europa-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'La Europa Academy' operates a school at 1121 E. Vine Street, Murray, UT, matching the agenda location 'Murray, UT'",
+      "The school's own admissions page says 'La Europa Academy is currently on the CDE list for the state of California', consistent with a Nonpublic, Nonsectarian School master contract",
+      "The school's website describes a residential therapeutic school with on-site academics and says some districts may fund the educational portion for students with an IEP, matching OUSD's 'Special education' purpose for the contract"
+    ],
+    "key": "n-la-europa-academy",
+    "notes": "No registry record (IRS, Utah or California Secretary of State, SAM.gov) was checked or fetched; the California Department of Education school directory page blocked automated access, and the web search budget was exhausted. Legal name, organization type (nonprofit vs company) and registry IDs are therefore left null. The email is the admissions inbox listed on the school's admissions page. Identity rests on the school's own website (name, Murray UT location, statement that it is on California's CDE list, IEP-related placement language).",
+    "profile": {
+      "address": "1121 E. Vine Street, Murray, UT 84121-1739",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "admissions@laeuropa.com",
+      "headquarters": "Murray, UT",
+      "legalName": null,
+      "orgType": null,
+      "phone": "(801) 268-9300",
+      "samUei": null,
+      "summary": "La Europa Academy is a residential therapeutic school in Murray, Utah, for adolescents aged 14 to 17. Its program combines academics with therapy, including Dialectical Behavior Therapy (a skills-based talk therapy) and expressive therapies such as art, dance, music and writing. It serves students dealing with issues such as depression, anxiety, trauma and addictive behaviors.",
+      "website": "https://www.laeuropaacademy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "La Europa Academy",
+        "url": "https://www.laeuropaacademy.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact us",
+        "url": "https://www.laeuropaacademy.com/contact-us"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Admissions",
+        "url": "https://www.laeuropaacademy.com/admissions"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-la-europa-academy",
+    "notes": "The school's own site shows a residential therapeutic school at 1121 E. Vine Street, Murray, UT, matching the agenda location, and its admissions page says it is on California's CDE list and that districts may fund the educational portion for students with IEPs, which fits an OUSD nonpublic school special education master contract. Summary, website, phone, address, headquarters and the admissions inbox email are all confirmed on the cited pages; no registry record was independently checked, but none is claimed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

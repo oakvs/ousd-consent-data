@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cyclesofchange.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cyclesofchange.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/113821114",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001269",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Cycles Of Change', Oakland, CA, EIN 11-3821114 (ProPublica Nonprofit Explorer), classified as youth development programs",
+      "Organization's own website states it is a 501(c)3 nonprofit with the same Tax ID 11-3821114, based in East Oakland, matching the agenda's Oakland, CA",
+      "Website describes youth bike clubs, bike safety classes and mechanics education, consistent with OUSD's 'After-school & summer programs' contracts; its history includes a bike club started at Roosevelt Middle School in Oakland"
+    ],
+    "key": "v-001269",
+    "notes": "Web search quota was exhausted, so candidates were found by fetching the organization's website directly and a ProPublica EIN page. No mailing address found on fetched pages. No explicit mention of OUSD on the site; identity rests on name, Oakland location, EIN match across two sources, and youth-program fit. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "11-3821114",
+      "email": "info@cyclesofchange.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Cycles of Change",
+      "orgType": "nonprofit",
+      "phone": "(510) 842-1006",
+      "samUei": null,
+      "summary": "Cycles of Change is an Oakland nonprofit that promotes cycling as safe, affordable transportation, mainly in East Oakland. It runs youth bike clubs, bike safety classes, mechanics training, and a community bike shop called The Bikery. It works mostly with low-income communities.",
+      "website": "https://www.cyclesofchange.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "ein",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Cycles of Change",
+        "url": "https://www.cyclesofchange.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "ein",
+          "legalName"
+        ],
+        "title": "About - Cycles of Change",
+        "url": "https://www.cyclesofchange.org/about"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Cycles Of Change - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/113821114"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001269",
+    "notes": "The organization's site and ProPublica both show the Oakland 501(c)(3) Cycles of Change with EIN 11-3821114, an East Oakland youth bike and afterschool nonprofit with in-school programming, which fits OUSD's after-school and summer program contracts. The summary, contact fields, EIN and headquarters are all supported by the fetched sources and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

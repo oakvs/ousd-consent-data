@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://swinerton.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://swinerton.com/locations/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009458",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Swinerton's own website describes a construction company, matching OUSD's 'School buildings & construction' contracts for lease-leaseback building work",
+      "Swinerton lists an office in Oakland, CA, matching the agenda location 'Oakland, CA'"
+    ],
+    "key": "v-009458",
+    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) could be checked. The agenda name is 'Swinerton Builders, Inc.' but the website shows 'Swinerton Incorporated', so this may be a parent/subsidiary mismatch; legal name left null. No OUSD or Swinerton page found confirming the Garfield Elementary project. Phone and address are the Oakland regional office, not necessarily a main line or headquarters.",
+    "profile": {
+      "address": "10 Clay Street, Suite 275 | Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.834.3711",
+      "samUei": null,
+      "summary": "Swinerton is a construction company founded in 1888. It is 100% employee-owned and has 24 regional offices across the United States. It provides construction services for many types of projects, from tenant improvements to medical facilities.",
+      "website": "https://swinerton.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Swinerton",
+        "url": "https://swinerton.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Swinerton Oakland office",
+        "url": "https://swinerton.com/locations/oakland/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.markerlearning.com/privacy-policy/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.markerlearning.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.markerlearning.com/terms-of-service/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008230",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Marker Learning's own privacy policy and terms name the legal entity exactly as OUSD's agenda does: \"Jayne B. Company dba Marker Learning\"",
+      "Marker Learning develops digital assessments for identifying learning disabilities, matching OUSD's Special Education Department software-as-a-service agreements",
+      "OpenCorporates shows JAYNE B COMPANY INC., a New Jersey domestic profit corporation located in Hoboken, NJ, matching the agenda's Hoboken, NJ"
+    ],
+    "key": "v-008230",
+    "notes": "Agenda says Hoboken, NJ; OpenCorporates lists Jayne B Company Inc. (NJ entity 0450630786) in Hoboken, while the company's published mailing address is a private mailbox (PMB) in Jersey City, NJ, so headquarters left null. No public phone found. Web search budget was exhausted, so no registry beyond OpenCorporates was checked.",
+    "profile": {
+      "address": "111 Town Square Pl, Ste 1238, PMB 85307, Jersey City, New Jersey 07310-1755",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello@markerlearning.com",
+      "headquarters": null,
+      "legalName": "Jayne B. Company",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Marker Learning develops digital assessments that help identify learning disabilities and learning differences in students. It combines clinical expertise, testing science and data science to build adaptive, efficient testing technology. Its stated mission is fair assessment and wider access to diagnosis for students.",
+      "website": "https://www.markerlearning.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address"
+        ],
+        "title": "Marker Learning Privacy Policy",
+        "url": "https://www.markerlearning.com/privacy-policy/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Marker Learning",
+        "url": "https://www.markerlearning.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address"
+        ],
+        "title": "Marker Learning Terms of Service",
+        "url": "https://www.markerlearning.com/terms-of-service/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008230",
+    "notes": "Marker Learning's privacy policy and terms name the entity exactly as \"Jayne B. Company dba Marker Learning\", OpenCorporates lists an active NJ domestic profit corporation, Jayne B Company Inc., registered in Hoboken (matching the agenda), and its digital learning-disability assessments fit OUSD's Special Education contract. The summary matches the About page and is neutral; the business email and mailing address (a Jersey City PMB) are on the policy and terms pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

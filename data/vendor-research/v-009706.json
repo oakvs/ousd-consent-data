@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/956205398",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ayso.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ayso.org/our-history-mission-vision/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ayso.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009706",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'American Youth Soccer Organization', Torrance, CA (ProPublica Nonprofit Explorer, EIN 95-6205398)",
+      "Torrance, CA matches the location given in the OUSD agenda text; the organization's national office is in Torrance, CA",
+      "Organization runs youth soccer programs, consistent with OUSD contracting it for after-school and summer programs"
+    ],
+    "key": "v-009706",
+    "notes": "No general email found on the pages checked. Web search budget was exhausted, so identity was confirmed via registry name/city and the organization's own pages; no page found that explicitly mentions OUSD. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "19700 S. Vermont Ave., Suite 103, Torrance, CA 90502",
+      "caEntityNumber": null,
+      "ein": "95-6205398",
+      "email": null,
+      "headquarters": "Torrance, CA",
+      "legalName": "American Youth Soccer Organization",
+      "orgType": "nonprofit",
+      "phone": "800-872-2976",
+      "samUei": null,
+      "summary": "A nonprofit that runs youth soccer programs through volunteer-led local regions in communities across the United States. Founded in 1964, it describes its approach around principles such as everyone plays, balanced teams and positive coaching.",
+      "website": "https://ayso.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "American Youth Soccer Organization - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/956205398"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - AYSO",
+        "url": "https://ayso.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Our History, Mission & Vision - AYSO",
+        "url": "https://ayso.org/our-history-mission-vision/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "AYSO - American Youth Soccer Organization",
+        "url": "https://www.ayso.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009706",
+    "notes": "The cited sources confirm AYSO's national nonprofit (Torrance, EIN 95-6205398) exists, but none link it to OUSD, and AYSO's own site shows only volunteer-run community regions with no school or after-school programming. The agenda name is plural ('Organizations'), so the Torrance match alone is too weak to rule out a different or local entity.",
+    "sameOrganization": false,
+    "unsupportedFields": [],
+    "verdict": "rejected"
+  }
+}

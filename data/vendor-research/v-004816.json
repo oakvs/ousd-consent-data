@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cpshr.us/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cpshr.us/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cpshr.us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004816",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "CPS HR Consulting's privacy notice names its legal entity as 'Cooperative Personnel Service (doing business as CPS HR Consulting)', matching the agenda name 'Cooperative Personnel Services'",
+      "Headquartered in Sacramento, CA, matching the agenda location 'Sacramento, CA'",
+      "Provides HR, recruitment, testing and selection services to public agencies, matching OUSD's 'Staff & hiring' contracts with the Talent / Human Resources Department"
+    ],
+    "key": "v-004816",
+    "notes": "Legal name appears on the privacy notice as 'Cooperative Personnel Service' (singular), dba CPS HR Consulting; the OUSD agenda uses 'Services'. No registry IDs were checked because the web search budget was exhausted; EIN, CA entity number and UEI left null. No general email found.",
+    "profile": {
+      "address": "2450 Del Paso Road #220, Sacramento, CA 95834",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "Cooperative Personnel Service",
+      "orgType": "public_agency",
+      "phone": "916.263.3600",
+      "samUei": null,
+      "summary": "CPS HR Consulting is a self-supporting public agency, set up in 1985 as a joint powers authority under California law. It provides human resources services such as recruitment and selection, testing, classification and compensation, licensing and certification, and training to government agencies, special districts and nonprofit organizations.",
+      "website": "https://www.cpshr.us/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Privacy Policy - CPS HR Consulting",
+        "url": "https://www.cpshr.us/privacy-policy/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - CPS HR Consulting",
+        "url": "https://www.cpshr.us/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "CPS HR Consulting",
+        "url": "https://www.cpshr.us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004816",
+    "notes": "The cited privacy notice names the legal entity as Cooperative Personnel Service (dba CPS HR Consulting), headquartered in Sacramento, which matches the agenda name and location, and its HR/recruitment services fit OUSD's Talent/HR agreements. The About and home pages support the JPA status, 1985 founding, services, address and phone, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

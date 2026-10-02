@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cseo.ucsf.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cseo.ucsf.edu/who-we-serve",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-center-for-science-education-and-outreach",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the agenda's 'Center for Science, Education and Outreach' at UCSF is the UCSF unit 'Center for Science, Education, and Outreach' (cseo.ucsf.edu)",
+      "Located in San Francisco, CA (1855 Folsom Street), matching the agenda's San Francisco, CA",
+      "CSEO's Who We Serve page lists OUSD schools (Oakland Technical High School, McClymonds High School, Coliseum College Prep Academy), matching the OUSD services agreement",
+      "CSEO describes high school and college-readiness programs, matching OUSD's 'Classroom & academic programs' category and the High School Linked Learning Office"
+    ],
+    "key": "n-regents-of-university-of-california-center-for-science-education-and-outreach",
+    "notes": "Legal contracting entity is the Regents of the University of California; the program is a UCSF unit. Phone and general email not shown in plain text on fetched pages (email is obfuscated), so left null.",
+    "profile": {
+      "address": "1855 Folsom Street, Suite 548, San Francisco, CA 94143-0934",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Center for Science, Education, and Outreach is a unit of the University of California, San Francisco. It partners with Bay Area school districts and community organizations to run programs that support student academic success, college-going and exploration of science, technology, engineering and math (STEM) careers.",
+      "website": "https://cseo.ucsf.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Center for Science, Education, and Outreach - UCSF",
+        "url": "https://cseo.ucsf.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "headquarters"
+        ],
+        "title": "Who We Serve - UCSF CSEO",
+        "url": "https://cseo.ucsf.edu/who-we-serve"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-regents-of-university-of-california-center-for-science-education-and-outreach",
+    "notes": "cseo.ucsf.edu is a UCSF unit at 1855 Folsom St, San Francisco, and its Who We Serve page lists OUSD schools (Oakland Tech, McClymonds, CCPA), matching the Regents/UCSF CSEO agreement. Website, address, headquarters and orgType are supported, but the summary's claim of partnering with 'community organizations' is not shown on the cited pages (only Bay Area school district partner schools), so the summary is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

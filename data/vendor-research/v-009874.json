@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.culinairesystems.com/aboutus.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.culinairesystems.com/contactus.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/3184441",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009874",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California registered stock corporation: 'CULINAIRE SYSTEMS, INC.' (OpenCorporates, entity number 3184441)",
+      "Registered address and website contact address are both 895 Embarcadero Dr, Suite 205, El Dorado Hills, CA 95762, matching the agenda text 'El Dorado Hills, CA'",
+      "Website describes commercial kitchen ventilation equipment and controls, consistent with a contract with OUSD's Nutrition Services Department (kitchens)"
+    ],
+    "key": "v-009874",
+    "notes": "No general company email is published (only named individuals), so email is null. Website footer copyright reads 2006-2011, so the site may be dated. Registry listing shows status Active.",
+    "profile": {
+      "address": "895 Embarcadero Drive, Suite 205, El Dorado Hills, CA 95762",
+      "caEntityNumber": "3184441",
+      "ein": null,
+      "email": null,
+      "headquarters": "El Dorado Hills, CA",
+      "legalName": "CulinAire Systems, Inc.",
+      "orgType": "company",
+      "phone": "(916) 596-0085",
+      "samUei": null,
+      "summary": "CulinAire Systems, Inc. is a California company that sells kitchen ventilation equipment and demand ventilation controls for commercial kitchens. Its products are meant to cut energy use in dining facilities such as restaurants, hotels, schools, universities, hospitals and government buildings.",
+      "website": "https://www.culinairesystems.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "CulinAire Systems, Inc. - Company",
+        "url": "https://www.culinairesystems.com/aboutus.html"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "CulinAire Systems - Contact",
+        "url": "https://www.culinairesystems.com/contactus.html"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "CULINAIRE SYSTEMS, INC. - OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/3184441"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009874",
+    "notes": "Identity looks right (exact name, El Dorado Hills address, active CA stock corporation 3184441, kitchen ventilation fits a Nutrition Services agreement), but the summary's claim that the products serve restaurants, hotels, schools, universities, hospitals and government buildings is not on the cited About page, which only mentions 'dining facility'; the site is also dated (copyright 2006-2011), so the summary is rejected as unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary",
+      "phone"
+    ],
+    "verdict": "rejected"
+  }
+}

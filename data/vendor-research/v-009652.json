@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies?q=california+school+inspections&jurisdiction_code=us_ca",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.californiaschoolinspections.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.californiaschoolinspections.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009652",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches the only California registry record for 'California School Inspections' (OpenCorporates: CALIFORNIA SCHOOL INSPECTIONS, LLC, El Dorado Hills, CA), matching the agenda's name and 'El Dorado Hills, CA'",
+      "Website californiaschoolinspections.com describes school facility inspection services (Williams Act FIT inspections, playground surfacing and turf field testing), matching OUSD's 'Food, transportation & operations' contract category",
+      "The website's About page lists Oakland Unified as a past project client"
+    ],
+    "key": "v-009652",
+    "notes": "Web search budget was exhausted, so only a registry aggregator and the vendor's own site were checked. The website calls the business 'a California Partnership' while the registry lists an LLC, and the site shows no address or location, so the link between the website and the El Dorado Hills LLC is not directly confirmed. The registry address appears to be a residential-style street address and was deliberately omitted. No public phone or email found on the site (contact form only). Confirm against the California Secretary of State record before publishing. Registry entity number 201510610086 was reported by OpenCorporates but could not be verified on a citable page, so it was dropped.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "El Dorado Hills, CA",
+      "legalName": "CALIFORNIA SCHOOL INSPECTIONS, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "California School Inspections is a consulting and inspection service provider for California school districts. It specializes in school facility inspections required under the Williams Act, and in impact testing of playground surfacing and turf fields.",
+      "website": "https://www.californiaschoolinspections.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "OpenCorporates search: California School Inspections",
+        "url": "https://opencorporates.com/companies?q=california+school+inspections&jurisdiction_code=us_ca"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "California School Inspections",
+        "url": "https://www.californiaschoolinspections.com"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "California School Inspections - About",
+        "url": "https://www.californiaschoolinspections.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

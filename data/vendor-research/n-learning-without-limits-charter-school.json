@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lwlelementary.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org/schools/learning-without-limits",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/officeofcharterschools/renewal/renewal-archive",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-learning-without-limits-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Office of Charter Schools renewal archive lists Learning Without Limits as a TK-5 charter school in Oakland, renewed July 1, 2025 to June 30, 2030, matching an OUSD Proposition 39 facilities agreement handled through the Charter School Office",
+      "The school's own website (lwlelementary.org) gives an Oakland, CA address and describes a K-5 public school; the Education for Change network page also lists it as a TK-5 school in Oakland's Fruitvale neighborhood"
+    ],
+    "key": "n-learning-without-limits-charter-school",
+    "notes": "This is a school run by the nonprofit Education for Change Public Schools; legal name and registry IDs (EIN, CA entity number) belong to that parent and were not verified here, so they are left null. The EFC page lists a different admin address/phone (333 Hegenberger Rd), not used.",
+    "profile": {
+      "address": "2035 40th Avenue, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "other",
+      "phone": "510-879-1282",
+      "samUei": null,
+      "summary": "Learning Without Limits is a public charter elementary school (transitional kindergarten through 5th grade) in the Fruitvale area of Oakland, California. It is part of the Education for Change Public Schools network and is authorized by Oakland Unified School District. Its stated mission is to give all students a rigorous, culturally relevant and empowering education.",
+      "website": "https://www.lwlelementary.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Home - Learning Without Limits",
+        "url": "https://www.lwlelementary.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Learning Without Limits TK-5 - Education for Change Oakland Public Schools",
+        "url": "https://www.efcps.org/schools/learning-without-limits"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Renewal Archive - Oakland Unified School District",
+        "url": "https://www.ousd.org/officeofcharterschools/renewal/renewal-archive"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-learning-without-limits-charter-school",
+    "notes": "The OUSD renewal archive lists Learning Without Limits (TK-5, renewed July 2025 to June 2030), and the school site and the Education for Change page confirm it is an Oakland charter school in Fruitvale. The summary, website, phone and address are supported and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/cgi-bin/browse-edgar?company=school+specialty&type=10-K&dateb=&owner=include&count=10",
+      "pass": true
+    }
+  ],
+  "key": "n-school-specialty",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches SEC EDGAR registrant 'School Specialty Inc' (the parent company of the agenda's 'School Specialty, LLC')",
+      "EDGAR business address is in Greenville, WI, matching the agenda text 'Greenville, WI'"
+    ],
+    "key": "n-school-specialty",
+    "notes": "Only the parent registrant (School Specialty Inc, Delaware) was found, not the LLC named in the agenda. schoolspecialty.com returned HTTP 403 to every fetch and the web search budget was exhausted, so no website, contact details or registry IDs could be confirmed. Needs a re-run before any publication.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Greenville, WI",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "School Specialty is a company with its business address in Greenville, Wisconsin. Its own website blocked automated access, so what it does could not be confirmed from a cited page.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "SEC EDGAR company search: School Specialty Inc",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=school+specialty&type=10-K&dateb=&owner=include&count=10"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

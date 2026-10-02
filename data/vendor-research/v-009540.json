@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://salasobrien.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://salasobrien.com/offices/oakland-california/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://salasobrien.com/projects/fremont-high-school-new-campus/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009540",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Salas O'Brien's own website lists an Oakland, CA office, matching the agenda location 'Oakland, CA'",
+      "Salas O'Brien's website lists Oakland Unified School District as the client on its Fremont High School New Campus project",
+      "Salas O'Brien describes itself as an engineering firm (MEP, structural, civil), matching OUSD's 'Agreement for Engineering Services' for facilities projects"
+    ],
+    "key": "v-009540",
+    "notes": "Address and phone are the Oakland office, not the corporate headquarters. Legal name, registry IDs and headquarters not confirmed from a cited page.",
+    "profile": {
+      "address": "55 Harrison Street, Suite 550, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1.510.457.3258",
+      "samUei": null,
+      "summary": "Salas O'Brien is a multi-disciplinary engineering and consulting firm. It provides design for buildings, including mechanical, electrical, plumbing, structural and civil engineering. It also works on energy and resiliency systems, sustainability consulting and forensic consulting.",
+      "website": "https://salasobrien.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Salas O'Brien",
+        "url": "https://salasobrien.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Oakland - Salas O'Brien",
+        "url": "https://salasobrien.com/offices/oakland-california/"
+      },
+      {
+        "supports": [],
+        "title": "Fremont High School New Campus - Salas O'Brien",
+        "url": "https://salasobrien.com/projects/fremont-high-school-new-campus/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009540",
+    "notes": "Salas O'Brien's site lists an Oakland office (55 Harrison St, matching phone and address) and names Oakland Unified School District as client on Fremont High School, and its engineering and forensic consulting services fit OUSD's engineering agreements for Ethel Moore. The summary is neutral and supported by the homepage, and no personal contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://edd.ca.gov/en/about_edd/contact_edd/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edd.ca.gov/en/jobs_and_training/Workforce_Innovation_and_Opportunity_Act",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edd.ca.gov/en/about_edd/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-state-of-california-employment-development-department",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'State of California, Employment Development Department' in Sacramento, CA; edd.ca.gov is the official site of that state department, headquartered in Sacramento (mailing address PO Box 826880, Sacramento, CA 94280-0001)",
+      "EDD's own WIOA page says the department administers the Workforce Innovation and Opportunity Act, matching the WIOA subgrant agreement in the OUSD agenda title",
+      "OUSD funding source and contract purpose (WIOA plan, Adult and Career Education Department) are consistent with a state workforce agency"
+    ],
+    "key": "n-state-of-california-employment-development-department",
+    "notes": "State agency; no EIN, CA SOS entity number or SAM UEI looked up. No general inbox found on the contact page (only a small business advocate address), so email is null.",
+    "profile": {
+      "address": "PO Box 826880, Sacramento, CA 94280-0001",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "Employment Development Department",
+      "orgType": "public_agency",
+      "phone": "1-800-300-5616",
+      "samUei": null,
+      "summary": "The Employment Development Department is a California state agency. It runs unemployment insurance, disability insurance and paid family leave programs, and collects payroll taxes. It also provides job search and training services, including administering the federal Workforce Innovation and Opportunity Act in California, and publishes labor market information.",
+      "website": "https://edd.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact EDD",
+        "url": "https://edd.ca.gov/en/about_edd/contact_edd/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Workforce Innovation and Opportunity Act",
+        "url": "https://edd.ca.gov/en/jobs_and_training/Workforce_Innovation_and_Opportunity_Act"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About EDD",
+        "url": "https://edd.ca.gov/en/about_edd/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-state-of-california-employment-development-department",
+    "notes": "The agenda names the State of California EDD in Sacramento on a WIOA subgrant, and edd.ca.gov is that agency; the contact page confirms name, phone, PO Box address and Sacramento location, and the About page confirms the state agency and its UI, DI, PFL, payroll tax, job services and labor market programs. The WIOA page lists EDD workforce directives but never states outright that EDD administers WIOA, though this is consistent with EDD's role as California's state workforce agency.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

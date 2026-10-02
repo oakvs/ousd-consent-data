@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/920787008",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/concord/stu-212-music-therapy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stu212music.org/programs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stu212music.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008823",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Stu 212 Music Therapy Coping & Creativity Inc' (ProPublica Nonprofit Explorer, EIN 92-0787008, Concord, CA)",
+      "Located in Concord, CA, matching the agenda text",
+      "Organization's website describes youth music therapy, wellness and mentoring programs, consistent with OUSD's after-school and summer program contracts",
+      "California entity listing 'Stu 212: Music Therapy, Coping & Creativity' in Concord, CA, a nonprofit public benefit corporation, status active"
+    ],
+    "key": "v-008823",
+    "notes": "Website pages list no phone, email or street address; address comes from a third-party mirror of California Secretary of State data (bizprofile.net). A Gmail address appears on an Arts Contra Costa directory page but was not used because it is not a registry or own-site source.",
+    "profile": {
+      "address": "785 Oak Grove Road E/2 Suite 267, Concord, CA 94518",
+      "caEntityNumber": "5289957",
+      "ein": "92-0787008",
+      "email": null,
+      "headquarters": "Concord, CA",
+      "legalName": "Stu 212 Music Therapy Coping & Creativity Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Concord, California, that runs youth programs in the Bay Area. Its programs include music therapy to help young people cope with stress and trauma, health and wellness education, financial literacy, and one-on-one and small group mentoring.",
+      "website": "https://www.stu212music.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Stu 212 Music Therapy Coping & Creativity Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/920787008"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Stu 212: Music Therapy, Coping & Creativity Concord, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/concord/stu-212-music-therapy"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "PROGRAMS",
+        "url": "https://www.stu212music.org/programs"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "ABOUT",
+        "url": "https://www.stu212music.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008823",
+    "notes": "Identity is solid: the ProPublica 501(c)(3) record and CA SOS filing (Concord, entity 5289957) match the agenda name and city, and the youth music/wellness programs fit OUSD's after-school contract. The summary says the music therapy helps young people 'cope with stress and trauma', but neither cited page says this: the programs page describes youth expressing ideas and feelings, and the about page describes non-clinical early intervention and prevention. The summary should be rewritten before publishing.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

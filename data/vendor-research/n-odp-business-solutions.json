@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.odpbusiness.com/l/prelogin/terms-of-use",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.odpbusiness.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.omniapartners.com/suppliers/odp-business-solutions",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-odp-business-solutions",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'ODP Business Solutions, LLC' with a registered address at 6600 North Military Trail, Boca Raton, FL 33496, matching the agenda's Boca Raton, FL (ODP Business Solutions terms of use page)",
+      "The agenda's contract titles ('Education School Supplies, Instructional Solutions, and Related Products' and 'Furniture, Installation and Related Services') match the K-12 school supply and furniture installation offerings ODP Business Solutions sells through cooperative contracts (OMNIA Partners page)",
+      "Company website odpbusiness.com describes office, school supply and furniture products and mentions K-12 education work"
+    ],
+    "key": "n-odp-business-solutions",
+    "notes": "Florida Sunbiz entity page blocked automated fetch, so EIN was not cited. Parent company (The ODP Corporation) appears in search results only and was left out.",
+    "profile": {
+      "address": "6600 North Military Trail, Boca Raton, FL 33496",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Boca Raton, FL",
+      "legalName": "ODP Business Solutions, LLC",
+      "orgType": "company",
+      "phone": "1-888-263-3423",
+      "samUei": null,
+      "summary": "A company that sells office supplies, school supplies, technology, furniture and related services to businesses, schools and government agencies. It is based in Boca Raton, Florida. It offers contracts that public schools can buy from through purchasing cooperatives.",
+      "website": "https://www.odpbusiness.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Terms of Use - ODP Business Solutions",
+        "url": "https://www.odpbusiness.com/l/prelogin/terms-of-use"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "summary",
+          "orgType"
+        ],
+        "title": "ODP Business Solutions",
+        "url": "https://www.odpbusiness.com"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "ODP Business Solutions - OMNIA Partners",
+        "url": "https://www.omniapartners.com/suppliers/odp-business-solutions"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-odp-business-solutions",
+    "notes": "The legal name ODP Business Solutions, LLC and the Boca Raton, FL address are confirmed on the company's own terms of use page, matching the agenda. The school supplies and furniture installation services match OUSD's piggyback agreements, and the website, phone, address and neutral summary are supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

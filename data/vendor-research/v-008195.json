@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.yeahart.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.yeahart.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/863070470",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008195",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Yeah Art Limited' in Oakland, CA, EIN 86-3070470 (ProPublica Nonprofit Explorer), which operates as 'Yeah, Art!'",
+      "Located in Oakland, CA (8414 Holly Street), matching the agenda text 'Oakland, CA'",
+      "Website describes school-based arts education programs, including in Oakland, matching OUSD's 'After-school & summer programs' contracts"
+    ],
+    "key": "v-008195",
+    "notes": "Web search budget was exhausted, so candidates were found by fetching the likely organization website and ProPublica directly; the site's own About page lists the legal name and EIN, and ProPublica confirms them. Phone is formatted as on the homepage; the About page shows it as '510 938 9096'. California Secretary of State entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "8414 Holly Street, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "86-3070470",
+      "email": "hello@yeahart.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Yeah Art Limited",
+      "orgType": "nonprofit",
+      "phone": "510-938-9096",
+      "samUei": null,
+      "summary": "Yeah, Art! is a nonprofit that provides arts education programs to schools across the Bay Area, especially in under-resourced school districts such as Oakland. Its classes include digital illustration, poetry, music and visual arts, and range from one-day workshops to multi-week residencies.",
+      "website": "https://www.yeahart.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Yeah, Art!",
+        "url": "https://www.yeahart.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein"
+        ],
+        "title": "About - Yeah, Art!",
+        "url": "https://www.yeahart.org/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Yeah Art Limited - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/863070470"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008195",
+    "notes": "Yeah Art Limited (EIN 86-3070470, 501(c)(3), Oakland, CA) operates as Yeah, Art! per its own site and ProPublica, and its school-based arts programs with an emphasis on OUSD fit the after-school and summer contracts. Name, city, legal name, EIN, address, phone, email and a neutral summary are all supported by the fetched sources; only business contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

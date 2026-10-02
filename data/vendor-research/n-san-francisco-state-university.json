@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sfsu.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.sfsu.edu/about-student-health-services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-san-francisco-state-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: San Francisco State University, a public university in San Francisco, CA, matching the agenda's location 'San Francisco, CA' (sfsu.edu About page)",
+      "The university runs a Student Health Services department (health.sfsu.edu), matching the agenda item 'No Cost Services Agreement 2025-2026 - San Francisco State University - Health Services Department' and the 'Student health, support & family services' category",
+      "No fiscal impact and a no-cost services agreement are consistent with a public university partnership"
+    ],
+    "key": "n-san-francisco-state-university",
+    "notes": "Public university in the California State University system. EINs found in ProPublica belong to separate nonprofits (SF State University Foundation, The University Corporation San Francisco State), not the university itself, so no EIN was entered. Phone and address are the university's main campus line and address; the Student Health Services department has its own line (415-338-1251) and email not included here.",
+    "profile": {
+      "address": "1600 Holloway Avenue, San Francisco, CA 94132",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(415) 338-1111",
+      "samUei": null,
+      "summary": "San Francisco State University is a public urban university in San Francisco, California, and part of the California State University system. It serves about 21,000 students. Its Student Health Services department provides basic care for acute and chronic health problems and teaches students about preventive care.",
+      "website": "https://www.sfsu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About San Francisco State University",
+        "url": "https://www.sfsu.edu/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Student Health Services - San Francisco State University",
+        "url": "https://health.sfsu.edu/about-student-health-services"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-san-francisco-state-university",
+    "notes": "The agenda names San Francisco State University (San Francisco, CA) and its Health Services Department, which matches the public CSU campus. The cited sfsu.edu About page and the Student Health Services page support the summary, org type, website, main phone, address and headquarters, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

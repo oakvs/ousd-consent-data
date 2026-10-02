@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/834466867",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://kidsteachtech.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kids-teach-tech",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit 'Kids Teach Tech' in San Ramon, CA (ProPublica Nonprofit Explorer, EIN 83-4466867), matching the agenda's San Ramon, CA",
+      "Organization website describes free coding and technology classes for middle and high school students and an Oakland program for students at high schools in Oakland Unified School District (OUSD), matching a High School Linked Learning college and career MOU"
+    ],
+    "key": "n-kids-teach-tech",
+    "notes": null,
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-4466867",
+      "email": "info@kidsteachtech.com",
+      "headquarters": "San Ramon, CA",
+      "legalName": "Kids Teach Tech",
+      "orgType": "nonprofit",
+      "phone": "(650) 265-7871",
+      "samUei": null,
+      "summary": "Kids Teach Tech is a nonprofit that teaches free coding and technology classes to middle and high school students. Classes are taught by youth instructors in the San Francisco Bay Area, at UC Berkeley Engineering, in libraries, schools and other nonprofit groups, and online.",
+      "website": "https://kidsteachtech.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Kids Teach Tech - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/834466867"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Kids Teach Tech",
+        "url": "https://kidsteachtech.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-kids-teach-tech",
+    "notes": "ProPublica lists Kids Teach Tech as a 501(c)(3) in San Ramon, CA (EIN 83-4466867), matching the agenda, and the organization's site describes Oakland/OUSD high school programs that fit a workplace-training MOU. Summary, phone, email and website are supported by the site and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

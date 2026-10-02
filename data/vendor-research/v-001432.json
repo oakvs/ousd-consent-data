@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dskarch.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dskarch.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001432",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm's own website lists offices in Oakland, CA and San Francisco, CA, matching both locations in the agenda text",
+      "Website describes an architectural design firm focused on K-12 education projects, matching OUSD's 'School buildings & construction' contracts for architectural services"
+    ],
+    "key": "v-001432",
+    "notes": "Web search budget was exhausted, so no registry lookup (CA SOS, SAM.gov) was done; legal name and registry IDs left null. Website domain was found by direct fetch, not search; its content matches the agenda's Oakland/San Francisco locations and K-12 work. The site does not mention OUSD. Phone and address are the Oakland office; the site does not name a headquarters or a general email.",
+    "profile": {
+      "address": "1901 Harrison St., Suite 1320, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.686.6595",
+      "samUei": null,
+      "summary": "DSK Architects is an architectural design firm with offices in Oakland, San Francisco, San Luis Obispo and Los Angeles, California. Its work includes K-12 schools, higher education, healthcare, commercial and interior design projects.",
+      "website": "https://www.dskarch.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "dsk architects | Architectural Design | Bay Area | California | SF, LA, PL, SLO",
+        "url": "https://www.dskarch.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "summary"
+        ],
+        "title": "contacts | dskarchitects",
+        "url": "https://www.dskarch.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001432",
+    "notes": "The firm's site shows Oakland (1901 Harrison St., Suite 1320, phone 510.686.6595) and San Francisco offices, K-12 and other listed project types, and a West Oakland Middle School facade project that matches an OUSD agenda project. The summary, address, phone and website are all supported, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.forkliftacademy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.forkliftacademy.com/business/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001725",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Forklift Academy' (legal name shown as 'Forklift Academy Inc.' on its own website)",
+      "Located in Agoura Hills, CA (5737 Kanan Rd, Suite 508), matching the agenda text 'Agoura Hills, CA'",
+      "Company provides OSHA forklift and lift certification training to employers, including school districts, consistent with a Risk Management Department services agreement"
+    ],
+    "key": "v-001725",
+    "notes": "Email address is obfuscated on the site, so it was left null. The site also lists a Chatsworth, CA mailing address (21947 Plummer St.) and another phone, (877) 388-3239. CA Secretary of State entity number not retrieved. The agenda city (Agoura Hills) matches the address on the privacy policy page.",
+    "profile": {
+      "address": "5737 Kanan Rd, Suite 508 Agoura Hills, CA 91301",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Agoura Hills, CA",
+      "legalName": "Forklift Academy Inc.",
+      "orgType": "company",
+      "phone": "(888) 381-2572",
+      "samUei": null,
+      "summary": "Forklift Academy is a company that provides forklift and scissor lift operator certification training that follows OSHA (Occupational Safety and Health Administration) rules. It offers online courses, hands-on evaluations at training centers in several U.S. cities, and on-site training for businesses and other employers.",
+      "website": "https://www.forkliftacademy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Forklift Academy home page",
+        "url": "https://www.forkliftacademy.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Privacy Policy - Forklift Academy",
+        "url": "https://www.forkliftacademy.com/business/privacy-policy/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001725",
+    "notes": "Exact name match, services (OSHA forklift/lift safety training, with school district clients) fit a Risk Management services agreement, and the Agoura Hills address appears on the company's own site. The homepage now lists Chatsworth, CA as the contact address and the Agoura Hills address comes only from a 2015 privacy policy, so address and headquarters are not reliably current; summary, legal name, website and phone are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address",
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

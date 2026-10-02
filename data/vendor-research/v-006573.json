@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.pathful.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pathful.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006573",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Pathful's privacy policy names the legal entity 'Pathful, Inc.' with a Raleigh, NC mailing address, matching the agenda text 'Pathful, Inc.' / 'Raleigh, NC'",
+      "Pathful's website describes a K-12 career readiness platform with work-based learning and career technical education tools, matching OUSD's Linked Learning Department services agreements funded by the K12 Strong Workforce Grant"
+    ],
+    "key": "v-006573",
+    "notes": "Registry IDs and phone not found; web search budget was exhausted so no SOS/SAM.gov lookup was done. No Oakland/OUSD mention found on Pathful pages; identity rests on exact name, Raleigh location and matching service line.",
+    "profile": {
+      "address": "5540 Centerview Dr, Ste 204 PMB 63880 Raleigh, NC 27606-8012",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@pathful.com",
+      "headquarters": "Raleigh, NC",
+      "legalName": "Pathful, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Pathful is a company that provides a career readiness platform for K-12 schools. Its software supports career exploration, course planning, work-based learning coordination and career technical education management in one student record.",
+      "website": "https://www.pathful.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email"
+        ],
+        "title": "Pathful",
+        "url": "https://www.pathful.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "email"
+        ],
+        "title": "Pathful Privacy Policy",
+        "url": "https://www.pathful.com/privacy-policy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006573",
+    "notes": "Privacy policy names the legal entity 'Pathful, Inc.' with a Raleigh, NC address, exactly matching the agenda name and city, and the homepage describes a K-12 career readiness/CTE/work-based learning platform that fits a Linked Learning Department services agreement. Summary, website, email, and address are supported by the cited pages and the summary is neutral; no direct Oakland mention was found, but name, city and service line all align.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

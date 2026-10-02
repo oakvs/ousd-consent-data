@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.accenv.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.accenv.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000230",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name matches the agenda exactly: 'ACC Environmental Consultants, Inc.' (accenv.com About page)",
+      "Headquartered in Oakland, CA (7977 Capwell Drive), matching the agenda location 'Oakland, CA'",
+      "Offers asbestos, lead and hazardous-materials consulting for demolition and renovation projects, matching OUSD's school building and demolition project contracts"
+    ],
+    "key": "v-000230",
+    "notes": "No direct fetched page tying the company to OUSD was found; identity rests on exact name, Oakland location and matching service type. Registry IDs (EIN, CA entity number, SAM UEI) not looked up.",
+    "profile": {
+      "address": "7977 Capwell Drive, Suite 100, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "general@accenv.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "ACC Environmental Consultants, Inc.",
+      "orgType": "company",
+      "phone": "510-638-8400",
+      "samUei": null,
+      "summary": "ACC Environmental Consultants, Inc. is an employee-owned environmental consulting firm founded in 1986. It provides asbestos and lead consulting, mold and indoor air quality testing, site assessments, hazardous materials management and industrial hygiene services. It serves clients in California, Oregon and Washington.",
+      "website": "https://www.accenv.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "ACC Environmental Consultants Established 1986",
+        "url": "https://www.accenv.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact US",
+        "url": "https://www.accenv.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000230",
+    "notes": "accenv.com shows the exact legal name, Oakland HQ at 7977 Capwell Drive, asbestos/lead/hazmat consulting and school clients, which fits OUSD demolition and modernization contracts. Summary details (1986, employee-owned, services, CA/OR/WA) and contact fields are confirmed on the About, Contact and home pages; no registry IDs were claimed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/464635444",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://santacruzshakespeare.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://santacruzshakespeare.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://santacruzshakespeare.org/education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009695",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the agenda's 'Santa Cruz Shakespeare' is the operating name of the nonprofit registered as 'Shakespeare Play On' (ProPublica, EIN 46-4635444), and the organization's own About page shows the same Tax ID",
+      "Located in Santa Cruz, CA, matching the agenda text",
+      "Website describes school-facing education programs (student matinees, 'Shakes on the Move' school tours, lesson plans), matching OUSD's 'Classroom & academic programs' contract for an elementary school with Prop 28 Arts and Music funds"
+    ],
+    "key": "v-009695",
+    "notes": "Operating name is Santa Cruz Shakespeare; IRS/ProPublica legal name is Shakespeare Play On. No page found mentioning OUSD directly. CA entity number and SAM UEI not looked up (web search budget exhausted); email left null.",
+    "profile": {
+      "address": "501 Upper Park Road, Santa Cruz, CA 95065",
+      "caEntityNumber": null,
+      "ein": "46-4635444",
+      "email": null,
+      "headquarters": "Santa Cruz, CA",
+      "legalName": "Shakespeare Play On",
+      "orgType": "nonprofit",
+      "phone": "(831) 460-6396",
+      "samUei": null,
+      "summary": "Santa Cruz Shakespeare is a nonprofit theatre company in Santa Cruz, California. It produces a summer festival of Shakespeare plays and works by other playwrights. It also offers education programs, including youth classes and camps, student matinees, touring school performances, and lesson plans and training for teachers.",
+      "website": "https://santacruzshakespeare.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Shakespeare Play On - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/464635444"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein"
+        ],
+        "title": "About - Santa Cruz Shakespeare",
+        "url": "https://santacruzshakespeare.org/about/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Contact - Santa Cruz Shakespeare",
+        "url": "https://santacruzshakespeare.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education - Santa Cruz Shakespeare",
+        "url": "https://santacruzshakespeare.org/education/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009695",
+    "notes": "ProPublica lists Shakespeare Play On (EIN 46-4635444) as doing business as Santa Cruz Shakespeare, and the org's own About page shows the same Tax ID; location, phone, address, and the neutral summary are all confirmed on the cited pages, and its Bay Area school touring and student programs fit an elementary-school arts services agreement.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

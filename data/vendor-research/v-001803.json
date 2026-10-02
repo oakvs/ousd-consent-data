@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000749251&type=10-K",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Gartner",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-001803",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the SEC-registered public company 'GARTNER INC' (Delaware corporation, Stamford, CT), the only well-known company with this name",
+      "Gartner is a research and advisory firm focused on business and technology topics, matching OUSD's 'Technology' service orders with the Technology Services Department",
+      "Wikipedia lists Dallas as one of Gartner's major U.S. hubs, consistent with the agenda's 'Dallas, TX' (likely a remittance or operations address; headquarters is Stamford, CT)"
+    ],
+    "key": "v-001803",
+    "notes": "Gartner's own site (gartner.com) returned 403 to automated fetching, so website and general email are left null. Agenda location is Dallas, TX; headquarters is Stamford, CT (Dallas is a Gartner hub). Address and phone are as listed on the SEC EDGAR registrant page.",
+    "profile": {
+      "address": "56 TOP GALLANT RD P O BOX 10212 STAMFORD CT 06904-2212",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Stamford, CT",
+      "legalName": "GARTNER INC",
+      "orgType": "company",
+      "phone": "203-964-0096",
+      "samUei": null,
+      "summary": "Gartner is a company that provides research, advisory and consulting services on business and technology topics. It also runs conferences. Its clients include large corporations, government agencies, technology companies and investment firms.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "SEC EDGAR company filings: GARTNER INC",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000749251&type=10-K"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Gartner - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gartner"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001803",
+    "notes": "Agenda name 'Gartner, Inc.' with technology service orders matches Gartner Inc, the IT research and advisory firm; Wikipedia lists Dallas as a Gartner operational hub, consistent with the agenda's Dallas, TX. SEC EDGAR confirms legal name, address and phone, and Wikipedia supports the neutral summary and headquarters.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

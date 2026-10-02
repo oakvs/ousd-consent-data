@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.nv5.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/2369661",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009208",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a California-registered out-of-state stock corporation 'NV5 CONSULTANTS, INC.' (OpenCorporates, California entity 2369661, active)",
+      "NV5's website lists a San Rafael, California office in its office directory filter, matching the agenda location; the office page itself could not be read",
+      "NV5 describes engineering and clean energy services for buildings, consistent with a school solar (PV) project contract"
+    ],
+    "key": "v-009208",
+    "notes": "Medium only: the San Rafael office page and an OUSD mention could not be confirmed (web search quota was exhausted), and it is not confirmed that the registered entity is the same one that contracts from San Rafael. NV5 Consultants, Inc. is a subsidiary of the larger NV5 group; NV5 pages gave conflicting headquarters addresses (Hollywood, FL vs Houston, TX), so no contact details or headquarters were filled in. Reviewer should verify before any publication.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "2369661",
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "NV5 CONSULTANTS, INC.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "NV5 is a company that provides engineering, testing, inspection and consulting services. Its work includes engineering design, asset management and geospatial data analysis for infrastructure and for buildings, including clean energy systems.",
+      "website": "https://www.nv5.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "NV5",
+        "url": "https://www.nv5.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber"
+        ],
+        "title": "NV5 CONSULTANTS, INC. - California branch (OpenCorporates)",
+        "url": "https://opencorporates.com/companies/us_ca/2369661"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

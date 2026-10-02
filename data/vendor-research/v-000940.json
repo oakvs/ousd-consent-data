@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cantareconvivo.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943151337",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000940",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Cantare Con Vivo', Oakland, CA, EIN 94-3151337 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Organization website describes tuition-free in-school music classes and afterschool choirs for Oakland children, matching OUSD's classroom and after-school program contracts",
+      "Website quotes an Assistant Principal at Lincoln Elementary, and OUSD's agreements include Lincoln Elementary School"
+    ],
+    "key": "v-000940",
+    "notes": "Web search quota was exhausted, so the organization was found by fetching its likely website directly and cross-checking the EIN shown on that site against ProPublica. California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "2619 Broadway, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3151337",
+      "email": "info@cantareconvivo.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Cantare Con Vivo",
+      "orgType": "nonprofit",
+      "phone": "510-836-0789",
+      "samUei": null,
+      "summary": "A nonprofit choral music organization in Oakland, California. It offers tuition-free in-school music classes and afterschool choirs for Oakland children, and it runs adult choirs, including an auditioned Chorale and a Summer Choir.",
+      "website": "https://www.cantareconvivo.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Cantare Con Vivo",
+        "url": "https://www.cantareconvivo.org"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Cantare Con Vivo - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943151337"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000940",
+    "notes": "Oakland choral nonprofit (EIN 94-3151337, ProPublica 501(c)(3), choral NTEE) whose site describes tuition-free in-school music classes and afterschool choirs and names Lincoln Elementary as a partner, matching OUSD's school-level agreements. All profile fields were confirmed on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://rohealth.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rohealth.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rohealth.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rohealth.com/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rohealth.com/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003636",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Ro Health LLC is headquartered in Seattle, WA (privacy policy lists 1900 W Nickerson St Suite 200, Seattle, WA 98119), matching the agenda location 'Seattle, WA'",
+      "Company website describes supplying school nursing, school behavioral health and school therapy staff to K-12 districts, matching OUSD's special education and health services contracts",
+      "Company's own job site lists a school-based Licensed Vocational Nurse position in Oakland, CA",
+      "Legal name on the company's website is 'RoHealth LLC', matching the agenda name 'Ro Health, LLC'"
+    ],
+    "key": "v-003636",
+    "notes": "Website uses 'RoHealth LLC'; the agenda also uses 'Ro Health, LLC' (and once 'RO HEALTH, INC.'). No registry IDs (WA UBI, EIN, SAM UEI) verified. Website does not state an Oakland/OUSD link directly; OUSD tie rests on school staffing services and Seattle location.",
+    "profile": {
+      "address": "1900 W Nickerson St Suite 200, Seattle, WA 98119",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "contact@rohealth.com",
+      "headquarters": "Seattle, WA",
+      "legalName": "RoHealth LLC",
+      "orgType": "company",
+      "phone": "(888)-552-9775",
+      "samUei": null,
+      "summary": "Ro Health is a medical staffing and home health company founded in 2013. It supplies nurses, behavioral health staff and therapists to K-12 school districts across the United States. It also provides private duty nursing and public health staffing.",
+      "website": "https://rohealth.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email"
+        ],
+        "title": "Homepage - Ro Health",
+        "url": "https://rohealth.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email"
+        ],
+        "title": "Contact Us - Ro Health",
+        "url": "https://rohealth.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - Ro Health",
+        "url": "https://rohealth.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "email"
+        ],
+        "title": "Privacy Policy - Ro Health",
+        "url": "https://rohealth.com/privacy-policy/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Service Locations - Ro Health",
+        "url": "https://rohealth.com/locations/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003636",
+    "notes": "Ro Health (RoHealth LLC) is a Seattle-based K-12 school nursing, behavioral health and therapy staffing company with East Bay offices, which fits the Seattle, WA location and the special education and health services contracts. Summary, contact details and address are supported by the cited homepage, about and privacy policy pages, and neutral; no OUSD tie is stated on the site itself.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

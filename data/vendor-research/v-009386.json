@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.inplay.org/wf/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.inplay.org/wf/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.inplay.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009386",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The inplay.org privacy policy names the legal entity 'InPlay Learning Network' with a San Mateo, CA address, matching the agenda name and location",
+      "inplay.org describes a nonprofit that connects youth to summer and after-school programs, matching OUSD's 'After-school & summer programs' contract",
+      "inplay.org lists Oakland Unified School District as a partner for summer learning programs"
+    ],
+    "key": "v-009386",
+    "notes": "EIN and CA entity number not found: web search budget was exhausted and ProPublica returned HTTP 429. Email omitted because the only address found (legal@inplay.org) is a legal inbox, not a general one.",
+    "profile": {
+      "address": "55 E. Third Avenue, San Mateo, CA 94401",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Mateo, CA",
+      "legalName": "InPlay Learning Network",
+      "orgType": "nonprofit",
+      "phone": "650-246-9976",
+      "samUei": null,
+      "summary": "InPlay is a nonprofit that helps California school districts run summer and after-school programs. Its online platform handles program registration, attendance tracking and compliance reporting. It aims to connect kids and youth to programs that match their interests and talents.",
+      "website": "https://www.inplay.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "InPlay Privacy Policy",
+        "url": "https://www.inplay.org/wf/privacy"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About InPlay",
+        "url": "https://www.inplay.org/wf/about"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "InPlay",
+        "url": "https://www.inplay.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009386",
+    "notes": "inplay.org's privacy policy names the legal entity InPlay Learning Network at 55 E. Third Avenue, San Mateo, CA, matching the agenda name and location. The homepage describes a nonprofit serving California districts with registration, attendance and compliance reporting, lists Oakland USD as a partner, and every profile field is supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

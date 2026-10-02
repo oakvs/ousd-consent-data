@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://edd.ca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edd.ca.gov/en/about_edd/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edd.ca.gov/en/about_edd/contact_edd/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-employment-development-department-edd",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "California state agency 'Employment Development Department' (edd.ca.gov) matches the agenda name 'California Employment Development Department (EDD)'",
+      "EDD's official mailing address is in Sacramento, CA, matching the agenda location 'Sacramento, CA'",
+      "EDD's own site says the agency runs job training programs, consistent with an EDD grant to OUSD's Adult and Career Education Department"
+    ],
+    "key": "n-california-employment-development-department-edd",
+    "notes": "State agency; no registry IDs applicable. Main phone omitted because the only general number on the Contact page is labelled for Unemployment Insurance customer service, and no general email is listed. Web search budget was exhausted, so the specific program (OYACPP) could not be confirmed on an EDD page; identity rests on agency name, Sacramento location and EDD's job-training role.",
+    "profile": {
+      "address": "PO Box 826880, Sacramento, CA 94280-0001",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "Employment Development Department",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California state agency that provides unemployment benefits, disability insurance and paid family leave. It also offers job training services and administers payroll taxes for employers.",
+      "website": "https://edd.ca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Employment Development Department | California",
+        "url": "https://edd.ca.gov/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About the EDD",
+        "url": "https://edd.ca.gov/en/about_edd/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact EDD",
+        "url": "https://edd.ca.gov/en/about_edd/contact_edd/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-california-employment-development-department-edd",
+    "notes": "EDD is California's only state agency of this name, it is based in Sacramento, and the agenda lists an EDD grant, so identity is solid; the summary matches edd.ca.gov and is neutral. The PO Box is one of several program-specific mailing addresses on the Contact page and not a general agency address, so it is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
+}

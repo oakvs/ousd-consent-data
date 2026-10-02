@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/273990987",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://foodcorps.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://foodcorps.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://foodcorps.org/locations/?state=us-ca",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001717",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Foodcorps Inc' (ProPublica Nonprofit Explorer, EIN 27-3990987), matching the agenda's 'FoodCorps, Inc.'",
+      "FoodCorps's own California partner sites page lists Oakland Unified School District as one of its two California sites, matching the agenda's Oakland, CA location",
+      "Website describes school-based food education and garden lessons in schools, matching OUSD's 'Classroom & academic programs' contracts",
+      "OUSD funding sources named in the agenda (e.g. Share Our Strength, General Mills Foundation) are consistent with a national school-food nonprofit"
+    ],
+    "key": "v-001717",
+    "notes": "Headquarters is in Portland, OR; the Oakland link is through service in Oakland Unified School District. No California Secretary of State entity number or SAM UEI was checked (web search budget exhausted).",
+    "profile": {
+      "address": "1140 SE 7th Ave, Suite 110, Portland, OR 97214",
+      "caEntityNumber": null,
+      "ein": "27-3990987",
+      "email": "info@foodcorps.org",
+      "headquarters": "Portland, OR",
+      "legalName": "Foodcorps Inc",
+      "orgType": "nonprofit",
+      "phone": "212-596-7045",
+      "samUei": null,
+      "summary": "FoodCorps is a national nonprofit that works to improve children's health through food in schools. It supports hands-on food education such as nutrition and garden lessons, nourishing school meals, and community building. It also offers leadership development for people working to improve school food.",
+      "website": "https://foodcorps.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Foodcorps Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/273990987"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About FoodCorps",
+        "url": "https://foodcorps.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact FoodCorps",
+        "url": "https://foodcorps.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "FoodCorps California partner sites",
+        "url": "https://foodcorps.org/locations/?state=us-ca"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001717",
+    "notes": "FoodCorps (Foodcorps Inc, 501(c)(3), EIN 27-3990987, Portland OR) lists Oakland Unified School District as one of its two California sites, which fits the agenda's FoodCorps/Oakland and the food education services OUSD contracts for. Summary, contact details, address and EIN are all confirmed on the cited ProPublica and foodcorps.org pages; only the general info@ email is used.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

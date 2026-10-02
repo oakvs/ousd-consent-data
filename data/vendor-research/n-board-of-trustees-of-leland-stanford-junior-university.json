@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156365",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stanford.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stanford.edu/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-board-of-trustees-of-leland-stanford-junior-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'The Board Of Trustees Of The Leland Stanford Junior University' (ProPublica Nonprofit Explorer, EIN 94-1156365), which is the legal name of Stanford University",
+      "Located in Stanford, CA, matching the agenda text 'Stanford, CA'",
+      "Stanford's own website describes it as a university in Stanford, California 94305, consistent with a university data-sharing and no-cost services agreement"
+    ],
+    "key": "n-board-of-trustees-of-leland-stanford-junior-university",
+    "notes": "Search budget was exhausted, so no independent page confirming the OUSD relationship was found; identity rests on exact legal-name match and location. No general email is published on the contact page. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "450 Jane Stanford Way Stanford, CA 94305–2004",
+      "caEntityNumber": null,
+      "ein": "94-1156365",
+      "email": null,
+      "headquarters": "Stanford, CA",
+      "legalName": "The Board Of Trustees Of The Leland Stanford Junior University",
+      "orgType": "nonprofit",
+      "phone": "(650) 723-2300",
+      "samUei": null,
+      "summary": "Stanford University is a private nonprofit university in Stanford, California. Its stated mission is to create and share knowledge and to prepare students to be curious, to think critically, and to contribute to the world.",
+      "website": "https://www.stanford.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Board Of Trustees Of The Leland Stanford Junior University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156365"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "About Stanford",
+        "url": "https://www.stanford.edu/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact Stanford",
+        "url": "https://www.stanford.edu/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-board-of-trustees-of-leland-stanford-junior-university",
+    "notes": "The agenda's exact legal name and Stanford, CA location match the ProPublica 501(c)(3) record (EIN 94-1156365) and Stanford's own About and Contact pages, which support the phone, address, website, headquarters and mission wording. A university data-sharing and no-cost services agreement fits the contracting context. The word 'private' in the summary is not stated on the cited pages, but it is a minor, well-known and neutral descriptor. I could not independently confirm the OUSD relationship because search was unavailable.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

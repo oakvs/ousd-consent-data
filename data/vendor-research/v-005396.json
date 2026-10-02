@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lozanosmith.com/about.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lozanosmith.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lozanosmith.com/contact.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005396",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the firm's own website is for 'Lozano Smith', a law firm; the agenda names 'Lozano Smith, LLP' and 'Lozano Smith Law Firm'",
+      "The firm lists a Walnut Creek, CA office (2001 North Main St., Suite 500), matching the agenda location 'Walnut Creek, CA'",
+      "The firm describes itself as an education and public agency law firm serving California K-12 districts, matching OUSD's 'Legal, insurance & risk' contracts presented by the General Counsel"
+    ],
+    "key": "v-005396",
+    "notes": "Registry lookups (CA Secretary of State, SAM.gov) were not done because the web search budget was exhausted; EIN, entity number and UEI left null. Phone and address are the Walnut Creek office, matching the agenda. Headquarters left null because the site does not name one. No general email is published on the contact page.",
+    "profile": {
+      "address": "2001 North Main St., Suite 500, Walnut Creek, CA 94596",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Lozano Smith",
+      "orgType": "company",
+      "phone": "925.953.1620",
+      "samUei": null,
+      "summary": "Lozano Smith is a law firm that represents public agencies in California. Its clients include K-12 school districts, community colleges, universities, cities, counties and special districts. Its practice areas include labor and employment, special education, construction, public finance and administrative hearings.",
+      "website": "https://www.lozanosmith.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About Lozano Smith",
+        "url": "https://www.lozanosmith.com/about.php"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "legalName"
+        ],
+        "title": "Lozano Smith",
+        "url": "https://www.lozanosmith.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Lozano Smith Office Locations",
+        "url": "https://www.lozanosmith.com/contact.php"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-005396",
+    "notes": "The firm's site shows a California public agency and education law firm with a Walnut Creek office (2001 North Main St., Suite 500, 925.953.1620), matching the agenda's Lozano Smith, Walnut Creek, CA and the legal services OUSD buys. The summary's clients and practice areas, the address, phone and website are all supported by the cited pages, and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

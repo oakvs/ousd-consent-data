@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/562544544",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sfcess.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sfcess.org/home/home-office/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003879",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name and acronym match a registered 501(c)(3): 'San Francisco Coalition Of Essential Small Schools' (ProPublica Nonprofit Explorer, EIN 56-2544544), and the organization's own site uses the name SF-CESS, as in the agenda",
+      "ProPublica lists the nonprofit's location as Oakland, CA, matching the agenda text",
+      "Website describes school equity work, facilitator training and events for educators, consistent with OUSD's 'Classroom & academic programs' contract at a continuation high school"
+    ],
+    "key": "v-003879",
+    "notes": "Agenda says 'San Francisco Coalition of Essential Schools'; the registered name is 'Essential Small Schools'. Name differs by one word but the acronym SF-CESS and Oakland location match. The organization's website emphasizes San Francisco and Bay Area events, while the IRS/ProPublica address city is Oakland. No street address was found on the website; no website page mentions OUSD.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "56-2544544",
+      "email": "thecenter@sfcess.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "San Francisco Coalition Of Essential Small Schools",
+      "orgType": "nonprofit",
+      "phone": "415-483-0933",
+      "samUei": null,
+      "summary": "SF-CESS is a nonprofit that supports schools and communities in identifying and addressing inequities in education. It offers discussion card decks, equity-focused facilitator training and tools, and an annual Fall Forum for educators.",
+      "website": "https://sfcess.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "San Francisco Coalition Of Essential Small Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/562544544"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "SF-CESS",
+        "url": "https://sfcess.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact Us - SF-CESS",
+        "url": "https://sfcess.org/home/home-office/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003879",
+    "notes": "ProPublica lists SF-CESS (San Francisco Coalition Of Essential Small Schools, EIN 56-2544544) in Oakland, CA, matching the agenda's acronym and city, and its equity-focused school support work fits a classroom and academic programs contract. The summary, phone and generic email are supported by sfcess.org and its contact page; no individuals' details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

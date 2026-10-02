@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943176726",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://destinyarts.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001363",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Destiny Arts Center', located in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3176726), matching the agenda's 'Destiny Arts Center' and 'Oakland, CA'",
+      "The organization's own website lists a street address in Oakland, CA (970 Grace Ave.) and describes youth arts and movement programs including classes and summer programs, matching OUSD's 'Classroom & academic programs' and 'After-school & summer programs' contracts"
+    ],
+    "key": "v-001363",
+    "notes": "Search budget was exhausted, so only two pages were fetched (registry and organization homepage). No page fetched explicitly mentioned OUSD. CA Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "970 Grace Ave., Oakland, CA 94608",
+      "caEntityNumber": null,
+      "ein": "94-3176726",
+      "email": "info@destinyarts.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Destiny Arts Center",
+      "orgType": "nonprofit",
+      "phone": "510.597.1619",
+      "samUei": null,
+      "summary": "Destiny Arts Center is a nonprofit in Oakland, California, that uses dance and martial arts to support youth development. It offers classes, summer programs, performance companies and community-based programs for young people.",
+      "website": "https://www.destinyarts.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Destiny Arts Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943176726"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Destiny Arts Center",
+        "url": "http://destinyarts.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001363",
+    "notes": "Exact name match to a 501(c)(3) in Oakland (EIN 94-3176726 per ProPublica); destinyarts.org confirms the Grace Ave. address, phone, email, classes and summer programs, and an about page mentions dance and martial arts. Youth arts programming fits OUSD's classroom and after-school contracts; no source names OUSD directly, but the name, city and service fit are consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

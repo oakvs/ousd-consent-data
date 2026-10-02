@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.valleyprecisiongrading.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.valleyprecisiongrading.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009906",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website shows the exact legal name 'Valley Precision Grading, Inc.' and is based in Rancho Cordova, CA, matching the agenda text",
+      "Website describes it as a synthetic turf and track specialty contractor, matching OUSD's 'Turf Replacement Project' and donated field agreements for school facilities"
+    ],
+    "key": "v-009906",
+    "notes": "Identified from the company's own website only; web search budget ran out, so no registry (CA Secretary of State, SAM.gov) confirmation was done and registry IDs are null. Contact page lists an email (a cox.net address that looks like a personal or non-general inbox), so email was left null.",
+    "profile": {
+      "address": "3330 Luyung Drive, Rancho Cordova, CA 95742",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Rancho Cordova, CA",
+      "legalName": "Valley Precision Grading, Inc.",
+      "orgType": "company",
+      "phone": "(916) 638-8800",
+      "samUei": null,
+      "summary": "A for-profit contractor in Rancho Cordova, California, that builds, maintains and repairs synthetic turf athletic fields and running tracks.",
+      "website": "https://www.valleyprecisiongrading.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Valley Precision Grading, Inc.",
+        "url": "https://www.valleyprecisiongrading.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Valley Precision Grading, Inc. - Contact",
+        "url": "https://www.valleyprecisiongrading.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009906",
+    "notes": "The company site shows the exact legal name 'Valley Precision Grading, Inc.' at 3330 Luyung Drive, Rancho Cordova, CA, matching the agenda city, and describes itself as a synthetic turf and track specialty contractor, which fits OUSD's turf replacement and donated field agreements. Website, phone, address, headquarters and summary are all confirmed on the cited pages; registry IDs are null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/vallejo/michael-s-transportation-service",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/vallejo/profile/transportation/michaels-transportation-service-inc-1116-40102",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.schoolbusfleet.com/10240877/how-a-life-change-changed-lives-michael-brown-2025-contractor-of-the-year",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bustransportation.com/about",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-michaels-transportation-service",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "California Secretary of State filing (via bizprofile.net) shows 'Michael's Transportation Service, Inc.', a General Corporation, active, at 140 Yolano Dr., Vallejo, CA 94589, matching the agenda's name and 'Vallejo, CA'",
+      "BBB profile for the same name at 140 Yolano Dr, Vallejo describes home-to-school, activity and field trip bus services, matching OUSD's School Pupil Activity Bus agreement",
+      "School Bus Fleet article states the company serves Oakland Unified, among other districts, and is headquartered in Vallejo"
+    ],
+    "key": "n-michaels-transportation-service",
+    "notes": "Company website is JavaScript-rendered; contact details could not be read from it, so phone and address come from BBB and the state filing. No general email found.",
+    "profile": {
+      "address": "140 Yolano Dr, Vallejo, CA 94589",
+      "caEntityNumber": "2327433",
+      "ein": null,
+      "email": null,
+      "headquarters": "Vallejo, CA",
+      "legalName": "Michael's Transportation Service, Inc.",
+      "orgType": "company",
+      "phone": "(707) 643-2099",
+      "samUei": null,
+      "summary": "Michael's Transportation Service, Inc. is a bus transportation company based in Vallejo, California. It provides home-to-school service, activity and field trips, athletic trips, employee shuttles, longer trips, and bus leasing. It serves school districts and other customers in the Bay Area and Central Valley.",
+      "website": "https://bustransportation.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "orgType"
+        ],
+        "title": "Michael's Transportation Service, Inc. Vallejo, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/vallejo/michael-s-transportation-service"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "Michael's Transportation Service, Inc. - BBB",
+        "url": "https://www.bbb.org/us/ca/vallejo/profile/transportation/michaels-transportation-service-inc-1116-40102"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "How a Life Change Changed Lives: Michael Brown, 2025 Contractor of the Year",
+        "url": "https://www.schoolbusfleet.com/10240877/how-a-life-change-changed-lives-michael-brown-2025-contractor-of-the-year"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Michael's Transportation Service, Inc. (MTS) - Safe, Reliable Transportation",
+        "url": "https://bustransportation.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-michaels-transportation-service",
+    "notes": "CA SOS filing (entity 2327433, Vallejo) matches the agenda name and city; BBB lists the same services, and School Bus Fleet states the Vallejo-headquartered company serves Oakland Unified. Summary, phone, address and website are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

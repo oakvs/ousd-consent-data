@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/461323531",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.socialgoodfund.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007696",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Social Good Fund Inc' (ProPublica Nonprofit Explorer, EIN 46-1323531)",
+      "ProPublica lists the address as Richmond, CA, matching the agenda text 'Richmond, CA'",
+      "The organization's website (socialgoodfund.org) footer shows the same EIN 46-1323531, linking the website to the registry record",
+      "As a fiscal sponsor of community projects, it plausibly holds contracts for programs run by sponsored projects such as the agenda's 'BAY-Peace'; this link is not confirmed on any page"
+    ],
+    "key": "v-007696",
+    "notes": "Not confirmed that this organization is the OUSD contractor: no page found linking Social Good Fund to Oakland schools or to the 'BAY-Peace' project. The website contact page could not be found, so phone, email and street address are null. The web search budget was exhausted, so no California Secretary of State or SAM.gov lookup was done. Website does not itself mention Richmond; the city comes from ProPublica.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "46-1323531",
+      "email": null,
+      "headquarters": "Richmond, CA",
+      "legalName": "Social Good Fund Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Social Good Fund is a California nonprofit that acts as a fiscal sponsor. It gives administrative, financial and operational support to community, arts and environmental projects, so they can operate under its 501(c)(3) tax-exempt status without forming their own nonprofit.",
+      "website": "https://www.socialgoodfund.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Social Good Fund Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/461323531"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "ein"
+        ],
+        "title": "Social Good Fund",
+        "url": "https://www.socialgoodfund.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

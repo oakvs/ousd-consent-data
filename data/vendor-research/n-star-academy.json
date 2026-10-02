@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680221149",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.staracademy.org/about-us/who-we-are",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.staracademy.org/about-us/at-a-glance",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.staracademy.org/about-us/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-star-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Star Academy' is a non-public school in San Rafael, CA, matching the agenda's vendor name and its 'San Rafael, CA' location (staracademy.org)",
+      "Services match: Star Academy is a California-certified non-public school for students with learning differences, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Master Contract' for the Special Education Department",
+      "Registry match: ProPublica Nonprofit Explorer lists 'Shining Star Foundation (Star Academy)' in San Rafael, California, EIN 68-0221149, a school operator"
+    ],
+    "key": "n-star-academy",
+    "notes": "Link between the school website and legal entity 'Shining Star Foundation' rests on ProPublica's '(Star Academy)' label and a San Rafael match; the school website itself does not name the foundation. Input key reads 'n-star-academy' but the agenda text says 'Star Academy'. No explicit Oakland/OUSD mention found on the site. California entity number and UEI not found.",
+    "profile": {
+      "address": "4470 Redwood Hwy, San Rafael, CA 94903",
+      "caEntityNumber": null,
+      "ein": "68-0221149",
+      "email": "StarAcademyInfo@staracademy.org",
+      "headquarters": "San Rafael, CA",
+      "legalName": "Shining Star Foundation",
+      "orgType": "nonprofit",
+      "phone": "(415) 456-8727",
+      "samUei": null,
+      "summary": "Star Academy is a private nonprofit school in San Rafael, California, for students with learning differences. It is a state-certified non-public school serving students from grade 4 through age 22, with individualized programs and specialists in language arts, speech, math, occupational therapy and emotional wellness. It draws students from several Bay Area counties.",
+      "website": "https://www.staracademy.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Shining Star Foundation (Star Academy) - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680221149"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "orgType"
+        ],
+        "title": "Who We Are - Star Academy",
+        "url": "https://www.staracademy.org/about-us/who-we-are"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "At A Glance - Star Academy",
+        "url": "https://www.staracademy.org/about-us/at-a-glance"
+      },
+      {
+        "supports": [
+          "email",
+          "phone"
+        ],
+        "title": "Contact Us - Star Academy",
+        "url": "https://www.staracademy.org/about-us/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-star-academy",
+    "notes": "Identity is sound (Star Academy, 4470 Redwood Hwy, San Rafael, a non-public school for learning differences; ProPublica lists Shining Star Foundation, DBA Star Academy, EIN 68-0221149, 'Operated a school'). However the summary claims 'state-certified' non-public school, which no cited page states (site only says NPS and WASC-accredited), and says 'grade 4' when the site says third grade (homepage and At a Glance), so the summary is not supported as written.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

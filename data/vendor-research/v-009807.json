@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.championindustrial.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.championindustrial.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/modesto/champion-industrial-contractors-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009807",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches California-registered general corporation 'Champion Industrial Contractors, Inc.' (bizprofile.net filing information, SOS document number shown)",
+      "Located in Modesto, CA, matching the agenda text 'Modesto, CA'",
+      "Company is a mechanical, HVAC, plumbing and piping contractor serving the Bay Area, consistent with OUSD contracting it for a school kitchen serving upgrade construction project"
+    ],
+    "key": "v-009807",
+    "notes": "General email contact@championindustrial.com exists on the site but is hidden by Cloudflare email protection, so it was omitted. CA entity number comes from a third-party mirror of the SOS record (bizprofile.net). No explicit page found linking the company to OUSD.",
+    "profile": {
+      "address": "1420 Coldwell Ave., Modesto, CA 95350",
+      "caEntityNumber": "0347409",
+      "ein": null,
+      "email": null,
+      "headquarters": "Modesto, CA",
+      "legalName": "Champion Industrial Contractors, Inc.",
+      "orgType": "company",
+      "phone": "209-524-6601",
+      "samUei": null,
+      "summary": "A mechanical contractor based in Modesto, California. It provides HVAC, plumbing, process piping, metal fabrication and maintenance services for industrial and commercial customers in Central and Northern California and the Bay Area. It operates a 67,000-square-foot fabrication facility.",
+      "website": "https://www.championindustrial.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Contact Us - Champion Industrial",
+        "url": "https://www.championindustrial.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters",
+          "website",
+          "phone",
+          "address",
+          "orgType"
+        ],
+        "title": "Champion Industrial - Comprehensive Industrial Contracting",
+        "url": "https://www.championindustrial.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Champion Industrial Contractors, Inc. Modesto, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/modesto/champion-industrial-contractors-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009807",
+    "notes": "Legal name and city (Modesto, CA) match the agenda text exactly, and the CA SOS mirror shows an active general corporation at the same address as the company website. A mechanical, HVAC, plumbing and piping contractor fits a kitchen serving upgrade project. Every profile field is shown on the cited pages, and the summary is neutral. No page links the company to OUSD, so the match rests on the exact name and location.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

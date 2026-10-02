@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://teachingstrategies.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://teachingstrategies.com/terms-of-use/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007215",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Teaching Strategies, LLC' appears exactly on the company's own Terms of Use and Contact pages, matching the agenda name",
+      "Headquartered at 80 M Street, SE, Washington, DC, matching the agenda location 'Washington, DC'",
+      "Company sells early childhood curriculum and assessment products, matching OUSD's contracts through its Early Childhood Development Department"
+    ],
+    "key": "v-007215",
+    "notes": "No Oakland-specific mention found on the company site. Identity rests on exact legal name, Washington, DC location and product fit. No registry IDs gathered.",
+    "profile": {
+      "address": "80 M Street, SE, Suite 1010, Washington, DC 20003",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "Teaching Strategies, LLC",
+      "orgType": "company",
+      "phone": "1-800-637-3652",
+      "samUei": null,
+      "summary": "Teaching Strategies is a company that provides early childhood education products and services. These include curriculum, child assessment tools, family engagement platforms, and professional development for educators working with children from infancy through third grade.",
+      "website": "https://teachingstrategies.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact - Teaching Strategies",
+        "url": "https://teachingstrategies.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone"
+        ],
+        "title": "Terms of Use - Teaching Strategies",
+        "url": "https://teachingstrategies.com/terms-of-use/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007215",
+    "notes": "Cited pages show the exact legal name Teaching Strategies, LLC at 80 M Street SE, Washington, DC, matching the agenda name and city, and its early childhood curriculum and assessment products fit OUSD's Early Childhood Development Department agreements. Address, phone and the neutral summary (birth through grade 3) are supported by the contact and terms pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

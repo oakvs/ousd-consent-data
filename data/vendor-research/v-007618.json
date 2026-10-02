@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.jacobsoneducationlaw.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.jacobsoneducationlaw.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007618",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm name 'Jacobson Education Law' matches the agenda name exactly, and its contact page gives a Berkeley, CA address, matching the agenda location",
+      "The firm's website describes special education legal work (IEPs and 504 plans), matching OUSD's 'Special education' contracts and Special Education Alternative Dispute Resolution funding",
+      "The firm's attorney is Deborah Jacobson, matching the 2022-2023 OUSD agreement title that names Deborah Jacobson (later renamed Jacobson Education Law)"
+    ],
+    "key": "v-007618",
+    "notes": "Small law practice; the attorney's name is on the site but is deliberately not included. No registry (CA SOS, SAM.gov) check was possible because the search budget was exhausted; identity rests on the firm's own site plus agenda text. Site says to contact the firm before mailing to the address.",
+    "profile": {
+      "address": "1919 Addison St. Suite #104 Berkeley, CA 94704",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.647.8125",
+      "samUei": null,
+      "summary": "Jacobson Education Law is a law practice in Berkeley, California. It represents families in education law matters for school-age children, including special education cases involving individualized education programs (IEPs) and Section 504 plans. It does not take college or post-secondary cases.",
+      "website": "https://www.jacobsoneducationlaw.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone"
+        ],
+        "title": "Home | Jacobson Education Law",
+        "url": "https://www.jacobsoneducationlaw.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | Jacobson Education Law",
+        "url": "https://www.jacobsoneducationlaw.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007618",
+    "notes": "Exact firm name, Berkeley address and special-education focus on the firm's own site match the agenda records; summary, address, phone and website are supported by the fetched pages. The site says the firm represents families (not districts), which is an unusual fit for a district contract, but the name/city/specialty combination is distinctive and the summary states it accurately. orgType 'company' is not shown by any source and is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "orgType"
+    ],
+    "verdict": "confirmed"
+  }
+}

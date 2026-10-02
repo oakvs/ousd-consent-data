@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_Department_of_Education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the California Department of Education, the state education agency headquartered at 1430 N Street, Sacramento, CA (Wikipedia), matching the agenda's 'Sacramento, CA'",
+      "The agency oversees education funding and holds local educational agencies accountable, which fits the grant awards (California Partnership Academies, IDEA, Career Technical Education Incentive Grant) in the OUSD agenda text"
+    ],
+    "key": "n-california-department-of-education",
+    "notes": "The agency's own site (cde.ca.gov) blocks automated fetching, and the web search budget was exhausted, so phone and email were not collected. Facts rest on Wikipedia; website (cde.ca.gov per Wikipedia), phone and email left null because they could not be verified on a cited, fetchable page.",
+    "profile": {
+      "address": "1430 N Street, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Education",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The California Department of Education is the state agency that oversees public education funding and testing in California. It provides leadership, assistance, oversight and resources to schools and districts, and holds local educational agencies accountable for student achievement. It is overseen by the State Board of Education and the State Superintendent of Public Instruction.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "California Department of Education - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_Department_of_Education"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-california-department-of-education",
+    "notes": "OUSD's records list the California Department of Education in Sacramento as grantor of state and federal pass-through grants, which matches the state agency at 1430 N Street, Sacramento. The cited Wikipedia page supports the legal name, summary, org type, address and headquarters; the summary is neutral, and website, phone and email are left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

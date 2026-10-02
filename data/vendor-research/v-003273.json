@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.partnersinschools.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.partnersinschools.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943205455",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003273",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Partners In School Innovation' (ProPublica Nonprofit Explorer, EIN 94-3205455), and the same EIN is shown in the footer of the organization's own website",
+      "Website lists its headquarters in San Francisco, CA, matching the agenda text 'San Francisco, CA'",
+      "Website describes support for teaching and learning in under-resourced public schools, matching OUSD's 'Classroom & academic programs' contracts"
+    ],
+    "key": "v-003273",
+    "notes": "ProPublica/IRS lists the registered city as Concord, CA (the organization's mailing address is 2041 East St, Ste 132, Concord, CA 94520-2126); its website lists headquarters at 1060 Tennessee St., San Francisco. No page found explicitly mentions Oakland or Reach Academy; identity rests on exact name, EIN match between registry and website, SF location, and subject match. WebSearch was unavailable (budget exhausted), so no independent third-party page mentioning OUSD was checked.",
+    "profile": {
+      "address": "1060 Tennessee St. San Francisco, CA 94107",
+      "caEntityNumber": null,
+      "ein": "94-3205455",
+      "email": "info@partnersinschools.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Partners In School Innovation",
+      "orgType": "nonprofit",
+      "phone": "(415) 824-6196",
+      "samUei": null,
+      "summary": "Partners In School Innovation is a nonprofit that works with public schools and school districts, mostly in California. It helps teachers and school leaders build their skills and improve teaching and learning in under-resourced schools through leadership coaching, professional development and school improvement work.",
+      "website": "https://www.partnersinschools.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Partners in School Innovation",
+        "url": "https://www.partnersinschools.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Partners in School Innovation",
+        "url": "https://www.partnersinschools.org/about-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Partners In School Innovation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943205455"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003273",
+    "notes": "Identity looks right (exact name, EIN 94-3205455 matches registry and site, San Francisco HQ, school-improvement services fit the Reach Academy agreements), though no source links the organization to OUSD. The summary claims it works 'mostly in California', which no cited page states (the site only says 13 districts, 188 schools, 'U.S. public schools'), and the 'leadership coaching' wording is only loosely supported, so the summary cannot be published as written.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

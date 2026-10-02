@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.savethemusic.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.savethemusic.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.savethemusic.org/fundraising-disclosure-statement/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/136089816",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-save-music-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered New York nonprofit: Save The Music Foundation, EIN 13-6089816 (ProPublica Nonprofit Explorer lists it as VH1 Save The Music Foundation, New York, NY)",
+      "Located in New York, NY, matching the agenda text 'New York, NY'",
+      "Organization's own site describes the J. Dilla Music Tech Grant for high schools, matching the OUSD grant agreement titles and the 'Classroom & academic programs' category"
+    ],
+    "key": "n-save-music-foundation",
+    "notes": "ProPublica lists the IRS legal name as 'VH1 Save The Music Foundation' (same EIN); the organization's own site uses 'Save The Music Foundation'. No phone or general email was visible on the fetched pages. Mailing address is a PO Box; street headquarters per the fundraising disclosure page is 1515 Broadway, 26th Floor, New York, NY 10036 (not included).",
+    "profile": {
+      "address": "P.O. Box 2096, New York, NY 10108-2096",
+      "caEntityNumber": null,
+      "ein": "13-6089816",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "Save The Music Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Save The Music Foundation is a nonprofit that supports music education in public schools. It gives schools grants of instruments and music technology equipment, and offers professional development for teachers. Its J. Dilla Music Technology Grant helps high schools teach electronic music creation and production.",
+      "website": "https://www.savethemusic.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About - Save The Music Foundation",
+        "url": "https://www.savethemusic.org/about/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact us - Save The Music Foundation",
+        "url": "https://www.savethemusic.org/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein"
+        ],
+        "title": "Fundraising Disclosure Statement - Save The Music Foundation",
+        "url": "https://www.savethemusic.org/fundraising-disclosure-statement/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Save The Music Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/136089816"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-save-music-foundation",
+    "notes": "Same New York nonprofit (EIN 13-6089816, 501(c)(3)) confirmed via the org's disclosure page and ProPublica; its site lists a J. Dilla Music Tech Grant for high schools matching OUSD's grant titles. Summary, website, address and EIN are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

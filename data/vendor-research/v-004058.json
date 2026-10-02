@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.starelevator.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.starelevator.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004058",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name 'Star Elevator' matches the agenda vendor name 'Star Elevator' / 'Star Elevator, Inc.'",
+      "Headquarters at 601 Harbor Boulevard, Belmont CA 94002 matches the agenda location 'Belmont, CA'",
+      "Company provides elevator maintenance, repair and modernization, matching OUSD's elevator upgrade and wheelchair-lift repair contracts",
+      "Website lists Oakland and the East Bay in its service area"
+    ],
+    "key": "v-004058",
+    "notes": "Identity confirmed by name, Belmont location and line of work, but no state registry (CA SOS, CSLB) could be checked because web search quota was exhausted. Legal entity name and registry numbers not confirmed. Website lists several regional phone numbers and no general email, so phone and email left null. Website shows C-11 license #432744, which was not added as a field.",
+    "profile": {
+      "address": "601 Harbor Boulevard, Belmont CA 94002",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Belmont, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Star Elevator is a company that provides elevator maintenance, repair, modernization and emergency service. It serves commercial, residential, hospitality and healthcare buildings across Northern California, including the San Francisco Bay Area and the Sacramento region. The company says it was founded in 1982 and holds a California C-11 elevator contractor license.",
+      "website": "https://www.starelevator.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Elevator Servicing | San Francisco Bay Area & Sacramento | Star Elevator",
+        "url": "https://www.starelevator.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About | Star Elevator",
+        "url": "https://www.starelevator.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004058",
+    "notes": "Star Elevator, 601 Harbor Blvd, Belmont CA matches the agenda name and Belmont location, and its elevator service fits the Laurel Elementary elevator upgrade and wheelchair-lift maintenance contracts; the site's summary claims (1982, C-11 license, Bay Area/Sacramento, commercial/residential/hotel/healthcare) are supported. Minor caveat: the window replacement, fire alarm and Fremont HS items are not elevator work and are not mentioned on the site, but the name and location match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

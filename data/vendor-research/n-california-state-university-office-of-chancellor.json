@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_State_University",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-california-state-university-office-of-chancellor",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches the California State University system, whose Office of the Chancellor is its headquarters in Long Beach, CA (Wikipedia)",
+      "A public university system is consistent with OUSD's 'Classroom & academic programs' contract and a Direct Admissions partnership with its High School Linked Learning Office, though no fetched page confirmed that program or any OUSD link"
+    ],
+    "key": "n-california-state-university-office-of-chancellor",
+    "notes": "The CSU's own site (calstate.edu) returned 403 to automated fetching and the web search budget was exhausted, so phone, email, mailing address and registry IDs were not verified. Identity rests on the name plus context; no page confirmed the Direct Admissions partnership with OUSD. Needs human review before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Long Beach, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The California State University is California's system of public universities, the largest public university system in the United States. It has 22 campuses and serves more than 460,000 students. The Office of the Chancellor is the system's administrative headquarters, where the chancellor, who is the chief executive officer, oversees the campuses.",
+      "website": "https://www.calstate.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "California State University - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_State_University"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

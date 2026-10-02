@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/810565800",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandleaf.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandleaf.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandleaf.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003138",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Oakland Leaf Foundation', Oakland, CA (ProPublica Nonprofit Explorer, EIN 81-0565800)",
+      "Located in Oakland, CA (510 3rd Street, Suite 200), matching the agenda text",
+      "Website describes afterschool and summer programs for Oakland youth, matching OUSD's 'After-school & summer programs' contracts",
+      "Website About page lists afterschool programs at OUSD school sites including Bret Harte, EnCompass and Think College Now, the same sites named in the agenda contract titles"
+    ],
+    "key": "v-003138",
+    "notes": "Web search budget was exhausted, so identity was confirmed via direct fetches of ProPublica and the organization's own site. No main phone number is shown on the cited pages. CA Secretary of State entity number and SAM UEI were not looked up.",
+    "profile": {
+      "address": "510 3rd Street, Suite 200, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "81-0565800",
+      "email": "admin@oaklandleaf.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Leaf Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Oakland Leaf is a nonprofit youth development organization founded in 2001. It runs afterschool programs at schools in East Oakland, high school internships and summer camps. Its programs focus on social-emotional learning, academics, creative expression and social justice.",
+      "website": "https://www.oaklandleaf.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oakland Leaf Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/810565800"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Oakland Leaf | Your out-of-school time provider",
+        "url": "https://www.oaklandleaf.org"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Oakland Leaf",
+        "url": "https://www.oaklandleaf.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us | Oakland Leaf",
+        "url": "https://www.oaklandleaf.org/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003138",
+    "notes": "Oakland Leaf Foundation is a 501(c)(3) in Oakland, CA (ProPublica EIN 81-0565800) whose site shows afterschool programs at Bret Harte, EnCompass and Think College Now, matching the agenda contracts. The summary, address, email, website, EIN and orgType are all supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

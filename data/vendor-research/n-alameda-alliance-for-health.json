@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.alamedaalliance.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://alamedaalliance.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-alliance-for-health",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the organization's own site (alamedaalliance.org) is titled 'Alameda Alliance for Health', the name used in the OUSD agenda text",
+      "Located in Alameda, CA (1240 South Loop Road, Alameda, CA 94502), matching the agenda's location 'Alameda, CA'",
+      "It is a Medi-Cal managed care health plan serving Alameda County residents, consistent with OUSD's 'Student health, support & family services' category and a Student Behavioral Health Incentive Program (SBHIP) agreement funded through a health plan (the agenda says funding comes via Alameda Alliance for Health under California's Child and Youth Behavioral Health Initiative)"
+    ],
+    "key": "n-alameda-alliance-for-health",
+    "notes": "Registry IDs (EIN, CA entity number, SAM UEI) not found: web search budget was exhausted and ProPublica rate-limited fetches. Described on its own site as 'a local, public, not-for-profit' health plan, so orgType set to 'other' (it may be a public agency rather than an IRS-registered nonprofit). The email is the Member Services address listed on the Contact page, the only general inbox shown; the main office line is 1.510.747.4500 and the member services line is 1.510.747.4567. The link to SBHIP is inferred from the agenda text; no fetched page confirmed it.",
+    "profile": {
+      "address": "1240 South Loop Road, Alameda, CA 94502",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "memberservices@alamedaalliance.org",
+      "headquarters": "Alameda, CA",
+      "legalName": "Alameda Alliance for Health",
+      "orgType": "other",
+      "phone": "1.510.747.4500",
+      "samUei": null,
+      "summary": "Alameda Alliance for Health is a local, public, not-for-profit managed care health plan that provides health coverage to Alameda County residents. It offers Alliance Medi-Cal, Alliance Group Care and Alliance Wellness (a Medicare plan). It is governed by a Board of Governors.",
+      "website": "https://www.alamedaalliance.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Alameda Alliance for Health",
+        "url": "https://www.alamedaalliance.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About Us - Alameda Alliance for Health",
+        "url": "https://alamedaalliance.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-alameda-alliance-for-health",
+    "notes": "The exact name matches the agenda, and the Alameda, CA headquarters matches. Alameda Alliance for Health is the Alameda County Medi-Cal managed care plan, which fits an SBHIP MOU funded through a health plan. The summary, orgType, website, phone, email (general Member Services inbox) and address are all confirmed on the cited Contact and About pages. I could not independently confirm the OUSD link beyond the agenda text, because the search budget was exhausted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

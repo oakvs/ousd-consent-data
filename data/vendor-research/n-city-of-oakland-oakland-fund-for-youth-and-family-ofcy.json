@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandca.gov/Community/Child-and-Youth-Services/Oakland-Fund-for-Children-and-Youth-OFCY",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ofcy.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-city-of-oakland-oakland-fund-for-youth-and-family-ofcy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The City of Oakland's own page describes the Oakland Fund for Children and Youth (OFCY) as a City of Oakland program, matching the agenda name 'City of Oakland, Oakland Fund for Youth and Family (OFCY)' and the funding source 'Oakland Fund for Children and Youth'",
+      "Located in Oakland, CA (Oakland City Hall area), matching the agenda location",
+      "OFCY's own website (ofcy.org) says it funds programs for children, youth and families in Oakland, matching OUSD's 'Student health, support & family services' category",
+      "The same phone number, (510) 238-3088, appears on both the City of Oakland page and ofcy.org"
+    ],
+    "key": "n-city-of-oakland-oakland-fund-for-youth-and-family-ofcy",
+    "notes": "City program, not a separate legal entity, so no EIN, California entity number or SAM UEI. Address omitted because the City page lists '1 Frank H. Ogawa Plaza' while ofcy.org lists '150 Frank H. Ogawa Plaza, Suite 4216'. Web search quota was exhausted, so identity was confirmed using direct page fetches only.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "ofcy@oaklandca.gov",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Fund for Children and Youth",
+      "orgType": "public_agency",
+      "phone": "(510) 238-3088",
+      "samUei": null,
+      "summary": "The Oakland Fund for Children and Youth (OFCY) is a City of Oakland program created in 1996 by a vote of city residents. It provides funding to nonprofit organizations and agencies that offer direct services to children, youth and families in Oakland, including education, career readiness, health and community programs.",
+      "website": "https://ofcy.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Oakland Fund for Children and Youth (OFCY) | City of Oakland, CA",
+        "url": "https://www.oaklandca.gov/Community/Child-and-Youth-Services/Oakland-Fund-for-Children-and-Youth-OFCY"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "headquarters",
+          "legalName",
+          "website"
+        ],
+        "title": "Oakland Fund for Children and Youth (OFCY)",
+        "url": "https://ofcy.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-city-of-oakland-oakland-fund-for-youth-and-family-ofcy",
+    "notes": "The City of Oakland page and ofcy.org both describe OFCY as the City of Oakland youth funding program (Measure K, Nov 1996), matching the agenda name, the Oakland location and the 'Oakland Fund for Children and Youth' funding source. Summary, phone, email, website and headquarters are shown on the cited pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.natecintl.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.natecintl.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002995",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's own website identifies it as 'NATEC International, Inc.', the same name used in OUSD's agenda titles",
+      "Its mailing address is PO Box 8657, Fountain Valley, CA 92728, matching the 'Fountain Valley, CA' location in the agenda text; it also lists a Northern California office in Oakland, CA",
+      "It provides asbestos (AHERA) and lead-paint environmental health and safety training and consulting, consistent with the earlier agenda title 'National Association of Training and Environmental Consulting (NATEC) International' and with a Risk Management Department services agreement"
+    ],
+    "key": "v-002995",
+    "notes": "Registry IDs (EIN, California entity number, SAM UEI) not found: the web search budget was exhausted and ProPublica returned HTTP 429, so no registry lookup was possible. The 2022-2023 agenda title expands the name to 'National Association of Training and Environmental Consulting (NATEC) International'; this expansion does not appear on the company's website, so the link is by the NATEC name, Fountain Valley address and subject matter. Headquarters left null because the site gives a PO Box mailing address and several office locations without naming a headquarters.",
+    "profile": {
+      "address": "PO Box 8657, Fountain Valley, CA 92728",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Training@NATECintl.com",
+      "headquarters": null,
+      "legalName": "NATEC International, Inc.",
+      "orgType": "company",
+      "phone": "(800) 969-3228",
+      "samUei": null,
+      "summary": "A company that provides accredited training courses in environmental, health and safety topics, including asbestos, lead and hazardous materials. It offers classes in person, at customer sites and online, and also provides consulting related to lead and asbestos remediation. It has classroom facilities in Northern and Southern California.",
+      "website": "https://www.natecintl.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "NATEC International - Contact",
+        "url": "https://www.natecintl.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "NATEC International - About",
+        "url": "https://www.natecintl.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002995",
+    "notes": "NATEC International, Inc. matches the agenda name, the Fountain Valley CA mailing address (PO Box 8657) and an Oakland office, and its asbestos/lead training and consulting fits a Risk Management services agreement. Contact page and about page support all listed fields; the summary's 'remediation' wording is a slight extension of 'lead and asbestos consulting' but is not materially unsupported, and the 'National Association of Training and Environmental Consulting' expansion is not on the site (the researcher disclosed this).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

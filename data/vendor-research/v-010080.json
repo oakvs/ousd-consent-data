@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.radancy.com/legal/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.radancy.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010080",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Radancy's own legal/privacy page names its legal entity as 'TMP Worldwide Advertising & Communications, LLC d/b/a Radancy', exactly matching the agenda's vendor name",
+      "Radancy provides a talent acquisition (hiring) platform, matching OUSD's 'Staff & hiring' services agreement presented by the Deputy Chief, Talent"
+    ],
+    "key": "v-010080",
+    "notes": "Agenda gives no location. Registry IDs not looked up (search budget exhausted). Address is the mailing address from the privacy notice.",
+    "profile": {
+      "address": "One Battery Park Plaza #2710, New York, NY 10004-1405",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "customersupport@radancy.com",
+      "headquarters": "New York, NY",
+      "legalName": "TMP Worldwide Advertising & Communications, LLC",
+      "orgType": "company",
+      "phone": "1-800-867-2001",
+      "samUei": null,
+      "summary": "Radancy is a company that sells talent acquisition (hiring) software and services to employers. Its platform uses artificial intelligence to help organizations advertise jobs, engage candidates and manage recruiting steps from start to finish.",
+      "website": "https://www.radancy.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Radancy Privacy Notice",
+        "url": "https://www.radancy.com/legal/privacy"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Radancy",
+        "url": "https://www.radancy.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010080",
+    "notes": "Radancy's privacy notice names its legal entity exactly as 'TMP Worldwide Advertising & Communications, LLC d/b/a Radancy', and its talent acquisition platform fits OUSD's Talent/HR 'Staff & hiring' services agreement. Summary, contact details and address are supported; headquarters is only described as a registered location for privacy matters, so it is listed as unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

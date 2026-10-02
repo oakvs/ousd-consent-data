@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.wested.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wested.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://calschls.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004597",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: the agenda names 'WestEd' and the organization's own site identifies as WestEd, an education research, development and service agency.",
+      "Subject matter matches OUSD contracts: one OUSD agreement is for the California Healthy Kids Survey, and calschls.org states the survey was developed by WestEd for the California Department of Education.",
+      "Location is only partly confirmed: the agenda says San Francisco, CA, but WestEd's current contact page lists its address in Alameda, CA (Bay Area, adjacent to Oakland). No San Francisco office was found on the pages checked."
+    ],
+    "key": "v-004597",
+    "notes": "Agenda gives San Francisco, CA but WestEd's contact page lists Alameda, CA; reviewer should confirm whether WestEd also has a San Francisco office. No registry confirmation (ProPublica returned 429/404, web search quota exhausted). WestEd describes itself as a Joint Powers Agency tax exempt under Section 115(1), so it may have no IRS 501(c)(3) EIN; EIN, CA entity number and UEI left null. No general email found on the contact page.",
+    "profile": {
+      "address": "2470 Mariner Square Loop, 2nd Floor, Alameda, CA 94501",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": "WestEd",
+      "orgType": "nonprofit",
+      "phone": "415-565-3000",
+      "samUei": null,
+      "summary": "WestEd is a nonpartisan, nonprofit research, development and service agency. It provides research, evaluation, professional learning, technical assistance and policy guidance aimed at improving learning and opportunity for children, youth and adults. It has offices across the United States.",
+      "website": "https://www.wested.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website"
+        ],
+        "title": "About Us - WestEd",
+        "url": "https://www.wested.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - WestEd",
+        "url": "https://www.wested.org/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "About CalSCHLS",
+        "url": "https://calschls.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

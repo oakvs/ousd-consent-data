@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/384105767",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kingmakersofoakland.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kingmakersofoakland.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008752",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Kingmakers Of Oakland' located in Oakland, CA (ProPublica Nonprofit Explorer, EIN shown), matching the agenda's Oakland, CA",
+      "Organization website describes education programs for Black boys and young men from Pre-K through Ph.D., matching OUSD's 'Classroom & academic programs' contracts",
+      "Organization's About page states it partners with multiple districts including OUSD (Oakland Unified School District)"
+    ],
+    "key": "v-008752",
+    "notes": "Only generic contact found on the site is an email that appears to be the CEO's personal mailbox (chris@...), so email was omitted. No public phone or street address on the website. CA Secretary of State and SAM.gov were not checked (web search budget exhausted).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "38-4105767",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Kingmakers Of Oakland",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Kingmakers of Oakland is a nonprofit that works to improve school and life outcomes for Black boys and young men from Pre-K through Ph.D. Its programs include the Crowns Curriculum, Jegna Early Literacy, Sankofa Kings and KOO Labs Academies. It is based in Oakland, California, and partners with school districts in the Bay Area.",
+      "website": "https://www.kingmakersofoakland.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Kingmakers Of Oakland - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/384105767"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Kingmakers of Oakland",
+        "url": "https://www.kingmakersofoakland.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Kingmakers of Oakland",
+        "url": "https://www.kingmakersofoakland.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008752",
+    "notes": "ProPublica confirms Kingmakers Of Oakland as an Oakland, CA 501(c)(3) (EIN 38-4105767), and its website and About page confirm the mission, the named programs and that OUSD is a partner district. The summary is neutral and supported, and no named individual's contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

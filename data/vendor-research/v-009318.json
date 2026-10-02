@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.playworks.org/about/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.playworks.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.playworks.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009318",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Playworks' own Contact Us page gives its national office address in Oakland, CA (1440 Broadway), matching the agenda location 'Oakland, CA'",
+      "Playworks' website describes play-based programming and onsite coaches delivered to schools and districts, matching OUSD's school-based 'Student health, support & family services' and 'Classroom & academic programs' contracts at elementary schools"
+    ],
+    "key": "v-009318",
+    "notes": "EIN, California entity number and UEI not found: web search budget was exhausted and ProPublica rate-limited (HTTP 429) and IRS search blocked (403). General email (info@playworks.org) was only seen as a footer link target, not displayed on a fetched page, so it was left null.",
+    "profile": {
+      "address": "1440 Broadway STE 200 PMB 161 Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Playworks",
+      "orgType": "nonprofit",
+      "phone": "510.893.4180",
+      "samUei": null,
+      "summary": "Playworks is a national nonprofit that helps schools and youth programs create safe, active play. It offers staff training, consultative support, online learning and onsite coaches for schools, districts and youth organizations. Its stated mission is to improve children's health and well-being through physical activity and safe, meaningful play.",
+      "website": "https://www.playworks.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Contact Us | Playworks",
+        "url": "https://www.playworks.org/about/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About | Playworks",
+        "url": "https://www.playworks.org/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Playworks",
+        "url": "https://www.playworks.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009318",
+    "notes": "Playworks' own contact page shows a 501(c)(3) with its address at 1440 Broadway, Oakland, CA and phone 510.893.4180, matching the agenda name and location; its site describes onsite coaches, staff training, consultative support and online learning for schools, which fits OUSD's school-based services agreements. The summary, orgType, address, phone and website are all supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

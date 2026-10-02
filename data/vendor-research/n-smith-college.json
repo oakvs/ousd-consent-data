@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/41843040",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.smith.edu/about-smith",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-smith-college",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Smith College' in Northampton, MA; ProPublica Nonprofit Explorer lists 'Trustees Of The Smith College', an educational 501(c)(3) in Northampton, MA, EIN 04-1843040",
+      "Smith College's own website (smith.edu) describes a college located in Northampton, Massachusetts, matching the agenda location",
+      "The agreement is a Memorandum of Understanding with OUSD Talent/Human Resources, consistent with a college partnering on educator or student-intern placements (the college runs education and social work programs with school placements); no page found naming OUSD directly"
+    ],
+    "key": "n-smith-college",
+    "notes": "No page found that names OUSD directly; the fit with the MOU is inferred from the college's education and social work programs. No general email found.",
+    "profile": {
+      "address": "10 Elm Street, Northampton, MA 01063",
+      "caEntityNumber": null,
+      "ein": "04-1843040",
+      "email": null,
+      "headquarters": "Northampton, MA",
+      "legalName": "Trustees Of The Smith College",
+      "orgType": "nonprofit",
+      "phone": "413-584-2700",
+      "samUei": null,
+      "summary": "Smith College is a private women's college in Northampton, Massachusetts, founded in 1871. It offers an open curriculum with courses in many fields of study and enrolls students from across the United States and other countries. It is a member of the Five College Consortium in western Massachusetts.",
+      "website": "https://www.smith.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Trustees Of The Smith College - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/41843040"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Smith College",
+        "url": "https://www.smith.edu/about-smith"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-smith-college",
+    "notes": "The agenda names Smith College in Northampton, MA, and ProPublica lists Trustees of the Smith College (EIN 04-1843040, 501(c)(3)) in Northampton. The smith.edu page confirms the address, phone, 1871 founding, open curriculum and Five College membership. The page does not use the phrase 'private women's college' verbatim, but that is common knowledge about this institution. No source names OUSD directly, though a college MOU with Talent/HR is plausible.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

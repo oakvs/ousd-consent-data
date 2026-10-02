@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.britepaintinganddecorating.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/brite-painting-decorating-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008495",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Brite Painting & Decorating, Inc.' is an active California general corporation (file number 3867855) located in Oakland, CA, matching the agenda's Oakland, CA",
+      "Company's own website describes commercial painting for schools, hospitals and corporate buildings, matching OUSD's 'School buildings & construction' contracts for school facility projects",
+      "Company website lists an Oakland address (3756 Grand Ave Suite # 305, Oakland, CA 94610), the same address shown in the California corporation record"
+    ],
+    "key": "v-008495",
+    "notes": "California entity number comes from a third-party mirror of Secretary of State data (bizprofile.net); the official bizfileonline.sos.ca.gov was not checked. Phone is shown without punctuation on the company website. No specific mention of OUSD found on the site.",
+    "profile": {
+      "address": "3756 Grand Ave Suite # 305, Oakland, CA 94610",
+      "caEntityNumber": "3867855",
+      "ein": null,
+      "email": "britepainting22@aol.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Brite Painting & Decorating, Inc.",
+      "orgType": "company",
+      "phone": "5109073098",
+      "samUei": null,
+      "summary": "A commercial painting and decorating company based in Oakland, California. It paints and coats commercial buildings such as schools, hospitals, housing and corporate properties, and does specialty finishes and historical projects.",
+      "website": "https://www.britepaintinganddecorating.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Brite Painting & Decorating Inc",
+        "url": "https://www.britepaintinganddecorating.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Brite Painting & Decorating, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/brite-painting-decorating-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008495",
+    "notes": "Exact legal name match, Oakland CA address, active California general corporation (3867855) classed as professional painting, and the company site shows commercial painting for schools, consistent with OUSD facilities construction contracts. Summary and contact fields are confirmed by the cited pages; the email is a generic business address and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

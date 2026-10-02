@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://barthroofing.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://barthroofing.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009484",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: the company's own website is titled 'Barth Roofing Company, Inc.', the same legal-style name as the agenda text",
+      "The website's header identifies the company as 'Barth Roofing Company, Inc. | Tracy, CA', matching the agenda location (Tracy, CA); its physical address is in nearby Lathrop, CA",
+      "Company is a licensed California roofing contractor (CSLB# 760030) offering commercial roof replacement, matching OUSD's 'School buildings & construction' contract for an Emerson Elementary School roof replacement"
+    ],
+    "key": "v-009484",
+    "notes": "Identity rests on the company's own website (exact name, Tracy, CA in the site header, roofing contractor); no public registry (CA Secretary of State, SAM.gov, CSLB) was reachable in this session, so no registry IDs were filled in. The website's mailing address is in Lathrop, CA, while the agenda and the site header say Tracy, CA. Web search budget was exhausted, so the page was found by direct fetch.",
+    "profile": {
+      "address": "400 Mossdale Road, Lathrop, CA 95330",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@barthroofing.com",
+      "headquarters": "Lathrop, CA",
+      "legalName": "Barth Roofing Company, Inc.",
+      "orgType": "company",
+      "phone": "(209) 833-9917",
+      "samUei": null,
+      "summary": "Barth Roofing Company, Inc. is a family-owned roofing and solar contractor that has operated since 1996. It installs, repairs and maintains residential and commercial roofs and also offers solar services for customers in Northern California, including the Tracy area.",
+      "website": "https://barthroofing.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Barth Roofing Company, Inc.",
+        "url": "https://barthroofing.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - Barth Roofing Company, Inc.",
+        "url": "https://barthroofing.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009484",
+    "notes": "The company site shows the exact legal name, a Tracy, CA header, an office at 400 Mossdale Road in Lathrop (nearby), and CSLB# 760030 with B/C39 roofing classifications, which fits an Emerson Elementary roof replacement change order. The summary (founded 1996, family-owned, residential and commercial roofing plus solar, Northern California) and the business contact details are all shown on the cited pages; I could not independently check registries or the OUSD project because search was unavailable.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

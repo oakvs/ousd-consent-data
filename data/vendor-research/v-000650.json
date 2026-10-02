@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bethechangeconsulting.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bethechangeconsulting.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bethechangeconsulting.com/institution/after-school-program/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000650",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Website names the company 'Be the Change Consulting, LLC', matching the agenda title 'Be the Change Consulting, LLC' (2023-2024 agreement)",
+      "Based in Oakland, CA (410 12th St. Ste. 200, Oakland, CA 94607), matching the agenda location",
+      "Website describes youth development and after-school program curricula and training, matching OUSD's 'After-school & summer programs' and student support contracts",
+      "Website's Custom Solutions page lists work with Oakland Unified School District"
+    ],
+    "key": "v-000650",
+    "notes": "No phone, general email, CA entity number, EIN or UEI found on the company's own pages; the CA Secretary of State record was not located, so those fields are null. Third-party listings show phone numbers and another address (2744 East 11th Street) but these were not confirmed on the company's own site and were not used.",
+    "profile": {
+      "address": "410 12th St. Ste. 200 Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Be the Change Consulting, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A company based in Oakland, California, that provides consulting in equity and inclusion, youth development, organizational capacity building and strategic planning. It also offers curricula and training for youth programs, including after-school programs, on topics such as social-emotional learning and restorative practices.",
+      "website": "https://www.bethechangeconsulting.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us",
+        "url": "https://www.bethechangeconsulting.com/about/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.bethechangeconsulting.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "After School Program Archives",
+        "url": "https://www.bethechangeconsulting.com/institution/after-school-program/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000650",
+    "notes": "Be the Change Consulting, LLC is an Oakland-based for-profit LLC (410 12th St. Ste. 200) whose site confirms the legal name, address, and equity, youth development, capacity building and strategic planning services plus after-school SEL/restorative practices curricula, matching OUSD's agenda name (including the LLC form) and its after-school and student-support contracts. I could not verify the candidate's claim that a Custom Solutions page lists OUSD, but that is only an identity signal and no profile field depends on it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

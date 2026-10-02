@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/133541913",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.teachforamerica.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005673",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Teach For America Inc' (ProPublica Nonprofit Explorer, EIN 13-3541913)",
+      "Teach For America's website describes placing teachers and tutors in schools and districts, matching OUSD's 'Staff & hiring' contracts through the Talent/Human Resources Department",
+      "Teach For America's Bay Area page says it has partnered with local schools since 1991 and names Oakland as a priority community, consistent with a San Francisco-area agenda location"
+    ],
+    "key": "v-005673",
+    "notes": "Headquarters is New York per IRS data; the agenda's San Francisco location is presumably the Bay Area regional office. No main phone or mailing address was found on the pages fetched, and a web search budget limit prevented additional searches, so those fields are null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "13-3541913",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "Teach For America Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Teach For America is a nonprofit leadership development organization focused on educational equity. It finds, trains and supports teachers, tutors and other leaders, and places them in schools and school districts across the United States, including the Bay Area.",
+      "website": "https://www.teachforamerica.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Teach For America Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/133541913"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us - Teach For America",
+        "url": "https://www.teachforamerica.org/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-005673",
+    "notes": "Teach For America Inc (EIN 13-3541913, New York HQ, 501(c)(3)) matches the agenda's Teach for America, Inc. and its teacher/talent staffing services under Title II. Sources support legal name, EIN, type, HQ, website and the summary; the Bay Area/Oakland presence is confirmed on TFA's Bay Area page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

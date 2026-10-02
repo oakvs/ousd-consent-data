@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dlineconstructors.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dlineconstructors.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001279",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website names 'D-Line Constructors, Inc.' exactly, matching the agenda name",
+      "Headquartered at 2744 E. 11th Street, Oakland, CA 94601, matching the agenda location of Oakland, CA",
+      "Website describes site civil work (grading, paving, utilities, demolition), matching OUSD's school site improvement and field project contracts",
+      "Project portfolio lists a Fremont High School project (Fremont High is an Oakland Unified school)"
+    ],
+    "key": "v-001279",
+    "notes": "Identity confirmed from the company's own website only; the California Secretary of State and SAM.gov registries were not checked because the web search budget was exhausted, so entity number and UEI are null. No general email was published. Contractor license number shown on the site is 944284 (not a schema field).",
+    "profile": {
+      "address": "2744 E. 11th Street, H14 Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "D-Line Constructors, Inc.",
+      "orgType": "company",
+      "phone": "510 251 6400",
+      "samUei": null,
+      "summary": "D-Line Constructors is a general engineering contractor based in Oakland, California. It does civil construction work such as demolition, earthwork and grading, paving, underground utilities and habitat restoration for public and private projects around the San Francisco Bay Area. The company was founded in 2012.",
+      "website": "https://www.dlineconstructors.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "D-Line Constructors, Inc.",
+        "url": "https://www.dlineconstructors.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "address"
+        ],
+        "title": "About - D-Line Constructors",
+        "url": "https://www.dlineconstructors.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001279",
+    "notes": "The company site shows the exact legal name D-Line Constructors, Inc. at an Oakland address, as a civil/site-work general engineering contractor, which fits OUSD's school site improvement and field contracts, and it lists a Fremont High School project. The address, phone, 2012 founding date and services were confirmed on the home and about pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

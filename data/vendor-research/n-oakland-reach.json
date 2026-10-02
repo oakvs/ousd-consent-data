@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/831289590",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandreach.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandreach.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-reach",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Oakland Reach', EIN 83-1289590, in Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Organization's own website describes school-based tutoring and family education programs, matching OUSD's 'Classroom & academic programs' category",
+      "Organization's website and an independent CRPE case study both describe partnerships with Oakland Unified School District"
+    ],
+    "key": "n-oakland-reach",
+    "notes": "ProPublica lists legal name as 'Oakland Reach' (city only, no street address). The about page writes the suite as 'Suite 425'; the homepage writes 'Ste 425'. No CA Secretary of State or SAM.gov lookup was done.",
+    "profile": {
+      "address": "333 Hegenberger Road, Ste 425, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "83-1289590",
+      "email": "info@oaklandreach.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Reach",
+      "orgType": "nonprofit",
+      "phone": "(510) 969-5841",
+      "samUei": null,
+      "summary": "A nonprofit in Oakland, California that works with families to support children's learning. Its programs include the REACH Parent District, which offers virtual reading tutoring and family success coaching, and a model that trains parents and caregivers to serve as tutors in schools. It also advocates on public education issues.",
+      "website": "https://www.oaklandreach.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oakland Reach - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/831289590"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "The Oakland REACH",
+        "url": "https://www.oaklandreach.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "The Oakland REACH - About",
+        "url": "https://www.oaklandreach.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-oakland-reach",
+    "notes": "Oakland Reach is an Oakland-based 501(c)(3) education and advocacy nonprofit (ProPublica, EIN 83-1289590) that runs tutoring and family programs and works with OUSD, which fits a no-cost services and data sharing agreement with the Special Education Department. The summary, EIN, address, phone and generic info@ email are all supported by the fetched pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

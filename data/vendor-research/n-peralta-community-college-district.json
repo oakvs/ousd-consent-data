@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.peralta.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.peralta.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-peralta-community-college-district",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "District office is at 333 East Eighth Street, Oakland, CA 94606 (peralta.edu), matching the agenda location Oakland, CA",
+      "Peralta's own site says the district includes Laney College, matching the agenda titles 'Gateway to College at Laney College'",
+      "A community college district offering college and career programs fits OUSD's 'Classroom & academic programs' contracts for CCAP dual-enrollment and pathways agreements"
+    ],
+    "key": "n-peralta-community-college-district",
+    "notes": "Registry IDs not looked up because the web search budget was exhausted. No general email found on cited pages.",
+    "profile": {
+      "address": "333 East Eighth Street Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Peralta Community College District",
+      "orgType": "public_agency",
+      "phone": "(510) 466-7200",
+      "samUei": null,
+      "summary": "A public community college district in northern Alameda County, California. It is made up of four colleges: Berkeley City College, College of Alameda, Laney College and Merritt College. The colleges offer two-year degrees, certificates and university transfer programs.",
+      "website": "https://www.peralta.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Peralta Community College District",
+        "url": "https://www.peralta.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Peralta Community College District overview",
+        "url": "https://www.peralta.edu/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-peralta-community-college-district",
+    "notes": "Cited peralta.edu pages confirm the four colleges (including Laney College), the Oakland district office address at 333 East Eighth Street, phone (510) 466-7200, and two-year degree, certificate and transfer programs. This matches the agenda's Oakland location and the Gateway to College at Laney, CCAP and pathways agreements. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

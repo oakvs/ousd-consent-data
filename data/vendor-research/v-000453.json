@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.anthonioinc.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.anthonioinc.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/2352988",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000453",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California registered stock corporation 'ANTHONIO, INC.' (entity 2352988) at 333 Hegenberger Road, Suite 206, Oakland, CA (OpenCorporates), matching the agenda's Oakland, CA",
+      "The company's own website lists the same Oakland address and says it provides construction management and construction inspection services, including for educational facilities, matching OUSD's Inspector of Record contracts for school construction projects",
+      "Registry address and website address are identical, independently linking the registered corporation to the website"
+    ],
+    "key": "v-000453",
+    "notes": "Web search budget was exhausted, so the company website was found by guessing the domain (anthonioinc.com) and confirmed against the OpenCorporates California record by matching address. Website does not name OUSD or DSA explicitly. Phone and address are copied as shown on the website; OpenCorporates shows ZIP 94621. Registry data is from OpenCorporates, not the CA Secretary of State directly.",
+    "profile": {
+      "address": "333 Hegenberger Road, Suite 206, Oakland, California",
+      "caEntityNumber": "2352988",
+      "ein": null,
+      "email": "info@aoa-inc.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "ANTHONIO, INC.",
+      "orgType": "company",
+      "phone": "510.567.3797",
+      "samUei": null,
+      "summary": "ANTHONIO Inc. is an Oakland, California company that provides project and construction management services. Its work includes construction inspection, cost estimating, scheduling and quality control. The company says it was established in 2001 and has worked on educational facilities in California.",
+      "website": "https://www.anthonioinc.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "ANTHONIO Inc.",
+        "url": "https://www.anthonioinc.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - ANTHONIO Inc.",
+        "url": "https://www.anthonioinc.com/about-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters",
+          "address"
+        ],
+        "title": "ANTHONIO, INC. - OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/2352988"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000453",
+    "notes": "The company website and the OpenCorporates CA record (ANTHONIO, INC., entity 2352988) share the same Oakland address, and the firm's construction management and inspection work for educational facilities fits OUSD's Inspector of Record contracts. The summary, phone, generic info@ email, address and entity number are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

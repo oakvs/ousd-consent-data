@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/204535835",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://safepassages.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://safepassages.org/initiatives/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003729",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Safe Passages' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 20-4535835), matching the agenda's Oakland, CA location",
+      "Safe Passages' own Programs & Initiatives page describes school-based, afterschool enrichment, family engagement and social support programs at schools including Oakland, matching OUSD's after-school and student support contracts",
+      "Safe Passages' own website lists an Oakland address (1017 Clay Street), consistent with the registry"
+    ],
+    "key": "v-003729",
+    "notes": null,
+    "profile": {
+      "address": "1017 Clay Street Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "20-4535835",
+      "email": "connect@safepassages.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Safe Passages",
+      "orgType": "nonprofit",
+      "phone": "(510) 775-9200",
+      "samUei": null,
+      "summary": "Safe Passages is a nonprofit based in Oakland, California. It works to interrupt cycles of poverty for children, youth and families in the Bay Area. It offers school-based programs, afterschool enrichment, family engagement and social supports, along with early childhood and workforce development services.",
+      "website": "https://safepassages.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Safe Passages - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/204535835"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Safe Passages",
+        "url": "https://safepassages.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Programs & Initiatives - Safe Passages",
+        "url": "https://safepassages.org/initiatives/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003729",
+    "notes": "ProPublica lists Safe Passages, an Oakland 501(c)(3) with EIN 20-4535835; its own site confirms the Oakland address and contact details, and states it runs school-based, afterschool enrichment and family-support programs at schools including Oakland USD, which fits OUSD's after-school and student-support contracts. The summary is neutral and supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

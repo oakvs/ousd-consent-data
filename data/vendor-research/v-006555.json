@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bayalarm.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bayalarm.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bayalarm.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006555",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: bayalarm.com is operated by Bay Alarm and describes the company as Bay Alarm Company's business",
+      "Located in Concord, CA, matching the agenda text: the company's locations page lists a Concord, CA office (5130 Commercial Circle)",
+      "Services match OUSD's contracts for monitoring and response and patrol: the site lists 24/7 alarm monitoring and on-site security agents",
+      "Website says it provides security solutions for K-12 schools and colleges"
+    ],
+    "key": "v-006555",
+    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) was checked; legal name and registry IDs left null. The Concord, CA address on the locations page is a branch office described as East Counties headquarters, so it was not entered as company headquarters or mailing address. 1-800-610-1000 is the main sales line; 1-800-470-1000 is customer support.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-800-610-1000",
+      "samUei": null,
+      "summary": "Bay Alarm is a security company that provides burglar alarms, fire alarms, video security, access control, and 24/7 monitoring for businesses and homes. It also offers on-site security agents. The company was founded in Oakland in 1946 and serves customers in California, Arizona, and Washington.",
+      "website": "https://www.bayalarm.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Bay Alarm home page",
+        "url": "https://www.bayalarm.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Bay Alarm",
+        "url": "https://www.bayalarm.com/about"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Bay Alarm contact page",
+        "url": "https://www.bayalarm.com/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006555",
+    "notes": "Bay Alarm Company (bayalarm.com) has a Concord, CA branch at 5130 Commercial Circle and offers alarm monitoring and on-site security agent/response services, matching OUSD's monitoring and response-and-patrol agreements. The summary (services, 1946 Oakland founding, CA/AZ/WA), website and sales phone 1-800-610-1000 are supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

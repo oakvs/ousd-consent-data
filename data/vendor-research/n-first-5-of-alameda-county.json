@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.first5alameda.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.first5alameda.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-first-5-of-alameda-county",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the agenda's 'First 5 of Alameda County' corresponds to First 5 Alameda County (first5alameda.org), the county's First 5 early childhood organization",
+      "Located in Alameda, CA (1115 Atlantic Ave), matching the agenda's 'Alameda, CA'",
+      "Its website has a Measure C section (5-Year Plan, Community Advisory Council), matching the agenda contract title 'Measure C - First 5 Early Care & Education Emergency Grant' and the funding source 'First Five of Alameda County'"
+    ],
+    "key": "n-first-5-of-alameda-county",
+    "notes": "Legal status was not confirmed on a cited page: the legal name 'Alameda County Children and Families Commission' (a county commission under California's First 5 program) was reported by the Contact page fetch but did not verify as exact text, so legalName and orgType are left null. No general email is published on the pages checked. Registry lookups (ProPublica, SAM.gov) were not available: web search budget exhausted and ProPublica returned HTTP 429.",
+    "profile": {
+      "address": "1115 Atlantic Ave, Alameda, CA 94501",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "510.227.6900",
+      "samUei": null,
+      "summary": "First 5 Alameda County invests in early childhood systems across Alameda County. It funds community-based organizations, partners with parents and agencies, runs programs such as family resource navigation and child care access, and advocates for policies that support children from birth to age 5 and their families.",
+      "website": "https://www.first5alameda.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - First 5 Alameda County",
+        "url": "https://www.first5alameda.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - First 5 Alameda County",
+        "url": "https://www.first5alameda.org/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-first-5-of-alameda-county",
+    "notes": "The cited About and Contact pages show First 5 Alameda County at 1115 Atlantic Ave, Alameda, CA with phone 510.227.6900, matching the agenda name, Alameda location and the Measure C emergency grant (funding source First Five of Alameda County). The summary is neutral and matches the About page's description of its funding, programs and advocacy; no named-individual contacts or news are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

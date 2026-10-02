@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies?q=every+special+child&jurisdiction_code=us_nj",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.everyspecialchild.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.everyspecialchild.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-every-special-child",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OpenCorporates lists a single New Jersey domestic LLC named 'Every Special Child LLC' located in Metuchen, NJ, matching the agenda's 'Every Special Child, Metuchen, NJ'",
+      "everyspecialchild.com lists its global headquarters at 288 Durham Avenue, Metuchen, NJ 08840, matching the agenda location",
+      "Website describes connecting schools with special education and related professionals, matching OUSD's 'Special education' contract purpose"
+    ],
+    "key": "n-every-special-child",
+    "notes": "General contact email on the website is obfuscated, so it was left null. NJ entity number 0450726418 is listed on OpenCorporates but is not a California entity number, so it was not entered. A second, regional office exists in West Covina, CA.",
+    "profile": {
+      "address": "288 Durham Avenue, Metuchen, NJ 08840",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Metuchen, NJ",
+      "legalName": "Every Special Child LLC",
+      "orgType": "company",
+      "phone": "(800) 671-2654",
+      "samUei": null,
+      "summary": "Every Special Child is a company that connects schools with professionals in the field of education. It offers contract and permanent job placements in public, private and charter schools across the United States, for students from birth to age 21.",
+      "website": "https://www.everyspecialchild.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "OpenCorporates search: Every Special Child (New Jersey)",
+        "url": "https://opencorporates.com/companies?q=every+special+child&jurisdiction_code=us_nj"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Every Special Child - Contact",
+        "url": "https://www.everyspecialchild.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Every Special Child - About",
+        "url": "https://www.everyspecialchild.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-every-special-child",
+    "notes": "The company's Metuchen, NJ headquarters (288 Durham Avenue), its special-education staffing focus, and the single NJ LLC registration all match the agenda's Metuchen, NJ location and the special education master contract. Summary, phone, address, website and legal name are supported by the cited pages; summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

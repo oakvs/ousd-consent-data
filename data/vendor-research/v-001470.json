@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.earthteam.net/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.earthteam.net/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001470",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Organization is based in Richmond, CA, matching the 'Richmond, CA' location in the agenda text (earthteam.net contact page)",
+      "Its About page lists Skyline High School as one of its partner schools, matching the OUSD contracts titled 'Earth Team - Skyline High School'",
+      "Its programs are environmental science and sustainability work for high school students, matching OUSD's 'Classroom & academic programs' and Green California Partnership Academy funding"
+    ],
+    "key": "v-001470",
+    "notes": "Identity confirmed from the organization's own website only. Registry lookups (ProPublica, CA SOS, SAM.gov) were not completed because the web search budget was exhausted and ProPublica returned HTTP 429 / no matching result, so EIN, entity number and UEI are null and the legal name is not given. The site states 'EarthTeam is a Registered 501(c)3'.",
+    "profile": {
+      "address": "Building 155, 1301 South 46th Street, Richmond, CA 94804",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@earthteam.net",
+      "headquarters": "Richmond, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": "(844) 704-4030",
+      "samUei": null,
+      "summary": "EarthTeam is a nonprofit that runs environmental science programs for urban youth in the San Francisco Bay Area. High school students take part in paid internships and action projects on topics such as watersheds, air quality and litter reduction. It works with several partner high schools, including Skyline High School.",
+      "website": "https://www.earthteam.net"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Contact us – Earthteam",
+        "url": "https://www.earthteam.net/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About – Earthteam",
+        "url": "https://www.earthteam.net/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001470",
+    "notes": "EarthTeam is a Richmond, CA 501(c)(3) environmental youth nonprofit that lists Skyline High School as a partner school, matching the agenda's location and the Skyline-specific contracts. Contact fields and nonprofit status match the cited contact page; the summary is neutral, and the paid-internship claim is on the site homepage though not on the cited About page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

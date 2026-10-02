@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.youthbeat.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.youthbeat.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/992013083",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009572",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Youthbeat', Oakland, CA, EIN 99-2013083, 501(c)(3) (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website says it runs free digital media training for Oakland youth, matching OUSD's after-school and classroom program contracts",
+      "Website describes an institutional partnership with Oakland Unified School District and programs at MetWest High School, which is also named in the OUSD agenda titles"
+    ],
+    "key": "v-009572",
+    "notes": "EIN is newer (tax exemption issued 2024) while the organization states it was founded in 2009, so it may have operated earlier under another structure. California Secretary of State number and SAM UEI not checked.",
+    "profile": {
+      "address": "PO Box 30071, Oakland, CA 94604",
+      "caEntityNumber": null,
+      "ein": "99-2013083",
+      "email": "youthbeatmedia@gmail.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Youthbeat",
+      "orgType": "nonprofit",
+      "phone": "510-922-0060",
+      "samUei": null,
+      "summary": "YouthBeat is an Oakland nonprofit that provides free digital media training to local youth. Students learn video and media production and can work as paid interns. It runs classes and programs at several Oakland public school sites.",
+      "website": "https://www.youthbeat.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "YouthBeat - About",
+        "url": "https://www.youthbeat.org/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "YouthBeat",
+        "url": "https://www.youthbeat.org"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Youthbeat - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/992013083"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009572",
+    "notes": "YouthBeat is an Oakland media-training nonprofit whose website names MetWest High School and other OUSD sites as program partners, which fits the after-school and classroom contracts. The summary, contact details, EIN and 501(c)(3) status are supported by the youthbeat.org pages and ProPublica; the 2024 ruling year versus 2009 founding is a minor caveat (earlier Media Enterprise Alliance entity) and does not change identity.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473798868",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedlearning.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedlearning.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-linked-learning-alliance-lla",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Linked Learning Alliance' (ProPublica Nonprofit Explorer, EIN 47-3798868), located in San Francisco, CA, matching the agenda text",
+      "Organization website describes a Linked Learning education approach supporting districts and school networks, matching OUSD's 'Classroom & academic programs' and Linked Learning Secondary School Redesign contract",
+      "Organization website mentions an Oakland Health Pathways Project serving Oakland youth"
+    ],
+    "key": "n-linked-learning-alliance-lla",
+    "notes": "No main phone number found on the contact page. Website does not name Oakland Unified directly but mentions an Oakland Health Pathways Project.",
+    "profile": {
+      "address": "500 Washington St., 8th Floor, San Francisco, CA 94111",
+      "caEntityNumber": null,
+      "ein": "47-3798868",
+      "email": "info@linkedlearning.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Linked Learning Alliance",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in San Francisco that promotes Linked Learning, an approach to education that combines college-preparatory academics with career technical education, work-based learning and student supports. It supports school districts and a network of schools that use this approach.",
+      "website": "https://www.linkedlearning.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Linked Learning Alliance - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473798868"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "website"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.linkedlearning.org/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About",
+        "url": "https://www.linkedlearning.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-linked-learning-alliance-lla",
+    "notes": "ProPublica confirms the 501(c)(3) Linked Learning Alliance (EIN 47-3798868) in San Francisco, matching the agenda's name and city; its contact page confirms the email, address and website, and its About page supports the neutral summary and an Oakland-area project that fits the Linked Learning redesign MOU.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

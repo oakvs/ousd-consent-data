@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/810332120",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mctinc.org/about-mct/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mctinc.org/about-mct/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009455",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Missoula Children's Theatre (the agenda's 'Missoula Children's Theater'); its website says it operates as MCT Inc., a 501(c)(3) nonprofit",
+      "Located in Missoula, MT, matching the agenda text",
+      "ProPublica lists MCT Inc, Missoula, MT, EIN 81-0332120, 501(c)(3)",
+      "Website describes theatre education programs delivered by touring teams to schools and communities, matching OUSD's 'Classroom & academic programs' / arts-funded school residencies"
+    ],
+    "key": "v-009455",
+    "notes": "General email on the site is hidden by Cloudflare email obfuscation, so it was left null. Registry name is 'MCT Inc'; the organization trades as Missoula Children's Theatre. No California or SAM.gov registration checked (Montana-based).",
+    "profile": {
+      "address": "200 North Adams Street, Missoula, MT 59802",
+      "caEntityNumber": null,
+      "ein": "81-0332120",
+      "email": null,
+      "headquarters": "Missoula, MT",
+      "legalName": "MCT Inc",
+      "orgType": "nonprofit",
+      "phone": "(406) 728-7529",
+      "samUei": null,
+      "summary": "Missoula Children's Theatre (MCT Inc.) is a nonprofit arts organization based in Missoula, Montana. It provides theatre education and live productions for children and adults. Its Red Truck Tour sends touring teams to communities around the world, and it also runs local youth programs and a community theatre series in Missoula.",
+      "website": "https://www.mctinc.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "MCT Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/810332120"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About MCT - Missoula Children's Theatre",
+        "url": "https://www.mctinc.org/about-mct/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Missoula Children's Theatre",
+        "url": "https://www.mctinc.org/about-mct/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009455",
+    "notes": "Missoula Children's Theatre is MCT Inc., a 501(c)(3) in Missoula, MT (ProPublica EIN 81-0332120), matching the agenda name and location, and its touring school theatre residencies fit OUSD's arts-funded classroom program contract. Summary, phone, address and EIN are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.frontlinecatalysts.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.frontlinecatalysts.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/863102192",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007979",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Frontline Catalysts' based in Oakland, CA (ProPublica Nonprofit Explorer, EIN 86-3102192)",
+      "The organization's own website lists the same EIN (86-3102192) and an Oakland, CA address, matching the agenda location 'Oakland, CA'",
+      "Website describes youth leadership and climate education programs, consistent with a no-cost services agreement for classroom and academic programs at a school (United for Success Academy, East Oakland); the site does not name OUSD directly"
+    ],
+    "key": "v-007979",
+    "notes": "The address given is the mailing address; the site also lists a physical address at 2624 Fruitvale Ave, Oakland, CA 94601. Website does not name OUSD or United for Success Academy, so the link to the agenda rests on exact distinctive name, Oakland location, and matching youth/education work. WebSearch budget was exhausted, so no independent third-party page naming OUSD was found. CA Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "4100 Redwood Road #20A-417, Oakland, CA 94619",
+      "caEntityNumber": null,
+      "ein": "86-3102192",
+      "email": "info@frontlinecatalysts.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Frontline Catalysts",
+      "orgType": "nonprofit",
+      "phone": "+1 (510) 566-9026",
+      "samUei": null,
+      "summary": "Frontline Catalysts is a youth-focused climate justice organization based in East Oakland. It runs youth leadership programs that combine cultural healing, ethnic studies and hands-on climate action to help young people from underserved communities become environmental leaders.",
+      "website": "https://www.frontlinecatalysts.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein",
+          "legalName"
+        ],
+        "title": "Frontline Catalysts",
+        "url": "https://www.frontlinecatalysts.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Frontline Catalysts - Contact",
+        "url": "https://www.frontlinecatalysts.org/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Frontline Catalysts - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/863102192"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007979",
+    "notes": "Exact distinctive name, Oakland location and EIN 86-3102192 confirmed on the org's site and ProPublica (501(c)(3)); youth climate/ethnic studies education fits a no-cost classroom programs agreement, though no source names OUSD directly. Contact fields are generic business details; summary is neutral and supported by the site.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

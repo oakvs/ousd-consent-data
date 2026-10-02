@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/541779583",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nccer.org/who-we-are/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nccer.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-national-center-for-construction-education-and-research-nccer",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'National Center For Construction Education Research' (ProPublica Nonprofit Explorer, EIN 54-1779583)",
+      "Located in Alachua, FL, matching the agenda text",
+      "NCCER's own site describes construction career and technical education curricula and credentials, matching an OUSD Adult and Career Education Department memorandum of understanding for classroom and academic programs"
+    ],
+    "key": "n-national-center-for-construction-education-and-research-nccer",
+    "notes": "Agenda names the vendor 'National Center for Construction Education & Research, Ltd. dba NCCER'; the IRS/ProPublica legal name omits the word 'and'. California entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "13614 Progress Blvd., Alachua, FL 32615",
+      "caEntityNumber": null,
+      "ein": "54-1779583",
+      "email": "support@nccer.org",
+      "headquarters": "Alachua, FL",
+      "legalName": "National Center For Construction Education Research",
+      "orgType": "nonprofit",
+      "phone": "(386) 518-6500",
+      "samUei": null,
+      "summary": "NCCER is an independent nonprofit education foundation based in Florida. It develops construction training curricula for more than 40 craft areas and offers industry-recognized credentials and certifications through accredited training organizations, including career and technical education programs.",
+      "website": "https://www.nccer.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National Center For Construction Education Research - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/541779583"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Who We Are - NCCER",
+        "url": "https://www.nccer.org/who-we-are/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - NCCER",
+        "url": "https://www.nccer.org/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-national-center-for-construction-education-and-research-nccer",
+    "notes": "NCCER is a 501(c)(3) construction education nonprofit in Alachua, FL (ProPublica EIN 54-1779583), matching the agenda name, location and a CTE-related MOU. All profile fields are shown on the cited ProPublica, who-we-are and contact pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

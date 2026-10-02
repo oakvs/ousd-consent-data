@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://verdedesigninc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies?q=verde+design+inc&jurisdiction_code=us_ca",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004498",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name and city match: California registry listing (via OpenCorporates) shows an active 'VERDE DESIGN, INC.' at Santa Clara, CA, matching the agenda's 'Verde Design, Inc.' in Santa Clara, CA",
+      "Company website lists its main office in Santa Clara and describes landscape architecture and civil engineering for recreational and athletic facilities and K-12 schools, matching OUSD's turf field replacement engineering and design contracts"
+    ],
+    "key": "v-004498",
+    "notes": "Website shows no street address or general email and does not mention OUSD or Oakland. Registry details come from an OpenCorporates search listing (secondary source for the California Secretary of State record). Web search was unavailable (session budget exhausted), so the site was found by direct URL guess and checked for a matching name, city and services. California entity number 2947281 was seen in the OpenCorporates listing but could not be verified by the automated check, so it was left out.",
+    "profile": {
+      "address": "2455 THE ALAMEDA STE. 200, SANTA CLARA, CA, 95050",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Santa Clara, CA",
+      "legalName": "VERDE DESIGN, INC.",
+      "orgType": "company",
+      "phone": "408.985.7200",
+      "samUei": null,
+      "summary": "Verde Design is a landscape architecture and civil engineering firm. It designs landscape, recreational and athletic facilities, including parks, sports fields, K-12 schools, colleges and commercial sites. Its services include site assessments, master planning, construction documents and construction administration.",
+      "website": "http://verdedesigninc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Verde Design - Top Landscape Architecture Firm | Civil Engineering & Outdoor Design Experts",
+        "url": "http://verdedesigninc.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "OpenCorporates search: Verde Design Inc (California)",
+        "url": "https://opencorporates.com/companies?q=verde+design+inc&jurisdiction_code=us_ca"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004498",
+    "notes": "Verde Design, Inc. in Santa Clara, CA (active CA stock corporation per OpenCorporates, 2455 The Alameda Ste 200) is a landscape architecture and civil engineering firm for athletic facilities and K-12 schools, which fits OUSD's turf field engineering and design contracts. Summary, website, phone and address are supported by the cited site and registry listing; the site does not mention OUSD, but name, city and services all match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

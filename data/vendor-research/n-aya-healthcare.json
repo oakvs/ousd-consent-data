@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ayahealthcare.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ayahealthcare.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ayaeducation.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/san-diego/aya-healthcare-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-aya-healthcare",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Aya Healthcare, Inc. is headquartered in San Diego, CA, matching the agenda text location (Aya Healthcare contact page)",
+      "Aya Healthcare's education division, Aya Education, supplies special education teachers and school therapists to schools, matching OUSD's Special Education Department contract (Aya Education About page)",
+      "California Secretary of State filing data lists Aya Healthcare, Inc. as an active stock corporation in San Diego, CA"
+    ],
+    "key": "n-aya-healthcare",
+    "notes": "California entity number comes from a third-party mirror of Secretary of State data (bizprofile.net), not bizfileonline directly. Related entities exist (Aya Healthcare Services, Inc., no. 3266430); the agenda name matches Aya Healthcare, Inc. Email omitted because the contact page's addresses are obfuscated and are employment-verification or media inboxes.",
+    "profile": {
+      "address": "5930 Cornerstone Court West, Suite 300, San Diego, CA 92121",
+      "caEntityNumber": "3230713",
+      "ein": null,
+      "email": null,
+      "headquarters": "San Diego, CA",
+      "legalName": "Aya Healthcare, Inc.",
+      "orgType": "company",
+      "phone": "866-687-7390",
+      "samUei": null,
+      "summary": "Aya Healthcare is a staffing company that places travel nurses, allied health workers and other professionals in healthcare jobs across the United States. Its education division, Aya Education, connects schools with special education teachers, speech-language pathologists, therapists, school nurses and psychologists.",
+      "website": "https://www.ayahealthcare.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Aya Healthcare Address & Contact Info",
+        "url": "https://www.ayahealthcare.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Aya Healthcare",
+        "url": "https://www.ayahealthcare.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Aya Education",
+        "url": "https://www.ayaeducation.com/about/"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Aya Healthcare, Inc. San Diego, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/san-diego/aya-healthcare-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-aya-healthcare",
+    "notes": "Agenda name and San Diego location match Aya Healthcare, Inc. (HQ 5930 Cornerstone Court West, San Diego; CA stock corporation no. 3230713, active), and its Aya Education division supplies special education and related-service staff, fitting a Special Education nonpublic agency contract. Legal name, phone, address, website, entity number and neutral summary are all supported by the cited pages; I could not independently find an OUSD-specific page tying the contract to this entity, so identity rests on name, city and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

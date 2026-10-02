@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.genesysworks.org/bay-area",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-genesys-works-bay-area",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The Bay Area page on genesysworks.org is titled 'Bay Area | Genesys Works' and its footer gives an Oakland, CA address, matching the agenda's 'Genesys Works Bay Area, Oakland, CA'",
+      "The page describes training and paid internships for high school students, matching OUSD's 'Student Internship Program' agreement through the High School Linked Learning Office",
+      "The national Genesys Works site lists 'Bay Area' among its local sites"
+    ],
+    "key": "n-genesys-works-bay-area",
+    "notes": "Registry IDs and legal name left null: ProPublica returned EIN 46-1568087 for 'Genesys Works' in Keller, TX, which could not be tied to the Bay Area site (no Oakland address, no California entity record found). Web search budget was exhausted so CA Secretary of State and SAM.gov were not checked. Organization type not confirmed from a cited page.",
+    "profile": {
+      "address": "1721 Broadway Ste. 201 Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "gwba@ba.genesysworks.org",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "415-442-0280",
+      "samUei": null,
+      "summary": "Genesys Works Bay Area is the Bay Area site of Genesys Works, a program that prepares high school students from underserved communities for careers. Students complete about eight weeks of business and technology skills training, then hold a paid internship at a partner company. They also receive college and career coaching, and alumni support after graduation.",
+      "website": "https://www.genesysworks.org/bay-area"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Bay Area | Genesys Works",
+        "url": "https://www.genesysworks.org/bay-area"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-genesys-works-bay-area",
+    "notes": "The cited Genesys Works Bay Area page is the Oakland local site of the national nonprofit and describes paid student internships, matching OUSD's No Cost Services Agreement for the ECCCO Student Internship Program. The summary, phone, email, address and headquarters all match the page; the email is a generic business address and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

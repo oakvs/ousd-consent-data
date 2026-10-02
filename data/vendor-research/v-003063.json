@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/262427526",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://newteachercenter.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://newteachercenter.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003063",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'New Teacher Center', EIN 26-2427526, located in Sacramento, CA (ProPublica Nonprofit Explorer)",
+      "Headquartered in Sacramento, CA, matching the agenda text 'Sacramento, CA' (organization's own website and contact page)",
+      "Website describes teacher coaching, mentoring and professional learning, matching OUSD's 'Classroom & academic programs' contracts with the Academics and Instruction Department"
+    ],
+    "key": "v-003063",
+    "notes": "General email not captured (addresses on the contact page are obfuscated); left null. CA Secretary of State number and SAM UEI not checked. No page found that explicitly mentions OUSD; identity rests on name, Sacramento location and education-services match.",
+    "profile": {
+      "address": "2108 N St. # 7103, Sacramento, CA 95816",
+      "caEntityNumber": null,
+      "ein": "26-2427526",
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "New Teacher Center",
+      "orgType": "nonprofit",
+      "phone": "(831) 600-2200",
+      "samUei": null,
+      "summary": "New Teacher Center (NTC) is a nonprofit that provides coaching, mentoring and professional learning for teachers and school leaders. It partners with school systems, state education departments and charter schools across the United States. Its stated aim is to help teachers stay in the profession, grow and lead.",
+      "website": "https://newteachercenter.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "New Teacher Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/262427526"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us - New Teacher Center",
+        "url": "https://newteachercenter.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact - New Teacher Center",
+        "url": "https://newteachercenter.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003063",
+    "notes": "ProPublica, the About page and the Contact page all confirm New Teacher Center as a Sacramento 501(c)(3) (EIN 26-2427526) offering teacher induction, coaching and professional learning, which fits the Academics and Instruction agreements and the Sacramento, CA agenda location. Summary is neutral and supported; phone and address match the contact page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

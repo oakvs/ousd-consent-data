@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://zff.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.zff.org/2016/09/oakland-international-high-school-family-resource-center/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-zellerbach-family-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official site zff.org is titled 'Zellerbach Family Foundation', matching the name in the agenda text",
+      "Foundation works in San Francisco, Contra Costa and Alameda counties (includes Oakland) on 'Safety & Belonging' work, matching OUSD's 'Student health, support & family services' category",
+      "The foundation's own site has a page about Oakland International High School's Family Resource Center, the school named in the OUSD grant title"
+    ],
+    "key": "n-zellerbach-family-foundation",
+    "notes": "Registry IDs not found: ProPublica returned HTTP 429 and the web search budget was exhausted. Identity rests on the foundation's own site; no registry cross-check was possible.",
+    "profile": {
+      "address": "455 Market Street, Suite 2200, San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Zellerbach Family Foundation",
+      "orgType": "nonprofit",
+      "phone": "(415) 421-2629",
+      "samUei": null,
+      "summary": "The Zellerbach Family Foundation is a Bay Area foundation that invests in work to strengthen families and communities. It has operated for over 65 years. Its grantmaking is organized around Safety & Belonging and Arts & Culture, and it serves San Francisco, Contra Costa and Alameda counties.",
+      "website": "https://zff.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Zellerbach Family Foundation",
+        "url": "https://zff.org/"
+      },
+      {
+        "supports": [],
+        "title": "Oakland International High School Family Resource Center",
+        "url": "https://www.zff.org/2016/09/oakland-international-high-school-family-resource-center/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-zellerbach-family-foundation",
+    "notes": "The OUSD item is a grant application to the Zellerbach Family Foundation for an Oakland International High School project, and zff.org (San Francisco, serving Alameda County) plus its own page on the school's Family Resource Center match that funder. Name, address, phone, focus areas, counties and 65-year history are confirmed on zff.org, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

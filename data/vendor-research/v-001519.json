@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.edmentum.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edmentum.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Edmentum",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001519",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Edmentum's own contact page lists its Global Headquarters in Bloomington, MN, matching the agenda location (Bloomington, MN)",
+      "Edmentum, Inc. (copyright notice on edmentum.com) sells K-12 courseware and learning products, matching OUSD's 'Classroom & academic programs' contracts",
+      "Edmentum's site lists Apex Learning among its products, matching the agenda title 'Edmentum (Apex), Inc.'",
+      "Wikipedia independently describes Edmentum as an online learning provider headquartered in Bloomington, Minnesota"
+    ],
+    "key": "v-001519",
+    "notes": "Search tool budget was exhausted, so registry searches (SAM.gov, CA SOS) were not done; EIN, CA entity number and UEI left null. OpenCorporates shows Minnesota foreign-corporation branch records for Edmentum Inc. at a St. Paul address (registered-agent style), distinct from the Bloomington HQ used here.",
+    "profile": {
+      "address": "2131 Lindau Lane, Suite 800, Bloomington, MN 55425, United States",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@edmentum.com",
+      "headquarters": "Bloomington, MN",
+      "legalName": "Edmentum, Inc.",
+      "orgType": "company",
+      "phone": "1-800-447-5286",
+      "samUei": null,
+      "summary": "Edmentum is a private company that makes online learning products for K-12 schools. Its offerings include courseware, tutoring, test preparation and career readiness programs. It says it serves schools and districts in all 50 U.S. states and over 100 countries.",
+      "website": "https://www.edmentum.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "website"
+        ],
+        "title": "About Edmentum",
+        "url": "https://www.edmentum.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.edmentum.com/contact"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Edmentum - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Edmentum"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001519",
+    "notes": "Edmentum, Inc. is headquartered in Bloomington, MN (matching the agenda), sells K-12 courseware including Apex Courses (matching 'Edmentum (Apex), Inc.'), and its about and contact pages support the summary, website, phone, general email and address; Wikipedia supports the private-company type and headquarters.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

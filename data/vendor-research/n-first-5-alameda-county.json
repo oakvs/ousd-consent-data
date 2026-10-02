@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.first5alameda.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.first5alameda.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.first5alameda.org/kindergarten-readiness",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-first-5-alameda-county",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'First 5 Alameda County' (organization's own website)",
+      "Headquartered at 1115 Atlantic Ave in Alameda, CA, matching the 'Alameda, CA' location in the agenda text",
+      "The organization's Kindergarten Readiness page describes the Early Development Instrument (EDI), matching the EDI named in OUSD's contract title",
+      "Its focus on early childhood matches OUSD's Early Childhood Education Department as the funding source"
+    ],
+    "key": "n-first-5-alameda-county",
+    "notes": "Registry lookups (ProPublica, CA SOS, SAM.gov) were not completed: the web search budget was exhausted and ProPublica returned HTTP 429. orgType left null because the cited pages do not state the legal form; the organization is believed to be a county children and families commission (public agency), but this was not confirmed. No general email address is published on the pages checked. The Kindergarten Readiness page is cited only for identity (EDI match); it does not mention OUSD by name.",
+    "profile": {
+      "address": "1115 Atlantic Ave, Alameda, CA 94501",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": "First 5 Alameda County",
+      "orgType": null,
+      "phone": "510.227.6900",
+      "samUei": null,
+      "summary": "First 5 Alameda County invests in early childhood systems in Alameda County. It funds community organizations that serve young children and families, partners with parents, providers and public agencies, and supports programs such as family resource navigation, access to affordable child care and provider training. It also advocates for public policies that support young children.",
+      "website": "https://www.first5alameda.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "About Us - First 5 Alameda County",
+        "url": "https://www.first5alameda.org/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "First 5 Alameda County | Every Child Counts",
+        "url": "https://www.first5alameda.org/contact-us"
+      },
+      {
+        "supports": [],
+        "title": "Kindergarten Readiness | First 5 Alameda County",
+        "url": "https://www.first5alameda.org/kindergarten-readiness"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-first-5-alameda-county",
+    "notes": "First 5 Alameda County (1115 Atlantic Ave, Alameda) matches the agenda name and city, and its Kindergarten Readiness page describes the Early Development Instrument named in the OUSD contract title; the summary and contact fields are supported by the about and contact pages. legalName is only the public brand name (the formal legal entity name is not shown on the cited pages), so it is listed as unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}

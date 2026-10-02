@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://nitaac.nih.gov/gwacs/cio-cs/contract-holder/cdw-government-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://calsave.org/2016/02/12/cdwg-technology-catalog/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-006148",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "CalSave (Monterey County Office of Education) page says the county contract was awarded to CDW-G of Vernon Hills, Illinois, matching the OUSD item to piggyback on a CalSave/MCOE contract with CDW Government, LLC",
+      "NITAAC federal contract-holder page lists the legal name 'CDW GOVERNMENT LLC' at 230 N Milwaukee Avenue, Vernon Hills, IL 60061, matching the agenda location 'Vernon Hills, IL'",
+      "CalSave page gives the mailing address 'CDW-G, 230 N. Milwaukee Avenue, Vernon Hills', the same address as the NITAAC record; CDW-G sells a technology catalog, matching OUSD's 'Technology' category"
+    ],
+    "key": "v-006148",
+    "notes": "Website, main phone and general email not confirmed: cdw.com/cdwg.com pages timed out when fetched, so those fields are null. Subsidiary of CDW Corporation per search results, not cited.",
+    "profile": {
+      "address": "230 N Milwaukee Avenue, Vernon Hills, IL 60061",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Vernon Hills, IL",
+      "legalName": "CDW GOVERNMENT LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": "PHZDZ8SJ5CM1",
+      "summary": "CDW Government LLC (CDW-G) is a company that sells information technology products and services, such as computer hardware, software and related services, to government and education customers. It is based in Vernon Hills, Illinois.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "samUei",
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "CDW GOVERNMENT LLC - NITAAC CIO-CS contract holder",
+        "url": "https://nitaac.nih.gov/gwacs/cio-cs/contract-holder/cdw-government-llc"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "CDWG Technology Catalog - CalSave",
+        "url": "https://calsave.org/2016/02/12/cdwg-technology-catalog/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006148",
+    "notes": "The NITAAC record gives legal name CDW GOVERNMENT LLC at 230 N Milwaukee Ave, Vernon Hills, IL 60061 with UEI PHZDZ8SJ5CM1. The CalSave page confirms the MCOE-awarded piggybackable technology catalog contract to CDW-G at the same address, matching OUSD's agenda item. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

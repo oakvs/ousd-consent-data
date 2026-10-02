@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.engeo.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.engeo.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.engeo.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001582",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Headquarters on engeo.com/contact is San Ramon, CA, matching the agenda text 'San Ramon, CA'",
+      "Website lists geotechnical, environmental and construction materials testing services, matching OUSD's 'School buildings & construction' engineering and geotechnical contracts",
+      "Website says its project experience includes public facilities such as schools"
+    ],
+    "key": "v-001582",
+    "notes": "Registry lookups (SOS, SAM.gov) not done; web search budget was exhausted. Legal name taken from OUSD agenda wording 'ENGEO Incorporated'; validator will confirm it appears on a cited page.",
+    "profile": {
+      "address": "2633 Camino Ramon, Suite 250, San Ramon, CA 94583",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@engeo.com",
+      "headquarters": "San Ramon, CA",
+      "legalName": "ENGEO Incorporated",
+      "orgType": "company",
+      "phone": "(925) 866-9000",
+      "samUei": null,
+      "summary": "ENGEO is an engineering and environmental consulting firm. Its staff include geotechnical engineers, geologists, environmental scientists and laboratory testing specialists. It offers services such as geotechnical engineering, environmental engineering, materials testing and inspection, and construction management. It has offices in the United States, New Zealand and Australia.",
+      "website": "https://www.engeo.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact | ENGEO",
+        "url": "https://www.engeo.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "ENGEO",
+        "url": "https://www.engeo.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About | ENGEO",
+        "url": "https://www.engeo.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001582",
+    "notes": "ENGEO Incorporated is headquartered in San Ramon, CA (matching the agenda), offers geotechnical and environmental engineering, and cites school projects, which fits OUSD's geotechnical and construction agreements. Contact fields and legal name match engeo.com/contact; the summary is neutral and supported by the homepage (laboratory testing and construction quality assurance staff are paraphrased as materials testing and inspection).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cccco.edu/About-Us/Contact-Us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cccco.edu/About-Us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cccco.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cccco.edu/About-Us/Chancellors-Office/Divisions/Workforce-and-Economic-Development/Strong-Workforce-Program",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_Community_Colleges_System",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-community-colleges-chancellors-office",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly the statewide agency 'California Community Colleges Chancellor's Office' on its official site cccco.edu; the name is unique, so no similarly named organizations in other states are a concern",
+      "The Chancellor's Office administers the Strong Workforce Program (career technical education funding, including coordination with public school CTE programs), matching the OUSD agenda item 'K-12 Strong Workforce Program Data Sharing Memorandum of Understanding'",
+      "Wikipedia and the cccco.edu About page both describe the Chancellor's Office in Sacramento as the administrative hub of the California Community Colleges system"
+    ],
+    "key": "n-california-community-colleges-chancellors-office",
+    "notes": "State agency, so no EIN, California Secretary of State entity number or SAM.gov UEI was sought. Web search budget was exhausted, so pages were fetched directly. The OUSD agenda gives no location. The cde.ca.gov K-12 Strong Workforce Program page blocked automated fetching and was not used.",
+    "profile": {
+      "address": "1102 Q Street, 6th Floor, Sacramento, CA 95811",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@cccco.edu",
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Community Colleges Chancellor's Office",
+      "orgType": "public_agency",
+      "phone": "916-445-8752",
+      "samUei": null,
+      "summary": "The administrative office for the California Community Colleges, the largest system of higher education in the nation, with 116 colleges. It provides leadership and technical assistance to the colleges, helps allocate state funding, and runs system-wide programs such as the Strong Workforce Program for career technical education.",
+      "website": "https://www.cccco.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "California Community Colleges Chancellor's Office - Contact Us",
+        "url": "https://www.cccco.edu/About-Us/Contact-Us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "California Community Colleges Chancellor's Office - About Us",
+        "url": "https://www.cccco.edu/About-Us"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "California Community Colleges Chancellor's Office",
+        "url": "https://www.cccco.edu/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Strong Workforce Program",
+        "url": "https://www.cccco.edu/About-Us/Chancellors-Office/Divisions/Workforce-and-Economic-Development/Strong-Workforce-Program"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "California Community Colleges System",
+        "url": "https://en.wikipedia.org/wiki/California_Community_Colleges_System"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-california-community-colleges-chancellors-office",
+    "notes": "Identity is sound (the state agency, with contact details confirmed on cccco.edu, and the Strong Workforce Program fits the K-12 data-sharing MOU). However the summary claims it is the largest higher education system in the nation and that the office helps allocate state funding, and none of the cited pages (home, About Us, Chancellor's Office, Strong Workforce, Wikipedia) state either.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

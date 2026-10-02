@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/public-health-department/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-county-of-alameda-public-health-department",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the county's own department page: 'Alameda County Public Health Department' (health.alamedacountyca.gov), the agenda's 'County of Alameda, Public Health Department'",
+      "Alameda County is the county that contains Oakland; the county health site lists school-based programs (school health centers, school-based behavioral health), consistent with an OUSD partnership and data-sharing MOU"
+    ],
+    "key": "n-county-of-alameda-public-health-department",
+    "notes": "Public agency, so no EIN, state entity number or UEI looked up. The page lists a public information office inbox (not a general inbox), so email was left null. Web search budget was exhausted, so only the county's own pages were fetched; the OUSD link rests on the agenda text plus the county's school-based programs.",
+    "profile": {
+      "address": "1000 San Leandro Blvd., Suite 300, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": "Alameda County Public Health Department",
+      "orgType": "public_agency",
+      "phone": "(510) 618-3452",
+      "samUei": null,
+      "summary": "The Alameda County Public Health Department is a county government agency within Alameda County Health. It works with local communities on population-level health and on preventing the root causes of health inequity. Its programs include school-based dental and behavioral health services and immunization requirements for schools and childcare facilities.",
+      "website": "https://health.alamedacountyca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Public Health Department",
+        "url": "https://health.alamedacountyca.gov/department/public-health-department/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "orgType"
+        ],
+        "title": "Alameda County Health",
+        "url": "https://health.alamedacountyca.gov/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-county-of-alameda-public-health-department",
+    "notes": "Identity is sound (the county department named in the agenda; address, phone, parent agency and orgType confirmed on health.alamedacountyca.gov). However, the summary attributes school-based behavioral health to the Public Health Department when the source places it under the separate Behavioral Health Department, and the 'population-level health / root causes of health inequity' wording was not confirmed (the page states a partnership mission only), so the summary is not fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

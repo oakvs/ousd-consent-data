@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sscal.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sscal.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003823",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: School Services of California Inc. (sscal.com), the organization's own website",
+      "Based in Sacramento, CA, matching the agenda text location",
+      "Website describes business, financial, management and advocacy services for California school agencies, consistent with OUSD's 'Governance & board business' services agreements"
+    ],
+    "key": "v-003823",
+    "notes": "Web search budget was exhausted, so only the organization's own About and Contact pages were checked; no registry (CA Secretary of State, SAM.gov) confirmation, so entity numbers are null. No general email shown on site. No page mentions OUSD.",
+    "profile": {
+      "address": "500 Capitol Mall, Suite 1700, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "School Services of California Inc.",
+      "orgType": "company",
+      "phone": "(916) 446-7517",
+      "samUei": null,
+      "summary": "A California company that provides business, financial, management and advocacy services to school districts and other education agencies. Its services include consulting on school operations, executive search, fiscal and management support, and training programs.",
+      "website": "https://www.sscal.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About School Services of California",
+        "url": "https://www.sscal.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact School Services of California",
+        "url": "https://www.sscal.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003823",
+    "notes": "sscal.com About and Contact pages confirm School Services of California Inc., Sacramento, a business/financial/management/advocacy consultancy for California school agencies, matching the agenda name, city and OUSD's services agreements. Summary, phone, address and headquarters are supported and neutral; no personal contact data.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

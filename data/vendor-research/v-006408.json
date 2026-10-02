@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://servioconsulting.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.servioconsulting.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006408",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own site is named 'Servio Consulting', matching the agenda's 'Servio Consulting, LLC' (the pages do not show the 'LLC' suffix)",
+      "Company address is Frankfort, IL 60423, matching the agenda's location 'Frankfort, IL'",
+      "Company provides Salesforce Education Cloud software consulting for schools and colleges, consistent with OUSD's 'Technology' contracts for a Community Schools and Student Services department"
+    ],
+    "key": "v-006408",
+    "notes": "Web search quota was exhausted, so no registry (Illinois SOS, SAM.gov) lookup was possible; only the company's own site was used. Legal name left null because the site never shows 'LLC'. The site does not mention Oakland or OUSD, so identity rests on the name plus the Frankfort, IL match and sector fit. No general email is listed on the pages checked.",
+    "profile": {
+      "address": "14 Hickory Street | Frankfort, IL 60423",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Frankfort, IL",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "855-737-8461",
+      "samUei": null,
+      "summary": "A privately held, woman-owned consulting company based in Frankfort, Illinois. It designs, sets up and manages Salesforce Education Cloud systems, which are software tools for tracking relationships with students, families and alumni. Its clients are educational institutions in North America, including K-12 schools, colleges and universities.",
+      "website": "https://servioconsulting.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "address",
+          "phone"
+        ],
+        "title": "About Servio – Servio Consulting",
+        "url": "https://servioconsulting.com/about/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Servio Consulting – Enabling Lifelong Relationships in Education with Salesforce",
+        "url": "https://www.servioconsulting.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006408",
+    "notes": "The company site shows 'Servio Consulting LLC' at 14 Hickory Street, Frankfort, IL, which matches the agenda's exact name and city; its Salesforce Education Cloud services for K-12 and colleges fit a technology contract with a student-services department. Summary, orgType, phone, address, website and headquarters are all shown on the cited pages and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

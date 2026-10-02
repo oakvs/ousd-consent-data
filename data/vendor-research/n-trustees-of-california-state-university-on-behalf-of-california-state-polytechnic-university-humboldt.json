@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.humboldt.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.humboldt.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Cal_Poly_Humboldt",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-trustees-of-california-state-university-on-behalf-of-california-state-polytechnic-university-humboldt",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'California State Polytechnic University, Humboldt' exactly, which is the legal name shown on humboldt.edu",
+      "Wikipedia and humboldt.edu both describe it as a public university in the California State University (CSU) system, which is governed by the Trustees of the California State University, matching the agenda's 'Trustees of the California State University, on behalf of' wording",
+      "The agreement is an MOU/interagency agreement with the district's Talent/Human Resources department, consistent with a public university teacher-preparation and staffing partnership (the university began as a teachers' college)"
+    ],
+    "key": "n-trustees-of-california-state-university-on-behalf-of-california-state-polytechnic-university-humboldt",
+    "notes": "Web search quota was exhausted, so no registry or OUSD-specific page was checked; identity rests on the exact name match and CSU affiliation. The contracting party is the Trustees of the California State University acting for this campus. No general email found on the pages fetched.",
+    "profile": {
+      "address": "1 Harpst Street, Arcata, CA 95521",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Arcata, CA",
+      "legalName": "California State Polytechnic University, Humboldt",
+      "orgType": "public_agency",
+      "phone": "(707) 826-3011",
+      "samUei": null,
+      "summary": "Cal Poly Humboldt is a public university in Arcata, California, and one of the campuses of the California State University system. It began in 1913 as a teachers' college and now offers 61 undergraduate majors and 13 master's programs.",
+      "website": "https://www.humboldt.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Cal Poly Humboldt",
+        "url": "https://www.humboldt.edu/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "orgType"
+        ],
+        "title": "Cal Poly Humboldt",
+        "url": "https://www.humboldt.edu/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "California State Polytechnic University, Humboldt - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cal_Poly_Humboldt"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-trustees-of-california-state-university-on-behalf-of-california-state-polytechnic-university-humboldt",
+    "notes": "The agenda names the Trustees of the CSU on behalf of Cal Poly Humboldt, and humboldt.edu confirms the legal name, 1913 teachers' college origin, 61 majors/13 master's programs, phone and Arcata address; the HR/Talent MOU fits a university staffing partnership. Wikipedia's program counts differ, but the cited humboldt.edu/about page supports the summary figures.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

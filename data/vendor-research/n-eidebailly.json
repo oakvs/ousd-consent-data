@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.eidebailly.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-eidebailly",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: agenda 'EideBailly' corresponds to the accounting firm Eide Bailly LLP (eidebailly.com)",
+      "Agenda item is an 'Independent Auditor's Report on Compliance', which matches the firm's business as an accounting and advisory firm",
+      "Eide Bailly lists Bay Area offices (Walnut Creek, Menlo Park) near Oakland, CA",
+      "Could not find a public page directly linking Eide Bailly to Oakland Unified (web search budget was exhausted), so the OUSD link rests on name and service match"
+    ],
+    "key": "n-eidebailly",
+    "notes": "Confidence medium, not high: no independent page found tying Eide Bailly to OUSD, and the WebSearch budget ran out so no registry (CA SOS, SAM.gov) lookups were possible. Contact details and registry IDs left null. Headquarters and main phone were not on the pages fetched.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Eide Bailly LLP",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Eide Bailly is a U.S. accounting and advisory firm that serves mid-sized and fast-growing organizations. Its services include tax, client accounting, technology consulting, data analytics, and mergers and acquisitions advice. It has more than 50 offices across the United States and in India.",
+      "website": "https://www.eidebailly.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "About Us | Eide Bailly",
+        "url": "https://www.eidebailly.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

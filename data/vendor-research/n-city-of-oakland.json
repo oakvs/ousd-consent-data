@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandca.gov/departments/human-services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandca.gov/departments/city-administrator",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ofcy.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-city-of-oakland",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda's funding sources (City of Oakland Kids First Initiative, Oakland Fund for Children and Youth, Measure Y) are City of Oakland programs, and the City's Human Services Department page lists the Oakland Fund for Children and Youth (OFCY) among its programs and committees",
+      "OFCY's own site shows it is run from a City of Oakland office at 150 Frank H. Ogawa Plaza, Oakland, with City Council approval of grants, matching OUSD's grant agreements and OFCY grant application with the City of Oakland",
+      "The agenda item types (grant agreements for student wellness and restorative justice) fit a municipal government funding youth services in the same city as the school district"
+    ],
+    "key": "n-city-of-oakland",
+    "notes": "Municipal government, so no EIN, California Secretary of State number or SAM UEI was looked up. No citywide main phone line or general inbox was found; only department-level contacts, which were left out. Web search quota was exhausted, so research used direct page fetches only.",
+    "profile": {
+      "address": "1 Frank H. Ogawa Plaza, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The City of Oakland is the municipal government of Oakland, California. It provides public services such as police and fire protection, parks and recreation, libraries, housing support, permits, streets and waste management. Its Human Services Department runs programs and funds community organizations, including the Oakland Fund for Children and Youth.",
+      "website": "https://www.oaklandca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "City of Oakland Government Website",
+        "url": "https://www.oaklandca.gov/"
+      },
+      {
+        "supports": [
+          "summary",
+          "address"
+        ],
+        "title": "Human Services",
+        "url": "https://www.oaklandca.gov/departments/human-services"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "City Administrator",
+        "url": "https://www.oaklandca.gov/departments/city-administrator"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Fund for Children and Youth",
+        "url": "https://ofcy.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-city-of-oakland",
+    "notes": "The City of Oakland is the municipal government of the same city as OUSD, and the agenda items (grant agreements, OFCY, Kids First, Measure Y) are City programs. The oaklandca.gov pages confirm the summary services, the 1 Frank H. Ogawa Plaza address and the Human Services link to OFCY, though the Human Services page says it does not directly run OFCY and only has a related oversight committee, so that clause is slightly loose.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

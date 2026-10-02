@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/emeryville/moving-forward-education-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.idealist.org/en/business/d9199e9f077b49bfa24e3ef72c2ad6aa-moving-forward-education-emeryville",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-002951",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a California corporation: 'Moving Forward Education, Inc.', entity 3519026, Emeryville, CA (bizprofile.net filing information)",
+      "Located in Emeryville, CA, matching the agenda text",
+      "Provides tutoring and mentoring services in small groups, matching OUSD's 'Classroom & academic programs' contracts",
+      "An OUSD board file (Legistar) lists Moving Forward Education of Emeryville, CA as a professional services contractor for reading intervention at a district school"
+    ],
+    "key": "v-002951",
+    "notes": "Medium confidence, not publishable. Website movingforwardeducation.com redirects to readingwithrelevance.org (Reading with Relevance, a program from the founders of nonprofit Moving Forward Institute, EIN 27-1438527, same 1259 Park Ave address), but that site never names 'Moving Forward Education', and the legal relationship between the Inc. and the Institute is unconfirmed, so website, phone, email and EIN were left null. Other sources give 1425 Park Ave for the same name, and an OUSD insurance certificate says 'Moving Forward Education, LLC' rather than Inc. Idealist lists it as a for-profit; the California record is a general corporation. No official Secretary of State page was fetched (third-party filing site used).",
+    "profile": {
+      "address": "1259 Park Ave, Emeryville, CA 94608",
+      "caEntityNumber": "3519026",
+      "ein": null,
+      "email": null,
+      "headquarters": "Emeryville, CA",
+      "legalName": "Moving Forward Education, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Moving Forward Education is a tutoring and mentoring service based in Emeryville, California. It uses small-group instruction and social and emotional support to help students with their schoolwork.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Moving Forward Education, Inc. Emeryville, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/emeryville/moving-forward-education-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Moving Forward Education - Organization",
+        "url": "https://www.idealist.org/en/business/d9199e9f077b49bfa24e3ef72c2ad6aa-moving-forward-education-emeryville"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

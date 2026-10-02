@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/450935667",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.anvfarm.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006614",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Acta Non Verba Youth Urban Farm Project' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 45-0935667), matching the agenda's 'Acta Non Verba' and 'Oakland, CA'",
+      "Organization website describes youth programs for ages 5-18 in Oakland (farming, cooking, art, leadership), consistent with OUSD's 'After-school & summer programs' contracts",
+      "Ruling-year 2016 501(c)(3) classified as Youth Development, consistent with school-based summer learning services"
+    ],
+    "key": "v-006614",
+    "notes": "Email omitted because the site obscures it from automated fetching. A separate 'Acta Non Verba Foundation' (Dublin, NH) exists and is not this organization. Website did not explicitly mention OUSD.",
+    "profile": {
+      "address": "495 Jackson Street #1056, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "45-0935667",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Acta Non Verba Youth Urban Farm Project",
+      "orgType": "nonprofit",
+      "phone": "(510) 878-7235",
+      "samUei": null,
+      "summary": "A nonprofit in Oakland, California that works to improve quality of life for young people and families through urban farming, access to nature, cultural enrichment and healthy food. It runs youth programs for ages 5 to 18 and farm experiences on urban farms in Oakland.",
+      "website": "https://www.anvfarm.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Acta Non Verba Youth Urban Farm Project - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/450935667"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "orgType"
+        ],
+        "title": "Acta Non Verba Youth Urban Farm Project",
+        "url": "https://www.anvfarm.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006614",
+    "notes": "Acta Non Verba Youth Urban Farm Project is an Oakland youth-development 501(c)(3) (ProPublica, EIN 45-0935667) whose site lists Camp ANV and an After School Program for ages 5-18, fitting OUSD's after-school and summer learning agreements in Oakland; the site does not name OUSD, but the distinctive name, city and services align. Summary, phone, address, website, EIN and org type are all supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942403876",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bavc.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bavc.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007829",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Bay Area Video Coalition Inc', San Francisco, CA, EIN 94-2403876 (ProPublica Nonprofit Explorer)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "Website (BAVC Media) describes media training and workforce development, and lists a youth program in Oakland (Reel Stories), matching OUSD's 'After-school & summer programs' contracts"
+    ],
+    "key": "v-007829",
+    "notes": "Agenda name matches the registered legal name. The about page did not mention OUSD directly; identity rests on the registry match, the San Francisco location, and the website's youth and media education programs including an Oakland site. Search tool was unavailable, so registry pages for CA Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "145 9th St, Ste 101, San Francisco, CA 94103",
+      "caEntityNumber": null,
+      "ein": "94-2403876",
+      "email": "info@bavc.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Bay Area Video Coalition Inc",
+      "orgType": "nonprofit",
+      "phone": "415.861.3282",
+      "samUei": null,
+      "summary": "BAVC Media is a nonprofit based in San Francisco. It provides media training, access to production technology, storytelling workshops, workforce development and audio-visual preservation services to people across the Bay Area, including youth programs.",
+      "website": "https://bavc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Bay Area Video Coalition Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942403876"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "website",
+          "ein",
+          "headquarters"
+        ],
+        "title": "About - BAVC Media",
+        "url": "https://bavc.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - BAVC Media",
+        "url": "https://bavc.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007829",
+    "notes": "The agenda name 'Bay Area Video Coalition' (San Francisco) exactly matches the registered 501(c)(3) Bay Area Video Coalition Inc (EIN 94-2403876), and bavc.org lists youth media education, consistent with OUSD after-school contracts. All profile fields (legal name, EIN, address, phone, info@bavc.org, summary) were confirmed on ProPublica, bavc.org/about and bavc.org/contact; the candidate's 'Oakland Reel Stories site' signal was not confirmed on the About page, but it is not a profile field and identity does not depend on it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

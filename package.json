@@ -1,0 +1,50 @@
+{
+  "name": "ousd-consent-data",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pipeline and open data for the OUSD Board consent-agenda tracker",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oakvs/ousd-consent-data.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "type-check": "tsc --noEmit",
+    "consent": "tsx pipeline/cli.ts",
+    "consent:seed-registry": "tsx pipeline/cli.ts seed-registry",
+    "consent:discover": "tsx pipeline/cli.ts discover",
+    "consent:ingest": "tsx pipeline/cli.ts ingest",
+    "consent:backfill": "tsx pipeline/cli.ts backfill",
+    "consent:import-prototype": "tsx pipeline/cli.ts import-prototype",
+    "consent:build": "tsx pipeline/cli.ts build",
+    "consent:enrich-export": "tsx pipeline/cli.ts enrich-export",
+    "consent:enrich-check": "tsx pipeline/cli.ts enrich-check",
+    "consent:enrich-import": "tsx pipeline/cli.ts enrich-import",
+    "consent:verify-export": "tsx pipeline/cli.ts verify-export",
+    "consent:verify-check": "tsx pipeline/cli.ts verify-check",
+    "consent:verify-import": "tsx pipeline/cli.ts verify-import",
+    "consent:vendor-history": "tsx pipeline/cli.ts vendor-history",
+    "consent:research-export": "tsx pipeline/cli.ts research-export",
+    "consent:research-check": "tsx pipeline/cli.ts research-check",
+    "consent:research-import": "tsx pipeline/cli.ts research-import",
+    "consent:review-export": "tsx pipeline/cli.ts review-export",
+    "consent:review-check": "tsx pipeline/cli.ts review-check",
+    "consent:review-import": "tsx pipeline/cli.ts review-import",
+    "consent:vendor-aliases": "tsx pipeline/cli.ts vendor-aliases",
+    "consent:upcoming": "tsx pipeline/cli.ts upcoming"
+  },
+  "dependencies": {
+    "@oakvs/consent-schema": "*",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.8.0",
+    "vitest": "^5.0.1"
+  }
+}

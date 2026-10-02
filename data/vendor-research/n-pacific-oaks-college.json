@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/951716809",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pacificoaks.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pacificoaks.edu/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-pacific-oaks-college",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational nonprofit: Pacific Oaks Education Corporation, which operates Pacific Oaks College (ProPublica Nonprofit Explorer, EIN shown)",
+      "College offers teacher credentialing and education programs, plausible for an OUSD Talent/Human Resources MOU (staff and hiring pipeline)",
+      "No public page found that links Pacific Oaks College to OUSD or Oakland; the agenda gives no city, and ProPublica lists a different city (Chicago) than the college's Pasadena campus"
+    ],
+    "key": "n-pacific-oaks-college",
+    "notes": "Could not confirm that this is the college party to the OUSD MOU: no page found linking Pacific Oaks to OUSD or Oakland. Agenda gives no location. ProPublica lists the organization's location as Chicago, Illinois while the college's own site gives Pasadena, CA. Not suitable for publication without reviewer confirmation.",
+    "profile": {
+      "address": "45 W Eureka St. Pasadena, CA 91103",
+      "caEntityNumber": null,
+      "ein": "95-1716809",
+      "email": null,
+      "headquarters": "Pasadena, CA",
+      "legalName": "Pacific Oaks Education Corporation",
+      "orgType": "nonprofit",
+      "phone": "800.201.2296",
+      "samUei": null,
+      "summary": "Pacific Oaks College is a nonprofit, accredited college in Pasadena, California. It offers bachelor's and master's programs in fields such as education, teacher credentialing, human development, social work, psychology and business, with online and off-site cohort options.",
+      "website": "https://www.pacificoaks.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Pacific Oaks Education Corporation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/951716809"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Why Pacific Oaks?",
+        "url": "https://www.pacificoaks.edu/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact - Pacific Oaks College",
+        "url": "https://www.pacificoaks.edu/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

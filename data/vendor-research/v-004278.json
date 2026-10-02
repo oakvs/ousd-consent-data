@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/833026062",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.theteachingwell.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.theteachingwell.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004278",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Teaching Well Inc' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 83-3026062), matching the agenda's 'The Teaching Well' and 'Oakland, CA'",
+      "Organization's own website (theteachingwell.org) says it is based in Oakland, CA and is a 501(c)(3) nonprofit",
+      "Website describes educator wellbeing and retention work with schools and districts, matching OUSD's 'Staff & hiring' and school-based services agreements"
+    ],
+    "key": "v-004278",
+    "notes": "Phone, email, CA entity number and SAM UEI not found (web search budget was exhausted; only registry and org pages fetched directly). Legal name per IRS/ProPublica is 'Teaching Well Inc'; the site uses 'The Teaching Well'. The org's pages do not mention OUSD.",
+    "profile": {
+      "address": "360 Grand Avenue, #77, Oakland, CA 94610",
+      "caEntityNumber": null,
+      "ein": "83-3026062",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Teaching Well Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Teaching Well is a nonprofit based in Oakland, California. It works with schools and districts to support educator wellbeing, reduce burnout and help schools keep their teachers. It offers professional development, leadership coaching and tools to build social-emotional skills.",
+      "website": "https://www.theteachingwell.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Teaching Well Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/833026062"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - The Teaching Well",
+        "url": "https://www.theteachingwell.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About - The Teaching Well",
+        "url": "https://www.theteachingwell.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004278",
+    "notes": "Teaching Well Inc (EIN 83-3026062, 501(c)(3), Oakland CA) matches the agenda's 'The Teaching Well' in Oakland, and its site confirms educator retention, coaching and social-emotional programs for schools and districts, which fits OUSD's staff, school-services and student-support agreements. Address, EIN, legal name, org type and summary are supported by the cited pages; the sources do not mention OUSD directly, but no conflicting similarly named organization surfaced.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

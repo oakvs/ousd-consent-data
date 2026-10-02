@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.invocompanies.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://invocompanies.com/school-services/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.invocompanies.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010118",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Headquartered at 4200 W Cypress Street, Tampa, FL 33607, matching the agenda's location of Tampa, FL",
+      "Invo Healthcare provides school-based staffing and services in special education, therapy and behavioral health, matching OUSD's 'Special education' contracts",
+      "Florida Division of Corporations (Sunbiz) lists a foreign LLC named 'Invo Healthcare Associates, LLC' (document number M13000003494) at 4200 W. Cypress Street, Tampa, FL (seen in search result; page itself blocked automated fetching)"
+    ],
+    "key": "v-010118",
+    "notes": "Legal name, EIN and Florida entity details were not cited because the Sunbiz page blocked automated fetching; the legal entity name was seen only in a search snippet. No California entity number or SAM UEI checked. No public general email found (contact form only).",
+    "profile": {
+      "address": "4200 W Cypress St., Tampa, FL 33607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Tampa, FL",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "866-468-6471",
+      "samUei": null,
+      "summary": "Invo Healthcare provides staffing and programs for school districts and charter schools across the United States. Its staff include behavioral health professionals, therapists and special education teachers. It also offers mental health services such as counseling and assessments for students.",
+      "website": "https://www.invocompanies.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Invo Healthcare",
+        "url": "https://www.invocompanies.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "School Services - Invo Healthcare",
+        "url": "https://invocompanies.com/school-services/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Invo Healthcare",
+        "url": "https://www.invocompanies.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010118",
+    "notes": "Invo Healthcare is headquartered at 4200 W Cypress St, Tampa, FL, which matches the agenda location. It provides school-based special education, therapy and behavioral health staffing, which matches OUSD's special education contracts. Third-party directories list the legal name Invo Healthcare Associates, LLC at that address. The phone, address, website and summary are supported by the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

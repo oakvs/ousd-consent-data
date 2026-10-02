@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://csumb.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_State_University,_Monterey_Bay",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-state-university-monterey-bay",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: 'California State University Monterey Bay' is a public university in the California State University system (csumb.edu footer and Wikipedia)",
+      "The agenda title calls the agreement an 'Interagency Agreement' with a Talent/Human Resources department, consistent with a public state university as the counterparty",
+      "No page found that directly ties CSUMB to Oakland Unified; the agenda gives no city, and web search was unavailable (budget exhausted)"
+    ],
+    "key": "n-california-state-university-monterey-bay",
+    "notes": "Identity is likely correct (unique, exact name) but no source links CSUMB to OUSD, so confidence is medium. Mailing address is 100 Campus Center, Seaside; physical address 5108 Fourth Avenue, Marina. No general email found.",
+    "profile": {
+      "address": "100 Campus Center, Seaside, CA 93955",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Marina, CA",
+      "legalName": "California State University Monterey Bay",
+      "orgType": "public_agency",
+      "phone": "831-582-3000",
+      "samUei": null,
+      "summary": "California State University Monterey Bay (Cal State Monterey Bay) is a public university in the California State University system. Its main campus is on the former Fort Ord military base in the Seaside and Marina area of Monterey County. It was established in 1994 and is one of the youngest campuses in the system.",
+      "website": "https://csumb.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "About CSUMB",
+        "url": "https://csumb.edu/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "California State University, Monterey Bay",
+        "url": "https://en.wikipedia.org/wiki/California_State_University,_Monterey_Bay"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

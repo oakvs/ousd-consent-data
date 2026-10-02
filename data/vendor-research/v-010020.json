@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.campbellkeller.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.campbellkeller.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010020",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Campbell Keller's About page says the company formed in 2013 from Jones-Campbell (established 1981) and Keller Group, matching the agenda's 'Jones-Campbell Co., Inc., dba Campbell Keller'",
+      "Located in Sacramento, CA, matching the agenda text",
+      "Website describes furniture procurement, design, space planning and installation for business, education and public spaces, and cites a school district client, consistent with a school dining hall improvement project"
+    ],
+    "key": "v-010020",
+    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) lookup was done; legal name and registry IDs left null. Identity rests on the company's own About page naming Jones-Campbell as a predecessor, plus location and sector match.",
+    "profile": {
+      "address": "3766 Bradview Drive, Sacramento, CA 95827",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Inquiries@CampbellKeller.com",
+      "headquarters": "Sacramento, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "916-737-3300",
+      "samUei": null,
+      "summary": "Campbell Keller is a company in Sacramento, California that provides furniture procurement, design and space planning, installation, and project management services. Its clients include businesses, schools and public agencies.",
+      "website": "https://www.campbellkeller.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About - Campbell Keller",
+        "url": "https://www.campbellkeller.com/about"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Campbell Keller",
+        "url": "https://www.campbellkeller.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010020",
+    "notes": "Campbell Keller's About page states it was formed in 2013 when Jones-Campbell Co. acquired Keller Group, and it is based in Sacramento at the address on its Contact page, matching the agenda's 'Jones-Campbell Co., Inc., dba Campbell Keller' in Sacramento. Furniture, design and installation services fit a school dining hall improvement piggyback; summary, orgType, website, phone, generic inquiries email, address and headquarters are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

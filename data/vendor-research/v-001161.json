@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.companynurse.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.companynurse.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001161",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website footer names the legal entity 'Company Nurse, LLC', matching the agenda text 'Company Nurse, LLC'",
+      "Website gives its address in Scottsdale, AZ, matching the Scottsdale, AZ location in the agenda text",
+      "Website describes workplace injury reporting and work comp nurse triage, matching OUSD's Risk Management Department contracts funded by Workers' Comp"
+    ],
+    "key": "v-001161",
+    "notes": "Registry IDs not looked up (web search budget exhausted); identity confirmed from the company's own website. Address on the site is formatted across lines; joined with commas here.",
+    "profile": {
+      "address": "8360 E Via De Ventura Blvd., Suite L200, Scottsdale, AZ 85258",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@companynurse.com",
+      "headquarters": "Scottsdale, AZ",
+      "legalName": "Company Nurse, LLC",
+      "orgType": "company",
+      "phone": "(888) 817-9282",
+      "samUei": null,
+      "summary": "Company Nurse is a company that provides workplace injury reporting and nurse triage services. Its technology platform, called Lintelio, lets employers and claims teams take in injury reports and share information. Its services include work comp nurse triage and incident reporting.",
+      "website": "https://www.companynurse.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Company Nurse Home",
+        "url": "https://www.companynurse.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.companynurse.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001161",
+    "notes": "The company site names Company Nurse LLC at 8360 E Via De Ventura Blvd., Scottsdale, AZ, matching the agenda's entity and city. Its work comp nurse triage and injury reporting fits OUSD's Risk Management services agreements funded by Workers' Comp. Phone, generic info@ email, address and the neutral summary are shown on the cited pages. I could not run extra searches to find independent corroboration.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

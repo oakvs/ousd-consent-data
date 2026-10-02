@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.littlehandsot.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.littlehandsot.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008330",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the website is for 'Little Hands Occupational Therapy and Speech-Language Therapy', matching 'Little Hands Occupational Therapy' in the agenda",
+      "Located in Corte Madera, CA (500 Tamal Plaza Suite 505), matching the agenda location 'Corte Madera, CA'",
+      "Website says the clinic provides therapy in public, non-public and charter schools, consistent with a special education services agreement"
+    ],
+    "key": "v-008330",
+    "notes": "Web search budget was exhausted and ProPublica returned HTTP 429, so no registry (CA SOS, SAM.gov) check was done; legal name, entity number and UEI left null. Contact page lists only named staff phones/emails, which are excluded, so phone and email are null. Org type is inferred from a private clinic site; not confirmed in a registry.",
+    "profile": {
+      "address": "500 Tamal Plaza Suite 505 Corte Madera, CA 94925",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Corte Madera, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private clinic that provides occupational therapy and speech-language therapy for children and teens. Services include group therapy, co-treatment, feeding therapy, behavior therapy and parent consulting. Therapists also work in private, public, non-public and charter schools.",
+      "website": "https://www.littlehandsot.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Little Hands Occupational Therapy and Speech-Language Therapy",
+        "url": "https://www.littlehandsot.com"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Little Hands OT & Speech Therapy",
+        "url": "https://www.littlehandsot.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008330",
+    "notes": "The cited site is operated by Little Hands Occupational Therapy, Inc. at 500 Tamal Plaza, Corte Madera, CA, matching the agenda name, the city and the special education services agreement. The site also says it serves public, non-public and charter schools. The summary, org type, website and address are supported and neutral, and no individuals' contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

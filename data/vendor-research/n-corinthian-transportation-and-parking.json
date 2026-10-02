@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.corinthiantransportation.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.corinthiantransportation.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.corinthiantransportation.com/locations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-corinthian-transportation-and-parking",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the agenda's 'Corinthian Transportation & Parking' corresponds to the business operating as 'Corinthian Transportation, Parking & Valet' (corinthiantransportation.com)",
+      "Located in Campbell, CA, matching the agenda text: its Locations page says it has been headquartered in Campbell, California since 1989",
+      "Its website says it is a SPAB-certified (School Pupil Activity Bus) operator, matching OUSD's 'Agreement for Transportation Services - School Pupil Activity Bus (SPAB)'"
+    ],
+    "key": "n-corinthian-transportation-and-parking",
+    "notes": "Identified from the company's own website only; the California Secretary of State and SAM.gov registries were not checked (an OpenCorporates search found no active CA entity with this name), so no legal entity name or entity number is given. The business operates as 'Corinthian Transportation, Parking & Valet' per its site footer. No street address was published on the pages reviewed. Phone is the transportation reservations line; the parking and valet line is (408) 867-7275.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Info@corinthiantransportation.com",
+      "headquarters": "Campbell, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(408) 377-5466",
+      "samUei": null,
+      "summary": "A ground transportation and parking company based in Campbell, California, serving the Bay Area and Silicon Valley. It offers corporate, group and personal transportation, including shuttles, airport car service and student and youth group trips, along with valet parking and parking garage management. It states that it is a School Pupil Activity Bus (SPAB) certified operator.",
+      "website": "https://www.corinthiantransportation.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Corinthian Transportation, Parking & Valet",
+        "url": "https://www.corinthiantransportation.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "summary"
+        ],
+        "title": "Contact | Corinthian Transportation",
+        "url": "https://www.corinthiantransportation.com/contact"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "summary"
+        ],
+        "title": "Locations | Corinthian Transportation",
+        "url": "https://www.corinthiantransportation.com/locations"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-corinthian-transportation-and-parking",
+    "notes": "The company site shows Corinthian Transportation, Parking & Valet headquartered in Campbell, CA since 1989 and SPAB-certified, which fits the agenda name, city and School Pupil Activity Bus agreement. Summary, website, generic phone and info@ email, and headquarters are supported by the cited pages and are neutral and business-only; no individual contacts are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

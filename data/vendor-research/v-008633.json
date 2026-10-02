@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.atirestoration.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.atirestoration.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://atirestoration.com/regional-offices/anaheim-ca/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.atirestoration.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008633",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal entity name 'ATI Restoration, LLC' appears exactly on the company's own Anaheim office page and privacy policy, matching the agenda name",
+      "Headquartered in Anaheim, CA (3360 E. La Palma Ave.), matching the agenda location",
+      "Company is a disaster recovery and restoration contractor (water, fire, mold), consistent with OUSD contracting it through the Risk Management Department for school buildings and property damage"
+    ],
+    "key": "v-008633",
+    "notes": "The company site's footer also references 'American Technologies Inc' (the older parent/brand name); the legal entity used in the privacy policy and Anaheim office page is ATI Restoration, LLC. No registry IDs were verified (web search budget was exhausted, so SOS/SAM registries were not checked). No general inbox email was confirmed. No page found mentioning OUSD directly.",
+    "profile": {
+      "address": "3360 E. La Palma Ave., Anaheim, CA 92806",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Anaheim, CA",
+      "legalName": "ATI Restoration, LLC",
+      "orgType": "company",
+      "phone": "(800) 400-9353",
+      "samUei": null,
+      "summary": "ATI Restoration is a disaster recovery and restoration company that serves homes and businesses through offices across the United States. It repairs and rebuilds property after water, fire, smoke and mold damage, and responds to large-scale disasters. It also does decontamination and demolition work.",
+      "website": "https://www.atirestoration.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About Us | ATI Restoration",
+        "url": "https://www.atirestoration.com/about-us"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us | ATI Restoration",
+        "url": "https://www.atirestoration.com/contact-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "ATI Restoration - Anaheim, CA",
+        "url": "https://atirestoration.com/regional-offices/anaheim-ca/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address"
+        ],
+        "title": "Privacy Policy | ATI Restoration",
+        "url": "https://www.atirestoration.com/privacy-policy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008633",
+    "notes": "The legal entity name 'ATI Restoration, LLC' and Anaheim address (3360 E. La Palma Ave.) appear on the company's own privacy policy and Anaheim office page, matching the agenda name and city; a disaster restoration contractor fits a Risk Management services agreement. Summary, phone, website, address and headquarters are all supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

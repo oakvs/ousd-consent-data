@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.artogether.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/823045350",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009212",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Artogether', Oakland, CA, EIN 82-3045350 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text; the organization's site shows the same EIN 82-3045350",
+      "Website describes an 'Arts in Schools' K-12 program and says it works with about half a dozen schools, consistent with OUSD's after-school and summer program contracts"
+    ],
+    "key": "v-009212",
+    "notes": "Website does not name OUSD schools specifically; identity rests on registry name/EIN match, Oakland location, and K-12 school programs. Legal name per ProPublica is 'Artogether' (stylized ARTogether on its website). CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1200 Harrison Street, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "82-3045350",
+      "email": "info@artogether.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "ARTogether",
+      "orgType": "nonprofit",
+      "phone": "510.545.2787",
+      "samUei": null,
+      "summary": "ARTogether is an Oakland-based nonprofit that runs art programs for refugees and immigrants. Its programs include therapeutic arts and wellness workshops, arts programs in K-12 schools, mentorship and funding for artists, public arts projects and media projects.",
+      "website": "https://www.artogether.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "ARTogether",
+        "url": "https://www.artogether.org"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Artogether - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/823045350"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009212",
+    "notes": "ARTogether is an Oakland 501(c)(3) (EIN 82-3045350) whose site and ProPublica record match the profile; its Arts in Schools program for newcomer students and its summer art camps fit OUSD's contracts (including Oakland International High School), though the site does not name OUSD schools. Summary and contact fields are supported, neutral, and use only a generic business email.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

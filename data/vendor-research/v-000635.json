@@ -1,0 +1,62 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/800473270",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-000635",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Bay Area Urban Debate Commission', EIN 80-0473270 (ProPublica Nonprofit Explorer)",
+      "Registry lists the organization in Oakland, CA, matching the agenda text",
+      "Registry mission is debate programming for students, consistent with OUSD's 'After-school & summer programs' contracts",
+      "Bay Area Urban Debate League (baudl.org), 287 17th St #201, Oakland, a nonprofit debate program with Oakland partner schools, appears to be the same organization, but no page found links the 'Commission' legal name to the 'League' site"
+    ],
+    "key": "v-000635",
+    "notes": "Registry match (ProPublica, EIN 80-0473270, Oakland) is solid. A likely public website is https://www.baudl.org (Bay Area Urban Debate League, 287 17th St #201, Oakland, CA 94612), but no page found states that the League and the Commission are the same legal entity, so website and address were left null. A reviewer could confirm via the Form 990 or a CA Secretary of State record. Web search quota was exhausted during this run, so the CA SOS and SAM.gov registries were not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "80-0473270",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Bay Area Urban Debate Commission",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit organization in Oakland, California that runs educational debate programming for students. It is a tax-exempt 501(c)(3) organization.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Bay Area Urban Debate Commission - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/800473270"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/203786129",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.soccerwithoutborders.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.soccerwithoutborders.org/oakland",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.soccerwithoutborders.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003978",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Soccer Without Borders' (ProPublica Nonprofit Explorer, EIN 20-3786129, Baltimore, MD)",
+      "The organization's own Oakland page describes 'Soccer Without Borders Bay Area (formerly known as SWB Oakland)', matching the agenda's Oakland, CA location",
+      "The Oakland page lists Oakland International High School and the Oakland Unified School District as partners, matching OUSD's services agreements with Oakland International High School",
+      "Youth development and after-school programming matches OUSD's 'After-school & summer programs' and student support contracts"
+    ],
+    "key": "v-003978",
+    "notes": "The email is the Bay Area (Oakland) program's general inbox; no organization-wide email or phone was found. Web search was unavailable (budget exhausted), so no California Secretary of State or SAM.gov lookups were done; those IDs are null.",
+    "profile": {
+      "address": "3700 Eastern Avenue, Baltimore, Maryland 21224",
+      "caEntityNumber": null,
+      "ein": "20-3786129",
+      "email": "oakland@soccerwithoutborders.org",
+      "headquarters": "Baltimore, MD",
+      "legalName": "Soccer Without Borders",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Soccer Without Borders is a nonprofit that uses soccer as a way to support the growth and success of underserved young people. It offers youth programs, coach training and community soccer programs. It is headquartered in Baltimore, Maryland, and also runs a Bay Area program in Oakland.",
+      "website": "https://www.soccerwithoutborders.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Soccer Without Borders - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/203786129"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address",
+          "ein",
+          "headquarters",
+          "website"
+        ],
+        "title": "About - Soccer Without Borders",
+        "url": "https://www.soccerwithoutborders.org/about"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Soccer Without Borders Bay Area",
+        "url": "https://www.soccerwithoutborders.org/oakland"
+      },
+      {
+        "supports": [
+          "address",
+          "website"
+        ],
+        "title": "Soccer Without Borders",
+        "url": "https://www.soccerwithoutborders.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003978",
+    "notes": "Soccer Without Borders (EIN 20-3786129, Baltimore HQ) runs a Bay Area/Oakland program for newcomer youth with in-school and after-school programming, consistent with OUSD's school services agreements. Legal name, EIN, nonprofit status, HQ address, website, Oakland email and the neutral summary are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/264125728",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prescottcircus.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prescottcircus.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003425",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) performing arts nonprofit 'Prescott Circus Theatre', Oakland, CA (ProPublica Nonprofit Explorer, EIN 26-4125728)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes circus and theater education programs for Oakland youth run in partnership with public schools, matching OUSD's 'After-school & summer programs' contracts"
+    ],
+    "key": "v-003425",
+    "notes": "Web search budget was exhausted, so identity was confirmed via direct fetches of the organization's site and ProPublica only. No OUSD mention found on the site. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1675 7th St. #24925, Oakland, CA 94615",
+      "caEntityNumber": null,
+      "ein": "26-4125728",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Prescott Circus Theatre",
+      "orgType": "nonprofit",
+      "phone": "(510) 350-7207",
+      "samUei": null,
+      "summary": "Prescott Circus Theatre is a nonprofit in Oakland, California that teaches circus and theater skills to young people, such as juggling, acrobatics, acting and stilt dancing. It runs programs with public schools and puts on spring and summer performances that are free to attend.",
+      "website": "https://www.prescottcircus.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Prescott Circus Theatre - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/264125728"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "About - Prescott Circus Theatre",
+        "url": "https://www.prescottcircus.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact - Prescott Circus Theatre",
+        "url": "https://www.prescottcircus.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003425",
+    "notes": "Oakland 501(c)(3) circus and theater youth-education nonprofit (EIN 26-4125728) matches the agenda name, Oakland location, and after-school/school-partnership contracts. Legal name, EIN, org type, phone, address, website and the neutral summary are all confirmed by the ProPublica page and the org's own about and contact pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://atechinc.net/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://atechinc.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://atechinc.net/solutions/environmental-consulting-for-schools/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009167",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'A-Tech Consulting, Inc.' (atechinc.net) matches the agenda name 'A-Tech Consulting'",
+      "Headquarters at 1640 N. Batavia Street, Orange, CA 92867 matches the agenda location 'Orange, CA'",
+      "Website describes environmental consulting (asbestos, lead, mold testing, industrial hygiene), matching OUSD's lead abatement and environmental testing contracts for facilities and risk management",
+      "Website says A-Tech serves Oakland and offers environmental consulting for schools, including AHERA asbestos inspections"
+    ],
+    "key": "v-009167",
+    "notes": "General email (info@atechinc.net) is shown in search results but is obfuscated on the contact page, so it is omitted. The site lists several regional phone numbers; the LA/Orange County number matches the Orange headquarters. No registry IDs were looked up. The agenda also lists Oakland, CA; no Oakland office is listed, though the site says it serves Oakland.",
+    "profile": {
+      "address": "1640 N. Batavia Street, Orange, CA 92867",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Orange, CA",
+      "legalName": "A-Tech Consulting, Inc.",
+      "orgType": "company",
+      "phone": "(657) 232-7495",
+      "samUei": null,
+      "summary": "A-Tech Consulting is an environmental consulting firm based in Orange, California. It provides asbestos, lead and mold testing, industrial hygiene, and environmental engineering and health and safety services for buildings, including schools, across California and Washington.",
+      "website": "https://atechinc.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Get in Touch with Eco-Experts | Contact A Tech Consulting Inc",
+        "url": "https://atechinc.net/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "A-Tech Consulting - Cost-Effective Environmental Solutions",
+        "url": "https://atechinc.net/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Environmental Consulting for Schools",
+        "url": "https://atechinc.net/solutions/environmental-consulting-for-schools/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009167",
+    "notes": "The agenda's Orange, CA location and the environmental testing, lead and risk-management scope match A-Tech Consulting, Inc. (1640 N. Batavia St, Orange, CA); name, address, phone, website, services and the California and Washington service area are shown on the cited pages. The candidate's signal that the site says it serves Oakland is not supported (the pages list only San Francisco, San Diego, Seattle and Orange offices), but that is not a profile field and the summary does not claim it. I could not independently confirm the OUSD contract link, because web search was unavailable.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

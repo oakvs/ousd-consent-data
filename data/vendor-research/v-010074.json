@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/202202510630",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.obrelectric.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.obrelectric.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010074",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "California LLC 'OBR ELECTRIC LIMITED LIABILITY CO.' (entity 202202510630, Active) is registered in Oakland, CA, matching the agenda's 'OBR Electric, LLC' and 'Oakland, CA' (OpenCorporates).",
+      "The company's own website (obrelectric.com) describes an Oakland electrical contractor offering residential, commercial and industrial electrical work, matching an electrical field lighting contract for school facilities.",
+      "The 3397 Arkansas St, Oakland, CA 94602 address on the website's Contact page matches the registered address on the state-registry record, linking the website to the registered LLC."
+    ],
+    "key": "v-010074",
+    "notes": "Registry data is from OpenCorporates (mirrors CA Secretary of State), not bizfile directly. The website's home page lists 447 17th St #2702, Oakland, CA 94612, while the Contact page and the registry list 3397 Arkansas St, Oakland, CA 94602; the registry-matching address is used. The only email shown on the site is a named person's address, so email is left null. No EIN or SAM UEI found.",
+    "profile": {
+      "address": "3397 Arkansas St, Oakland, CA 94602",
+      "caEntityNumber": "202202510630",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "OBR ELECTRIC LIMITED LIABILITY CO.",
+      "orgType": "company",
+      "phone": "510-566-8106",
+      "samUei": null,
+      "summary": "OBR Electric is an electrical contractor based in Oakland, California. It provides electrical installation, service upgrades, maintenance, EV charger and solar installation work for homes, businesses and industrial sites in the East Bay and wider San Francisco Bay Area.",
+      "website": "https://www.obrelectric.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "address",
+          "orgType"
+        ],
+        "title": "OBR ELECTRIC LIMITED LIABILITY CO. - OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/202202510630"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "OBR Electric - Contact",
+        "url": "https://www.obrelectric.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "OBR Electric - Oakland, CA",
+        "url": "https://www.obrelectric.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010074",
+    "notes": "OpenCorporates shows an active Oakland, CA LLC 'OBR Electric Limited Liability Co.' (202202510630) whose address and phone match the obrelectric.com contact page; an Oakland electrical contractor fits a Skyline High School field lighting contract. Summary, address, phone, website and entity fields are supported by the cited pages, and the named-person email was correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ridezum.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ridezum.com/terms-conditions",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ridezum.com/case-studies/oakland-unified-school-district-modernizes-student-mobility",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/3789986",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-zum",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Zum's own Terms and Conditions name the legal entity 'Zum Services, Inc.' with a Redwood City, CA address, matching the agenda's 'Zum Services, Inc.' and 'Redwood City, CA'",
+      "California registry listing (via OpenCorporates) shows ZUM SERVICES, INC. at 275 Shoreline Dr., Suite 200, Redwood City, CA 94065",
+      "Zum's website describes school transportation for K-12 districts, matching OUSD's special education transportation contracts",
+      "Zum's website has a customer case study on Oakland Unified School District"
+    ],
+    "key": "n-zum",
+    "notes": "California entity is a branch of an out-of-state stock corporation. Entity number taken from OpenCorporates, not directly from bizfileonline. General email omitted because the contact page hides it from automated fetching; legal@ridezum.com is only the copyright agent address. The agenda also names 'Zum LLC' for one item, which may be a different or former entity.",
+    "profile": {
+      "address": "275 Shoreline Drive, Suite #200, Redwood City, CA 94065",
+      "caEntityNumber": "3789986",
+      "ein": null,
+      "email": null,
+      "headquarters": "Redwood City, CA",
+      "legalName": "Zum Services, Inc.",
+      "orgType": "company",
+      "phone": "1-855-743-3986",
+      "samUei": null,
+      "summary": "Zum provides school transportation for K-12 school districts. It combines drivers and vehicles, including electric buses, with its own software for routing, real-time tracking and parent apps.",
+      "website": "https://www.ridezum.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Zum",
+        "url": "https://www.ridezum.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "phone"
+        ],
+        "title": "Terms and Conditions | Zum",
+        "url": "https://www.ridezum.com/terms-conditions"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District case study | Zum",
+        "url": "https://www.ridezum.com/case-studies/oakland-unified-school-district-modernizes-student-mobility"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address"
+        ],
+        "title": "ZUM SERVICES, INC. - OpenCorporates (California)",
+        "url": "https://opencorporates.com/companies/us_ca/3789986"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-zum",
+    "notes": "Zum's Terms name Zum Services, Inc. at 275 Shoreline Dr, Redwood City, matching the agenda's vendor name and city; OpenCorporates confirms the CA entity 3789986 and address, and Zum's Oakland Unified case study confirms the relationship. The summary, phone, website and entity number are supported and neutral; the agenda's 'Zum LLC' item shares the same Redwood City location and is likely the same company.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

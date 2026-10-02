@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/830648381",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thepeoplesconservatory.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thepeoplesconservatory.org/school-programs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005357",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Peoples Conservatory', Oakland, CA, 501(c)(3), arts and culture (ProPublica Nonprofit Explorer, EIN shown); matches agenda text 'The People's Conservatory', Oakland, CA",
+      "Its website (thepeoplesconservatory.org) describes an Oakland arts education organization with school-based programs, matching OUSD's 'Classroom & academic programs' contracts funded by Prop 28 Arts and Music",
+      "Website does not name OUSD directly, and does not state its legal name or EIN; the link between the website and the registry record rests on the matching name, city and arts-education purpose"
+    ],
+    "key": "v-005357",
+    "notes": "No phone, email or street address is published on the website; left null. The website does not state the EIN, so the registry link is by name, city and purpose. No California Secretary of State or SAM.gov record was checked (web search budget was exhausted).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-0648381",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Peoples Conservatory",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit arts education organization based in Oakland, California. It offers youth programs in media, movement, music, theater and visual arts, including school-based instruction, a homeschool arts academy, summer camp and mural projects. It focuses on serving Black and Brown youth from under-resourced communities.",
+      "website": "https://www.thepeoplesconservatory.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Peoples Conservatory - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/830648381"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "The People's Conservatory",
+        "url": "https://www.thepeoplesconservatory.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "School Programs - The People's Conservatory",
+        "url": "https://www.thepeoplesconservatory.org/school-programs"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-005357",
+    "notes": "The exact name, Oakland location and arts-education purpose match the agenda text and OUSD's Classroom & academic programs contracts (Prop 28 Arts and Music). The website lists school-based arts programs, homeschool academy, murals and summer camp, and ProPublica lists a 501(c)(3) 'Peoples Conservatory' in Oakland (EIN 83-0648381). The website does not state the EIN or name OUSD, so the registry link rests on name, city and purpose, but I found no competing similarly named organization.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

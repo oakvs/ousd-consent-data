@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://sysco.com/San-Francisco",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.govcb.com/government-vendors/profile-SAM00000000001549730-sysco-san-francisco-Fremont-CA.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Sysco",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-sysco-san-francisco",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Federal contractor registry listing (SAM.gov data via GovCB) names 'SYSCO SAN FRANCISCO, INC.' at 5900 Stewart Ave, Fremont, CA 94538, matching the agenda location 'Fremont, CA'",
+      "FMCSA SAFER company snapshot lists 'SYSCO SAN FRANCISCO INC' at the same Fremont address, an independent public record",
+      "Sysco's own location page is titled 'Sysco San Francisco - Food Distributor & Restaurant Supplies', matching OUSD's grocery products bid for the K-12 meal program (Nutrition Services)"
+    ],
+    "key": "n-sysco-san-francisco",
+    "notes": "Phone omitted: sources disagree ((510) 226-3100 on GovCB, (510) 226-3000 in search snippets, a different number on FMCSA) and Sysco's own page did not render contact details to the fetcher. Sysco's location page is JavaScript-rendered. No CA entity number or UEI found on a fetchable page.",
+    "profile": {
+      "address": "5900 Stewart Ave Fremont, CA 94538",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fremont, CA",
+      "legalName": "SYSCO SAN FRANCISCO, INC.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A food distributor based in Fremont, California. It is a local branch of Sysco, a company that sells and delivers food products and supplies to restaurants, schools, healthcare facilities and other places that serve food.",
+      "website": "https://sysco.com/San-Francisco"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "orgType"
+        ],
+        "title": "Sysco San Francisco - Food Distributor & Restaurant Supplies",
+        "url": "https://sysco.com/San-Francisco"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "SYSCO SAN FRANCISCO, INC. - Government vendor profile",
+        "url": "https://www.govcb.com/government-vendors/profile-SAM00000000001549730-sysco-san-francisco-Fremont-CA.htm"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Sysco - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sysco"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-sysco-san-francisco",
+    "notes": "SYSCO SAN FRANCISCO, INC. at 5900 Stewart Ave, Fremont, CA is a wholesale food distributor and a Sysco subsidiary, matching the agenda's Fremont location and the grocery products bid for K-12 nutrition services. Legal name, address, headquarters, website and the neutral summary are supported by the GovCB profile, the Sysco location page title and Wikipedia.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

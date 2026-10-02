@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.overaa.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.overaa.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.overaa.com/projects/coliseum-college-preparatory-academy-new-classroom-building-gym/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/roosevelt-middle-school",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009061",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Overaa Construction's own site names the legal entity 'C. Overaa & Co.' with its headquarters at 200 Parr Blvd, Richmond, CA, matching the agenda's 'Richmond, CA'",
+      "Overaa's own project page lists the Coliseum College Preparatory Academy (Oakland) expansion, matching OUSD's agenda items for that project",
+      "OUSD's facilities pages for Coliseum College Prep Academy and Roosevelt Middle School name Overaa as the contractor on projects funded by Measure Y, matching the agenda's contracts and funding source",
+      "Company is a general contractor, matching OUSD's 'School buildings & construction' category"
+    ],
+    "key": "v-009061",
+    "notes": "No EIN, California entity number or UEI found; registry pages were not checked. Agenda spellings vary (C. Overaa & Company, Overaa Construction, C. Overra & Co.) and all appear to refer to the same firm.",
+    "profile": {
+      "address": "200 Parr Boulevard, Richmond, CA 94801",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "webuild@overaa.com",
+      "headquarters": "Richmond, CA",
+      "legalName": "C. Overaa & Co.",
+      "orgType": "company",
+      "phone": "510-234-0926",
+      "samUei": null,
+      "summary": "Overaa Construction is a family-owned general contractor based in Richmond, California. It does preconstruction planning, general contracting and collaborative project delivery, and builds its own work with its own crews. It builds schools, labs, water and energy facilities, health care, housing and other projects in Northern California.",
+      "website": "https://www.overaa.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Overaa Construction",
+        "url": "https://www.overaa.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Overaa Construction",
+        "url": "https://www.overaa.com/"
+      },
+      {
+        "supports": [],
+        "title": "Coliseum College Preparatory Academy New Classroom Building & Gym - Overaa Construction",
+        "url": "https://www.overaa.com/projects/coliseum-college-preparatory-academy-new-classroom-building-gym/"
+      },
+      {
+        "supports": [],
+        "title": "Roosevelt Middle School - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/roosevelt-middle-school"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009061",
+    "notes": "Overaa's site names the legal entity C. Overaa & Co. at 200 Parr Blvd, Richmond, matching the agenda, and OUSD's Roosevelt Middle School page lists Overaa as contractor with Measure Y funding. Legal name, contact details and the neutral summary (family-owned, self-performing general contractor, sectors) are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

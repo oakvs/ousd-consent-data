@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943367263",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mosaicproject.org/about/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mosaicproject.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mosaicproject.org/programs/in-school/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002941",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Mosaic Project' (ProPublica Nonprofit Explorer, EIN 94-3367263), located in Oakland, CA, matching the agenda's 'Oakland, CA'",
+      "ProPublica classifies it as a specialized education institution, and its own website describes in-school classroom workshops and school assemblies, matching OUSD's 'Classroom & academic programs' and 'Student health, support & family services' contracts",
+      "The organization's contact page gives an Oakland, CA mailing address (478 Santa Clara Ave Ste 200, Oakland, CA 94610)"
+    ],
+    "key": "v-002941",
+    "notes": "General email omitted: the contact page's email address was obfuscated in the fetched text. WebSearch budget was exhausted, so research used direct fetches of ProPublica and the organization's site; neither page fetched mentions OUSD by name. CA Secretary of State and SAM.gov not checked.",
+    "profile": {
+      "address": "478 Santa Clara Ave Ste 200, Oakland, CA 94610",
+      "caEntityNumber": null,
+      "ein": "94-3367263",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Mosaic Project",
+      "orgType": "nonprofit",
+      "phone": "510.452.3377",
+      "samUei": null,
+      "summary": "The Mosaic Project is an Oakland-based nonprofit that teaches people, from elementary school students to adults in the workplace, skills for building peaceful communities. Its programs include an outdoor program, in-school programs with assemblies and classroom workshops, youth leadership, family camps, and workshops for teachers and parents. The programs focus on equity, empathy and effective communication.",
+      "website": "https://www.mosaicproject.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Mosaic Project - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943367263"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - The Mosaic Project",
+        "url": "https://mosaicproject.org/about/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "The Mosaic Project",
+        "url": "https://www.mosaicproject.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "In-School Project - The Mosaic Project",
+        "url": "https://mosaicproject.org/programs/in-school/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002941",
+    "notes": "Oakland-based 501(c)(3) (EIN 94-3367263, specialized education) whose in-school assemblies and classroom workshops for elementary grades fit OUSD's Hoover, Reach and International Community School agreements; no similarly named conflicting organization found. The summary, phone, address and EIN match the cited ProPublica and organization pages, though none names OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942301832",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.paramountoakland.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.paramountoakland.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.paramountoakland.org/graduations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-paramount-theatre-of-arts",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Paramount Theatre Of The Arts Inc', Oakland, CA, EIN 94-2301832 (ProPublica Nonprofit Explorer), matching the agenda's 'Paramount Theatre of the Arts, Inc.' and 'Oakland, CA'",
+      "The nonprofit's NTEE category is Performing Arts Centers, and the Paramount Theatre at 2025 Broadway, Oakland is a performing arts venue (paramountoakland.org)",
+      "The theatre's website has a Graduations page for school graduation ceremonies held at the theatre, matching OUSD's 2026 High School Network Senior Graduation Ceremonies rental agreement"
+    ],
+    "key": "n-paramount-theatre-of-arts",
+    "notes": "The theatre's website does not state the legal entity name; the link between paramountoakland.org and the registered nonprofit rests on the name match, Oakland location, performing-arts category and the school graduation use. No general email, California entity number or SAM UEI was found (search budget was exhausted; ProPublica search UI was rate limited, EIN confirmed via its API and organization page).",
+    "profile": {
+      "address": "2025 Broadway Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-2301832",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Paramount Theatre Of The Arts Inc",
+      "orgType": "nonprofit",
+      "phone": "510-893-2300",
+      "samUei": null,
+      "summary": "A nonprofit that operates the Paramount Theatre, a restored Art Deco performing arts venue at 2025 Broadway in Oakland, California. The theatre hosts concerts, ballet, comedy, classical music and film screenings, and rents the venue for events such as school graduations.",
+      "website": "https://www.paramountoakland.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Paramount Theatre Of The Arts Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942301832"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Paramount Theatre",
+        "url": "https://www.paramountoakland.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About | Paramount Theatre",
+        "url": "https://www.paramountoakland.org/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Graduations | Paramount Theatre",
+        "url": "https://www.paramountoakland.org/graduations"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-paramount-theatre-of-arts",
+    "notes": "ProPublica confirms a 501(c)(3) named Paramount Theatre Of The Arts Inc (EIN 94-2301832, Oakland, Performing Arts Centers), matching the agenda name and city; paramountoakland.org confirms the venue at 2025 Broadway, phone 510-893-2300, Art Deco history, mixed programming and a graduations page with private rentals, which fits a graduation rental agreement. The site does not name the legal entity itself, so the link rests on the exact name, location, category and graduation use, which together are strong; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

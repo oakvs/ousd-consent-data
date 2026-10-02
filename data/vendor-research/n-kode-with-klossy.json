@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/833160675",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kodewithklossy.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kodewithklossy.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kode-with-klossy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Kode With Klossy Inc' (ProPublica Nonprofit Explorer, EIN 83-3160675)",
+      "Located in New York, NY, matching the agenda text 'New York, NY'",
+      "Organization's website describes technology education programs for teens and young adults, matching OUSD's 'Classroom & academic programs' / High School Linked Learning Office agreement"
+    ],
+    "key": "n-kode-with-klossy",
+    "notes": "No public mention of OUSD found; identity rests on name, New York location and mission fit. No phone or mailing address published on the site.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-3160675",
+      "email": "info@kodewithklossy.com",
+      "headquarters": "New York, NY",
+      "legalName": "Kode With Klossy Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Kode With Klossy is a nonprofit that works to close the gender gap in technology. It offers technical skill-building, career readiness and community support to girls and gender-expansive young people starting at age 13, and has added workforce development programs for members 18 and older.",
+      "website": "https://www.kodewithklossy.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Kode With Klossy Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/833160675"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email"
+        ],
+        "title": "About - Kode With Klossy",
+        "url": "https://www.kodewithklossy.com/about"
+      },
+      {
+        "supports": [
+          "email",
+          "website"
+        ],
+        "title": "Contact - Kode With Klossy",
+        "url": "https://www.kodewithklossy.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-kode-with-klossy",
+    "notes": "Exact name match to the 501(c)(3) Kode With Klossy Inc (EIN 83-3160675, New York, NY), which matches the agenda location, and a no-cost service agreement with the High School Linked Learning Office fits a tech-education nonprofit. The summary, website and generic info@ email are supported by the cited About, Contact and ProPublica pages; I found no sign of a similarly named organization.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

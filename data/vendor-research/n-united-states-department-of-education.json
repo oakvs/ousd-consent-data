@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.usa.gov/agencies/u-s-department-of-education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/United_States_Department_of_Education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-united-states-department-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'United States Department of Education' as the grantor; this exactly matches the single cabinet-level federal agency listed by USAGov as 'U.S. Department of Education (ED)' (USAGov)",
+      "Wikipedia describes the department's functions as including managing federal fund distribution for education, consistent with OUSD's 'Grant Award - Title VI, Indian Education Program' entry and its 'Classroom & academic programs' category",
+      "No similarly named organization exists; as a federal agency it has no city or state in the agenda, and Washington, DC headquarters is consistent with a federal grantor"
+    ],
+    "key": "n-united-states-department-of-education",
+    "notes": "Federal agency, not an individual. ed.gov pages returned HTTP 403 to automated fetching, so the Title VI Indian Education program page could not be fetched directly and no general email was found. Web search quota was exhausted, so only a minimal set of pages was read.",
+    "profile": {
+      "address": "400 Maryland Ave., SW, Washington, DC 20202",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "U.S. Department of Education",
+      "orgType": "public_agency",
+      "phone": "1-800-872-5327",
+      "samUei": null,
+      "summary": "A cabinet-level federal agency created in 1979. It manages federal student aid policies and the distribution of federal education funds, collects education data and supports research, draws national attention to education reform, and works to prevent discrimination and ensure equal access to education.",
+      "website": "https://www.ed.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "U.S. Department of Education (ED) | USAGov",
+        "url": "https://www.usa.gov/agencies/u-s-department-of-education"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "United States Department of Education - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/United_States_Department_of_Education"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-united-states-department-of-education",
+    "notes": "The agenda names the federal grantor of a Title VI Indian Education grant award, which fits the U.S. Department of Education; USAGov confirms the name, website, phone and DC address, and Wikipedia confirms the 1979 creation and the stated functions. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

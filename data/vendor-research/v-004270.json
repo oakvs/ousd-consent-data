@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ucsf.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004270",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names the vendor as 'The Regents of the University of California (UCSF)' with location San Francisco, CA; UCSF is a University of California campus headquartered in San Francisco (ucsf.edu)",
+      "UCSF describes itself as a health sciences university with patient care, research and education missions, including UCSF Benioff Children's Hospitals in San Francisco and Oakland, matching OUSD's 'Student health, support & family services' category",
+      "UC campuses contract through The Regents of the University of California, the system's governing board, as the OUSD agenda titles show"
+    ],
+    "key": "v-004270",
+    "notes": "Web search budget was exhausted, so contact details and registry IDs were not researched; only the UCSF About page and the Regents site were fetched. The Regents' own office address (1111 Franklin St, Oakland) is the UC system office, not UCSF, so it was left out. Agenda titles also include Children's Hospital & Research Center at Oakland dba UCSF Benioff Children's Hospital Oakland, a related but separate legal entity.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "UCSF is the University of California campus dedicated to the health sciences. It carries out patient care, research and education, and runs graduate and professional programs in health fields. It operates medical centers and children's hospitals in San Francisco and Oakland. Contracts are signed by The Regents of the University of California, the governing board of the UC system.",
+      "website": "https://www.ucsf.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About UCSF",
+        "url": "https://www.ucsf.edu/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004270",
+    "notes": "OUSD agenda names The Regents of the University of California (UCSF), San Francisco, for health and student services, which matches the UCSF about page (UC health sciences campus with patient care, research, education, and children's hospitals in San Francisco and Oakland). The summary is neutral and supported by the cited page and the official agenda titles; the separate Children's Hospital Oakland entity is not conflated.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/472793034",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.chapter510.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.chapter510.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008846",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'Chapter 510 Ink' in Oakland, CA, EIN 47-2793034 (ProPublica Nonprofit Explorer), matching the agenda text 'Chapter 510 Ink, Oakland, CA'",
+      "Organization's own website shows the same EIN 47-2793034 and an Oakland address",
+      "Website describes a youth writing and publishing center and mentions a Westlake Writers' Room at Westlake Middle School, matching the OUSD Westlake Middle School agreement",
+      "Website mentions teaching artists in classrooms across Oakland Unified School District schools, matching OUSD's 'Classroom & academic programs' contracts"
+    ],
+    "key": "v-008846",
+    "notes": "Legal name per IRS/ProPublica is 'Chapter 510 Ink'; the website brands it 'Chapter 510'. WebSearch budget was exhausted, so no CA Secretary of State or SAM.gov lookup was done.",
+    "profile": {
+      "address": "546 9th Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "47-2793034",
+      "email": "info@chapter510.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Chapter 510 Ink",
+      "orgType": "nonprofit",
+      "phone": "510-469-0108",
+      "samUei": null,
+      "summary": "Chapter 510 is an Oakland nonprofit youth writing, bookmaking and publishing center. It describes itself as a safe space for Black, brown and queer youth to find joy and power in writing. It has published youth-written books and runs writing programs, including in Oakland public schools.",
+      "website": "https://www.chapter510.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Chapter 510 Ink - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/472793034"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "ein"
+        ],
+        "title": "Chapter 510",
+        "url": "https://www.chapter510.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Contact Us — Chapter 510",
+        "url": "https://www.chapter510.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008846",
+    "notes": "ProPublica lists Chapter 510 Ink as a 501(c)(3) in Oakland with EIN 47-2793034, matching the EIN on the organization's own site and contact page; the site documents the Westlake Writers' Room and OUSD school programs, matching the agreements. The summary, phone, email and address are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

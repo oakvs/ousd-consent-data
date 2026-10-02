@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.maximhealthcare.com/maxim-healthcare-locations/columbia-md-headquarters/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.maximhealthcare.com/maxim-healthcare-locations/states/california/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Maxim_Healthcare_Services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-maxim-healthcare-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Maxim Healthcare Services is headquartered in Columbia, MD, matching the Columbia, MD location in the agenda text (company headquarters page and Wikipedia)",
+      "Maxim's own website lists school nursing and behavioral support services and says it works with school systems, consistent with OUSD's special education nonpublic agency contracts",
+      "Maxim lists California regional offices, including an Emeryville office in the East Bay"
+    ],
+    "key": "n-maxim-healthcare-services",
+    "notes": "Maxim has no registry IDs found in light research. Legal name shown as it appears on Wikipedia; the corporate form may be 'Maxim Healthcare Services, Inc.'.",
+    "profile": {
+      "address": "7227 Lee Deforest Dr, Columbia, MD 21046",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Columbia, MD",
+      "legalName": "Maxim Healthcare Services",
+      "orgType": "company",
+      "phone": "1(410) 910-1500",
+      "samUei": null,
+      "summary": "A privately held company based in Columbia, Maryland, that provides in-home and community health care. Its services include private duty nursing for adults and children, school nursing, personal caregiving, home health services and behavioral support. It also works with school systems to deliver health care to students.",
+      "website": "https://www.maximhealthcare.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Columbia, MD Headquarters",
+        "url": "https://www.maximhealthcare.com/maxim-healthcare-locations/columbia-md-headquarters/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "California",
+        "url": "https://www.maximhealthcare.com/maxim-healthcare-locations/states/california/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Maxim Healthcare Services",
+        "url": "https://en.wikipedia.org/wiki/Maxim_Healthcare_Services"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-maxim-healthcare-services",
+    "notes": "Maxim's own headquarters page confirms Columbia, MD (matching the agenda), the address, phone and services, and the California page confirms school nursing, behavioral support and an Emeryville office; Wikipedia confirms the name, privately held status and HQ. The summary is neutral and supported, and the 2022 split that created Amergis (staffing) does not affect this home health and school services entity.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

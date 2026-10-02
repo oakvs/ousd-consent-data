@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/871229605",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kidscookingforlife.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kidscookingforlife.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007225",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Registered nonprofit 'Youth Cooking Services', also known as 'Kids Cooking For Life', in Larkspur, CA (ProPublica Nonprofit Explorer, EIN 87-1229605), matching the agenda name and the agenda location 'Larkspur, CA'",
+      "Organization's own website footer says 'Youth Cooking Services, dba Kids Cooking for Life' with the same tax ID, and its contact page gives a Larkspur, CA mailing address",
+      "Website describes in-class cooking and nutrition programs for Bay Area schools including Title-I schools, matching OUSD's 'Classroom & academic programs' contracts for an elementary school"
+    ],
+    "key": "v-007225",
+    "notes": "Phone and general email are not listed on the pages fetched; program@kidscookingforlife.org is the only email shown on the home page. The website did not mention Oakland or OUSD by name, so identity rests on the name and dba match, the Larkspur location, and the school-based program description. Web search was unavailable (session budget exhausted), so registries were checked via direct fetch only; no CA Secretary of State or SAM.gov lookup was done.",
+    "profile": {
+      "address": "P.O. Box 94, Larkspur, CA 94977",
+      "caEntityNumber": null,
+      "ein": "87-1229605",
+      "email": "program@kidscookingforlife.org",
+      "headquarters": "Larkspur, CA",
+      "legalName": "Youth Cooking Services",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Kids Cooking for Life is a nonprofit that teaches Bay Area kids and teens about nutrition and cooking. It offers in-class cooking lessons, virtual classes for families at home, and training for staff who want to teach cooking themselves. It serves schools, after-school programs and other community sites.",
+      "website": "https://www.kidscookingforlife.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Youth Cooking Services - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/871229605"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "orgType"
+        ],
+        "title": "Kids Cooking for Life",
+        "url": "https://www.kidscookingforlife.org"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact - Kids Cooking for Life",
+        "url": "https://www.kidscookingforlife.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007225",
+    "notes": "ProPublica and the organization's own site confirm Youth Cooking Services dba Kids Cooking for Life (EIN 87-1229605) in Larkspur, CA, matching the agenda name and location, and its in-school cooking programs fit the Franklin Elementary classroom-program agreements. Summary, email, address and legal details are supported and neutral; the site does not name OUSD, so identity rests on the distinctive name, location and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

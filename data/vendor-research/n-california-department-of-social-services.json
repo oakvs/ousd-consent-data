@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cdss.ca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.cdss.ca.gov/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdss.ca.gov/inforesources/refugees/refugee-school-impact-program",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-social-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly the State of California agency 'California Department of Social Services' (cdss.ca.gov), the only state agency of that name; OUSD's records name it as the grantor/funding source",
+      "CDSS has a Refugee Programs Bureau that works with schools to help refugees resettle, consistent with the Refugee School Impact / newcomer education grant OUSD's English Language Learner and Multilingual Achievement office receives"
+    ],
+    "key": "n-california-department-of-social-services",
+    "notes": "WebSearch budget was exhausted, so the CalNEW / Refugee School Impact grant link to CDSS was not confirmed on a fetched page (the CDSS pages fetched describe the Refugee Programs Bureau but do not name CalNEW). The CDE CalNEW page redirected to a bot-check and was not used. Identity rests on the unambiguous agency name plus OUSD's own grant records.",
+    "profile": {
+      "address": "744 P Street, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "piar@dss.ca.gov",
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Social Services",
+      "orgType": "public_agency",
+      "phone": "(916) 651-8848",
+      "samUei": null,
+      "summary": "The California Department of Social Services is a state government agency that supports programs serving more than eight million people in California. These include cash aid, food benefits, in-home support services, child welfare and adult protective services. Its Refugee Programs Bureau works with counties, resettlement agencies, schools and community organizations to help refugees resettle in California.",
+      "website": "https://www.cdss.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "California Department of Social Services",
+        "url": "https://www.cdss.ca.gov/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - California Department of Social Services",
+        "url": "http://www.cdss.ca.gov/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Refugee Programs Bureau - California Department of Social Services",
+        "url": "https://www.cdss.ca.gov/inforesources/refugees/refugee-school-impact-program"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-california-department-of-social-services",
+    "notes": "OUSD's records name the California Department of Social Services as the grantor of the CalNEW/Refugee School Impact grant; the cited cdss.ca.gov pages confirm the agency name, the eight-million-people scope, the Refugee Programs Bureau's work with counties, resettlement agencies, schools and community organizations, and the general contact details (phone, Public Inquiry and Response Unit email, 744 P Street address). The CalNEW grant itself is not named on the fetched CDSS pages, but the agency name is unambiguous and the summary makes no grant claim.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

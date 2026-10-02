@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.perkinseastman.com/studios/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.perkinseastman.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Perkins_Eastman",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001423",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Perkins Eastman's own website lists an Oakland, CA studio (1111 Broadway, Suite 300), matching the agenda location 'Oakland, CA'",
+      "The Oakland studio page lists 'Oakland Unified School District: McClymonds High School Modernization', matching the OUSD McClymonds High School architectural services agreement in the agenda",
+      "Firm is an architecture, planning and interior design practice, matching OUSD's 'School buildings & construction' contracts"
+    ],
+    "key": "v-001423",
+    "notes": "Legal name 'Perkins Eastman Architects DPC' (design professional corporation) was not confirmed on a cited page, so legalName is null. No registry (CA SOS, SAM.gov) lookup was possible because the web search budget was exhausted. Phone, address and email are the Oakland studio and the firm's general inquiries address; headquarters is New York per Wikipedia, which is a secondary source.",
+    "profile": {
+      "address": "1111 Broadway, Suite 300, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "humanbydesign@perkinseastman.com",
+      "headquarters": "New York, NY",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 654-2544",
+      "samUei": null,
+      "summary": "Perkins Eastman is an international architecture, urban design, planning and interior design firm founded in 1981. It works through studios in many cities, including Oakland, California, where its work includes educational and civic projects.",
+      "website": "https://www.perkinseastman.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "Perkins Eastman Oakland Studio",
+        "url": "https://www.perkinseastman.com/studios/oakland/"
+      },
+      {
+        "supports": [
+          "email",
+          "website"
+        ],
+        "title": "Contact - Perkins Eastman",
+        "url": "https://www.perkinseastman.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Perkins Eastman - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Perkins_Eastman"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001423",
+    "notes": "Perkins Eastman's Oakland studio page lists the OUSD McClymonds High School Modernization project, matching the agenda's architectural services agreement and Oakland location. Address, phone, general inquiry email, website, 1981 founding and New York headquarters are all shown on the cited pages, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

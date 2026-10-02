@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bartosarchitecture.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bartosarchitecture.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009568",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Contact page of bartosarchitecture.com shows the legal name 'Bartos Architecture Inc.' in San Mateo, CA, matching the agenda's 'Bartos Architecture, Inc.' and 'San Mateo, CA'",
+      "Website describes architecture, construction management and master planning services with a focus on school facilities, matching OUSD's 'School buildings & construction' architectural services agreement"
+    ],
+    "key": "v-009568",
+    "notes": "Web search budget was exhausted, so no Secretary of State or SAM.gov registry check was done; identity rests on the firm's own website (exact legal name, San Mateo location, school-facilities focus). No OUSD mention found on the site. General email not shown in full on the contact page, so left null.",
+    "profile": {
+      "address": "300 8th Ave, San Mateo, CA 94401",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Mateo, CA",
+      "legalName": "Bartos Architecture Inc.",
+      "orgType": "company",
+      "phone": "(650) 340-1221",
+      "samUei": null,
+      "summary": "An architecture firm in San Mateo, California. It provides design, construction management and master planning services, and specializes in school facilities.",
+      "website": "https://www.bartosarchitecture.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Bartos Architecture Studio",
+        "url": "https://www.bartosarchitecture.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Bartos Architecture Inc.",
+        "url": "https://www.bartosarchitecture.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009568",
+    "notes": "The cited contact page shows the exact legal name Bartos Architecture Inc. at 300 8th Ave, San Mateo, CA with phone (650) 340-1221, matching the agenda name and city. The site describes architecture, construction management and master planning with a school-facilities focus, which fits a Markham Elementary restroom architectural services agreement. No registry check was possible, but the identity match is specific and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

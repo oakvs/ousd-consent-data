@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.pge.com/en/about/company-information/company-profile.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000075488&type=10-K",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003241",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Legal name matches the SEC registrant 'PACIFIC GAS & ELECTRIC Co' (CIK 0000075488), a California-incorporated electric and gas utility, matching the agenda name 'Pacific Gas & Electric Company'",
+      "pge.com describes PG&E as delivering natural gas and electric service across northern and central California, which includes Oakland, consistent with an electrical vehicle charger installation at an Oakland school"
+    ],
+    "key": "v-003241",
+    "notes": "Agenda gives San Francisco, CA, while current sources show headquarters in Oakland (300 Lakeside Drive); likely a historical or billing address difference, not confirmed. Could not locate or fetch a page for the 'EV Charge Schools and Parks' program (search budget exhausted, guessed URLs 404), so the OUSD-specific link is unverified. No general business phone or mailing address was cited; the 1-877-660-6789 number on pge.com is a residential customer service line and was left out. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Pacific Gas & Electric Co",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Pacific Gas and Electric Company (PG&E) is a utility in California. It delivers natural gas and electric service to about 16 million people across northern and central California. It was incorporated in California in 1905.",
+      "website": "https://www.pge.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "PG&E Company Information",
+        "url": "https://www.pge.com/en/about/company-information/company-profile.html"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Pacific Gas & Electric Co. - SEC EDGAR company information",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000075488&type=10-K"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

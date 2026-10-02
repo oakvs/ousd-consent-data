@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943238591",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rtebn.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-rebuilding-together-east-bay-network",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Rebuilding Together East Bay Network' (ProPublica Nonprofit Explorer, EIN 94-3238591)",
+      "Located in Berkeley, CA, matching the agenda text 'Berkeley, CA'",
+      "Organization's own website lists workforce development among its programs, consistent with a no-cost agreement with OUSD's Adult and Career Education Department"
+    ],
+    "key": "n-rebuilding-together-east-bay-network",
+    "notes": "Website content fetched did not mention Oakland Unified or Adult and Career Education; identity rests on exact name match to the registered nonprofit, Berkeley location, and workforce development programs. No CA Secretary of State or SAM.gov lookup done.",
+    "profile": {
+      "address": "732 Gilman St. Berkeley, CA 94710",
+      "caEntityNumber": null,
+      "ein": "94-3238591",
+      "email": "info@rtebn.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Rebuilding Together East Bay Network",
+      "orgType": "nonprofit",
+      "phone": "(510) 644-8979",
+      "samUei": null,
+      "summary": "A nonprofit based in Berkeley, California, that provides free home repairs and critical safety modifications for low-income seniors, veterans, and people with disabilities. It also runs workforce development, affordable housing construction, community facility repair, and electrification upgrade programs.",
+      "website": "https://www.rtebn.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Rebuilding Together East Bay Network - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943238591"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Rebuilding Together East Bay Network",
+        "url": "https://www.rtebn.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-rebuilding-together-east-bay-network",
+    "notes": "Exact name match to a Berkeley-based 501(c)(3) (EIN 94-3238591 per ProPublica); its own site lists workforce development and student skill-building programs, consistent with a no-cost agreement with OUSD Adult and Career Education. Summary, contact details and EIN are supported by the cited sources, though neither source mentions OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

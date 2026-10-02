@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942264395",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.victor.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.victor.org/chico",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003106",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Victor Treatment Centers Inc', Chico, CA (ProPublica Nonprofit Explorer, EIN 94-2264395), matching the agenda's 'Victor Treatment Center' in Chico, CA",
+      "victor.org has a Chico, Butte County office at 1360 East Lassen Avenue and lists non-public school services, matching OUSD's special education nonpublic school contract",
+      "The old domain victortc.org (Victor Treatment Centers) redirects to victor.org"
+    ],
+    "key": "v-003106",
+    "notes": "Confidence medium because no cited page explicitly links the victor.org brand to the legal name 'Victor Treatment Centers Inc' (only the victortc.org redirect and matching Chico location), and North Valley School itself was not found on any fetched page. Search budget was exhausted, so no CA Secretary of State or SAM.gov lookup was done. Website calls the org 'Victor'; main statewide line (844) 547-1442; Chico phone used here.",
+    "profile": {
+      "address": "1360 East Lassen Avenue, Chico, CA 95973",
+      "caEntityNumber": null,
+      "ein": "94-2264395",
+      "email": null,
+      "headquarters": "Chico, CA",
+      "legalName": "Victor Treatment Centers Inc",
+      "orgType": "nonprofit",
+      "phone": "(530) 267-1700",
+      "samUei": null,
+      "summary": "A California nonprofit that provides community-based mental health and care coordination services for children, youth and families in many California counties. Its programs include school-based mental health services, early childhood services, and non-public school and short-term residential therapeutic programs.",
+      "website": "https://www.victor.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Victor Treatment Centers Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942264395"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Victor",
+        "url": "https://www.victor.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Chico - Victor",
+        "url": "https://www.victor.org/chico"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

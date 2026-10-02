@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.syserco.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.syserco.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.syserco.com/k-12-schools",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004166",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Syserco's own Contact Us page lists its California headquarters at 215 Fourier Ave., Fremont, CA, matching the Fremont, CA location in the agenda text",
+      "Syserco's K-12 Schools page lists Oakland Unified School District among the school districts it has worked with",
+      "Syserco describes building automation, energy management and systems integration work, consistent with OUSD's school buildings and facilities contracts (ventilation, plumbing, indoor air quality, building service support)"
+    ],
+    "key": "v-004166",
+    "notes": "Registry lookups (CA Secretary of State, SAM.gov) were not done because the web search budget was exhausted, so no entity number or UEI is given. The agenda names the vendor 'Syserco Energy Solutions, Inc.' and also 'Syserco, Inc.'; the website lists 'Syserco, Inc.' with a Fremont 'Energy Solutions' office (Suite 140), so the legal name should be confirmed against the Secretary of State record. No general email address is shown on the site.",
+    "profile": {
+      "address": "215 Fourier Ave. Suite 100 Fremont, CA 94539",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fremont, CA",
+      "legalName": "Syserco, Inc.",
+      "orgType": "company",
+      "phone": "(510) 498-1171",
+      "samUei": null,
+      "summary": "Syserco is a company that designs, installs and services energy management and building automation systems for commercial, education, healthcare and data center buildings. Its work includes building controls, systems integration and energy consulting. It has offices in California and Illinois.",
+      "website": "https://www.syserco.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - Syserco",
+        "url": "https://www.syserco.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Syserco",
+        "url": "https://www.syserco.com"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "K-12 Schools - Syserco",
+        "url": "https://www.syserco.com/k-12-schools"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004166",
+    "notes": "Syserco's contact page lists Syserco, Inc. and a Syserco Energy Solutions division at 215 Fourier Ave., Fremont, CA, matching the agenda name and location, and its K-12 page lists Oakland USD projects (HVAC, energy upgrades) consistent with the facilities contracts. Phone, address, website, orgType and the neutral summary are supported by the cited pages; the legal name 'Syserco, Inc.' appears on the site but was not checked against a state registry.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

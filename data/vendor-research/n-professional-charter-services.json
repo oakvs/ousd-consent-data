@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.professionalcharterservices.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.professionalcharterservices.com/school-field-trips",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.professionalcharterservices.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-professional-charter-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Located in San Francisco, CA (696 Amador St), matching the agenda text 'San Francisco, CA'",
+      "Website describes SPAB-certified (School Pupil Activity Bus) charter bus service for schools, matching OUSD's 'Agreement for Transportation Services - School Pupil Activity Bus (SPAB)' contract"
+    ],
+    "key": "n-professional-charter-services",
+    "notes": "No registry IDs (CA SOS, EIN, UEI) were looked up. Company site does not mention OUSD directly; identity rests on SF location and SPAB school-bus service matching the contract title.",
+    "profile": {
+      "address": "696 Amador St, San Francisco, CA 94124",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Sales@professionalcharterservices.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Professional Charter Services",
+      "orgType": "company",
+      "phone": "(415) 550-7550",
+      "samUei": null,
+      "summary": "A charter bus company based in San Francisco that provides group transportation around the Bay Area. It offers buses and vans for school field trips, athletic team travel, college tours, corporate events and special occasions. It describes its buses and drivers as SPAB-certified, meaning approved for California school pupil activity bus service.",
+      "website": "https://www.professionalcharterservices.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Professional Charter Services",
+        "url": "https://www.professionalcharterservices.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "School Field Trips San Francisco",
+        "url": "https://www.professionalcharterservices.com/school-field-trips"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact",
+        "url": "https://www.professionalcharterservices.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-professional-charter-services",
+    "notes": "Exact name match, San Francisco location (696 Amador St) matches the agenda, and the company advertises SPAB-certified school bus service matching the SPAB transportation agreement. Summary, contact details and address are all supported by the cited pages; the site does not mention OUSD directly, but name, city and service together make identity solid.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473207203",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://coredistricts.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://coredistricts.org/vision-theory-of-action/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://coredistricts.org/who-we-are/history/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006984",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Core Districts' in Sacramento, CA (ProPublica Nonprofit Explorer, EIN 47-3207203), matching the agenda location 'Sacramento, CA'",
+      "CORE Districts' own Contact page lists a Sacramento, CA address (2014 Capitol Ave)",
+      "CORE Districts' history page says Oakland Unified joined the CORE Districts, and the organization runs school networks for secondary schools, consistent with OUSD's 'High School Network' services agreement"
+    ],
+    "key": "v-006984",
+    "notes": "Web search was unavailable in this run; pages were found by fetching the organization's site directly and the ProPublica API. California Secretary of State entity number and SAM.gov UEI were not checked.",
+    "profile": {
+      "address": "2014 Capitol Ave Suite 100 #4014, Sacramento, CA 95811",
+      "caEntityNumber": null,
+      "ein": "47-3207203",
+      "email": "core@coredistricts.org",
+      "headquarters": "Sacramento, CA",
+      "legalName": "Core Districts",
+      "orgType": "nonprofit",
+      "phone": "(916) 596-2548",
+      "samUei": null,
+      "summary": "CORE Districts is a California education nonprofit founded in 2010. It brings together nine large urban school districts to share data, build improvement skills and run school networks, with the aim of closing gaps in student opportunity and achievement.",
+      "website": "https://coredistricts.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Core Districts - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473207203"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - CORE Districts",
+        "url": "https://coredistricts.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Vision, Mission, and Theory of Action - CORE Districts",
+        "url": "https://coredistricts.org/vision-theory-of-action/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "History - CORE Districts",
+        "url": "https://coredistricts.org/who-we-are/history/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006984",
+    "notes": "CORE Districts is a Sacramento 501(c)(3) (ProPublica, EIN 47-3207203) whose site lists Oakland as a member district and the same Sacramento address, matching the agenda's Sacramento location and a High School Network services agreement. Summary, website, phone, generic business email, address, EIN and org type are all shown on the cited pages and are neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

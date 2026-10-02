@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.urbanleadercoaching.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.urbanleadercoaching.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies?q=urban+leader+coaching&jurisdiction_code=us_ca",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009448",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a California LLC 'Urban Leader Coaching LLC' registered in Lynwood, CA, matching the agenda location (OpenCorporates)",
+      "Website of 'Urban Leader Coaching, LLC' describes coaching and professional development for urban teachers and school leaders, matching OUSD's 'Classroom & academic programs' and 'Educator Effectiveness' contracts"
+    ],
+    "key": "v-009448",
+    "notes": "Medium, not high: web search was unavailable (session search budget exhausted), so identity rests on an exact name match plus a Lynwood, CA LLC listing on OpenCorporates, and the website itself never states a location or mentions OUSD. The link between the website and the Lynwood LLC is inferred from the identical name and the educator-coaching focus. Registered address and CA entity number were seen on OpenCorporates only (an aggregator, address may be a residence) so were left null; no phone found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "grow@urbanleadercoaching.com",
+      "headquarters": "Lynwood, CA",
+      "legalName": "Urban Leader Coaching, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A limited liability company that provides coaching and professional development for teachers and school leaders. Its website describes individual and group coaching and training for school teams, with a stated aim of growing and developing diverse urban teachers and school leaders.",
+      "website": "https://www.urbanleadercoaching.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "website"
+        ],
+        "title": "Urban Leader Coaching - Contact",
+        "url": "https://www.urbanleadercoaching.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Urban Leader Coaching",
+        "url": "https://www.urbanleadercoaching.com"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "OpenCorporates search: Urban Leader Coaching LLC (California)",
+        "url": "https://opencorporates.com/companies?q=urban+leader+coaching&jurisdiction_code=us_ca"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

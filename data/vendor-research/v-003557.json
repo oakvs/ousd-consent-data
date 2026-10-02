@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.redgwick.com/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.redgwick.com/contact.php",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://dbejournal.com/index.php?show_ad=64885",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-003557",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Redgwick Construction Company, a California-licensed general engineering contractor (CSLB license no. 140057 on its own site and BuildZoom)",
+      "Located at 21 Hegenberger Ct, Oakland, CA 94621, matching the agenda's Oakland, CA",
+      "The company's own project map lists OUSD projects that match the agenda titles: Sequoia, Crocker Highland, Calvin Simmons, Madison Primary, ICS-TCN Cesar Chavez Turf Replacement and Oakland HS Turf Replacement",
+      "Work type (site improvements, turf and paving) matches OUSD's 'School buildings & construction' contracts"
+    ],
+    "key": "v-003557",
+    "notes": "Company website has an incomplete TLS certificate chain, so automated fetchers may fail on it; details were read via a direct request. No CA Secretary of State, EIN or SAM.gov details were confirmed, and no general email is published. License number is not included because it is not a profile field.",
+    "profile": {
+      "address": "21 Hegenberger Court, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Redgwick Construction Company",
+      "orgType": "company",
+      "phone": "(510) 792-1727",
+      "samUei": null,
+      "summary": "A family-founded construction company based in Oakland, California, in business since 1947. It is a licensed general engineering contractor that does grading, underground utility work, street reconstruction, roadway widening, asphalt paving and pavement repair for public agencies in the Bay Area.",
+      "website": "https://www.redgwick.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Redgwick Construction | A Tradition of Excellence",
+        "url": "https://www.redgwick.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | Redgwick Construction",
+        "url": "https://www.redgwick.com/contact.php"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Redgwick Construction Company",
+        "url": "https://dbejournal.com/index.php?show_ad=64885"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003557",
+    "notes": "Company site (fetched directly; TLS chain incomplete) and the DBE Journal ad confirm Redgwick Construction Company at 21 Hegenberger Ct, Oakland, phone (510) 792-1727, with an OUSD project map matching the agenda titles (Sequoia, Crocker Highland, Calvin Simmons, Madison Primary, Cesar Chavez and Oakland HS turf). Summary matches the site's 1947 founding and services; 'family-founded' is a minor stretch since the company was sold out of the Redgwick family in 2005, but the founding family claim is accurate.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

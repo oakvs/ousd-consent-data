@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.frontlineeducation.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.frontlineeducation.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006530",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own contact page shows the legal entity 'Frontline Technologies Group LLC', matching the agenda's contracting name",
+      "Headquarters at 550 E Swedesford Road, Suite 360, Wayne, PA 19087 matches the agenda location 'Wayne, PA'",
+      "Website describes K-12 school administration software (human capital, business operations, student management), matching OUSD's Technology, Talent/Human Resources and Chief Academic Officer service agreements"
+    ],
+    "key": "v-006530",
+    "notes": "No main phone or general email appears on the company's About or Contact pages, so both are null. Registry IDs (EIN, CA entity number, SAM UEI) were not looked up.",
+    "profile": {
+      "address": "550 E Swedesford Road, Suite 360, Wayne, PA 19087",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Wayne, PA",
+      "legalName": "Frontline Technologies Group LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Frontline Education makes software for K-12 school districts. Its products help schools manage human resources, such as absences, recruiting and professional growth, as well as business operations, special education and student information.",
+      "website": "https://www.frontlineeducation.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Frontline Education",
+        "url": "https://www.frontlineeducation.com/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact",
+        "url": "https://www.frontlineeducation.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006530",
+    "notes": "Frontline's About and Contact pages show the legal entity Frontline Technologies Group LLC at 550 E Swedesford Rd, Wayne, PA, matching the agenda name and location, and its K-12 HR/business/student software fits OUSD's technology, talent and academic service agreements. The summary, orgType, website, address and headquarters are all supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

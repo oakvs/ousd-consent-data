@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies?q=ignite+reading&jurisdiction_code=us_ca",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ignite-reading.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ignite-reading.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ignite-reading.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ignite-reading",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "California registry record (via OpenCorporates) shows 'IGNITE! READING' at 6 Presidio Terrace, San Francisco, CA 94118, matching the San Francisco, CA location in the agenda text",
+      "The company's own privacy policy gives the same San Francisco address (6 Presidio Ter, San Francisco, CA 94118) for Ignite Reading",
+      "Website describes one-to-one virtual reading tutoring for students working with school districts, matching OUSD's 'Classroom & academic programs' category and a Data Sharing Agreement",
+      "Company about page describes its origin in coaching a first-grade teacher at a school in Oakland, CA"
+    ],
+    "key": "n-ignite-reading",
+    "notes": "Registry record is an out-of-state stock corporation branch registered in California; the parent (likely Delaware) was not checked. The privacy policy email address was garbled on the fetched page, so no email was recorded. The company site lists no public phone number. Registry data was read via OpenCorporates, not the CA Secretary of State site directly.",
+    "profile": {
+      "address": "6 Presidio Terrace, San Francisco, CA 94118",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "IGNITE! READING",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Ignite Reading is a company that provides one-to-one virtual reading tutoring for elementary students. Certified literacy instructors lead short daily sessions using a curriculum based on the Science of Reading. It partners with school districts to deliver this tutoring.",
+      "website": "https://ignite-reading.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "OpenCorporates - IGNITE! READING (California)",
+        "url": "https://opencorporates.com/companies?q=ignite+reading&jurisdiction_code=us_ca"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Ignite Reading",
+        "url": "https://ignite-reading.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Ignite Reading",
+        "url": "https://ignite-reading.com/about"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Ignite Reading Privacy Policy",
+        "url": "https://ignite-reading.com/privacy-policy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-ignite-reading",
+    "notes": "Registry record (IGNITE! READING, CA branch, 6 Presidio Terrace, San Francisco) matches the agenda's San Francisco location, the company's privacy policy lists the same address, and its one-to-one virtual early-literacy tutoring fits an academics no-cost service and data sharing agreement. The summary is neutral and supported by the site; 'elementary' is inferred from early-literacy and 1st/2nd-grade references.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

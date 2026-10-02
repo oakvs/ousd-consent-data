@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.csueastbay.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.csueastbay.edu/about/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_State_University,_East_Bay",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-state-university-east-bay",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The university's own website (csueastbay.edu) names itself California State University, East Bay, matching the agenda name exactly",
+      "Main campus is at 25800 Carlos Bee Boulevard, Hayward, CA 94542, matching the agenda location 'Hayward, CA'",
+      "Wikipedia describes it as a public university in Hayward, a higher-education institution consistent with OUSD's dual enrollment and student health services agreements"
+    ],
+    "key": "n-california-state-university-east-bay",
+    "notes": "No general email found on the cited pages. Web search budget was exhausted, so identity was confirmed by fetching the university site and Wikipedia directly; no page found explicitly mentioning OUSD.",
+    "profile": {
+      "address": "25800 Carlos Bee Boulevard, Hayward, CA 94542",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Hayward, CA",
+      "legalName": "California State University, East Bay",
+      "orgType": "public_agency",
+      "phone": "(510) 885-3000",
+      "samUei": null,
+      "summary": "California State University, East Bay is a public university in the California State University system. Its main campus is in Hayward, with a center in Concord. It offers college degree programs to students in the East Bay region.",
+      "website": "https://www.csueastbay.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "California State University, East Bay | CSUEB",
+        "url": "https://www.csueastbay.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About | California State University, East Bay",
+        "url": "https://www.csueastbay.edu/about/index.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "California State University, East Bay - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_State_University,_East_Bay"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-california-state-university-east-bay",
+    "notes": "Name, Hayward location, phone and address match the university's own site, and a public university fits the dual enrollment and student health agreements. The summary is neutral and supported by the About page and Wikipedia (public CSU system member, Hayward campus, Concord center).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

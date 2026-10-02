@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942235908",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://asianhealthservices.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://banteaysrei.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008182",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Asian Health Services', Oakland, CA, EIN 94-2235908 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website lists Banteay Srei under its Community Programs; Banteay Srei's own site says it was founded by Asian Health Services staff with OUSD and East Bay Asian Youth Center, matching the agenda's 'Banteay Srei Asian Health Services'",
+      "Website describes health and youth services and an AHS clinic at Oakland High School, matching OUSD's 'Student health, support & family services' contracts"
+    ],
+    "key": "v-008182",
+    "notes": "Agenda names both 'Asian Health Services' and 'Banteay Srei Asian Health Services'; Banteay Srei is a program/collaboration of AHS, so the profile describes AHS. No general email found on the homepage. Third-party listings give a different street address (818 Webster St); the address shown is from the organization's own website.",
+    "profile": {
+      "address": "200 Webster St., Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-2235908",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Asian Health Services",
+      "orgType": "nonprofit",
+      "phone": "(510) 735-3100",
+      "samUei": null,
+      "summary": "A nonprofit community health center in Oakland, California. It provides medical, dental and behavioral health care to more than 50,000 patients. It also runs community programs, including youth programs such as Banteay Srei, which supports young Southeast Asian women.",
+      "website": "https://asianhealthservices.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Asian Health Services - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942235908"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Asian Health Services",
+        "url": "https://asianhealthservices.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Banteay Srei",
+        "url": "https://banteaysrei.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008182",
+    "notes": "Asian Health Services is an Oakland 501(c)(3) (EIN 94-2235908, confirmed on ProPublica) that lists Banteay Srei as a community program, and Banteay Srei's site says AHS, EBAYC and OUSD founded it, matching the agenda's names and student health services. Name, phone, address, patient count and summary are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

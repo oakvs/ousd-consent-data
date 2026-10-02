@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/41679980",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.northeastern.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mills.northeastern.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002865",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Northeastern University', Boston, MA, EIN 04-1679980 (ProPublica Nonprofit Explorer); Boston matches the agenda location",
+      "Northeastern's own site says it is headquartered in Boston, Massachusetts and that Mills College at Northeastern is one of its colleges, on its Oakland campus (5000 MacArthur Boulevard, Oakland, CA), matching the agenda's 'Northeastern University - Mills College' naming",
+      "OUSD's own homepage mentions Northeastern University (Northeastern Oakland Opportunity Scholarship for OUSD graduates)"
+    ],
+    "key": "v-002865",
+    "notes": "Vendor name in the agenda also references 'Mills College, Lead by Learning'; no page fetched mentioned Lead by Learning directly. Main Boston phone, email and mailing address could not be found on a fetchable page, so left null. Mills College at Northeastern (Oakland) lists 510.430.2255 and 5000 MacArthur Boulevard, Oakland, CA 94613, but that is the Oakland campus, not the university's main line, so it was not used.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "04-1679980",
+      "email": null,
+      "headquarters": "Boston, MA",
+      "legalName": "Northeastern University",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private research university founded in 1898 and headquartered in Boston, Massachusetts. It is known for experiential learning and has campuses in several cities. Its Oakland campus is home to Mills College at Northeastern.",
+      "website": "https://www.northeastern.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Northeastern University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/41679980"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "About Northeastern University",
+        "url": "https://www.northeastern.edu/about/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Mills College at Northeastern University",
+        "url": "https://mills.northeastern.edu/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002865",
+    "notes": "Agenda names 'Northeastern University' with a Boston, MA location, and Mills College (Oakland) is part of Northeastern; the ProPublica record (Boston, EIN 04-1679980, 501(c)(3)) and the Northeastern About and Mills pages support legal name, org type, headquarters, website, founding year and the neutral summary. The 'Lead by Learning' program name was not found on a fetched page, but the summary does not claim anything about it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Sonic_(ISP)",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sonic.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-sonic-net",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches Sonic.net, LLC, a telecommunications company and internet service provider (Wikipedia: Sonic (ISP))",
+      "Press coverage says Oakland Unified School District's procurement of Sonic fiber let Sonic build a citywide backbone connecting Oakland public schools, matching the dark fiber / Technology Services contract",
+      "Sonic offers dark fiber and custom fiber networks to school districts, matching the agenda title 'Sonic Services Agreement - Dark Fiber'"
+    ],
+    "key": "n-sonic-net",
+    "notes": "Agenda gives San Ramon, CA; a directory snippet suggests Sonic has an office at 17 Crow Canyon Court, San Ramon, but this was not confirmed on a fetched page, so headquarters is listed as Santa Rosa. No registry (CA SOS, SAM.gov) page was checked, so entity numbers and address are null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Santa Rosa, CA",
+      "legalName": "Sonic.net, LLC",
+      "orgType": "company",
+      "phone": "(888) 766-4233",
+      "samUei": null,
+      "summary": "Sonic is a telecommunications company and internet service provider that offers fiber-optic internet, phone service and colocation to homes and businesses. It operates as a competitive local exchange carrier in parts of California and other states. It began in Santa Rosa, California, in 1994.",
+      "website": "https://www.sonic.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Sonic (ISP) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sonic_(ISP)"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "summary"
+        ],
+        "title": "About Sonic",
+        "url": "https://www.sonic.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-sonic-net",
+    "notes": "Sonic.net, LLC is a Santa Rosa ISP and CLEC that sells fiber and dark fiber, which fits 'Sonic Net, LLC' and a Dark Fiber services agreement with OUSD Technology Services; the cited Wikipedia and sonic.com/about pages support the legal name, summary, HQ, website and phone. The OUSD press claim and the San Ramon office were not independently confirmed, but nothing conflicts and the summary is neutral and sourced.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

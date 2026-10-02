@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cabrillo.edu/about-cabrillo/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cabrillo.edu/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cabrillo.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Cabrillo_College",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/List_of_California_Community_Colleges",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-cabrillo-community-college-district",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The formal name 'Cabrillo Community College District' is the district that operates Cabrillo College in Aptos, CA (Cabrillo's About page and Wikipedia)",
+      "It is a public community college district, matching the agenda item: a K12 Strong Workforce Program grant agreement funded by the California Community College Chancellor's Office",
+      "The agenda item is a grant tied to a Bay Area community college consortium, and Cabrillo College is a Bay Area community college"
+    ],
+    "key": "n-cabrillo-community-college-district",
+    "notes": "Web search quota was exhausted, so no registry (SAM.gov, CA SOS) lookups were done and no page explicitly linking Cabrillo CCD to the Bay Area Community College Consortium K12 SWP grant was fetched. Identity rests on the unique formal district name and the public community college funding context. Email omitted: the only email shown is the student Welcome Center inbox, not a general district inbox.",
+    "profile": {
+      "address": "6500 Soquel Drive, Aptos, CA 95003",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Aptos, CA",
+      "legalName": "Cabrillo Community College District",
+      "orgType": "public_agency",
+      "phone": "(831) 479-6100",
+      "samUei": null,
+      "summary": "Cabrillo Community College District runs Cabrillo College, a public community college in Santa Cruz County, California. The college offers transfer pathways, career and technical programs such as nursing, dental hygiene and engineering, and student support services. It has campuses in Aptos and Watsonville.",
+      "website": "https://www.cabrillo.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Cabrillo - Cabrillo College",
+        "url": "https://www.cabrillo.edu/about-cabrillo/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Cabrillo College",
+        "url": "https://www.cabrillo.edu/contact-us/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Cabrillo Community College - Breakthroughs Happen Here",
+        "url": "https://www.cabrillo.edu/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Cabrillo College - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Cabrillo_College"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "List of California Community Colleges - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/List_of_California_Community_Colleges"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-cabrillo-community-college-district",
+    "notes": "The agenda names 'Cabrillo Community College District' exactly, which is a unique public California community college district operating Cabrillo College in Aptos (confirmed on cabrillo.edu and Wikipedia), and a K12 Strong Workforce grant from the community college system fits a public district. Summary, phone, address and website are all supported by the fetched sources; the direct Bay Area consortium link was not independently verified but the exact legal-name match with no similarly named entity makes identity low-risk.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

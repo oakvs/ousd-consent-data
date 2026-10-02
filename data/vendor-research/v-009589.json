@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.rinconconsultants.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rinconconsultants.com/profile-firm-description/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009589",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the firm's website is titled 'Rincon Consultants, Inc.' (Environmental Scientists, Planners, & Engineers)",
+      "The firm lists an Oakland, CA office (66 Franklin Street, Suite 300), matching the agenda location 'Oakland, CA'",
+      "The firm provides environmental science, planning and engineering services, matching OUSD's brownfield assessment, cleanup and lead abatement facilities contracts"
+    ],
+    "key": "v-009589",
+    "notes": "No registry (CA Secretary of State, SAM.gov) lookup was possible in this run, so entity number and UEI are null. Contact details are the Ventura headquarters; the Oakland office is 66 Franklin Street, Suite 300, Oakland, California 94607, Tel/Fax 510-834-4455. The input also lists a Tulum Innovative Engineering, Inc. title, which appears to be an unrelated agenda item grouped under this vendor.",
+    "profile": {
+      "address": "2060 Knoll Drive, Ventura, California 93003",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@rinconconsultants.com",
+      "headquarters": "Ventura, CA",
+      "legalName": "Rincon Consultants, Inc.",
+      "orgType": "company",
+      "phone": "805-644-4455",
+      "samUei": null,
+      "summary": "Rincon Consultants is a company that provides environmental science, planning, and engineering services. It works with public agencies, utilities, developers, and private organizations on projects in areas such as transportation, water, and energy. Its headquarters are in Ventura, California, and it has offices across the state, including one in Oakland.",
+      "website": "https://www.rinconconsultants.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Rincon Consultants, Inc. - Environmental Scientists, Planners, & Engineers",
+        "url": "https://www.rinconconsultants.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Rincon Consultants, Inc. - Firm Description",
+        "url": "https://www.rinconconsultants.com/profile-firm-description/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009589",
+    "notes": "Rincon Consultants, Inc. is an environmental consulting firm with an Oakland office (66 Franklin St, Suite 300) and Ventura headquarters, matching the agenda name, Oakland location, and the brownfield/lead-abatement facilities work. Summary, website, phone, general info@ email, and address are shown on the cited rinconconsultants.com pages and are neutral; the Tulum title in the input is an unrelated agenda item.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

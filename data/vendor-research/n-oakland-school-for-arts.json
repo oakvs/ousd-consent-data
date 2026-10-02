@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680463892",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oakarts.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oakarts.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-school-for-arts",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational nonprofit in Oakland, CA: 'Oakland School For The Arts', EIN 68-0463892 (ProPublica Nonprofit Explorer)",
+      "School website (oakarts.org) lists a campus at 530 18th St., Oakland, CA 94612, in Oakland as in OUSD's Measures N and H agenda item",
+      "Website describes academics integrated with arts training for grades 6-12, matching OUSD's 'Classroom & academic programs' category for this vendor"
+    ],
+    "key": "n-oakland-school-for-arts",
+    "notes": "No general inbox published (only Finance@ and compliance/ombudsman addresses), so email left null. CA entity number and SAM UEI not found (SOS and SAM not fetchable). Charter/authorizer status not confirmed on cited pages, so not stated.",
+    "profile": {
+      "address": "530 18th St., Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "68-0463892",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland School For The Arts",
+      "orgType": "nonprofit",
+      "phone": "510.873.8800",
+      "samUei": null,
+      "summary": "Oakland School for the Arts is a school in Oakland, California serving students in grades 6 to 12. It combines core academic classes with specialized arts training in design, visual media arts, and performing arts such as dance, instrumental music, theatre, and vocal music. It is a registered 501(c)(3) tax-exempt educational nonprofit.",
+      "website": "https://oakarts.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Oakland School For The Arts - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680463892"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Oakland School for the Arts",
+        "url": "https://oakarts.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Oakland School for the Arts",
+        "url": "https://oakarts.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-oakland-school-for-arts",
+    "notes": "Name, Oakland location, grades 6-12 academics-plus-arts program and a Measures N/H MOU for classroom and academic programs all fit one organization; ProPublica confirms the 501(c)(3) (EIN 68-0463892, operates a school in Oakland) and oakarts.org confirms address, phone, website, grades and arts disciplines. The summary is neutral and makes no charter or authorizer claim.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

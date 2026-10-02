@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.girlventures.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.girlventures.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943319189",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008280",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Girlventures' (ProPublica Nonprofit Explorer, EIN 94-3319189); the same EIN is shown on girlventures.org",
+      "Organization's own website lists a mailing address in Oakland, CA, matching the agenda text 'Oakland, CA'",
+      "Website describes youth programs (outdoor education and leadership for girls and gender-expansive youth), consistent with OUSD's 'After-school & summer programs' contract"
+    ],
+    "key": "v-008280",
+    "notes": "Confidence is medium, not high: ProPublica (IRS record) describes the organization as San Francisco-based, while the organization's own website gives an Oakland address (the IRS address may be out of date). Neither page mentions Oakland Unified / OUSD directly. Web search budget was exhausted, so the California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "119 Filbert Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-3319189",
+      "email": "info@girlventures.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "GirlVentures",
+      "orgType": "nonprofit",
+      "phone": "(415) 864-0780",
+      "samUei": null,
+      "summary": "GirlVentures is a nonprofit that runs outdoor education and leadership programs for girls and gender-expansive youth. Its programs explore identity, social justice, leadership, health and the environment, and aim to build self-esteem and resilience.",
+      "website": "https://www.girlventures.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "ein"
+        ],
+        "title": "GirlVentures",
+        "url": "https://www.girlventures.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Contact | GirlVentures",
+        "url": "https://www.girlventures.org/contact"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "Girlventures - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943319189"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

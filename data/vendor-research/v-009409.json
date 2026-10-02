@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.attendly.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.attendly.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.attendly.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.attendly.com/trust-center/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009409",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Attendly's privacy policy names the legal entity 'Attendly, Inc.' with a Berkeley, CA mailing address, matching the agenda's 'Attendly, Inc.' and 'Berkeley, CA'",
+      "Attendly's website describes after-school program management software for California programs with ELOP (Expanded Learning Opportunities Program) reporting, matching OUSD's 'After-school & summer programs' and Expanded Learning funding sources",
+      "Attendly's homepage includes a testimonial from a site coordinator at Oakland USD"
+    ],
+    "key": "v-009409",
+    "notes": "Registry IDs (EIN, CA entity number, SAM UEI) not looked up; web search quota was exhausted, so only the company's own site was used. No public phone number found. Agenda also lists a 'Curacubby, Inc.' agreement under the same vendor; the Curacubby site returned 403 and was not verified (possibly a former or related product name).",
+    "profile": {
+      "address": "2120 University Ave. Berkeley, CA 94704",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello@attendly.com",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Attendly, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Attendly is a company that makes software for managing after-school programs in California. Its platform handles program registration, attendance tracking, and state and federal reporting, including reporting for the Expanded Learning Opportunities Program (ELOP).",
+      "website": "https://www.attendly.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Attendly",
+        "url": "https://www.attendly.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About Attendly",
+        "url": "https://www.attendly.com/about-us/"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Contact Us - Attendly",
+        "url": "https://www.attendly.com/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Privacy Policy - Attendly",
+        "url": "https://www.attendly.com/trust-center/privacy-policy/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009409",
+    "notes": "Attendly's privacy policy names Attendly, Inc. at 2120 University Ave., Berkeley, CA, matching the agenda name and city. Its site describes ELOP-focused after-school software and quotes an Oakland USD site coordinator, which fits the contract purpose. The summary, website, generic hello@ email and address are all supported. The Curacubby agreement was not verified, but it doesn't affect the Attendly profile.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.jensenhughes.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.jensenhughes.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.jensenhughes.com/contact/office-locations/baltimore",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-0022281",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Jensen Hughes's own website lists a San Francisco - Concord office at 1220 Concord Avenue, Suite 400, Concord CA 94520, matching the agenda's 'Concord, CA'",
+      "Website describes fire protection engineering and life safety consulting, matching OUSD's fire alarm, intrusion alarm and sprinkler engineering services contracts for school facilities"
+    ],
+    "key": "v-0022281",
+    "notes": "Web search budget was exhausted, so registries (CA Secretary of State, SAM.gov) were not checked; legal name and registry IDs left null. Phone and address are for the global headquarters (Columbia, MD) as listed on the company's office page. The Concord, CA office (1220 Concord Avenue, Suite 400, Concord CA 94520, +1 925-938-3550) is the local office matching the agenda. No general email is published; only a contact form.",
+    "profile": {
+      "address": "8830 Stanford Boulevard, Suite 300, Columbia, MD 21045",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Columbia, MD",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "+1 410-737-8677",
+      "samUei": null,
+      "summary": "Jensen Hughes is a global consulting and engineering firm focused on fire protection, safety, security and risk management. It began as a fire protection engineering firm in the United States and now also offers services such as code consulting, risk and hazard analysis, process safety and emergency management.",
+      "website": "https://www.jensenhughes.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Jensen Hughes: Safety, Security & Risk Consulting",
+        "url": "https://www.jensenhughes.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Jensen Hughes",
+        "url": "https://www.jensenhughes.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Jensen Hughes Baltimore Office",
+        "url": "https://www.jensenhughes.com/contact/office-locations/baltimore"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-0022281",
+    "notes": "Jensen Hughes is a fire protection and life safety engineering firm, which fits OUSD's fire alarm, intrusion alarm and sprinkler engineering amendments. The company site supports the summary, website, and the Columbia, MD headquarters address and phone; I could not load a Concord, CA office page to confirm the local office, but the name and services are distinctive and match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

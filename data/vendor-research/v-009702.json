@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237133986",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hhministries.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hhministries.org/about-us/mission-history-and-values",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009702",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Harbor House Ministries Inc' (ProPublica Nonprofit Explorer, EIN 23-7133986), located in Oakland, CA, matching the agenda's Oakland, CA",
+      "The organization's own website describes afterschool and summer education programs, matching OUSD's 'Classroom & academic programs' contract funded by Expanded Learning Opportunities Programs"
+    ],
+    "key": "v-009702",
+    "notes": "Email is the general admin inbox shown on the site. Did not find a page that explicitly mentions Franklin Elementary or OUSD; identity rests on registry name/city match plus matching afterschool education programs. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "1811 11th Avenue, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "23-7133986",
+      "email": "admin@hhministries.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Harbor House Ministries Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 534-0165",
+      "samUei": null,
+      "summary": "Harbor House Ministries is a Christian nonprofit in Oakland, California. It runs afterschool and summer education programs, youth leadership development and spiritual formation groups. It also offers food and clothing assistance to children, teens and families.",
+      "website": "https://hhministries.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Harbor House Ministries Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237133986"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Harbor House Ministries",
+        "url": "https://hhministries.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Mission, History and Values - Harbor House Ministries",
+        "url": "https://hhministries.org/about-us/mission-history-and-values"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009702",
+    "notes": "ProPublica shows Harbor House Ministries Inc as an Oakland 501(c)(3) (EIN 23-7133986), and its own site describes Oakland afterschool and summer education programs, which fits an ELO-P-funded academic services agreement at an Oakland elementary school. The summary, phone, general admin email and address all match the cited pages and are neutral; no page names Franklin Elementary or OUSD, so identity rests on name, city and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

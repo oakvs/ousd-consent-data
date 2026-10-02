@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/770568469",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://readingpartners.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://readingpartners.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://readingpartners.org/get-involved/where-how/san-francisco-bay-area/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003539",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Reading Partners', Oakland, CA, EIN 77-0568469 (ProPublica Nonprofit Explorer), matching the agenda location Oakland, CA",
+      "Reading Partners website lists Lockwood STEAM Academy and Laurel Elementary School as partner sites, the same schools named in the OUSD agreements",
+      "Organization provides elementary school literacy tutoring, matching OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "v-003539",
+    "notes": null,
+    "profile": {
+      "address": "638 3rd Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "77-0568469",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Reading Partners",
+      "orgType": "nonprofit",
+      "phone": "(510) 444-9800",
+      "samUei": null,
+      "summary": "Reading Partners is a nonprofit based in Oakland, California that provides one-on-one reading tutoring for elementary school students. It works with schools, families, volunteers and AmeriCorps members in several states to build literacy skills.",
+      "website": "https://readingpartners.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Reading Partners - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/770568469"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Reading Partners",
+        "url": "https://readingpartners.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Reading Partners",
+        "url": "https://readingpartners.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SF Bay Area - Reading Partners",
+        "url": "https://readingpartners.org/get-involved/where-how/san-francisco-bay-area/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003539",
+    "notes": "Reading Partners (Oakland 501(c)(3), EIN 77-0568469, remedial reading) matches the agenda name and Oakland location; its Bay Area page lists Lockwood STEAM, Laurel and Lincoln, which appear in the OUSD agreements. Phone, address, website and the neutral summary are all confirmed by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942925799",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ebayc.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ebayc.org/evolution/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ebayc.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001474",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'East Bay Asian Youth Center', Oakland, CA, EIN 94-2925799 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA (2025 East 12th Street), matching the agenda text",
+      "Its website says it runs programs at Oakland Unified schools such as Garfield Elementary and Oakland High School, matching the school-site services agreements and after-school contracts in the agenda"
+    ],
+    "key": "v-001474",
+    "notes": "General email on the contact page is obfuscated (anti-spam encoding) and no main phone number is published on the site, so both are null. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "2025 East 12th Street, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "94-2925799",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Asian Youth Center",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "East Bay Asian Youth Center (EBAYC) is a nonprofit youth organization based in Oakland, California, with an office in Sacramento. It offers life coaching, care management, academic support and peer leadership programs for young people, including programs based in Oakland schools.",
+      "website": "https://ebayc.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Bay Asian Youth Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942925799"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us – EBAYC",
+        "url": "https://ebayc.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Our Evolution – EBAYC",
+        "url": "https://ebayc.org/evolution/"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "EBAYC – Where young people grow, thrive, and lead!",
+        "url": "https://ebayc.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001474",
+    "notes": "ProPublica confirms the Oakland nonprofit (EIN 94-2925799) and the ebayc.org contact and evolution pages confirm the address, Sacramento office, life coaching/academic support/peer leadership programs, and work at Garfield Elementary and Oakland High, matching the agenda. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

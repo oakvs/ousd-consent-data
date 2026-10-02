@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sdsu.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sdsu.edu/about/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-san-diego-state-university-trustees-of-california-state-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the vendor as 'San Diego State University (Trustees of the California State University)'; SDSU's own About page calls it a member of the California State University system, matching the Trustees of the California State University as legal entity",
+      "The agenda item is an 'Interagency Agreement' between OUSD and a university's Talent/Human Resources Department, consistent with a public university campus rather than a private vendor",
+      "SDSU is a single, unambiguous public university in San Diego, CA; the agenda gives no location that contradicts it"
+    ],
+    "key": "n-san-diego-state-university-trustees-of-california-state-university",
+    "notes": "Two-signal identity rests on the agenda's own wording plus SDSU's CSU membership; no OUSD-SDSU partnership page was found in public search. No general email, EIN, entity number or UEI cited. Legal contracting entity per agenda is the Trustees of the California State University.",
+    "profile": {
+      "address": "5500 Campanile Drive, San Diego, CA 92182",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Diego, CA",
+      "legalName": "San Diego State University",
+      "orgType": "public_agency",
+      "phone": "619-594-5200",
+      "samUei": null,
+      "summary": "San Diego State University is a public research university in San Diego, California, and a member of the California State University system. It offers more than 200 undergraduate and graduate academic programs.",
+      "website": "https://www.sdsu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "About SDSU - San Diego State University",
+        "url": "https://www.sdsu.edu/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - San Diego State University",
+        "url": "https://www.sdsu.edu/about/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-san-diego-state-university-trustees-of-california-state-university",
+    "notes": "The agenda explicitly names San Diego State University (Trustees of the California State University), and an interagency MOU with a university's HR/Talent function fits a public CSU campus. SDSU's About and Contact pages support the summary, CSU membership, 200+ programs, phone and address; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

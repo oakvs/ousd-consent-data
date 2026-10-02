@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237394584",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aicrc.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aicrc.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000403",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'American Indian Child Resource Center', EIN 23-7394584 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes an Indian Education Center and youth programs for Oakland Native youth, matching OUSD's 'Indian Education' funding sources and after-school & summer programs contracts"
+    ],
+    "key": "v-000403",
+    "notes": "No general email or mailing address found on the organization's pages; left null. Website does not mention OUSD directly.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "23-7394584",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "American Indian Child Resource Center",
+      "orgType": "nonprofit",
+      "phone": "510-208-1870",
+      "samUei": null,
+      "summary": "A nonprofit social services and educational community organization serving American Indian youth and their families since 1974. It serves people across the greater Oakland and San Francisco Bay Area. Its programs include youth services such as an Indian Education Center, and family support services including Indian Child Welfare Act (ICWA) services.",
+      "website": "https://www.aicrc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "American Indian Child Resource Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237394584"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "American Indian Child Resource Center",
+        "url": "https://www.aicrc.org/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact — American Indian Child Resource Center",
+        "url": "https://www.aicrc.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000403",
+    "notes": "ProPublica lists a 501(c)(3) of the same name in Oakland, CA, and aicrc.org describes Indian Education Center and youth programs for Oakland Native youth, matching OUSD's Indian Education grant-funded after-school and summer services. Summary, website, phone (general staff line), EIN, and HQ are all supported; no individual contacts were included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

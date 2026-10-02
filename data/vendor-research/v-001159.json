@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.crscience.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943262587",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001159",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Community Resources For Science', Berkeley, CA, EIN 94-3262587 (ProPublica Nonprofit Explorer), matching the agenda's Berkeley, CA",
+      "Organization's own website (same name) gives a Berkeley, CA address at 1611 San Pablo Avenue",
+      "Website describes science education work with teachers and elementary and middle school students, matching OUSD's 'Classroom & academic programs' / Academics and Instruction Department contract"
+    ],
+    "key": "v-001159",
+    "notes": "The web search budget was exhausted, so only the registry page and the organization's homepage were checked. No CA Secretary of State or SAM.gov lookup was done. The homepage did not mention Oakland or OUSD.",
+    "profile": {
+      "address": "1611 San Pablo Avenue, Suite 10 B, Berkeley, CA 94702",
+      "caEntityNumber": null,
+      "ein": "94-3262587",
+      "email": "community@crscience.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Community Resources For Science",
+      "orgType": "nonprofit",
+      "phone": "(510) 527-5212",
+      "samUei": null,
+      "summary": "A nonprofit based in Berkeley, California, that supports teachers and science professionals in underserved communities. It connects scientists with elementary and middle school teachers and offers teaching resources and professional development so students can do hands-on science.",
+      "website": "https://www.crscience.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Community Resources for Science",
+        "url": "https://www.crscience.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Community Resources For Science - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943262587"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001159",
+    "notes": "Exact name match to the Berkeley 501(c)(3) (EIN 94-3262587 on ProPublica) whose own site lists the same address, phone and email and describes East Bay TK-8 science teaching support, consistent with a no-cost academics agreement. Summary is neutral and supported by the homepage; the site does not mention OUSD, but name, city and service all fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

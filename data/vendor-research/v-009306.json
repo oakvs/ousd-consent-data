@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://thinktogether.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://thinktogether.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/330781751",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009306",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Think Together' in Santa Ana, CA; Think Together's own website and contact page give a Santa Ana, CA headquarters",
+      "Think Together's website footer states its 501(c)(3) IRS identification number 33-0781751, and ProPublica Nonprofit Explorer lists EIN 33-0781751 in Santa Ana, CA (independent match)",
+      "Think Together's website describes before and afterschool expanded learning and summer programs for TK-12 students, matching OUSD's 'After-school & summer programs' contracts"
+    ],
+    "key": "v-009306",
+    "notes": "Legal name per IRS/ProPublica is 'T H I N K Education'; Think Together is the operating name. No page found that explicitly mentions Oakland, but the organization lists regional offices (Bay Area office in San Jose) and its programs match the OUSD contracts. General email is obfuscated on the contact page, so omitted.",
+    "profile": {
+      "address": "2101 E Fourth St., Suite 200B, Santa Ana, CA 92705",
+      "caEntityNumber": null,
+      "ein": "33-0781751",
+      "email": null,
+      "headquarters": "Santa Ana, CA",
+      "legalName": "T H I N K Education",
+      "orgType": "nonprofit",
+      "phone": "714.543.3807",
+      "samUei": null,
+      "summary": "Think Together is a nonprofit that works with school districts and communities to run before-school and after-school expanded learning programs for students in transitional kindergarten through 12th grade. It also offers summer learning programs, early childhood education, and college and career readiness programs.",
+      "website": "https://thinktogether.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Think Together",
+        "url": "https://thinktogether.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Think Together",
+        "url": "https://thinktogether.org/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "T H I N K Education - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/330781751"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009306",
+    "notes": "Agenda vendor 'Think Together' in Santa Ana, CA matches thinktogether.org (HQ 2101 E Fourth St, Santa Ana; EIN 33-0781751), and ProPublica independently lists EIN 33-0781751 as T H I N K Education in Santa Ana; its expanded-learning/summer programs match OUSD's after-school contracts. All profile fields are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

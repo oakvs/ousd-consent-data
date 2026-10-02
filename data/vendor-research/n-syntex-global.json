@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://syntexglobal.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://syntexglobal.com/?page_id=25",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/berkeley/syntex-global-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-syntex-global",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California general corporation: 'Syntex Global, Inc.' in Berkeley, CA (business filing summary of California Secretary of State record), matching the agenda's 'Syntex Global, Inc.' and 'Berkeley, CA'",
+      "Company's own website describes translation, interpreting and localization services, matching OUSD's Office of Equity contract under RFP #22-139OE 'Translation and Interpretation Services'"
+    ],
+    "key": "n-syntex-global",
+    "notes": "Entity number and mailing address come from a third-party aggregator of California Secretary of State filings (bizprofile.net), not the Secretary of State site directly. The company's own contact page shows only 'Berkeley, CA 94701-0245'. No public page found that explicitly mentions OUSD.",
+    "profile": {
+      "address": "PO Box 245, Berkeley, CA 94701-0245",
+      "caEntityNumber": "4084182",
+      "ein": null,
+      "email": "info@syntexglobal.com",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Syntex Global, Inc.",
+      "orgType": "company",
+      "phone": "510.628.6088",
+      "samUei": null,
+      "summary": "A for-profit language services company based in Berkeley, California. It provides translation, interpreting, bilingual staffing, cultural training and website localization in more than 100 languages.",
+      "website": "https://syntexglobal.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Syntex Global",
+        "url": "https://syntexglobal.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "CONTACT Syntex Global",
+        "url": "https://syntexglobal.com/?page_id=25"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Syntex Global, Inc. Berkeley, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/berkeley/syntex-global-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-syntex-global",
+    "notes": "Syntex Global, Inc. is a Berkeley, CA general corporation (entity 4084182) offering translation/interpreting services, which fits OUSD's RFP 22-139OE contract and the agenda's Berkeley location. The street address listed in the filing (2000 Allston Way) and the contact page (Berkeley, CA 94701-0245 only) do not show the 'PO Box 245' address, so address is unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
+}

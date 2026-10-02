@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.altenconstruction.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.altenconstruction.com/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hkit.com/portfolio/mcclymonds-high-school-modernization/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000383",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda text gives Richmond, CA; Alten Construction's headquarters is 1141 Marina Way South, Richmond, CA (company website contact page)",
+      "HKIT Architects' project page for the McClymonds High School Modernization names Alten Construction, Inc. as general contractor and Oakland Unified School District as client/owner, matching the agenda's design-builder team (Alten Construction with HKIT Architects, McClymonds High School Modernization)",
+      "Company is a general contractor that builds school projects, matching OUSD's 'School buildings & construction' category",
+      "Agenda text spells the name 'Aten'; the official OUSD titles in the same record spell it 'Alten Construction, Inc.', so 'Aten' is treated as a typo"
+    ],
+    "key": "v-000383",
+    "notes": "The company website footer reads 'Alten Construction, LLC' while the agenda, HKIT and other directories use 'Alten Construction, Inc.'; legal form not verified against the California Secretary of State (not found via search). Contractor license #705713 shown on the website. No general email address published on the site. HKIT Architects is a separate design partner, not covered by this profile.",
+    "profile": {
+      "address": "1141 Marina Way South, Richmond, CA 94804",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Richmond, CA",
+      "legalName": "Alten Construction, Inc.",
+      "orgType": "company",
+      "phone": "510.234.4200",
+      "samUei": null,
+      "summary": "Alten Construction is a general contractor that builds projects in the San Francisco Bay Area. Its work includes commercial buildings, schools and other education projects, laboratories, historic building renovations, and seismic and structural upgrades.",
+      "website": "https://www.altenconstruction.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Alten Construction",
+        "url": "https://www.altenconstruction.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - Alten Construction",
+        "url": "https://www.altenconstruction.com/contact.html"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "McClymonds High School Modernization - HKIT Architects",
+        "url": "https://hkit.com/portfolio/mcclymonds-high-school-modernization/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000383",
+    "notes": "Alten Construction (Richmond, CA general contractor) is named as general contractor for OUSD's McClymonds High School Modernization on HKIT's project page, matching the agenda's Richmond location and design-build team; 'Aten' is a typo of 'Alten'. Summary, website, phone and address are supported by the company site; the site footer says LLC while OUSD and HKIT say Inc., so the legal form is unverified but the OUSD records support the name.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

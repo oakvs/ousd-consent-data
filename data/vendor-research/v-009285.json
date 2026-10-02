@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oakbloomot.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oakbloomot.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oakbloomot.com/school-services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009285",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Business name 'Oak Bloom OT' matches the agenda name exactly, and the website lists a clinic address in Oakland, CA, matching the agenda location",
+      "Website describes a pediatric occupational therapy clinic that offers school-based services, matching OUSD's Special Education Department services agreement"
+    ],
+    "key": "v-009285",
+    "notes": "Identified from the organization's own website only; no registry (CA Secretary of State, SAM.gov) record was checked because the web search budget was exhausted. Legal name and entity type are not stated on the site, so legalName and registry IDs are null. The site does not mention Oakland Unified.",
+    "profile": {
+      "address": "3345 Grand Ave. Suite #3, Oakland, CA 94610",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "admin@oakbloomot.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-380-4428",
+      "samUei": null,
+      "summary": "Oak Bloom OT is a pediatric occupational therapy clinic in Oakland, California. It offers play-based therapy for children and teens, including individual and group sessions, sensory and motor assessments, and parent coaching. It also provides school-based services such as classroom observations.",
+      "website": "https://www.oakbloomot.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Oak Bloom OT",
+        "url": "https://www.oakbloomot.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Oak Bloom OT - Contact",
+        "url": "https://www.oakbloomot.com/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Oak Bloom OT - School Services",
+        "url": "https://www.oakbloomot.com/school-services"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009285",
+    "notes": "The agenda name 'Oak Bloom OT', the Oakland location and the special education services agreement all match a pediatric occupational therapy clinic at 3345 Grand Ave, Oakland that offers school-based services. The summary, for-profit company type, website, phone, generic admin email and address were all confirmed on the cited pages; the site does not mention OUSD, so identity rests on the exact name, location and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

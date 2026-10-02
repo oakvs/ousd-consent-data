@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/940843915",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.savetheredwoods.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.savetheredwoods.org/blog/charting-paths-to-the-redwoods-for-oakland-students/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-save-redwoods-league",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Save The Redwoods League' (ProPublica Nonprofit Explorer, EIN 94-0843915, San Francisco, CA)",
+      "Save the Redwoods League's own blog describes its partnership with Oakland Goes Outdoors, which supports outdoor learning for Oakland Unified School District middle school students, matching the OUSD 'Oakland Goes Outdoors - Middle School Network Office' grant award",
+      "Organization's own website lists the same organization as a 501(c)(3) redwood conservation nonprofit with community engagement programs"
+    ],
+    "key": "n-save-redwoods-league",
+    "notes": null,
+    "profile": {
+      "address": "220 Montgomery St. Suite 350, San Francisco, CA 94104",
+      "caEntityNumber": null,
+      "ein": "94-0843915",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Save The Redwoods League",
+      "orgType": "nonprofit",
+      "phone": "(415) 362-2352",
+      "samUei": null,
+      "summary": "Save the Redwoods League is a nonprofit organization that works to protect and restore California's redwood forests. Its work includes land protection, forest restoration, support for parks, scientific research and programs that connect communities with the redwoods.",
+      "website": "https://www.savetheredwoods.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Save The Redwoods League - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/940843915"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Save the Redwoods League",
+        "url": "https://www.savetheredwoods.org/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "Charting paths to the redwoods for Oakland students",
+        "url": "https://www.savetheredwoods.org/blog/charting-paths-to-the-redwoods-for-oakland-students/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-save-redwoods-league",
+    "notes": "Save the Redwoods League is the grant funder named in the agenda item; ProPublica and the organization's contact page confirm the EIN 94-0843915, San Francisco address, phone and mission, and its blog confirms it funds Oakland Goes Outdoors middle school trips for OUSD. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

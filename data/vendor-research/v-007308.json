@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/811653329",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wellnesstogether.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wellnesstogether.org/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wellnesstogether.org/giving",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007308",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Registered nonprofit 'Wellness Together' in Roseville, CA (ProPublica, EIN 81-1653329), matching the agenda location 'Roseville, CA'",
+      "Official website describes on-campus school mental health services for California school districts, matching OUSD's 'Student health, support & family services' contracts",
+      "Website giving page lists a Roseville, CA mailing address and the same organization name",
+      "Website is for 'Wellness Together, Inc.', a national 501(c)(3) nonprofit, consistent with the ProPublica nonprofit record"
+    ],
+    "key": "v-007308",
+    "notes": "Mailing address is the development office address shown on the giving page. Website does not name Oakland Unified, so the match rests on name, Roseville location and service type. CA entity number and SAM UEI not checked (registries not reachable; web search budget exhausted).",
+    "profile": {
+      "address": "1382 Blue Oaks Blvd Ste 213, Roseville, CA 95678",
+      "caEntityNumber": null,
+      "ein": "81-1653329",
+      "email": "info@wellnesstogether.org",
+      "headquarters": "Roseville, CA",
+      "legalName": "Wellness Together, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(877) 412-8031",
+      "samUei": null,
+      "summary": "Wellness Together is a national nonprofit that provides mental health support for students in schools. Its services include on-campus or online school-based therapy, wellness coaching, and training programs for educators and students. It works with school districts in California and elsewhere.",
+      "website": "https://www.wellnesstogether.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Wellness Together - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/811653329"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "legalName"
+        ],
+        "title": "Wellness Together",
+        "url": "https://www.wellnesstogether.org"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email"
+        ],
+        "title": "Privacy Policy - Wellness Together",
+        "url": "https://www.wellnesstogether.org/privacy"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Giving - Wellness Together",
+        "url": "https://www.wellnesstogether.org/giving"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007308",
+    "notes": "ProPublica (EIN 81-1653329, Roseville CA, mental health 501(c)(3)) matches the website and giving page (same EIN, Roseville address, legal name Wellness Together, Inc.), and the school-based mental health services fit OUSD's student health contracts at school sites. The site does not name Oakland, so the match rests on name, Roseville location and service type, which are all consistent; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

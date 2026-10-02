@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.califitness.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.califitness.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000861",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: the agenda names 'Califitness' and the company's own website is CaliFitness Equipment Services",
+      "Located in Fresno, CA, matching the agenda's location (Fresno, CA)",
+      "Gym equipment repair and maintenance plausibly fits a services agreement for Dewey Academy, but this is an inference; the website does not mention OUSD or schools"
+    ],
+    "key": "v-000861",
+    "notes": "Not confirmed in any public registry (web search budget was exhausted; ProPublica returned HTTP 429 and CA Secretary of State was not checked). Website does not mention OUSD or schools, so the link to the Dewey Academy services agreement is inferred from name, Fresno location and service type. Legal entity name not verified, so legalName is null. Confidence kept at medium; do not publish without registry or OUSD-related confirmation.",
+    "profile": {
+      "address": "7622 N Maroa Ave, Fresno, CA 93711",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@califitness.com",
+      "headquarters": "Fresno, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-877-556-5503",
+      "samUei": null,
+      "summary": "CaliFitness Equipment Services is a company based in Fresno, California, that repairs and maintains gym equipment. It also installs and relocates equipment, rents and sells new and refurbished equipment, and offers preventive maintenance programs. It serves customers in the Central Valley and other parts of California.",
+      "website": "https://www.califitness.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters",
+          "address"
+        ],
+        "title": "CaliFitness Equipment Services",
+        "url": "https://www.califitness.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact CaliFitness",
+        "url": "https://www.califitness.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

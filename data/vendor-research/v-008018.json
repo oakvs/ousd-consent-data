@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/863648469",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-008018",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name match: ProPublica Nonprofit Explorer lists a registered 501(c)(3) 'My Other Brother Mob' (EIN 86-3648469), but the legal name differs slightly from the agenda's 'My Other Brother'",
+      "Located in Oakland, CA, matching the agenda text"
+    ],
+    "key": "v-008018",
+    "notes": "Only one registry match, by name and city. No website found and no independent page linking the organization to OUSD, Castlemont, Dewey or Hoover (the WebSearch budget was exhausted and guessed domains did not resolve). The legal name has an extra 'Mob', so a match with the OUSD vendor is plausible but unconfirmed. Not suitable for publication without a second signal.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "86-3648469",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "My Other Brother Mob",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A tax-exempt 501(c)(3) nonprofit organization based in Oakland, California, classified by the IRS under educational institutions and related activities.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "My Other Brother Mob - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/863648469"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

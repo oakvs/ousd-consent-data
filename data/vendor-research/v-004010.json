@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sowntogrow.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/3859900",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004010",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website lists headquarters at 1721 Broadway #201, Oakland, CA 94612, matching the agenda's Oakland, CA",
+      "California business record (via OpenCorporates) shows SOWN TO GROW, INC., entity 3859900, at the same Oakland address (an out-of-state corporation registered in California)",
+      "Website describes student check-in tools and social-emotional learning curriculum supporting Multi-Tiered Systems of Support, matching OUSD's 'Student health, support & family services' contracts and the 'Multi-Tiered Systems of Support Department' agreement title",
+      "Website lists Oakland Unified School District among the districts it serves"
+    ],
+    "key": "v-004010",
+    "notes": "Mailing address on website is PO Box 398, East Greenbush, NY 12061; street address in Oakland used. California record is a branch of a Delaware corporation (Delaware number 5790217). Web search budget was exhausted, so only direct page fetches were used; ProPublica was rate-limited and the company appears to be for-profit (no EIN sought).",
+    "profile": {
+      "address": "1721 Broadway #201, Oakland, CA 94612",
+      "caEntityNumber": "3859900",
+      "ein": null,
+      "email": "alwaysgrowing@sowntogrow.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Sown To Grow, Inc.",
+      "orgType": "company",
+      "phone": "(415) 745-9465",
+      "samUei": null,
+      "summary": "Sown To Grow is a company that makes student check-in tools and social-emotional learning lessons for schools. Students share how they are feeling each week, and teachers, counselors and administrators can use that information to give support. It is designed to fit into Multi-Tiered Systems of Support, a framework schools use to match help to student needs.",
+      "website": "https://www.sowntogrow.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Sown To Grow",
+        "url": "https://www.sowntogrow.com"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Entity Details :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/3859900"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004010",
+    "notes": "Company site lists an Oakland HQ, names OUSD as a served district and describes an MTSS student check-in platform, and the California registry (SOWN TO GROW, INC., entity 3859900, Delaware parent) matches the same address; this fits the Community Schools/MTSS agreements. Summary and contact fields are supported and neutral, with only generic business contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

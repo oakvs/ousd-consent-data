@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.svmimac.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.svmimac.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009875",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Organization's own website names it 'Silicon Valley Mathematics Initiative', matching the agenda name 'Silicon Valley Mathematics Initiative (SVMI), LLC'",
+      "Mailing address is in San Jose, CA, matching the agenda location 'San Jose, CA'",
+      "Website describes math education professional development and assessment resources for K-12 educators, matching OUSD's 'Classroom & academic programs' services agreement funded by Title II teacher quality"
+    ],
+    "key": "v-009875",
+    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, ProPublica, SAM.gov) could be checked. Legal name, org type (agenda says LLC; not confirmed on the site), EIN, CA entity number and UEI are left null. No mention of Oakland Unified found on the site.",
+    "profile": {
+      "address": "6980 Santa Teresa Blvd., Suite 100, San Jose, CA 95119",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@svmimac.org",
+      "headquarters": "San Jose, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "(408) 776-1645",
+      "samUei": null,
+      "summary": "Silicon Valley Mathematics Initiative (SVMI) works on mathematics education for schools and districts in California and across the United States. It provides professional development, assessment resources and instructional tools for K-12 math teachers.",
+      "website": "https://www.svmimac.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Silicon Valley Mathematics Initiative",
+        "url": "https://www.svmimac.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Silicon Valley Mathematics Initiative",
+        "url": "https://www.svmimac.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009875",
+    "notes": "The organization's site and contact page show the same name, a San Jose, CA address, and math professional development and assessment services that fit a Title II services agreement. The summary, website, phone, email, address and headquarters are all supported. The site calls it a nonprofit while the agenda says LLC, and the candidate correctly left orgType and legalName null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

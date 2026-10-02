@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.musco.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.musco.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008458",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Musco Sports Lighting, LLC' appears exactly on the company's own website contact page and footer, matching the agenda name",
+      "Headquarters address is in Oskaloosa, IA, matching the agenda's location 'Oskaloosa, IA'",
+      "Company makes sports and large-area lighting, matching OUSD's 'Skyline High School Lighting Replacement Project' facilities contract"
+    ],
+    "key": "v-008458",
+    "notes": "WebSearch budget was exhausted during this run, so no public registry (SAM.gov, CA SOS) was checked; registry IDs left null. Identity rests on the company's own site plus agenda name, location and project type.",
+    "profile": {
+      "address": "211 2nd Ave W, P.O. Box 808, Oskaloosa, IA 52577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "lighting@musco.com",
+      "headquarters": "Oskaloosa, IA",
+      "legalName": "Musco Sports Lighting, LLC",
+      "orgType": "company",
+      "phone": "800.825.6020",
+      "samUei": null,
+      "summary": "Musco Sports Lighting is a company that designs and supplies lighting for sports fields and other large outdoor areas. It provides permanent and temporary sports facility lighting, as well as lighting for entertainment venues and infrastructure. It is based in Oskaloosa, Iowa.",
+      "website": "https://www.musco.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Musco Sports Lighting",
+        "url": "https://www.musco.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName"
+        ],
+        "title": "About Us | Musco Sports Lighting",
+        "url": "https://www.musco.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008458",
+    "notes": "Musco's contact page shows the exact legal name 'Musco Sports Lighting, LLC' and a headquarters at 211 2nd Ave W, Oskaloosa, IA, matching the agenda name and city; sports lighting fits the Skyline High School lighting replacement contract. Phone, generic business email, address and summary are all supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

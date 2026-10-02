@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/843885205",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.blackculturalzone.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.blackculturalzone.org/connect",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.blackculturalzone.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008577",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Black Cultural Zone Community Development Corporation', Oakland, CA (ProPublica Nonprofit Explorer, EIN shown)",
+      "The organization's own website uses the same legal name and gives an East Oakland address, matching the agenda's 'Oakland, CA'",
+      "Website describes community development and cultural work in East Oakland, consistent with a community partner contracted by OUSD's Community Schools and Student Services Department (no page found that mentions OUSD directly)"
+    ],
+    "key": "v-008577",
+    "notes": "Phone omitted: the only number on the Connect page is labeled a Safety Ambassador Dispatch Line, not a main line. No page found that mentions OUSD directly; the program-type signal is thematic only. CA entity number and SAM UEI not looked up (search budget exhausted).",
+    "profile": {
+      "address": "8321 International Blvd., Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "84-3885205",
+      "email": "info@Blackculturalzone.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Black Cultural Zone Community Development Corporation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit community development corporation founded in 2019 in East Oakland. It is the implementing arm of the East Oakland Black Cultural Zone Collaborative and works on neighborhood, commercial and cultural development centered on the area's Black communities, including cultural events and business support.",
+      "website": "https://www.blackculturalzone.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Black Cultural Zone Community Development Corporation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/843885205"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - Black Cultural Zone",
+        "url": "https://www.blackculturalzone.org/about"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Connect - Black Cultural Zone",
+        "url": "https://www.blackculturalzone.org/connect"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Black Cultural Zone",
+        "url": "https://www.blackculturalzone.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008577",
+    "notes": "The agenda name 'Black Cultural Zone Community Development' and the Oakland location match the registered 501(c)(3) Black Cultural Zone Community Development Corporation (EIN 84-3885205). ProPublica and the org's own About, Connect and home pages support the legal name, EIN, address, generic info@ email, 2019 founding and the summary, which is neutral. No source mentions OUSD or youth programs, so the after-school fit is thematic only, but the name is distinctive and I found no competing organization.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

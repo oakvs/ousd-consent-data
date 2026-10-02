@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.linq.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linq.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006458",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Legal name on linq.com footer and About page is exactly 'EMS LINQ, LLC', matching the agenda vendor name",
+      "linq.com sells TITAN by LINQ nutrition management software, matching OUSD's 'TITAN Nutrition Management System' / Nutrition Services Department contracts",
+      "Agenda gives Wilmington, NC but the website lists Austin, TX; this location mismatch is unresolved"
+    ],
+    "key": "v-006458",
+    "notes": "Agenda text gives Wilmington, NC (EMS was likely based there before the current branding), but no fetched page confirms that, and the website lists Austin, TX. No registry (NC/TX/CA Secretary of State, SAM.gov) was checked because web search was unavailable. Reviewer should confirm the NC-to-TX relationship before publishing.",
+    "profile": {
+      "address": "5000 Plaza on the Lake, Ste 100 #3130, Austin, TX 78746",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@linq.com",
+      "headquarters": "Austin, TX",
+      "legalName": "EMS LINQ, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A company that makes software for K-12 school districts. Its products cover school nutrition (meal service) management, business operations such as budgets, payroll and purchasing, and payment processing for meals and school fees.",
+      "website": "https://www.linq.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "LINQ K-12 software",
+        "url": "https://www.linq.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About LINQ",
+        "url": "https://www.linq.com/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/822460199",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.changethetune.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008239",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Change The Tune Inc', EIN 82-2460199, Los Angeles, CA (ProPublica Nonprofit Explorer), matching the agenda's 'Change The Tune Inc.' and 'Los Angeles, CA'",
+      "changethetune.org describes a 501(c)(3) nonprofit building youth-leadership curriculum and project-based learning for students, consistent with OUSD's after-school and summer programs contracts; its donation link is under the name 'change-the-tune-inc'"
+    ],
+    "key": "v-008239",
+    "notes": "Medium because the organization's own website does not state a city or mention Oakland Unified, so the link between the website and the Los Angeles registry record rests on the name and the 'change-the-tune-inc' donation link. Contact page lists only a named individual's email, so no contact details were recorded. Web search budget was exhausted; CA SOS and SAM.gov were not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "82-2460199",
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Change The Tune Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that develops curriculum focused on youth leadership and 21st-century skills. It works with students, educators and community partners through project-based learning, aiming to close the opportunity gap for youth in underserved communities.",
+      "website": "https://www.changethetune.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Change The Tune Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/822460199"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Change the Tune",
+        "url": "https://www.changethetune.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

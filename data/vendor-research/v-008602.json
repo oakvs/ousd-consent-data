@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bayareacreative.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/832011288",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008602",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Bay Area Creative Bac' (ProPublica Nonprofit Explorer, EIN 83-2011288) and the website bayareacreative.org shows the same EIN",
+      "Website describes arts education (poetry, hip hop dance, visual arts, after-school clubs, artist residencies), consistent with OUSD's 'Classroom & academic programs' category and a no-cost services agreement at an elementary school",
+      "Website says it serves families in Oakland among other Bay Area cities"
+    ],
+    "key": "v-008602",
+    "notes": "Neither the organization's site nor the other pages fetched mention OUSD or Franklin Elementary. ProPublica lists the IRS-registered city as Hayward, CA, while the agenda gives Oakland, CA; the website says it serves Oakland and other Bay Area cities, so no headquarters was filled in. The only contact on the site is a Director@ inbox, which was left out. No CA Secretary of State or SAM.gov record was checked because the web search budget ran out.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-2011288",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Bay Area Creative Bac",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Bay Area Creative is a nonprofit arts education organization. It uses spoken word poetry, hip hop dance and visual arts to work with young people in under-served Bay Area communities. Its programs include artist visits and residencies, after-school clubs, summer camps, teacher professional development and student anthologies.",
+      "website": "https://www.bayareacreative.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "ein"
+        ],
+        "title": "Bay Area Creative (BAC)",
+        "url": "https://www.bayareacreative.org"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Bay Area Creative Bac - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/832011288"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

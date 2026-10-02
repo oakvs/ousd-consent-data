@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.claytonearlylearning.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.claytonearlylearning.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008423",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: 'Clayton Early Learning' (organization's own website)",
+      "Located in Denver, CO, matching the agenda text's 'Denver, CO'",
+      "Website describes early childhood education and family services, consistent with OUSD's Early Childhood Development Department contract (weak: no page found that mentions Oakland or OUSD)"
+    ],
+    "key": "v-008423",
+    "notes": "Registry lookup (ProPublica Nonprofit Explorer) was rate-limited (HTTP 429) and the web search budget was exhausted, so nonprofit status and EIN were not confirmed and orgType/legalName/EIN are left null. No page found mentions Oakland or OUSD, so identity rests on exact name, Denver location, and service type; a reviewer should confirm via a registry before publishing.",
+    "profile": {
+      "address": "3801 Martin Luther King Blvd. Denver, CO 80205",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Denver, CO",
+      "legalName": null,
+      "orgType": null,
+      "phone": "(303) 355-4411",
+      "samUei": null,
+      "summary": "Clayton Early Learning provides early childhood education and family support services in Denver, Colorado. It runs an early learning school called Educare Denver, along with home-based and community-based programs. It also offers health and wellness programs and a food assistance market for families.",
+      "website": "https://www.claytonearlylearning.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Clayton Early Learning",
+        "url": "https://www.claytonearlylearning.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Clayton Early Learning",
+        "url": "https://www.claytonearlylearning.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.segalco.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.segalco.com/consulting-industries/public-sector-consulting/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.segalco.com/about-us/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003858",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Segal's own Office Locations page lists a Los Angeles (Glendale), CA office, matching the agenda's 'Glendale, CA'",
+      "Segal is a benefits, compensation and human resources consulting firm that lists public schools among its public sector clients, consistent with OUSD's Risk Management / self-insurance (Fund 67) services agreement",
+      "Name 'Segal' matches the agenda's 'The Segal Company'; the website footer names the corporate entity as 'The Segal Group, Inc.', so the exact contracting entity is not confirmed"
+    ],
+    "key": "v-003858",
+    "notes": "Registry lookups (California Secretary of State, SAM.gov) were not done because the web search budget was exhausted; only the organization's own pages were fetched. The agenda says 'The Segal Company' but the Segal website names 'The Segal Group, Inc.'; the contracting legal entity should be confirmed before publishing. The Glendale address is a regional office; the site does not state a headquarters. No general email is published on the pages checked.",
+    "profile": {
+      "address": "500 North Brand Boulevard, Suite 1400, Glendale, CA 91203-3338",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(818) 956-6700",
+      "samUei": null,
+      "summary": "Segal is a consulting firm that advises organizations on health benefits, retirement plans, pay and human resources. It works with public sector clients, including public schools, as well as other employers. The firm was founded in 1939 and has offices across North America.",
+      "website": "https://www.segalco.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Segal Overview",
+        "url": "https://www.segalco.com/about-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Public Sector Consulting",
+        "url": "https://www.segalco.com/consulting-industries/public-sector-consulting/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Office Locations",
+        "url": "https://www.segalco.com/about-us/locations/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

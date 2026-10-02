@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://ww2.arb.ca.gov/waste-management-alameda-county-inc-settlement",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://resource.stopwaste.org/vendor/waste-management-alameda-county-oakland-172-98th-ave",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wm.com/us/en/location/ca/alameda-county",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004559",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Exact name match: 'Waste Management of Alameda County, Inc.' is a real WM subsidiary (California Air Resources Board settlement page; FMCSA record for the same company in Oakland)",
+      "Operates in Oakland, CA (172 98th Ave.) and is described as the exclusive trash and compost collection provider for the City of Oakland, consistent with OUSD's solid waste handling and recycling services agreement",
+      "Agenda gives San Jose, CA, which does not match the Oakland base; likely a billing or regional address, so confidence is reduced"
+    ],
+    "key": "v-004559",
+    "notes": "Agenda lists San Jose, CA but all public sources place Waste Management of Alameda County, Inc. in Oakland; not resolved. CA Secretary of State entity number and SAM UEI could not be retrieved. Principal business location of parent is Houston, TX per ARB page.",
+    "profile": {
+      "address": "172 98th Ave., Oakland, California 94603",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Waste Management of Alameda County, Inc.",
+      "orgType": "company",
+      "phone": "(510) 613-8700",
+      "samUei": null,
+      "summary": "A California company that is a subsidiary of Waste Management, Inc. (WM). It collects trash, recycling and compost for homes and businesses in Alameda County, including Oakland, and owns and operates the Altamont Landfill and Resource Recovery Facility in Livermore.",
+      "website": "https://www.wm.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Waste Management of Alameda County, Inc. Settlement",
+        "url": "http://ww2.arb.ca.gov/waste-management-alameda-county-inc-settlement"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Waste Management of Alameda County - Oakland - 172 98th Ave.",
+        "url": "https://resource.stopwaste.org/vendor/waste-management-alameda-county-oakland-172-98th-ave"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Trash, Garbage and Recycling Services in Alameda County, California",
+        "url": "https://www.wm.com/us/en/location/ca/alameda-county"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

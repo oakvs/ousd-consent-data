@@ -1,0 +1,136 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943081554",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandsymphony.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandsymphony.org/community-education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandsymphony.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.causeiq.com/organizations/east-bay-performing-arts,943081554/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003146",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Located in Oakland, CA, matching the agenda text 'Oakland, CA'",
+      "Website (oaklandsymphony.org) says it operates the Oakland Symphony, Youth Orchestra and Chorus; its MUSE program serves Oakland public schools, matching OUSD's 'After-school & summer programs' contracts",
+      "Cause IQ lists EIN 94-3081554 at 1440 Broadway, Oakland, CA 94612, phone (510) 444-0801 and website oaklandsymphony.org, the same address and phone as the organization's own contact page, with alternate name East Bay Performing Arts",
+      "ProPublica Nonprofit Explorer shows EIN 94-3081554 as East Bay Performing Arts, Oakland, CA, a 501(c)(3) in the Symphony Orchestras category"
+    ],
+    "key": "v-003146",
+    "notes": "Registry legal name (ProPublica) is East Bay Performing Arts; the organization operates publicly as the Oakland Symphony (formerly Oakland East Bay Symphony). The link between the two names comes from Cause IQ (alternate name, same EIN, address, phone and website) rather than from the organization's own site. No general email is listed; California SOS entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "1440 Broadway, Suite 405, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3081554",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Performing Arts",
+      "orgType": "nonprofit",
+      "phone": "(510) 444-0801",
+      "samUei": null,
+      "summary": "The Oakland Symphony is a nonprofit arts organization in Oakland, California. It brings together an orchestra, a chorus and a youth orchestra to present live concerts. It also runs free music education programs, including MUSE, which offers instrumental lessons and music classes in Oakland public schools.",
+      "website": "https://www.oaklandsymphony.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Bay Performing Arts - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943081554"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Oakland Symphony",
+        "url": "https://www.oaklandsymphony.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Community & Education - Oakland Symphony",
+        "url": "https://www.oaklandsymphony.org/community-education/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Oakland Symphony",
+        "url": "https://www.oaklandsymphony.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "Oakland Symphony (OEBS) - Cause IQ",
+        "url": "https://www.causeiq.com/organizations/east-bay-performing-arts,943081554/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003146",
+    "notes": "The Oakland Symphony site, Cause IQ and ProPublica agree on an Oakland symphony-orchestra 501(c)(3) (EIN 94-3081554, 1440 Broadway, (510) 444-0801), and the free in-school MUSE program fits OUSD's after-school contracts. The East Bay Performing Arts legal-name link rests on Cause IQ's alternate name plus the matching EIN, address and phone, not on the org's own site.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

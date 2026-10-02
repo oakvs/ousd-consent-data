@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/273263074",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-002825",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Mentoring In Medicine & Science Inc' (ProPublica Nonprofit Explorer, EIN 27-3263074)",
+      "Registry lists the organization in Oakland, CA, matching the agenda text"
+    ],
+    "key": "v-002825",
+    "notes": "Only the registry match (name + Oakland) was confirmed. The organization's own website could not be found: web search budget was exhausted, and guessed domains failed. mentoringinmedicine.org redirects to medicalmentor.org (Mentoring in Medicine), which shows no location and no Oakland or OUSD mention, so it was NOT treated as the same organization. No website or contact details filled in. Needs a second identity signal (e.g. own website or OUSD mention) before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "27-3263074",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Mentoring In Medicine & Science Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A 501(c)(3) nonprofit in Oakland, California, organized for educational, charitable and scientific purposes. The IRS classifies it under health support services.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "Mentoring In Medicine & Science Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/273263074"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

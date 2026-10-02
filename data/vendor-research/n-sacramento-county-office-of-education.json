@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.scoe.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.scoe.net/educators/initiative_overviews/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-sacramento-county-office-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The official site scoe.net names itself 'Sacramento County Office of Education (SCOE)', located in Sacramento, CA, matching the agenda name and location 'Sacramento, CA'",
+      "scoe.net describes health and wellness initiatives addressing mental health, matching OUSD's 'Student health, support & family services' category and the Children and Youth Behavioral Health Initiative Bridge Grant MOU title",
+      "Search results from the California Department of Education describe funding to Sacramento County Office of Education to provide Children and Youth Behavioral Health Initiative services and a Bridge Grant for local educational agencies (page blocked automated fetch, so not cited)"
+    ],
+    "key": "n-sacramento-county-office-of-education",
+    "notes": "Public county education agency, so no EIN, CA entity number or UEI looked up. The Bridge Grant connection rests on CDE search-result text that could not be fetched (bot block); identity otherwise rests on name, location and the health and wellness program match.",
+    "profile": {
+      "address": "P.O. Box 269003, Sacramento, CA 95826",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@scoe.net",
+      "headquarters": "Sacramento, CA",
+      "legalName": "Sacramento County Office of Education",
+      "orgType": "public_agency",
+      "phone": "(916) 228-2500",
+      "samUei": null,
+      "summary": "A county education agency that serves school districts and schools in Sacramento County, California. It runs student services such as special education, court schools and foster youth coordination, offers professional development for educators, and leads health and wellness initiatives on mental health and school climate.",
+      "website": "https://www.scoe.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Sacramento County Office of Education (SCOE)",
+        "url": "https://www.scoe.net/"
+      },
+      {
+        "supports": [
+          "email",
+          "phone",
+          "address"
+        ],
+        "title": "SCOE",
+        "url": "https://www.scoe.net/educators/initiative_overviews/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-sacramento-county-office-of-education",
+    "notes": "scoe.net shows the exact agenda name and location (Sacramento, CA); SCOE is a public county education agency, so an MOU for a Children and Youth Behavioral Health Initiative grant fits its health and wellness work. Summary, phone, P.O. box address and website are shown on the cited pages, and the generic info@scoe.net address is on the contact page; the Bridge Grant link itself was not confirmed on SCOE's pages but is not claimed in the profile.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

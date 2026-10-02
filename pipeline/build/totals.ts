@@ -1,0 +1,57 @@
+/**
+ * Meeting totals (§7.4). Spending excludes per-year caps and sales caps.
+ */
+import { spendingAmount } from '@oakvs/consent-schema/format'
+import type { TPublishedItem, TTotals } from '@oakvs/consent-schema/schema'
+
+export function computeTotals(items: TPublishedItem[]): TTotals {
+  const totals: TTotals = {
+    items: items.length,
+    enrichedItems: 0,
+    spendingTotal: 0,
+    spendingItems: 0,
+    yearlyCapsTotal: 0,
+    yearlyCapItems: 0,
+    revenueTotal: 0,
+    revenueItems: 0,
+    decreaseTotal: 0,
+    flagCounts: {},
+    byCategory: {},
+  }
+
+  for (const item of items) {
+    for (const flag of item.flags) totals.flagCounts[flag] = (totals.flagCounts[flag] ?? 0) + 1
+    const e = item.enrichment
+    if (!e) continue
+    totals.enrichedItems++
+    const { money } = e
+
+    const spend = spendingAmount(money)
+    if (spend > 0) {
+      totals.spendingTotal += spend
+      totals.spendingItems++
+    }
+    if (money.direction === 'expense' && money.amountType === 'per_year' && money.thisAction) {
+      totals.yearlyCapsTotal += money.thisAction
+      totals.yearlyCapItems++
+    }
+    if (money.direction === 'revenue' && money.thisAction) {
+      totals.revenueTotal += money.thisAction
+      totals.revenueItems++
+    }
+    if (money.direction === 'decrease' && money.thisAction) totals.decreaseTotal += money.thisAction
+
+    const bucket = (totals.byCategory[e.category] ??= { items: 0, spending: 0 })
+    bucket.items++
+    bucket.spending += spend
+  }
+
+  // Round away float noise from summing cents; display rounding still happens in the UI.
+  const cents = (v: number): number => Math.round(v * 100) / 100
+  totals.spendingTotal = cents(totals.spendingTotal)
+  totals.yearlyCapsTotal = cents(totals.yearlyCapsTotal)
+  totals.revenueTotal = cents(totals.revenueTotal)
+  totals.decreaseTotal = cents(totals.decreaseTotal)
+  for (const bucket of Object.values(totals.byCategory)) bucket.spending = cents(bucket.spending)
+  return totals
+}

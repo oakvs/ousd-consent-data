@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943279613",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collegetrack.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collegetrack.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-college-track",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'College Track' (ProPublica Nonprofit Explorer, EIN 94-3279613, Oakland, CA), matching the agenda location 'Oakland, CA'",
+      "The organization's website describes a college completion program that starts in ninth grade (high school), matching OUSD's 'No Cost Service Agreement and Data Sharing Agreement - College Track - High School Network' and 'Classroom & academic programs'",
+      "Organization website lists its headquarters at 483 9th Street, Suite #200, Oakland, CA 94607, in Oakland as in the agenda"
+    ],
+    "key": "n-college-track",
+    "notes": "General email on the website is obfuscated (Cloudflare email protection), so it was left null. The website does not mention Oakland Unified directly; identity rests on the name match, Oakland location and high-school-focused program. A separate registry entry, 'San Francisco College Track Qalicb Inc' (EIN 45-2543410), is a different entity and was not used. Phone is shown on the site as 510.834.3295 and normalized to the requested format. California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "483 9th Street, Suite #200, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-3279613",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "College Track",
+      "orgType": "nonprofit",
+      "phone": "(510) 834-3295",
+      "samUei": null,
+      "summary": "College Track is a nonprofit college completion program for first-generation students from under-resourced communities. It supports students for about ten years, from ninth grade through college graduation and into their careers, with academic, financial and personal support. It operates in 13 communities across the United States and is headquartered in Oakland, California.",
+      "website": "https://www.collegetrack.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "College Track - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943279613"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "College Track | First-Generation College Completion Program",
+        "url": "https://www.collegetrack.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us | College Track",
+        "url": "https://www.collegetrack.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-college-track",
+    "notes": "College Track is an Oakland-headquartered 501(c)(3) (EIN 94-3279613) that runs an Oakland community program starting in ninth grade, which fits a High School Network no-cost service and data sharing agreement. Summary, address, phone and website are all shown on the cited pages and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ccconservatory.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ccconservatory.com/coastal-classrooms-where-artistry-meets-education-by-the-sea",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/392257001",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-coastal-current-conservatory",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Coastal Currents Conservatory' (ProPublica Nonprofit Explorer, EIN 39-2257001, listed in S San Fran, CA, arts education, tax exemption issued July 2025); the agenda spells it 'Coastal Current Conservatory', a one-letter difference",
+      "Located in South San Francisco, CA, matching the agenda text",
+      "Website describes in-school performing arts classes and an Artist-in-Residence Program for Bay Area schools, matching OUSD's 'Classroom & academic programs' contract funded by Prop 28 Arts and Music",
+      "Exemption issued July 2025, consistent with a 2025-2026 services agreement"
+    ],
+    "key": "n-coastal-current-conservatory",
+    "notes": "Agenda says 'Coastal Current Conservatory'; the registered and self-used name is 'Coastal Currents Conservatory' (likely an agenda typo). No page found that explicitly mentions OUSD or Skyline High School. Newly formed nonprofit (exemption July 2025), so no Form 990 data yet. No phone number published on the site. California entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "P.O.Box 5093 South San Francisco, CA. 94083",
+      "caEntityNumber": null,
+      "ein": "39-2257001",
+      "email": "aloha@ccconservatory.com",
+      "headquarters": "South San Francisco, CA",
+      "legalName": "Coastal Currents Conservatory",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit performing arts school based in South San Francisco. It offers music, dance, drama and improv classes, and runs in-school and after-school arts programs and an Artist-in-Residence Program for Bay Area schools. It also produces musical and theatrical shows.",
+      "website": "https://www.ccconservatory.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters",
+          "legalName",
+          "ein"
+        ],
+        "title": "Coastal Currents Conservatory",
+        "url": "https://www.ccconservatory.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "General 5 — Coastal Currents Conservatory",
+        "url": "https://www.ccconservatory.com/coastal-classrooms-where-artistry-meets-education-by-the-sea"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Coastal Currents Conservatory - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/392257001"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-coastal-current-conservatory",
+    "notes": "Identity looks right (South San Francisco performing arts nonprofit, one-letter name difference, EIN 39-2257001 confirmed on ProPublica and the site, arts services fit the Prop 28 contract), though no source mentions OUSD or Skyline. The summary claims 'after-school arts programs' and 'Bay Area schools', but the cited pages mention only in-school classes and an Artist-in-Residence Program teaching TK-12 'across the Peninsula', so the summary is not fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://operationdignity.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943176007",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-operation-dignity",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Operation Dignity Inc' located in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3176007), matching the agenda's 'Operation Dignity Inc.' and 'Oakland, CA'",
+      "Organization's own website lists its headquarters at 318 Harrison St., Ste. 302, Oakland, CA and describes shelter, housing and street outreach services for people experiencing homelessness in Alameda County",
+      "Circumstantial only: OUSD's 1025 2nd Avenue site was reported to have had an encampment, and Operation Dignity is described as the main street outreach provider in the City of Oakland; no page found directly links the organization to OUSD or this address"
+    ],
+    "key": "n-operation-dignity",
+    "notes": "Organization identity (name, Oakland) is solid, but no found source ties it directly to the 1025 2nd Avenue Building Project or to OUSD. The link is inferred from its street outreach work in Oakland. Reviewer should confirm against the board item. The main phone, (510) 287-8465, is shown on the organization's site with an en dash separator that automated verification cannot match, so it was omitted.",
+    "profile": {
+      "address": "318 Harrison St., Ste. 302, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-3176007",
+      "email": "info@operationdignity.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Operation Dignity Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Operation Dignity is an Oakland-based nonprofit that serves people experiencing homelessness in Alameda County, with a focus on veterans. It runs shelter and housing programs, street outreach, and permanent supportive housing.",
+      "website": "https://operationdignity.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Homepage - Operation Dignity",
+        "url": "https://operationdignity.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Operation Dignity Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943176007"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

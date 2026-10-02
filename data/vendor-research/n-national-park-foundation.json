@@ -1,0 +1,136 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/521086761",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/52-1086761",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nationalparks.mylegacygift.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/National_Park_Foundation",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandgoesoutdoors.org/faqs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-national-park-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the registered nonprofit 'National Park Foundation' in Washington, DC (ProPublica Nonprofit Explorer and GuideStar, EIN 52-1086761), the congressionally chartered official charity of the National Park Service",
+      "The agenda item is a grant for Point Reyes National Seashore, a National Park Service site in the Bay Area, which fits the National Park Foundation's mission of funding national parks and youth programs",
+      "The grant funds Oakland Goes Outdoors, an OUSD middle school outdoor program that partners with the National Park Service and Point Reyes National Seashore (Oakland Goes Outdoors FAQ)",
+      "OUSD's contract category 'Classroom & academic programs' is consistent with the foundation's student and youth park education grants"
+    ],
+    "key": "n-national-park-foundation",
+    "notes": "The nationalparks.org site itself blocks automated fetching (403), so contact details come from the foundation's planned-giving contact page. No general inbox was found on a fetchable page, so email is null. The agenda gives no location; identity rests on the distinctive name and the Point Reyes National Seashore (National Park Service) context.",
+    "profile": {
+      "address": "1500 K Street NW, Suite 700, Washington, DC 20005",
+      "caEntityNumber": null,
+      "ein": "52-1086761",
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "National Park Foundation",
+      "orgType": "nonprofit",
+      "phone": "(202) 796-2500",
+      "samUei": null,
+      "summary": "The National Park Foundation is the official charity of the National Park Service. Congress chartered it in 1967. It raises private money and builds partnerships to support national parks, including grants for youth and education programs and park preservation.",
+      "website": "http://www.nationalparks.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "National Park Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/521086761"
+      },
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "summary",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "National Park Foundation - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/52-1086761"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact Us | the National Park Foundation",
+        "url": "https://nationalparks.mylegacygift.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National Park Foundation - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/National_Park_Foundation"
+      },
+      {
+        "supports": [],
+        "title": "Frequently Asked Questions (FAQs) — Oakland Goes Outdoors",
+        "url": "https://www.oaklandgoesoutdoors.org/faqs"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-national-park-foundation",
+    "notes": "The agenda name 'National Park Foundation' is distinctive, and the grant relates to Point Reyes National Seashore (an NPS site); ProPublica, GuideStar and Wikipedia confirm the DC nonprofit, EIN 52-1086761, 1967 congressional charter, website, and the contact page confirms the main phone and address. The Oakland Goes Outdoors FAQ does not itself mention the Foundation, but the identity does not depend on it and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_Department_of_Forestry_and_Fire_Protection",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-forestry-and-fire-protection-cal-fire",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda names the vendor as the State of California Department of Forestry and Fire Protection (CAL FIRE), a single, uniquely named state agency, so there is no similar-name ambiguity",
+      "Wikipedia confirms the legal name 'California Department of Forestry and Fire Protection', commonly known as CAL FIRE, and its statewide forest and wildfire role",
+      "Observed: calfire.ca.gov redirects (HTTP 301) to fire.ca.gov. The official fire.ca.gov site returned HTTP 403 to automated fetching, so the grant itself and the agency's contact details could not be confirmed from the agency's own pages"
+    ],
+    "key": "n-california-department-of-forestry-and-fire-protection-cal-fire",
+    "notes": "Identity is very likely correct (unique state agency), but confidence is capped at medium: the agency's official site (fire.ca.gov) blocks automated fetching (403), the web search budget was exhausted, and no independent page linking CAL FIRE to the Oakland Living Schoolyards grant was found. Website and contact fields left null because they could not be verified on a fetched page. A reviewer can add https://www.fire.ca.gov/ and its contact page manually.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "California Department of Forestry and Fire Protection",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California state agency, commonly called CAL FIRE. It manages wildfire prevention and suppression across state responsibility lands, oversees private and public forests in California, and provides emergency services in many counties through contracts with local governments.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "California Department of Forestry and Fire Protection - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_Department_of_Forestry_and_Fire_Protection"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

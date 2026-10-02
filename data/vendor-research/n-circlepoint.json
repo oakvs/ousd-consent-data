@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.circlepoint.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.circlepoint.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-circlepoint",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Circlepoint's own website lists its headquarters office in Oakland, CA, matching the agenda's location (Oakland, CA)",
+      "Circlepoint provides CEQA/NEPA environmental review documentation, which fits a district school facilities construction project (Skyline High School lighting replacement, which went through CEQA review as an Oakland Unified project)",
+      "The name 'Circlepoint' matches exactly; no other organization with this name was found in the Bay Area"
+    ],
+    "key": "n-circlepoint",
+    "notes": "Legal entity name and registry IDs not confirmed (California Secretary of State and SAM.gov not checked). Link between Circlepoint and the specific OUSD Skyline lighting contract was inferred from services and location, not from a document naming Circlepoint on that project.",
+    "profile": {
+      "address": "1625 Clay Street, Suite 700 Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.285.6700",
+      "samUei": null,
+      "summary": "Circlepoint is a California consulting firm that provides environmental planning and public communications services. Its work includes environmental review documents under the California Environmental Quality Act (CEQA) and the National Environmental Policy Act (NEPA), along with community outreach and engagement. It has offices in Oakland, San Jose and Orange, California.",
+      "website": "https://www.circlepoint.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Home - Circlepoint",
+        "url": "https://www.circlepoint.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Circlepoint",
+        "url": "https://www.circlepoint.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-circlepoint",
+    "notes": "Circlepoint's site and contact page confirm an Oakland-headquartered CEQA/NEPA and communications consulting firm (1625 Clay St, 510.285.6700, offices in Oakland, San Jose, Orange), which fits a facilities-project agreement with an Oakland address; the name is distinctive and the summary makes no claim about the OUSD contract. I could not find a document linking Circlepoint to the Skyline lighting project, so the identity rests on name, city and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

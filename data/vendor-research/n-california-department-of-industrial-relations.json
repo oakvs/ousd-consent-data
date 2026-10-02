@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/aboutdir.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/ContactUs.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/das/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-industrial-relations",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names the 'California Department of Industrial Relations', matching the official state agency site dir.ca.gov",
+      "The agenda item is a 'California Opportunity Youth Apprenticeship' grant award; the DIR Division of Apprenticeship Standards page lists the California Opportunity Youth Apprenticeship Grant under its funding programs",
+      "DIR's About page says it manages apprenticeship training programs, consistent with a grant awarded to OUSD's Talent/Human Resources department for youth apprenticeship"
+    ],
+    "key": "n-california-department-of-industrial-relations",
+    "notes": "WebSearch budget was exhausted, so only the agency's own site was used (no registry lookup). No street address was shown on the cited pages, so address and headquarters are null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "DIO@dir.ca.gov",
+      "headquarters": null,
+      "legalName": "California Department of Industrial Relations",
+      "orgType": "public_agency",
+      "phone": "(844) 522-6734",
+      "samUei": null,
+      "summary": "A California state agency that protects and improves working conditions for the state's wage earners. It enforces laws on wages, hours and workplace safety, oversees workers' compensation, and manages apprenticeship training programs. It is housed within the Labor and Workforce Development Agency.",
+      "website": "https://www.dir.ca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "California Department of Industrial Relations - About DIR",
+        "url": "https://www.dir.ca.gov/aboutdir.html"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Department of Industrial Relations Contact Information",
+        "url": "https://www.dir.ca.gov/ContactUs.html"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Department of Industrial Relations",
+        "url": "https://www.dir.ca.gov/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Division of Apprenticeship Standards",
+        "url": "https://www.dir.ca.gov/das/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-california-department-of-industrial-relations",
+    "notes": "The agenda item is a grant award for the California Opportunity Youth Apprenticeship program, which DIR's Division of Apprenticeship Standards page lists as a DIR-run grant, so this is the same state agency. The summary and phone match dir.ca.gov, but DIO@dir.ca.gov is listed only for bilingual-services complaints, not as a general contact, so the email is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "email"
+    ],
+    "verdict": "confirmed"
+  }
+}

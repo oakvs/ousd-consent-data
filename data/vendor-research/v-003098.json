@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.nor-calmoving.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nor-calmoving.com/services/commercial-moving/university-moving/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=MC_MX&query_string=670818",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003098",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: NOR-CAL Moving Services, headquartered in Hayward, CA, matching the agenda location 'Hayward, CA'",
+      "Website describes office, school and library relocation services, matching OUSD's contracts for office consolidation, library relocation and administrative moves",
+      "FMCSA SAFER registry lists NOR-CAL MOVING SERVICES at 3527 Arden Road, Hayward, CA 94545, the same address as the company website"
+    ],
+    "key": "v-003098",
+    "notes": "Phone on the company site (510) 949-8954 differs from the number on the FMCSA record ((510) 780-2692); the website number is used. No California SOS entity number or SAM UEI found.",
+    "profile": {
+      "address": "3527 Arden Rd, Hayward, CA 94545",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Hayward, CA",
+      "legalName": "NOR-CAL MOVING SERVICES",
+      "orgType": "company",
+      "phone": "(510) 949-8954",
+      "samUei": null,
+      "summary": "NOR-CAL Moving Services is a Bay Area moving company founded in 1982. It provides local and long-distance residential and commercial moves, including office, school and library relocations. It is headquartered in Hayward, California.",
+      "website": "https://www.nor-calmoving.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Bay Area Movers Since 1982",
+        "url": "https://www.nor-calmoving.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "University & School Moving Services in the Bay Area | NOR-CAL",
+        "url": "https://www.nor-calmoving.com/services/commercial-moving/university-moving/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType"
+        ],
+        "title": "SAFER Web - Company Snapshot NOR-CAL MOVING SERVICES",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=MC_MX&query_string=670818"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-003098",
+    "notes": "NOR-CAL Moving Services at 3527 Arden Rd, Hayward matches the agenda name and city, and its school/library/administrative relocation services fit OUSD's move-project contracts; the FMCSA record confirms legal name and address. The summary, website, phone, address and headquarters are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

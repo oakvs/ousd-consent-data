@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/alameda-county-health/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/health-wellness/health-access/school-based-health-center-services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000314",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the agenda's 'Alameda County Health Care Services Agency' / 'Alameda County Health Department' corresponds to Alameda County Health, the county's health agency (health.alamedacountyca.gov), which describes itself as part of the Health Care Services Agency.",
+      "Located in San Leandro, CA, matching the agenda text: the agency's headquarters is 1000 San Leandro Blvd., Suite 300, San Leandro, CA 94577.",
+      "Its school health center program matches OUSD's 'Student health, support & family services' contracts; OUSD's own page says its School-Based Health Centers are a partnership between OUSD, Alameda County, the City of Oakland and community-based organizations."
+    ],
+    "key": "v-000314",
+    "notes": "Public county agency, so no EIN, California entity number or SAM UEI is listed. The email is the agency's public information office inbox, which is the general address its Contact Us page shows. The agenda also names the County of Alameda Health Department and Health Care Services Agency, which are the same county health organization.",
+    "profile": {
+      "address": "1000 San Leandro Blvd., Suite 300, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "ACHealth-PIO@acgov.org",
+      "headquarters": "San Leandro, CA",
+      "legalName": "Alameda County Health",
+      "orgType": "public_agency",
+      "phone": "(510) 618-3452",
+      "samUei": null,
+      "summary": "Alameda County Health is the county government's health agency. It provides behavioral health, public health and environmental health services, and also runs programs such as HealthPAC health insurance enrollment help, emergency medical services, and school health centers in partnership with schools and districts.",
+      "website": "https://health.alamedacountyca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - Alameda County Health",
+        "url": "https://health.alamedacountyca.gov/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "address",
+          "phone",
+          "email"
+        ],
+        "title": "Alameda County Health",
+        "url": "https://health.alamedacountyca.gov/department/alameda-county-health/"
+      },
+      {
+        "supports": [],
+        "title": "School-Based Health Center Services - Oakland Unified School District",
+        "url": "https://www.ousd.org/health-wellness/health-access/school-based-health-center-services"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000314",
+    "notes": "Cited county pages confirm Alameda County Health (HCSA branding) at 1000 San Leandro Blvd, San Leandro, with the stated phone, a general public information office inbox, and services including school health centers, HealthPAC and EMS; OUSD's page names Alameda County as an SBHC partner. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

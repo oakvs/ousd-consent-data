@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/810615887",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://studentsrisingabove.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://norcalpromisecoalition.org/member-highlights/students-rising-above/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-students-rising-above",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Foundation For Students Rising Above', San Francisco, CA, EIN 81-0615887 (ProPublica Nonprofit Explorer); the agenda lists San Francisco, CA as a location",
+      "Organization's own site (studentsrisingabove.org) shows the same Tax ID 81-0615887 and a San Francisco mailing address, describes supporting first-generation college students, and serves all nine Bay Area counties, consistent with a no-cost academic program at Oakland High School and the OUSD High School Linked Learning office",
+      "A CBS San Francisco news page about the organization (fetched for identity only) describes an Oakland High School graduate who was supported by Students Rising Above, linking it to Oakland High School named in the agenda"
+    ],
+    "key": "n-students-rising-above",
+    "notes": "No general email address found on the organization's pages, left null. The address is a PO Box mailing address. California SOS entity number and SAM.gov UEI not looked up.",
+    "profile": {
+      "address": "PO Box 192492, San Francisco, CA 94119-2492",
+      "caEntityNumber": null,
+      "ein": "81-0615887",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Foundation For Students Rising Above",
+      "orgType": "nonprofit",
+      "phone": "(415) 333-4222",
+      "samUei": null,
+      "summary": "Students Rising Above is a nonprofit that supports first-generation college students from low-income backgrounds in the San Francisco Bay Area. It offers college and career advising, mentorship, financial assistance and wellness resources, from high school through college and into a first career.",
+      "website": "https://studentsrisingabove.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Foundation For Students Rising Above - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/810615887"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Students Rising Above - Contact",
+        "url": "https://studentsrisingabove.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Students Rising Above - NorCal Promise Coalition",
+        "url": "https://norcalpromisecoalition.org/member-highlights/students-rising-above/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-students-rising-above",
+    "notes": "Exact name match to the Bay Area 501(c)(3) (EIN 81-0615887, San Francisco, serving all nine Bay Area counties and high school students), consistent with the agenda's San Francisco location and a no-cost academic/linked-learning agreement at Oakland High. Summary, phone, address, EIN and org type are supported by the ProPublica, organization contact, and NorCal Promise Coalition pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

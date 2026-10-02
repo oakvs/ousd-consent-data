@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.arisehighschool.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/208887944",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-arise-high-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Arise High School', Oakland, CA, EIN 20-8887944 (ProPublica Nonprofit Explorer)",
+      "School's own website (arisehighschool.org) shows an Oakland, CA address and describes a public high school, matching OUSD's 'Classroom & academic programs' category and a Measures N and H (Oakland high school) MOU"
+    ],
+    "key": "n-arise-high-school",
+    "notes": "Searches were unavailable (budget exhausted), so the site was found by direct fetch and the ProPublica API. The cited pages do not mention Oakland Unified directly; the OUSD link rests on the Oakland location and the agenda's Measures N and H MOU. The only general email found (co-heads@) is a role address for the school's heads, so it was left out. No CA Secretary of State or SAM.gov record was checked.",
+    "profile": {
+      "address": "3301 E 12th St, Suite 205, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "20-8887944",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "ARISE High School",
+      "orgType": "nonprofit",
+      "phone": "(510) 436-5487",
+      "samUei": null,
+      "summary": "ARISE High School is a public high school in Oakland, California, run by a nonprofit organization. It describes its mission as empowering students with the knowledge, skills and agency to become highly educated, critically conscious leaders. It also runs an alumni mentorship program.",
+      "website": "https://www.arisehighschool.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "ARISE High School",
+        "url": "https://www.arisehighschool.org"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Arise High School - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/208887944"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-arise-high-school",
+    "notes": "The organization looks right (Oakland address, 501(c)(3) with NTEE B29 K-12 education, fits a Measures N and H MOU), but the summary says 'public high school' and 'empowering students...to become highly educated, critically conscious leaders', and neither cited page states this. The school site gives only the tagline 'Empowering Critically Conscious Warrior Intellectuals' and does not say it is a public or charter school, so the summary is not supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

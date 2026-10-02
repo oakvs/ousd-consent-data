@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942337299",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rceb.org/about-us/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rceb.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regional-center-of-east-bay",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Regional Center Of The East Bay Inc', EIN 94-2337299, San Leandro, CA (ProPublica Nonprofit Explorer)",
+      "Located in San Leandro, CA, matching the agenda text",
+      "Organization's own website describes services for children and adults with developmental disabilities, matching OUSD's Special Education Department contract",
+      "Public Alameda County Project SEARCH page describes a paid internship program with OUSD requiring an active Regional Center of the East Bay case, matching the MOU title"
+    ],
+    "key": "n-regional-center-of-east-bay",
+    "notes": "No general email address is listed on the site (only a contact form and a case-management on-call address), so email is null. California SOS entity number and SAM UEI not checked. Summary's mention of Alameda and Contra Costa counties comes from search-result descriptions of RCEB; homepage confirms developmental disabilities services.",
+    "profile": {
+      "address": "Creekside Plaza, 500 Davis Street, Suite 100, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": "94-2337299",
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": "Regional Center Of The East Bay Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 618-6100",
+      "samUei": null,
+      "summary": "A private nonprofit that serves children and adults with developmental disabilities in Alameda and Contra Costa counties in California. It helps determine eligibility for services and coordinates community-based supports and services.",
+      "website": "https://www.rceb.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Regional Center Of The East Bay Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942337299"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Regional Center of the East Bay",
+        "url": "https://rceb.org/about-us/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address"
+        ],
+        "title": "Regional Center of the East Bay (RCEB)",
+        "url": "https://www.rceb.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-regional-center-of-east-bay",
+    "notes": "Name, San Leandro location, and developmental-disabilities mission match the OUSD Special Education internship MOU; ProPublica confirms EIN 94-2337299 as a 501(c)(3), and the cited site confirms address and phone (rceb.org/about-us, not cited, confirms Alameda/Contra Costa service area and private nonprofit status). Summary is neutral and supported; no personal contact details included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

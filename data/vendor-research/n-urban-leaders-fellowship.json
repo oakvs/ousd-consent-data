@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/842571483",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.urbanleadersfellowship.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-urban-leaders-fellowship",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Urban Leaders Fellowship' (ProPublica Nonprofit Explorer, EIN 84-2571483)",
+      "Registry lists the organization in Colorado Springs, CO, matching the agenda text 'Colorado Springs, CO'",
+      "Weak: urbanleadersfellowship.org describes a paid summer fellowship for professionals, but it does not name Colorado Springs, Oakland or its EIN, so the website could not be tied to the registry entry"
+    ],
+    "key": "n-urban-leaders-fellowship",
+    "notes": "Registry match is name plus city. The website was not confirmed to belong to the Colorado Springs registry entry (no city or EIN on the site; no mention of Oakland), so website and contact details were left null. WebSearch budget was exhausted, so identity was checked only via direct registry and site fetches.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "84-2571483",
+      "email": null,
+      "headquarters": "Colorado Springs, CO",
+      "legalName": "Urban Leaders Fellowship",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that runs a paid summer fellowship for professionals from many backgrounds who want to help improve communities through people and partnerships. Fellows split their time between policy work and placements with partner organizations. It is registered as a tax-exempt 501(c)(3) in Colorado Springs, Colorado.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Urban Leaders Fellowship - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/842571483"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Urban Leaders Fellowship",
+        "url": "https://www.urbanleadersfellowship.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

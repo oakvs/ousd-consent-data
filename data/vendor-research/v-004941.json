@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.18reasons.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.18reasons.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/453059509",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004941",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: '18 Reasons' (ProPublica Nonprofit Explorer, EIN 45-3059509)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "Website describes nutrition education and community food programs, consistent with OUSD's 'Student health, support & family services' category and a no-cost services agreement"
+    ],
+    "key": "v-004941",
+    "notes": "No page found that mentions OUSD directly; identity rests on name/registry match, San Francisco location matching the agenda, and the program focus. The web search tool budget was exhausted, so no additional independent search was run.",
+    "profile": {
+      "address": "3674 18th St, San Francisco, CA 94110",
+      "caEntityNumber": null,
+      "ein": "45-3059509",
+      "email": "info@18reasons.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "18 Reasons",
+      "orgType": "nonprofit",
+      "phone": "(415) 568-2710",
+      "samUei": null,
+      "summary": "18 Reasons is a nonprofit teaching kitchen in San Francisco's Mission District. It offers hands-on cooking classes, free community programs and nutrition education to help people learn to buy, cook and eat good food.",
+      "website": "https://www.18reasons.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters",
+          "address",
+          "ein"
+        ],
+        "title": "18 Reasons",
+        "url": "https://www.18reasons.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - 18 Reasons",
+        "url": "https://www.18reasons.org/contact"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "18 Reasons - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/453059509"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004941",
+    "notes": "18 Reasons is a distinctively named San Francisco 501(c)(3) (EIN 45-3059509) whose website, address, phone and email match the profile; its free food and health programs (Cooking Matters, Food as Medicine) fit a no-cost student health/family services agreement and the San Francisco location matches the agenda. No source mentions OUSD directly, so identity rests on the name, city and program fit, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

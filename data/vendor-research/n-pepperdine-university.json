@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/951644037",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pepperdine.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-pepperdine-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational institution: 'Pepperdine University' (ProPublica Nonprofit Explorer, EIN 95-1644037, Malibu, CA)",
+      "Pepperdine's Graduate School of Education and Psychology offers a teaching credential and education programs, consistent with an OUSD Talent/Human Resources memorandum of understanding with a university (OUSD has a similar MOU with another university for student fieldwork placements); no page found that explicitly links Pepperdine to OUSD"
+    ],
+    "key": "n-pepperdine-university",
+    "notes": "No agenda location and no page found explicitly linking Pepperdine to OUSD, so the second identity signal is circumstantial (university with education programs; unique institution name). Likely correct but not confirmed as high. No general email found.",
+    "profile": {
+      "address": "24255 Pacific Coast Highway, Malibu, CA 90263",
+      "caEntityNumber": null,
+      "ein": "95-1644037",
+      "email": null,
+      "headquarters": "Malibu, CA",
+      "legalName": "Pepperdine University",
+      "orgType": "nonprofit",
+      "phone": "310.506.4000",
+      "samUei": null,
+      "summary": "Pepperdine University is a private, faith-based nonprofit university founded in 1937. It operates six schools offering undergraduate and graduate programs, including education, psychology, business, law and public policy. Its main campus is in Malibu, California, with additional locations in Southern California and abroad.",
+      "website": "https://www.pepperdine.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Pepperdine University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/951644037"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Pepperdine University",
+        "url": "https://www.pepperdine.edu/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

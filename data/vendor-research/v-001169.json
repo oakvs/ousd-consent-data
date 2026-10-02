@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/204781979",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://connectednational.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://connectednational.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001169",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Connected The National Center For College And Career' (ProPublica Nonprofit Explorer, EIN 20-4781979, Berkeley, CA), and the organization's own site calls itself 'ConnectED: The National Center for College & Career'",
+      "Located in Berkeley, CA, matching the agenda text 'Berkeley, CA'",
+      "Website describes helping schools and districts implement Linked Learning, matching OUSD's contract with its Linked Learning Department and 'Classroom & academic programs' category"
+    ],
+    "key": "v-001169",
+    "notes": "The homepage mentions 2120 University Avenue, Berkeley, while the Contact page gives 2150 Shattuck Ave, Suite 750; the Contact page address was used. No CA Secretary of State or SAM.gov record was checked (web search budget was exhausted), so those IDs are null.",
+    "profile": {
+      "address": "2150 Shattuck Ave, Suite 750, Berkeley, CA 94704",
+      "caEntityNumber": null,
+      "ein": "20-4781979",
+      "email": "info@connectednational.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Connected The National Center For College And Career",
+      "orgType": "nonprofit",
+      "phone": "(510) 849-4945",
+      "samUei": null,
+      "summary": "A nonprofit based in Berkeley, California, that partners with schools, districts and communities to put Linked Learning into practice. Linked Learning is an approach that connects classroom learning to real-world college and career experiences. The organization offers coaching, curriculum design, professional development and other resources.",
+      "website": "https://connectednational.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Connected The National Center For College And Career - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/204781979"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "ConnectED: The National Center for College & Career",
+        "url": "https://connectednational.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Contact - ConnectED: The National Center for College & Career",
+        "url": "https://connectednational.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001169",
+    "notes": "ProPublica shows a Berkeley 501(c)(3) with the same name (EIN 20-4781979) and the org's site describes Linked Learning work, which fits OUSD's Linked Learning Department contracts. The org's own site lists two different street addresses (2150 Shattuck Ave vs 2120 University Ave), so the address cannot be confirmed as current; the summary and other fields are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
+}

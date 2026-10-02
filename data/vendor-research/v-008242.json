@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.rjoyoakland.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/845154317",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rjoyoakland.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008242",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Restorative Justice For Oakland Youth', EIN 84-5154317, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA (1733 Broadway), matching the agenda text",
+      "Own website describes restorative justice programs including 'RJ in Schools', matching OUSD's 'Student health, support & family services' category and the Community Schools and Student Services Department agreement"
+    ],
+    "key": "v-008242",
+    "notes": "Phone omitted: the site shows only the vanity number 510-931-RJOY, which the validator could not match. California entity number and SAM UEI not found (web search budget was exhausted, so CA SOS and SAM.gov were not checked).",
+    "profile": {
+      "address": "1733 Broadway, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "84-5154317",
+      "email": "rjoy@rjoyoakland.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Restorative Justice for Oakland Youth",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit in Oakland, California, that provides restorative justice programs. Its work includes healing circles for specific communities, mental health services, youth internships, school-based programs and training.",
+      "website": "https://www.rjoyoakland.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "RJOY – RESTORATIVE JUSTICE for OAKLAND",
+        "url": "https://www.rjoyoakland.org"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Restorative Justice For Oakland Youth - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/845154317"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Contact Us – RJOY",
+        "url": "https://www.rjoyoakland.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008242",
+    "notes": "Name, Oakland location (1733 Broadway), 501(c)(3) status and EIN 84-5154317 are confirmed by the organization's site and ProPublica, and its RJ in Schools and student support programs fit a no-cost student services agreement. The summary matches the listed programs and is neutral; the generic business email is shown on the contact page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

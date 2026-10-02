@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://jirinc.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?query_param=USDOT&query_string=3024106&query_type=queryCarrierSnapshot&searchtype=ANY",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-jir",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches: 'JIR INC' on jirinc.org and in the federal motor carrier (FMCSA SAFER) registry, USDOT 3024106, versus 'JIR, Inc.' in the agenda",
+      "Located in Newark, CA, matching the agenda's 'Newark, CA'",
+      "Provides passenger transportation services (jirinc.org; FMCSA lists passengers as cargo), consistent with OUSD's special education transportation agreements",
+      "No page found that mentions OUSD, schools or special education, and the two sources list different phone numbers, so the match is not confirmed"
+    ],
+    "key": "n-jir",
+    "notes": "Unconfirmed match. Nothing found ties this Newark, CA passenger carrier to OUSD or school/special-education transport. FMCSA shows 1 driver, 0 power units and a phone (202) 521-1493, while the website shows 408-600-7180. The FMCSA address (36396 Sandalwood St, Newark) appears to be residential, so no address or phone was included. No CA Secretary of State or SAM.gov record was reviewed. Needs human review before any publication.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Newark, CA",
+      "legalName": "JIR INC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "JIR INC is a transportation company based in Newark, California. Its website says it has provided professional transportation services to clients since 2011.",
+      "website": "https://jirinc.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "JIR INC",
+        "url": "https://jirinc.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "SAFER Web - Company Snapshot JIR INC",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_param=USDOT&query_string=3024106&query_type=queryCarrierSnapshot&searchtype=ANY"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

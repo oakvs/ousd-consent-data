@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/800123340",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cypressmandela.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001271",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'Cypress Mandela Training Center', EIN 80-0123340 (ProPublica Nonprofit Explorer), matching the agenda's Oakland, CA",
+      "Organization's own website (cypressmandela.org) gives an Oakland address and describes trades career training and education, matching OUSD's Linked Learning / career technical education (CTE) grant-funded 'Classroom & academic programs' contracts",
+      "ProPublica lists the NTEE category as vocational and technical schools, consistent with CTE-funded services"
+    ],
+    "key": "v-001271",
+    "notes": "Website footer also names 'Cypress Mandela, Inc.'; legal name given here follows the IRS/ProPublica record. No California SOS or SAM.gov lookup done (web search budget exhausted). Website does not mention OUSD directly; match rests on name, location and subject-matter fit.",
+    "profile": {
+      "address": "977 - 66th Avenue, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "80-0123340",
+      "email": "info@cypressmandela.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Cypress Mandela Training Center",
+      "orgType": "nonprofit",
+      "phone": "(510) 820-6187",
+      "samUei": null,
+      "summary": "Cypress Mandela Training Center is an Oakland nonprofit that provides career training and education in the construction trades. It aims to open pathways to livable-wage careers for people in underserved communities. Its work also includes environmental stewardship efforts.",
+      "website": "https://www.cypressmandela.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Cypress Mandela Training Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/800123340"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cypress Mandela Training Center",
+        "url": "https://www.cypressmandela.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001271",
+    "notes": "The unusual name, the Oakland location and the vocational-training NTEE category match the agenda name, Oakland and the CTE and Linked Learning grant-funded contracts, and the ProPublica record and website agree on the name. Contact details match the website; the site only names 'the trades' generally and mentions construction in a graduate testimonial, so 'construction trades' in the summary is a mild but reasonable inference.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

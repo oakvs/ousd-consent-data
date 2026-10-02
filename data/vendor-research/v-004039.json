@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/453719806",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.springboardcollaborative.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.springboardcollaborative.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004039",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Springboard Collaborative' in Philadelphia, PA (ProPublica Nonprofit Explorer, EIN 45-3719806), matching the agenda's 'Philadelphia, PA'",
+      "Organization website says it runs literacy and math programs in after-school, in-school and summer settings with school districts, matching OUSD's 'After-school & summer programs' and 'Summer Learning Programs' contracts",
+      "Organization homepage includes a testimonial from a family in Oakland Unified School District"
+    ],
+    "key": "v-004039",
+    "notes": "Agenda also lists 'Springboard Collaborative, LLC'; the registered entity found is a nonprofit without 'LLC' in its name. Likely a naming variance in agenda text. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "Two Penn Center, 1500 John F. Kennedy Blvd., Suite 1160, Philadelphia, PA 19102",
+      "caEntityNumber": null,
+      "ein": "45-3719806",
+      "email": "info@springboardcollaborative.org",
+      "headquarters": "Philadelphia, PA",
+      "legalName": "Springboard Collaborative",
+      "orgType": "nonprofit",
+      "phone": "(302) 468-6312",
+      "samUei": null,
+      "summary": "Springboard Collaborative is a nonprofit organization founded in 2011 that works to close the gap between home and school. It partners with school districts and charter networks to run literacy and math programs in after-school, in-school and summer settings. The programs bring families into learning as partners with teachers.",
+      "website": "https://www.springboardcollaborative.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Springboard Collaborative - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/453719806"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "Springboard Collaborative",
+        "url": "https://www.springboardcollaborative.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "address",
+          "phone",
+          "email"
+        ],
+        "title": "About Springboard Collaborative",
+        "url": "https://www.springboardcollaborative.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004039",
+    "notes": "Philadelphia nonprofit Springboard Collaborative (EIN 45-3719806) matches the agenda location and OUSD's summer/after-school literacy contracts; its homepage even carries an Oakland Unified family testimonial. All profile fields (founding 2011, contact details, address, EIN) are confirmed by the cited sources and the summary is neutral; the 'LLC' in some agenda titles is a naming variance.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

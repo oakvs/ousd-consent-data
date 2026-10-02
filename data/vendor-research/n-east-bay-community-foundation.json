@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/946070996",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-community-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'East Bay Community Foundation' (ProPublica Nonprofit Explorer, EIN 94-6070996)",
+      "Registered in Oakland, CA, matching the agenda text 'Oakland, CA'",
+      "Registry classifies it as a community foundation (philanthropy and grantmaking), consistent with a 'Grant Award' item in the agenda"
+    ],
+    "key": "n-east-bay-community-foundation",
+    "notes": "The organization's own website (eastbaycf.org) failed to load from the automated fetcher (SSL handshake error) and the web search budget was exhausted, so website and contact details could not be confirmed and were left null. Identity rests on the ProPublica registry record (name, city, community-foundation classification) only; no second independent source such as the organization's own site or an OUSD page was fetched. The OUSD agenda item (Grant #082602, Kathryn and Robert Riddell Fund, Oakland Goes Outdoors) was not independently confirmed with the foundation.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-6070996",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Community Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit community foundation based in Oakland, California. It is a tax-exempt 501(c)(3) organization in the philanthropy and grantmaking field, and it operates a donor-advised fund.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "East Bay Community Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/946070996"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

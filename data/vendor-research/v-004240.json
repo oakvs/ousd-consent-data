@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://terraphase.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://terraphase.com/company/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/terraphase-engineering-inc-10038080/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004240",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Terraphase Engineering Inc.' is the legal name shown on the company website and a federal contractor profile (HigherGov)",
+      "Headquartered in Oakland, CA, matching the agenda text 'Oakland, CA'",
+      "Company is an environmental and engineering consulting firm, matching OUSD's 'School buildings & construction' contracts from the Facilities Planning and Management division",
+      "OUSD's own board record for the Garfield Elementary School Modernization Project names Terraphase Engineering, Inc. for soil sampling work; a school-business-officials directory also lists Terraphase as serving school districts"
+    ],
+    "key": "v-004240",
+    "notes": "Registry IDs other than the SAM UEI (EIN, California entity number) were not found on a cited page. The UEI comes from a third-party aggregator (HigherGov) rather than SAM.gov directly. A third-party listing gave a different Oakland street address (1404 Franklin Street); the company's own Contact page lists 1300 Clay Street as headquarters.",
+    "profile": {
+      "address": "1300 Clay Street, Suite 1000 Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@terraphase.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Terraphase Engineering Inc.",
+      "orgType": "company",
+      "phone": "510-645-1850",
+      "samUei": "MFB8MBN4FX54",
+      "summary": "Terraphase is an environmental and engineering consulting firm founded in 2010. It offers environmental consulting, compliance, water resources and site engineering services to clients in industry, government, energy and utilities, real estate and other sectors. It is based in Oakland, California.",
+      "website": "https://terraphase.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - Terraphase",
+        "url": "https://terraphase.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Company - Terraphase",
+        "url": "https://terraphase.com/company/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "samUei"
+        ],
+        "title": "Terraphase Engineering",
+        "url": "https://www.highergov.com/awardee/terraphase-engineering-inc-10038080/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004240",
+    "notes": "Terraphase Engineering Inc. is an Oakland-headquartered environmental and site engineering firm (legal name, UEI, and Oakland HQ confirmed on the company site and HigherGov), which fits OUSD facilities modernization work. Contact details, founding year, and services in the neutral summary are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942346815",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bacr.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bacr.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://westlake.ousd.org/programs-services/expanded-learning-program",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000624",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Bay Area Community Resources', El Cerrito, CA, EIN 94-2346815 (ProPublica Nonprofit Explorer); El Cerrito is one of the two cities named in the agenda text",
+      "Organization's own website (bacr.org) lists its address at 11175 San Pablo Ave, El Cerrito, CA and describes expanded learning (afterschool) programs, matching OUSD's after-school and student-support contracts and the 21st Century grant funding",
+      "An OUSD school page (Westlake Middle School) states it partners with Bay Area Community Resources (BACR) to run its Expanded Learning Program"
+    ],
+    "key": "v-000624",
+    "notes": "The website lists no public phone number or general email, so those are null. The address appears on the site with a pipe separator ('11175 San Pablo Ave | El Cerrito, CA 94530'). The agenda also lists San Rafael, CA, which is where older directory listings place the organization (171 Carlos Drive); the organization's current site and ProPublica show El Cerrito. California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "11175 San Pablo Ave, El Cerrito, CA 94530",
+      "caEntityNumber": null,
+      "ein": "94-2346815",
+      "email": null,
+      "headquarters": "El Cerrito, CA",
+      "legalName": "Bay Area Community Resources",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Bay Area Community Resources (BACR) is a nonprofit that provides services to schools and communities across the San Francisco Bay Area. Its programs include afterschool and expanded learning, behavioral and mental health services, healthy schools and communities, national service (AmeriCorps), and youth workforce and reentry.",
+      "website": "https://www.bacr.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Bay Area Community Resources - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942346815"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Bay Area Community Resources",
+        "url": "https://www.bacr.org/about-us"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Bay Area Community Resources",
+        "url": "https://www.bacr.org/contact-us"
+      },
+      {
+        "supports": [],
+        "title": "Expanded Learning Program - Westlake Middle School",
+        "url": "https://westlake.ousd.org/programs-services/expanded-learning-program"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000624",
+    "notes": "ProPublica lists the 501(c)(3) Bay Area Community Resources (EIN 94-2346815) in El Cerrito, matching the agenda, and bacr.org confirms the El Cerrito HQ address and the five program areas in the summary. An OUSD school page names BACR as its Expanded Learning Program partner, which fits the after-school and student-support contracts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/spectrum-center-schools-and-programs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sd.cde.ca.gov/schooldirectory/details?cdscode=01612597077878",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-004029",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "LinkedIn lists Spectrum Center Schools and Programs, a special education provider, as headquartered in Brentwood, Tennessee, matching the agenda location 'Brentwood, TN'",
+      "California Department of Education directory lists 'Spectrum Center, Camden Campus' at 6325 Camden St., Oakland, CA, a certified nonpublic school inside Oakland Unified, website spectrumschools.com, matching OUSD's 'Nonpublic, Nonsectarian School' special education contract",
+      "Spectrum's services (special education for students with autism, emotional and behavioral disabilities) match OUSD's 'Special education' contracting purpose"
+    ],
+    "key": "v-004029",
+    "notes": "Spectrum is a division of ChanceLight (HQ Brentwood, TN); legal entity name, registry IDs and a central phone/email could not be confirmed because spectrumschools.com and chancelight.com block automated fetching. The only phone/address found are for the Oakland Camden campus, so they were left out. orgType left null because the cited pages do not state it.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Brentwood, Tennessee",
+      "legalName": null,
+      "orgType": null,
+      "phone": null,
+      "samUei": null,
+      "summary": "Spectrum Center Schools and Programs is a special education provider that partners with local school districts. It serves children and young adults with autism spectrum disorders, developmental delays, emotional disturbance and behavioral challenges. It is a division of ChanceLight Behavioral Health, Therapy & Education.",
+      "website": "http://spectrumschools.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Spectrum Center Schools and Programs | LinkedIn",
+        "url": "https://www.linkedin.com/company/spectrum-center-schools-and-programs"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Spectrum Center, Camden Campus - School Directory Details (CA Dept of Education)",
+        "url": "https://sd.cde.ca.gov/schooldirectory/details?cdscode=01612597077878"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004029",
+    "notes": "The CDE directory lists Spectrum Center, Camden Campus as a certified nonpublic school in Oakland operated by ChanceLight at spectrumschools.com. LinkedIn confirms Spectrum is a ChanceLight division headquartered in Brentwood, TN, matching the agenda location and the special education nonpublic school contract. The summary and website are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

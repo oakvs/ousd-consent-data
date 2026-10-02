@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://scientificadventures.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://scientificadventures.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/472414936",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010065",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Organization's own site (scientificadventures.org) names it 'Scientific Adventures for Girls', based in Oakland, CA, matching the agenda's name and location",
+      "Site describes afterschool and summer STEM programs for TK-6th graders, matching OUSD's 'After-school & summer programs' and 'Classroom & academic programs' contracts",
+      "Site states 501(c)(3) Tax ID 47-2414936, and ProPublica Nonprofit Explorer lists EIN 47-2414936 as 'Scientific Adventures' in Oakland, CA, a 501(c)(3) for educational and scientific purposes"
+    ],
+    "key": "v-010065",
+    "notes": "IRS/ProPublica lists the legal name as 'Scientific Adventures'; 'Scientific Adventures for Girls' is the name used on the website and in the agenda (likely a doing-business-as name). CA Secretary of State and SAM.gov were not checked (web search budget exhausted).",
+    "profile": {
+      "address": "PO Box 11123, Oakland, CA 94611",
+      "caEntityNumber": null,
+      "ein": "47-2414936",
+      "email": "info@scientificadventures.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Scientific Adventures",
+      "orgType": "nonprofit",
+      "phone": "(510) 926-4089",
+      "samUei": null,
+      "summary": "A nonprofit that runs afterschool STEM (science, technology, engineering and math) programs for students in transitional kindergarten through 6th grade, with a focus on girls of color from low-income families. Its programs include afterschool classes, summer camps, family events, library programs and a scholar club in the San Francisco East Bay area.",
+      "website": "https://scientificadventures.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Scientific Adventures for Girls",
+        "url": "https://scientificadventures.org"
+      },
+      {
+        "supports": [
+          "orgType",
+          "ein",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "About - Scientific Adventures for Girls",
+        "url": "https://scientificadventures.org/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Scientific Adventures - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/472414936"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010065",
+    "notes": "Org site (Oakland, CA; TK-6 afterschool/summer STEM) matches the agenda name and OUSD services, and its EIN 47-2414936 matches ProPublica's 501(c)(3) listing for Scientific Adventures in Oakland. Summary, contact fields and EIN are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/200110700007",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/sam-entity/HBLKCS6SEE29",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.johnsoncontrols.com/fire-suppression",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004981",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California-registered limited partnership: 'JOHNSON CONTROLS FIRE PROTECTION LP', entity number 200110700007, status Active (OpenCorporates, from California Secretary of State data)",
+      "A Johnson Controls Fire Protection LP branch is listed in Livermore, CA, matching the agenda text 'Livermore, CA' (Buzzfile directory)",
+      "Johnson Controls' fire services business offers inspection, testing and maintenance of fire alarm systems, matching OUSD's 'Fire and Life Safety System Testing & Inspection Services' and fire and burglar monitoring contracts",
+      "Same legal name also appears as a federal SAM.gov entity record (UEI HBLKCS6SEE29, partnership, California address)"
+    ],
+    "key": "v-004981",
+    "notes": "Website is the parent company's (Johnson Controls) main site; the LP has no separate site found. No phone, email or Livermore branch address included because only third-party directories (Buzzfile) list them. The address shown is the mailing address in the registry record (Boca Raton, FL), not the Livermore branch. SAM.gov registration is expired (Feb 2023).",
+    "profile": {
+      "address": "46700 EXCHANGE CT STE 300, BOCA RATON, FL, 33431",
+      "caEntityNumber": "200110700007",
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "JOHNSON CONTROLS FIRE PROTECTION LP",
+      "orgType": "company",
+      "phone": null,
+      "samUei": "HBLKCS6SEE29",
+      "summary": "A limited partnership that is part of Johnson Controls, a building technology company. It provides fire detection and alarm systems and fire services such as design, installation, inspection, testing and maintenance of life-safety systems for commercial and public buildings.",
+      "website": "https://www.johnsoncontrols.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "orgType"
+        ],
+        "title": "JOHNSON CONTROLS FIRE PROTECTION LP :: California (US) :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/200110700007"
+      },
+      {
+        "supports": [
+          "samUei",
+          "legalName"
+        ],
+        "title": "Johnson Controls Fire Protection Lp - SAM entity",
+        "url": "https://opengovus.com/sam-entity/HBLKCS6SEE29"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Fire Suppression | Johnson Controls",
+        "url": "https://www.johnsoncontrols.com/fire-suppression"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004981",
+    "notes": "The legal name matches exactly across the California registry record (entity 200110700007, active) and the SAM.gov record (UEI HBLKCS6SEE29), and the fire alarm and life-safety inspection, testing and maintenance services fit OUSD's contracts. The cited Johnson Controls page does not name the LP and does not literally say 'commercial and public buildings' or 'building technology company', so the summary is a mild paraphrase. The Livermore branch is not shown in the cited sources, but identity is not in real doubt.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

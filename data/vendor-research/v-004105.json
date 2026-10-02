@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/522373039",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/52-2373039",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://streetacademy.ousd.org/about-us/history-philosophy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-004105",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Street Academy Foundation', located in Oakland, CA (ProPublica Nonprofit Explorer, EIN 52-2373039), matching the agenda's Oakland, CA location",
+      "GuideStar lists the foundation as also known as Oakland Emiliano Zapata Street Academy, at 417 29th St, Oakland, the same address the OUSD school page gives for Street Academy",
+      "OUSD's Street Academy school and Emiliano Zapata Street Academy appear in the agreement titles, matching the foundation's school operations"
+    ],
+    "key": "v-004105",
+    "notes": "The website listed by GuideStar (oaklandstreetacademy.org) currently serves unrelated gambling content and appears compromised, so website is left null. The only phone found, (510) 879-2313, is the OUSD school's line, not the foundation's, so phone is left null. No general email found. No CA Secretary of State or SAM.gov record checked.",
+    "profile": {
+      "address": "417 29th St, Oakland, CA 94609-3510",
+      "caEntityNumber": null,
+      "ein": "52-2373039",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Street Academy Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that operates Oakland Emiliano Zapata Street Academy, a small alternative high school in downtown Oakland. Since 1973 the school has worked to keep students from dropping out and to help them earn credits and graduate. It is a college preparatory program that works in partnership with Oakland Unified School District.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Street Academy Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/522373039"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Street Academy Foundation - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/52-2373039"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "History & Philosophy - Street Academy - Oakland Unified School District",
+        "url": "https://streetacademy.ousd.org/about-us/history-philosophy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004105",
+    "notes": "ProPublica confirms Street Academy Foundation is an Oakland 501(c)(3) (EIN 52-2373039), and GuideStar lists it as Oakland Emiliano Zapata Street Academy at 417 29th St, the same address as the OUSD Street Academy page, matching the agreement titles and Oakland location. The summary is neutral and supported by GuideStar (dropout prevention since 1973, college prep, OUSD partnership) and OUSD pages (credit recovery, downtown Oakland).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

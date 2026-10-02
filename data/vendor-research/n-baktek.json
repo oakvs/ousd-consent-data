@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://baktek.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://baktek.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-baktek",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name 'BakTek' matches the agenda name, and the company is located in Livermore, CA, matching the agenda location",
+      "CONTRADICTION: the website describes bagel production lines, custom fabrication and factory relocations, with no mention of stove, range or hot holding cabinet repair or of school districts"
+    ],
+    "key": "n-baktek",
+    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) lookup was possible. Candidate matches on name and city only; its listed services (bagel lines, fabrication, installs) do not match the OUSD contract for stove, range and hot holding cabinet repair. Could be a different or related business. Needs human review before publishing.",
+    "profile": {
+      "address": "2130 Research Dr., Livermore, CA 94550",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Livermore, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(925) 217-7712",
+      "samUei": null,
+      "summary": "BakTek is a Livermore, California company that offers bakery equipment manufacturing and design, industrial equipment installation and relocation, and custom contract manufacturing.",
+      "website": "https://baktek.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "BakTek",
+        "url": "http://baktek.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "BakTek Contact",
+        "url": "http://baktek.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

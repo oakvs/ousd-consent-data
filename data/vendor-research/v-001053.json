@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943209054",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://fairyland.org/visit/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://fairyland.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001053",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists a registered 501(c)(3) 'Oakland Childrens Fairyland Inc' in Oakland, CA, EIN 94-3209054, matching the agenda's 'Children's Fairyland, Oakland, CA'",
+      "fairyland.org (Children's Fairyland, 699 Bellevue Avenue, Oakland) states it is a 501(c)(3) nonprofit with tax ID 94-3209054, the same EIN as the ProPublica record",
+      "fairyland.org describes children's theatre, puppet shows, field trips and school-group programming, consistent with OUSD's 'Classroom & academic programs' no-cost services agreements with Lincoln Elementary and Early Childhood Development"
+    ],
+    "key": "v-001053",
+    "notes": "WebSearch budget was exhausted, so the CA Secretary of State and SAM.gov registries were not checked; those IDs are null. Legal name is as shown on ProPublica (IRS record).",
+    "profile": {
+      "address": "699 Bellevue Avenue, Oakland, CA 94610",
+      "caEntityNumber": null,
+      "ein": "94-3209054",
+      "email": "frontdesk@fairyland.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Childrens Fairyland Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 452-2259",
+      "samUei": null,
+      "summary": "Children's Fairyland is a nonprofit that runs a 10-acre storybook park on Lake Merritt in Oakland, California, for young children and their families. It offers puppet shows, children's theatre, animal talks, rides, summer day camps and school field trips.",
+      "website": "https://fairyland.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Oakland Childrens Fairyland Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943209054"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Children's Fairyland - Oakland, CA",
+        "url": "https://fairyland.org/visit/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein"
+        ],
+        "title": "About Children's Fairyland",
+        "url": "https://fairyland.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001053",
+    "notes": "ProPublica and fairyland.org independently show the Oakland 501(c)(3) Children's Fairyland with the same EIN 94-3209054, and its school field trips and programs fit OUSD's no-cost services agreements. All profile fields and the neutral summary match the cited pages; the email is a generic front-desk address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

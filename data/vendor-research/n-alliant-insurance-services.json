@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.alliant.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.alliant.com/risk-management/alliant-specialty/public-entity-education-and-pooling/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alliant-insurance-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact legal name match: Alliant's own website identifies the operating entity as 'Alliant Insurance Services, Inc.', the name in OUSD's agenda titles",
+      "Alliant offers insurance programs for K-12 public schools and public entities, consistent with OUSD buying student accident insurance premiums through its Risk Management Department (Legal, insurance & risk)",
+      "Alliant is a California-licensed insurance broker (California Insurance License No. 0C36861) with multiple Bay Area offices, consistent with a California school district vendor"
+    ],
+    "key": "n-alliant-insurance-services",
+    "notes": "Web search quota was exhausted, so no registry (CA Secretary of State, SAM.gov) lookup was possible; registry IDs left null. Headquarters, phone and address left null because the pages did not clearly identify a corporate headquarters (office locator lists several offices; none labeled HQ). No Oakland office listed.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Alliant Insurance Services, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Alliant Insurance Services is an insurance broker and consulting firm. It helps organizations manage risk and buy insurance, including employee benefits, reinsurance and underwriting services. It has programs for public entities and K-12 schools.",
+      "website": "https://www.alliant.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Alliant Insurance Services",
+        "url": "https://www.alliant.com/about-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Public Entity, Education and Pooling",
+        "url": "https://www.alliant.com/risk-management/alliant-specialty/public-entity-education-and-pooling/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-alliant-insurance-services",
+    "notes": "The agenda names 'Alliant Insurance Services, Inc.', which exactly matches the legal entity name on alliant.com. The about-us and public entity/K-12 pages support the summary (broker and consultant, benefits, reinsurance, underwriting, public entity and K-12 programs), and a K-12 insurance broker fits OUSD's student accident premium payments. No subsidiary or nonprofit name collision was found, but the cited pages do not specifically mention student accident coverage.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://aimhigh.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aimhigh.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aimhigh.org/our-story/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aimhigh.org/donate/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943296338",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000298",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "aimhigh.org describes a free multi-year summer enrichment program for middle school students (grades 5-8), matching OUSD's 'Summer Learning Program' services agreements and 'After-school & summer programs' category",
+      "Organization was founded in San Francisco and its office is at 601 Van Ness Avenue, San Francisco, CA, matching the agenda's 'San Francisco, CA'",
+      "aimhigh.org donate page names the legal entity 'Aim High for High School', a 501(c)(3) nonprofit, with EIN 94-3296338; ProPublica Nonprofit Explorer lists the same name and EIN in San Francisco, CA",
+      "Aim High's website describes an East Oakland campus and Oakland school sites, consistent with Oakland summer programs"
+    ],
+    "key": "v-000298",
+    "notes": "Agenda name is 'Aim High'; legal entity is 'Aim High for High School'. No California SOS or SAM.gov lookup performed (web search budget exhausted), so caEntityNumber and samUei are null.",
+    "profile": {
+      "address": "601 Van Ness Avenue, Suite F/G, San Francisco, CA 94102",
+      "caEntityNumber": null,
+      "ein": "94-3296338",
+      "email": "info@aimhigh.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Aim High for High School",
+      "orgType": "nonprofit",
+      "phone": "(415) 551-2301",
+      "samUei": null,
+      "summary": "Aim High is a nonprofit that runs a free, multi-year summer enrichment program for middle school students in grades 5-8 across Northern California. It was founded in San Francisco in 1986 and also trains aspiring teachers through the program. The organization says its goal is to increase educational equity.",
+      "website": "https://aimhigh.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Aim High",
+        "url": "https://aimhigh.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Aim High",
+        "url": "https://aimhigh.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Our Story - Aim High",
+        "url": "https://aimhigh.org/our-story/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Donate - Aim High",
+        "url": "https://aimhigh.org/donate/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Aim High For High School - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943296338"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000298",
+    "notes": "Aim High (legal name Aim High for High School, San Francisco 501(c)(3), EIN 94-3296338) runs free summer programs for grades 5-8, matching OUSD's middle-school Summer Learning Program agreements and the SF location in the agenda. Contact fields, EIN, 1986 SF founding, teacher training and equity mission were confirmed on the cited pages and ProPublica; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

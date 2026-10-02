@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.tulumsystems.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.tulumsystems.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/tulum-innovative-engineering-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-tulum-innovative-engineering",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Tulum Innovative Engineering, Inc.' is an Oakland, CA corporation (bizprofile.net filing page), matching the agenda text and its Oakland, CA location",
+      "Company's own website (tulumsystems.com) lists a 3101 Hyde Street, Oakland, CA headquarters and describes electrical and communications construction work",
+      "Licensed as a General Building (B) and Electrical (C-10) contractor in Oakland, matching OUSD's 'School buildings & construction' contract for a site improvements project"
+    ],
+    "key": "n-tulum-innovative-engineering",
+    "notes": "California entity number comes from a third-party aggregator (bizprofile.net) of Secretary of State data, not the Secretary of State site itself; reviewer may want to verify. The only email on the contact page is a named person's address, so email is left null. The company also uses the name Tulum Systems.",
+    "profile": {
+      "address": "3101 HYDE STREET, OAKLAND, CALIFORNIA 94601",
+      "caEntityNumber": "3837027",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Tulum Innovative Engineering, Inc.",
+      "orgType": "company",
+      "phone": "(510) 355-8159",
+      "samUei": null,
+      "summary": "A licensed contractor based in Oakland, California. It designs and installs electrical systems, including solar power, security and fire alarms, and communications networks for voice, data and video. It works for both public and private customers.",
+      "website": "https://www.tulumsystems.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "Contact — Tulum Innovative Engineering Inc",
+        "url": "https://www.tulumsystems.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Tulum Innovative Engineering Inc",
+        "url": "https://www.tulumsystems.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Tulum Innovative Engineering, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/tulum-innovative-engineering-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-tulum-innovative-engineering",
+    "notes": "Exact legal name, Oakland CA location and B/C-10 contractor licenses (per the bizprofile.net filing page) fit OUSD's Joaquin Miller Elementary site improvements contract. The company site supports the neutral summary, phone, address and website. The California entity number comes from a third-party aggregator and I could not check it against the Secretary of State site. I did not find a page tying the company to OUSD.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

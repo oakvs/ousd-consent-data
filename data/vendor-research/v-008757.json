@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.novakeducation.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.novakeducation.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.novakeducation.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies?q=Novak+Educational+Consulting&jurisdiction_code=us_ma",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008757",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Novak Education's website names its legal entity 'Novak Educational Consulting, Inc.' (privacy policy and About page), matching the agenda name 'Novak Education'",
+      "Massachusetts corporation 'NOVAK EDUCATIONAL CONSULTING, INC.' is registered at PO Box 1004, Groton, MA 01450 (OpenCorporates), matching the agenda location 'Groton, MA'",
+      "Website describes professional development for schools on Universal Design for Learning, multi-tiered systems of support and inclusive practices, consistent with OUSD's classroom and special education contracts"
+    ],
+    "key": "v-008757",
+    "notes": "Massachusetts corporation number 001262099 (OpenCorporates) is not a California entity number, so caEntityNumber left null. Address is the registered PO Box; no street address found.",
+    "profile": {
+      "address": "PO Box 1004, Groton, MA 01450",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "education@novakeducation.com",
+      "headquarters": "Groton, MA",
+      "legalName": "Novak Educational Consulting, Inc.",
+      "orgType": "company",
+      "phone": "617-362-3606",
+      "samUei": null,
+      "summary": "Novak Education is a company that provides professional learning, coaching and implementation support to schools and educators. Its work focuses on Universal Design for Learning, multi-tiered systems of support (MTSS) and inclusive teaching practices.",
+      "website": "https://www.novakeducation.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website"
+        ],
+        "title": "About Novak Education",
+        "url": "https://www.novakeducation.com/about"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Privacy Policy - Novak Education",
+        "url": "https://www.novakeducation.com/privacy-policy"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact Novak Education",
+        "url": "https://www.novakeducation.com/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "NOVAK EDUCATIONAL CONSULTING, INC. (Massachusetts)",
+        "url": "https://opencorporates.com/companies?q=Novak+Educational+Consulting&jurisdiction_code=us_ma"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-008757",
+    "notes": "Novak Educational Consulting, Inc. (Groton, MA) matches the agenda name and location and offers UDL/MTSS professional development consistent with OUSD classroom and special education contracts; summary is neutral and supported. Phone could not be confirmed (two fetches of the contact page returned 617-362-6606 and 617-362-3606), so it is listed as unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "phone"
+    ],
+    "verdict": "confirmed"
+  }
+}

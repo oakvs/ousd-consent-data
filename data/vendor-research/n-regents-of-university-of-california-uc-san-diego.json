@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://ucsd.edu/about/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blink.ucsd.edu/research/sra/preparing-proposals/institutional-information-codes.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://communityhealth.ucsd.edu/work/refugee-school-impact-rsi-and-youth-mentoring-ym-programs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-uc-san-diego",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'The Regents of the University of California (UC San Diego)' matches the legal name 'The Regents of the University of California; University of California San Diego' on UC San Diego's own institutional information page",
+      "OUSD's contract title is the Refugee School Impact (RSI) Program; UC San Diego's Center for Community Health is the California lead for the statewide RSI program, with a San Francisco (Bay Area) region",
+      "UC San Diego is a public university, consistent with a University of California Professional Services Agreement"
+    ],
+    "key": "n-regents-of-university-of-california-uc-san-diego",
+    "notes": "Page does not mention Oakland specifically; the RSI link is via the program name and UCSD's statewide lead role. UEI shown is the UC San Diego campus entry; other UEIs exist for related UC entities. Email omitted (only a research-administration inbox was found).",
+    "profile": {
+      "address": "9500 Gilman Drive, La Jolla, CA 92093-0021",
+      "caEntityNumber": null,
+      "ein": "95-6006144",
+      "email": null,
+      "headquarters": "La Jolla, CA",
+      "legalName": "The Regents of the University of California; University of California San Diego",
+      "orgType": "public_agency",
+      "phone": "(858) 534-2230",
+      "samUei": "UYTTZT6G9DT1",
+      "summary": "UC San Diego is a public research university in La Jolla, California, and one campus of the University of California system. Its Center for Community Health helps run California's Refugee School Impact program, which supports school success and community integration for refugee youth and their families.",
+      "website": "https://ucsd.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "UC San Diego",
+        "url": "https://ucsd.edu/about/index.html"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "samUei",
+          "orgType"
+        ],
+        "title": "UC San Diego Institutional Information and Codes",
+        "url": "https://blink.ucsd.edu/research/sra/preparing-proposals/institutional-information-codes.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Refugee School Impact (RSI) and Youth Mentoring (YM) Programs",
+        "url": "https://communityhealth.ucsd.edu/work/refugee-school-impact-rsi-and-youth-mentoring-ym-programs"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-regents-of-university-of-california-uc-san-diego",
+    "notes": "The agenda names The Regents of the University of California (UC San Diego), which matches the legal name, EIN, UEI, address and phone on UCSD's institutional page; UCSD's Center for Community Health is California's lead for the Refugee School Impact program that matches OUSD's contract title. The RSI page does not mention Oakland, but the summary makes no Oakland claim and all profile fields are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

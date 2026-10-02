@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://degenkolb.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://degenkolb.com/services/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://degenkolb.com/offices/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://degenkolb.com/offices/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010113",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: degenkolb.com is the site of 'Degenkolb Engineers', the exact name in the agenda text",
+      "Located in Oakland, CA, matching the agenda: the firm's own Oakland office page lists 601 City Center, 12th Street, Suite 400, Oakland, CA 94607",
+      "The firm describes itself as a full-service structural engineering firm, matching OUSD's 'Structural Engineering Consulting Services' contract for school buildings and construction"
+    ],
+    "key": "v-010113",
+    "notes": "Phone and address are for the Oakland office (the location named in the agenda); corporate headquarters is San Francisco. No registry (CA SOS, SAM.gov) lookup was possible, so legal entity name and IDs are not confirmed. WebSearch budget was exhausted, so identity rests on the firm's own site plus the agenda match.",
+    "profile": {
+      "address": "601 City Center, 12th Street, Suite 400, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Degenkolb Engineers",
+      "orgType": "company",
+      "phone": "510.272.9040",
+      "samUei": null,
+      "summary": "Degenkolb Engineers is a structural engineering firm. It provides structural design concepts, building systems support, delegated designs and construction engineering services. It also does seismic (earthquake) engineering, forensic analysis and structural consulting. It has offices in the U.S. and elsewhere, with corporate headquarters in San Francisco.",
+      "website": "https://degenkolb.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "orgType"
+        ],
+        "title": "Degenkolb Engineers",
+        "url": "https://degenkolb.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Degenkolb Engineers - Services",
+        "url": "https://degenkolb.com/services/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "summary",
+          "legalName"
+        ],
+        "title": "Degenkolb Engineers - Offices",
+        "url": "https://degenkolb.com/offices/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Degenkolb Engineers - Oakland Office",
+        "url": "https://degenkolb.com/offices/oakland/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-010113",
+    "notes": "Degenkolb Engineers is a structural engineering firm with an Oakland office (601 City Center, Suite 400, phone 510.272.9040) matching the agenda name, city and the structural engineering consulting contract for school facilities. The services, headquarters, address and phone were confirmed on the firm's own pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.langan.com/langan-legal-entities",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.langan.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.langan.com/locations/oakland-california",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009210",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Langan's own legal-entities page lists 'Langan CA, Inc.' among the legal entities operating under the Langan name, matching the agenda name exactly",
+      "Langan has an office in Oakland, CA (1330 Broadway, Suite 428), matching the agenda location",
+      "Langan's services (geotechnical, environmental, site/civil, land use) match OUSD's contracts for geotechnical, environmental site assessment, land surveying and site improvement work in school buildings and construction"
+    ],
+    "key": "v-009210",
+    "notes": "Langan operates as a group of legal entities; 'Langan CA, Inc.' is confirmed on the legal-entities page, but the page gives no entity number or address. The phone and address are for the Langan Oakland office, not a separate registry address for the entity. Group headquarters is in Parsippany, NJ, so headquarters is left null to avoid confusion. No CA Secretary of State number, EIN or SAM UEI was verified (web search budget exhausted, registries not checked).",
+    "profile": {
+      "address": "1330 Broadway, Suite 428, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Langan CA, Inc.",
+      "orgType": "company",
+      "phone": "510.874.7000",
+      "samUei": null,
+      "summary": "Langan is an engineering and environmental consulting firm. It provides site and civil, geotechnical, environmental, energy and sustainability services for building and infrastructure projects. It has offices across the United States and in several other countries, including an office in Oakland, California.",
+      "website": "https://www.langan.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Langan Legal Entities",
+        "url": "https://www.langan.com/langan-legal-entities"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Langan",
+        "url": "https://www.langan.com/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Oakland, California Office - Langan",
+        "url": "https://www.langan.com/locations/oakland-california"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009210",
+    "notes": "Langan's legal-entities page lists Langan CA, Inc. exactly as in the agenda, the Oakland office (1330 Broadway, Suite 428) matches the agenda city, and its geotechnical, environmental, surveying and site work fits OUSD's facilities contracts. The summary, website, phone and address are each supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

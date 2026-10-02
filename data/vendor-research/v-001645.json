@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.children-rising.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.children-rising.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943403801",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001645",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered Oakland, CA 501(c)(3): 'Children Rising Inc', EIN 94-3403801 (ProPublica Nonprofit Explorer); the other 'Children Rising Inc' in Bayonne, NJ is a different organization",
+      "Located in Oakland, CA, matching the agenda text",
+      "Organization's own website describes one-on-one reading and math tutoring for elementary students in Oakland, matching OUSD's elementary-school services agreements and 'Classroom & academic programs'",
+      "Website shows the same EIN (94-3403801) as the ProPublica registry entry",
+      "GuideStar profile states its programs primarily serve students in Oakland Unified School District elementary schools"
+    ],
+    "key": "v-001645",
+    "notes": "Website certificate for childrenrising.org is expired (not used); children-rising.org is the working site. Legal name taken as shown on the organization's site; registries show 'Children Rising Inc' / 'Children Rising, Inc.'. CA entity number and SAM UEI not checked (web search budget exhausted).",
+    "profile": {
+      "address": "2633 Telegraph Avenue #412, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3403801",
+      "email": "info@children-rising.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Children Rising",
+      "orgType": "nonprofit",
+      "phone": "(510) 836-5100",
+      "samUei": null,
+      "summary": "Children Rising is an Oakland nonprofit that provides one-on-one reading and math tutoring to elementary school students in Oakland. It also offers family support services. Its programs include Succeeding by Reading, Path2Math and FamilyBridge.",
+      "website": "https://www.children-rising.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Children Rising",
+        "url": "https://www.children-rising.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact | Children Rising",
+        "url": "https://www.children-rising.org/contact"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Children Rising Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943403801"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-001645",
+    "notes": "Oakland 501(c)(3) Children Rising Inc (EIN 94-3403801) matches the agenda name and city, and its elementary-school reading and math tutoring plus family support fits the per-school services agreements. The site and ProPublica confirm the EIN, address, phone, email and programs, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

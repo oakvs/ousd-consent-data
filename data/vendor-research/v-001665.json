@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.comtelsys.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.comtelsys.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001665",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Company name matches exactly: 'Comtel Systems Technology, Inc.' (comtelsys.com); a California stock corporation of the same name is listed on OpenCorporates (not cited)",
+      "Company serves K-12 schools with public address, intercom and bell systems, matching OUSD's 'PA System Replacement Project' contracts",
+      "Northern California company with a (408) area-code phone, consistent with the Silicon Valley / Sunnyvale location in the agenda",
+      "CONTRADICTION/WEAK: website gives its address as Pleasanton, CA, not Sunnyvale; no page found mentioning Oakland or OUSD; web search budget was exhausted so no registry (CA SOS, SAM.gov) could be checked"
+    ],
+    "key": "v-001665",
+    "notes": "Agenda says Sunnyvale, CA; the company website lists Pleasanton, CA (possible relocation, not confirmed). Parent company is Beacon Communications (acquired April 2022). No registry confirmation or Oakland/OUSD link found because the web search budget was exhausted. Re-run with search access to confirm identity via CA SOS / CSLB license 420981 before publishing.",
+    "profile": {
+      "address": "7133 Koll Center Pkwy, Suite 100, Pleasanton, CA 94566",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@comtelsys.com",
+      "headquarters": "Pleasanton, CA",
+      "legalName": "Comtel Systems Technology, Inc.",
+      "orgType": "company",
+      "phone": "(408) 543-5600",
+      "samUei": null,
+      "summary": "A company that installs and services communications and security systems, including nurse call, electronic security, audio-visual, and structured cabling systems. It serves healthcare, education, government, and commercial customers in Northern California. For schools it offers bell, public address, and intercom systems.",
+      "website": "https://www.comtelsys.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Comtel Systems Technology",
+        "url": "https://www.comtelsys.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Comtel Systems Technology",
+        "url": "https://www.comtelsys.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

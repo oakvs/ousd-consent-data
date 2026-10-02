@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.weleadours.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/800568806",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004574",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'We Lead Ours' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 80-0568806), matching the agenda's Oakland, CA location",
+      "The organization's own website describes youth mentorship, life skills and behavioral health programs, matching OUSD's 'Student health, support & family services' contracts",
+      "The organization's website says it partners with Oakland Unified School District, offering school-based coaching and workshops, and its athletics programs match the Oakland Athletic League agreements"
+    ],
+    "key": "v-004574",
+    "notes": "WebSearch budget was exhausted, so identity was confirmed by direct fetches of the organization's site and ProPublica. Address on the website lacks a ZIP code; copied as shown. CA entity number and SAM UEI not found.",
+    "profile": {
+      "address": "55 Santa Clara Ave, Oakland, CA",
+      "caEntityNumber": null,
+      "ein": "80-0568806",
+      "email": "info@weleadours.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "We Lead Ours",
+      "orgType": "nonprofit",
+      "phone": "(510) 404-5999",
+      "samUei": null,
+      "summary": "We Lead Ours is a nonprofit that has served Bay Area youth since 2010. It offers mentorship, sports, education and life skills programs, including internships, community tennis, football and cheer, and behavioral health support. It also works with Oakland schools through coaching, classroom presentations and workshops.",
+      "website": "https://www.weleadours.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "We Lead Ours",
+        "url": "https://www.weleadours.org"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "We Lead Ours - Nonprofit Organization Summary",
+        "url": "https://projects.propublica.org/nonprofits/organizations/800568806"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-004574",
+    "notes": "We Lead Ours is a 501(c)(3) youth development nonprofit in Oakland (EIN 80-0568806 on ProPublica), its site lists OUSD as a partner and school-based behavioral health and coaching programs plus football/cheer, matching the agenda's Oakland location and student-support/athletics agreements. Summary and contact fields are supported by the cited site and are neutral business details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

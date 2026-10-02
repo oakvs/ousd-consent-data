@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941236838",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eastbaycreativelab.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002345",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Junior Center Of Art & Science', Oakland, CA, EIN 94-1236838 (ProPublica Nonprofit Explorer)",
+      "The former website juniorcenter.org redirects to East Bay Creative Lab, whose site lists its former name as 'Junior Center of Art and Science' and the same Tax ID 94-1236838",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes art and science classes, in-school residencies and field trips and mentions partnering with Oakland Unified schools, matching OUSD's 'Classroom & academic programs' contracts for elementary schools"
+    ],
+    "key": "v-002345",
+    "notes": "Organization now operates as East Bay Creative Lab (former name Junior Center of Art and Science); old domain juniorcenter.org redirects to eastbaycreativelab.org. Email domain is still jcas.org. Address on the site has no ZIP code. Web search budget was exhausted, so identity was confirmed via direct fetches of ProPublica and the organization's site only.",
+    "profile": {
+      "address": "558 Bellevue Ave. Oakland, CA",
+      "caEntityNumber": null,
+      "ein": "94-1236838",
+      "email": "info@jcas.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Junior Center Of Art & Science",
+      "orgType": "nonprofit",
+      "phone": "(510) 839-5777",
+      "samUei": null,
+      "summary": "A nonprofit art and science center on the shores of Lake Merritt in Oakland, now operating as East Bay Creative Lab. It offers classes, camps, field trips, in-school residencies and gallery exhibitions for children and families.",
+      "website": "https://eastbaycreativelab.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Junior Center Of Art & Science - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941236838"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein",
+          "orgType"
+        ],
+        "title": "East Bay Creative Lab",
+        "url": "https://eastbaycreativelab.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-002345",
+    "notes": "ProPublica lists Junior Center Of Art & Science (Oakland, CA, EIN 94-1236838, 501(c)(3), K-12 education) and the East Bay Creative Lab site names Junior Center of Art & Science as its former name with the same Tax ID, Oakland address, and in-school residency programs and OUSD exhibitions. All profile fields are supported by the cited pages and the summary is neutral; contact details are generic business ones.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/813376078",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.axismundicenter.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.axismundicenter.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007577",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match to a registered nonprofit, 'Axis Mundi Center For Mental Health', Oakland, CA, EIN 81-3376078 (ProPublica Nonprofit Explorer)",
+      "Organization's own website lists its office at 516 Oakland Ave, Suite 203, Oakland, CA, matching the agenda location 'Oakland, CA'",
+      "Website describes therapy and counseling services, consistent with OUSD's 'Student health, support & family services' contract category"
+    ],
+    "key": "v-007577",
+    "notes": "No public page found that links this organization to Oakland Unified or Hoover Elementary (OUSD's school-based behavioral health provider page does not list it); identity rests on exact name, Oakland location and service type. Address is copied as formatted on the website. Executive director inbox also exists but a general client-care inbox was used.",
+    "profile": {
+      "address": "516 Oakland Ave, Suite 203 Oakland, CA. | 94611",
+      "caEntityNumber": null,
+      "ein": "81-3376078",
+      "email": "clientcare@axismunditherapy.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Axis Mundi Center For Mental Health",
+      "orgType": "nonprofit",
+      "phone": "(510) 463-4123",
+      "samUei": null,
+      "summary": "A nonprofit that provides individual, couples, family and group therapy and counseling in the San Francisco Bay Area. It emphasizes culturally humble, ecologically aware care and works to make therapy more affordable.",
+      "website": "https://www.axismundicenter.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Axis Mundi Center For Mental Health - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/813376078"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Axis Mundi Center for Mental Health",
+        "url": "https://www.axismundicenter.org/"
+      },
+      {
+        "supports": [
+          "email",
+          "phone",
+          "address"
+        ],
+        "title": "Contact - Axis Mundi Center for Mental Health",
+        "url": "https://www.axismundicenter.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007577",
+    "notes": "Exact full-name match to an Oakland 501(c)(3) mental health nonprofit (EIN 81-3376078, ProPublica) whose own site shows an Oakland office and therapy services, consistent with the agenda's Oakland location and student health services category. No public page links it to OUSD or Hoover Elementary, but identity is unambiguous on name, city and service type; summary, phone, general client-care email and address are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

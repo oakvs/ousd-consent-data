@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.acgov.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://auditor.alamedacountyca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-county-of-alameda",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda item is a Proposition 218 certification for the County of Alameda collecting District bond and parcel taxes; the county's Auditor-Controller site says it allocates tax revenue to over 80 taxing jurisdictions, including schools (auditor.alamedacountyca.gov)",
+      "The official Alameda County Government website (acgov.org, moving to alamedacountyca.gov) lists the county's seat at 1221 Oak Street, Oakland, CA, the same county Oakland Unified is located in"
+    ],
+    "key": "n-county-of-alameda",
+    "notes": "Main-line phone and address taken from the county homepage; the alamedacountyca.gov homepage shows the same address with Room 536, so the room number may vary by page. No general email found on the pages checked. Public agency, so no EIN, CA entity number or SAM UEI looked up.",
+    "profile": {
+      "address": "1221 Oak Street, Room 555, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "County of Alameda",
+      "orgType": "public_agency",
+      "phone": "510.272.6984",
+      "samUei": null,
+      "summary": "Alameda County is a county government in California. It provides public services to residents, including elections, public records, emergency services and budget oversight. Its Auditor-Controller allocates property tax revenue to more than 80 taxing jurisdictions, including cities, schools and special districts.",
+      "website": "https://www.acgov.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Alameda County Government",
+        "url": "https://www.acgov.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName"
+        ],
+        "title": "Alameda County Auditor-Controller",
+        "url": "https://auditor.alamedacountyca.gov/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-county-of-alameda",
+    "notes": "The agenda item is a Prop 218 certification for County of Alameda collecting OUSD bond and parcel taxes, which fits Alameda County government (Oakland is in Alameda County). The acgov.org homepage shows the address, phone, and listed services, and the Auditor-Controller site confirms the 80+ taxing jurisdictions including schools; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/710995500",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jcceastbay.org/about/general/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jcceastbay.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jcceastbay.org/youth-family/afterschool/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007909",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Jewish Community Center Of The East Bay' (ProPublica Nonprofit Explorer, EIN 71-0995500, Berkeley, CA)",
+      "The organization's own website lists 'Kids' Club at Joaquin Miller Elementary' as an afterschool program; OUSD's contract titles name Joaquin Miller Elementary School, matching the after-school and summer program contracts",
+      "East Bay youth and family programs including afterschool and summer camps, matching OUSD's 'After-school & summer programs' contracts",
+      "Website lists a new Oakland campus (5957 Chabot Rd., Oakland) opening fall 2026, consistent with the agenda's Oakland location"
+    ],
+    "key": "v-007909",
+    "notes": "Headquarters is in Berkeley; agenda text says Oakland, CA. Identity rests on exact name match plus the Joaquin Miller Elementary afterschool program, which is named in OUSD's contract titles. Web search budget was exhausted, so California Secretary of State and SAM.gov entries were not checked.",
+    "profile": {
+      "address": "1414 Walnut Street, Berkeley, CA 94709",
+      "caEntityNumber": null,
+      "ein": "71-0995500",
+      "email": "info@jcceastbay.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Jewish Community Center Of The East Bay",
+      "orgType": "nonprofit",
+      "phone": "510-848-0237",
+      "samUei": null,
+      "summary": "A nonprofit Jewish community center serving the East Bay. It runs early childhood education, family programs, summer camps, afterschool programs, youth and teen activities, and holiday celebrations.",
+      "website": "https://jcceastbay.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Jewish Community Center Of The East Bay - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/710995500"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us – JCC East Bay",
+        "url": "https://jcceastbay.org/about/general/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "JCC East Bay",
+        "url": "https://jcceastbay.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Afterschool – JCC East Bay",
+        "url": "https://jcceastbay.org/youth-family/afterschool/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007909",
+    "notes": "Exact legal-name match to the Berkeley-based 501(c)(3), and the organization's own afterschool page lists Kids' Club at Joaquin Miller Elementary (Oakland), which matches OUSD's contract titles for Joaquin Miller after-school and summer programs. Contact fields, EIN and summary are all shown on the cited pages; the summary is neutral and only business contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

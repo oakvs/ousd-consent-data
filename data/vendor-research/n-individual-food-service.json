@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://individualgroup.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.imperialbrady.com/locations/ca-bell-lindbergh-lane-4",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bradyplus.com/individual-foodservice",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    }
+  ],
+  "key": "n-individual-food-service",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Individual Foodservice' is a food service distributor (pages from individualgroup.com, imperialbrady.com and bradyplus.com all use the name)",
+      "Located at 5496 Lindbergh Lane, Bell, CA 90201, matching the agenda's 'Bell, CA'",
+      "Business type matches the contract: a food and supplies distributor whose customers include schools, consistent with a K-12 grocery products bid for Nutrition Services"
+    ],
+    "key": "n-individual-food-service",
+    "notes": "No registry record (CA Secretary of State, SAM.gov) was found or fetched, so legal name and registry IDs are left null. The company's own site (individualfoodservice.com) blocked automated fetching, so website is left null. The company is a subsidiary of BradyPLUS, whose listed headquarters is Las Vegas, NV; Bell, CA is the Individual Foodservice location. An older contact page lists a different main phone (800-464-4121); the Bell location phone (323) 981-2800 was used. No page found explicitly links this company to OUSD's bid #26-173NS.",
+    "profile": {
+      "address": "5496 Lindbergh Lane, Bell, CA 90201",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@indfood.com",
+      "headquarters": "Bell, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(323) 981-2800",
+      "samUei": null,
+      "summary": "Individual Foodservice is a food service distributor founded in 1926. It supplies food products, janitorial supplies, packaging and related items to restaurants, schools, healthcare facilities and other food service operations. It is now part of BradyPLUS, a larger distribution company.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Welcome to Individual Foodservice: Contact",
+        "url": "https://individualgroup.com/contact/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Individual Foodservice - Los Angeles, CA",
+        "url": "https://www.imperialbrady.com/locations/ca-bell-lindbergh-lane-4"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Individual Foodservice",
+        "url": "https://www.bradyplus.com/individual-foodservice"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-individual-food-service",
+    "notes": "Individual Foodservice at 5496 Lindbergh Lane, Bell, CA matches the agenda's name and city, and it is a food and supplies distributor serving schools, which fits a K-12 grocery products bid. The summary, phone, generic info@ email, address and headquarters are each supported by the cited pages, and the BradyPLUS relationship is shown on the bradyplus.com page. No source ties the company to the OUSD bid explicitly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

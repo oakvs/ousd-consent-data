@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://instructionpartners.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://instructionpartners.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://instructionpartners.org/california-partnerships/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007467",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Organization's own website (instructionpartners.org) describes a nonprofit named Instruction Partners that supports instructional leaders in schools and districts, matching OUSD's 'Classroom & academic programs' contracts (school-level instructional support agreements)",
+      "Contact page lists Nashville, TN as headquarters/mailing city, matching the agenda's 'Nashville, TN'",
+      "Organization's California Partnerships page says it has worked with California instructional leaders and describes work with an Oakland school (Oakland Unity Middle School)"
+    ],
+    "key": "v-007467",
+    "notes": "Registry lookups (ProPublica, IRS) were blocked or unavailable (HTTP 429/403 and search budget exhausted), so EIN, legal name and entity numbers are null and the nonprofit status rests on the organization's own site. OUSD itself is not named on pages checked; California link is via Oakland Unity Middle School, a different school.",
+    "profile": {
+      "address": "PO box 68461, Nashville, TN 37206",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Nashville, TN",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": "(615) 541-5323",
+      "samUei": null,
+      "summary": "Instruction Partners is a nonprofit that helps schools, school systems and states develop and support instructional leaders. Its work focuses on strong daily teaching in English language arts, early reading and math, with an emphasis on students of color, students in poverty, multilingual learners and students with disabilities.",
+      "website": "https://instructionpartners.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Instruction Partners",
+        "url": "https://instructionpartners.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Instruction Partners",
+        "url": "https://instructionpartners.org/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "California Partnerships - Instruction Partners",
+        "url": "https://instructionpartners.org/california-partnerships/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007467",
+    "notes": "Exact name and Nashville, TN location match the agenda; the organization's site describes a nonprofit providing instructional leadership support to schools, consistent with OUSD's school-level instructional services agreements, and it lists California school partners including an Oakland school. Summary, orgType, website, phone, address and headquarters are all confirmed on the cited pages; the legal name, EIN and entity numbers are correctly null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

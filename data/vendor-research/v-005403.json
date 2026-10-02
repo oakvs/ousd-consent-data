@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.f3law.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.f3law.com/offices/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005403",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm's own website names it exactly 'Fagen Friedman & Fulfrost LLP', matching the agenda text and the 'Fagen Friedman & Fulfrost LLP' title in OUSD's Special Education Department item",
+      "Website describes an education law firm serving California public schools, matching OUSD's 'Legal, insurance & risk' and 'Special education' contracts with the General Counsel and Special Education offices",
+      "The firm's Offices page lists an Oakland, California office, consistent with an Oakland school district client"
+    ],
+    "key": "v-005403",
+    "notes": "Web search quota was exhausted, so no registry (CA Secretary of State, SAM.gov) was checked; EIN, entity number, UEI, email and headquarters are null. The firm has 12 offices; the Oakland office phone and address are given because they match the district's location. The general email on the Offices page is obfuscated by Cloudflare and was not captured. Identity rests on the firm's own site only.",
+    "profile": {
+      "address": "70 Washington Street Suite 205 Oakland, California 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Fagen Friedman & Fulfrost LLP",
+      "orgType": "company",
+      "phone": "510.550.8200",
+      "samUei": null,
+      "summary": "A law firm that specializes in education law and serves California public schools. It has offices in several California cities and in other states.",
+      "website": "https://www.f3law.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Fagen Friedman & Fulfrost LLP",
+        "url": "https://www.f3law.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Fagen Friedman & Fulfrost LLP - Office Locations",
+        "url": "https://www.f3law.com/offices/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-005403",
+    "notes": "The firm's own site names it Fagen Friedman & Fulfrost LLP, an education law firm serving California public schools, which matches OUSD's legal and special education engagements. The Offices page confirms the Oakland address and phone and the 12 offices in California and other states, so the summary and contact fields are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

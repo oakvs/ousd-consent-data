@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473234553",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://calauthorizers.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://calauthorizers.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ca-charter-authorizing-professionals",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'California Charter Authorizing Professionals' (ProPublica Nonprofit Explorer, EIN 47-3234553), located in Rocklin, CA, matching the agenda text",
+      "The organization's own contact page gives a Rocklin, CA mailing address and describes support for charter school authorizers, matching OUSD's 'Services Agreement ... Charter Schools Office' and the General Counsel office"
+    ],
+    "key": "n-ca-charter-authorizing-professionals",
+    "notes": "California Secretary of State entity number and SAM.gov UEI not looked up (web search budget was exhausted). The website's pages do not mention Oakland Unified; identity rests on name, Rocklin location, and subject match with the Charter Schools Office services agreement.",
+    "profile": {
+      "address": "2351 Sunset Blvd., Ste 170, #859, Rocklin, CA 95765",
+      "caEntityNumber": null,
+      "ein": "47-3234553",
+      "email": "info@calauthorizers.org",
+      "headquarters": "Rocklin, CA",
+      "legalName": "California Charter Authorizing Professionals",
+      "orgType": "nonprofit",
+      "phone": "916-244-3520",
+      "samUei": null,
+      "summary": "A professional membership organization, founded in 2013 by charter school authorizing staff from school districts and county offices of education, that supports the people who oversee charter schools in California. It offers consulting, training, toolkits for reviewing charter petitions and annual reports, webinars and an annual conference.",
+      "website": "https://calauthorizers.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "California Charter Authorizing Professionals - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473234553"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - California Charter Authorizing Professionals",
+        "url": "https://calauthorizers.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About - California Charter Authorizing Professionals",
+        "url": "https://calauthorizers.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-ca-charter-authorizing-professionals",
+    "notes": "The agenda name 'CA Charter Authorizing Professionals' (Rocklin, CA; Charter Schools Office services agreement) matches the 501(c)(3) California Charter Authorizing Professionals (EIN 47-3234553, Rocklin, CA), whose work supporting district charter authorizers fits what OUSD's Charter Schools Office would buy. ProPublica, the contact page and the about page support the cited fields and the neutral summary; I found no OUSD-specific confirmation, and web search was unavailable, but no conflicting similarly named organization appeared.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

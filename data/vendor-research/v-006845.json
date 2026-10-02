@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.restroomalert.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.restroomalert.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies?q=restroom+alert&jurisdiction_code=us_fl",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006845",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the company's own site names its legal entity 'Restroom Alert, LLC', and OpenCorporates lists a single Florida LLC by that name (the only match for 'restroom alert' in Florida)",
+      "Located in Fleming Island, FL, matching the agenda text 'Fleming Island, FL'",
+      "Company sells a restroom management system (restroom check logging, cleaning scheduling, repair tracking), consistent with OUSD's Services Agreements with its Custodial Services Department"
+    ],
+    "key": "v-006845",
+    "notes": "Florida entity number L12000144659 (per OpenCorporates) is not in the profile because the schema has no field for Florida entity numbers. Company's own pages do not mention schools or OUSD; identity rests on exact name, Fleming Island location, and matching service type. No general email address found on the site. Florida Sunbiz blocked automated fetching.",
+    "profile": {
+      "address": "5000 US Highway 17 S., Suite 18-209, Fleming Island, FL 32003",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fleming Island, FL",
+      "legalName": "Restroom Alert, LLC",
+      "orgType": "company",
+      "phone": "(904) 290-3411",
+      "samUei": null,
+      "summary": "Restroom Alert is a company that runs a restroom management system. People can send anonymous text messages to report restroom problems. The system also lets staff log restroom checks, schedule cleanings and track needed repairs. It mainly markets to businesses with many locations, such as franchise and chain store operators.",
+      "website": "https://www.restroomalert.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Our Company - Restroom Alert",
+        "url": "https://www.restroomalert.com/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address"
+        ],
+        "title": "Restroom Alert",
+        "url": "https://www.restroomalert.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType"
+        ],
+        "title": "OpenCorporates search: restroom alert (Florida)",
+        "url": "https://opencorporates.com/companies?q=restroom+alert&jurisdiction_code=us_fl"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-006845",
+    "notes": "The company site names the legal entity Restroom Alert, LLC at Fleming Island, FL, matching the agenda name and city exactly, and OpenCorporates lists a single Florida LLC by that name. The restroom management service fits OUSD's Custodial Services agreements; the summary, phone, address and website are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

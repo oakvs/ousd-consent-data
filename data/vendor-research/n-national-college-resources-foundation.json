@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/861120719",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thecollegeexpo.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-national-college-resources-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Exact name match to a registered 501(c)(3): 'National College Resources Foundation' (ProPublica Nonprofit Explorer, EIN 86-1120719)",
+      "Organization describes college and career readiness programs for students, consistent with OUSD's 'Classroom & academic programs' category and a High School Linked Learning Office contract",
+      "MISMATCH: registry and website give Walnut, CA (Los Angeles County), while the agenda says Walnut Creek, CA; no page found mentions Oakland, OUSD or the Bay Area"
+    ],
+    "key": "n-national-college-resources-foundation",
+    "notes": "Name matches exactly, but the agenda lists Walnut Creek, CA (Contra Costa County) while the registered nonprofit is in Walnut, CA (Los Angeles County). This may be an agenda typo or a different organization; no page found links NCRF to Oakland or OUSD. Web search budget was exhausted, so no independent confirmation was possible. Needs human review before publishing.",
+    "profile": {
+      "address": "4030 Valley Blvd STE 100, Walnut, CA 91789",
+      "caEntityNumber": null,
+      "ein": "86-1120719",
+      "email": null,
+      "headquarters": "Walnut, CA",
+      "legalName": "National College Resources Foundation",
+      "orgType": "nonprofit",
+      "phone": "(877) 427-4100",
+      "samUei": null,
+      "summary": "A nonprofit educational organization based in Walnut, California. It runs college expos, college tours, STEAM (science, technology, engineering, arts and math) events and camps, and career and internship programs aimed at underserved students.",
+      "website": "https://www.thecollegeexpo.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National College Resources Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/861120719"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "National College Resources Foundation",
+        "url": "https://www.thecollegeexpo.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

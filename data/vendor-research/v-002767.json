@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.amergis.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.amergis.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.amergis.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002767",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Amergis's own Contact page lists its headquarters at 7223 Lee Deforest Drive, Columbia, MD 21046, matching the agenda's 'Columbia, MD' for 'Amergis Healthcare Staffing'",
+      "Amergis's website describes healthcare and educational staffing (Amergis Education), consistent with OUSD contracting it for special-education support services"
+    ],
+    "key": "v-002767",
+    "notes": "Search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) lookup was possible and no registry IDs or legal name were filled. The OUSD record also lists Maxim Healthcare Services / Maxim Healthcare Staffing Services, Inc. under the same vendor; Amergis is believed to be Maxim's rebrand, but the fetched Amergis pages did not state this, so the link is unconfirmed. Confidence is medium for that reason.",
+    "profile": {
+      "address": "7223 Lee Deforest Drive, Columbia, MD 21046",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Columbia, MD",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(888) 800-1854",
+      "samUei": null,
+      "summary": "Amergis is a national healthcare staffing company. It recruits and places nurses, allied health workers and other healthcare professionals with employers across the country. It also provides staffing for schools through its Amergis Education service.",
+      "website": "https://www.amergis.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Amergis home page",
+        "url": "https://www.amergis.com"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Amergis",
+        "url": "https://www.amergis.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Amergis",
+        "url": "https://www.amergis.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": null
+}

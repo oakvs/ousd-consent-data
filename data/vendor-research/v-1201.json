@@ -1,0 +1,138 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cumming-group.com/offices/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cumming-group.com/en/news-insights/press-releases/construction-consultancy-sees-immediate-growth-in-oakland-with-local-leaderships-client-first-approach/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cumming-group.com/en/cumming-group-entities/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/2976512",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/cumming-management-group-inc-12101894/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-1201",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Board item File #23-1739 names 'Cumming Management Group, Inc.' in Oakland, CA, providing construction management services for the Facilities Planning and Management Project, matching the agenda text and OUSD's school buildings and construction contracts",
+      "Cumming Group's press release says its Oakland office (opened 2017) provides project management services to Oakland Unified School District",
+      "Cumming Group's published entities list names 'Cumming Management Group, Inc.' as a California-incorporated Cumming Group company, and the California registry record (via OpenCorporates) shows the same exact legal name",
+      "Cumming Group has an Oakland office at 1111 Broadway, Suite 300, which matches the Oakland location in the agenda"
+    ],
+    "key": "v-1201",
+    "notes": "OUSD's record for this vendor also lists several agreement titles naming Cordoba Corporation, a different company; this research covers only Cumming Management Group, Inc. A reviewer may want to check whether the vendor record wrongly merges two vendors. The Oakland phone and address are the local office's. The registered address is in Westport, CT. No general email was found, only named staff emails, so email is null. SAM UEI comes from a third-party mirror of SAM.gov data.",
+    "profile": {
+      "address": "1111 Broadway, Suite 300, Oakland, CA 94607",
+      "caEntityNumber": "2976512",
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Cumming Management Group, Inc.",
+      "orgType": "company",
+      "phone": "+1 510-906-2123",
+      "samUei": "VETKNEFLXQE3",
+      "summary": "Cumming Group is a private construction consultancy that provides project management, cost management and planning and scheduling services. It works in sectors such as education, healthcare, higher education and hospitality. Its Oakland office serves K-12 school districts and other clients in the Bay Area.",
+      "website": "https://cumming-group.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Oakland, California Project Management and Cost Consulting",
+        "url": "https://cumming-group.com/offices/oakland/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Construction Consultancy Sees Immediate Growth In Oakland",
+        "url": "https://cumming-group.com/en/news-insights/press-releases/construction-consultancy-sees-immediate-growth-in-oakland-with-local-leaderships-client-first-approach/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Cumming Group Entities",
+        "url": "https://cumming-group.com/en/cumming-group-entities/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber"
+        ],
+        "title": "Entity Details :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/2976512"
+      },
+      {
+        "supports": [
+          "samUei",
+          "orgType"
+        ],
+        "title": "Cumming Management Group",
+        "url": "https://www.highergov.com/awardee/cumming-management-group-inc-12101894/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-1201",
+    "notes": "Cumming Management Group, Inc. is a California-incorporated Cumming Group entity (CA no. 2976512, UEI VETKNEFLXQE3 per HigherGov), and the Oakland office at 1111 Broadway Suite 300 states it provides project management to Oakland Unified; the summary, phone, address and website are supported and neutral. Caveat: OUSD's vendor record also lists agreement titles naming Cordoba Corporation, a separate company; the profile covers only Cumming and the Cordoba titles should not be attributed to it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

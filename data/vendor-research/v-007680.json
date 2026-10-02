@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943293372",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://lendahandfoundation.org/contact/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://lendahandfoundation.org/about/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.postnewsgroup.com/lend-a-hand-foundations-22nd-annual-backpack-giveaway-helps-8000-ousd-students/",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-007680",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Lend A Hand Foundation Inc Of Northern California', EIN 94-3293372, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text (8393 Capwell Drive #220, Oakland)",
+      "Website describes educational support, health and wellness resources and basic needs for students and families, matching OUSD's 'Student health, support & family services' category",
+      "Post News Group article describes the foundation providing school supplies to OUSD students",
+      "Website contact page lists Tax ID 94-3293372, matching the ProPublica EIN"
+    ],
+    "key": "v-007680",
+    "notes": "Organization's site is behind Cloudflare and its general email is obfuscated, so email left null. Phone/address were read from the contact page.",
+    "profile": {
+      "address": "8393 Capwell Drive #220, Oakland, CA",
+      "caEntityNumber": null,
+      "ein": "94-3293372",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Lend A Hand Foundation Inc Of Northern California",
+      "orgType": "nonprofit",
+      "phone": "(510) 553-1262",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that supports underserved children, youth and families in Alameda County and the Bay Area. It provides educational support, health and wellness resources, and basic needs such as school supplies and clothing. Its programs include a yearly back-to-school supply giveaway and the Stay In School program.",
+      "website": "https://lendahandfoundation.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Lend A Hand Foundation Inc Of Northern California - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943293372"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact - Lend A Hand Foundation",
+        "url": "https://lendahandfoundation.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Lend A Hand Foundation",
+        "url": "https://lendahandfoundation.org/about/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Lend A Hand Foundation's 22nd Annual Backpack Giveaway Helps 8,000 OUSD Students",
+        "url": "https://www.postnewsgroup.com/lend-a-hand-foundations-22nd-annual-backpack-giveaway-helps-8000-ousd-students/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-007680",
+    "notes": "Oakland nonprofit (EIN 94-3293372, 8393 Capwell Dr) matches the agenda name and city, and its Stay In School and back-to-school work for OUSD students fits the student support services contracts. Identity, phone, address, website, EIN and legal name are confirmed; the summary's mention of clothing as a basic need is not shown in the cited sources, so the summary is listed as unsupported and should be dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

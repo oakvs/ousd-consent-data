@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/50485883",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.taxexemptworld.com/organization.asp?tn=45179",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bigpicture.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bigpicture.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000693",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit based in Providence, RI: 'Big Picture Company Inc' (ProPublica Nonprofit Explorer, EIN 05-0485883), matching the agenda's 'Big Picture Learning, Providence, RI'",
+      "Big Picture Learning's website says the organization started as one school in Providence, RI and runs a global network of schools",
+      "OUSD's MetWest High School page says it uses the Big Picture Learning goals framework, matching the 'Services Agreement ... Big Picture Learning - MetWest High School' agenda items"
+    ],
+    "key": "v-000693",
+    "notes": "Legal name is Big Picture Company Inc; operates as Big Picture Learning. No public phone or general email found on the site pages fetched. Address comes from a third-party nonprofit directory, not the organization's own site.",
+    "profile": {
+      "address": "325 Public St, Providence, RI 02905-2340",
+      "caEntityNumber": null,
+      "ein": "05-0485883",
+      "email": null,
+      "headquarters": "Providence, RI",
+      "legalName": "Big Picture Company Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit education organization based in Providence, Rhode Island. It supports a global network of schools and other places of learning built around student-centered, personalized learning, including school design, leadership development and internship management.",
+      "website": "https://www.bigpicture.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Big Picture Company Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/50485883"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "address",
+          "headquarters"
+        ],
+        "title": "Big Picture Company Inc - 501C3 Nonprofit - Providence, RI",
+        "url": "https://www.taxexemptworld.com/organization.asp?tn=45179"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Big Picture Learning",
+        "url": "https://www.bigpicture.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Contact Us - Big Picture Learning",
+        "url": "https://www.bigpicture.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-000693",
+    "notes": "Identity is sound (Big Picture Company Inc, Providence RI, 501(c)(3) per ProPublica/TaxExemptWorld; OUSD MetWest site references Big Picture Learning), but the summary's claims about 'school design, leadership development and internship management' and 'personalized' learning are not shown on the cited bigpicture.org pages, which only support a student-centered global network of 275+ schools, so the summary is not supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

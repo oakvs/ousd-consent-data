@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://teachfx.com/terms-of-service",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://teachfx.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009146",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: TeachFX, Inc. (legal name on its Terms of Service page)",
+      "Terms of Service lists address 83 Nevada St, Redwood City, CA 94062, matching the agenda's 'Redwood City, CA'",
+      "Website describes a classroom-audio instructional coaching platform for teachers, matching OUSD's 'Classroom & academic programs' and 'Educator Effectiveness' funding"
+    ],
+    "key": "v-009146",
+    "notes": "Web search budget was exhausted, so no registry (CA SOS, SAM.gov) lookup was done; EIN, entity number and UEI left null. No phone found. OUSD not mentioned on pages fetched; identity rests on name, Redwood City address and product fit.",
+    "profile": {
+      "address": "83 Nevada St, Redwood City, CA 94062",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@teachfx.com",
+      "headquarters": "Redwood City, CA",
+      "legalName": "TeachFX, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "TeachFX is a company that makes an instructional coaching platform for teachers. Teachers record their lessons as audio, and the software analyzes classroom talk patterns, such as student participation and open-ended questions, to give feedback. School and district leaders can use it to track instructional improvement across schools.",
+      "website": "https://teachfx.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "email",
+          "orgType"
+        ],
+        "title": "TeachFX Terms of Service",
+        "url": "https://teachfx.com/terms-of-service"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "TeachFX",
+        "url": "https://teachfx.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009146",
+    "notes": "TeachFX, Inc. at 83 Nevada St, Redwood City matches the agenda name and city, and the classroom-audio coaching product fits an Educator Effectiveness-funded academic services agreement. The cited Terms of Service list legal@teachfx.com, not support@teachfx.com, so the email is unsupported; the summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "email"
+    ],
+    "verdict": "confirmed"
+  }
+}

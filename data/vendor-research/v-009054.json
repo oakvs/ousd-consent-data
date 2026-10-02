@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cahill-sf.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cahill-sf.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/fremont-cdc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009054",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website names its legal name as Cahill Contractors LLC, matching the agenda name, and lists an Oakland office at 1111 Broadway, Suite 1340, matching the agenda location (Oakland, CA)",
+      "OUSD's own Fremont High School (Phase 2) project page lists Cahill Contractors as the general contractor, matching the agenda's Fremont High School Modernization lease-leaseback contracts",
+      "Website describes a general contractor focused on education and other construction, matching OUSD's 'School buildings & construction' category"
+    ],
+    "key": "v-009054",
+    "notes": "Headquarters taken from the 425 California Street San Francisco office listed first on the site; the company also has Oakland (1111 Broadway, Suite 1340), San Jose offices. No general email or registry IDs found on the cited pages.",
+    "profile": {
+      "address": "425 California Street, Suite 2200, San Francisco, CA 94104",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Cahill Contractors LLC",
+      "orgType": "company",
+      "phone": "(415) 986-0600",
+      "samUei": null,
+      "summary": "Cahill Contractors is a general contractor based in the San Francisco Bay Area. It builds multi-family housing, schools, hospitality, healthcare and other commercial projects. The company says it was founded in 1911 and is family- and woman-owned.",
+      "website": "https://www.cahill-sf.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Cahill Contractors",
+        "url": "https://www.cahill-sf.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About Cahill Contractors",
+        "url": "https://cahill-sf.com/about-us"
+      },
+      {
+        "supports": [],
+        "title": "Fremont High School (Phase 2) - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/fremont-cdc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "v-009054",
+    "notes": "Cahill Contractors LLC is confirmed as the legal name, with an Oakland office at 1111 Broadway, and OUSD's Fremont High School project page names Cahill Contractors as general contractor. The summary (1911 founding, majority family- and woman-owned, education/healthcare/hospitality sectors), phone, address and San Francisco headquarters are supported by the company's home and about pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
