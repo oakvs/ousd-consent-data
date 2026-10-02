@@ -12,6 +12,11 @@
  *    The canonical form is the 6-digit one (OUSD's standard), else the most used.
  * 2. An item with no vendor number joins a numbered vendor when its normalized
  *    name matches exactly one canonical vendor number's names.
+ * 3. Names that are the same once legal-form and filler words are dropped
+ *    ("Liebert Cassidy Whitmore, a Professional Corporation" and "Liebert
+ *    Cassidy Whitmore Law Firm") are one vendor, as long as that wouldn't
+ *    join two different vendor numbers. Those cases are left to a person (or
+ *    the AI judge) and the "manual" section.
  */
 import { normalizeVendorName } from '@oakvs/consent-schema/vendor-key'
 import type { TVendorAliases } from '@oakvs/consent-schema/vendor-key'
@@ -19,6 +24,13 @@ import type { TVendorAliases } from '@oakvs/consent-schema/vendor-key'
 import { listRawKeys, paths, readAliasFile, readEnrichments, readRaw, writeJson } from '../store'
 
 type TObservation = { codes: string[]; name: string | null }
+
+/** Words that don't distinguish one organization from another. "group" and "services" are kept on purpose. */
+const FILLER = new Set(['the', 'of', 'and', 'a', 'an', 'law', 'firm', 'offices', 'professional', 'corporation', 'corp', 'company', 'co', 'inc', 'llc', 'dba', 'aka'])
+
+/** A normalized name with filler words dropped: the comparison key for rule 3. */
+export const nameSignature = (normalized: string): string =>
+  normalized.split(' ').filter(w => w && !FILLER.has(w)).join(' ')
 
 const sorted = (r: Record<string, string>): Record<string, string> =>
   Object.fromEntries(Object.entries(r).sort(([a], [b]) => a.localeCompare(b)))
@@ -62,6 +74,29 @@ export function generateAliases(observations: TObservation[]): TVendorAliases {
     if (o.codes.length || !o.name) continue
     const candidates = numbersByName.get(o.name)
     if (candidates?.size === 1) names[o.name] = [...candidates][0]
+  }
+
+  // Rule 3: names equal by signature, unless that would join two vendor numbers.
+  const observedNames = new Map<string, number>()
+  for (const o of observations) if (o.name) observedNames.set(o.name, (observedNames.get(o.name) ?? 0) + 1)
+  const bySignature = new Map<string, string[]>()
+  for (const n of observedNames.keys()) {
+    const sig = nameSignature(n)
+    if (sig.split(' ').length < 2 && sig.length < 6) continue // too short to be distinctive
+    bySignature.set(sig, [...(bySignature.get(sig) ?? []), n])
+  }
+  for (const group of bySignature.values()) {
+    if (group.length < 2) continue
+    const numbers = new Set(group.flatMap(n => [...(numbersByName.get(n) ?? [])]))
+    if (numbers.size > 1) continue
+    if (numbers.size === 1) {
+      const [number] = numbers
+      for (const n of group) if (!numbersByName.has(n) && !names[n]) names[n] = number
+      continue
+    }
+    // No vendor number: point every variant at the most-used name (then the shortest, then alphabetical).
+    const canonical = [...group].sort((a, b) => observedNames.get(b)! - observedNames.get(a)! || a.length - b.length || a.localeCompare(b))[0]
+    for (const n of group) if (n !== canonical && !names[n]) names[n] = canonical
   }
 
   return { vendorNumbers: sorted(vendorNumbers), names: sorted(names) }

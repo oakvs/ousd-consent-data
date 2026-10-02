@@ -31,9 +31,23 @@ export type TVendorAliases = {
 
 export const NO_ALIASES: TVendorAliases = { vendorNumbers: {}, names: {} }
 
-/** The canonical form of one vendor-number code. */
+/** The canonical form of one vendor-number code, following alias chains ("1201" → "001201" → …). */
 export function canonicalVendorNo(code: string, aliases: TVendorAliases = NO_ALIASES): string {
-  return aliases.vendorNumbers[code] ?? code
+  let current = code
+  for (let i = 0; i < 8 && aliases.vendorNumbers[current] && aliases.vendorNumbers[current] !== current; i++) current = aliases.vendorNumbers[current]
+  return current
+}
+
+/** Where a normalized name points after aliases: a vendor number, or a canonical name. Follows chains. */
+function resolveName(normalized: string, aliases: TVendorAliases): { vendorNo: string } | { name: string } {
+  let name = normalized
+  for (let i = 0; i < 8; i++) {
+    const alias = aliases.names[name]
+    if (!alias || alias === name) break
+    if (/^\d+$/.test(alias)) return { vendorNo: canonicalVendorNo(alias, aliases) }
+    name = alias
+  }
+  return { name }
 }
 
 /**
@@ -50,7 +64,17 @@ export function vendorKey(
   if (!name?.trim()) return null
   const normalized = normalizeVendorName(name)
   if (!normalized) return null
-  const alias = aliases.names[normalized]
-  if (alias) return /^\d+$/.test(alias) ? `v-${canonicalVendorNo(alias, aliases)}` : `n-${alias.replace(/\s+/g, '-')}`
-  return `n-${normalized.replace(/\s+/g, '-')}`
+  const resolved = resolveName(normalized, aliases)
+  return 'vendorNo' in resolved ? `v-${resolved.vendorNo}` : `n-${resolved.name.replace(/\s+/g, '-')}`
+}
+
+/**
+ * Where an existing vendor key points under the current aliases. Records
+ * stored under a vendor key (like vendor research) follow merges with this,
+ * so merging two vendors never orphans them.
+ */
+export function currentVendorKey(key: string, aliases: TVendorAliases = NO_ALIASES): string {
+  if (key.startsWith('v-')) return `v-${canonicalVendorNo(key.slice(2), aliases)}`
+  if (key.startsWith('n-')) return vendorKey(null, key.slice(2).replace(/-/g, ' '), aliases) ?? key
+  return key
 }

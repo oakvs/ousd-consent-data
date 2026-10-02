@@ -23,10 +23,34 @@ import type {
   TVendorLegistarFile,
   TVendorResearchRecord,
 } from '@oakvs/consent-schema/schema'
-import { vendorKey } from '@oakvs/consent-schema/vendor-key'
+import { currentVendorKey, vendorKey } from '@oakvs/consent-schema/vendor-key'
 import type { TVendorAliases } from '@oakvs/consent-schema/vendor-key'
 
 import { publishedProfile } from '../research/vendor-research'
+
+const CONFIDENCE_RANK: Record<string, number> = { high: 3, medium: 2, low: 1, none: 0 }
+
+/**
+ * Research records are stored under the vendor key they were made for. When
+ * vendors merge (a new alias), re-key them to the vendor's current key; if two
+ * land on one vendor, keep the publishable one, then the more confident, then
+ * the newer, then the first key.
+ */
+export function researchByCurrentKey(research: Map<string, TVendorResearchRecord>, aliases: TVendorAliases): Map<string, TVendorResearchRecord> {
+  const out = new Map<string, TVendorResearchRecord>()
+  // Positive when `a` should win over `b`.
+  const compare = (a: TVendorResearchRecord, b: TVendorResearchRecord): number =>
+    Number(a.publishable) - Number(b.publishable)
+    || (CONFIDENCE_RANK[a.research.confidence] ?? 0) - (CONFIDENCE_RANK[b.research.confidence] ?? 0)
+    || a.researchedAt.localeCompare(b.researchedAt)
+    || b.key.localeCompare(a.key)
+  for (const rec of [...research.values()].sort((a, b) => a.key.localeCompare(b.key))) {
+    const key = currentVendorKey(rec.key, aliases)
+    const existing = out.get(key)
+    if (!existing || compare(rec, existing) > 0) out.set(key, rec)
+  }
+  return out
+}
 
 type TTally = { name: string; count: number }[]
 
@@ -59,6 +83,7 @@ export function buildVendors(
   legistar: Map<string, TVendorLegistarFile> = new Map(),
   research: Map<string, TVendorResearchRecord> = new Map(),
 ): { files: TVendorFile[]; index: TVendorIndexFile } {
+  research = researchByCurrentKey(research, aliases)
   const sorted = [...meetings].sort((a, b) => a.meeting.key.localeCompare(b.meeting.key))
 
   // Latest meeting key per file number.

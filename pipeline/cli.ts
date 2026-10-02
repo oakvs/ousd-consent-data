@@ -28,7 +28,10 @@
  *   verify-export [--key K] [--size 30]       Write second-reading chunks (.cache/verify)
  *   verify-check --chunk ID                   Validate one second-reading output chunk (exit 1 on errors)
  *   verify-import [--key K] --model M         Merge second readings into data/verifications
- *   vendor-aliases                            Regenerate vendor aliases (leading-zero typos, number-less names)
+ *   vendor-aliases                            Regenerate vendor aliases (leading-zero typos, number-less names, name variants)
+ *   vendor-candidates                         Write possible duplicate vendors for the merge judge (.cache/vendor-merge)
+ *   vendor-merge-check --batch B              Validate one merge-judge output (exit 1 on errors)
+ *   vendor-merge-apply --model M              Write passing merge decisions to manual aliases and the decisions log
  *   vendor-history [--force]                  Fetch every Legistar record per vendor (cached; --force refetches)
  *   research-export [--top N] [--key K]       Write vendor research inputs (organizations only) to .cache/research
  *   research-check --key K                    Validate one research output: schema + fetch every cited page
@@ -82,6 +85,7 @@ const { positionals, values } = parseArgs({
     'no-llm': { type: 'boolean', default: false },
     sample: { type: 'string' },
     files: { type: 'string' },
+    batch: { type: 'string' },
     previous: { type: 'string' },
     title: { type: 'string' },
     message: { type: 'string' },
@@ -352,6 +356,30 @@ async function main(): Promise<void> {
       for (const s of await importChunks(values.key ? [values.key] : null, values.model)) {
         console.log(`${s.meetingKey}: imported ${s.imported}, rejected ${s.rejected}`)
       }
+      break
+    }
+    case 'vendor-candidates': {
+      const { findVendorCandidates } = await import('./build/vendor-candidates')
+      const r = await findVendorCandidates()
+      console.log(`${r.groups} candidate group(s), ${r.vendors} vendor(s), ${r.batches.length} batch(es) → .cache/vendor-merge/`)
+      break
+    }
+    case 'vendor-merge-check': {
+      if (!values.batch) throw new Error('--batch is required')
+      const { checkMergeBatch } = await import('./build/vendor-candidates')
+      const problems = await checkMergeBatch(values.batch)
+      for (const p of problems) console.log(`ERROR ${p}`)
+      console.log(problems.length ? `FAIL: ${problems.length} error(s)` : 'PASS')
+      process.exitCode = problems.length ? 1 : 0
+      break
+    }
+    case 'vendor-merge-apply': {
+      if (!values.model) throw new Error('--model is required')
+      const { readdir } = await import('node:fs/promises')
+      const { MERGE_DIR, applyMergeBatches } = await import('./build/vendor-candidates')
+      const batches = (await readdir(MERGE_DIR)).filter(f => /^batch-\d+\.output\.json$/.test(f)).map(f => f.replace('.output.json', '')).sort()
+      const r = await applyMergeBatches(batches, values.model, values.date ?? new Date().toISOString().slice(0, 10))
+      console.log(`${r.merged} merge(s) and ${r.kept} kept-separate decision(s) recorded; run vendor-aliases and build next`)
       break
     }
     case 'vendor-aliases': {
