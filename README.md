@@ -35,7 +35,7 @@ Each consent item carries three kinds of information, and the data keeps them ap
 ## How the data is produced
 
 ```mermaid
-flowchart LR
+flowchart TD
   L[OUSD Legistar] -->|every 30 min| I[Find meetings,<br/>read the agenda]
   I --> R[(Official record<br/>data/raw)]
   R --> E[Summary and facts<br/>AI]
