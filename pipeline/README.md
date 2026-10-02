@@ -1,11 +1,13 @@
 # Consent Tracker pipeline
 
-The pipeline behind `/consent-tracker`. It pulls OUSD Board consent reports from Legistar, normalizes and validates them, and publishes versioned JSON the site reads at build time. The full design is in `docs/superpowers/plans/ousd-consent-reader-plan.md`. This folder is the local prototype of its `consent-pipeline` package; n8n can later call this same CLI.
+The pipeline behind the [OUSD Consent Tracker](https://oakvs.world/consent-tracker). It pulls OUSD Board consent reports from Legistar, normalizes and validates them, and publishes versioned JSON under `data/published/`, which the site reads. `consent run` does one full update cycle and is meant to run every 30 minutes.
 
 ## Commands
 
 ```bash
-npm run consent:seed-registry                        # meetings.json from ~/ousd-mseg/board-agendas filenames
+npm run consent:run -- --dry-run                     # one update cycle on a scratch copy; prints what would change
+npm run consent:run -- --no-push                     # one update cycle; commits locally, no push or deploy
+npm run consent:run                                  # one update cycle: commit, push, then POST $VERCEL_DEPLOY_HOOK_URL
 npm run consent:discover -- --date 2026-09-23        # resolve EventId, print consent item count
 npm run consent:ingest -- --key 2026-09-23 [--event 5810]
 npm run consent:backfill -- --from 2025-08-01 --to 2026-09-30 [--limit N] [--force]
@@ -14,8 +16,6 @@ npm run consent:build                                # rebuild every published f
 npm run consent:upcoming                             # detect the next Board meeting → published/upcoming.json (live)
 npm test
 ```
-
-After publishing a new meeting, restart `npm run dev`: dev caches `generateStaticParams`.
 
 ## Data layout (`data/`)
 
@@ -26,10 +26,23 @@ After publishing a new meeting, restart `npm run dev`: dev caches `generateStati
 | `enrichments/{key}.json` | `enrichments` | LLM output keyed by file number, with `modelId`, `promptVersion` and `cacheKey`. |
 | `overrides/{key}.json` | NocoDB `overrides` | Human edits. They always win and are never overwritten by re-enrichment. |
 | `vendors/aliases.json` | `vendors.aliases` | Normalized name → vendor number or canonical name. |
-| `published/` | `ousd-consent-data` repo | Fully derived. `build` regenerates it byte-identically. |
+| `published/` | what the site reads | Fully derived. `build` regenerates it byte-identically. |
 | `fixtures/golden/` | §14 golden set | Seeded from v1; **hand-verify, then set `verified: true`**. |
 
-The Legistar response cache lives in `.cache/legistar/` (gitignored). A backfill re-run makes no network calls for meetings marked `final`.
+The Legistar response cache lives in `.cache/legistar/` (gitignored, and never published: it holds verbatim responses, including staff emails). A backfill re-run makes no network calls for meetings marked `final`.
+
+## Update cycle (`consent run`)
+
+The data repo is the state; there is no database. Each run:
+
+1. **Upcoming + discovery** (1 request): future-dated matters → `published/upcoming.json`, and any confirmed new meeting date (≥ 5 items filed as `Board, General Consent Report`) is added to the registry as `discovered`, with its kind inferred from the 2nd/4th-Wednesday cadence. `upcoming.json` is only rewritten when the next meeting or its counts change.
+2. **Resolve** (only when a meeting from 14 days ago to 14 days ahead has no EventId): probe the EventIds after `lastKnownEventId` once, and match by file-number overlap. Past meetings try matter histories first.
+3. **Open meetings** (1 request each): re-fetch the event items and compare a hash with `eventItemsHash`. On a change, ingest incrementally: rows identical to the stored snapshot keep their matter fields, and only new or changed rows fetch their matter. Outcomes (histories and roll calls) are refreshed once a day (`historiesCheckedOn`) from the meeting date until the meeting is `final`. An agenda with no consent section yet stays open until the meeting date has passed.
+4. **Build**, then commit `data/` if anything changed (`2026-10-14: agenda posted — 87 items`), push, and call the deploy hook if `published/` changed. A rejected push resets to the starting commit, pulls, and runs again (up to 3 times).
+
+A quiet run costs about 15 Legistar requests. Runs refuse to start on a dirty work tree, and a lock file (`.cache/run.lock`) keeps two runs on one machine from overlapping. `--summary run.json` writes the run's changes as JSON for alerts.
+
+The LLM steps (summaries and second readings) aren't part of `consent run` yet; it reports how many items are waiting for summaries.
 
 ## Meeting → EventId
 
@@ -46,7 +59,7 @@ Even single events (`/events/{id}`) error for OUSD, so the next meeting is infer
 
 There are no live LLM calls in the prototype. To add them, write `enrich/` so it:
 
-- Reads `raw/{key}.json` and, for each item with no current record, calls the model with the codebook prompt (`prompts/enrich.v2.md`, see §8.1) and a strict JSON schema generated from `Enrichment` in `src/lib/consent/schema.ts`. Input: `{agendaNumber, file, title, text, matterType, presenter, group, fundingSource}`.
+- Reads `raw/{key}.json` and, for each item with no current record, calls the model with the codebook prompt (`prompts/enrich.v2.md`, see §8.1) and a strict JSON schema generated from `Enrichment` in `packages/consent-schema/src/schema.ts`. Input: `{agendaNumber, file, title, text, matterType, presenter, group, fundingSource}`.
 - Keys the cache with `enrichmentCacheKey(text, title, promptVersion, modelId)` from `import/prototype.ts`, and skips items whose key is unchanged.
 - On a schema or check failure, retries up to 2 times, feeding back the failing check from `validate/checks.ts`.
 - Writes `EnrichmentRecord`s to `enrichments/{key}.json`. `build` then does the rest: overrides, checks, review routing, derived flags and totals.

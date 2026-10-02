@@ -2,10 +2,10 @@
 /**
  * Consent Tracker pipeline CLI.
  *
- *   tsx pipeline/consent/cli.ts <command> [options]
+ *   tsx pipeline/cli.ts <command> [options]
  *
  * Commands:
- *   seed-registry [--agendas <dir>]           Seed data/meetings.json from agenda PDF filenames
+ *   run [--dry-run] [--no-push] [--summary F] One full update cycle: check → ingest → build → commit → push → deploy hook
  *   discover --date YYYY-MM-DD [--key K]      Resolve a meeting's EventId; prints it and the consent item count
  *   ingest --key K [--event N]                Fetch a meeting from Legistar into data/raw
  *   backfill --from D --to D [--limit N]      resolve → ingest for every registry meeting in range, then build
@@ -43,7 +43,7 @@ import { ingestMeeting } from './ingest'
 import { stats } from './legistar/client'
 import { resolveEventId } from './legistar/discover'
 import { fetchVendorHistories } from './legistar/vendor-history'
-import { seedRegistryFromAgendas } from './registry/seed'
+import { blankEntry, isSettled, upsert } from './registry/entries'
 import {
   checkResearchOutput,
   checkReviewOutput,
@@ -52,11 +52,9 @@ import {
   importResearch,
   importReviews,
 } from './research/vendor-research'
-import { readRegistry, writeRegistry } from './store'
+import { readRegistry, writeJson, writeRegistry } from './store'
 
 const DEFAULT_PROTOTYPE_DIR = path.join(os.homedir(), 'ousd-mseg', 'consent-prototype')
-const DEFAULT_AGENDAS_DIR = path.join(os.homedir(), 'ousd-mseg', 'board-agendas')
-const FINAL_AFTER_DAYS = 14
 
 const { positionals, values } = parseArgs({
   allowPositionals: true,
@@ -68,7 +66,9 @@ const { positionals, values } = parseArgs({
     to: { type: 'string' },
     limit: { type: 'string' },
     dir: { type: 'string' },
-    agendas: { type: 'string' },
+    'dry-run': { type: 'boolean', default: false },
+    'no-push': { type: 'boolean', default: false },
+    summary: { type: 'string' },
     force: { type: 'boolean', default: false },
     size: { type: 'string' },
     chunk: { type: 'string' },
@@ -94,30 +94,6 @@ async function build(): Promise<void> {
   for (const m of summary.meetings) printMeeting(m)
   console.log(`built ${summary.meetings.length} meeting(s), ${summary.vendors} vendor file(s)`)
 }
-
-function upsert(registry: TRegistry, entry: TRegistryEntry): void {
-  const i = registry.meetings.findIndex(m => m.key === entry.key)
-  if (i >= 0) registry.meetings[i] = entry
-  else registry.meetings.push(entry)
-}
-
-function blankEntry(key: string): TRegistryEntry {
-  return {
-    key,
-    date: key.slice(0, 10),
-    time: null,
-    kind: key.endsWith('-special') ? 'special' : 'regular',
-    eventId: null,
-    resolvedBy: null,
-    meetingDetailId: null,
-    agendaPdfUrl: null,
-    status: 'discovered',
-    lastIngestedAt: null,
-    note: null,
-  }
-}
-
-const daysSince = (iso: string): number => (Date.now() - Date.parse(iso)) / 86_400_000
 
 /** Resolve (if needed) and ingest one registry entry; mutates `entry`. */
 async function resolveAndIngest(registry: TRegistry, entry: TRegistryEntry): Promise<void> {
@@ -145,8 +121,7 @@ async function resolveAndIngest(registry: TRegistry, entry: TRegistryEntry): Pro
   }
   const { snapshot, changed } = result
   entry.lastIngestedAt = snapshot.fetchedAt
-  const settled = daysSince(entry.date) > FINAL_AFTER_DAYS
-    && snapshot.items.every(i => i.history.some(h => h.date >= entry.date))
+  const settled = isSettled(entry, snapshot)
   entry.status = settled ? 'final' : 'ingested'
   console.log(`  ${entry.key}: event ${entry.eventId} (${entry.resolvedBy}) → ${snapshot.items.length} consent items${changed ? '' : ' (unchanged)'}${settled ? ' [final]' : ''}`)
 }
@@ -173,11 +148,15 @@ async function main(): Promise<void> {
       console.log(`imported ${raw.items.length} items, ${Object.keys(enrichments.items).length} enrichments, ${Object.keys(overrides.items).length} overrides`)
       break
     }
-    case 'seed-registry': {
-      const registry = await readRegistry()
-      const added = await seedRegistryFromAgendas(registry, values.agendas ?? DEFAULT_AGENDAS_DIR)
-      await writeRegistry(registry)
-      console.log(`registry: ${registry.meetings.length} meetings (${added} added)`)
+    case 'run': {
+      const { printSummary, run } = await import('./run/run')
+      const summary = await run({
+        dryRun: values['dry-run'],
+        push: !values['no-push'],
+        deployHookUrl: process.env.VERCEL_DEPLOY_HOOK_URL,
+      })
+      printSummary(summary)
+      if (values.summary) await writeJson(path.resolve(values.summary), summary)
       break
     }
     case 'discover': {
@@ -267,7 +246,7 @@ async function main(): Promise<void> {
     }
     case 'upcoming': {
       const { updateUpcoming } = await import('./legistar/upcoming')
-      const { meeting } = await updateUpcoming()
+      const { file: { meeting } } = await updateUpcoming()
       console.log(meeting
         ? `next meeting: ${meeting.date} · ${meeting.consentItems} consent item(s) filed so far (${meeting.boardItems} Board items)`
         : 'next meeting: none confirmed yet')
@@ -336,7 +315,7 @@ async function main(): Promise<void> {
       break
     }
     default:
-      console.log('usage: tsx pipeline/consent/cli.ts <seed-registry|discover|ingest|backfill|import-prototype|build|enrich-export|enrich-check|enrich-import> [options]')
+      console.log('usage: tsx pipeline/cli.ts <command> [options] — see the header of pipeline/cli.ts')
       process.exitCode = command ? 1 : 0
   }
   if (stats.network || stats.cache) console.log(`legistar: ${stats.network} network request(s), ${stats.cache} cache hit(s)`)

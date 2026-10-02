@@ -1,12 +1,14 @@
 /**
  * Next-meeting detection. Legistar's /events API is broken for OUSD, but staff
  * file agenda items with a target meeting date long before the agenda is
- * published, so future-dated matters reveal the next Board meeting.
+ * published, so future-dated matters reveal upcoming Board meetings. This is
+ * also how `consent run` discovers meetings for the registry.
  *
  * A date counts only when at least MIN_CONSENT_ITEMS items are filed as
  * "Board, General Consent Report" for it — one mis-dated item (they exist:
  * one is dated 3036) can't conjure a meeting.
  */
+import { readFile } from 'node:fs/promises'
 import path from 'node:path'
 
 import { oaklandToday } from '@oakvs/consent-schema/format'
@@ -22,6 +24,7 @@ export const MIN_CONSENT_ITEMS = 5
 export const HORIZON_DAYS = 90
 
 export type TFutureMatter = { MatterAgendaDate: string | null; MatterStatusName: string | null }
+export type TFutureMeeting = NonNullable<TUpcomingFile['meeting']>
 
 const addDays = (iso: string, days: number): string => {
   const d = new Date(`${iso}T00:00:00Z`)
@@ -29,8 +32,8 @@ const addDays = (iso: string, days: number): string => {
   return d.toISOString().slice(0, 10)
 }
 
-/** The earliest future date with enough Board consent-report items, or null. */
-export function pickNextMeeting(matters: TFutureMatter[], today: string): TUpcomingFile['meeting'] {
+/** Every date from today to the horizon with enough Board consent-report items, earliest first. */
+export function futureMeetings(matters: TFutureMatter[], today: string): TFutureMeeting[] {
   const horizon = addDays(today, HORIZON_DAYS)
   const byDate = new Map<string, { consentItems: number; boardItems: number }>()
   for (const m of matters) {
@@ -42,22 +45,49 @@ export function pickNextMeeting(matters: TFutureMatter[], today: string): TUpcom
     if (status === 'Board, General Consent Report') entry.consentItems++
     byDate.set(date, entry)
   }
-  const next = [...byDate.entries()]
+  return [...byDate.entries()]
     .filter(([, v]) => v.consentItems >= MIN_CONSENT_ITEMS)
-    .sort(([a], [b]) => a.localeCompare(b))[0]
-  return next ? { date: next[0], ...next[1] } : null
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([date, v]) => ({ date, ...v }))
 }
 
-/** Check Legistar (always live, never cached) and write published/upcoming.json. */
-export async function updateUpcoming(now = new Date()): Promise<TUpcomingFile> {
+/** The earliest future date with enough Board consent-report items, or null. */
+export function pickNextMeeting(matters: TFutureMatter[], today: string): TUpcomingFile['meeting'] {
+  return futureMeetings(matters, today)[0] ?? null
+}
+
+export type TUpcomingCheck = {
+  file: TUpcomingFile
+  /** Every confirmed future meeting, not just the next one. */
+  meetings: TFutureMeeting[]
+  /** Whether upcoming.json now says something different. */
+  changed: boolean
+}
+
+async function readUpcoming(file: string): Promise<TUpcomingFile | null> {
+  try {
+    return UpcomingFile.parse(JSON.parse(await readFile(file, 'utf8')))
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Check Legistar (always live, never cached) and write published/upcoming.json.
+ * When the next meeting and its counts are unchanged the file is left as is.
+ */
+export async function updateUpcoming(now = new Date()): Promise<TUpcomingCheck> {
   const today = oaklandToday(now)
   const query = `/matters?$filter=MatterAgendaDate+ge+datetime'${today}'&$select=MatterAgendaDate,MatterStatusName&$top=1000`
   const matters = await legistarGet<TFutureMatter[]>(query, { fresh: true })
-  const file = UpcomingFile.parse({
-    schemaVersion: SCHEMA_VERSION,
-    checkedAt: now.toISOString(),
-    meeting: pickNextMeeting(matters, today),
-  })
-  await writeJson(path.join(paths.published, 'upcoming.json'), file)
-  return file
+  const meetings = futureMeetings(matters, today)
+  const target = path.join(paths.published, 'upcoming.json')
+  const previous = await readUpcoming(target)
+  const meeting = meetings[0] ?? null
+  const changed = !previous || JSON.stringify(previous.meeting) !== JSON.stringify(meeting)
+  const file = changed
+    ? UpcomingFile.parse({ schemaVersion: SCHEMA_VERSION, checkedAt: now.toISOString(), meeting })
+    : previous
+  if (changed) await writeJson(target, file)
+  return { file, meetings, changed }
 }

@@ -316,6 +316,10 @@ export const RegistryEntry = z.object({
   status: MeetingStatus,
   lastIngestedAt: z.string().nullable(),
   note: z.string().nullable(),
+  /** `consent run` bookkeeping: hash of the event's items at the last check (changes → re-ingest). */
+  eventItemsHash: z.string().nullable().default(null),
+  /** `consent run` bookkeeping: Oakland date outcomes (histories) were last refreshed; once a day until final. */
+  historiesCheckedOn: IsoDate.nullable().default(null),
 })
 export type TRegistryEntry = z.infer<typeof RegistryEntry>
 
@@ -517,7 +521,10 @@ export type TIndexEntry = z.infer<typeof IndexEntry>
  */
 export const UpcomingFile = z.object({
   schemaVersion: z.literal(SCHEMA_VERSION),
-  /** When Legistar was checked (ISO timestamp). */
+  /**
+   * When Legistar last reported something new (ISO timestamp). Runs that find
+   * the same meeting and counts keep the old value, so the file doesn't churn.
+   */
   checkedAt: z.string(),
   meeting: z
     .object({

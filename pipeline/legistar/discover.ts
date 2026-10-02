@@ -17,6 +17,8 @@ import { findConsentRows } from '../normalize/sections'
 
 import { getEventItems, getHistories, getMattersByAgendaDate, mapConcurrent } from './client'
 
+import type { TLegistarEventItem } from './client'
+
 export type TResolved = { eventId: number; resolvedBy: 'history' | 'probe' }
 
 const BOARD = /board of education/i
@@ -25,7 +27,7 @@ const PROBE_AHEAD = 40
 const PROBE_MAX_EMPTY = 8
 const MIN_OVERLAP = 0.8
 /** June 24, 2026 — a known-good anchor when the registry is empty. */
-const ANCHOR_EVENT_ID = 5785
+export const ANCHOR_EVENT_ID = 5785
 
 async function historyCandidates(date: string, matterIds: number[]): Promise<number[]> {
   const votes = new Map<number, number>()
@@ -48,8 +50,15 @@ function overlap(eventFiles: Set<string>, dateFiles: Set<string>): number {
   return hits / eventFiles.size
 }
 
-async function probeCandidates(dateFiles: Set<string>, startAfter: number): Promise<number[]> {
-  const matches: number[] = []
+export type TProbedEvents = Map<number, TLegistarEventItem[]>
+
+/**
+ * Live-fetch the EventIds after `startAfter` until PROBE_MAX_EMPTY empty ones
+ * in a row (or PROBE_AHEAD tried). Returns only events that have items.
+ * `consent run` probes once and shares the result across meetings.
+ */
+export async function probeEvents(startAfter: number): Promise<TProbedEvents> {
+  const found: TProbedEvents = new Map()
   let empty = 0
   for (let id = startAfter + 1; id <= startAfter + PROBE_AHEAD && empty < PROBE_MAX_EMPTY; id++) {
     const items = await getEventItems(id, { fresh: true }).catch(() => [])
@@ -58,10 +67,25 @@ async function probeCandidates(dateFiles: Set<string>, startAfter: number): Prom
       continue
     }
     empty = 0
+    found.set(id, items)
+  }
+  return found
+}
+
+function probeCandidates(dateFiles: Set<string>, probed: TProbedEvents): number[] {
+  const matches: number[] = []
+  for (const [id, items] of probed) {
     const files = new Set(items.map(i => i.EventItemMatterFile).filter((f): f is string => !!f))
     if (overlap(files, dateFiles) >= MIN_OVERLAP) matches.push(id)
   }
   return matches
+}
+
+export type TResolveOptions = {
+  /** Look for the EventId in matter histories first. Pointless before the meeting has happened. */
+  useHistory?: boolean
+  /** A probe already run this cycle; otherwise this call probes on its own. */
+  probed?: TProbedEvents
 }
 
 export async function resolveEventId(
@@ -69,6 +93,7 @@ export async function resolveEventId(
   date: string,
   _kind: TMeetingKind,
   registry: TRegistry,
+  { useHistory = true, probed }: TResolveOptions = {},
 ): Promise<TResolved | null> {
   const matters = await getMattersByAgendaDate(date, { fresh: true })
   if (matters.length === 0) return null
@@ -85,10 +110,12 @@ export async function resolveEventId(
     return candidates[0] != null ? { eventId: candidates[0], resolvedBy } : null
   }
 
-  const fromHistory = await confirm(await historyCandidates(date, matters.map(m => m.MatterId)), 'history')
-  if (fromHistory) return fromHistory
+  if (useHistory) {
+    const fromHistory = await confirm(await historyCandidates(date, matters.map(m => m.MatterId)), 'history')
+    if (fromHistory) return fromHistory
+  }
 
   const dateFiles = new Set(matters.map(m => m.MatterFile))
-  const known = registry.lastKnownEventId ?? ANCHOR_EVENT_ID
-  return confirm(await probeCandidates(dateFiles, known), 'probe')
+  const events = probed ?? await probeEvents(registry.lastKnownEventId ?? ANCHOR_EVENT_ID)
+  return confirm(probeCandidates(dateFiles, events), 'probe')
 }

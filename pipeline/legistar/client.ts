@@ -147,7 +147,8 @@ export const getVotes = (eventItemId: number, options?: TFetchOptions): Promise<
 export const getEventItems = (eventId: number, options?: TFetchOptions): Promise<TLegistarEventItem[]> =>
   legistarGet(`/events/${eventId}/eventitems?AgendaNote=1&Attachments=1`, options)
 
-export const getMatter = (matterId: number): Promise<TLegistarMatter> => legistarGet(`/matters/${matterId}`)
+export const getMatter = (matterId: number, options?: TFetchOptions): Promise<TLegistarMatter> =>
+  legistarGet(`/matters/${matterId}`, options)
 
 export const getHistories = (matterId: number, options?: TFetchOptions): Promise<TLegistarHistory[]> =>
   legistarGet(`/matters/${matterId}/histories`, options)

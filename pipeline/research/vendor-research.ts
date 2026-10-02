@@ -29,17 +29,17 @@ import type {
 } from '@oakvs/consent-schema/schema'
 import { siteConfig } from '../config'
 
-import { DATA_ROOT, writeJson } from '../store'
+import { getDataRoot, writeJson } from '../store'
 
 export const RESEARCH_DIR = path.join(process.cwd(), '.cache', 'research')
 const PAGES_DIR = path.join(RESEARCH_DIR, 'pages')
 export const RESEARCH_PROMPT_VERSION = 'vendor-research.v2.md'
 export const REVIEW_PROMPT_VERSION = 'vendor-review.v1.md'
-const RECORDS_DIR = path.join(DATA_ROOT, 'vendor-research')
-const PUBLISHED_VENDORS = path.join(DATA_ROOT, 'published', 'vendors')
+const recordsDir = (): string => path.join(getDataRoot(), 'vendor-research')
+const publishedVendors = (): string => path.join(getDataRoot(), 'published', 'vendors')
 const USER_AGENT = `Mozilla/5.0 (compatible; oakvs-consent-tracker/0.1; +${siteConfig.url}/consent-tracker/about)`
 
-const recordPath = (key: string): string => path.join(RECORDS_DIR, `${key}.json`)
+const recordPath = (key: string): string => path.join(recordsDir(), `${key}.json`)
 const io = (key: string, kind: 'input' | 'output' | 'review.input' | 'review.output'): string =>
   path.join(RESEARCH_DIR, `${key}.${kind}.json`)
 
@@ -57,7 +57,7 @@ export type TResearchInput = {
 }
 
 async function readVendor(key: string): Promise<TVendorFile> {
-  return VendorFile.parse(JSON.parse(await readFile(path.join(PUBLISHED_VENDORS, `${key}.json`), 'utf8')))
+  return VendorFile.parse(JSON.parse(await readFile(path.join(publishedVendors(), `${key}.json`), 'utf8')))
 }
 
 function toInput(v: TVendorFile): TResearchInput {
@@ -77,10 +77,10 @@ function toInput(v: TVendorFile): TResearchInput {
 /** Organizations only, largest approved totals first. */
 export async function exportResearch({ keys, top, skipExisting = true }: { keys?: string[]; top?: number; skipExisting?: boolean }): Promise<string[]> {
   await mkdir(RESEARCH_DIR, { recursive: true })
-  const index = JSON.parse(await readFile(path.join(PUBLISHED_VENDORS, 'index.json'), 'utf8')) as {
+  const index = JSON.parse(await readFile(path.join(publishedVendors(), 'index.json'), 'utf8')) as {
     vendors: { key: string; kind: string | null; approvedTotal: number }[]
   }
-  const existing = new Set(skipExisting ? (await readdir(RECORDS_DIR).catch(() => [])).map(f => f.replace(/\.json$/, '')) : [])
+  const existing = new Set(skipExisting ? (await readdir(recordsDir()).catch(() => [])).map(f => f.replace(/\.json$/, '')) : [])
   let candidates = index.vendors.filter(v => v.kind !== 'individual' && !existing.has(v.key))
   if (keys?.length) candidates = candidates.filter(v => keys.includes(v.key))
   candidates.sort((a, b) => b.approvedTotal - a.approvedTotal || a.key.localeCompare(b.key))
@@ -237,7 +237,7 @@ export async function checkResearchOutput(key: string): Promise<TResearchCheck[]
 // ─── Import ──────────────────────────────────────────────────────────────────
 
 export async function importResearch(modelId: string, researchedAt: string): Promise<{ key: string; confidence: string; failed: number }[]> {
-  await mkdir(RECORDS_DIR, { recursive: true })
+  await mkdir(recordsDir(), { recursive: true })
   const out: { key: string; confidence: string; failed: number }[] = []
   for (const f of (await readdir(RESEARCH_DIR)).filter(n => n.endsWith('.output.json') && !n.includes('.review.'))) {
     const key = f.replace(/\.output\.json$/, '')
@@ -262,8 +262,8 @@ export async function importResearch(modelId: string, researchedAt: string): Pro
 
 export async function exportReviews(): Promise<string[]> {
   const keys: string[] = []
-  for (const f of await readdir(RECORDS_DIR)) {
-    const rec = VendorResearchRecord.parse(JSON.parse(await readFile(path.join(RECORDS_DIR, f), 'utf8')))
+  for (const f of await readdir(recordsDir())) {
+    const rec = VendorResearchRecord.parse(JSON.parse(await readFile(path.join(recordsDir(), f), 'utf8')))
     if (rec.research.confidence !== 'high' || !rec.research.profile || rec.review) continue
     const vendor = toInput(await readVendor(rec.key))
     await writeFile(io(rec.key, 'review.input'), `${JSON.stringify({ vendor, candidate: rec.research }, null, 2)}\n`)
@@ -336,12 +336,12 @@ export async function readAllResearch(): Promise<Map<string, TVendorResearchReco
   const out = new Map<string, TVendorResearchRecord>()
   let files: string[] = []
   try {
-    files = await readdir(RECORDS_DIR)
+    files = await readdir(recordsDir())
   } catch {
     return out
   }
   for (const f of files.filter(n => n.endsWith('.json'))) {
-    const rec = VendorResearchRecord.parse(JSON.parse(await readFile(path.join(RECORDS_DIR, f), 'utf8')))
+    const rec = VendorResearchRecord.parse(JSON.parse(await readFile(path.join(recordsDir(), f), 'utf8')))
     out.set(rec.key, rec)
   }
   return out

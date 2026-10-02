@@ -25,17 +25,31 @@ import type { TVendorAliases } from '@oakvs/consent-schema/vendor-key'
 
 import type { z } from 'zod'
 
-export const DATA_ROOT = path.join(process.cwd(), 'data')
+let dataRoot = path.join(process.cwd(), 'data')
+
+/** The data folder every read and write goes through (`data/` unless redirected). */
+export const getDataRoot = (): string => dataRoot
+
+/** Redirect all reads and writes, e.g. to a scratch copy for `consent run --dry-run`. */
+export function setDataRoot(dir: string): void {
+  dataRoot = dir
+}
 
 export const paths = {
-  registry: path.join(DATA_ROOT, 'meetings.json'),
-  raw: (key: string): string => path.join(DATA_ROOT, 'raw', `${key}.json`),
-  enrichments: (key: string): string => path.join(DATA_ROOT, 'enrichments', `${key}.json`),
-  overrides: (key: string): string => path.join(DATA_ROOT, 'overrides', `${key}.json`),
-  verifications: (key: string): string => path.join(DATA_ROOT, 'verifications', `${key}.json`),
-  vendorAliases: path.join(DATA_ROOT, 'vendors', 'aliases.json'),
-  vendorLegistar: (key: string): string => path.join(DATA_ROOT, 'legistar', 'vendors', `${key}.json`),
-  published: path.join(DATA_ROOT, 'published'),
+  get registry(): string {
+    return path.join(dataRoot, 'meetings.json')
+  },
+  raw: (key: string): string => path.join(dataRoot, 'raw', `${key}.json`),
+  enrichments: (key: string): string => path.join(dataRoot, 'enrichments', `${key}.json`),
+  overrides: (key: string): string => path.join(dataRoot, 'overrides', `${key}.json`),
+  verifications: (key: string): string => path.join(dataRoot, 'verifications', `${key}.json`),
+  get vendorAliases(): string {
+    return path.join(dataRoot, 'vendors', 'aliases.json')
+  },
+  vendorLegistar: (key: string): string => path.join(dataRoot, 'legistar', 'vendors', `${key}.json`),
+  get published(): string {
+    return path.join(dataRoot, 'published')
+  },
 }
 
 /** Stable JSON: object keys sorted, 2-space indent, trailing newline — so Git diffs stay meaningful. */
@@ -86,7 +100,7 @@ export const readVendorLegistar = (key: string): Promise<TVendorLegistarFile | n
 
 /** Every fetched vendor history, keyed by vendor UID. */
 export async function readAllVendorLegistar(): Promise<Map<string, TVendorLegistarFile>> {
-  const dir = path.join(DATA_ROOT, 'legistar', 'vendors')
+  const dir = path.join(dataRoot, 'legistar', 'vendors')
   const out = new Map<string, TVendorLegistarFile>()
   let names: string[] = []
   try {
@@ -125,7 +139,7 @@ export async function readVendorAliases(): Promise<TVendorAliases> {
 /** Meeting keys that have a raw snapshot. */
 export async function listRawKeys(): Promise<string[]> {
   try {
-    return (await readdir(path.join(DATA_ROOT, 'raw')))
+    return (await readdir(path.join(dataRoot, 'raw')))
       .filter(f => f.endsWith('.json'))
       .map(f => f.replace(/\.json$/, ''))
       .sort()

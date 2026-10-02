@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { FILE_NUMBER, normalizeCode } from '../normalize/raw-item'
 import { cleanTitle, findConsentRows } from '../normalize/sections'
-import { assignKeys, parseAgendaFilename } from '../registry/seed'
+import { blankEntry, registerFutureDates } from '../registry/entries'
 
 import type { TLegistarEventItem } from '../legistar/client'
 
@@ -78,21 +78,20 @@ describe('field normalization', () => {
   })
 })
 
-describe('registry seeding', () => {
-  it('parses agenda filenames', () => {
-    expect(parseAgendaFilename('OUSD-BOE_2026-06-24_1610_Agenda.pdf')).toEqual({ date: '2026-06-24', time: '16:10', kind: 'regular', canceled: false })
-    expect(parseAgendaFilename('OUSD-BOE_2025-12-03_canceled_Special_Agenda.pdf')?.canceled).toBe(true)
-    expect(parseAgendaFilename('OUSD-BOE_2026-01-05_1100_Organizational_Agenda.pdf')?.kind).toBe('organizational')
-    expect(parseAgendaFilename('OUSD-BOE_2026-06-24_General-Consent-Items.csv')).toBeNull()
+describe('registry discovery', () => {
+  it('registers a future date with the kind its weekday implies', () => {
+    const registry = { lastKnownEventId: null, meetings: [] }
+    const added = registerFutureDates(registry, ['2026-10-14', '2026-10-19'])
+    expect(added.map(e => [e.key, e.kind, e.status])).toEqual([
+      ['2026-10-14', 'regular', 'discovered'],
+      ['2026-10-19', 'special', 'discovered'],
+    ])
   })
 
-  it('suffixes the non-regular meeting on a two-meeting day only', () => {
-    const keys = assignKeys([
-      { date: '2026-09-23', time: '16:00', kind: 'regular', canceled: false },
-      { date: '2026-09-23', time: '20:00', kind: 'special', canceled: false },
-      { date: '2026-09-28', time: '15:30', kind: 'special', canceled: false },
-    ]).map(k => k.key)
-    expect(keys).toEqual(['2026-09-23', '2026-09-23-special', '2026-09-28'])
+  it('leaves a date alone when the registry already has it under any key', () => {
+    const registry = { lastKnownEventId: null, meetings: [blankEntry('2026-10-14-special')] }
+    expect(registerFutureDates(registry, ['2026-10-14'])).toEqual([])
+    expect(registry.meetings).toHaveLength(1)
   })
 })
 
