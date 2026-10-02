@@ -1,0 +1,86 @@
+name: Something's wrong with an item
+description: A summary, headline, dollar amount, category, flag or vendor profile that doesn't match the official record.
+title: "[Item] <meeting date> <file number>: <short description>"
+labels: ["correction"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report this. This project is maintained by one busy dad, so it may be a little while before someone looks at it. Clear, specific reports get fixed fastest.
+
+        **Before you start, check the official record.** Every item links to its page on Legistar. If Legistar shows the same problem, the error is in OUSD's own records, and only the district can fix it. Please contact the [Office of the Board of Education](https://www.ousd.org/board-of-ed) (boe@ousd.org, 510-879-1940) instead of filing here.
+
+  - type: input
+    id: meeting
+    attributes:
+      label: Meeting date
+      description: The Board meeting the item was on.
+      placeholder: "2026-09-23"
+    validations:
+      required: true
+
+  - type: input
+    id: file
+    attributes:
+      label: File number
+      description: The item's Legistar file number. It's shown on each item and in the `file_number` column of the CSV.
+      placeholder: "26-1736"
+    validations:
+      required: true
+
+  - type: input
+    id: agenda
+    attributes:
+      label: Agenda number (if you have it)
+      placeholder: "R.-1"
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: The item on the tracker or on Legistar, if you have it handy.
+      placeholder: "https://oakvs.world/consent-tracker/…"
+
+  - type: dropdown
+    id: what
+    attributes:
+      label: What's wrong?
+      options:
+        - A dollar amount
+        - The summary or headline
+        - The category or action type
+        - The vendor name
+        - A vendor profile (description, website or contact details)
+        - A flag (for example "No bid" or "After work began")
+        - The outcome or vote
+        - The item is missing, duplicated or in the wrong meeting
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: What the tracker says
+      description: Copy the part that's wrong, exactly as it appears.
+    validations:
+      required: true
+
+  - type: textarea
+    id: correct
+    attributes:
+      label: What it should say, and how you know
+      description: |
+        Quote the passage of the official action text that shows the right answer. For a vendor profile, link the page that shows the correct information (the organization's own site or a public registry).
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Checks
+      options:
+        - label: I compared this with the item's official text on Legistar, and the problem isn't in the official record.
+          required: true
+        - label: I haven't included personal information about anyone (for example a private phone number or home address).
+          required: true

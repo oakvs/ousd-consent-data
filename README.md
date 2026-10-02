@@ -1,28 +1,28 @@
 # OUSD Consent Tracker data
 
-This repository holds every item the Oakland Unified School District (OUSD) Board of Education has approved through its General Consent Report since August 2025, along with the code that collects and checks it. For each item you get the official text from Legistar, a short plain-language summary, the dollar amounts, the outcome and votes, and a profile of the vendor when one could be verified. It updates itself every 30 minutes, and you're free to use it.
+This repository holds data tracking every item the Oakland Unified School District (OUSD) Board of Education has voted on through its General Consent Report since August 2025, and a pipeline to fetch, store and enrich that data via LLMs. Included in the dataset is the official text from Legistar, a short plain-language summary, dollar amounts, the outcome and votes, a vendor profile. 
 
-If you just want to browse, the [Consent Tracker on Oakland vs. the World](https://oakvs.world/consent-tracker) is the friendlier way in. This repo is for anyone who wants the data itself, or wants to see exactly how it's made.
+The data backs the [Consent Report Tracker on the Oakland vs. the World blog](https://oakvs.world/consent-tracker), and this repo is made public for anyone who wants the data itself, or wants to see exactly how it's made.
 
-This is an independent project. It isn't an official OUSD project and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
+The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
 As of October 2, 2026, it covers 26 Board meetings, from August 13, 2025 to September 23, 2026. That's 2,149 consent items authorizing $468.7 million in spending, plus $112.2 million in grants and other money coming in, across 757 vendors and partners.
 
 ## Why this exists
 
-At most of its meetings, the OUSD Board approves tens of millions of dollars in one vote. The General Consent Report bundles anywhere from a handful to a few hundred contracts, grants and amendments, and Board members and the public usually get a few days to read it, either as a long PDF or through Legistar, the district's agenda system. Everything in it is public. It just isn't easy to read, search, or follow from one meeting to the next.
+At most of its meetings, the OUSD Board approves tens of millions of dollars in one vote. The General Consent Report bundles anywhere from a handful to a few hundred contracts, grants and amendments, and Board members and the public usually get only a few days to read it, either as a long PDF or through Legistar, the district's agenda system. While the data is public it isn't easy to read, search, or follow from one meeting to the next.
 
 I'm the parent of two OUSD students and have been building websites for over twenty years, and I've struggled to understand pretty much every consent report I've read. This project uses AI to work through each report as soon as it's posted. Every item gets a short summary, the money is added up the same way every time, and there's a running record of what was approved and what changed along the way. I don't think the district makes this hard on purpose; it doesn't have the time or staff to present it any other way. The hope is that the Board, district staff, reporters and families can work from the same set of facts about how money gets spent.
 
-Everything here is built from OUSD's own public records, and the official text is always included. The summaries are there to help you read it, not to replace it.
+Everything here is built from OUSD's own public records, and the official text is always included. The summaries are there to help you read and understand it, but are AI-generated, so keep that in mind.
 
 ## What you'll find in each item
 
-Some of what's attached to each item comes straight from Legistar: the title, the official action text, the file and agenda numbers, the presenting office, the vendor number, the funding source, attachments, and the history of actions and votes. That's the official record, and the action text is what everything else gets checked against.
+Some of what's attached to each item comes straight from Legistar: the title, the official action text, the file and agenda numbers, the presenting office, the vendor number, the funding source, attachments, and the history of actions and votes. 
 
-Some of it is computed by ordinary code with no AI involved, like the meeting totals, most of the flags, which items belong to the same vendor, and which amendments go with which contract.
+Much of the data is computed by ordinary code with no AI involved, like the meeting totals, most of the flags, which items belong to the same vendor, and which amendments go with which contract.
 
-And some of it is written by AI and then checked. That covers the headline and summary, the category and action type, the vendor name, any schools mentioned, the contract dates, the dollar amounts, and four of the flags. The model is Claude, made by Anthropic. Each AI-written record says which model and which version of the instructions produced it.
+Then, some of it is written by AI and then checked. That covers the headline and summary, the category and action type, the vendor name, any schools mentioned, the contract dates, the dollar amounts, and four of the flags. The model is (currently) Claude, made by Anthropic, but this may change as open-weight models improve and become less expensive and resource-intensive. Each AI-written record says which model and which version of the instructions produced it.
 
 ## How the data gets made
 
@@ -44,15 +44,15 @@ flowchart TD
 
 ### 1. Finding meetings
 
-Legistar's meeting listings don't work for OUSD, so the pipeline works out the schedule another way. Staff file agenda items with a target date long before the agenda is published, and once five or more items are filed for a date's consent report, that date counts as an upcoming meeting. When the agenda goes up, the meeting is matched to its Legistar record by the file numbers on it.
+Legistar's meeting listings are broken for OUSD for whatever reason, so this pipeline works out the schedule another way. District staff tend to file agenda items with a target date long before the agenda is published, and once five or more items are filed for a date's consent report, that date counts as an upcoming meeting. When the agenda goes up, the meeting is matched to its Legistar record by the file numbers on it.
 
 ### 2. Reading the agenda
 
-Next it pulls the consent section of the agenda and each item's full record. The section is found by its heading and agenda letter, because Legistar's own "consent" marker isn't reliable. What comes back is saved as a snapshot in `data/raw/`, and that snapshot is the official record the rest of the process works from. Open meetings are re-checked every 30 minutes, so agenda changes show up within the hour, and outcomes are refreshed daily until every item has been acted on. Staff email addresses sometimes appear in Legistar records; they're never saved.
+Once an agenda is official, the pipeline in this repo pulls the consent section of the agenda (via the Legistar public API) and each item's full record. The section is found by its heading and agenda letter, because Legistar's own "consent" marker isn't reliable. What comes back is saved as a snapshot in `data/raw/`, and that snapshot is the official record the rest of the process works from. Open meetings are re-checked every 30 minutes, so agenda changes show up within the hour, and outcomes are refreshed daily until every item has been acted on.
 
 ### 3. Summarizing each item
 
-For each item, the AI reads only the official text. It writes a headline (110 characters at most) and a two- or three-sentence summary aimed at about an 8th-grade reading level, and it pulls out the facts: who the vendor is, which schools are named, the contract dates, the category, and the dollar amounts, including any prior and new totals and whether the amount is a yearly limit. Its instructions are in [`pipeline/prompts/`](pipeline/prompts/). They ask for neutral wording and spelled-out acronyms, and tell it not to guess at anything the text doesn't say. People who contract in their own name are described by their role rather than named in headlines.
+For each item, the AI reads only the official text. It writes a headline (110 characters at most) and a two- or three-sentence summary aimed at about an 8th-grade reading level, and it pulls out the facts: who the vendor is, which schools are named, the contract dates, the category, and the dollar amounts, including any prior and new totals and whether the amount is a yearly limit. Its instructions are in [`pipeline/prompts/`](pipeline/prompts/). They ask for neutral wording and spelled-out acronyms, and tell it not to guess at anything the text doesn't say. Individuals who contract in their own name are described by their role rather than named in headlines, as a courtesy.
 
 ### 4. Checking the numbers
 
@@ -60,7 +60,7 @@ Before a summary is published, code checks that every dollar amount appears word
 
 ### 5. A second reading
 
-The 20 largest items in each meeting get a second, independent reading of the money, as do items that failed a money check, items where the first reading thought the official text itself had a mistake, and headlines that might name a person. The second reader never sees the first reader's answer. If the two disagree in a way that would change the totals, a third reading settles it by majority, and the comparison is done in code. A disagreement that's still significant (more than $10,000 and more than 1% of the item) gets flagged for a person to look at.
+The 20 largest items in each meeting get a second, independent reading of the money, as do items that failed a money check, items where the first reading thought the official text itself had a mistake, and headlines that might name a person. The second reader never sees the first reader's answer. If the two disagree in a way that would change the totals, a third reading settles it by majority, and the comparison is done in code. A disagreement that's still significant (more than $10,000 and more than 1% of the item) gets flagged for a human to look at.
 
 ### 6. Corrections
 
@@ -158,13 +158,21 @@ items = pd.read_csv("https://raw.githubusercontent.com/oakvs/ousd-consent-data/m
 
 There's a mirror on [Codeberg](https://codeberg.org/oakvs/ousd-consent-data) too. The CSVs are UTF-8 with a header row. Google Sheets opens them as is; in Excel, use **Data → From Text/CSV** so accented letters and dashes come through properly.
 
-## Corrections and questions
+## Found a mistake?
 
-If you spot a mistake, please [open an issue](https://github.com/oakvs/ousd-consent-data/issues) and include the meeting date and the item's file number (for example, `26-1736`). Confirmed fixes go into `data/overrides/`, and the item gets a dated note.
+Thank you for looking closely. A quick heads-up first: this project is maintained by one busy dad in his spare time. I read every report and I'll get to yours, but it may take a while, so please be patient.
+
+The first thing to figure out is where the mistake lives. Every item on the tracker links to its official page on Legistar (the `legistar_url` column in the CSV). Open it and compare.
+
+**If the official record on Legistar has the same problem**, it's an error in OUSD's own records, and the district is the only one who can fix it. This project copies those records as published. Contact the [Office of the Board of Education](https://www.ousd.org/board-of-ed), which manages Board agendas and Legistar, at boe@ousd.org or (510) 879-1940 (weekdays, 8:30 to 4:30). If you're looking for documents that aren't on Legistar, OUSD takes [Public Records Act requests](https://www.ousd.org/communications-public-affairs/public-records-act-requests) at publicrecords@ousd.org.
+
+**If Legistar is right and the tracker is wrong**, that one's on me. That covers a summary, headline, dollar amount, category, flag or vendor profile that doesn't match the official record, or an item that's missing or out of place. Please [open an issue](https://github.com/oakvs/ousd-consent-data/issues/new/choose) using the "Something's wrong with an item" form. It asks for the meeting date, the item's file number, what's wrong and what the official text actually says, which is everything needed to check and fix it quickly. Confirmed fixes go into `data/overrides/`, and the item gets a dated correction note.
+
+If you'd like to make the fix yourself, that's even better and greatly appreciated. [CONTRIBUTING.md](CONTRIBUTING.md) explains how.
 
 ## Privacy
 
-This data is about public business: contracts, and the organizations that hold them. District staff email addresses that turn up in Legistar records are removed before anything is saved, and the tests fail if one ever slips through. People who contract in their own name aren't named in headlines and are never researched. Vendor profiles only include an organization's public business contact information.
+This data is about public business: contracts, and the organizations that hold them. District staff email addresses that turn up in Legistar records are removed before anything is saved. People who contract in their own name aren't named in headlines and are never researched. Vendor profiles only include an organization's public business contact information.
 
 ## What's in this repository
 
