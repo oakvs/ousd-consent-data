@@ -24,9 +24,9 @@ export async function git(args: string[]): Promise<string> {
 
 const lines = (s: string): string[] => s.split('\n').filter(Boolean)
 
-/** Paths under `dir` that differ from HEAD, untracked files included. */
-export const changedPaths = async (dir: string): Promise<string[]> =>
-  lines(await git(['status', '--porcelain', '--untracked-files=all', '--', dir]))
+/** Paths under these that differ from HEAD, untracked files included. */
+export const changedPaths = async (...paths: string[]): Promise<string[]> =>
+  lines(await git(['status', '--porcelain', '--untracked-files=all', '--', ...paths]))
 
 /** Tracked files modified anywhere in the work tree. */
 export const trackedChanges = async (): Promise<string[]> =>

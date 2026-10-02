@@ -27,6 +27,7 @@ import {
 } from '../store'
 
 import { writeExports } from './exports'
+import { updateReadme } from './readme'
 import { buildMeeting, overrideKey } from './meeting'
 import { buildVendors } from './vendors'
 
@@ -113,6 +114,8 @@ export async function buildAll(): Promise<TBuildSummary> {
   await writeJson(path.join(out, 'vendors', 'index.json'), vendors.index)
 
   await writeExports(meetings, vendors.index)
+  // The README's generated sections (only when a README sits next to the data folder).
+  await updateReadme()
 
   return { meetings, vendors: vendors.files.length }
 }

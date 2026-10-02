@@ -53,6 +53,8 @@ const RESOLVE_BEHIND_DAYS = 14
 /** … to this many days ahead (agendas are built a week or two out). */
 const RESOLVE_AHEAD_DAYS = 14
 const MAX_PUSH_ATTEMPTS = 3
+/** What a run may change and commit: the data, and the README's generated numbers. */
+const PUBLISH_PATHS = ['data', 'README.md']
 const LOCK_FILE = path.join(process.cwd(), '.cache', 'run.lock')
 /** A lock older than this is from a crashed run. */
 const LOCK_STALE_MS = 2 * 60 * 60 * 1000
@@ -278,7 +280,7 @@ export function toLlmChanges(phase: TLlmPhaseResult, built: TBuildSummary): TLlm
 }
 
 async function commitData(subject: string, body: string): Promise<{ sha: string; subject: string }> {
-  await git(['add', '--all', '--', 'data'])
+  await git(['add', '--all', '--', ...PUBLISH_PATHS])
   await git(['commit', '--quiet', '-m', subject, '-m', body])
   return { sha: await head(), subject }
 }
@@ -288,7 +290,7 @@ async function fastPublish(now: Date, push: boolean, deployHookUrl: string | und
   for (let attempt = 1; ; attempt++) {
     const base = await head()
     const changes = await cycle(now)
-    const changedFiles = (await changedPaths('data')).map(l => l.slice(3))
+    const changedFiles = (await changedPaths(...PUBLISH_PATHS)).map(l => l.slice(3))
     const summary: TRunSummary = {
       ...changes,
       startedAt,
@@ -343,7 +345,7 @@ async function llmPublish(now: Date, push: boolean, deployHookUrl: string | unde
   const changes = toLlmChanges(result, built)
   const summary: TLlmSummary = { ...result, changes, commit: null, pushed: false, deployed: false, error: failure ? (failure as Error).message : null }
 
-  const changedFiles = (await changedPaths('data')).map(l => l.slice(3))
+  const changedFiles = (await changedPaths(...PUBLISH_PATHS)).map(l => l.slice(3))
   if (changedFiles.length) {
     const { subject, body } = llmCommitMessage(changes)
     summary.commit = await commitData(failure ? `${subject} (partial: LLM step failed)` : subject, body)
