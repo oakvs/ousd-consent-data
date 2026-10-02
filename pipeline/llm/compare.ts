@@ -47,6 +47,8 @@ export type TCompareReport = {
   /** Money readings (second reader) on items both runs verified. */
   verificationMoney: { same: number; total: number; differences: { file: string; stored: unknown; fresh: unknown }[] }
   headlines: { file: string; stored: string; fresh: string }[]
+  /** Full records for every item with a difference, to judge which reading is right. */
+  details: Record<string, { stored: TEnrichment; fresh: TEnrichment; storedVerification: TVerificationRecord | null; freshVerification: TVerificationRecord | null }>
 }
 
 const same = (a: unknown, b: unknown): boolean => JSON.stringify(a) === JSON.stringify(b)
@@ -58,11 +60,15 @@ export function spreadSample<T>(items: T[], n: number | undefined): T[] {
   return Array.from({ length: n }, (_, i) => items[Math.floor(i * step)])
 }
 
-export async function compareMeeting(key: string, { llm, sample, now = new Date() }: { llm?: ILlm; sample?: number; now?: Date } = {}): Promise<TCompareReport> {
+export async function compareMeeting(
+  key: string,
+  { llm, sample, files: only, now = new Date() }: { llm?: ILlm; sample?: number; files?: string[]; now?: Date } = {},
+): Promise<TCompareReport> {
   const real = getDataRoot()
   const [raw, storedE, storedV] = await Promise.all([readRaw(key), readEnrichments(key), readVerifications(key)])
   if (!raw || !storedE) throw new Error(`${key}: no raw snapshot or enrichments to compare against`)
-  const files = spreadSample(raw.items.map(i => i.file).filter(f => storedE.items[f]), sample)
+  const candidates = raw.items.map(i => i.file).filter(f => storedE.items[f] && (!only || only.includes(f)))
+  const files = spreadSample(candidates, sample)
 
   const scratch = await mkdtemp(path.join(os.tmpdir(), 'consent-compare-'))
   const copy = path.join(scratch, 'data')
@@ -98,6 +104,7 @@ export async function compareMeeting(key: string, { llm, sample, now = new Date(
     differences: [],
     verificationMoney: { same: 0, total: 0, differences: [] },
     headlines: [],
+    details: {},
   }
   for (const f of files) {
     const stored = storedE.items[f]?.output
@@ -115,6 +122,9 @@ export async function compareMeeting(key: string, { llm, sample, now = new Date(
 
     const sv: TVerificationRecord | undefined = storedV?.items[f]
     const fv: TVerificationRecord | undefined = freshV?.items[f]
+    if (report.differences.some(d => d.file === f) || !same(sv?.money ?? null, fv?.money ?? null)) {
+      report.details[f] = { stored, fresh, storedVerification: sv ?? null, freshVerification: fv ?? null }
+    }
     if (sv?.money && fv?.money) {
       report.verificationMoney.total++
       if (same(sv.money, fv.money)) report.verificationMoney.same++

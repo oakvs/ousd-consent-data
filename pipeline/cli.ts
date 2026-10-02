@@ -9,7 +9,8 @@
  *                                             One full update cycle: check → ingest → build → commit → push → deploy hook,
  *                                             then summaries + second readings through the Claude API → commit → push
  *   llm [--key K]                             Run the LLM step (summaries, second readings) and rebuild; no git
- *   llm-compare --key K [--sample N]          Redo one meeting's LLM step on a scratch copy and compare with the stored results
+ *   llm-compare --key K [--sample N] [--files A,B]
+ *                                             Redo one meeting's LLM step on a scratch copy and compare with the stored results
  *   discover --date YYYY-MM-DD [--key K]      Resolve a meeting's EventId; prints it and the consent item count
  *   ingest --key K [--event N]                Fetch a meeting from Legistar into data/raw
  *   backfill --from D --to D [--limit N]      resolve → ingest for every registry meeting in range, then build
@@ -74,6 +75,7 @@ const { positionals, values } = parseArgs({
     'no-push': { type: 'boolean', default: false },
     'no-llm': { type: 'boolean', default: false },
     sample: { type: 'string' },
+    files: { type: 'string' },
     summary: { type: 'string' },
     force: { type: 'boolean', default: false },
     size: { type: 'string' },
@@ -184,7 +186,10 @@ async function main(): Promise<void> {
     case 'llm-compare': {
       if (!values.key) throw new Error('--key is required')
       const { compareMeeting } = await import('./llm/compare')
-      const report = await compareMeeting(values.key, { sample: values.sample ? Number(values.sample) : undefined })
+      const report = await compareMeeting(values.key, {
+        sample: values.sample ? Number(values.sample) : undefined,
+        files: values.files?.split(',').map(f => f.trim()),
+      })
       const out = path.join(process.cwd(), '.cache', `llm-compare-${values.key}.json`)
       await writeJson(out, report)
       console.log(`${report.key}: ${report.enriched}/${report.items} item(s) re-enriched, $${(report.usage?.costUsd ?? 0).toFixed(2)}`)
