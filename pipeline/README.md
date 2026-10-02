@@ -81,6 +81,11 @@ Locally, put the key in `.env` (gitignored) and run with `npx tsx --env-file=.en
 
 ## Known quirks found while building this
 
+- `/events` and `/events/{id}` return an error for every OUSD event (HTTP 400 as of October 2026; `events-check` re-tests it quarterly). `/events/{id}/eventitems`, matters and histories work, so meetings are found from future-dated matters and EventId probing instead.
+- When the motion text says "Motion failed" or "Motion carried", it beats Legistar's `Pass` flag: June 15, 2026 says Pass for a failed vote. Action names also beat the consent flag.
+- Actions on a whole consent report (postponed, failed) become a meeting note, not flags on every item.
+- Vendor numbers: only 4–8 digit codes are kept. Leading-zero variants are the same vendor only when the names also match, and vendor histories are matched exactly, never by substring.
+- Staff sometimes type their own email into a free-text field (e.g. the funding source on file 21-3054). Email-shaped text is stripped from those fields on import.
 - `EventItemConsent` is unreliable: 24 of June 24's 263 consent items had it set to 0. The section is found by its header row plus the agenda-letter prefix.
 - The v1 prototype's `group` values were wrong for 30 items: closed-session headers leaked in because rows weren't sorted by sequence. The live ingest is correct, and June 24's raw now comes from Legistar.
 - June 24, 2026: Legistar dates 245 adoptions **June 24**. About 17 pulled items were decided June 29 as Unfinished Business. The prototype note ("not taken up June 24") was wrong; the meeting note is now generated from the histories.
