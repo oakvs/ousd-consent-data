@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.wwt.com/corporate/softchoice/overview",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wwt.com/about/locations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.softchoice.com/about/locations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006195",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Softchoice describes itself as an IT solutions provider with decades of experience in Microsoft licensing; OUSD's item is a Microsoft Volume Licensing Agreement enrollment with Softchoice, Inc. (WWT overview page)",
+      "The agenda gives Maryland Heights, MO, which is the city of the Americas global headquarters (1 World Wide Way, Maryland Heights, MO 63146) of World Wide Technology, which acquired Softchoice in 2025 (WWT locations page)",
+      "Softchoice's own site (softchoice.com) is operated under the Softchoice name and WWT's site hosts a dedicated 'Softchoice - Overview' page confirming Softchoice is now part of WWT"
+    ],
+    "key": "v-006195",
+    "notes": "Softchoice, Inc. is the US arm of Softchoice Corporation (formerly Toronto-based), acquired by World Wide Technology in March 2025. Maryland Heights, MO is WWT's global headquarters address, which matches the agenda location. I could not confirm the exact legal entity name 'Softchoice, Inc.' or a Softchoice-specific phone, email or address on a fetchable page, so those fields are left null rather than borrowing WWT's contact details. softchoice.com is a JavaScript-rendered site and may not fetch cleanly.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Maryland Heights, MO",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Softchoice is a North American information technology (IT) solutions provider. It sells and advises on software licensing, especially Microsoft licensing, along with cloud services and modern workplace technology. It is now part of World Wide Technology (WWT), a technology company based in the St. Louis, Missouri area.",
+      "website": "https://www.softchoice.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Softchoice - Overview - WWT",
+        "url": "https://www.wwt.com/corporate/softchoice/overview"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "WWT Locations",
+        "url": "https://www.wwt.com/about/locations"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Softchoice: Success. Fully realized.",
+        "url": "https://www.softchoice.com/about/locations"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-0006195",
+    "notes": "Softchoice is a well-known Microsoft licensing reseller, now owned by WWT (WWT overview page confirms the acquisition and Microsoft licensing focus), which fits OUSD's Microsoft Volume Licensing enrollment; the Maryland Heights, MO agenda address matches WWT's global headquarters, consistent with post-acquisition billing. The headquarters field is WWT's address, not shown to be Softchoice's own, so it is dropped; the summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

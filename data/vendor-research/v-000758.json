@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bdconnect.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bdconnect.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000758",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v1.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Brailsford & Dunlavey is headquartered in Washington, DC (1220 19th St NW), matching the agenda's location 'Washington, DC'",
+      "B&D's own staff page says its public K-12 practice group supports Oakland Unified School District, matching OUSD's Measure Y program management contract",
+      "B&D describes program management and construction oversight services for K-12 schools, matching OUSD's 'School buildings & construction' category"
+    ],
+    "key": "v-000758",
+    "notes": "Registry IDs (EIN, CA entity number, SAM UEI) not looked up; registries not fetched. No general email found on the contact page. Identity second signal (OUSD mention) is on https://www.bdconnect.com/people/jackson/. Agenda legal name is 'Brailsford and Dunlavey, Inc.'; the website uses 'Brailsford & Dunlavey'.",
+    "profile": {
+      "address": "1220 19th St NW, Suite 400, Washington, DC 20036",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "Brailsford & Dunlavey",
+      "orgType": "company",
+      "phone": "(202) 289-4455",
+      "samUei": null,
+      "summary": "Brailsford & Dunlavey is a planning and development advisory firm founded in 1993. It provides market analysis, financial modeling, program management and construction oversight for colleges, universities, K-12 schools, cities and sports organizations. It has offices in several U.S. cities, including Washington, D.C.",
+      "website": "https://www.bdconnect.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website"
+        ],
+        "title": "Leading Planning and Development Advisory Firm",
+        "url": "https://www.bdconnect.com/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Brailsford & Dunlavey",
+        "url": "https://www.bdconnect.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-brailsford-and-dunlavey",
+    "notes": "B&D is Washington, DC based, matching the agenda, and its own staff page says it supports Oakland Unified School District; the about page confirms the 1993 founding, services, client types and offices, and the contact page confirms the address and phone. The contact page does not designate a headquarters, so that field is not supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

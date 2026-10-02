@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/814505027",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ultimate-impact.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ultimate-impact.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009155",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Ultimate Impact Inc' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 81-4505027), matching the agenda's 'Oakland, CA'",
+      "Organization website (ultimate-impact.org) lists its office at 1025 Yerba Buena Ave, Oakland, CA and the same tax ID 81-4505027",
+      "Website describes youth programming in Oakland schools, consistent with OUSD's 'Student health, support & family services' category; a public Eat.Learn.Play. Foundation page describes the organization's work with OUSD students at West Oakland Middle School"
+    ],
+    "key": "v-009155",
+    "notes": "No agenda link to Prescott Elementary specifically was found online; identity rests on name, Oakland location, EIN/website match and documented work with OUSD students. General email appears on the contact page only in obfuscated form, so it was omitted. No phone number listed.",
+    "profile": {
+      "address": "1025 Yerba Buena Ave #A, Oakland, CA 94608",
+      "caEntityNumber": null,
+      "ein": "81-4505027",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Ultimate Impact Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Ultimate Impact is a nonprofit that uses the sport of ultimate Frisbee to support youth from underrepresented communities in San Francisco and Oakland. Its programs run in schools and include play-based programs, leadership programs, a competitive team and a summer camp. It aims to help young people build confidence, teamwork and accountability.",
+      "website": "https://www.ultimate-impact.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Ultimate Impact Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/814505027"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "orgType",
+          "ein"
+        ],
+        "title": "Ultimate Impact",
+        "url": "https://www.ultimate-impact.org/"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Contact Us - Ultimate Impact",
+        "url": "https://www.ultimate-impact.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-ultimate-impact",
+    "notes": "Oakland youth nonprofit Ultimate Impact Inc (EIN 81-4505027, 1025 Yerba Buena Ave) matches the agenda name and city, and a no-cost youth sports services agreement at an elementary school fits its mission; no link to Prescott specifically was found. Name, EIN, address, org type and program list are confirmed on ProPublica and the organization's site, and the San Francisco/Oakland and partner-school wording appears on its program pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

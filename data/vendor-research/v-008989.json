@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.openliteracy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.openliteracy.com/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008989",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company is based in Pittsburgh, PA, matching the agenda text 'Pittsburgh, PA' (Terms and Privacy pages)",
+      "Company website lists Oakland Unified School District among its partner districts",
+      "Company provides online reading tutoring and literacy curriculum, matching OUSD's 'Classroom & academic programs' category and the Academics and Instruction Department sponsor"
+    ],
+    "key": "v-008989",
+    "notes": "Terms page gives a different address (4165 Blair Street, Pittsburgh, PA 15207) than the Privacy page (119 Springhouse Lane, Pittsburgh, PA 15238), so address was left null. No public phone number found. No registry (SOS/SAM) lookup done.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello@openliteracy.com",
+      "headquarters": "Pittsburgh, PA",
+      "legalName": "OpenLiteracy, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "OpenLiteracy is a company that provides one-on-one online reading tutoring for elementary students, taught by certified teachers. It also offers an online platform with literacy curriculum and teacher training materials based on the Science of Reading.",
+      "website": "https://www.openliteracy.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "orgType"
+        ],
+        "title": "OpenLiteracy",
+        "url": "https://www.openliteracy.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "headquarters"
+        ],
+        "title": "Privacy — OpenLiteracy",
+        "url": "https://www.openliteracy.com/privacy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-openliteracy",
+    "notes": "Identity is well supported (OpenLiteracy, LLC, Pittsburgh PA, lists Oakland Unified as a partner district, online reading tutoring fits academics sponsor). However the summary claims an online platform with teacher training materials; the cited pages show lesson guides and curriculum but no teacher training or professional development, so the summary overstates what sources support.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

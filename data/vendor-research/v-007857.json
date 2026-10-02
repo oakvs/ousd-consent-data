@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://ida-se.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ida-se.com/the-firm/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ida-se.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007857",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website names it 'IDA Structural Engineers, Inc.', matching the agenda vendor name exactly",
+      "Located in Oakland, CA (1629 Telegraph Avenue, Suite 300), matching the agenda location",
+      "A structural engineering firm, matching OUSD's 'Structural Engineering Services' contract for Facilities Planning and Management"
+    ],
+    "key": "v-007857",
+    "notes": "No registry IDs (EIN, CA entity number, SAM UEI) were verified. Website pages fetched did not themselves mention Oakland Unified; search snippets indicated OUSD school projects but those were not fetched or cited.",
+    "profile": {
+      "address": "1629 Telegraph Avenue, Suite 300 Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@ida-se.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "IDA Structural Engineers, Inc.",
+      "orgType": "company",
+      "phone": "(510) 834-1629",
+      "samUei": null,
+      "summary": "IDA Structural Engineers, Inc. is a consulting structural engineering firm based in Oakland, California. It was established in 1986. The firm provides structural engineering design and analysis for buildings ranging from mid-rise structures to smaller renovations.",
+      "website": "https://ida-se.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - IDA Structural Engineers",
+        "url": "https://ida-se.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "The Firm - IDA Structural Engineers",
+        "url": "https://ida-se.com/the-firm/"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "website"
+        ],
+        "title": "IDA Structural Engineers",
+        "url": "https://www.ida-se.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-7857",
+    "notes": "Exact legal name (IDA Structural Engineers, Inc.), Oakland location and structural engineering services match the agenda item; I confirmed contact details, 1986 founding and the service description on the firm's own pages. The sites do not mention OUSD, but the name, city and service all match and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

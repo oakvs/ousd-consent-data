@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sjcoe.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.teachcalifornia.org/partners/Detail/1769",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://transportation.seis.org/Aspx/contactus.aspx",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003755",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names San Joaquin County Office of Education in Stockton, CA; sjcoe.org describes the San Joaquin County Office of Education with a Stockton campus at 2922 Transworld Drive",
+      "The SEIS site states the Special Education Information System (SEIS) is managed and maintained by CEDR Systems, a department of the San Joaquin County Office of Education, matching the agenda's SEIS license agreement",
+      "TeachCalifornia describes it as a regional agency serving school districts, with the same Stockton address as sjcoe.org"
+    ],
+    "key": "v-003755",
+    "notes": "TeachCalifornia lists a different phone ((209) 468-4899); the phone used here is from sjcoe.org. No general email found.",
+    "profile": {
+      "address": "2922 Transworld Drive Stockton CA 95206",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Stockton, CA",
+      "legalName": "San Joaquin County Office of Education",
+      "orgType": "public_agency",
+      "phone": "209-468-4800",
+      "samUei": null,
+      "summary": "The San Joaquin County Office of Education is a regional public education agency in Stockton, California. It provides leadership, resources and services to school districts in the county, including special education programs. Its CEDR Systems department manages the Special Education Information System (SEIS), a web-based system used by California school districts to write and store special education plans (IEPs) and student records.",
+      "website": "https://www.sjcoe.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Home - San Joaquin County Office Of Education",
+        "url": "https://www.sjcoe.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "San Joaquin County Office of Education",
+        "url": "https://www.teachcalifornia.org/partners/Detail/1769"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SEIS - Special Education Information System",
+        "url": "https://transportation.seis.org/Aspx/contactus.aspx"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-01",
+  "review": {
+    "key": "n-san-joaquin-county-office-of-education-special-education-information-system",
+    "notes": "sjcoe.org confirms the Stockton county agency, address and phone 209-468-4800, and the SEIS site states SEIS is managed by CEDR Systems, a department of SJCOE, matching the agenda's SEIS license addendum. The IEP/student-records description is supported by the SEIS features page; the summary is neutral and no individual contact details were included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://evalgroup.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://evalgroup.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://evalgroup.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007250",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official site evalgroup.org lists a mailing address in Los Altos, CA, matching the agenda's 'Los Altos, CA'",
+      "Name matches: the site is titled 'The EvalGroup', matching the agenda's 'Evalgroup' / 'The EvalGroup'",
+      "Website describes special education services (school psychology, speech-language pathology, occupational therapy, education specialists), matching OUSD's Special Education Department contract for a nonpublic agency"
+    ],
+    "key": "v-007250",
+    "notes": "No registry record (California Secretary of State, SAM.gov) was checked or found, so legal name, entity number and UEI are null. The website's HTTPS certificate is expired, so HTTP URLs are cited. No public page found mentioning OUSD directly; identity rests on name, city and service-type match.",
+    "profile": {
+      "address": "171 Main St. #567, Los Altos CA 94022",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@EvalGroup.org",
+      "headquarters": "Los Altos, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "650-472-9660",
+      "samUei": null,
+      "summary": "The EvalGroup is an education consulting firm in Los Altos, California. It provides special education professionals such as school psychologists, speech-language pathologists, occupational therapists, education specialists and licensed mental health counselors to schools and other settings.",
+      "website": "http://evalgroup.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "The EvalGroup – Educational Consulting Firm",
+        "url": "http://evalgroup.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us – The EvalGroup",
+        "url": "http://evalgroup.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact – The EvalGroup",
+        "url": "http://evalgroup.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-evalgroup",
+    "notes": "Fetched evalgroup.org (over HTTP, since the certificate is expired): the name, the Los Altos CA mailing address, the 650-472-9660 phone and the info@ email appear on the Contact page, and the home and About pages describe special education staffing (school psychologists, SLPs, OTs, education specialists, LMHCs) that fits OUSD's Special Education nonpublic agency contract. The summary is neutral and supported. The 'company' orgType is a mild inference from 'firm', and no registry record or direct OUSD mention was found.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
