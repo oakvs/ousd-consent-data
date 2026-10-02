@@ -1,17 +1,133 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cts-1.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cts-1.com/contact_us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://web.agc-ca.org/54138-Testing-Laboratories/Construction-Testing-Services,-Inc-13230",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/sam-entity/UERCRN2NMAL1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-007855",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'Construction Testing Services, Inc.', listed in the AGC of California member directory under Testing Laboratories (agc-ca.org)",
+      "The company's own Contact page lists an Oakland office, matching the agenda location of Oakland, CA",
+      "The company's website describes special inspection and construction materials testing, matching OUSD's 'Materials Testing and Special Inspection Services' agreements for school construction projects",
+      "A federal SAM.gov-derived record (opengovus.com) shows a California for-profit company with NAICS 541380 Testing Laboratories at the same Pleasanton address as the company website"
+    ],
     "key": "v-007855",
-    "notes": "Not researched: the session's web search budget was exhausted, so no candidate organization was found or confirmed. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Headquarters is Pleasanton; the agenda's 'Oakland, CA' matches the company's Oakland office listed on its Contact page. No page found that names OUSD specifically. California Secretary of State entity number and EIN were not found. The SAM record lists the name without 'Inc.'; the legal name with 'Inc.' is taken from the AGC of California directory and the agenda.",
+    "profile": {
+      "address": "2118 Rheem Drive, Pleasanton, CA 94588",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@cts-1.com",
+      "headquarters": "Pleasanton, CA",
+      "legalName": "Construction Testing Services, Inc.",
+      "orgType": "company",
+      "phone": "(925) 462-5151",
+      "samUei": "UERCRN2NMAL1",
+      "summary": "A for-profit company that provides special inspections, construction materials testing and geotechnical engineering services for building projects in California and Nevada. It was founded in 1994 and has offices in the Bay Area, the Central Valley, the Sacramento area and Las Vegas.",
+      "website": "https://www.cts-1.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - CTS",
+        "url": "https://www.cts-1.com/about-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - CTS",
+        "url": "https://www.cts-1.com/contact_us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "Construction Testing Services, Inc.",
+        "url": "https://web.agc-ca.org/54138-Testing-Laboratories/Construction-Testing-Services,-Inc-13230"
+      },
+      {
+        "supports": [
+          "samUei",
+          "orgType"
+        ],
+        "title": "Construction Testing Services - SAM entity",
+        "url": "https://opengovus.com/sam-entity/UERCRN2NMAL1"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007855",
+    "notes": "Construction Testing Services, Inc. (cts-1.com) does special inspection and materials testing for building projects, which fits OUSD's materials testing and special inspection agreements, and its Contact page lists an Oakland office that matches the agenda's Oakland, CA. The AGC directory and the SAM record agree on the name, Pleasanton address and for-profit California corporation status, and every profile field is supported by a cited page; the summary is neutral and the contact details are generic business ones.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

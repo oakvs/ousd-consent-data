@@ -1,17 +1,84 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ascendtk8.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/officeofcharterschools/renewal/renewal-archive",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-ascend-charter-school",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Office of Charter Schools renewal archive lists ASCEND (TK-8) as a charter school authorized by Oakland Unified School District, matching the agenda's Charter School Office / Prop 39 facilities item",
+      "ASCEND's own website lists a campus at 3709 East 12th Street, Oakland, CA 94601, in the OUSD service area",
+      "The school's website and the Education for Change Public Schools site both identify ASCEND as a school in the Education for Change network"
+    ],
     "key": "n-ascend-charter-school",
-    "notes": "Could not confirm identity. The agenda names only 'ASCEND Charter School' (Proposition 39 facilities use agreement, Charter School Office) with no city. WebSearch budget was exhausted, ProPublica returned HTTP 429, and guessed domains (ascendcharter.org shows a 'Coming Soon' page with no details; ascendschool.org does not resolve) gave no verifiable match. Likely an OUSD-authorized charter school, but no registry or official page was confirmed, so nothing was filled in. Needs a retry with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "The legal entity holding the charter is not confirmed (likely Education for Change Public Schools, a charter network; not found in ProPublica under that name), so legal name, orgType, EIN and CA entity number are left empty/other. Contact details are the school's own campus details, not the network office.",
+    "profile": {
+      "address": "3709 East 12th Street, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "other",
+      "phone": "510-879-3140",
+      "samUei": null,
+      "summary": "ASCEND is a free, tuition-free public charter school in Oakland, California, serving students in transitional kindergarten through 8th grade (ages 4 to 13). It is part of the Education for Change Public Schools network and is authorized by the Oakland Unified School District.",
+      "website": "https://www.ascendtk8.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - ASCEND",
+        "url": "https://www.ascendtk8.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Renewal Archive - Oakland Unified School District",
+        "url": "https://www.ousd.org/officeofcharterschools/renewal/renewal-archive"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-ascend-charter-school",
+    "notes": "The school's site confirms the name, TK-8 grades, tuition-free status, address, phone and Education for Change affiliation. The OUSD renewal archive lists ASCEND (TK-8) as an OUSD-authorized charter school, which fits a Prop 39 facilities agreement handled by the Charter School Office. The summary is neutral and the profile contains only business contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

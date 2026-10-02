@@ -1,17 +1,94 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.spark-decks.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.spark-decks.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/gateway.aspx?M=F&ID=115147.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009023",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD's own services agreement (2024-2025) names the contractor as SPARK DECKS, LLC, El Cerrito, CA, matching the agenda text",
+      "The agreement lists the notice address 832 Lexington Ave., El Cerrito, CA 94530 and the email eva@spark-decks.com, and the same email appears on the spark-decks.com About page",
+      "spark-decks.com describes card-based youth-development and workshop resources (including 'Back Pocket Activities' decks), which matches the agreement's workshop services and OUSD's after-school and summer program contracts",
+      "The spark-decks.com home page shows Oakland Unified School District among its clients"
+    ],
     "key": "v-009023",
-    "notes": "No credible candidate found. The web search tool had reached its session search limit, so no searches ran. Guessed domains (sparkdecks.com, sparksdecks.com) did not resolve. Needs a re-run with search available. The agenda spells the name both 'Sparks Decks, LLC' and 'Spark Decks, LLC', so check both spellings.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal name, phone and mailing address (SPARK DECKS, LLC; 415-305-1740; 832 Lexington Ave., El Cerrito, CA 94530) appear only in the notice block of OUSD's services agreement PDF, which automated checking cannot read, so they were left out. The vendor's website shows only the email. No CA Secretary of State entity number was verified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "eva@spark-decks.com",
+      "headquarters": "El Cerrito, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Spark Decks is a company that makes decks of cards, each with 52 short 'micro-practices' for teachers, youth workers and community leaders. It also leads workshops, events and trainings on topics such as youth development and inclusive practices.",
+      "website": "https://www.spark-decks.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Home - Spark Decks",
+        "url": "https://www.spark-decks.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "email"
+        ],
+        "title": "About Us - Spark Decks",
+        "url": "https://www.spark-decks.com/about/"
+      },
+      {
+        "supports": [
+          "email",
+          "headquarters"
+        ],
+        "title": "25-0525 Services Agreement 2024-2025 - Spark Decks, LLC",
+        "url": "https://ousd.legistar.com/gateway.aspx?M=F&ID=115147.pdf"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009023",
+    "notes": "OUSD's agreement names SPARK DECKS, LLC of El Cerrito (workshops for Summer Learning, including Back Pocket Activities), and spark-decks.com lists OUSD as a client and describes the card decks and workshops, so the summary, website, orgType and headquarters hold up. The email eva@spark-decks.com is a first-name address tied to a named co-founder, so it is dropped as a possible individual contact.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "email"
+    ],
+    "verdict": "confirmed"
+  }
 }

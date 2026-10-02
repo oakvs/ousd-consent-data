@@ -7,7 +7,7 @@
     },
     {
       "detail": null,
-      "field": "source:https://www.changethetune.org",
+      "field": "source:https://changethetune.org/",
       "pass": true
     },
     {
@@ -29,15 +29,16 @@
   "key": "v-008239",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered nonprofit: 'Change The Tune Inc', EIN 82-2460199, Los Angeles, CA (ProPublica Nonprofit Explorer), matching the agenda's 'Change The Tune Inc.' and 'Los Angeles, CA'",
-      "changethetune.org describes a 501(c)(3) nonprofit building youth-leadership curriculum and project-based learning for students, consistent with OUSD's after-school and summer programs contracts; its donation link is under the name 'change-the-tune-inc'"
+      "Name matches a registered nonprofit: 'Change The Tune Inc' (ProPublica Nonprofit Explorer, EIN 82-2460199), headquartered in Los Angeles, CA, matching the agenda's 'Los Angeles, CA'",
+      "Organization's website describes extended-learning (after-school and summer) programs for youth in underserved communities, matching OUSD's 'After-school & summer programs' contracts funded by Expanded Learning Opportunities Programs",
+      "California Arts Council grantee page lists the organization at 3816 Sutro Ave, Los Angeles, CA and describes a free summer program for underserved learners"
     ],
     "key": "v-008239",
-    "notes": "Medium because the organization's own website does not state a city or mention Oakland Unified, so the link between the website and the Los Angeles registry record rests on the name and the 'change-the-tune-inc' donation link. Contact page lists only a named individual's email, so no contact details were recorded. Web search budget was exhausted; CA SOS and SAM.gov were not checked.",
+    "notes": "No general phone, general inbox or mailing address was found on the organization's own pages (the contact page lists only a named individual's email, which is excluded by policy). CA entity number and SAM UEI not looked up. No explicit public page found linking the organization to OUSD; identity rests on exact name, Los Angeles location and matching after-school/summer program services.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -48,8 +49,8 @@
       "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "A nonprofit that develops curriculum focused on youth leadership and 21st-century skills. It works with students, educators and community partners through project-based learning, aiming to close the opportunity gap for youth in underserved communities.",
-      "website": "https://www.changethetune.org"
+      "summary": "Change the Tune is a nonprofit based in Los Angeles that designs project-based learning programs for young people in underserved communities. It runs student programs, trains school and organization leaders to build extended learning (after-school and summer) programs, and works with community partners to expand access to learning opportunities.",
+      "website": "https://changethetune.org/"
     },
     "sources": [
       {
@@ -68,11 +69,17 @@
           "website",
           "orgType"
         ],
-        "title": "Change the Tune",
-        "url": "https://www.changethetune.org"
+        "title": "Home - Change the Tune",
+        "url": "https://changethetune.org/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008239",
+    "notes": "ProPublica confirms Change The Tune Inc, 501(c)(3), Los Angeles, EIN 82-2460199, matching the agenda's name and city; the organization's site and other pages describe extended-learning (after-school and summer) programs matching what OUSD buys. No page explicitly links it to OUSD, but name, location and services all align, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,87 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bulkmailcenter.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bulkmailcenter.com/ContactUs.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006681",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Business name 'City Print & Mail' exactly matches the agenda name, per its own website bulkmailcenter.com",
+      "Located in Oakland, CA (918 Alice Street), matching the agenda location",
+      "Printing, mailing and data processing services are plausible for a Warehouse Distribution Department services agreement, but no public page links the business to OUSD and no registry record was found"
+    ],
     "key": "v-006681",
-    "notes": "Not researched: the session's WebSearch budget was exhausted (200 of 200) so no candidate could be found or confirmed, and a guessed website (cityprintandmail.com) did not resolve. Needs a re-run once the search limit (CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION) is raised. Agenda gives 'City Print & Mail', Oakland, CA, Warehouse Distribution Department services agreements.",
-    "profile": null,
-    "sources": []
+    "notes": "No California Secretary of State, SAM.gov or other registry record was found, so legal name and registry IDs are null and identity rests on name and city match only. Third-party directories list a different address (777 W Grand Ave, Oakland, 94612); the business's own site gives 918 Alice Street. No public page links the business to OUSD.",
+    "profile": {
+      "address": "918 Alice Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@bulkmailcenter.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.835.8117",
+      "samUei": null,
+      "summary": "City Print & Mail is a business in Oakland, California that offers printing, data processing and bulk mailing services. Its website lists direct mail work such as mailing list procurement, duplication, printing and mailing, plus postal presort and address certification services.",
+      "website": "https://www.bulkmailcenter.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "City Print & Mail - Printing, Mailing, Data Processing",
+        "url": "https://www.bulkmailcenter.com/"
+      },
+      {
+        "supports": [
+          "email",
+          "phone",
+          "address",
+          "summary"
+        ],
+        "title": "City Print & Mail - Contact",
+        "url": "https://www.bulkmailcenter.com/ContactUs.html"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

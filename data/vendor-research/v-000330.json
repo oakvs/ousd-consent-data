@@ -2,12 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://alanizpaving.com/contact/",
+      "field": "source:https://alanizpaving.com/contact-us/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://alanizpaving.com/",
+      "field": "source:https://alanizpaving.com/about-us/",
       "pass": true
     },
     {
@@ -39,17 +39,19 @@
   "key": "v-000330",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Legal name 'Alaniz Construction, Inc.' and headquarters in Fremont, CA match the agenda text exactly",
-      "Company website describes asphalt and concrete paving and lists Schools & Universities as a market, consistent with OUSD's site improvement, playmatting and concrete repair contracts"
+      "Exact name match: the company's own website names it 'Alaniz Construction, Inc.', same as the agenda text",
+      "Headquartered in Fremont, CA 94538, matching the agenda location 'Fremont, CA'",
+      "Company does asphalt and concrete paving and site work, consistent with OUSD site improvement, concrete repair and playmatting contracts for school sites",
+      "No page found that directly mentions Oakland Unified; identity rests on name, location and trade match"
     ],
     "key": "v-000330",
-    "notes": "The WebSearch budget was exhausted, so no public registry (CA Secretary of State, CSLB, SAM.gov) was checked; the website was found by guessing alanizconstruction.com, which redirects to alanizpaving.com. Both identity signals come from the company's own site plus the agenda text, so confidence is capped at medium. No evidence found that the site mentions OUSD. Registry IDs left null.",
+    "notes": "No registry (CA Secretary of State, SAM.gov) entry was checked, so no registry IDs. Identity based on exact name, Fremont location and trade match; no direct public page linking the company to OUSD was found.",
     "profile": {
-      "address": "7160 Stevenson Blvd., Fremont, CA 94538",
+      "address": "7160 Stevenson Blvd, Fremont, CA 94538",
       "caEntityNumber": null,
       "ein": null,
       "email": "clientservices@alanizpaving.com",
@@ -58,35 +60,40 @@
       "orgType": "company",
       "phone": "(510) 770-5000",
       "samUei": null,
-      "summary": "A paving contractor founded in 1989 and based in Fremont, California. It does asphalt and concrete paving, pavement maintenance, seal coating, striping and parking lot work for projects of many sizes across the San Francisco Bay Area.",
-      "website": "https://alanizpaving.com/"
+      "summary": "A paving contractor based in Fremont, California. It provides asphalt and concrete paving services for residential, commercial and public sector projects across the San Francisco Bay Area. The company was founded in 1989.",
+      "website": "https://alanizpaving.com"
     },
     "sources": [
       {
         "supports": [
           "legalName",
+          "website",
           "phone",
           "email",
           "address",
-          "headquarters",
-          "summary",
-          "orgType"
+          "headquarters"
         ],
         "title": "Contact Us - Alaniz Construction, Inc.",
-        "url": "https://alanizpaving.com/contact/"
+        "url": "https://alanizpaving.com/contact-us/"
       },
       {
         "supports": [
-          "website",
+          "legalName",
           "summary",
           "orgType",
           "headquarters"
         ],
-        "title": "Alaniz Construction, Inc.",
-        "url": "https://alanizpaving.com/"
+        "title": "About Us - Alaniz Construction, Inc.",
+        "url": "https://alanizpaving.com/about-us/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000330",
+    "notes": "Exact legal name and Fremont, CA location match the agenda, and the cited contact and about pages support every non-null field (address, phone, generic business email, 1989 founding, paving for residential/commercial/public sector). Identity rests on name, city and trade fit (site improvement, concrete repair, playmatting) with no page directly linking the firm to OUSD; the summary is neutral and makes no claim beyond the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

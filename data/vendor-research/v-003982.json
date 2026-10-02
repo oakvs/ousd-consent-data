@@ -1,5 +1,16 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sofsurfaces.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-003982",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
@@ -7,14 +18,36 @@
   "research": {
     "confidence": "low",
     "identitySignals": [
-      "Name resembles SofSURFACES Inc., a maker of rubber playground tiles, which fits OUSD's school site improvements and playmatting contracts (weak signal)",
-      "Agenda gives Palatine, IL, but the company's own site lists headquarters in Petrolia, Ontario, Canada and a US office in Fontana, CA; no Palatine location found (contradicts)"
+      "Name 'sofSURFACES Inc.' matches 'Sof Surfaces, Inc.' and its rubber playground tiles fit OUSD's school site improvement and playmatting projects",
+      "CONTRADICTION: the agenda gives Palatine, IL, but sofSURFACES' own contact page lists only Petrolia, Ontario (Canada), Fontana, CA (US) and Heiloo (Netherlands); no Illinois address found"
     ],
     "key": "v-003982",
-    "notes": "Plausible candidate is SofSURFACES Inc. (sofsurfaces.com), but the agenda location (Palatine, IL) could not be matched to it and the web search budget was exhausted before any registry (Illinois SOS, SAM.gov) could be checked. Nothing published; needs manual review.",
-    "profile": null,
-    "sources": []
+    "notes": "Not confirmed. Agenda location is Palatine, IL, but sofSURFACES (Petrolia, Ontario; US office in Fontana, CA as 'SOF Surfaces USA, Inc.') shows no Palatine presence. The vendor could be a different company, a local installer/distributor, or a remit-to address. Do not publish without further verification (e.g. Illinois SOS or SAM.gov record).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "SofSURFACES manufactures recycled rubber surface tiles for playgrounds, fitness facilities and other recreational spaces. Its products include playground safety tiles, fitness flooring and acoustic tiles.",
+      "website": "https://www.sofsurfaces.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "SofSurfaces Inc - Rubber Playground Tiles",
+        "url": "https://www.sofsurfaces.com"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

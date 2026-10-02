@@ -1,17 +1,95 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://rkroofs.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=6880035&GUID=0622B6C3-0C6A-4F74-8901-ABD21091DC07",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009084",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's own website names it 'RK Roofing & Construction Inc.', headquartered in San Leandro, CA, matching the agenda's 'RK Roofing & Construction, Inc.' and 'San Leandro, CA'",
+      "OUSD's own Board legislation record for the Roosevelt Middle School Gym Replacement Project names 'RK Roofing & Construction, Inc., San Leandro, CA' as the contractor",
+      "The website describes roofing and general contracting, including roofing for schools and public facilities, matching OUSD's 'School buildings & construction' contracts for roof replacement projects"
+    ],
     "key": "v-009084",
-    "notes": "Research not completed: the WebSearch budget for this session was exhausted (200 of 200), so no candidate organization could be found or confirmed. No profile filled in. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Identity confirmed via the company website and an OUSD legislation record naming the San Leandro contractor. No registry IDs (CA Secretary of State, SAM.gov) were located, so those are null. CSLB license #781758 appears on the website but is not an output field.",
+    "profile": {
+      "address": "249 Estudillo Ave. San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "admin@rkroofs.com",
+      "headquarters": "San Leandro, CA",
+      "legalName": "RK Roofing & Construction Inc.",
+      "orgType": "company",
+      "phone": "(510) 902-ROOF (7663)",
+      "samUei": null,
+      "summary": "A roofing and general contracting company based in San Leandro, California. It has worked in the Bay Area since 2004 and provides roof replacement, repair, waterproofing and maintenance for homes, businesses, schools and other public buildings. It holds California B (general) and C-39 (roofing) contractor licenses.",
+      "website": "https://rkroofs.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "RK Roofing & Construction Inc.",
+        "url": "https://rkroofs.com/"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District - File #: 24-2414",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=6880035&GUID=0622B6C3-0C6A-4F74-8901-ABD21091DC07"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009084",
+    "notes": "The company website and the OUSD Legistar record (Change Order No. 1, Roosevelt Middle School Gym) both name RK Roofing & Construction, San Leandro, CA, matching the agenda. Name, address, phone, generic admin email, 2004 start and B/C-39 licenses are shown on the site; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

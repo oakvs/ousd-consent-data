@@ -1,17 +1,96 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://alanarossgroup.com/contact.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://alanarossgroup.com/about_us.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://alanarossgroup.com/clients.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-000329",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Alana Ross Group is an event-management business at 3871 Piedmont Avenue, Oakland, CA 94611, matching the agenda location 'Oakland, CA' (alanarossgroup.com contact page)",
+      "Alana Ross Group's client list names Oakland Unified School District (alanarossgroup.com/clients.htm)",
+      "Search listings (Oakland Chamber of Commerce member listing, not confirmed by page fetch) show 'Alana Ross Events' at the same Piedmont Avenue address, but no fetched page uses the exact name 'Alana Ross Events' for the Alana Ross Group website"
+    ],
     "key": "v-000329",
-    "notes": "Not researched: the web search budget for the session was exhausted, and a guessed website (alanarossevents.com) did not resolve. No candidate was found or confirmed. Likely a small event business named for a person, possibly an individual contracting under a business name; needs a re-run with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "The agenda name is 'Alana Ross Events'; the website found is for 'Alana Ross Group'. They appear to be the same business (same address per search listings), but no fetched page confirms the 'Events' name as a dba. No CA Secretary of State, SAM.gov or legal name found, so those fields are null. Reviewer should confirm the Events/Group link before publishing.",
+    "profile": {
+      "address": "3871 Piedmont Avenue, Suite 3, Oakland, CA 94611",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@alanarossgroup.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.483.7333",
+      "samUei": null,
+      "summary": "A woman-owned business in the Oakland area that manages events, develops sponsorship campaigns for fundraising, and carries out organizational projects. It works with corporations, nonprofits, schools, government agencies and other groups.",
+      "website": "https://alanarossgroup.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Alana Ross Group - Contact",
+        "url": "https://alanarossgroup.com/contact.htm"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Alana Ross Group - About Us",
+        "url": "https://alanarossgroup.com/about_us.htm"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Alana Ross Group - Clients",
+        "url": "https://alanarossgroup.com/clients.htm"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

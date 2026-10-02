@@ -2,17 +2,22 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.marzanoresources.com/",
+      "field": "source:https://www.marzanoresources.com/contact/overview",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.solutiontree.com/contact",
+      "field": "source:https://www.marzanoresources.com/about/overview/",
       "pass": true
     },
     {
       "detail": null,
       "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
       "pass": true
     },
     {
@@ -24,48 +29,57 @@
   "key": "v-009438",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Website describes professional development, training and school-improvement resources for educators, matching OUSD's 'Classroom & academic programs' services agreements for MetWest High School",
-      "Marzano Resources' main phone, 800.733.6786, is the same toll-free number Solution Tree lists for its Bloomington, IN office, consistent with the agenda's 'Bloomington, IN'"
+      "Name matches: agenda says 'Marzano Resources' / 'Marzano Resources LLC'; the company's own site is marzanoresources.com and lists the business as Marzano Resources",
+      "Located in Bloomington, IN (555 N. Morton St.), matching the agenda location 'Bloomington, IN'",
+      "Company sells professional development, coaching and instructional resources to schools, matching OUSD's 'Classroom & academic programs' and 'Educator Effectiveness' funding for a high school services agreement"
     ],
     "key": "v-009438",
-    "notes": "Medium: the Bloomington, IN link rests on the shared phone number with Solution Tree, not on a statement on the Marzano site. No registry (CA SOS, SAM.gov) was checked and the web search budget was exhausted, so legal name (agenda says 'Marzano Resources LLC'), address and registry IDs are unverified. The general email on the site is obfuscated and was not captured.",
+    "notes": "Website states Marzano Resources operates under parent Solution Tree. Legal entity name and registry IDs not verified. Contact page also lists customer service line 800.733.6786; main line 888.849.0851 used. General email omitted because the site obfuscates it.",
     "profile": {
-      "address": null,
+      "address": "555 N. Morton St. Bloomington, IN 47404",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
+      "headquarters": "Bloomington, IN",
       "legalName": null,
       "orgType": "company",
-      "phone": "800.733.6786",
+      "phone": "888.849.0851",
       "samUei": null,
-      "summary": "Marzano Resources is an education company that provides professional development, training, books, digital tools and other resources for school improvement. Its offerings include the High Reliability Schools framework, teacher development programs, and work on assessment, grading and competency-based education. It operates under Solution Tree.",
-      "website": "https://www.marzanoresources.com/"
+      "summary": "Marzano Resources provides professional development and educational resources for schools, including books, workshops, coaching and online tools focused on effective teaching, assessment and school improvement. It operates as part of Solution Tree, an education company based in Bloomington, Indiana.",
+      "website": "https://www.marzanoresources.com"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "orgType",
           "website",
-          "phone"
+          "phone",
+          "address",
+          "headquarters"
         ],
-        "title": "Marzano Resources",
-        "url": "https://www.marzanoresources.com/"
+        "title": "Contact Us",
+        "url": "https://www.marzanoresources.com/contact/overview"
       },
       {
         "supports": [
-          "phone"
+          "summary",
+          "orgType",
+          "headquarters"
         ],
-        "title": "Solution Tree Contact Information",
-        "url": "https://www.solutiontree.com/contact"
+        "title": "About Solution Tree",
+        "url": "https://www.marzanoresources.com/about/overview/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009438",
+    "notes": "Cited pages show Marzano Resources at 555 N. Morton St., Bloomington, IN 47404 with phone 888.849.0851, matching the agenda name and location. Summary is neutral and supported by the About page (books, workshops, coaching, online platforms); the Solution Tree parent relationship is implied by the site rather than stated as a corporate structure, but the claim is mild and consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -2,17 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.dreamyouthclinic.org",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/923921922",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.dreamyouthclinic.org/contact",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "phone",
+      "field": "source:https://www.dreamyouthclinic.org/",
       "pass": true
     },
     {
@@ -22,7 +17,7 @@
     },
     {
       "detail": null,
-      "field": "address",
+      "field": "ein",
       "pass": true
     },
     {
@@ -39,53 +34,60 @@
   "key": "v-009731",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches exactly: 'Dream Youth Clinic' is the legal name shown on the organization's own website, described as a registered 501(c)3 nonprofit",
-      "Located in Oakland, CA (583 5th Street Suite A and Covenant House at 200 Harrison St), matching the agenda text",
-      "Website describes no-cost, youth-led health services for Black youth, youth of color and gender-expansive youth, consistent with OUSD's 'Student health, support & family services' contract"
+      "Name matches a registered 501(c)(3) nonprofit: 'Dream Youth Clinic Inc', Oakland, CA (ProPublica Nonprofit Explorer, EIN 92-3921922)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes no-cost youth health services for Bay Area youth, matching OUSD's 'Student health, support & family services' contract category",
+      "Local news coverage (search results) describes the clinic as serving sex-trafficked youth in Oakland, matching the 'Human Trafficking Prevention' funding source"
     ],
     "key": "v-009731",
-    "notes": "Only the organization's own website could be reached. Registry checks (ProPublica Nonprofit Explorer returned HTTP 429, IRS search returned 403, Charity Navigator found nothing) and further web searches were unavailable, so the EIN and CA entity number are not confirmed and no independent source corroborates the identity. The site does not mention OUSD or human trafficking prevention. Confidence is medium rather than high for those reasons; a reviewer should confirm via ProPublica or the CA Secretary of State before publishing.",
+    "notes": "Phone and address omitted: the site lists two clinic locations (Dreamcatcher, 583 5th Street Suite A; Covenant House, 200 Harrison St) with separate extensions rather than one main line or mailing address. Site does not mention OUSD directly. CA entity number and SAM UEI not looked up.",
     "profile": {
-      "address": "583 5th Street Suite A, Oakland, CA 94607",
+      "address": null,
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "92-3921922",
       "email": "contact@dreamyouthclinic.org",
       "headquarters": "Oakland, CA",
-      "legalName": "Dream Youth Clinic",
+      "legalName": "Dream Youth Clinic Inc",
       "orgType": "nonprofit",
-      "phone": "510-839-0929",
+      "phone": null,
       "samUei": null,
-      "summary": "Dream Youth Clinic is a nonprofit in Oakland, California that provides no-cost, youth-led health services. It focuses on Black youth, youth of color and gender-expansive youth. Its programs include medical services, youth health groups, youth leadership programs and digital health education.",
-      "website": "https://www.dreamyouthclinic.org"
+      "summary": "Dream Youth Clinic is a nonprofit in Oakland, California that provides no-cost, youth-led health services and youth health groups. It focuses on Black girls, youth of color and gender-expansive youth in the Bay Area. It runs clinic sites in Oakland.",
+      "website": "https://www.dreamyouthclinic.org/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "orgType",
           "legalName",
-          "website",
+          "ein",
+          "orgType",
           "headquarters"
         ],
-        "title": "Dream Youth Clinic",
-        "url": "https://www.dreamyouthclinic.org"
+        "title": "Dream Youth Clinic Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/923921922"
       },
       {
         "supports": [
-          "phone",
+          "summary",
+          "website",
           "email",
-          "address",
+          "orgType",
           "headquarters"
         ],
-        "title": "Dream Youth Clinic Contact",
-        "url": "https://www.dreamyouthclinic.org/contact"
+        "title": "Dream Youth Clinic",
+        "url": "https://www.dreamyouthclinic.org/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009731",
+    "notes": "ProPublica shows Dream Youth Clinic Inc as a 501(c)(3) in Oakland, CA (EIN 92-3921922), and its website describes no-cost youth health services at Oakland sites, which fits the agenda name, city and student health contract. The summary, website, generic contact email, EIN and headquarters are all supported by the cited sources and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

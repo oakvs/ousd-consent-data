@@ -2,12 +2,22 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.tides.org/fiscal-sponsorship/",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943213100",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.tides.org/contact/",
+      "field": "source:https://www.tides.org/what-we-do/fiscal-sponsorship/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
       "pass": true
     },
     {
@@ -24,48 +34,58 @@
   "key": "n-tides-center",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: tides.org lists 'Tides Center' as a legally distinct 501(c)(3) organization that offers fiscal sponsorship",
-      "Tides Center's own page says it provides human resources management, payroll and benefits administration, matching OUSD's 'Staff & hiring' contract category with the Talent/Human Resources Department",
-      "Agenda location (San Francisco, CA) is not confirmed by a registry or a reliable page I could fetch; no registry lookup (ProPublica, SOS, SAM.gov) succeeded, and the EIN I could find belongs to the separate Tides Foundation, so it is not used"
+      "Name matches a registered nonprofit: 'Tides Center' in San Francisco, CA (ProPublica Nonprofit Explorer, EIN 94-3213100), matching the agenda's 'The Tides Center' and 'San Francisco, CA'",
+      "Tides Center's own website says it provides HR and payroll services, consistent with OUSD's Talent/Human Resources agreement for 'Staff & hiring'"
     ],
     "key": "n-tides-center",
-    "notes": "Registry lookups failed (ProPublica rate-limited, web search budget exhausted). Tides Center is a separate legal entity from Tides Foundation (EIN 51-0198509); do not conflate. Needs a reviewer to confirm EIN, SF location and contact details from ProPublica / CA SOS.",
+    "notes": "OUSD agreements are with 'The Tides Center (General)'. Tides Center is a separate legal entity from Tides Foundation (EIN 51-0198509) and Tides Network. General email and main phone not found on fetched pages.",
     "profile": {
-      "address": null,
+      "address": "1012 Torney Ave, San Francisco, CA 94129",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "94-3213100",
       "email": null,
-      "headquarters": null,
+      "headquarters": "San Francisco, CA",
       "legalName": "Tides Center",
       "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "Tides Center is a nonprofit organization, tax-exempt under Section 501(c)(3), that acts as a fiscal sponsor for social change projects. It provides finance, legal and human resources support, including payroll, benefits and grants management, so project leaders can run their work without forming their own organization.",
+      "summary": "Tides Center is a nonprofit based in San Francisco that acts as a fiscal sponsor. It lends its tax-exempt status and provides back-office help, such as accounting, grants management, and human resources and payroll services, to social change projects and organizations. It is part of the Tides network, together with Tides Foundation.",
       "website": "https://www.tides.org"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "legalName",
+          "ein",
           "orgType",
-          "website"
+          "headquarters"
         ],
-        "title": "Tides Center: Fiscal Sponsorship",
-        "url": "https://www.tides.org/fiscal-sponsorship/"
+        "title": "Tides Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943213100"
       },
       {
         "supports": [
-          "legalName"
+          "summary",
+          "website",
+          "address"
         ],
-        "title": "Contact Tides",
-        "url": "https://www.tides.org/contact/"
+        "title": "Tides Fiscal Sponsorship",
+        "url": "https://www.tides.org/what-we-do/fiscal-sponsorship/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-tides-center",
+    "notes": "Tides Center (EIN 94-3213100, San Francisco) matches the agenda name and city, and its HR, payroll and accounting back-office services fit the Talent/HR agreement. The 1012 Torney Ave address appears on the cited page only as the Tides Foundation grant-report address, and the contact page lists only P.O. boxes for Tides Center, so the address is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,61 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://pacificrimproduce-b7f163cda896385c7c972.webflow.io/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    }
+  ],
   "key": "v-003248",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name 'Pacific Rim Produce' matches the agenda vendor name exactly (LocalHarvest listing and the company's Webflow-hosted About page)",
+      "Located in Alameda, CA (1950 North Loop Road), matching the agenda's location",
+      "Described as a produce distributor that supplies schools, matching OUSD's Nutrition Services fresh fruits and vegetables agreements"
+    ],
     "key": "v-003248",
-    "notes": "Research incomplete: the session's web search budget was exhausted before any search could run, and a guessed domain (pacificrimproduce.com) did not resolve. No candidate organization was identified or confirmed. Retry with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry (CA Secretary of State, SAM.gov) record was checked or confirmed, so legal name and IDs are null. The company's apparent domain pacificrimproduce.com no longer resolves (www) or redirects to pacificproduce.com, an unrelated South San Francisco company, so no website is given. Contact details come from a Webflow staging copy of the company's site and agree with the LocalHarvest and BBB listings. No source explicitly links the company to OUSD, so identity rests on name, city and line of business.",
+    "profile": {
+      "address": "1950 North Loop Rd., Alameda, CA 94502",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-832-8839",
+      "samUei": null,
+      "summary": "Pacific Rim Produce is a locally owned, family-operated produce distributor in Alameda, California, operating since 1993. It supplies fresh fruits and vegetables to restaurants, markets, schools and food processors.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Pacific Rim Produce",
+        "url": "https://pacificrimproduce-b7f163cda896385c7c972.webflow.io/about-us"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

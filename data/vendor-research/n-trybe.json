@@ -1,17 +1,131 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandtrybe.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandtrybe.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/46-4328520",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/464328520",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-trybe",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Trybe, Inc.' (GuideStar) / 'Trybe Inc' (ProPublica), EIN 46-4328520, based in Oakland, CA, matching the agenda's 'Oakland, CA'",
+      "Website describes after-school clubs, mentoring and youth programs in Oakland, matching OUSD's 'After-school & summer programs' category",
+      "Oaklandside reports Trybe violence-prevention teams have worked in Oakland high schools with OUSD, consistent with the 'High School Network' agreement title"
+    ],
     "key": "n-trybe",
-    "notes": "No credible candidate found. The web search budget for the session was exhausted, so only direct guesses at domains could be fetched. trybe.org is Trybe Limited, a Singapore youth charity; trybe.us is a Santa Monica, CA community site; trybe.co had an expired certificate; trybe.io is a parked domain. None is confirmed as the Oakland-based Trybe, Inc. in the agenda. Needs a rerun with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "Address is the mailing address listed on the Trybe contact page; the physical site is 1701 E 19th Street, Oakland, CA 94606. Not to be confused with Trybe Limited (trybe.org), a Singapore youth agency. OUSD tie is indirect (news report of Trybe work in Oakland high schools); CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "3542 Fruitvale Ave, #135, Oakland, CA 94602-2327",
+      "caEntityNumber": null,
+      "ein": "46-4328520",
+      "email": "info@oaklandtrybe.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Trybe, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(510) 985-9915",
+      "samUei": null,
+      "summary": "Trybe is a community-based nonprofit rooted in Oakland's Eastlake, San Antonio and Fruitvale area. It serves youth, young adults and families in Oakland and the greater East Bay. Its work includes after-school clubs, early-childhood playgroups, mentoring, skills-building, paid internships, community events and food mutual aid.",
+      "website": "https://www.oaklandtrybe.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "orgType"
+        ],
+        "title": "Trybe",
+        "url": "https://www.oaklandtrybe.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Trybe Contact",
+        "url": "https://www.oaklandtrybe.org/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "website",
+          "address"
+        ],
+        "title": "Trybe, Inc. - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/46-4328520"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Trybe Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/464328520"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-trybe",
+    "notes": "Trybe, Inc. is an Oakland 501(c)(3) (EIN 46-4328520) whose own site, GuideStar and ProPublica pages confirm name, location, programs (after-school clubs, mentoring, internships, playgroups, food mutual aid), phone, email, website and the mailing address; this fits the agenda's 'Trybe, Inc.' in Oakland for after-school programs. The OUSD link rests on the name, city and service match (the Oaklandside report is not among the cited sources), and the neutral summary is supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

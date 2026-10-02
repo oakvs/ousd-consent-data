@@ -1,17 +1,84 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://dhheducationalsolutions.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dhheducationalsolutions.com/services/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-deaf-and-hard-of-hearing-educational-solutions",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Organization's own website (dhheducationalsolutions.com) lists its location as Woodland Hills, CA, matching the agenda text 'Woodland Hills, CA'",
+      "The site's services page uses the full name 'Deaf and Hard of Hearing Educational Solutions', matching the agenda name",
+      "Website describes itinerant Deaf and Hard of Hearing teaching, speech therapy and educational audiology services for school districts, matching OUSD's Special Education nonpublic agency services contract"
+    ],
     "key": "n-deaf-and-hard-of-hearing-educational-solutions",
-    "notes": "No credible candidate confirmed. The session web search budget was exhausted, and direct registry fetches failed (ProPublica returned HTTP 429; a guessed website did not resolve; the CDE nonpublic agency page returned 404). Needs re-run with search available. Agenda gives Woodland Hills, CA and a special education nonpublic agency master contract.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry (CA Secretary of State, IRS, SAM.gov) record was checked or found, so legal name, organization type and registry IDs are left null. No full street address is published, only Woodland Hills, CA. The website does not mention CDE nonpublic agency certification; that status was not verified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "dhheducationalsolutions@gmail.com",
+      "headquarters": "Woodland Hills, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "818-399-5223",
+      "samUei": null,
+      "summary": "DHH Educational Solutions provides educational services and staffing for school districts. Its services include itinerant teaching for Deaf and Hard of Hearing students, speech and language services, and educational audiology consultation. It also offers independent educational evaluations and professional development for educators.",
+      "website": "https://dhheducationalsolutions.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Home - DHH Educational Solutions",
+        "url": "https://dhheducationalsolutions.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Services - DHH Educational Solutions",
+        "url": "https://dhheducationalsolutions.com/services/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-deaf-and-hard-of-hearing-educational-solutions",
+    "notes": "The site shows DHH Educational Solutions in Woodland Hills, CA, which matches the agenda location. Its itinerant DHH teaching, speech and audiology services fit a Special Education nonpublic agency contract. The summary, website, phone, generic business email and headquarters are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

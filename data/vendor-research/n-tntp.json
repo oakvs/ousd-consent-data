@@ -2,17 +2,12 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/133850158",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://tntp.org/contact-us/",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "source:https://tntp.org/about/",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "source:https://tntp.org/",
       "pass": true
     },
     {
@@ -23,6 +18,11 @@
     {
       "detail": null,
       "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
       "pass": true
     },
     {
@@ -39,57 +39,60 @@
   "key": "n-tntp",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Agenda gives 'TNTP' in New York, NY; the organization's own contact page lists TNTP, Inc. at 500 7th Avenue, 8th Floor, New York, NY 10018",
-      "TNTP's website describes it as an education nonprofit that does consulting and leadership development with school districts, matching OUSD's 'Classroom & academic programs' no-cost agreement with the Academics and Instruction Department"
+      "Registered nonprofit 'The New Teacher Project Inc' (TNTP Inc), New York, NY, EIN 13-3850158 (ProPublica Nonprofit Explorer), matching the agenda's 'TNTP' and 'New York, NY'",
+      "TNTP's own site lists its headquarters at 500 7th Avenue, New York, NY 10018, matching the agenda location",
+      "TNTP's website describes consulting with schools and districts on instruction, teaching and staffing, matching OUSD's 'Classroom & academic programs' / Academics and Instruction Department contract",
+      "A TNTP blog post mentions a partnership with Oakland Unified School District (California)"
     ],
     "key": "n-tntp",
-    "notes": "Confidence is medium, not high: no public registry (ProPublica, IRS, CA SOS, SAM.gov) could be checked because the web search budget was exhausted and ProPublica returned HTTP 429, so EIN and entity numbers are left null. No page found mentions Oakland or OUSD, so identity rests on the matching name, New York location and service type. A reviewer should confirm the EIN and an OUSD link before publishing.",
+    "notes": "Registry shows two name forms: 'The New Teacher Project Inc' and 'TNTP Inc'. No general email found on the contact page. CA Secretary of State and SAM.gov were not checked. The OUSD-specific signal is a blog mention (partnership with The Oakland REACH and OUSD), not a direct contract confirmation.",
     "profile": {
       "address": "500 7th Avenue, 8th Floor, New York, NY 10018",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "13-3850158",
       "email": null,
       "headquarters": "New York, NY",
-      "legalName": "TNTP, Inc.",
+      "legalName": "The New Teacher Project Inc",
       "orgType": "nonprofit",
       "phone": "718-233-2800",
       "samUei": null,
-      "summary": "TNTP is a national education nonprofit, originally founded in 1997 as The New Teacher Project. It works with schools, districts and states on education consulting, research and policy, and leadership development.",
+      "summary": "TNTP (originally The New Teacher Project) is a national nonprofit that works with schools and school districts on education. It provides consulting to help create student-centered solutions, uses research and data to inform education policy, and partners with schools to hire, develop and keep a diverse teaching staff.",
       "website": "https://tntp.org"
     },
     "sources": [
       {
         "supports": [
           "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "TNTP Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/133850158"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
           "phone",
           "address",
           "headquarters"
         ],
-        "title": "Contact Us | TNTP",
+        "title": "Contact Us - TNTP",
         "url": "https://tntp.org/contact-us/"
-      },
-      {
-        "supports": [
-          "summary"
-        ],
-        "title": "About TNTP",
-        "url": "https://tntp.org/about/"
-      },
-      {
-        "supports": [
-          "website",
-          "orgType",
-          "summary"
-        ],
-        "title": "TNTP",
-        "url": "https://tntp.org/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-tntp",
+    "notes": "ProPublica confirms The New Teacher Project Inc / TNTP Inc, EIN 13-3850158, a New York 501(c)(3) education nonprofit, and the TNTP contact page confirms the 500 7th Ave address, phone and consulting/research/talent services, matching the agenda's 'TNTP, New York, NY' and an academics no-cost agreement. The summary is neutral and supported; 'national' is not stated verbatim in the cited sources but is a minor, accurate descriptor.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -2,7 +2,27 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://locator.lacounty.gov/lac/Location/3040035/california-state-university-the---office-of-the-chancellor",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://en.wikipedia.org/wiki/California_State_University",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,41 +34,58 @@
   "key": "n-california-state-university-office-of-chancellor",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches the California State University system, whose Office of the Chancellor is its headquarters in Long Beach, CA (Wikipedia)",
-      "A public university system is consistent with OUSD's 'Classroom & academic programs' contract and a Direct Admissions partnership with its High School Linked Learning Office, though no fetched page confirmed that program or any OUSD link"
+      "Name matches exactly: the Los Angeles County location directory lists 'California State University, The - Office Of The Chancellor' at 401 Golden Shore, Long Beach, CA 90802, with a calstate.edu web address",
+      "The agenda item is a data sharing and direct admissions partnership with the CSU Chancellor's Office, which runs systemwide programs for the California State University system, a public university system that includes campuses serving the Oakland area",
+      "Wikipedia's California State University entry gives the official website as calstate.edu and describes a state public university system headed by a chancellor, consistent with the agency in the agenda"
     ],
     "key": "n-california-state-university-office-of-chancellor",
-    "notes": "The CSU's own site (calstate.edu) returned 403 to automated fetching and the web search budget was exhausted, so phone, email, mailing address and registry IDs were not verified. Identity rests on the name plus context; no page confirmed the Direct Admissions partnership with OUSD. Needs human review before publishing.",
+    "notes": "calstate.edu blocks automated fetching (HTTP 403), so the CSU's own pages could not be cited. Phone is the Chancellor's Office administrative line as listed by the LA County directory; a web search also showed (562) 951-4000 as the main line. Public agency of the State of California, so no EIN/UEI looked up.",
     "profile": {
-      "address": null,
+      "address": "401 Golden Shore Long Beach CA 90802",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "Long Beach, CA",
-      "legalName": null,
+      "legalName": "California State University, The - Office Of The Chancellor",
       "orgType": "public_agency",
-      "phone": null,
+      "phone": "(562) 951-4000",
       "samUei": null,
-      "summary": "The California State University is California's system of public universities, the largest public university system in the United States. It has 22 campuses and serves more than 460,000 students. The Office of the Chancellor is the system's administrative headquarters, where the chancellor, who is the chief executive officer, oversees the campuses.",
-      "website": "https://www.calstate.edu"
+      "summary": "The Office of the Chancellor is the systemwide headquarters of the California State University, a public university system of the State of California. The Chancellor is the chief executive officer of the system and an ex-officio member of its Board of Trustees.",
+      "website": "https://calstate.edu"
     },
     "sources": [
       {
         "supports": [
+          "legalName",
           "summary",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "California State University, The - Office Of The Chancellor",
+        "url": "https://locator.lacounty.gov/lac/Location/3040035/california-state-university-the---office-of-the-chancellor"
+      },
+      {
+        "supports": [
+          "website",
           "orgType",
-          "headquarters",
-          "website"
+          "summary"
         ],
         "title": "California State University - Wikipedia",
         "url": "https://en.wikipedia.org/wiki/California_State_University"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-california-state-university-office-of-chancellor",
+    "notes": "The agenda names the CSU Office of the Chancellor (a Direct Admissions data-sharing agreement), and the LA County directory and Wikipedia confirm the name, 401 Golden Shore Long Beach address, (562) 951-4000 administrative line, calstate.edu site, and the chancellor's role as CEO and ex-officio trustee. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

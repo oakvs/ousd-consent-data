@@ -1,17 +1,115 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/882293022",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.growingtogetherprojects.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.growingtogetherprojects.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008036",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'Growing Together Bay Area Inc' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 88-2293022), matching the agenda's Oakland, CA location",
+      "Organization website describes school gardens, environmental and nutrition education at public schools in the East Bay including Oakland Unified, matching OUSD's 'Classroom & academic programs' contracts and the 'Summer Garden and Nutrition Enrichment' agreement title",
+      "Website lists Oakland among the school districts it serves"
+    ],
     "key": "v-008036",
-    "notes": "Not researched successfully: the WebSearch budget for the session was exhausted, ProPublica returned HTTP 429, and guessed organization domains did not resolve. No candidate was identified, so nothing was filled in. Retry when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "California SOS entity number and SAM UEI not looked up. The About page does not name OUSD explicitly but lists Oakland as a district served.",
+    "profile": {
+      "address": "2226 MacArthur Blvd #2735, Oakland, CA 94602",
+      "caEntityNumber": null,
+      "ein": "88-2293022",
+      "email": "hello@growingtogetherprojects.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Growing Together Bay Area Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 776-5556",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that runs school gardens and farms and offers environmental and nutrition education at public schools in the East Bay. It also works on greening schoolyards, planting trees, and increasing access to fresh food for school communities.",
+      "website": "https://www.growingtogetherprojects.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Growing Together Bay Area Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/882293022"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact · Growing Together Bay Area",
+        "url": "https://www.growingtogetherprojects.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About us · Growing Together Bay Area",
+        "url": "https://www.growingtogetherprojects.org/about"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008036",
+    "notes": "ProPublica lists Growing Together Bay Area Inc (EIN 88-2293022, Oakland, 501(c)(3)); the About page names OUSD among four districts served and the contact page confirms phone, generic email and address. The summary matches the About page and OUSD's garden/nutrition enrichment agreement titles; 'nutrition education' is only loosely stated on the About page (fresh food access) but is consistent with the agreement titles.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

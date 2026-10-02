@@ -1,17 +1,120 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156301",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sidebysideyouth.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sidebysideyouth.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sidebysideyouth.org/programs/irene-m-hunt-school/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-00698",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Side By Side' in San Anselmo, CA, EIN 94-1156301 (ProPublica Nonprofit Explorer), matching the agenda's San Anselmo, CA",
+      "Side by Side's own website says it operates the Irene M. Hunt School in San Anselmo, matching the agenda's 'Side By Side (d/b/a Irene M Hunt School)'",
+      "Hunt School is a nonpublic day school for students with social, emotional and behavioral needs, matching OUSD's 'Nonpublic, Nonsectarian School' special education contract"
+    ],
     "key": "v-00698",
-    "notes": "Not researched: the session's WebSearch budget was exhausted before any search ran, and direct registry fetches failed (ProPublica returned HTTP 429). No candidate was identified or confirmed. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda text: Side By Side (d/b/a Irene M Hunt School), San Anselmo, CA, nonpublic school special education master contract.",
-    "profile": null,
-    "sources": []
+    "notes": "Street address omitted because the contact page did not show it in fetched text. The Hunt School's CDE directory lists 300 Sunny Hills Dr, San Anselmo, CA 94960 but that is the school site, not confirmed as the organization's mailing address. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1156301",
+      "email": "contactus@sidebysideyouth.org",
+      "headquarters": "San Anselmo, CA",
+      "legalName": "Side By Side",
+      "orgType": "nonprofit",
+      "phone": "415-457-3200",
+      "samUei": null,
+      "summary": "Side by Side is a nonprofit organization in the San Francisco Bay Area that serves young people ages 5 to 26 and their families. Its services include behavioral and mental health care, early intervention in schools, LGBTQIA+ support, transitional housing for foster youth, and special education. It operates the Irene M. Hunt School, a nonpublic day school for students in grades K through 12.",
+      "website": "https://www.sidebysideyouth.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Side By Side - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156301"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Side by Side",
+        "url": "https://www.sidebysideyouth.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact Us - Side by Side",
+        "url": "https://www.sidebysideyouth.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Irene M. Hunt School - Side by Side",
+        "url": "https://www.sidebysideyouth.org/programs/irene-m-hunt-school/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-00698",
+    "notes": "ProPublica shows Side By Side, San Anselmo CA, EIN 94-1156301, a 501(c)(3); the organization's site confirms it runs the Irene M. Hunt School, a nonpublic K-12 day school, matching the agenda's d/b/a, city and nonpublic school special education contract. Summary, phone and generic contactus email are shown on the cited pages and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

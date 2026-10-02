@@ -12,6 +12,11 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.urbanleadersfellowship.org/fellowship-details",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "ein",
       "pass": true
     },
@@ -19,21 +24,26 @@
       "detail": null,
       "field": "legalName",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
     }
   ],
   "key": "n-urban-leaders-fellowship",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
       "Name matches a registered 501(c)(3) nonprofit: 'Urban Leaders Fellowship' (ProPublica Nonprofit Explorer, EIN 84-2571483)",
-      "Registry lists the organization in Colorado Springs, CO, matching the agenda text 'Colorado Springs, CO'",
-      "Weak: urbanleadersfellowship.org describes a paid summer fellowship for professionals, but it does not name Colorado Springs, Oakland or its EIN, so the website could not be tied to the registry entry"
+      "Registered in Colorado Springs, CO, matching the agenda location",
+      "The organization's website lists Oakland as one of its fellowship cities, and its Oakland page mentions Oakland Unified School District (OUSD)"
     ],
     "key": "n-urban-leaders-fellowship",
-    "notes": "Registry match is name plus city. The website was not confirmed to belong to the Colorado Springs registry entry (no city or EIN on the site; no mention of Oakland), so website and contact details were left null. WebSearch budget was exhausted, so identity was checked only via direct registry and site fetches.",
+    "notes": "No public phone, email or mailing address found on the organization's site. Agenda lists the contract under the Charter Schools Office; the specific service was not confirmed. Oakland program is listed as paused.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -44,29 +54,43 @@
       "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "A nonprofit that runs a paid summer fellowship for professionals from many backgrounds who want to help improve communities through people and partnerships. Fellows split their time between policy work and placements with partner organizations. It is registered as a tax-exempt 501(c)(3) in Colorado Springs, Colorado.",
-      "website": null
+      "summary": "A nonprofit that runs a paid, seven-week summer fellowship for professionals. Fellows spend half their time on policy projects with an elected official and half with a community partner organization, in about ten U.S. cities.",
+      "website": "https://www.urbanleadersfellowship.org/"
     },
     "sources": [
       {
         "supports": [
           "legalName",
-          "orgType",
+          "ein",
           "headquarters",
-          "ein"
+          "orgType"
         ],
         "title": "Urban Leaders Fellowship - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/842571483"
       },
       {
         "supports": [
-          "summary"
+          "summary",
+          "website"
         ],
         "title": "Urban Leaders Fellowship",
         "url": "https://www.urbanleadersfellowship.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Fellowship Details - Urban Leaders Fellowship",
+        "url": "https://www.urbanleadersfellowship.org/fellowship-details"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-urban-leaders-fellowship",
+    "notes": "Name and Colorado Springs, CO location match the agenda; ProPublica confirms the 501(c)(3), EIN and city, and the organization's own site confirms the paid seven-week split-placement fellowship in ten cities including Oakland, with an Oakland page mentioning OUSD as a partner. The summary is neutral and supported; the specific service OUSD buys is unconfirmed but plausible.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

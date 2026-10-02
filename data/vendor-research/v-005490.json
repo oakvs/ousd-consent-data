@@ -2,12 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.creativesupports.com",
+      "field": "source:https://www.creativesupports.com/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.creativesupports.com/pages/for-business",
+      "field": "source:https://www.creativesupports.com/pages/space-planning-services",
       "pass": true
     },
     {
@@ -34,16 +34,17 @@
   "key": "v-005490",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Company legal name on its own website and terms page is 'Creative Supports, Inc.', matching the agenda name",
-      "Company sells ergonomic furniture and says it serves offices, clinics and public agencies across Northern California, plausible for a Risk Management Department services agreement",
-      "Phone number uses the 925 area code, which covers Pleasanton, CA (weak signal; the site does not state a city and no registry record was checked)"
+      "Name matches exactly: 'Creative Supports, Inc.' is the name on creativesupports.com, and OUSD's agenda title also lists 'CSI Ergonomic Furniture dba Creative Supports, Inc.'",
+      "Business sells ergonomic furniture and workplace accessories, consistent with OUSD's Risk Management Department as the contracting office",
+      "Site lists 7083 Commerce Circle; search listings (Yelp, Buzzfile, not fetchable) put it in Pleasanton, CA 94588, matching the agenda's Pleasanton, CA",
+      "California registry lists 'CSI Ergonomic Furniture, Inc.' (Alamo, CA), a nearby Tri-Valley city, consistent with the dba, but no page links the two names, so no entity number is given"
     ],
     "key": "v-005490",
-    "notes": "Could not confirm via a registry (web search budget was exhausted; CA Secretary of State and SAM.gov not checked). The site gives no street address or city, so the Pleasanton match rests only on the 925 area code. The 'CSI Ergonomic Furniture dba' name in one agenda title was not found. Needs manual verification before publication.",
+    "notes": "Distinct from creativesupports.org, an unrelated disability-services nonprofit. Street address 7083 Commerce Circle appears on the company site without city or ZIP, so address and headquarters are left null. A CA SOS entity 'CSI Ergonomic Furniture, Inc.' (Alamo, no. 2277689) probably relates to the dba but could not be confirmed from any page, so it was not included.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -54,8 +55,8 @@
       "orgType": "company",
       "phone": "925-201-3939",
       "samUei": null,
-      "summary": "A company that sells ergonomic office furniture and workspace accessories, including office chairs, height-adjustable tables, monitor arms and keyboard trays. It offers space-planning consultations and accepts purchase orders from businesses and public agencies in Northern California.",
-      "website": "https://www.creativesupports.com"
+      "summary": "A company that sells ergonomic office furniture and workspace accessories, such as seating, sit-stand tables and keyboards, to businesses. It also offers space planning and office design services, including layouts, furniture specifications, delivery and installation.",
+      "website": "https://www.creativesupports.com/"
     },
     "sources": [
       {
@@ -68,17 +69,25 @@
           "email"
         ],
         "title": "Creative Supports, Inc.",
-        "url": "https://www.creativesupports.com"
+        "url": "https://www.creativesupports.com/"
       },
       {
         "supports": [
-          "summary"
+          "summary",
+          "phone",
+          "email"
         ],
-        "title": "For Business - Creative Supports, Inc.",
-        "url": "https://www.creativesupports.com/pages/for-business"
+        "title": "Creative Supports, Inc. - Space Planning and Office Design Services",
+        "url": "https://www.creativesupports.com/pages/space-planning-services"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005490",
+    "notes": "creativesupports.com is Creative Supports, Inc., an ergonomic furniture seller whose phone 925-201-3939 matches the Pleasanton, CA listing (7083 Commerce Circle, 94588), consistent with the agenda's Pleasanton location and the 'CSI Ergonomic Furniture dba Creative Supports' title. The summary, phone and email are supported by the two cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

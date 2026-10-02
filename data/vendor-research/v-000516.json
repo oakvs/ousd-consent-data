@@ -2,7 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:http://centurisk.com/",
+      "field": "source:https://centurisk.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://centurisk.com/erims-risk-management-information-system/",
       "pass": true
     },
     {
@@ -16,12 +21,14 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Name 'Centurisk' matches the agenda text exactly; its homepage describes risk management software and property insurance appraisal services, consistent with a General Counsel / Risk Management Department services agreement paid from a self-insurance property and liability fund (weak, topical signal only)"
+      "The name 'Centurisk' matches a company at centurisk.com that sells risk management software and property insurance appraisal services",
+      "Those services fit a contract for OUSD's Risk Management Department paid from a self-insurance property and liability fund",
+      "Not confirmed: no page found that links Centurisk to Oakland Unified, and no registry record (California Secretary of State, SAM.gov) was found to check location or legal entity"
     ],
     "key": "v-000516",
-    "notes": "Web search quota was exhausted, so no registry (CA Secretary of State, SAM.gov) or independent page could be checked. The agenda gives no location, and the Centurisk site shows no address, phone, email, California or OUSD/school-district link, so only one weak topical signal supports the match. Needs a human check or re-run with search available before publishing.",
+    "notes": "Identity not confirmed against a registry or an OUSD-linked page. Centurisk's site shows no street address or phone, and a third-party profile places it in Pittsburgh, PA (not verified). The site says it operates under AssetWorks Risk Solutions, so the legal entity is unclear.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -32,8 +39,8 @@
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "Centurisk provides risk management software and services. Its products include RiskStar, property risk software, and its services include property insurance appraisals and fixed asset inventory management.",
-      "website": "http://centurisk.com/"
+      "summary": "Centurisk provides risk management software and services, including RiskStar property risk software, property insurance appraisal services and the eRIMS risk management information system. Its website says it has helped organizations identify, quantify and manage risk for over 40 years. It lists school districts, public entities and risk pools among its clients.",
+      "website": "https://centurisk.com/"
     },
     "sources": [
       {
@@ -42,11 +49,18 @@
           "orgType",
           "website"
         ],
-        "title": "Centurisk",
-        "url": "http://centurisk.com/"
+        "title": "Home Page - Centurisk",
+        "url": "https://centurisk.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "ERIMS Risk Management Information System - Centurisk",
+        "url": "https://centurisk.com/erims-risk-management-information-system/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

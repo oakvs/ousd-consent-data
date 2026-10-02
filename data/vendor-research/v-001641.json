@@ -1,17 +1,105 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://f3-inc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://f3-inc.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/f3-and-associates-inc-12950480/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001641",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: F3 & Associates / F3 Inc., registered as 'F3 And Associates' with a SAM.gov-derived federal profile (HigherGov) located in Benicia, CA, matching the agenda's 'Benicia, CA'",
+      "Company's own contact page lists its Northern California office at 701 East H Street, Benicia, CA 94510",
+      "F3 is a land surveying and mapping firm that lists education among its markets, consistent with OUSD contracting it for site improvement projects at school sites (OUSD has also sought land surveying services for various school sites)"
+    ],
     "key": "v-001641",
-    "notes": "Not researched: the session's WebSearch budget was exhausted before any candidate could be found, so no identity could be confirmed. Agenda text names 'F3 and Associates, Inc.' (Benicia, CA), facilities site-improvement contractor. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal name, CA entity number and EIN not confirmed on a cited page; no general email published on the contact page. The agenda does not describe the surveying scope explicitly; match rests on name, Benicia location and service type.",
+    "profile": {
+      "address": "701 East H Street, Benicia, CA 94510",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Benicia, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "707 748 4300",
+      "samUei": "CJK1F134CYC3",
+      "summary": "F3 is a land surveying and mapping firm based in Benicia, California, with offices in Northern California, Southern California and Nevada. It provides land surveying, underground utility locating with ground penetrating radar, 3D laser scanning and concrete inspection services for architects, contractors, engineers, municipalities and utilities.",
+      "website": "https://f3-inc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "F3 Inc. home page",
+        "url": "https://f3-inc.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact F3",
+        "url": "https://f3-inc.com/contact/"
+      },
+      {
+        "supports": [
+          "samUei",
+          "headquarters"
+        ],
+        "title": "F3 And Associates (CJK1F134CYC3)",
+        "url": "https://www.highergov.com/awardee/f3-and-associates-inc-12950480/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001641",
+    "notes": "The name 'F3 and Associates' and the Benicia, CA location match the agenda, and F3 is a land surveying firm with a Benicia office, which fits site improvement work at school sites. The summary, phone, address, website and SAM UEI are supported by f3-inc.com and HigherGov. The site gives its name as F3 Inc., and HigherGov lists it as F3 And Associates.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

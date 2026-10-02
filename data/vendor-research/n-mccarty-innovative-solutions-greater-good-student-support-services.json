@@ -1,17 +1,115 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.greatergoodedu.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.greatergoodedu.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/los-angeles/mccarty-innovative-solutions-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-mccarty-innovative-solutions-greater-good-student-support-services",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Greater Good Student Support Services website lists 12816 Inglewood Ave., Hawthorne, CA 90250, matching the Hawthorne, CA location in the agenda text",
+      "California corporation 'Mccarty Innovative Solutions Inc.' (file number 5707822) lists its principal address as 12816 Inglewood Ave., the same street address as Greater Good's website",
+      "Greater Good describes itself as a non-public agency providing special education services, matching the OUSD 'Nonpublic, Nonsectarian School, Agency Services Master Contract' for the Special Education Department",
+      "The registry classifies Mccarty Innovative Solutions Inc. as an educational staffing agency, and Greater Good's website names a McCarty co-founder"
+    ],
     "key": "n-mccarty-innovative-solutions-greater-good-student-support-services",
-    "notes": "Not researched: the WebSearch tool's per-session budget (200 of 200) was exhausted, so no candidate organization could be found or identity-confirmed. Agenda gives only 'McCarty Innovative Solutions dba Greater Good Student Support Services', Hawthorne, CA (special education nonpublic agency master contract). Re-run when search budget is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal entity matched to the dba by shared street address (12816 Inglewood Ave.) and the educational staffing/special education focus. The corporation filing is read from a third-party mirror of California Secretary of State data (bizprofile.net), not bizfileonline directly. The registry lists the address with a Los Angeles, CA 90043 city/ZIP, while the organization's website uses Hawthorne, CA 90250.",
+    "profile": {
+      "address": "12816 Inglewood Ave. Hawthorne, CA 90250",
+      "caEntityNumber": "5707822",
+      "ein": null,
+      "email": "info@greatergoodedu.org",
+      "headquarters": "Hawthorne, CA",
+      "legalName": "Mccarty Innovative Solutions Inc.",
+      "orgType": "company",
+      "phone": "626-618-5528",
+      "samUei": null,
+      "summary": "Greater Good Student Support Services is an educator-owned and operated non-public agency that provides special education services to students, families and schools. It is based in Hawthorne, California.",
+      "website": "https://www.greatergoodedu.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "CONTACT",
+        "url": "https://www.greatergoodedu.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "ABOUT",
+        "url": "https://www.greatergoodedu.org/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Mccarty Innovative Solutions Inc. Los Angeles, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/los-angeles/mccarty-innovative-solutions-inc"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-mccarty-innovative-solutions-greater-good-student-support-services",
+    "notes": "The Greater Good website and the California corporation record for Mccarty Innovative Solutions Inc. (file 5707822) share the street address 12816 Inglewood Ave., and the site describes a special-education non-public agency, which fits the OUSD NPA master contract. The site does not name McCarty, so the 'co-founder' identity signal is unverified, but the address match plus the agenda's dba wording is sufficient; all profile fields and the neutral summary are supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

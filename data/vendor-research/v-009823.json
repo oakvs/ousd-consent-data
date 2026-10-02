@@ -1,17 +1,60 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/883900615",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-009823",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) in Oakland, CA: 'Kids 1st Foundation' (ProPublica Nonprofit Explorer, EIN shown). Weak signal: name and city only; no page found linking it to OUSD or McClymonds High School.",
+      "The OUSD vendor record also lists 'The Regents of the University of California (Cal Performances)' in Berkeley, CA, a different organization, so the vendor record appears to combine two entities."
+    ],
     "key": "v-009823",
-    "notes": "Could not confirm identity. The agenda text names two unrelated parties under one vendor record (Kids 1st Foundation, Berkeley CA, and The Regents of the University of California on behalf of Cal Performances), so a single profile would be unreliable. Kids 1st Foundation could not be matched to a registry entry: the web search budget was exhausted, ProPublica returned HTTP 429, IRS search returned 403, kids1st.org is an unrelated Los Angeles preschool, and kids1stfoundation.org returned no content. Needs a manual look or a vendor-record split.",
-    "profile": null,
-    "sources": []
+    "notes": "OUSD vendor 009823 is named in the agenda as both Kids 1st Foundation (McClymonds High School) and The Regents of the University of California on behalf of Cal Performances (United for Success Academy). These are different organizations, so a single profile cannot be right for both. Kids 1st Foundation is a candidate only (new nonprofit, exempt since 2022, no website found, no link to OUSD confirmed). Not suitable for publication; needs human review of the vendor record.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "88-3900615",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Kids 1st Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Kids 1st Foundation is listed as a tax-exempt 501(c)(3) charitable organization in Oakland, California, classified as a youth development program provider.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Kids 1st Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/883900615"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

@@ -1,17 +1,135 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=932151",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://deltacharterbus.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://deltacharterbus.com/contact_us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://deltacharterbus.com/transport_for_schools/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/sam-entity/MRQKVK2DDCJ1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-vol-ten-delta-charter-service",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "FMCSA SAFER record for USDOT 932151 lists legal name VOL-TEN CORPORATION with DBA DELTA CHARTER SERVICE in Stockton, CA, matching the agenda text 'Vol-Ten Corporation dba Delta Charter Service' and 'Stockton, CA'",
+      "deltacharterbus.com shows USDOT #932151 and phone (209) 465-1053, the same USDOT number and phone as the Vol-Ten Corporation / Delta Charter Service federal record",
+      "The company's website says it provides school-pupil activity bus (SPAB) transportation for school districts, matching OUSD's 'Agreement for Transportation Services - School Pupil Activity Bus (SPAB)' contract",
+      "SAM.gov-derived record lists VOL-TEN CORPORATION at 4250 E Mariposa Rd, Stockton, CA, charter bus transportation (NAICS 485510)"
+    ],
     "key": "n-vol-ten-delta-charter-service",
-    "notes": "Not researched: the session's WebSearch budget was exhausted (200 of 200) before any search could run, and a guessed website (deltacharterservice.com) did not resolve. No candidate was identified or confirmed. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda text: 'Vol-Ten Corporation dba Delta Charter Service', Stockton, CA.",
-    "profile": null,
-    "sources": []
+    "notes": "Website uses the name 'Delta Charter Bus'; federal records use 'Delta Charter Service' as the DBA. Emails on the website are obfuscated, so none is listed. UEI comes from a third-party mirror of SAM.gov data, where the registration showed as expired. Physical address is 4250 E Mariposa Rd, Stockton, CA 95215; the PO Box is the mailing address shown on the company's contact page. No OUSD-specific mention was found on the company's pages; the match rests on name, location, USDOT number and SPAB service.",
+    "profile": {
+      "address": "PO Box 5547, Stockton, CA 95205",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Stockton, CA",
+      "legalName": "VOL-TEN CORPORATION",
+      "orgType": "company",
+      "phone": "(209) 465-1053",
+      "samUei": "MRQKVK2DDCJ1",
+      "summary": "A for-profit motor coach company based in Stockton, California, that does business as Delta Charter Service (Delta Charter Bus). It provides charter bus transportation for special occasions and events, and school transportation, including school-pupil activity bus (SPAB) service, for school districts in California.",
+      "website": "https://deltacharterbus.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "SAFER Web - Company Snapshot VOL-TEN CORPORATION",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=932151"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Delta Charter Bus",
+        "url": "https://deltacharterbus.com"
+      },
+      {
+        "supports": [
+          "address",
+          "phone"
+        ],
+        "title": "Delta Charter Bus - Contact Us",
+        "url": "https://deltacharterbus.com/contact_us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Delta Charter Bus - Transportation for Schools",
+        "url": "https://deltacharterbus.com/transport_for_schools/"
+      },
+      {
+        "supports": [
+          "samUei",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Vol Ten Corp · Vol-Ten Corporation · 4250 E Mariposa Rd, Stockton, CA 95215-8128",
+        "url": "https://opengovus.com/sam-entity/MRQKVK2DDCJ1"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-vol-ten-delta-charter-service",
+    "notes": "FMCSA SAFER shows VOL-TEN CORPORATION dba DELTA CHARTER SERVICE in Stockton, CA (USDOT 932151, phone 209-465-1053), matching the agenda name and city; the company website shows the same USDOT and phone and advertises SPAB-certified school transportation, fitting the OUSD SPAB agreement. All profile fields (address PO Box from contact page, UEI from SAM mirror, phone, website) are supported and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

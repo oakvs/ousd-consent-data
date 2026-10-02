@@ -1,17 +1,53 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.creativechangecollaborative.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008765",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "Name closely matches 'Creative Change Collaborative', a restorative justice training and consulting organization (creativechangecollaborative.org)",
+      "Its About page says its founder and several trainers previously worked with or came from Oakland Unified School District, consistent with a school services agreement",
+      "CONTRADICTION/GAP: the website says it is based in Oakland, CA, but the agenda gives Sebastopol, CA; no registry record (CA Secretary of State, SAM.gov) was found linking the LLC 'Creative Change Collaborative Consulting LLC' to this website"
+    ],
     "key": "v-008765",
-    "notes": "Unconfirmed. WebSearch budget was exhausted, so no registry (CA SOS, SAM.gov) lookup was possible. A possible candidate is creativechangecollaborative.org (restorative justice training and consulting, based in Oakland, CA, with OUSD ties), but the agenda gives Sebastopol, CA, the site does not mention an LLC or after-school programs, and no registry confirmed the match. Needs re-run with search access.",
-    "profile": null,
-    "sources": []
+    "notes": "Not confirmed. The agenda lists the vendor as an LLC in Sebastopol, CA, while the website describes an Oakland-based organization with no stated legal form. No Secretary of State or other registry entry was found tying the LLC to this website. The agenda's funding sources (after-school/expanded learning) also differ somewhat from the site's restorative justice focus. Do not publish without manual verification of the CA SOS record.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": null,
+      "phone": null,
+      "samUei": null,
+      "summary": "Creative Change Collaborative provides restorative justice training, coaching and technical assistance for schools, community organizations, nonprofits and businesses. Its work uses circle practice and highly interactive activities, and focuses on bringing together people of different ages.",
+      "website": "https://www.creativechangecollaborative.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About — Creative Change Collaborative",
+        "url": "https://www.creativechangecollaborative.org/about"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

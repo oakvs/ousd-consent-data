@@ -1,17 +1,72 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941153307",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Sierra_Club",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-009691",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches the registered nonprofit 'Sierra Club' (ProPublica Nonprofit Explorer, EIN 94-1153307), based in Oakland, CA, matching the agenda location 'Oakland, CA'",
+      "Sierra Club is an environmental organization with public work on climate and environmental education with Oakland schools and OUSD, consistent with a 'Classroom & academic programs' no-cost services agreement",
+      "Caveat: the agenda says only 'Sierra Club'; no page found ties the Oakland High School agreement to the national organization versus a local chapter (e.g. San Francisco Bay Chapter) or the separate Sierra Club Foundation"
+    ],
     "key": "v-009691",
-    "notes": "Research could not be completed: the WebSearch budget for this session was exhausted, sierraclub.org returned empty content to the fetcher, and ProPublica Nonprofit Explorer returned HTTP 429/404. No page was successfully read, so no identity signals could be confirmed. Note that several related entities exist (Sierra Club, Sierra Club Foundation, local chapters), so a human reviewer should confirm which entity OUSD contracts with. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "sierraclub.org blocks automated fetching (Incapsula), so website, phone, email and address could not be verified from the official site and were left null. The national Sierra Club is a 501(c)(4); the Sierra Club Foundation (EIN 94-6069890) is a separate 501(c)(3) in Oakland. Unconfirmed whether the OUSD agreement is with the national organization or a chapter.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1153307",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Sierra Club",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Sierra Club is a nonprofit environmental organization in the United States with local chapters and volunteers. It works on issues such as climate, clean energy, public lands and clean air and water, and it runs outdoor and youth programs.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Sierra Club - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941153307"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Sierra Club - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sierra_Club"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

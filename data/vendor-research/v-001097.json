@@ -1,17 +1,84 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://claremontpartners.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://claremontpartners.net/key-services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://claremontpartners.net/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001097",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Claremont Partners (claremontpartners.net), a health benefits consulting firm, matching OUSD's Risk Management Department services agreements",
+      "Located in Fresno, CA, matching the agenda text 'Fresno, CA'",
+      "The firm's own website lists Oakland Unified as a client"
+    ],
     "key": "v-001097",
-    "notes": "Research could not be completed: the WebSearch budget for the session was exhausted and direct fetches of guessed sites failed (connection errors). No candidate organization was identified or verified, so nothing was filled in. Re-run when search is available. Agenda context: Claremont Partners, Inc., Fresno, CA; Risk Management Department services agreements.",
-    "profile": null,
-    "sources": []
+    "notes": "No general phone, email or registry IDs could be confirmed on fetchable pages (Secretary of State and aggregator pages blocked or not cited); the contact page lists only named individuals' emails, which are excluded. Legal name left null because the exact form 'Claremont Partners, Inc.' was not confirmed on a cited page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fresno, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Claremont Partners is a health care consulting firm that helps employers and public organizations manage rising employee health benefit costs. Its services include health program integration, prescription drug management, wellness programs, and evaluating alternatives for purchasing health benefits.",
+      "website": "http://claremontpartners.net"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Take Control of Your Organization's Health Costs",
+        "url": "http://claremontpartners.net/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Services — Claremont Partners",
+        "url": "http://claremontpartners.net/key-services"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Contact — Claremont Partners",
+        "url": "http://claremontpartners.net/contact/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001097",
+    "notes": "The cited site shows Claremont Partners, Inc. in Fresno, CA, a health benefits consulting firm that lists Oakland Unified as a client, which fits OUSD's Risk Management services agreements. Summary, website and headquarters are supported by the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -7,6 +7,26 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.heartinbalancetherapy.com/about-us.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.heartinbalancetherapy.com/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.heartinbalancetherapy.com/trainee-in-practicum-program.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "ein",
       "pass": true
     },
@@ -14,23 +34,28 @@
       "detail": null,
       "field": "legalName",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
     }
   ],
   "key": "v-006790",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered 501(c)(3) nonprofit: 'Heart In Balance' (ProPublica Nonprofit Explorer, EIN 20-1206371)",
-      "The registered organization is located in Oakland, CA, matching the agenda text",
-      "Registry category is family counseling / human services, consistent with OUSD's 'Student health, support & family services' category"
+      "Name matches a registered nonprofit: 'Heart In Balance', Oakland, CA, EIN 20-1206371 (ProPublica Nonprofit Explorer), matching the agenda name 'Heart in Balance' and location 'Oakland, CA'",
+      "Organization's own website says it runs a school-based program providing mental health services to students at Bay Area schools, matching OUSD's 'Student health, support & family services' category",
+      "Located at 6536 Telegraph Avenue, Oakland, CA 94609 and describes itself as a 501(c)(3) counseling and training center, consistent with the IRS-registered family counseling nonprofit"
     ],
     "key": "v-006790",
-    "notes": "Web search budget was exhausted, so no organization website, contact details, or independent page linking this nonprofit to OUSD or Peralta Elementary could be found. The only registry source is ProPublica. A different organization named Heart in Balance (a psychotherapy practice at heartinbalance.org) is in Grand Rapids, Michigan and is NOT this vendor. Needs a human or a re-run with search to confirm the website and the OUSD link.",
+    "notes": "Phone (510) 496 6002 ext. 1 and general email are shown on the contact page but the email is hidden by Cloudflare obfuscation and the phone has an extension, so both are left null. No page fetched explicitly mentions Oakland Unified or Peralta Elementary; identity rests on exact name, Oakland location, and school-based mental health services. No CA SOS or SAM.gov lookup done.",
     "profile": {
-      "address": null,
+      "address": "6536 Telegraph Avenue, Suite C 201, Oakland, CA 94609",
       "caEntityNumber": null,
       "ein": "20-1206371",
       "email": null,
@@ -39,23 +64,54 @@
       "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "Heart In Balance is a nonprofit in Oakland, California that is classified as a family counseling and human services organization. Most of its income comes from fees for its program services.",
-      "website": null
+      "summary": "Heart in Balance is a nonprofit counseling and training center in Oakland, California. It offers short- and long-term therapy for individuals, couples, families, children and teens, with affordable and sliding scale fees. It also trains pre-licensed therapists and runs a school-based program that provides mental health services to students at Bay Area schools.",
+      "website": "https://www.heartinbalancetherapy.com"
     },
     "sources": [
       {
         "supports": [
           "legalName",
-          "summary",
+          "ein",
           "orgType",
-          "headquarters",
-          "ein"
+          "headquarters"
         ],
         "title": "Heart In Balance - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/201206371"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Heart in Balance Counseling Center",
+        "url": "https://www.heartinbalancetherapy.com/about-us.html"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Heart in Balance Counseling Center",
+        "url": "https://www.heartinbalancetherapy.com/contact.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Trainee in Practicum Program - Heart in Balance Counseling Center",
+        "url": "https://www.heartinbalancetherapy.com/trainee-in-practicum-program.html"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006790",
+    "notes": "Heart in Balance is an Oakland 501(c)(3) counseling and training center (EIN 20-1206371) with a school-based program for Bay Area schools. A search turned up an OUSD board memo for the Peralta Elementary services agreement that describes the same organization and services. Summary, address, website, EIN and org type are supported by the cited pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -2,7 +2,37 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.georgehills.com",
+      "field": "source:https://georgehills.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.georgehills.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/rocklin/george-hills-company-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,41 +44,64 @@
   "key": "v-007859",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: georgehills.com describes 'George Hills', a California third party administrator (TPA), matching 'George Hills Company, Inc.' in the agenda",
-      "Services match the contract: the website says the company provides claims administration, litigation management and subrogation services to public entities, matching OUSD's 'Claims Adjusting and Administrative Services Contract, Subrogation Agreement' with the General Counsel",
-      "Location NOT confirmed: the agenda says Rancho Cordova, CA, but the company's contact page gives corporate headquarters in Rocklin, CA (offices 'throughout California'); no Rancho Cordova office was found"
+      "Name matches 'George Hills Company, Inc.', a California general corporation (entity 0906789) that works as a claims administration business",
+      "OUSD contract is 'Claims Adjusting and Administrative Services' (General Counsel, Legal, insurance & risk), matching George Hills' business as a third-party administrator for liability claims for California public entities including educational institutions",
+      "Agenda location Rancho Cordova, CA matches George Hills Company, Inc.'s Rancho Cordova address in a 2024 County of Los Angeles risk management memo (same company, same claims line (855) 442-2357 as on georgehills.com); the company's website now gives Rocklin, CA as headquarters"
     ],
     "key": "v-007859",
-    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) check was possible and the Rancho Cordova vs. Rocklin location discrepancy could not be resolved. Contact page lists HQ in Rocklin (PO Box 120, Rocklin, CA 95677) and a general phone, but these were left out because the location does not match the agenda and they could not be tied to the Rancho Cordova entity. Needs a human check or a re-run with search available.",
+    "notes": "Agenda lists Rancho Cordova, CA; the company's current website lists its corporate headquarters and mailing address in Rocklin, CA (a 2024 County of Los Angeles memo still showed a Rancho Cordova address for the same company). Entity number 0906789 comes from a third-party mirror of California Secretary of State data (bizprofile.net), not bizfileonline directly; reviewer may want to confirm. No general email is published on the contact page. No EIN or SAM UEI found.",
     "profile": {
-      "address": null,
-      "caEntityNumber": null,
+      "address": "PO Box 120, Rocklin, CA 95677",
+      "caEntityNumber": "0906789",
       "ein": null,
       "email": null,
-      "headquarters": null,
-      "legalName": null,
+      "headquarters": "Rocklin, CA",
+      "legalName": "George Hills Company, Inc.",
       "orgType": "company",
-      "phone": null,
+      "phone": "(916) 859-4800",
       "samUei": null,
-      "summary": "George Hills is a third party administrator that provides claims administration, litigation management and subrogation recovery services to public entities and private insurance carriers in California. It says it has operated in California since 1954.",
-      "website": "https://www.georgehills.com"
+      "summary": "George Hills is a third-party administrator based in California. It handles liability, property and medical-malpractice claims, manages related lawsuits, and recovers money from responsible parties (subrogation) for public entities such as cities, counties, special districts and educational institutions, and for private insurance carriers. The company has operated since the 1950s.",
+      "website": "https://georgehills.com"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "orgType",
-          "website"
+          "website",
+          "phone",
+          "address",
+          "headquarters"
         ],
-        "title": "George Hills Company",
-        "url": "https://www.georgehills.com"
+        "title": "Contact - George Hills",
+        "url": "https://georgehills.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - George Hills",
+        "url": "https://www.georgehills.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber"
+        ],
+        "title": "George Hills Company, Inc. Rocklin, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/rocklin/george-hills-company-inc"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007859",
+    "notes": "George Hills Company, Inc. is a Rocklin, CA claims-administration TPA for public entities; the name and the claims-adjusting and subrogation contract fit, and the Rancho Cordova agenda location is plausibly its former address. Contact, legal name, entity number and summary details are supported by the contact page, the about page, the homepage (special districts, educational institutions, private carriers) and the filing mirror.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

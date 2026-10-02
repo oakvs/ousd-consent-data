@@ -2,12 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://business.toshiba.com/about/contact-us",
+      "field": "source:https://business.toshiba.com/contact-us",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://business.toshiba.com/",
+      "field": "source:https://business.toshiba.com/company",
       "pass": true
     },
     {
@@ -34,16 +34,16 @@
   "key": "n-toshiba-america-business-solutions",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches exactly: the company's own site names 'Toshiba America Business Solutions, Inc.' as the operating company, and no similarly named organization appeared",
-      "Business matches the agenda category 'Technology' and 'Digital Workspace Solutions': the site describes print and technology solutions for workplaces, managed services, document management and K-12 education offerings",
-      "Not confirmed: no registry (California Secretary of State, SAM.gov) or OUSD page was reachable, because the search budget was exhausted and the registry pages did not load, and the agenda gives no location"
+      "Agenda name 'Toshiba America Business Solutions' matches the company's own site, which gives the legal name 'Toshiba America Business Solutions, Inc.' (business.toshiba.com contact page)",
+      "Agenda item is a piggyback agreement for 'Digital Workspace Solutions'; a public Alameda County agenda shows Region 4 Education Service Center contract R241202 (OMNIA Partners RFP 24-12, Digital Workspace Solutions) was awarded to Toshiba America Business Solutions, Inc. dba Toshiba Business Solutions",
+      "Company sells print, document and digital workspace technology and lists education as an industry, matching OUSD's 'Technology' category"
     ],
     "key": "n-toshiba-america-business-solutions",
-    "notes": "Medium confidence: identity rests on the exact name and a matching line of business, both from the company's own site. Could not check a registry or find an OUSD mention (web search budget was exhausted). The only email shown is for press inquiries (pr@tabs.toshiba.com), so email is left null. Registry IDs not found.",
+    "notes": "Identity also corroborated by the Alameda County Board agenda (Dec 9, 2025) describing Region 4 contract R241202 for Digital Workspace Solutions awarded to Toshiba America Business Solutions, Inc. dba Toshiba Business Solutions. No general email found; registry IDs not looked up.",
     "profile": {
       "address": "25530 Commercentre Drive, Lake Forest, CA 92630",
       "caEntityNumber": null,
@@ -54,8 +54,8 @@
       "orgType": "company",
       "phone": "1-800-GO-TOSHIBA (1-800-468-6744)",
       "samUei": null,
-      "summary": "Toshiba America Business Solutions, Inc. is a subsidiary of Toshiba TEC Corporation. It provides office printing and technology products and services, including multifunction printers, scanners, document management, print security and managed services, for businesses and schools.",
-      "website": "https://business.toshiba.com/"
+      "summary": "Toshiba America Business Solutions is a company that sells print and digital products and services for offices and other organizations. Its offerings include multifunction printers, scanners, wide format printers and digital signage, along with managed print services, document management and cloud solutions. It serves industries such as healthcare, government and education.",
+      "website": "https://business.toshiba.com"
     },
     "sources": [
       {
@@ -64,23 +64,27 @@
           "phone",
           "address",
           "headquarters",
-          "orgType",
-          "summary"
+          "website"
         ],
-        "title": "Toshiba America Business Solutions Contact Us",
-        "url": "https://business.toshiba.com/about/contact-us"
+        "title": "Contact Us - Toshiba America Business Solutions",
+        "url": "https://business.toshiba.com/contact-us"
       },
       {
         "supports": [
-          "website",
           "summary",
           "orgType"
         ],
         "title": "Toshiba America Business Solutions",
-        "url": "https://business.toshiba.com/"
+        "url": "https://business.toshiba.com/company"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-toshiba-america-business-solutions",
+    "notes": "Toshiba America Business Solutions, Inc. (Lake Forest, CA) matches the agenda vendor name and a piggyback agreement for Digital Workspace Solutions; legal name, address, phone, products, services and industries are confirmed on the cited company pages, and the summary is neutral. The phone line is described on the contact page as support-oriented, but it is a general company number.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

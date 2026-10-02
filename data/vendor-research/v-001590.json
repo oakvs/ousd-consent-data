@@ -1,17 +1,84 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://envlogs.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/environmental-logistics-inc-10038267/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001590",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches 'Environmental Logistics, Inc.', a hazardous waste management company (envlogs.com; HigherGov federal registry)",
+      "Inland Empire base: HigherGov lists headquarters in Bloomington, CA, which borders Colton, CA (agenda location); directory listings also show a Colton P.O. box, but this was not confirmed on an official page",
+      "Hazardous waste services are consistent with a Risk Management Department services agreement; the company's Oakland pages list 'Public City Schools' among industries served (no direct mention of OUSD found)"
+    ],
     "key": "v-001590",
-    "notes": "Not researched: the session's WebSearch budget was exhausted and a guessed domain did not resolve, so no candidate was identified. Agenda text gives only 'Environmental Logistics' in Colton, CA (risk management services agreements). Re-run after the search limit is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "Medium confidence: no registry page tying the company to Colton, CA or to OUSD was found. Official site lists offices in Bloomington, Bakersfield, Hayward (CA) and Kansas City; a Colton P.O. box appears only in third-party directories. California Secretary of State entity number not found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Bloomington, CA",
+      "legalName": "Environmental Logistics, Inc.",
+      "orgType": "company",
+      "phone": "(888) 641-3940",
+      "samUei": "KFTZFRXDYDH6",
+      "summary": "A company that provides hazardous waste management services, including emergency spill response, vacuum truck services, product destruction and lab packing. It serves clients across the United States and operates offices in California and other states.",
+      "website": "https://envlogs.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Environmental Logistics, Inc.",
+        "url": "https://envlogs.com/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "samUei"
+        ],
+        "title": "Environmental Logistics",
+        "url": "https://www.highergov.com/awardee/environmental-logistics-inc-10038267/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

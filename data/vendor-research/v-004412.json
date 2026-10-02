@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.universityofcalifornia.edu/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://regents.universityofcalifornia.edu/contact/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://creeo.berkeley.edu/programs-projects/national-board-resource-center",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-004412",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'The Regents of the University of California' with the unit 'CREED, National Board Resource Center' in Berkeley, CA; the UC Berkeley School of Education hosts a National Board Resource Center (under CREEO, the Center for Research on Expanding Educational Opportunity)",
+      "The National Board Resource Center page describes support for teachers pursuing National Board Certification, matching the contract title 'National Board Certification Teacher Support'",
+      "UC Berkeley's National Board Resource Center pages mention working with Oakland Unified School District (OUSD) teachers and principals",
+      "The University of California is governed by the Board of Regents, matching the legal contracting party name"
+    ],
     "key": "v-004412",
-    "notes": "Not researched to completion: the session's WebSearch budget (200/200) was exhausted, and direct fetches of guessed CREED URLs failed (creed.berkeley.edu DNS error; bse.berkeley.edu/research/centers/creed and /creed returned 404; the Berkeley School of Education homepage does not mention CREED). The agenda names The Regents of the University of California (a public agency; Berkeley, CA) for CREED / National Board Resource Center, but no page confirming the unit's contact details was found. Re-queue when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "The contracting entity is The Regents of the University of California, the governing body of the UC system; the profile describes the UC system, with contact details for the Office of the Secretary and Chief of Staff to the Regents (Oakland). The program that OUSD contracts with is the National Board Resource Center at UC Berkeley's School of Education (Berkeley, CA). Legal name, EIN, CA entity number and UEI left null because not verified on a cited page.",
+    "profile": {
+      "address": "1111 Franklin St., 12th floor, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "regentsoffice@ucop.edu",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The University of California is a public research university system with 10 campuses, including UC Berkeley, plus academic health centers, health professional schools and national laboratories. It is governed by the Board of Regents. The contract is with a UC Berkeley School of Education unit, the National Board Resource Center, which supports teachers pursuing National Board Certification.",
+      "website": "https://www.universityofcalifornia.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About us | University of California",
+        "url": "https://www.universityofcalifornia.edu/about-us"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | Regents of the University of California",
+        "url": "https://regents.universityofcalifornia.edu/contact/index.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "National Board Resource Center",
+        "url": "https://creeo.berkeley.edu/programs-projects/national-board-resource-center"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004412",
+    "notes": "The agenda names The Regents of the University of California with the UC Berkeley National Board Resource Center (the agenda's 'CREED' is the CREEO unit that hosts it), and the cited pages confirm the system facts, governance, the office email and Oakland address, and the center's National Board Certification support and OUSD ties. The summary is neutral and supported; the contact email is a generic office address, not an individual's.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

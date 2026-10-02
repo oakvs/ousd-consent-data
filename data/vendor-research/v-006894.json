@@ -2,12 +2,32 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/464940009",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://aaysp.org/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.aaysp.org/about",
+      "field": "source:https://aaysp.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandnorth.net/2023/06/07/oakland-school-district-yemeni-students-achieve-resolution/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -19,36 +39,45 @@
   "key": "v-006894",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Website aaysp.org is run by 'American Association of Yemeni Students and Professionals', matching the agenda name exactly",
-      "The site's home page lists OUSD (Oakland Unified School District) in its Partners section",
-      "The site has a Michigan chapter, and its Michigan page mentions a team member who is an educator in Dearborn, Michigan, matching the agenda location"
+      "Name matches a registered 501(c)(3) nonprofit, American Association Of Yemeni Students And Professionals, in Dearborn, MI (ProPublica Nonprofit Explorer, EIN shown), matching the agenda's Dearborn, MI location",
+      "Oakland North reports that the group partnered with Oakland Unified School District's Ethnic Studies Committee to add resources for students, matching OUSD's equity and student-program contracts",
+      "The organization's own website describes education-focused work for Yemeni American students and lists a California chapter, consistent with the education services OUSD contracts for"
     ],
     "key": "v-006894",
-    "notes": "Could not confirm in a public registry (ProPublica returned HTTP 429; web search budget exhausted; the contact page returned 403). Legal name, nonprofit status, EIN, contact details and headquarters are unverified, so left null. Needs a registry check before publishing.",
+    "notes": "Contact page (aaysp.org/contact/) blocked automated fetching (HTTP 403), and no phone, email or mailing address appeared on the fetched pages, so those fields are null. No California Secretary of State or SAM.gov record was checked. ProPublica's page spells the name with a data-entry typo ('Stud Ents'); the legal name is taken from the organization's own site, and the EIN from ProPublica.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "46-4940009",
       "email": null,
-      "headquarters": null,
-      "legalName": null,
-      "orgType": null,
+      "headquarters": "Dearborn, MI",
+      "legalName": "American Association of Yemeni Students and Professionals",
+      "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "A national organization that works to reduce social and cultural barriers that keep Yemeni Americans from reaching the highest levels of academic and professional success. It promotes higher education and professional development through mentorship, scholarships, events and community resources. It has chapters in California and Michigan.",
+      "summary": "A nonprofit organization that works to reduce social and cultural barriers that keep Yemeni Americans from reaching high levels of academic and professional success. It promotes higher education, and supports professionals through mentorship and networking. It is based in Dearborn, Michigan.",
       "website": "https://aaysp.org/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "American Association Of Yemeni Students And Professionals - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/464940009"
+      },
+      {
+        "supports": [
+          "legalName",
           "website"
         ],
-        "title": "American Association of Yemeni Students and Professionals",
+        "title": "AAYSP",
         "url": "https://aaysp.org/"
       },
       {
@@ -56,10 +85,21 @@
           "summary"
         ],
         "title": "About - AAYSP",
-        "url": "https://www.aaysp.org/about"
+        "url": "https://aaysp.org/about/"
+      },
+      {
+        "supports": [],
+        "title": "OUSD makes strides in helping Yemeni students achieve, but families say more is needed - Oakland North",
+        "url": "https://oaklandnorth.net/2023/06/07/oakland-school-district-yemeni-students-achieve-resolution/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006894",
+    "notes": "ProPublica shows a 501(c)(3) of the same name in Dearborn, MI (EIN 46-4940009), matching the agenda; aaysp.org supports the mission, mentorship, higher-education focus and a California chapter, and Oakland North confirms AAYSP working with OUSD's Ethnic Studies Committee. Minor caveat: 'networking' in the summary is not stated explicitly on the fetched pages, and the headquarters comes from ProPublica rather than the org site.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

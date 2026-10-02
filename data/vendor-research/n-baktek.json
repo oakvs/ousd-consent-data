@@ -2,12 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:http://baktek.com/",
+      "field": "source:https://baktek.com/contact/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:http://baktek.com/contact/",
+      "field": "source:https://baktek.com/about/",
       "pass": true
     },
     {
@@ -31,13 +31,14 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Name 'BakTek' matches the agenda name, and the company is located in Livermore, CA, matching the agenda location",
-      "CONTRADICTION: the website describes bagel production lines, custom fabrication and factory relocations, with no mention of stove, range or hot holding cabinet repair or of school districts"
+      "Name matches: 'BakTek' (footer shows BakTek LLC) on baktek.com",
+      "Located in Livermore, CA, matching the agenda text",
+      "Weak: the company services and maintains industrial bakery equipment; it does not mention school kitchens, stoves, ranges or hot holding cabinets, so a match with OUSD's 'Stoves, Ranges, and Hot Holding Cabinet Repair' contract is not confirmed"
     ],
     "key": "n-baktek",
-    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) lookup was possible. Candidate matches on name and city only; its listed services (bagel lines, fabrication, installs) do not match the OUSD contract for stove, range and hot holding cabinet repair. Could be a different or related business. Needs human review before publishing.",
+    "notes": "Name and city match, but BakTek's own site describes industrial bakery equipment, not foodservice stove/range repair, and does not mention schools. No registry (CA Secretary of State, SAM.gov) entry was found to confirm legal name or entity number. Third-party directories list other Livermore addresses (e.g., Yelp: 4771 Arroyo Vis). Needs human review before publishing.",
     "profile": {
       "address": "2130 Research Dr., Livermore, CA 94550",
       "caEntityNumber": null,
@@ -48,34 +49,31 @@
       "orgType": "company",
       "phone": "(925) 217-7712",
       "samUei": null,
-      "summary": "BakTek is a Livermore, California company that offers bakery equipment manufacturing and design, industrial equipment installation and relocation, and custom contract manufacturing.",
+      "summary": "BakTek is a company in Livermore, California, founded in 1991. It designs, builds, installs and services industrial bakery equipment, such as bagel production lines and custom conveyors.",
       "website": "https://baktek.com/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "orgType",
-          "website",
-          "phone",
-          "address",
-          "headquarters"
-        ],
-        "title": "BakTek",
-        "url": "http://baktek.com/"
-      },
-      {
-        "supports": [
           "phone",
           "address",
           "headquarters",
-          "summary"
+          "website"
         ],
-        "title": "BakTek Contact",
-        "url": "http://baktek.com/contact/"
+        "title": "Contact - BakTek",
+        "url": "https://baktek.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About - BakTek",
+        "url": "https://baktek.com/about/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

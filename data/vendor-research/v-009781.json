@@ -1,17 +1,61 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://kitchenguard.com/sf-eastbay/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009781",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: Kitchen Guard's own page is titled 'Kitchen Guard of SF East Bay' and refers to 'Kitchen Guard of San Francisco East-Bay', matching the agenda's 'Kitchen Guard of SF'",
+      "A 2025 press release says the East Bay franchise is owned by Emilio Heredia, matching the 'Heredia' in the agenda name",
+      "Kitchen Guard of San Francisco East-Bay's own page says it serves 'high-volume service lines in Concord', consistent with the agenda's Concord, CA",
+      "Commercial kitchen exhaust/hood cleaning is consistent with a services agreement with OUSD Nutrition Services (school kitchens)"
+    ],
     "key": "v-009781",
-    "notes": "No credible candidate confirmed. WebSearch budget was exhausted, so only direct fetches were possible. kitchenguard.com is a national commercial kitchen exhaust cleaning brand, but its location finder listed no San Francisco or Concord, CA provider and nothing tied it to 'Kitchen Guard of SF/Heredia'. The 'Heredia' part of the name may be a local operator or a person, which could not be checked. Needs a manual or re-run search.",
-    "profile": null,
-    "sources": []
+    "notes": "Medium confidence. The vendor appears to be a franchise location of Kitchen Guard owned by Emilio Heredia (press release at einpresswire.com), but I could not find the operating legal entity, a street address, or a California Secretary of State record, and no page confirms Concord as its base (only as a service area). Website is the franchise's location page on the national Kitchen Guard site, not a standalone site. Do not publish without confirming the legal entity.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "925-891-3206",
+      "samUei": null,
+      "summary": "Kitchen Guard of San Francisco East-Bay is the East Bay location of Kitchen Guard, a company that provides commercial kitchen exhaust and hood cleaning services. Its services include hood cleaning, filter exchange, green steam cleaning and repairs, following NFPA 96 fire-safety standards.",
+      "website": "https://kitchenguard.com/sf-eastbay/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Commercial Hood Cleaning & Repair",
+        "url": "https://kitchenguard.com/sf-eastbay/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

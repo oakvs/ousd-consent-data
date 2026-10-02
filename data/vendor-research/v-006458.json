@@ -7,7 +7,7 @@
     },
     {
       "detail": null,
-      "field": "source:https://www.linq.com/about/",
+      "field": "source:https://www.linq.com/privacy-policy/",
       "pass": true
     },
     {
@@ -34,16 +34,17 @@
   "key": "v-006458",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Legal name on linq.com footer and About page is exactly 'EMS LINQ, LLC', matching the agenda vendor name",
-      "linq.com sells TITAN by LINQ nutrition management software, matching OUSD's 'TITAN Nutrition Management System' / Nutrition Services Department contracts",
-      "Agenda gives Wilmington, NC but the website lists Austin, TX; this location mismatch is unresolved"
+      "Legal name on linq.com privacy policy is 'EMS LINQ, LLC', matching the agenda name 'EMS LINQ, LLC' exactly",
+      "OUSD's contract titles name the TITAN nutrition management system (Titan School Solutions); LINQ's privacy policy covers titank12.com, and titank12.com redirects to linq.com's nutrition page, so TITAN is a LINQ product",
+      "LINQ sells school nutrition management software, matching the Nutrition Services Department's 'Technology' purchases",
+      "Agenda city Wilmington, NC matches LINQ's long-time North Carolina base (a Wilmington, NC address appears in search results); LINQ's own site now gives an Austin, TX mailing address"
     ],
     "key": "v-006458",
-    "notes": "Agenda text gives Wilmington, NC (EMS was likely based there before the current branding), but no fetched page confirms that, and the website lists Austin, TX. No registry (NC/TX/CA Secretary of State, SAM.gov) was checked because web search was unavailable. Reviewer should confirm the NC-to-TX relationship before publishing.",
+    "notes": "Agenda lists Wilmington, NC; LINQ's current website gives an Austin, TX mailing address (a Wilmington, NC address appears in older third-party sources, not cited). Phone omitted because LINQ publishes it in letter form (737.PIC.LINQ / 888-GO4-LINQ). EIN, CA entity number and SAM UEI not verified from a registry, so left null.",
     "profile": {
       "address": "5000 Plaza on the Lake, Ste 100 #3130, Austin, TX 78746",
       "caEntityNumber": null,
@@ -54,7 +55,7 @@
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "A company that makes software for K-12 school districts. Its products cover school nutrition (meal service) management, business operations such as budgets, payroll and purchasing, and payment processing for meals and school fees.",
+      "summary": "EMS LINQ, LLC (LINQ) is a company that makes software for K-12 school districts. Its products cover school nutrition (cafeteria) management, finance and human resources software, and payment processing for meals and school fees. The TITAN nutrition system is one of its products.",
       "website": "https://www.linq.com/"
     },
     "sources": [
@@ -63,12 +64,9 @@
           "summary",
           "orgType",
           "website",
-          "legalName",
-          "email",
-          "address",
           "headquarters"
         ],
-        "title": "LINQ K-12 software",
+        "title": "LINQ | K-12 Software",
         "url": "https://www.linq.com/"
       },
       {
@@ -78,11 +76,17 @@
           "address",
           "headquarters"
         ],
-        "title": "About LINQ",
-        "url": "https://www.linq.com/about/"
+        "title": "LINQ Privacy Policy",
+        "url": "https://www.linq.com/privacy-policy/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006458",
+    "notes": "Legal name EMS LINQ, LLC matches the agenda exactly. linq.com and its privacy policy confirm the address, generic info@linq.com email, Austin HQ and product lines, and titank12.com (TITAN) is a LINQ site that redirects to linq.com. LINQ acquired TITAN School Solutions in 2020 and was long based in Wilmington, NC, which fits the agenda location. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

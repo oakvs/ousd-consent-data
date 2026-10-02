@@ -1,17 +1,93 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://sbesinc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sbesinc.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-007411",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the organization's own site is titled 'Sonja Biggs Educational Services, Inc.', and the agenda uses 'Sonja Biggs Education Services, Inc.' (and variants)",
+      "Located in Gilroy, CA (7483 Dornoch Ct., Gilroy, CA 95020), matching the agenda's location 'Gilroy, CA'",
+      "Website describes special education services for students with visual impairments, consistent with OUSD contracting it through its Special Education Department"
+    ],
     "key": "v-007411",
-    "notes": "Research could not be completed: the session's WebSearch budget was exhausted (200/200) before any search ran, and the ProPublica registry lookup returned HTTP 429. No candidate organization was found or confirmed. Re-run with a higher CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "No general email is published (contact form only). CA Secretary of State entity number, EIN and SAM UEI not confirmed from a primary registry, so left null. A third-party aggregator lists the entity as an active foreign profit corporation, not used as a source.",
+    "profile": {
+      "address": "7483 Dornoch Ct. Gilroy, CA 95020",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Gilroy, CA",
+      "legalName": "Sonja Biggs Educational Services, Inc.",
+      "orgType": "company",
+      "phone": "855-525-7237",
+      "samUei": null,
+      "summary": "A company in Gilroy, California that provides special education services for students with visual impairments. Its staff include credentialed Teachers of the Visually Impaired and Orientation and Mobility specialists, and it also offers Intervener services for students with deafblindness. It is an approved Nonpublic Agency under the California Department of Education.",
+      "website": "https://sbesinc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Sonja Biggs Educational Services, Inc",
+        "url": "https://sbesinc.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Sonja Biggs Educational Services, Inc",
+        "url": "https://sbesinc.com/contact"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007411",
+    "notes": "The cited site shows Sonja Biggs Educational Services, Inc. in Gilroy, CA, matching the agenda name and location, and it offers vision, O&M and intervener services that fit a Special Education Department contract. The address, phone, legal name, services and CDE Nonpublic Agency approval are all confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

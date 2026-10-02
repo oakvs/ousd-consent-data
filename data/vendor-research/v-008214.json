@@ -1,17 +1,92 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://rmc.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/databases/doshacru/acruDetails.asp?regno=874",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008214",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Restoration Management Company' on its own website (rmc.com) and in the Cal/OSHA asbestos registrant database (registration 874)",
+      "Headquartered in Livermore, CA, matching the agenda text",
+      "Holds a California asbestos registration and offers asbestos abatement, matching OUSD's contracts for asbestos floor projects at Sequoia Elementary and Madison Park Academy"
+    ],
     "key": "v-008214",
-    "notes": "Not researched: the session's WebSearch budget was exhausted, so no candidate could be found or confirmed. Agenda says Restoration Management Company, Livermore, CA (asbestos floor abatement contracts). Re-queue when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Cal/OSHA registrant page lists the address as Suite 201; the company website lists Suite 200 (used here). No EIN, CA entity number or UEI checked; left null.",
+    "profile": {
+      "address": "3090 Independence Drive, Suite 200, Livermore, CA 94551",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Livermore, CA",
+      "legalName": "Restoration Management Company",
+      "orgType": "company",
+      "phone": "1-800-400-5058",
+      "samUei": null,
+      "summary": "A company that provides disaster repair and restoration services, including water damage, fire and smoke damage, mold remediation, environmental remediation and construction. It has operated since 1985 and is headquartered in Livermore, California. It is registered with California's Division of Occupational Safety and Health to perform asbestos-related work.",
+      "website": "https://rmc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "About RMC",
+        "url": "https://rmc.com/about-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Cal/OSHA - Asbestos Registrants' Detail Information",
+        "url": "https://www.dir.ca.gov/databases/doshacru/acruDetails.asp?regno=874"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008214",
+    "notes": "Name and Livermore, CA location match the agenda, and the Cal/OSHA registry (reg. 874, active) confirms an asbestos registrant at the same Independence Drive address, which fits OUSD's asbestos floor contracts. Company website supports the services, 1985 start, phone and address; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,53 +1,116 @@
 {
   "checks": [
     {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.alamedahealthsystem.org/contact-us/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.alamedahealthsystem.org/about-us/",
+      "pass": false
+    },
+    {
       "detail": null,
       "field": "source:https://en.wikipedia.org/wiki/Alameda_Health_System",
       "pass": true
     },
     {
-      "detail": null,
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.alamedahealthsystem.org/calling-all-oakland-high-schoolers-applications-are-open-for-heal-alameda-health-systems-hands-on-medical-healthpath-internship-program/",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
       "field": "legalName",
-      "pass": true
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
     }
   ],
   "key": "n-alameda-health-system",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches exactly: 'Alameda Health System', an integrated public health care system organized as a public hospital authority in Alameda County, CA (Wikipedia)",
-      "Operates Highland Hospital in Oakland and other Alameda County health facilities, consistent with a health-related MOU with OUSD's Community Schools and Student Services Department"
+      "Alameda Health System is headquartered in Oakland, CA (1411 East 31st Street), matching OUSD's Oakland location (alamedahealthsystem.org contact page)",
+      "AHS's own site says its health internship program is open to students who attend an Oakland Unified School District (OUSD) public or charter school, showing a direct working link with OUSD",
+      "AHS is a public health care system that runs hospitals and wellness centers, consistent with OUSD's 'Student health, support & family services' MOU with the Community Schools and Student Services Department"
     ],
     "key": "n-alameda-health-system",
-    "notes": "The organization's own website (alamedahealthsystem.org) failed automated fetching (certificate error) and the web search budget was exhausted, so website, contact details and registry IDs were not confirmed and are left null. No page was found linking AHS to OUSD directly; the OUSD community schools page did not name it. ProPublica lists only related entities (Alameda Health System Foundation, EIN 94-3103136; Alameda Health System Medical Staff), which are separate from the public hospital authority itself, so no EIN is given. Needs manual verification of the official site before publishing.",
+    "notes": "Public hospital authority, not a nonprofit, so no EIN is listed (the separate Alameda Health System Foundation has its own EIN and is a different entity). The official site fails TLS verification in WebFetch but loads with curl. The 510-437-4800 number is labeled General Inquiries and Operator Assistance. No general email found. California Secretary of State and SAM.gov were not checked.",
     "profile": {
-      "address": null,
+      "address": "1411 East 31st Street Oakland, CA. 94602",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
+      "headquarters": "Oakland, CA",
       "legalName": "Alameda Health System",
       "orgType": "public_agency",
-      "phone": null,
+      "phone": "510-437-4800",
       "samUei": null,
-      "summary": "Alameda Health System is a public hospital authority in Alameda County, California. It runs hospitals, including Highland Hospital in Oakland, and primary care clinics that serve the county, including low-income residents. It is governed by a board of trustees appointed by the Alameda County Board of Supervisors.",
-      "website": null
+      "summary": "Alameda Health System is an integrated public health care system in Alameda County, California. It runs five hospitals and four wellness centers, including Highland Hospital in Oakland. It began in 1864 as the Alameda County Infirmary and is governed as a public hospital authority.",
+      "website": "https://www.alamedahealthsystem.org/"
     },
     "sources": [
       {
         "supports": [
-          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website",
+          "legalName"
+        ],
+        "title": "Contact Us - Alameda Health System",
+        "url": "https://www.alamedahealthsystem.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName"
+        ],
+        "title": "About Us - Alameda Health System",
+        "url": "https://www.alamedahealthsystem.org/about-us/"
+      },
+      {
+        "supports": [
           "summary",
           "orgType"
         ],
         "title": "Alameda Health System - Wikipedia",
         "url": "https://en.wikipedia.org/wiki/Alameda_Health_System"
+      },
+      {
+        "supports": [],
+        "title": "Calling all Oakland high schoolers: Apply for Alameda Health System's health care internship program. - Alameda Health System",
+        "url": "https://www.alamedahealthsystem.org/calling-all-oakland-high-schoolers-applications-are-open-for-heal-alameda-health-systems-hands-on-medical-healthpath-internship-program/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-alameda-health-system",
+    "notes": "AHS is the Alameda County public hospital authority; its own site says its internship serves OUSD students, and a student health MOU fits. Summary and phone (General Inquiries 510-437-4800) are supported by the About, Contact and Wikipedia pages, but 1411 East 31st St is listed there only as Highland Hospital, not as AHS headquarters or a general address.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address",
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
 }

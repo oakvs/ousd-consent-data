@@ -1,17 +1,63 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.holisticallydope.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lasummerofjoy.org/pdsummit/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009025",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "A website at holisticallydope.com exists under the name 'Holistically Dope', titled 'Professional Development and Wellness Consulting' (page content is script-rendered, so details could not be read)",
+      "A Los Angeles-area out-of-school-time professional development summit lists 'Holistically Dope' as presenter of a mindfulness self-care session for educators in OST programs, which is consistent with OUSD's after-school and summer program contracts"
+    ],
     "key": "v-009025",
-    "notes": "Not confirmed. The web search budget was exhausted, ProPublica returned HTTP 429, and holisticallydope.com (unverified as the same organization) showed only a generic 'Professional Development and Wellness Consulting' page with no location or contact details. Could not confirm a Van Nuys, CA match or an after-school/summer program link, so nothing was filled in. Worth retrying with search access.",
-    "profile": null,
-    "sources": []
+    "notes": "Could not confirm the legal entity, registry IDs, contact details, or that the Van Nuys, CA location in the agenda matches this organization. No California Secretary of State, IRS or SAM.gov record was found and read. Website content is script-rendered and unreadable by automated fetch. Do not publish.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": null,
+      "phone": null,
+      "samUei": null,
+      "summary": "Holistically Dope appears to offer wellness and professional development programming, including mindfulness and self-care sessions for educators in out-of-school-time programs.",
+      "website": "https://www.holisticallydope.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Professional Development and Wellness Consulting",
+        "url": "https://www.holisticallydope.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Professional Development Summit 2025 - LA Summer of Joy",
+        "url": "https://lasummerofjoy.org/pdsummit/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

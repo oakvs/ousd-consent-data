@@ -1,17 +1,48 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://b2bhint.com/en/company/us-ca/upfront-interpreting-llc--202250011825",
+      "pass": false
+    }
+  ],
   "key": "v-008967",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches 'UpFront Interpreting, LLC', a California LLC (entity 202250011825) listed in the aggregator b2bhint.com as sign language interpreting services; only an aggregator listing was found, not the official Secretary of State record",
+      "Agenda gives Alamo, CA but the listing gives Concord, CA (both Contra Costa County); not an exact match",
+      "No official website, About or Contact page could be found or confirmed; the upfrontinterpreting.com and .net domains are parked or unverified"
+    ],
     "key": "v-008967",
-    "notes": "No credible candidate found. The session's web search budget was exhausted (200 of 200) before any search could run, and the one guessed domain (upfrontinterpreting.com) is a parked Namecheap page, not this vendor. Agenda gives only 'UpFront Interpreting', Alamo, CA (Risk Management services agreement); it may be a sole-proprietor interpreter, which was not verified. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Plausible candidate only. Single third-party aggregator source (blocks automated fetch); city mismatch (Alamo in agenda vs Concord in listing); no official site found. Not publishable. Verify on bizfileonline.sos.ca.gov before use.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California limited liability company listed as providing sign language interpreting services in Contra Costa County. Identity not confirmed against the official registry or the company's own website.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "UpFront Interpreting, LLC - 202250011825 - California",
+        "url": "https://b2bhint.com/en/company/us-ca/upfront-interpreting-llc--202250011825"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

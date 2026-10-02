@@ -1,17 +1,110 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/811527848",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://wellbeyondacademics.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://wellbeyondacademics.org/support/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008876",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Well Beyond Academics Inc' (ProPublica Nonprofit Explorer, EIN 81-1527848)",
+      "Registered in San Francisco, CA, matching the agenda's location 'San Francisco, CA'",
+      "Website describes school-based health programming (sexuality education, substance use prevention, suicide prevention), consistent with OUSD's 'Student health, support & family services' category"
+    ],
     "key": "v-008876",
-    "notes": "Not researched to a conclusion: the session's web search budget was exhausted, ProPublica Nonprofit Explorer returned HTTP 429, and a guessed domain did not resolve. No candidate organization was identified, so nothing was filled in. Worth re-running when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Website does not mention Oakland Unified/OUSD, and no mailing address appears on the organization's own pages, so address is null. Identity rests on exact name match to the registered nonprofit, San Francisco location, and service type.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "81-1527848",
+      "email": "info@wellbeyondacademics.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Well Beyond Academics Inc",
+      "orgType": "nonprofit",
+      "phone": "415-754-0445",
+      "samUei": null,
+      "summary": "A nonprofit founded by mental health clinicians that partners with schools to provide health education programs. Its programs cover sexuality education, substance use prevention and suicide prevention, with curricula and training for school staff, students and families.",
+      "website": "https://wellbeyondacademics.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Well Beyond Academics Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/811527848"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Well Beyond Academics, Inc.",
+        "url": "https://wellbeyondacademics.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Well Beyond Academics - Support",
+        "url": "https://wellbeyondacademics.org/support/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008876",
+    "notes": "Exact name match to the San Francisco 501(c)(3) Well Beyond Academics Inc (EIN 81-1527848, ProPublica), and its school health programming fits OUSD's student health services category. Summary, phone and generic info@ email are supported by the cited pages; the founders-are-clinicians claim is true per the site's /founders/ page (not cited, but verified), and no named individuals' emails were included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

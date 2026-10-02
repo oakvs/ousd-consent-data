@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://www.ddesigncom.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.ddesigncom.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.ddesigncom.com/certifications/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001380",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Company is based in Oakland, CA (8128 Capwell Drive), matching the agenda location 'Oakland, CA'",
+      "Company's own Certifications page lists Oakland Unified School District (OUSD) among the districts it is certified to work for",
+      "Company is an electrical, communications, fire alarm and security contractor, matching OUSD's maintenance, solar and construction agreements with Digital Design Communications for school facilities projects",
+      "Exact name 'Digital Design Communications' matches the agenda name"
+    ],
     "key": "v-001380",
-    "notes": "Research not completed: the session's WebSearch budget was exhausted (200 of 200), so no candidate organization could be found or verified. Agenda text gives only 'Digital Design Communications', Oakland, CA (contracts for building maintenance, solar, construction and Nutrition Services). Needs a re-run once the search limit (CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION) is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (CA Secretary of State entity number, SAM UEI) not looked up; legal name not confirmed from a registry. The only email on the site is a named individual's address, so it was omitted.",
+    "profile": {
+      "address": "8128 Capwell Drive, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 632-0650",
+      "samUei": null,
+      "summary": "Digital Design Communications is a licensed (C-10 electrical) contractor based in Oakland, California. It designs, engineers and installs communications and network systems, electrical systems, fire alarm systems and security systems for public and private clients.",
+      "website": "http://www.ddesigncom.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - My website",
+        "url": "http://www.ddesigncom.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "http://www.ddesigncom.com/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "Certifications - My website",
+        "url": "http://www.ddesigncom.com/certifications/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001380",
+    "notes": "Fetched the cited ddesigncom.com pages: exact name, Oakland CA address (8128 Capwell Drive), phone, C-10 licensed electrical/communications/fire alarm/security services, and an OUSD vendor certification all match the candidate and fit OUSD's electrical, solar and facilities agreements. The summary is neutral and supported, and the named individual's email was correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

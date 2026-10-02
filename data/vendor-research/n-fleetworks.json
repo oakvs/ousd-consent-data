@@ -1,17 +1,90 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.fleetworksinc.com/locations/oakland",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fleetworksinc.com/company/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-fleetworks",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Fleetworks Inc. operates a truck and heavy-duty repair shop in Oakland, CA, matching the agenda location 'Oakland, CA'",
+      "Its services (fleet maintenance, heavy-duty and truck repair for corporate and municipal fleets) match the agenda item 'RFP 26-172TW Vehicle and Heavy Duty Maintenance' for the Departments of Transportation and Warehouse",
+      "Legal name 'Fleetworks Inc.' on its website matches the agenda name 'Fleetworks Inc.'"
+    ],
     "key": "n-fleetworks",
-    "notes": "No credible candidate confirmed. The session's WebSearch budget was exhausted before any search could run. A guess at fleetworks.com returned Fleet Works Repair Centre of Calgary, Alberta, which does not match the Oakland, CA agenda text, so it was rejected. Needs a retry with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry (CA Secretary of State, SAM.gov) match was checked or confirmed, and no page found links Fleetworks to OUSD directly; identity rests on name, Oakland location and service match with the RFP title. The company's website lists Santa Fe Springs, CA as another location; headquarters left null because it was not clearly stated. Phone and address are for the Oakland shop.",
+    "profile": {
+      "address": "8469 Pardee Dr, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Service@fleetworksinc.com",
+      "headquarters": null,
+      "legalName": "Fleetworks Inc.",
+      "orgType": "company",
+      "phone": "510-319-7074",
+      "samUei": null,
+      "summary": "Fleetworks Inc. is a company that repairs and maintains heavy-duty trucks, trailers and equipment for businesses and public fleets. It offers shop repair, mobile truck repair, preventive maintenance and inspections from locations in Oakland, Santa Fe Springs and Riverside, California.",
+      "website": "https://www.fleetworksinc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Keep Your Fleet Moving: Oakland, CA Truck & Heavy-Duty Repair",
+        "url": "https://www.fleetworksinc.com/locations/oakland"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us",
+        "url": "https://www.fleetworksinc.com/company/about"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

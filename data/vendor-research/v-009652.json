@@ -2,22 +2,27 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://opencorporates.com/companies?q=california+school+inspections&jurisdiction_code=us_ca",
+      "field": "source:https://casbo2026.smallworldlabs.com/?page_id=2424&boothId=boothId%3D109041",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.californiaschoolinspections.com",
+      "field": "source:https://californiaschoolinspections.com/about-csi/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.californiaschoolinspections.com/about",
+      "field": "source:https://californiaschoolinspections.com/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "legalName",
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
       "pass": true
     },
     {
@@ -31,54 +36,66 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches the only California registry record for 'California School Inspections' (OpenCorporates: CALIFORNIA SCHOOL INSPECTIONS, LLC, El Dorado Hills, CA), matching the agenda's name and 'El Dorado Hills, CA'",
-      "Website californiaschoolinspections.com describes school facility inspection services (Williams Act FIT inspections, playground surfacing and turf field testing), matching OUSD's 'Food, transportation & operations' contract category",
-      "The website's About page lists Oakland Unified as a past project client"
+      "Name matches exactly: 'California School Inspections' (own website and CASBO 2026 exhibitor profile)",
+      "CASBO exhibitor profile gives the address 5355 Brentford Way, El Dorado Hills, CA 95762, matching the agenda location 'El Dorado Hills, CA'",
+      "Company's About page says it serves Oakland Unified on facilities projects",
+      "Facility inspection services fit OUSD's 'Food, transportation & operations' category under the Chief Systems and Services Officer"
     ],
     "key": "v-009652",
-    "notes": "Web search budget was exhausted, so only a registry aggregator and the vendor's own site were checked. The website calls the business 'a California Partnership' while the registry lists an LLC, and the site shows no address or location, so the link between the website and the El Dorado Hills LLC is not directly confirmed. The registry address appears to be a residential-style street address and was deliberately omitted. No public phone or email found on the site (contact form only). Confirm against the California Secretary of State record before publishing. Registry entity number 201510610086 was reported by OpenCorporates but could not be verified on a citable page, so it was dropped.",
+    "notes": "Legal entity name, SOS entity number, EIN and UEI not found; the company's own pages show no phone, email or address, so contact details come from a CASBO conference exhibitor listing. The company describes itself as a California Partnership.",
     "profile": {
-      "address": null,
+      "address": "5355 Brentford Way, El Dorado Hills, CA 95762",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "El Dorado Hills, CA",
-      "legalName": "CALIFORNIA SCHOOL INSPECTIONS, LLC",
+      "legalName": null,
       "orgType": "company",
-      "phone": null,
+      "phone": "916-960-7270",
       "samUei": null,
-      "summary": "California School Inspections is a consulting and inspection service provider for California school districts. It specializes in school facility inspections required under the Williams Act, and in impact testing of playground surfacing and turf fields.",
-      "website": "https://www.californiaschoolinspections.com"
+      "summary": "California School Inspections is a California partnership that provides consulting and inspection services to California school districts and other local education agencies. Its work includes annual Williams Act facility inspections using the state's Facility Inspection Tool, playground surfacing tests, and turf field safety testing.",
+      "website": "http://www.californiaschoolinspections.com"
     },
     "sources": [
       {
         "supports": [
-          "legalName",
-          "orgType",
-          "headquarters"
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
         ],
-        "title": "OpenCorporates search: California School Inspections",
-        "url": "https://opencorporates.com/companies?q=california+school+inspections&jurisdiction_code=us_ca"
+        "title": "CSI: California School Inspections - Exhibitor - CASBO2026",
+        "url": "https://casbo2026.smallworldlabs.com/?page_id=2424&boothId=boothId%3D109041"
       },
       {
         "supports": [
           "summary",
-          "website"
+          "orgType"
         ],
-        "title": "California School Inspections",
-        "url": "https://www.californiaschoolinspections.com"
+        "title": "About CSI - California School Inspections",
+        "url": "https://californiaschoolinspections.com/about-csi/"
       },
       {
         "supports": [
-          "summary"
+          "summary",
+          "orgType"
         ],
-        "title": "California School Inspections - About",
-        "url": "https://www.californiaschoolinspections.com/about"
+        "title": "California School Inspections",
+        "url": "https://californiaschoolinspections.com/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009652",
+    "notes": "Organization is the right one (name, El Dorado Hills address and phone on the CASBO listing, and the About page names Oakland Unified as a client), but the summary's claim that it is a 'California partnership' appears in none of the cited pages (the About page and homepage state no legal form), so the summary is not fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
 }

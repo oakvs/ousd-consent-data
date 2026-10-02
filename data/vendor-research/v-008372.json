@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.swansonandcosgrave.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.swansonandcosgrave.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.swansonandcosgrave.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008372",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's website footer reads 'Swanson and Cosgrave Consulting LLC', and its contact page lists 'Swanson & Cosgrave Consulting, LLC', matching the agenda's 'Swanson & Cosgrave Consulting LLC'",
+      "Located in Eugene, OR (mailing address on the contact page), matching the agenda's location 'Eugene, OR'",
+      "Website describes training, coaching and program design for schools in project-based learning, curriculum design and school reform, consistent with OUSD's Linked Learning Department 'Classroom & academic programs' contracts"
+    ],
     "key": "v-008372",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted, and a direct guess at the company website did not resolve. No candidate was found or confirmed. Re-queue when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "The company's contact page lists only individual consultants' phone numbers and Gmail addresses and no general line or inbox, so phone and email were left null. No registry page (Oregon Secretary of State, SAM.gov) was checked, so there is no entity number or UEI. The company's own pages do not mention Oakland or OUSD; identity rests on the exact name, the Eugene, OR location and the matching line of work. The business is an Oregon LLC, not a California entity.",
+    "profile": {
+      "address": "1574 Coburg Rd #164, Eugene, OR 97401-4802",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Eugene, OR",
+      "legalName": "Swanson & Cosgrave Consulting, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "An education consulting company that provides training, coaching and program design services to schools. Its work includes project-based learning, curriculum design, teacher professional development and whole-school reform planning.",
+      "website": "https://www.swansonandcosgrave.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | Swanson and Cosgrave",
+        "url": "https://www.swansonandcosgrave.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us | Swanson and Cosgrave",
+        "url": "https://www.swansonandcosgrave.com/about-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Project Based Learning | Swanson and Cosgrave | Home",
+        "url": "https://www.swansonandcosgrave.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008372",
+    "notes": "The contact page shows the exact legal name 'Swanson & Cosgrave Consulting, LLC' at a Eugene, OR mailing address, which matches the agenda vendor and location. The About and Home pages support the neutral summary (project-based learning, curriculum design, teacher PD, whole-school reform, CTE), which fits a Linked Learning contract. Individuals' phones and emails were correctly left out.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,124 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://bayviewservices.com/divisions/bayview-environmental/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bayviewservices.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aec-ca.org/memberinfo/bayview-environmental.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/bayview-environmental-services-inc-10434757/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-005216",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: 'Bayview Environmental Services, Inc.' is a registered federal contractor (SAM.gov data via HigherGov) and a member listing of the Association of Environmental Contractors",
+      "Located at 6925 San Leandro Street, Oakland, CA, matching the agenda's Oakland location (the street name may explain the agenda's 'San Leandro' mention)",
+      "Business is demolition, asbestos/lead abatement and hazardous-material remediation, matching OUSD contracts for a school demolition project and a risk management services agreement",
+      "Company website (Bayview Services) lists the same Oakland office address and phone as the member listing"
+    ],
     "key": "v-005216",
-    "notes": "Not researched: the session's WebSearch budget (200/200) was exhausted, so no candidate organization could be found or identity-confirmed. A guessed domain (bayviewenvironmental.com) did not resolve. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda context: demolition contractor for Ralph Bunche Academy (Oakland/San Leandro, CA).",
-    "profile": null,
-    "sources": []
+    "notes": "No page found that directly ties this company to OUSD contracts; identity rests on exact name, Oakland location and matching trade. Agenda also lists San Leandro, CA, which is unexplained (company address is on San Leandro Street in Oakland). California Secretary of State entity number and EIN not found. UEI taken from HigherGov mirror of SAM.gov data. The website belongs to the parent brand Bayview Services; HigherGov lists parent as Bayview Insulation Services.",
+    "profile": {
+      "address": "6925 San Leandro Street, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Bayview Environmental Services, Inc.",
+      "orgType": "company",
+      "phone": "(510) 562-6181",
+      "samUei": "UJDYGPS2JAC8",
+      "summary": "A California company based in Oakland that provides hazardous-material cleanup and related construction services. Its work includes removing asbestos and lead, cleaning up contaminated soil, handling mold and other biohazards, responding to emergencies, and demolition. It is part of the Bayview Services group of companies.",
+      "website": "https://bayviewservices.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Bayview Environmental - Bayview Services",
+        "url": "https://bayviewservices.com/divisions/bayview-environmental/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Bayview Services",
+        "url": "https://bayviewservices.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Bayview Environmental Services, Inc. - Association of Environmental Contractors",
+        "url": "https://www.aec-ca.org/memberinfo/bayview-environmental.php"
+      },
+      {
+        "supports": [
+          "samUei",
+          "summary",
+          "orgType"
+        ],
+        "title": "Bayview Environmental Services - HigherGov",
+        "url": "https://www.highergov.com/awardee/bayview-environmental-services-inc-10434757/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005216",
+    "notes": "Exact legal name, Oakland address (6925 San Leandro Street explains the agenda's San Leandro mention), phone, UEI and trade (asbestos/lead abatement, hazmat remediation, demolition) are confirmed by the cited sources and fit the Ralph Bunche demolition and risk-management contracts. Summary is neutral and supported; no named-individual contacts are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

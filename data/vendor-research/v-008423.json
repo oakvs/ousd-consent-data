@@ -2,12 +2,22 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/840432238",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://www.claytonearlylearning.org/",
       "pass": true
     },
     {
       "detail": null,
       "field": "source:https://www.claytonearlylearning.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.claytonearlylearning.org/about-us-1",
       "pass": true
     },
     {
@@ -22,6 +32,16 @@
     },
     {
       "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "website",
       "pass": true
     }
@@ -29,35 +49,44 @@
   "key": "v-008423",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches exactly: 'Clayton Early Learning' (organization's own website)",
-      "Located in Denver, CO, matching the agenda text's 'Denver, CO'",
-      "Website describes early childhood education and family services, consistent with OUSD's Early Childhood Development Department contract (weak: no page found that mentions Oakland or OUSD)"
+      "Name matches a registered 501(c)(3) nonprofit: 'Clayton Early Learning' (ProPublica Nonprofit Explorer, EIN 84-0432238, Denver, CO)",
+      "Located in Denver, CO, matching the agenda text",
+      "Website describes early childhood education and family support services, matching OUSD's Early Childhood Development Department services agreement and its Inclusive Early Education Expansion Program funding"
     ],
     "key": "v-008423",
-    "notes": "Registry lookup (ProPublica Nonprofit Explorer) was rate-limited (HTTP 429) and the web search budget was exhausted, so nonprofit status and EIN were not confirmed and orgType/legalName/EIN are left null. No page found mentions Oakland or OUSD, so identity rests on exact name, Denver location, and service type; a reviewer should confirm via a registry before publishing.",
+    "notes": "No general email is listed on the contact page (online form only), so email is null. No California registration or SAM.gov UEI checked; Colorado-based organization. A separate EIN 74-2363395 (George W. Clayton Trust) appeared in search results and was not used.",
     "profile": {
-      "address": "3801 Martin Luther King Blvd. Denver, CO 80205",
+      "address": "3801 Martin Luther King Blvd., Denver, CO 80205",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "84-0432238",
       "email": null,
       "headquarters": "Denver, CO",
-      "legalName": null,
-      "orgType": null,
+      "legalName": "Clayton Early Learning",
+      "orgType": "nonprofit",
       "phone": "(303) 355-4411",
       "samUei": null,
-      "summary": "Clayton Early Learning provides early childhood education and family support services in Denver, Colorado. It runs an early learning school called Educare Denver, along with home-based and community-based programs. It also offers health and wellness programs and a food assistance market for families.",
+      "summary": "Clayton Early Learning is a Denver nonprofit that partners with families to provide early childhood education and family support services. It runs an on-site school (Educare Denver), home-based programs and community-based programs for infants, toddlers and preschool-aged children, along with health and wellness initiatives.",
       "website": "https://www.claytonearlylearning.org/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "website",
+          "legalName",
+          "ein",
+          "orgType",
           "headquarters"
+        ],
+        "title": "Clayton Early Learning - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/840432238"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
         ],
         "title": "Clayton Early Learning",
         "url": "https://www.claytonearlylearning.org/"
@@ -70,9 +99,22 @@
         ],
         "title": "Contact Us - Clayton Early Learning",
         "url": "https://www.claytonearlylearning.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - Clayton Early Learning",
+        "url": "https://www.claytonearlylearning.org/about-us-1"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008423",
+    "notes": "Name and Denver, CO location match the agenda; ProPublica confirms Clayton Early Learning, EIN 84-0432238, 501(c)(3), Denver. Phone, address and program description are confirmed on the organization's own pages, and the summary is neutral and fits an early childhood services agreement.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

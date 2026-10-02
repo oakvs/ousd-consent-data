@@ -1,17 +1,100 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.musson.com/contact/info/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.musson.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-002969",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: agenda text 'Musson Theatrical'; company's own contact page names 'Musson Theatrical, Inc.'",
+      "Located in Santa Clara, CA (890 Walsh Ave), matching the agenda location 'Santa Clara, CA'",
+      "Company supplies theatrical lighting, curtains, seating, installation and repair, and lists schools as a customer category, consistent with service agreements for middle-school theaters (Edna Brewer and Montera Middle Schools)"
+    ],
     "key": "v-002969",
-    "notes": "Not researched: web search budget was exhausted and direct fetches of the likely company site returned no content (empty page / HTTP 429), so no identity could be confirmed. Agenda text spells the name 'Musson Theatrical' (also 'Munson Theatrical' in titles), Santa Clara, CA; services agreements for Edna Brewer and Montera Middle Schools. Needs a re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (CA Secretary of State, SAM.gov) not checked/confirmed; left null. Agenda spells the name 'Musson' and 'Munson' (typo); the company is Musson Theatrical.",
+    "profile": {
+      "address": "890 Walsh Ave, Santa Clara, CA 95050",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@musson.com",
+      "headquarters": "Santa Clara, CA",
+      "legalName": "Musson Theatrical, Inc.",
+      "orgType": "company",
+      "phone": "1-800-843-2837",
+      "samUei": null,
+      "summary": "A company in Santa Clara, California that supplies theatrical and entertainment lighting, stage curtains, seating and related equipment. It also offers design services, custom installations, production support and equipment repair for theaters, schools and other venues.",
+      "website": "https://www.musson.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "General Info & Hours",
+        "url": "https://www.musson.com/contact/info/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Musson Theatrical",
+        "url": "https://www.musson.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002969",
+    "notes": "Musson Theatrical, Inc. of Santa Clara, CA matches the agenda name and city, and its theatrical lighting, curtains, seating, installation and repair services fit service agreements for middle-school theaters. Cited pages support every non-null field, and the summary is neutral and generic business contact info only.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

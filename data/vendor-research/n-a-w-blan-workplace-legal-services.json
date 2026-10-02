@@ -1,17 +1,88 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://workplacelegalservices.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://workplacelegalservices.com/contact-me/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-a-w-blan-workplace-legal-services",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Business name on its own website exactly matches the agenda name: 'A.W. Blan Workplace Legal Services'",
+      "Located in Sacramento, CA (500 Capitol Mall, Suite 2350), matching the agenda location",
+      "Website describes workplace and campus investigations, matching OUSD's 'Investigation and Legal Services Agreement' with the General Counsel office",
+      "A California business registry aggregator lists 'A.W. BLAN WORKPLACE LEGAL SERVICES, P.C.' as a California professional corporation (not fetchable for verification)"
+    ],
     "key": "n-a-w-blan-workplace-legal-services",
-    "notes": "Not researched: the session's WebSearch budget was exhausted (200 of 200) before any candidate could be found, and a guessed domain did not resolve. No identity could be confirmed. The name may be a sole practitioner's law practice (Sacramento, CA); a reviewer should re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Small law practice operated under the owner's name; operates as a professional corporation per a registry aggregator (entity number 6393901 per b2bhint.com, not verifiable via fetch, so omitted). Only contact email on the site is a named individual's address, so omitted. No page found naming OUSD specifically.",
+    "profile": {
+      "address": "500 Capitol Mall, Suite 2350, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(916) 333-9311",
+      "samUei": null,
+      "summary": "A Sacramento, California law practice that provides workplace and campus investigations. Its work includes investigations of discrimination, harassment, retaliation and other workplace misconduct, and Title IX investigations, for employers and educational institutions.",
+      "website": "https://workplacelegalservices.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Workplace Legal Services",
+        "url": "https://workplacelegalservices.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Me",
+        "url": "https://workplacelegalservices.com/contact-me/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-a-w-blan-workplace-legal-services",
+    "notes": "Website name, Sacramento address and phone match the agenda vendor, and its workplace/Title IX investigation services fit OUSD's Investigation and Legal Services Agreement with General Counsel. Website and contact page confirm every non-null field; the summary's 'retaliation' and 'educational institutions' wording is a mild extrapolation from 'workplace and campus investigations' and 'Title IX', and the site names public entities as clients. Email correctly omitted as a named individual's address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

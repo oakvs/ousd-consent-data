@@ -7,6 +7,31 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.mimscience.org/contactus",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mimscience.org/who-we-are",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandvoices.us/2026/07/18/oakland-mentoring-medicine-science-mims-20-years/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "ein",
       "pass": true
     },
@@ -14,47 +39,83 @@
       "detail": null,
       "field": "legalName",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
     }
   ],
   "key": "v-002825",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered nonprofit: 'Mentoring In Medicine & Science Inc' (ProPublica Nonprofit Explorer, EIN 27-3263074)",
-      "Registry lists the organization in Oakland, CA, matching the agenda text"
+      "Name matches a registered 501(c)(3) nonprofit: 'Mentoring In Medicine & Science Inc' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 27-3263074)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes health-careers mentoring, internships and certifications for students, matching OUSD's 'Classroom & academic programs' and 'Student health, support & family services' contracts",
+      "The organization's own site uses the name 'Mentoring in Medicine & Science, Inc' and the abbreviation MIMS, matching the agenda's '(MIMS)'; a local news article describes its work with Oakland Technical High School, one of the schools named in the OUSD agreements"
     ],
     "key": "v-002825",
-    "notes": "Only the registry match (name + Oakland) was confirmed. The organization's own website could not be found: web search budget was exhausted, and guessed domains failed. mentoringinmedicine.org redirects to medicalmentor.org (Mentoring in Medicine), which shows no location and no Oakland or OUSD mention, so it was NOT treated as the same organization. No website or contact details filled in. Needs a second identity signal (e.g. own website or OUSD mention) before publishing.",
+    "notes": "No street address on the organization's contact page; an aggregator-listed address was not used. California entity number and SAM UEI were not checked or found.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": "27-3263074",
-      "email": null,
+      "email": "admin@mimscience.org",
       "headquarters": "Oakland, CA",
       "legalName": "Mentoring In Medicine & Science Inc",
       "orgType": "nonprofit",
-      "phone": null,
+      "phone": "(510) 835-1747",
       "samUei": null,
-      "summary": "A 501(c)(3) nonprofit in Oakland, California, organized for educational, charitable and scientific purposes. The IRS classifies it under health support services.",
-      "website": null
+      "summary": "Mentoring in Medicine and Science (MIMS) is an Oakland nonprofit founded in 2006. It works to increase the number of underrepresented health professionals through mentoring, career exposure and leadership development. Its programs include a summer internship, health certification trainings (such as CPR and First Aid), pre-apprenticeships and mentor programs.",
+      "website": "https://www.mimscience.org/"
     },
     "sources": [
       {
         "supports": [
           "legalName",
           "ein",
-          "headquarters",
           "orgType",
-          "summary"
+          "headquarters"
         ],
         "title": "Mentoring In Medicine & Science Inc - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/273263074"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "Contact Us - Mentoring in Medicine & Science",
+        "url": "https://www.mimscience.org/contactus"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Who We Are - Mentoring in Medicine & Science",
+        "url": "https://www.mimscience.org/who-we-are"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "MIMS opens health care pathways for Oakland students",
+        "url": "https://oaklandvoices.us/2026/07/18/oakland-mentoring-medicine-science-mims-20-years/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002825",
+    "notes": "Oakland nonprofit (EIN 27-3263074) uses the name and MIMS abbreviation from the agenda, runs health-careers mentoring/internship programs fitting OUSD's academic and student-health contracts, and has an Oakland Tech connection. Every profile field, including the 2006 founding year, is shown by a cited source and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

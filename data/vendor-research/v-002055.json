@@ -2,7 +2,32 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/help-everyone-reach-one",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.helpeveryonereachone.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://www.helpeveryonereachone.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,30 +39,49 @@
   "key": "v-002055",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Organization's own website (helpeveryonereachone.com) identifies the HERO program as 'Help Everyone Reach One', serving Oakland and other East Bay communities",
-      "Website describes school-site sports, student leadership, extracurricular and academic support programs, matching OUSD's 'Student health, support & family services' and 'Classroom & academic programs' contracts",
-      "Website carries an endorsement from a former Oakland Unified superintendent about the HERO program at school sites"
+      "Agenda name 'HERO' matches the acronym of Help Everyone Reach One, Inc., a California general corporation with an Oakland, CA address, matching the agenda location (Oakland, CA)",
+      "The HERO website describes in-school structured recess, physical activity and life-skills programs for Bay Area schools, matching OUSD's contracts for student support and classroom programs at elementary schools",
+      "The HERO website quotes the former Oakland Unified School District Superintendent endorsing the HERO program at school sites"
     ],
     "key": "v-002055",
-    "notes": "Could not confirm in a public registry: ProPublica Nonprofit Explorer returned no organization named 'Help Everyone Reach One', and no contact details, legal name or EIN appear on the site. Search budget was exhausted, so CA Secretary of State and SAM.gov were not checked. Needs human verification before publishing.",
+    "notes": "Registry details come from a third-party mirror of California Secretary of State data (bizprofile.net), not the Secretary of State site directly. The address looks like a private mailbox (No 138), so it is a mailing address. The organization's website lists no phone number or email, only a request form. Not found in ProPublica Nonprofit Explorer; filed as a for-profit general corporation.",
     "profile": {
-      "address": null,
-      "caEntityNumber": null,
+      "address": "4200 Park Blvd No 138, Oakland, CA 94602",
+      "caEntityNumber": "2925939",
       "ein": null,
       "email": null,
-      "headquarters": null,
-      "legalName": null,
-      "orgType": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Help Everyone Reach One, Inc.",
+      "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "HERO (Help Everyone Reach One) provides programs to schools in the Bay Area, including structured recess, sports and physical activity, student leadership, extracurricular activities and academic support.",
+      "summary": "Help Everyone Reach One (HERO) is an Oakland-based company that runs a life-skills program for schools in the Bay Area. It teaches life skills through games and playground activities, and offers coaching, staff training and sports camps.",
       "website": "https://www.helpeveryonereachone.com/"
     },
     "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Help Everyone Reach One, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/help-everyone-reach-one"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About — Help Everyone Reach One",
+        "url": "https://www.helpeveryonereachone.com/about"
+      },
       {
         "supports": [
           "summary",
@@ -48,6 +92,14 @@
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002055",
+    "notes": "Help Everyone Reach One, Inc. (CA corp 2925939, Oakland) matches the HERO agenda name and Oakland location; its site serves Oakland schools and quotes the former OUSD superintendent, and the games, coaching, training and sports camp services fit what OUSD buys. The summary's 'playground activities' and the 'structured recess' identity signal are not on the cited pages, so the summary is dropped; the other fields are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
 }

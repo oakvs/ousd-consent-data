@@ -1,54 +1,17 @@
 {
-  "checks": [
-    {
-      "detail": null,
-      "field": "source:https://opencorporates.com/companies/us_wa/601490248",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "legalName",
-      "pass": true
-    }
-  ],
+  "checks": [],
   "key": "v-006133",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
-    "identitySignals": [
-      "Name matches a registered Washington for-profit corporation: 'PACIFIC SUPPORT SYSTEMS, INC.' (OpenCorporates, status Active)",
-      "Registered address is in Lynnwood, WA, matching the agenda text 'Lynnwood, WA'"
-    ],
+    "confidence": "none",
+    "identitySignals": [],
     "key": "v-006133",
-    "notes": "Only registry evidence found (name plus Lynnwood, WA match). Web search budget was exhausted, and guessed website domains did not resolve, so the organization's own site could not be found and its business (food safety and sanitation services, per OUSD RFP #25-159.1NS) is not independently confirmed. Washington UBI number 601490248 is not a California entity number, so caEntityNumber is left null. Needs a human or a further search before publishing.",
-    "profile": {
-      "address": null,
-      "caEntityNumber": null,
-      "ein": null,
-      "email": null,
-      "headquarters": "Lynnwood, WA",
-      "legalName": "PACIFIC SUPPORT SYSTEMS, INC.",
-      "orgType": "company",
-      "phone": null,
-      "samUei": null,
-      "summary": "A for-profit corporation registered in Washington State with a business address in Lynnwood, Washington. No public description of its services could be confirmed.",
-      "website": null
-    },
-    "sources": [
-      {
-        "supports": [
-          "legalName",
-          "orgType",
-          "headquarters",
-          "summary"
-        ],
-        "title": "PACIFIC SUPPORT SYSTEMS, INC. - OpenCorporates",
-        "url": "https://opencorporates.com/companies/us_wa/601490248"
-      }
-    ]
+    "notes": "Search snippets (not fetchable) suggest Pacific Support Systems, Inc. is a Lynnwood, WA reseller of the PortionPac SFSPac food safety and sanitation system for school nutrition, which would fit the OUSD contract, and pacsystems.org redirects to the SFSPac page. However, no page I could fetch (portionpac.com, sfspac.com, SNA-VA, Facebook) names Pacific Support Systems, and ZoomInfo, Manta and Yellow Pages returned 403. No registry (WA Secretary of State, SAM.gov) was verified. Unconfirmed, so no profile is published. Note pacfss.com (Pacific Food Safety Systems, Honolulu) is a different company.",
+    "profile": null,
+    "sources": []
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

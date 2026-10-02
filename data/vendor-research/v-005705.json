@@ -1,17 +1,54 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/motion-picture-film-distributors/civic-productions-llc-1116-892232",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
   "key": "v-005705",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "A BBB listing names 'Civic Productions, LLC' in Oakland, CA, matching the agenda name and city (BBB category: motion picture film distributor, which does not obviously match OUSD's classroom and academic program contracts)",
+      "No official website, Secretary of State record, or page connecting this LLC to OUSD high school programs was found; a possible link to Civic Design Studio (Oakland, works with Castlemont and Oakland High art students) rests only on a shared principal name in business directories and is unconfirmed"
+    ],
     "key": "v-005705",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted, so no candidate organization could be found or confirmed. A guessed direct fetch of civicproductions.com returned 404. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Not publishable. Could not confirm that the Oakland LLC in the BBB/D&B directories is the OUSD vendor (BBB category is film distribution; OUSD contracts are for classroom/academic programs at Castlemont, Oakland, Fremont and Oakland International High Schools, funded by CTE Incentive Grant and Green California Partnership Academy). Directories list conflicting addresses (3400 Macarthur Blvd vs 4124B MacArthur Blvd) and name an individual principal; contact details intentionally omitted. Possible connection to Civic Design Studio (civicdesignstudio.com) is unverified. Needs CA Secretary of State lookup (bizfileonline) or OUSD contract documents to resolve.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Civic Productions, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Civic Productions, LLC is a small limited liability company based in Oakland, California. A Better Business Bureau listing categorizes it as a motion picture film distributor. Its work for Oakland schools could not be confirmed from public sources.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Civic Productions, LLC - BBB",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/motion-picture-film-distributors/civic-productions-llc-1116-892232"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

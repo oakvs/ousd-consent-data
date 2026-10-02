@@ -1,17 +1,76 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ca.gov/departments/217/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dhcs.ca.gov",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-california-department-of-health-care-services",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "The State of California's official portal (ca.gov) lists the 'Department of Health Care Services (DHCS)' as a state department with website https://www.dhcs.ca.gov, matching the agenda name 'California Department of Health Care Services'",
+      "The ca.gov listing says DHCS is the single state agency overseeing Medi-Cal and mental health and substance use disorder services, matching the agenda's Medi-Cal Local Educational Agency Billing Option Program and Children and Youth Behavioral Health Initiative agreements (student health, support and family services)"
+    ],
     "key": "n-california-department-of-health-care-services",
-    "notes": "Not researched successfully: the session's web search budget was exhausted and dhcs.ca.gov blocks automated fetching (Incapsula), so no page could be read and nothing could be verified. The agenda text indicates this is the California state agency (Medi-Cal LEA Billing Option Program, CYBHI Fee Schedule), but no fields were filled in. Retry later or complete by hand.",
-    "profile": null,
-    "sources": []
+    "notes": "dhcs.ca.gov blocks automated fetching (Incapsula), so its own pages could not be read or cited. Phone, address and email were left null: the only number on the ca.gov page (800-541-5555) is a customer-service line and not confirmed as the main line. Public agency, so no EIN or Secretary of State entity number.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Department of Health Care Services",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California state agency that oversees Medi-Cal, the state's Medicaid program, which provides health care to low-income individuals, children, older adults and people with disabilities. It also oversees mental health and substance use disorder services for the state.",
+      "website": "https://www.dhcs.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Department of Health Care Services (DHCS) | CA.gov",
+        "url": "https://www.ca.gov/departments/217/"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Department of Health Care Services",
+        "url": "https://www.dhcs.ca.gov"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-california-department-of-health-care-services",
+    "notes": "The agenda names the California Department of Health Care Services for the LEA Medi-Cal Billing Option Program and CYBHI fee schedule agreements, which are DHCS programs. The ca.gov department page confirms the name, website, Medi-Cal oversight and single-state-agency role for mental health and substance use disorder services, so the neutral summary is supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

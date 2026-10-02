@@ -1,17 +1,104 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://edmedia.productions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/long-beach/education-media-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-education-media",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Education Media LLC' is an active California LLC (Long Beach, CA) per a business-filing aggregator of California records",
+      "The company's own website carries a testimonial from a Theater Stage and Set Designer at Oakland School for the Arts about curriculum development for a Production Design course, matching the agenda item (Measures N and H Commission, Oakland School for the Arts, classroom and academic programs)",
+      "Website describes curriculum development, instructional design and Career Technical Education work, consistent with OUSD's 'Classroom & academic programs' category"
+    ],
     "key": "n-education-media",
-    "notes": "Not researched: the session's web search budget was exhausted before any search could run. The agenda gives only the generic name 'Education Media LLC' with no city, so identity could not be confirmed from the input alone. Needs a re-run after the search limit is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "The agenda gives no city. Identity rests on the exact name match plus the company's own website citing work for Oakland School for the Arts. The California entity number comes from a third-party aggregator of Secretary of State records (bizprofile.net), not bizfileonline directly; a reviewer may wish to confirm it there. The company also appears to operate under the dba 'Diversity Production Pro' (per Alignable), not confirmed on an official page.",
+    "profile": {
+      "address": "444 West Ocean Boulevard, Suite 800, Long Beach, CA 90802",
+      "caEntityNumber": "202019810447",
+      "ein": null,
+      "email": "info@edmedia.productions",
+      "headquarters": "Long Beach, CA",
+      "legalName": "Education Media LLC",
+      "orgType": "company",
+      "phone": "+1 877-583-6207",
+      "samUei": null,
+      "summary": "Education Media is a company that provides digital learning and workforce development services for education, government, nonprofit and media clients. It designs curriculum and training programs, including Career Technical Education and media workforce training.",
+      "website": "https://edmedia.productions/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Education Media – Education Support Services",
+        "url": "https://edmedia.productions/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Education Media LLC Long Beach, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/long-beach/education-media-llc"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-education-media",
+    "notes": "Exact name match to an active California LLC (entity 202019810447, Long Beach), and the company's own site cites an Oakland School for the Arts staff testimonial about curriculum work, which fits the Measures N and H OSA item. Contact details, address and entity number match the site and filing aggregator, and the summary is neutral and supported (the phrase 'media workforce training' is a mild paraphrase of the site's workforce development for media sectors).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

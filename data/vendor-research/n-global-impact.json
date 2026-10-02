@@ -2,7 +2,27 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://charity.org",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/521273585",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://charity.org/fiscal-sponsorship/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
       "pass": true
     },
     {
@@ -21,39 +41,51 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Name matches a 501(c)(3) nonprofit called Global Impact (charity.org)",
-      "Agenda gives Alexandria, VA, but charity.org now lists headquarters in Washington, DC (not confirmed as the same location; no second independent signal found)"
+      "Name matches a registered 501(c)(3) nonprofit 'Global Impact' (ProPublica Nonprofit Explorer, EIN 52-1273585)",
+      "Global Impact describes itself as a fiscal sponsor and philanthropy advisor, which fits a restricted 'grant recipient agreement' passing through funds, but no public page found links Global Impact to the Emerging Bilingual Collaborative or OUSD",
+      "Agenda says Alexandria, VA; search results say Global Impact was founded in Alexandria, VA, but its current address is Washington, DC, so the location match is only historical",
+      "The Emerging Bilingual Collaborative's public pages name New Venture Fund, not Global Impact, as its fiscal sponsor"
     ],
     "key": "n-global-impact",
-    "notes": "Search budget was exhausted and ProPublica/SOS/SAM and the Emerging Bilingual Collaborative page could not be fetched or searched, so the link between this Global Impact and the OUSD grant (Emerging Bilingual Collaborative) is unconfirmed. Agenda says Alexandria, VA; charity.org lists Washington, DC. Not publishable without human verification.",
+    "notes": "Medium confidence: the name matches, but no source ties this Global Impact (now headquartered in Washington, DC) to the OUSD Emerging Bilingual Collaborative grant, and the EBC's public pages name New Venture Fund as its fiscal sponsor. The agenda's Alexandria, VA fits Global Impact's earlier home, not its current one. A reviewer should confirm against the grant agreement in the OUSD board packet. Email omitted because the page obfuscates it.",
     "profile": {
-      "address": null,
+      "address": "2300 N St. NW, Suite 501A, Washington, DC 20037",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "52-1273585",
       "email": null,
-      "headquarters": null,
+      "headquarters": "Washington, DC",
       "legalName": "Global Impact",
       "orgType": "nonprofit",
-      "phone": null,
+      "phone": "800-836-4620",
       "samUei": null,
-      "summary": "A nonprofit that provides advisory and infrastructure services supporting philanthropy across the nonprofit, public and private sectors.",
+      "summary": "Global Impact is a nonprofit that offers advisory and infrastructure services for philanthropy. It acts as a fiscal sponsor, meaning it helps other organizations and projects raise and manage charitable funds.",
       "website": "https://charity.org"
     },
     "sources": [
       {
         "supports": [
           "legalName",
-          "summary",
-          "orgType",
-          "website"
+          "ein",
+          "orgType"
         ],
-        "title": "Global Impact",
-        "url": "https://charity.org"
+        "title": "Global Impact - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/521273585"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Fiscal Sponsorship - Global Impact",
+        "url": "https://charity.org/fiscal-sponsorship/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

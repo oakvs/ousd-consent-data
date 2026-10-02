@@ -2,12 +2,42 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://positivecoach.org/",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/770485946",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/77-0485946",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://positivecoach.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://positivecoach.org/the-pca-blog/pca-september-partner-of-the-month-oakland-unified-school-district/",
       "pass": true
     },
     {
       "detail": null,
       "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -19,41 +49,73 @@
   "key": "v-006629",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches exactly: the website positivecoach.org identifies the organization as Positive Coaching Alliance, a national nonprofit working on youth sports",
-      "Youth sports coaching and training programs are consistent with OUSD's 'After-school & summer programs' contracts (expanded learning)"
+      "Name matches a registered 501(c)(3) nonprofit: 'Positive Coaching Alliance', Oakland, CA (ProPublica Nonprofit Explorer and GuideStar, EIN 77-0485946)",
+      "GuideStar lists its address as 66 Franklin St Ste 300, Oakland, CA 94607, matching the agenda location Oakland, CA",
+      "Its website describes youth sports coach and parent training, consistent with OUSD's after-school and summer programs contracts",
+      "PCA's own blog names Oakland Unified School District as a partner (Partner of the Month) and says PCA helped develop OUSD's Elementary School Sports Program"
     ],
     "key": "v-006629",
-    "notes": "Registry lookups (ProPublica) were rate-limited and the search budget was exhausted, so EIN, legal name and Oakland location were not confirmed. The organization's pages fetched did not mention Oakland, so the agenda's Oakland, CA location is not independently verified. Needs a registry check before publishing.",
+    "notes": "Phone is the number shown on the PCA homepage. No general inbox found (contact page lists only media@positivecoach.org), so email is null. CA entity number and SAM UEI not looked up. Merged with Coaching Corps in 2022.",
     "profile": {
-      "address": null,
+      "address": "66 Franklin St Ste 300, Oakland, CA 94607",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "77-0485946",
       "email": null,
-      "headquarters": null,
-      "legalName": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Positive Coaching Alliance",
       "orgType": "nonprofit",
       "phone": "650-210-0800",
       "samUei": null,
-      "summary": "Positive Coaching Alliance is a national nonprofit organization that works to make youth sports a positive experience for all kids, regardless of social or economic circumstance. It offers training workshops, online resources and coaching programs for coaches, parents and youth sports organizations.",
-      "website": "https://positivecoach.org/"
+      "summary": "Positive Coaching Alliance is a national nonprofit that works to make youth sports positive and open to all kids, regardless of social or economic circumstance. It trains coaches, athletes and parents through workshops and provides online resources and tools. It is headquartered in Oakland, California.",
+      "website": "https://www.positivecoach.org"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "legalName",
+          "ein",
           "orgType",
+          "headquarters"
+        ],
+        "title": "Positive Coaching Alliance - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/770485946"
+      },
+      {
+        "supports": [
+          "address",
           "website",
-          "phone"
+          "ein",
+          "legalName"
+        ],
+        "title": "Positive Coaching Alliance - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/77-0485946"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "orgType"
         ],
         "title": "Positive Coaching Alliance",
-        "url": "https://positivecoach.org/"
+        "url": "https://positivecoach.org"
+      },
+      {
+        "supports": [],
+        "title": "PCA September Partner of the Month: Oakland Unified School District",
+        "url": "https://positivecoach.org/the-pca-blog/pca-september-partner-of-the-month-oakland-unified-school-district/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006629",
+    "notes": "ProPublica and GuideStar confirm Positive Coaching Alliance, EIN 77-0485946, 501(c)(3) at 66 Franklin St Ste 300, Oakland, matching the agenda name and city. The PCA blog names OUSD as a partner. The homepage shows the phone 650-210-0800 and the mission wording the summary relies on, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

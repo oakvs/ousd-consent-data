@@ -1,17 +1,117 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.creamcomeats.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.creamcomeats.com/pages/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.creamcomeats.com/pages/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.proteinintel.com/facilities/cream-co-oakland-ca-m33973-p33973-v33973",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001228",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Cream Co. LLC' is a USDA-inspected meat and poultry establishment (proteinintel.com listing of USDA FSIS data); the brand name is Cream Co. Meats",
+      "Located in Oakland, CA (700 Julie Ann Way, Oakland, CA, 94621), matching the agenda location 'Oakland, CA'",
+      "Business is a whole-animal butcher and meat distributor, matching OUSD's 'Specialty Proteins K-12 Meal Program' and 'Food Service Specialty Proteins' contracts with Nutrition Services"
+    ],
     "key": "v-001228",
-    "notes": "No credible candidate found. The research session's web search budget was exhausted before any search ran, so no registry or company page could be checked. One guessed domain (creamco.com -> creamco.net) turned out to be an unrelated Chicago arts organization and was rejected. Rerun when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry IDs (CA SOS entity number, UEI) were looked up; the SOS site could not be searched directly. Legal name and phone come from a USDA FSIS-derived listing (the FSIS page itself blocked automated fetching). The company's own site shows no public phone or general email. No page found explicitly mentions OUSD; identity rests on name, city and line of business.",
+    "profile": {
+      "address": "700 Julie Ann Way, Oakland, CA, 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Cream Co. LLC",
+      "orgType": "company",
+      "phone": "(510) 499-7154",
+      "samUei": null,
+      "summary": "Cream Co. Meats is a whole-animal butcher and meat distributor in Oakland, California. It sources meat from sustainable and regenerative family farms and sells to chefs and food service providers. It runs a USDA-inspected facility that also offers custom cutting and co-packing.",
+      "website": "https://www.creamcomeats.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Cream Co. Meats",
+        "url": "https://www.creamcomeats.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About - Cream Co. Meats",
+        "url": "https://www.creamcomeats.com/pages/about"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Cream Co. Meats",
+        "url": "https://www.creamcomeats.com/pages/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Cream Co. LLC - Oakland, CA",
+        "url": "https://www.proteinintel.com/facilities/cream-co-oakland-ca-m33973-p33973-v33973"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001228",
+    "notes": "Cream Co. Meats / Cream Co. LLC is a whole-animal butcher and distributor at 700 Julie Ann Way, Oakland, matching the agenda name, city and specialty-proteins food contracts (its site also lists a 'Beef 2 Institution' program). Address, website, summary (chefs and food service, co-packing, custom fabrication, USDA-inspected facility) and the phone number (from the proteinintel USDA-derived listing) are all confirmed in the cited sources; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

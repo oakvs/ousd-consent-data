@@ -2,12 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.eastbayarttherapy.com",
+      "field": "source:https://www.eastbayarttherapy.com/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.eastbayarttherapy.com/about",
+      "field": "source:https://www.eastbayarttherapy.com/locations/oakland-ca-office",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.oaklandchamber.com/members/member/east-bay-art-therapy-58061",
       "pass": true
     },
     {
@@ -34,16 +39,16 @@
   "key": "v-008809",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches the agenda text exactly: 'East Bay Art Therapy' (own website)",
-      "Located in Oakland, CA (55 Santa Clara Ave, Suite 220), matching the agenda location",
-      "Website describes art-therapy mental health services and partnerships with K-12 schools, consistent with OUSD's 'Student health, support & family services' contracts (but OUSD is not named on the site)"
+      "Business named 'East Bay Art Therapy' is headquartered in Oakland, CA (55 Santa Clara Ave), matching the agenda location 'Oakland, CA'",
+      "Oakland Chamber of Commerce member page lists Oakland Unified School District as a partner and says the practice runs art therapy groups at public schools in Oakland",
+      "Own website describes art therapy services and partnerships with K-12 schools, matching OUSD's 'Student health, support & family services' contracts"
     ],
     "key": "v-008809",
-    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) could be checked and no independent third-party page confirming the OUSD relationship was found. Site does not name OUSD. Legal entity name and org type (site appears to be a private practice) are unverified, so left null. Needs a registry check before publishing.",
+    "notes": "Private-practice business, not found as a nonprofit (no ProPublica record). Legal entity name, CA entity number and SAM UEI not verified, so left null. The Oakland Chamber listing shows different phone numbers than the company website; the website's main line was used.",
     "profile": {
       "address": "55 Santa Clara Ave, Suite 220, Oakland, California 94610",
       "caEntityNumber": null,
@@ -51,36 +56,53 @@
       "email": "contact@eastbayarttherapy.com",
       "headquarters": "Oakland, CA",
       "legalName": null,
-      "orgType": null,
+      "orgType": "company",
       "phone": "(510) 373-9932",
       "samUei": null,
-      "summary": "East Bay Art Therapy is a creative arts therapy practice based in Oakland, California. It offers individual, family, couples and group therapy that combines art-making with talk therapy. It also runs workshops and workplace wellness programs, and works with community partners such as K-12 schools and hospitals.",
-      "website": "https://www.eastbayarttherapy.com"
+      "summary": "East Bay Art Therapy is a private group practice based in Oakland, California. It offers art therapy, and also music and drama therapy, to children, teens, adults, families and groups in its offices and at partner sites. It also partners with schools, hospitals and other organizations around the Bay Area and offers workshops and professional training.",
+      "website": "https://www.eastbayarttherapy.com/"
     },
     "sources": [
       {
         "supports": [
           "summary",
+          "orgType",
           "website",
           "phone",
           "email",
           "address",
           "headquarters"
         ],
-        "title": "Creative Arts Therapy Bay Area | East Bay Art Therapy",
-        "url": "https://www.eastbayarttherapy.com"
+        "title": "Creative Arts Therapy Bay Area",
+        "url": "https://www.eastbayarttherapy.com/"
       },
       {
         "supports": [
           "phone",
           "email",
-          "address"
+          "address",
+          "headquarters"
+        ],
+        "title": "Art Therapy in Oakland",
+        "url": "https://www.eastbayarttherapy.com/locations/oakland-ca-office"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
         ],
         "title": "East Bay Art Therapy",
-        "url": "https://www.eastbayarttherapy.com/about"
+        "url": "https://business.oaklandchamber.com/members/member/east-bay-art-therapy-58061"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008809",
+    "notes": "The Oakland Chamber listing says East Bay Art Therapy provides art therapy groups at OUSD public schools, and its Oakland address, phone, email, services and school partnerships match the candidate; the summary is neutral and supported. The Chamber lists different phone numbers, but the company website supports the one used.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

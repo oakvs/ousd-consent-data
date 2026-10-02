@@ -1,17 +1,84 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://www.mbpsg.com/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.mbpsg.com/services.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-002812",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Website for 'Medical Business Professional Services Group' (MBPSG) is located in Oakland, CA, matching the agenda location",
+      "Website describes workers' compensation case management, ergonomic and safety services, consistent with a district Risk Management Department services agreement",
+      "Name matches the agenda vendor, but no registry record (Secretary of State, SAM.gov) was found to confirm the 'Inc.' entity, and the site's footer is dated 2013 with a TLS certificate mismatch"
+    ],
     "key": "v-002812",
-    "notes": "Not researched: the session's web search budget was exhausted before any search could run, so no candidate was found and identity was not confirmed. Re-run after raising the search limit.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry confirmation found; the corporate entity 'Medical Business Professional Services Group, Inc.' was not verified with the CA Secretary of State. The website has a TLS certificate mismatch (served from a GoDaddy host) and a 2013 copyright, and a third-party aggregator lists a different phone number, (510) 467-0704. Needs human review before publication.",
+    "profile": {
+      "address": "248 - 3rd Street Ste #937, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@mbpsg.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.473.6516",
+      "samUei": null,
+      "summary": "Medical Business Professional Services Group (MBPSG) is an Oakland, California company that describes itself as providing work-health services to employers. Its website lists workers' compensation case management, ergonomic evaluations and workplace safety training such as CPR, first aid and AED programs.",
+      "website": "http://www.mbpsg.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - MBPSG",
+        "url": "http://www.mbpsg.com/contact.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Services - MBPSG",
+        "url": "http://www.mbpsg.com/services.html"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

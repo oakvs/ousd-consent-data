@@ -1,17 +1,67 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ny/spring-valley/profile/restaurant-equipment/culinary-depot-inc-0121-120394",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
   "key": "v-009770",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches 'Culinary Depot Inc.', listed in Spring Valley, NY 10977, matching the agenda location 'Spring Valley, NY' (BBB profile)",
+      "BBB describes the company as building, renovating, equipping and servicing commercial kitchens, which fits OUSD's 'Service Line Equipment K-12 Meal Program' contract",
+      "Not confirmed: no fetchable registry (SAM.gov, NY/CA SOS) or official-website page was reachable, and no page found links the company to OUSD directly"
+    ],
     "key": "v-009770",
-    "notes": "Could not confirm identity. The session's web search budget was exhausted, and the only candidate site (culinarydepotinc.com, which culinarydepot.com redirects to) returned HTTP 403 to automated fetching. ProPublica returned HTTP 429. No page was read, so no fields were filled. Needs a re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Company website appears to be culinarydepotinc.com (culinarydepot.com redirects there) but it is behind a Cloudflare challenge and could not be fetched, so website is left null. No registry IDs found. Identity rests on name + city + industry fit; OUSD link not independently confirmed.",
+    "profile": {
+      "address": "67 Route 59, Spring Valley, NY 10977-5250",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Spring Valley, NY",
+      "legalName": "Culinary Depot Inc.",
+      "orgType": "company",
+      "phone": "(888) 845-8200",
+      "samUei": null,
+      "summary": "A company in Spring Valley, New York that builds, renovates, equips and services commercial kitchens, and sells commercial foodservice equipment and supplies.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Culinary Depot Inc. - BBB Business Profile",
+        "url": "https://www.bbb.org/us/ny/spring-valley/profile/restaurant-equipment/culinary-depot-inc-0121-120394"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

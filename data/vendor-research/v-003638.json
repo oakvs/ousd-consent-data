@@ -2,12 +2,27 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.roberthalf.com/",
+      "field": "source:https://www.roberthalf.com/us/en/about/investor-center/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.roberthalf.com/us/en",
       "pass": true
     },
     {
       "detail": null,
       "field": "source:https://en.wikipedia.org/wiki/Robert_Half",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
       "pass": true
     },
     {
@@ -24,49 +39,64 @@
   "key": "v-003638",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches exactly: SEC EDGAR conformed name 'ROBERT HALF INC.' and Robert Half website legal name 'Robert Half Inc.' match the agenda's 'Robert Half, Inc.' (earlier agenda items say 'Robert Half International Inc.', the company's former name per Wikipedia)",
-      "Services match the district's contract categories: Robert Half provides legal, accounting/finance and administrative staffing, consistent with OUSD's General Counsel, Talent and Accounting department agreements",
-      "Robert Half has a San Francisco Bay Area presence; no Oakland-specific branch page or page mentioning OUSD was confirmed"
+      "Agenda name 'Robert Half, Inc.' matches the legal name 'Robert Half Inc.' shown on the company's investor contact page; earlier OUSD titles say 'Robert Half International Inc.', its former name",
+      "Robert Half's services (finance and accounting, legal, administrative and consulting staffing) match OUSD's contract categories: legal, insurance and risk, and staff and hiring",
+      "Robert Half has an Oakland, CA office (1999 Harrison St, Ste 1950), matching the agenda location 'Oakland, CA'"
     ],
     "key": "v-003638",
-    "notes": "Confidence is medium because the Oakland link and an OUSD link could not be confirmed (web search quota exhausted; Robert Half location pages did not list an Oakland branch). Registry IDs and contact details left null: no CA SOS or SAM.gov record was reached, and the only phone numbers found were hiring and client-service lines.",
+    "notes": "Phone and address are the corporate headquarters details from the investor contact page, not the Oakland branch. The general investor email is obfuscated on the page, so it is omitted. No registry IDs were checked.",
     "profile": {
-      "address": null,
+      "address": "2884 Sand Hill Road Suite 200 Menlo Park, CA 94025",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "Menlo Park, CA",
       "legalName": "Robert Half Inc.",
       "orgType": "company",
-      "phone": null,
+      "phone": "1.650.234.6000",
       "samUei": null,
-      "summary": "Robert Half is a staffing and recruitment company that places temporary and full-time professionals in fields such as finance and accounting, technology, legal, marketing and creative, and administrative work. It also offers consulting services. It operates hundreds of locations in the United States and other countries.",
-      "website": "https://www.roberthalf.com/"
+      "summary": "Robert Half is a publicly traded company that provides staffing and recruiting services for employers and job seekers. It places professionals in fields such as finance and accounting, technology, legal, marketing and creative, and administrative support. It also offers consulting services in areas such as risk, audit and compliance.",
+      "website": "https://www.roberthalf.com/us/en"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "orgType",
-          "website",
-          "legalName"
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
         ],
-        "title": "Robert Half: Staffing and Recruitment",
-        "url": "https://www.roberthalf.com/"
+        "title": "Investor Contact Us",
+        "url": "https://www.roberthalf.com/us/en/about/investor-center/contact-us"
       },
       {
         "supports": [
-          "headquarters"
+          "summary",
+          "website"
         ],
-        "title": "Robert Half - Wikipedia",
+        "title": "Robert Half United States",
+        "url": "https://www.roberthalf.com/us/en"
+      },
+      {
+        "supports": [
+          "orgType",
+          "summary"
+        ],
+        "title": "Robert Half",
         "url": "https://en.wikipedia.org/wiki/Robert_Half"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003638",
+    "notes": "Robert Half Inc. (formerly Robert Half International Inc., matching the older OUSD titles) is a staffing and consulting firm whose legal, finance and administrative staffing fits OUSD's legal and hiring contracts. The legal name, phone, address, headquarters, website, org type and neutral summary are all confirmed by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

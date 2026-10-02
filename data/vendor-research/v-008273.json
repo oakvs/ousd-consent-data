@@ -2,7 +2,22 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.logictreeit.com",
+      "field": "source:https://www.logictreeit.com/contactus.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.logictreeit.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prweb.com/releases/logictree_it_solutions_announces_the_launch_of_their_new_school_safety_alert_and_notification_system_inschoolalert_/prweb13340743.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/citrus-heights/logictree-it-solutions-inc",
       "pass": true
     },
     {
@@ -22,6 +37,11 @@
     },
     {
       "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "legalName",
       "pass": true
     },
@@ -34,46 +54,76 @@
   "key": "v-008273",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Company website names 'LogicTree IT Solutions, Inc.', an exact match to the agenda vendor name",
-      "Company address is Citrus Heights, CA, matching the agenda location",
-      "Company is an IT/software firm, consistent with OUSD's 'Technology' contract category (but no page found linking it to OUSD, and no public registry record could be checked)"
+      "Name matches: LogicTree IT Solutions Inc. is the name on the company's own Contact page, and a California corporation named 'Logictree It Solutions, Inc.' is registered in Citrus Heights (bizprofile.net filing page)",
+      "Located in Citrus Heights, CA, matching the city in the agenda text",
+      "Company is a software and mobile app developer, matching OUSD's 'Technology' category",
+      "Company publishes a school safety alert app (InSchoolAlert), consistent with a school safety grant (Prop 47 LCSSP) and a Risk Management Department contract"
     ],
     "key": "v-008273",
-    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) or third-party page could be checked. Identity rests on exact name and city match plus a plausible technology business; no page links the company to OUSD. Left at medium for reviewer confirmation against the CA SOS record.",
+    "notes": "California entity number comes from a third-party mirror of Secretary of State data (bizprofile.net), not bizfileonline directly. That page lists a different suite (2540a) than the company's Contact page (Suite 3500); the Contact page address is used. No EIN (for-profit) or SAM UEI found. The company's pages do not mention OUSD directly.",
     "profile": {
       "address": "6060 Sunrise Vista Drive, Suite 3500 Citrus Heights, CA 95610",
-      "caEntityNumber": null,
+      "caEntityNumber": "3505829",
       "ein": null,
       "email": "info@logictreeit.com",
       "headquarters": "Citrus Heights, CA",
-      "legalName": "LogicTree IT Solutions, Inc.",
+      "legalName": "LogicTree IT Solutions Inc.",
       "orgType": "company",
-      "phone": "+916.676.7335",
+      "phone": "916.676.7335",
       "samUei": null,
-      "summary": "A software company based in Citrus Heights, California, that builds mobile apps for Android and Apple devices. Its products include USPDhub, a mobile information system for law enforcement agencies, and SmartConnect apps for businesses and organizations.",
-      "website": "https://www.logictreeit.com"
+      "summary": "A software engineering company based in Citrus Heights, California, that builds mobile apps for Android and Apple devices. Its products include apps for law enforcement agencies and for businesses and organizations, and a school emergency alert app that lets staff call first responders and send notifications.",
+      "website": "https://www.logictreeit.com/"
     },
     "sources": [
       {
         "supports": [
           "legalName",
-          "summary",
-          "orgType",
-          "website",
           "phone",
           "email",
           "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Hub Information System Merging Productivity with Mobility (Contact Us)",
+        "url": "https://www.logictreeit.com/contactus.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "LogicTree IT Solutions",
+        "url": "https://www.logictreeit.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "LogicTree IT Solutions announces the launch of their new School Safety Alert and Notification System \"InSchoolAlert\"",
+        "url": "https://www.prweb.com/releases/logictree_it_solutions_announces_the_launch_of_their_new_school_safety_alert_and_notification_system_inschoolalert_/prweb13340743.htm"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "orgType",
           "headquarters"
         ],
-        "title": "Hub Information System Merging Productivity with Mobility",
-        "url": "https://www.logictreeit.com"
+        "title": "Logictree It Solutions, Inc. Citrus Heights, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/citrus-heights/logictree-it-solutions-inc"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008273",
+    "notes": "Name, Citrus Heights location and technology/school-safety services match the agenda record; CA entity 3505829 is confirmed on bizprofile.net, and phone, generic email and address appear on the company's Contact page (the state filing lists Suite 2540a, but the Contact page's Suite 3500 is the one used). The school alert app detail comes from a 2016 press release, but the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

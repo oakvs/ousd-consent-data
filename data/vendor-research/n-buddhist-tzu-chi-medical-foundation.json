@@ -1,17 +1,111 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/954457939",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tzuchimedical.us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tzuchimedical.us/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-buddhist-tzu-chi-medical-foundation",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Buddhist Tzu Chi Medical Foundation' (ProPublica Nonprofit Explorer, EIN 95-4457939), located in El Monte, CA, matching the agenda's 'El Monte, CA'",
+      "The organization's own website (tzuchimedical.us) gives the legal name 'Buddhist Tzu Chi Medical Foundation' and a headquarters at 9620 Flair Dr., El Monte, CA 91731",
+      "Website describes charitable medical, dental and vision clinics and mobile clinics for underserved communities, consistent with OUSD's 'Student health, support & family services' category and no-cost services agreements"
+    ],
     "key": "n-buddhist-tzu-chi-medical-foundation",
-    "notes": "Not confirmed. The web search budget for the session was exhausted (200/200) and direct fetches of ProPublica (HTTP 429) and tzuchi.us (HTTP 403) failed, so no registry or organization page could be read and no identity could be verified from fetched pages. Re-run when search is available; likely candidate is the Buddhist Tzu Chi Medical Foundation (El Monte, CA), but nothing is filled in because it is unverified.",
-    "profile": null,
-    "sources": []
+    "notes": "No general email address found on the organization's pages. California SOS entity number and SAM UEI not looked up. No page found that explicitly links the foundation to Oakland schools; identity rests on exact name, El Monte location, and matching health-services purpose.",
+    "profile": {
+      "address": "9620 Flair Dr., El Monte, CA 91731",
+      "caEntityNumber": null,
+      "ein": "95-4457939",
+      "email": null,
+      "headquarters": "El Monte, CA",
+      "legalName": "Buddhist Tzu Chi Medical Foundation",
+      "orgType": "nonprofit",
+      "phone": "(626) 281-3383",
+      "samUei": null,
+      "summary": "A nonprofit health care organization based in El Monte, California. It runs medical clinics and mobile clinics that provide medical, dental and vision care, along with a healthy community program, with a focus on people who are underserved.",
+      "website": "https://tzuchimedical.us/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Buddhist Tzu Chi Medical Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/954457939"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Homepage - Tzu Chi Medical",
+        "url": "https://tzuchimedical.us/"
+      },
+      {
+        "supports": [
+          "address",
+          "legalName"
+        ],
+        "title": "Contact - Tzu Chi Medical",
+        "url": "https://tzuchimedical.us/contact"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-buddhist-tzu-chi-medical-foundation",
+    "notes": "The agenda name and El Monte, CA location exactly match the 501(c)(3) Buddhist Tzu Chi Medical Foundation (EIN 95-4457939, 9620 Flair Dr., El Monte), as shown on ProPublica and the organization's own site and contact page. Summary, phone, address and website are supported and neutral; no Oakland-specific link was found, but the free health-services purpose fits the no-cost agreements.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

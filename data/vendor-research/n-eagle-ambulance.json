@@ -1,17 +1,108 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://eagle-ambulance.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eagle-ambulance.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eagle-ambulance.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-eagle-ambulance",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Eagle Ambulance's own Contact page lists a San Leandro Station at 1965 Adams Ave, San Leandro, CA 94577, matching the agenda location 'San Leandro, CA'",
+      "Eagle Ambulance is an ambulance/EMT service, matching the agenda title 'Student Emergency Medical Technician Ride-Along Program'",
+      "Eagle Ambulance's About page says it was founded to employ graduates of Project Heartbeat, an Oakland-based health career academy offering EMT training, consistent with a high school Linked Learning ride-along program"
+    ],
     "key": "n-eagle-ambulance",
-    "notes": "No credible candidate confirmed. The web search budget was exhausted before any search could run, and the guessed domain eagleambulance.com is a parked domain for sale, not the vendor. Needs re-run with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal name, California entity number and SAM UEI not confirmed (registry pages could not be fetched), so left null. Website shows the business only as 'Eagle Ambulance'. Address is the headquarters shown on the company site; San Leandro station is 1965 Adams Ave, San Leandro, CA 94577. No page found explicitly linking Eagle Ambulance to OUSD; identity rests on location and service type.",
+    "profile": {
+      "address": "3251 Franklin Canyon Rd 2nd Floor, Rodeo, CA 94572",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@eagle-ambulance.com",
+      "headquarters": "Rodeo, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1.800.304.6985",
+      "samUei": null,
+      "summary": "Eagle Ambulance is a family-owned company that provides ambulance transport in Northern California. It offers basic life support, critical care transport with a registered nurse, and special event medical standby. It serves Alameda, Contra Costa, Sacramento and San Mateo counties.",
+      "website": "https://eagle-ambulance.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Eagle Ambulance",
+        "url": "https://eagle-ambulance.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Eagle Ambulance",
+        "url": "https://eagle-ambulance.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Eagle Ambulance",
+        "url": "https://eagle-ambulance.com/about/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-eagle-ambulance",
+    "notes": "Eagle Ambulance's own pages confirm a San Leandro station, ambulance/EMT services in Alameda County, and ties to an EMT training academy, which fit a student EMT ride-along agreement; all profile fields (summary, family-owned, services, counties, phone, email, Rodeo HQ address) are shown on the cited pages and the summary is neutral. No page explicitly links the company to OUSD, so identity rests on location and service type.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

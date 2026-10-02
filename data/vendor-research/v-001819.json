@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/painting-contractors/george-e-masker-inc-1116-109874",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.oaklandchamber.com/list/member/george-e-maskers-inc-2935",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
   "key": "v-001819",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'George E. Masker, Inc.' is listed as a painting contractor in Oakland, CA (BBB profile; Oakland Metropolitan Chamber of Commerce member listing)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Business is a painting contractor, matching OUSD's contracts for exterior painting projects at Oakland elementary schools (School buildings & construction)"
+    ],
     "key": "v-001819",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted, so no candidate could be found or confirmed. A guessed domain (georgemasker.com) did not resolve. Re-queue after the search limit is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "The company's own website (maskerpainting.com) returned HTTP 500 / certificate errors during research, so details come from the BBB profile and the Oakland Chamber of Commerce listing. Website value is as shown on the Chamber page. No EIN, CA entity number or UEI was verified.",
+    "profile": {
+      "address": "7699 Edgewater Drive, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "George E. Masker, Inc.",
+      "orgType": "company",
+      "phone": "(510) 568-1206",
+      "samUei": null,
+      "summary": "A painting contractor based in Oakland, California. It does commercial and residential painting work.",
+      "website": "https://maskerpainting.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "George E. Masker, Inc. - BBB Profile",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/painting-contractors/george-e-masker-inc-1116-109874"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "George E. Maskers, Inc. - Oakland Metropolitan Chamber of Commerce",
+        "url": "https://business.oaklandchamber.com/list/member/george-e-maskers-inc-2935"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001819",
+    "notes": "Name, Oakland location, address and phone match the BBB and Oakland Chamber listings, and a painting contractor fits OUSD's exterior painting contracts. The claim that it does commercial and residential work appears in neither source (BBB says the focus is not detailed), so the summary is dropped; the maskerpainting.com website could not be fetched (certificate error) but the domain is shown on the Chamber listing.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
 }

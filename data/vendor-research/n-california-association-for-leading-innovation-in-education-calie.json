@@ -1,17 +1,96 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://joincalie.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942737190",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-california-association-for-leading-innovation-in-education-calie",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "The agenda name exactly matches the organization at joincalie.org, which calls itself the California Association for Leading Innovation in Education (CALIE), formerly known as CUE.",
+      "CauseIQ lists the website joincalie.org under IRS EIN 94-2737190, the 501(c)(3) Computer Using Educators Inc (Cue Inc) shown on ProPublica Nonprofit Explorer; the mailing address on joincalie.org matches the one CauseIQ and GuideStar list for that EIN.",
+      "The organization's phone number has a 925 (Contra Costa County) area code, consistent with a Walnut Creek connection, but no fetched page confirms a Walnut Creek address; the registries list San Francisco."
+    ],
     "key": "n-california-association-for-leading-innovation-in-education-calie",
-    "notes": "Not researched to a conclusion: the session's WebSearch budget was exhausted, ProPublica Nonprofit Explorer returned HTTP 429, and guessed organization domains did not resolve or returned nothing. No candidate was confirmed. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Agenda gives Walnut Creek, CA, but the registries (ProPublica, GuideStar, CauseIQ) and joincalie.org list a San Francisco mailing address (a suite/box number on Fillmore St). A search-result snippet mentioned a former Walnut Creek address (877 Ygnacio Valley Rd) but no fetched page confirmed it. Linkage between CALIE and the legal entity Computer Using Educators Inc rests on the 'formerly known as CUE' statement plus CauseIQ listing joincalie.org for that EIN. No page found mentioning OUSD or the State Parks MOU. California SOS entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "2443 Fillmore St 380 2738, San Francisco, CA 94115",
+      "caEntityNumber": null,
+      "ein": "94-2737190",
+      "email": "info@joincalie.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Computer Using Educators Inc",
+      "orgType": "nonprofit",
+      "phone": "925-478-3460",
+      "samUei": null,
+      "summary": "A California nonprofit, formerly known as CUE (Computer-Using Educators), that supports teachers and school leaders statewide. It offers professional learning, conferences, certification programs and an educator community focused on using technology and innovation in teaching.",
+      "website": "https://joincalie.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "A Vision for Education - CALIE",
+        "url": "https://joincalie.org/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Computer Using Educators Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942737190"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

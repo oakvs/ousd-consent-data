@@ -1,17 +1,102 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://geo-eng.net/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://geo-eng.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-0095852",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name on the company's own contact page is exactly 'Geo-Engineering Solutions, Inc.', matching the agenda name",
+      "Based in San Ramon, CA, matching the agenda location",
+      "Website describes geotechnical engineering and construction observation with a specialty in K-12 school facilities, matching OUSD's 'School buildings & construction' contract for a turf field replacement project",
+      "Website lists an Oakland school project (Achieve Academy, Oakland, California), though it does not name Oakland Unified"
+    ],
     "key": "v-0095852",
-    "notes": "No credible candidate confirmed. The WebSearch budget for the session was exhausted (200 of 200) before any search could run, so only a guessed domain was fetched. It belonged to an unrelated French company (Geo Engineering, Caudan, France), which was rejected. The agenda names Geo-Engineering Solutions, Inc. of San Ramon, CA, a geotechnical/engineering vendor for the Calvin Simmons turf field project. It should be re-run once search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry (SOS, SAM.gov) page was checked, so no entity numbers are given. Third-party directories list a different address (2570 San Ramon Valley Blvd.); the company's own website address is used. The website does not name Oakland Unified directly.",
+    "profile": {
+      "address": "12925 Alcosta Blvd., Suite #8, San Ramon, CA 94583",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@geo-eng.net",
+      "headquarters": "San Ramon, CA",
+      "legalName": "Geo-Engineering Solutions, Inc.",
+      "orgType": "company",
+      "phone": "925-433-0450",
+      "samUei": null,
+      "summary": "A geotechnical engineering and engineering geology firm based in San Ramon, California. It provides geotechnical engineering, construction observation, materials testing, environmental services and expert witness work. It has experience with K-12 school construction projects in the Bay Area.",
+      "website": "https://geo-eng.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Geoengineering Experts",
+        "url": "https://geo-eng.net/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Geoengineering Solutions",
+        "url": "https://geo-eng.net/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-0095852",
+    "notes": "The company's own contact page gives the exact legal name Geo-Engineering Solutions, Inc. in San Ramon, CA, matching the agenda, and its site lists geotechnical, construction observation and K-12 school work that fits a turf field replacement services agreement. The contact fields and the neutral summary are supported by the cited pages; the site does not name OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

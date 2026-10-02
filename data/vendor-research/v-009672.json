@@ -2,7 +2,7 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.peaceinschools.org/",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/263664835",
       "pass": true
     },
     {
@@ -17,12 +17,27 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.peaceinschools.org/news/new-mindfulstudies-teachers",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "phone",
       "pass": true
     },
     {
       "detail": null,
       "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -34,44 +49,45 @@
   "key": "v-009672",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: Peace in Schools is a 501(c)(3) nonprofit whose website says it began in Portland, Oregon, matching the 'Portland, OR' location in the agenda text.",
-      "Its Mindful Studies teacher certification and partnership program matches the 'Training and Licensing Agreement' and 'No Cost Services Agreement' titles for Castlemont High School; its Our Story page says it serves high schools in Oregon and California.",
-      "Not confirmed: no registry (IRS/ProPublica, CA Secretary of State) lookup was possible and the website does not name Oakland or Oakland Unified, so the Oakland link is inferred."
+      "Name matches a registered 501(c)(3) nonprofit 'Peace In Schools' in Portland, OR (ProPublica Nonprofit Explorer, EIN 26-3664835), matching the agenda's Portland, OR location",
+      "Peace in Schools news page lists a Castlemont High School (Oakland, CA) educator as a newly certified Mindful Studies teacher, matching the OUSD agreements for Castlemont High School",
+      "Website describes for-credit mindfulness classes in high schools and teacher training, matching OUSD's 'Training and Licensing Agreement' and classroom/academic program categories"
     ],
     "key": "v-009672",
-    "notes": "Medium confidence: registry check blocked (ProPublica returned HTTP 429; web search budget exhausted), so no EIN or legal name. Website does not mention Oakland. A giving@ email exists but is for donations, so email left null.",
+    "notes": "The only email on the contact page (giving@peaceinschools.org) is for donation and grant inquiries, so no general email is listed. Contact page shows a Portland PO Box mailing address. OUSD agenda also lists Oakland, CA, likely the school site.",
     "profile": {
-      "address": "PO Box 14351 Portland, OR 97293",
+      "address": "PO Box 14351, Portland, OR 97293",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "26-3664835",
       "email": null,
       "headquarters": "Portland, OR",
-      "legalName": null,
+      "legalName": "Peace In Schools",
       "orgType": "nonprofit",
-      "phone": "971 800 0471",
+      "phone": "971-800-0471",
       "samUei": null,
-      "summary": "Peace in Schools is a nonprofit organization that provides mindfulness education for teens. Its main program, Mindful Studies, is a for-credit mindfulness class offered in public high schools. It also offers teacher certification and professional development courses for adults.",
+      "summary": "Peace in Schools is a nonprofit based in Portland, Oregon that provides mindfulness education to teens and educators. Its main program, Mindful Studies, is a semester-long, for-credit mindfulness class offered in public high schools. It also trains and certifies high school teachers to teach the course in their own schools.",
       "website": "https://www.peaceinschools.org/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "legalName",
+          "ein",
           "orgType",
-          "website"
+          "headquarters"
         ],
-        "title": "Peace in Schools",
-        "url": "https://www.peaceinschools.org/"
+        "title": "Peace In Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/263664835"
       },
       {
         "supports": [
           "phone",
           "address",
-          "headquarters"
+          "website"
         ],
         "title": "Contact Us - Peace in Schools",
         "url": "https://www.peaceinschools.org/contact-us"
@@ -81,11 +97,24 @@
           "summary",
           "headquarters"
         ],
-        "title": "Our Story - Peace in Schools",
+        "title": "OUR STORY - PEACE IN SCHOOLS",
         "url": "https://www.peaceinschools.org/our-story"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Welcoming Six New Mindful Studies Teachers! - PEACE IN SCHOOLS",
+        "url": "https://www.peaceinschools.org/news/new-mindfulstudies-teachers"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009672",
+    "notes": "ProPublica, the contact page and the story page match the Portland, OR nonprofit Peace In Schools (EIN 26-3664835). Its news page names a Castlemont High School (Oakland) teacher in the Mindful Studies partnership, which fits the OUSD agreements. The summary, phone, address, website and EIN are all supported, and it is neutral with no named-individual contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

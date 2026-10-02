@@ -2,12 +2,27 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.acreducators.org",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/824991559",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.acreducators.org/what.html",
       "pass": true
     },
     {
       "detail": null,
       "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -19,41 +34,56 @@
   "key": "n-association-of-community-rehabilitation-educators-acre",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches exactly: the website acreducators.org identifies itself as the Association of Community Rehabilitation Educators (ACRE)",
-      "ACRE works in employment services for people with disabilities, consistent with OUSD's special education contract and the 'ACRE Basic Customized Employment Services' funding source (inferred, not confirmed by a page linking ACRE to California or OUSD)"
+      "Name matches a registered 501(c)(3): 'Association Of Community Rehabilitation Educators Inc' (ProPublica Nonprofit Explorer, EIN 82-4991559)",
+      "OUSD's funding source 'ACRE Basic Customized Employment Services' matches ACRE's 'Basic Customized Employment Services' certificate of achievement on acreducators.org",
+      "Agenda item concerns the California Department of Developmental Services Quality Incentive Program; a California DDS publication requires job-development staff to hold ACRE Customized Employment or Basic certification, consistent with ACRE as the certifying body"
     ],
     "key": "n-association-of-community-rehabilitation-educators-acre",
-    "notes": "Web search quota was exhausted, so no registry (ProPublica, CA SOS, SAM.gov) or independent page could be checked, and ProPublica returned HTTP 429. ACRE is a Colorado-based national association; no page found links it to California, the DDS Quality Incentive Program or OUSD. Email on the site is obfuscated. Needs a human check or re-run with search available before publishing.",
+    "notes": "Nonprofit registry lists East Greenwich, RI as the location; ACRE's website gives a Colorado Springs, CO PO Box mailing address, so headquarters left null. Website shows no phone number; general email is obfuscated on the page so omitted. The CA DDS requirement signal is from search-result snippets, not separately fetched. No CA Secretary of State or SAM.gov record checked.",
     "profile": {
       "address": "PO Box 38684, Colorado Springs, CO 80937",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "82-4991559",
       "email": null,
-      "headquarters": "Colorado Springs, CO",
-      "legalName": null,
-      "orgType": null,
+      "headquarters": null,
+      "legalName": "Association Of Community Rehabilitation Educators Inc",
+      "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "A national membership organization for trainers and educators in the field of employment for people with disabilities. It offers professional development, endorsement of training curricula, and certification for people who work in community employment services.",
+      "summary": "A nonprofit that sets competency-based training standards for employment professionals who help people with disabilities find jobs. It reviews and endorses training curricula and issues certificates, including a Basic Customized Employment Services certificate, and keeps a registry of certified professionals.",
       "website": "https://www.acreducators.org"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "website",
-          "address",
-          "headquarters"
+          "legalName",
+          "ein",
+          "orgType"
         ],
-        "title": "ACRE: Association of Community Rehabilitation Educators",
-        "url": "https://www.acreducators.org"
+        "title": "Association Of Community Rehabilitation Educators Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/824991559"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "website"
+        ],
+        "title": "What? - ACRE Educators - Association of Community Rehabilitation Educators",
+        "url": "https://www.acreducators.org/what.html"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-association-of-community-rehabilitation-educators-acre",
+    "notes": "ProPublica confirms the 501(c)(3) name and EIN 82-4991559, and acreducators.org/what.html confirms the standards, endorsement, certificate and registry description and the Colorado Springs PO Box. The agenda names ACRE directly and its funding source matches ACRE's Basic Customized Employment Services certificate. The Rhode Island registry address differs from the website address, and headquarters is correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

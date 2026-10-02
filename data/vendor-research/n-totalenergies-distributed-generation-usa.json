@@ -1,19 +1,66 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://solar.totalenergies.us/commercial-solar-solutions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://corporate.totalenergies.us/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-totalenergies-distributed-generation-usa",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Name matches Delaware/Texas-registered entities named TotalEnergies Distributed Generation USA, LLC listed on OpenCorporates (search listing, one registered address in Houston, TX, matching the agenda location)"
+      "Name 'TotalEnergies Distributed Generation USA, LLC' matches Secretary of State registrations in Florida (M22000003785), California (202208010616) and Colorado (seen only in search-result snippets; registry pages block automated fetching)",
+      "Search snippets place the principal/mailing address at 1201 Louisiana Street, Suite 1800, Houston, TX, matching the agenda's 'Houston, TX'",
+      "TotalEnergies' solar business describes commercial solar and storage work for schools, matching OUSD's Castlemont and Oakland Tech energy efficiency projects; the OUSD energy-efficiency page lists battery projects at those two schools but does not name TotalEnergies"
     ],
     "key": "n-totalenergies-distributed-generation-usa",
-    "notes": "Web search budget was exhausted; could not reach the entity's own website or a registry page that shows contact details. OpenCorporates detail page for company 6634334 showed a differently named entity (Distributed Generation Assets USA, LLC), so identity of the exact legal entity is unconfirmed. Nothing filled in; needs manual review.",
-    "profile": null,
-    "sources": []
+    "notes": "Not publishable: the LLC's legal name, entity numbers and address could only be seen in search snippets of registry aggregator pages (b2bhint, Sunbiz), which return 403 to automated fetching, so they are not cited. No fetchable page ties the LLC itself to the solar.totalenergies.us site or to OUSD. The phone and email on the TotalEnergies corporate contact page belong to the wider TotalEnergies group in Houston, not to this LLC, so they were left out. A reviewer could confirm the entity on bizfileonline.sos.ca.gov (CA no. 202208010616).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Houston, TX",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "TotalEnergies Solar & Storage U.S. is a renewable energy developer. It builds commercial solar projects, community solar, solar carports, energy storage and electric vehicle charging infrastructure for businesses, government agencies and educational institutions in the United States.",
+      "website": "https://solar.totalenergies.us/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "TotalEnergies Commercial Solar & Storage Solutions",
+        "url": "https://solar.totalenergies.us/commercial-solar-solutions/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "TotalEnergies in the United States - Contact",
+        "url": "https://corporate.totalenergies.us/contact"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

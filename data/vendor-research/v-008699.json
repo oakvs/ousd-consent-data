@@ -2,7 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.hopereimagined.org",
+      "field": "source:https://hopereimagined.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hopereimagined.org/services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=7296201&GUID=705F3BC5-8614-42EF-9970-7308A73EC2BA",
       "pass": true
     },
     {
@@ -16,25 +26,26 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Name matches 'Hope Reimagined, Mental Health & Education Support Services' at hopereimagined.org (unconfirmed that this is the same entity)",
-      "Website describes support for schools and families, consistent with OUSD's 'Student health, support & family services' contracts"
+      "OUSD Legistar File 25-0868 lists a 2024-2025 Services Agreement with 'Hope Reimagined' of Oakland, CA through the Office of Equity, matching the agenda name and location",
+      "hopereimagined.org describes mental health and education support, training and consultation for schools, matching OUSD's 'Student health, support & family services' category",
+      "Website names its founder as a licensed marriage and family therapist and describes a team of clinicians; no legal entity type or registry record could be confirmed"
     ],
     "key": "v-008699",
-    "notes": "Not confirmed. The website shows no location, Oakland or OUSD mention, or registry details, and the contact page has only a form. WebSearch budget was exhausted and ProPublica returned HTTP 429, so no registry (ProPublica, CA SOS, SAM.gov) check was possible. Needs a re-run with search access.",
+    "notes": "Not found in ProPublica Nonprofit Explorer as an organization, so probably not a nonprofit. No legal entity type, registry number, phone, email or street address was found on the website or in OUSD records; California Secretary of State could not be searched. It may be a sole proprietorship or business name of an individual clinician (founder is a licensed therapist), so a reviewer should confirm it is a business before publishing.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
+      "headquarters": "Oakland, CA",
       "legalName": null,
       "orgType": null,
       "phone": null,
       "samUei": null,
-      "summary": "Hope Reimagined describes itself as providing mental health and education support services. Its stated mission is to support communities, schools and families to be relationally rich environments informed by neurophysiology.",
-      "website": "https://www.hopereimagined.org"
+      "summary": "Hope Reimagined is an Oakland, California organization that offers mental health and education support services. It provides training, consultation and clinical services (including therapy and assessments) for children, adults, schools and community groups, using a trauma-informed approach based on the Neurosequential Model.",
+      "website": "https://hopereimagined.org/"
     },
     "sources": [
       {
@@ -43,10 +54,24 @@
           "website"
         ],
         "title": "Hope Reimagined",
-        "url": "https://www.hopereimagined.org"
+        "url": "https://hopereimagined.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Hope Reimagined, Mental Health & Education Support Services",
+        "url": "https://hopereimagined.org/services"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Oakland Unified School District - File #: 25-0868",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=7296201&GUID=705F3BC5-8614-42EF-9970-7308A73EC2BA"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

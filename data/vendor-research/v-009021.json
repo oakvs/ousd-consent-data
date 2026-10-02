@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.rfcontractors.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rfcontractors.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/flooring-contractors/rf-contractors-1116-547729",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009021",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: RF Contractors (dba Royal Floors), the agenda names 'R F Contractors' / 'RF Contractors' (RF Contractors website and BBB profile)",
+      "Located in Oakland, CA, matching the agenda text (8055 Collins Drive, Oakland, CA 94621)",
+      "Company installs flooring (carpet, vinyl tile, VCT) and holds a C-15 Floor Covering license, matching OUSD's flooring replacement projects at Edna Brewer Middle School, Bella Vista Elementary and other schools",
+      "Independent BBB profile lists RF Contractors as a flooring contractor at the same Oakland address and phone"
+    ],
+    "key": "v-009021",
+    "notes": "No CA Secretary of State, EIN or SAM.gov record was checked or found; those fields are null. Neither the company site nor BBB mentions OUSD; the match rests on name, Oakland location and flooring trade.",
+    "profile": {
+      "address": "8055 Collins Drive Suite 105 Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@rfcontractors.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "RF Contractors",
+      "orgType": "company",
+      "phone": "510-394-3300",
+      "samUei": null,
+      "summary": "RF Contractors, which does business as Royal Floors, is a flooring company in Oakland, California. It installs carpet, luxury vinyl tile and plank, and vinyl composition tile, and does flooring demolition for residential and commercial customers, including owners, general contractors and municipalities.",
+      "website": "https://www.rfcontractors.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact — RF Contractors",
+        "url": "https://www.rfcontractors.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website"
+        ],
+        "title": "RF Contractors",
+        "url": "https://www.rfcontractors.com/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "RF Contractors | BBB Profile",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/flooring-contractors/rf-contractors-1116-547729"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009021",
+    "notes": "RF Contractors (dba/also Royal Floors), a C-15 floor covering contractor at 8055 Collins Dr, Oakland, matches the agenda name, Oakland location and the flooring replacement projects. Contact details and summary are supported by the company site and BBB; the site does not name OUSD, so the match rests on name, location and trade, which fit closely.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

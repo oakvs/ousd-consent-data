@@ -1,17 +1,86 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2890407",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/madera/profile/post-construction-cleaning/diaz-hauling-inc-1126-850066871",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-009878",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Federal motor carrier registry (FMCSA SAFER) lists legal name 'DIAZ HAULING INC' at 1238 Milow St, Madera, CA 93638, matching the agenda's 'Diaz Hauling, Inc.' and 'Madera, CA'",
+      "BBB profile for 'Diaz Hauling Inc' lists the same Madera address and phone number, an independent listing of the same business",
+      "FMCSA lists cargo carried as garbage/refuse and construction materials, consistent with OUSD contracting for 'Food, transportation & operations' under a services agreement handled by Risk Management"
+    ],
     "key": "v-009878",
-    "notes": "Not researched: the session's WebSearch budget was exhausted, so no candidate organization could be found or confirmed. Agenda text gives only 'Diaz Hauling, Inc.' in Madera, CA. Re-run after raising the search limit.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry details found only in the FMCSA carrier registry (USDOT 2890407) and a BBB listing; California Secretary of State entity number and EIN not found. The website diazhauling.com (a Hayward/East Bay junk removal business) could not be confirmed as the same organization, so no website is given. Phone has a 510 (East Bay) area code but is the number listed by both FMCSA and BBB.",
+    "profile": {
+      "address": "1238 MILOW ST, MADERA, CA 93638",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Madera, CA",
+      "legalName": "DIAZ HAULING INC",
+      "orgType": "company",
+      "phone": "(510) 825-4218",
+      "samUei": null,
+      "summary": "A hauling company based in Madera, California. It is registered with the federal government as a motor carrier that operates only within California and carries garbage and refuse and construction materials.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "SAFER Web - Company Snapshot DIAZ HAULING INC",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2890407"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters"
+        ],
+        "title": "Diaz Hauling Inc",
+        "url": "https://www.bbb.org/us/ca/madera/profile/post-construction-cleaning/diaz-hauling-inc-1126-850066871"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009878",
+    "notes": "FMCSA SAFER (USDOT 2890407) and the BBB listing both show Diaz Hauling Inc at 1238 Milow St, Madera, CA with phone (510) 825-4218, matching the agenda's name and city; the summary (intrastate-only carrier of garbage/refuse and construction materials) matches the FMCSA snapshot and is neutral. Website was left null, which is appropriate.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

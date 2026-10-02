@@ -7,6 +7,31 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.guidestar.org/profile/80-0473270",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.baudl.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.baudl.org/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "ein",
       "pass": true
     },
@@ -14,34 +39,39 @@
       "detail": null,
       "field": "legalName",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
     }
   ],
   "key": "v-000635",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered 501(c)(3) nonprofit: 'Bay Area Urban Debate Commission', EIN 80-0473270 (ProPublica Nonprofit Explorer)",
-      "Registry lists the organization in Oakland, CA, matching the agenda text",
-      "Registry mission is debate programming for students, consistent with OUSD's 'After-school & summer programs' contracts",
-      "Bay Area Urban Debate League (baudl.org), 287 17th St #201, Oakland, a nonprofit debate program with Oakland partner schools, appears to be the same organization, but no page found links the 'Commission' legal name to the 'League' site"
+      "Name matches a registered 501(c)(3) nonprofit: 'Bay Area Urban Debate Commission', EIN 80-0473270, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "GuideStar lists the same EIN with the legal name Bay Area Urban Debate League and 'Also Known As: Bay Area Urban Debate Commission', website baudl.org, at 287 17th St Ste 201, Oakland, CA",
+      "baudl.org is based in Oakland (287 17th St #201) and lists partner Oakland schools such as Castlemont, Fremont, Skyline and Oakland Tech, matching the agenda's Oakland location and OUSD's after-school programs contracts",
+      "Debate education for public school students matches OUSD's 'After-school & summer programs' purchases"
     ],
     "key": "v-000635",
-    "notes": "Registry match (ProPublica, EIN 80-0473270, Oakland) is solid. A likely public website is https://www.baudl.org (Bay Area Urban Debate League, 287 17th St #201, Oakland, CA 94612), but no page found states that the League and the Commission are the same legal entity, so website and address were left null. A reviewer could confirm via the Form 990 or a CA Secretary of State record. Web search quota was exhausted during this run, so the CA SOS and SAM.gov registries were not checked.",
+    "notes": "Legal name per ProPublica is Bay Area Urban Debate Commission; GuideStar lists the legal name as Bay Area Urban Debate League and the Commission as an aka. The organization operates publicly as BAUDL. No general email is displayed on baudl.org (contact form only). CA entity number and SAM UEI not checked.",
     "profile": {
-      "address": null,
+      "address": "287 17th St #201, Oakland, CA 94612",
       "caEntityNumber": null,
       "ein": "80-0473270",
       "email": null,
       "headquarters": "Oakland, CA",
       "legalName": "Bay Area Urban Debate Commission",
       "orgType": "nonprofit",
-      "phone": null,
+      "phone": "(510) 459-4904",
       "samUei": null,
-      "summary": "A nonprofit organization in Oakland, California that runs educational debate programming for students. It is a tax-exempt 501(c)(3) organization.",
-      "website": null
+      "summary": "A nonprofit, also known as the Bay Area Urban Debate League, that makes competitive debate available to students in Bay Area public middle and high schools. It focuses on under-resourced schools and works with school districts to run debate programs and tournaments.",
+      "website": "https://www.baudl.org"
     },
     "sources": [
       {
@@ -49,14 +79,46 @@
           "legalName",
           "ein",
           "orgType",
-          "headquarters",
-          "summary"
+          "headquarters"
         ],
         "title": "Bay Area Urban Debate Commission - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/800473270"
+      },
+      {
+        "supports": [
+          "phone",
+          "website",
+          "ein"
+        ],
+        "title": "Bay Area Urban Debate Commission - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/80-0473270"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "website",
+          "orgType"
+        ],
+        "title": "Bay Area Urban Debate League",
+        "url": "https://www.baudl.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "About - Bay Area Urban Debate League",
+        "url": "https://www.baudl.org/about.html"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000635",
+    "notes": "ProPublica and GuideStar confirm the same EIN 80-0473270 in Oakland, with the legal name Bay Area Urban Debate League and the aka Bay Area Urban Debate Commission. This matches the agenda name and Oakland location, and the debate programs fit OUSD's after-school contracts. The phone, address, website, EIN, type and summary are supported, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

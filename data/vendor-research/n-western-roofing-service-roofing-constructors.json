@@ -1,17 +1,98 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.tectaamerica.com/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://network.procore.com/p/western-roofing-service-san-leandro",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
   "key": "n-western-roofing-service-roofing-constructors",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Procore Network profile for 'Roofing Constructors, Inc' at 15002 Wicks Blvd, San Leandro, CA lists website westroof.com, the same address and site as Western Roofing Service, confirming the dba/legal name link in the agenda",
+      "Located in San Leandro, CA, matching the agenda text",
+      "Tecta America's locations page lists Western Roofing Service at the same San Leandro address with email info@westroof.com",
+      "Commercial roofing contractor, matching OUSD's roofing projects for school buildings (Facilities Planning and Management)"
+    ],
     "key": "n-western-roofing-service-roofing-constructors",
-    "notes": "Not researched: the session's WebSearch budget was exhausted before any search could run, and guessed direct URLs did not resolve to this company. No identity could be confirmed. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "The company's own website (westroof.com) could not be fetched (connection refused); website is cited from the Procore profile (listed as www.westroof.com). Legal name from Procore Network; California Secretary of State entity number not verified. Contact details from Tecta America locations page.",
+    "profile": {
+      "address": "15002 Wicks Boulevard, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@westroof.com",
+      "headquarters": "San Leandro, CA",
+      "legalName": "Roofing Constructors, Inc",
+      "orgType": "company",
+      "phone": "(510) 686-4951",
+      "samUei": null,
+      "summary": "Western Roofing Service is a union commercial roofing contractor based in San Leandro, California. It is part of Tecta America, a national roofing company group. The company does roofing and commercial waterproofing work for commercial, industrial and institutional customers.",
+      "website": "https://www.westroof.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Locations - Tecta America",
+        "url": "https://www.tectaamerica.com/locations/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "website"
+        ],
+        "title": "Roofing Constructors, Inc",
+        "url": "https://network.procore.com/p/western-roofing-service-san-leandro"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-western-roofing-service-roofing-constructors",
+    "notes": "Tecta America's locations page and the Procore profile both show Western Roofing Service / Roofing Constructors, Inc at 15002 Wicks Blvd, San Leandro with the same phone and westroof.com, matching the agenda's San Leandro location and roofing work. The summary and contact fields are supported by the cited pages and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

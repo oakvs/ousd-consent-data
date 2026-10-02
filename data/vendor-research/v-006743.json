@@ -1,17 +1,98 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.rachellerogersard.com/harvestconsulting",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/harvest-consulting-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?From=RSS&ID=6024853&GUID=75B704D1-02DC-4E09-9B8A-FB3B7C51B375",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006743",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California LLC, 'Harvest Consulting LLC', located in Oakland, CA (bizprofile.net listing of California Secretary of State filing, entity number shown), matching the agenda's Oakland, CA",
+      "Registry lists Rachelle Lanette Rogers-ard as manager and the business purpose as coaching and professional learning; OUSD's 2020-2021 agreements were with Rachelle Rogers-Ard, and later ones with Harvest Consulting, which her website describes as her consulting firm",
+      "OUSD's own legislative record (File 23-0370) lists a Services Agreement with Harvest Consulting, Oakland, CA, for professional development for Adult Education Department staff, matching OUSD's classroom and academic programs contracts",
+      "Firm's page describes partnering with K-12 schools on leadership development and educator pipeline expansion, consistent with OUSD's education-related contracts"
+    ],
     "key": "v-006743",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted before any search could run, so no candidate was found or verified. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Reviewer hint: 2020-2021 OUSD agreement titles name Rachelle Rogers-Ard as the contractor, so this may be an individual's business; check before publishing anything.",
-    "profile": null,
-    "sources": []
+    "notes": "Small consulting LLC whose principal is an individual; it is a registered business entity, so not treated as an individual vendor. Registry details come from a third-party mirror of the California Secretary of State record (bizprofile.net), not bizfile directly. Business address on the registry looks like it may be a personal or home address, so it was deliberately left out. No public phone or general email was found on the firm's page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "202016410456",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Harvest Consulting LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Harvest Consulting is an Oakland-based consulting firm founded in 2019. It works with K-12 schools, educational institutions, community organizations and businesses on leadership development, executive coaching, strategy and implementation management, and educator pipeline expansion.",
+      "website": "https://www.rachellerogersard.com/harvestconsulting"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Consulting Services — Dr. Rachelle Rogers-Ard",
+        "url": "https://www.rachellerogersard.com/harvestconsulting"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Harvest Consulting LLC Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/harvest-consulting-llc"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Oakland Unified School District - File #: 23-0370",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?From=RSS&ID=6024853&GUID=75B704D1-02DC-4E09-9B8A-FB3B7C51B375"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006743",
+    "notes": "The CA registry mirror shows Harvest Consulting LLC in Oakland, managed by Rachelle Rogers-Ard, who is also the named counterparty in OUSD's 2020-21 agreements. OUSD's Legistar file 23-0370 lists a Harvest Consulting agreement (Oakland, CA) for Adult Education staff professional development. The firm's page supports the neutral summary, the 2019 founding date and the website; the entity number and headquarters are supported by the registry and Legistar.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

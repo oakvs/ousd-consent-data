@@ -2,7 +2,42 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.kw-engineering.com/about-us/",
+      "field": "source:https://kw-engineering.com/contact-us-today/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://kw-engineering.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/sam-entity/040495496",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?GUID=2FB0BA60-9155-4360-A972-C6449471CC03&ID=4984831&Options=&Search=",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,42 +49,72 @@
   "key": "v-002451",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "Candidate kW Engineering, Inc. is an engineering consulting firm founded in and headquartered in Oakland, CA, matching the agenda location (kw-engineering.com About page)",
-      "Name differs: the agenda says 'Kilowatt Engineering, Inc.' / 'KW Engineering'; the candidate's own site uses 'kW Engineering, Inc.'",
-      "No page found linking this firm to Oakland Unified / OUSD school projects, and no registry record (CA Secretary of State, SAM.gov) could be checked because web search was unavailable"
+      "Federal SAM.gov data (via OpenGovUS) lists KILOWATT ENGINEERING, INC. (trade name Kw Engineering) at 287 17th Street, Suite 300, Oakland, CA, an engineering services firm, matching the agenda name and Oakland location",
+      "kW Engineering's own contact page gives the same Oakland address (287 17th Street, Suite 300) for kW Engineering, Inc.",
+      "OUSD's Board record for the Claremont Middle School New Multi-Purpose Building Project names 'KW Engineering, Oakland, California' for engineering and commissioning design work, which matches kW Engineering's commissioning services",
+      "Agenda titles use both 'Kilowatt Engineering, Inc.' and 'KW Engineering, Inc.', consistent with the SAM trade name"
     ],
     "key": "v-002451",
-    "notes": "Unconfirmed candidate only. Web search budget was exhausted, so no registry lookup or OUSD-linking page was found. Name mismatch (Kilowatt Engineering, Inc. vs kW Engineering, Inc.) and kW Engineering is a commissioning/consulting firm, while the OUSD contracts are 'Engineering Services' for school construction. Do not publish without a registry check.",
+    "notes": "SAM registration shown as expired on OpenGovUS; UEI is from that record. No general email on the contact page (contact form only). California entity number not verified.",
     "profile": {
-      "address": null,
+      "address": "287 17th Street, Suite 300, Oakland, CA 94612",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "Oakland, CA",
-      "legalName": null,
+      "legalName": "Kilowatt Engineering, Inc.",
       "orgType": "company",
-      "phone": null,
-      "samUei": null,
-      "summary": "kW Engineering, Inc. is an independent engineering consulting firm founded in 1998 in Oakland, California. It offers building commissioning, resiliency and electrification services, and utility program support.",
-      "website": "https://www.kw-engineering.com"
+      "phone": "510.834.6420",
+      "samUei": "N9L2QLBRHSX5",
+      "summary": "kW Engineering is an energy consulting and engineering firm founded in 1998 in Oakland, California. It provides energy efficiency and sustainable building services, including commissioning, electrification, resiliency solutions and utility program support. It has offices in California, Idaho, Utah and New York.",
+      "website": "https://kw-engineering.com"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "orgType",
           "website",
+          "phone",
+          "address",
           "headquarters"
         ],
+        "title": "Contact Us - kW Engineering",
+        "url": "https://kw-engineering.com/contact-us-today/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
         "title": "About Us - kW Engineering",
-        "url": "https://www.kw-engineering.com/about-us/"
+        "url": "https://kw-engineering.com/about-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "samUei",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Kw Engineering / Kilowatt Engineering, Inc. - SAM entity",
+        "url": "https://opengovus.com/sam-entity/040495496"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District - File #: 21-1510",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?GUID=2FB0BA60-9155-4360-A972-C6449471CC03&ID=4984831&Options=&Search="
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002451",
+    "notes": "SAM.gov record (legal name Kilowatt Engineering, Inc., DBA KW Engineering) and the company contact page share the Oakland address, and OUSD's Board record names KW Engineering of Oakland for commissioning engineering, which fits the school-facilities contracts. Phone, address, website, UEI, founding year, services and office states are all confirmed by the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

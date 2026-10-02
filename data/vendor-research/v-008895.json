@@ -1,17 +1,80 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/822078983",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://impala.digital/public/profiles/82-2078983/overview",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-008895",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Tri Valley Soccer Referees Incorporated' (ProPublica Nonprofit Explorer, EIN 82-2078983), listed by the IRS-based record in Sebastopol, CA, matching the agenda location 'Sebastopol, CA'",
+      "Stated mission is to provide soccer officials to member schools, matching OUSD's Oakland Athletic League soccer officiating services agreements",
+      "A second public profile of the same EIN names it 'Tri-Valley Soccer Referee Association', matching the agenda name exactly"
+    ],
     "key": "v-008895",
-    "notes": "Research could not be completed: the session's web search budget was exhausted before any search ran, and the ProPublica Nonprofit Explorer fetch returned HTTP 429. No candidate was identified or verified. Agenda gives Sebastopol, CA, while 'Tri-Valley' usually refers to the Livermore/Pleasanton area, so identity needs checking before anything is published. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "The organization's own website (tvsra.org, Squarespace) could not be fetched because of a TLS certificate mismatch, so website, phone, email and address were left null rather than unverified. Sources do not explicitly mention Oakland; the link to the Oakland Athletic League rests on name, Sebastopol location and the mission of supplying officials to schools. impala.digital lists a Forestville, CA address while ProPublica lists Sebastopol; Sebastopol (matching the agenda) is used. California entity number and SAM UEI were not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "82-2078983",
+      "email": null,
+      "headquarters": "Sebastopol, CA",
+      "legalName": "Tri Valley Soccer Referees Incorporated",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit association of soccer referees. Its stated mission is to provide soccer officials to member schools and other organizations, and to promote the game of soccer to educate the schools and student athletes it serves.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Tri Valley Soccer Referees Incorporated - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/822078983"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein"
+        ],
+        "title": "Tri-Valley Soccer Referee Association (EIN 82-2078983) - Grants, Funding, 990s",
+        "url": "https://impala.digital/public/profiles/82-2078983/overview"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008895",
+    "notes": "ProPublica lists Tri Valley Soccer Referees Incorporated (EIN 82-2078983, 501(c)(6)) in Sebastopol, CA, matching the agenda location, and impala.digital shows the same EIN under the agenda's name with a mission of providing soccer officials to member schools. The summary is neutral and supported; the link to Oakland rests on name, location and service fit, and the Forestville vs Sebastopol address discrepancy is handled by using the agenda-matching city.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

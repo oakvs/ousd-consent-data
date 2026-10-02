@@ -2,12 +2,22 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.bayareacreative.org",
+      "field": "source:https://www.bayareacreative.org/about",
       "pass": true
     },
     {
       "detail": null,
       "field": "source:https://projects.propublica.org/nonprofits/organizations/832011288",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://arts.ca.gov/grantee/bay-area-creative-bac/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
       "pass": true
     },
     {
@@ -29,51 +39,65 @@
   "key": "v-008602",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered 501(c)(3) nonprofit 'Bay Area Creative Bac' (ProPublica Nonprofit Explorer, EIN 83-2011288) and the website bayareacreative.org shows the same EIN",
-      "Website describes arts education (poetry, hip hop dance, visual arts, after-school clubs, artist residencies), consistent with OUSD's 'Classroom & academic programs' category and a no-cost services agreement at an elementary school",
-      "Website says it serves families in Oakland among other Bay Area cities"
+      "Name matches a registered 501(c)(3) nonprofit, 'Bay Area Creative Bac' (ProPublica Nonprofit Explorer, EIN 83-2011288), which its own website calls 'Bay Area Creative'",
+      "California Arts Council grantee page lists Bay Area Creative at an Oakland, CA address, matching the agenda's 'Oakland, CA'",
+      "Organization runs in-school arts residencies for children (including a residency at an Oakland elementary school), matching OUSD's 'Classroom & academic programs' no-cost agreement for an elementary school"
     ],
     "key": "v-008602",
-    "notes": "Neither the organization's site nor the other pages fetched mention OUSD or Franklin Elementary. ProPublica lists the IRS-registered city as Hayward, CA, while the agenda gives Oakland, CA; the website says it serves Oakland and other Bay Area cities, so no headquarters was filled in. The only contact on the site is a Director@ inbox, which was left out. No CA Secretary of State or SAM.gov record was checked because the web search budget ran out.",
+    "notes": "ProPublica/IRS lists the city as Hayward, CA, while the California Arts Council page gives an Oakland apartment-style address (1389 Jefferson St Apt C505), so address and headquarters were left null. No phone number found on official pages. No page found that explicitly names OUSD or Franklin Elementary; identity rests on name, Oakland location and school-arts work.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": "83-2011288",
-      "email": null,
+      "email": "Director@BayAreaCreative.org",
       "headquarters": null,
-      "legalName": "Bay Area Creative Bac",
+      "legalName": "Bay Area Creative",
       "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "Bay Area Creative is a nonprofit arts education organization. It uses spoken word poetry, hip hop dance and visual arts to work with young people in under-served Bay Area communities. Its programs include artist visits and residencies, after-school clubs, summer camps, teacher professional development and student anthologies.",
+      "summary": "Bay Area Creative is a nonprofit arts education organization. It runs in-school and after-school workshops, residencies and summer programs in spoken word poetry, dance and visual arts for young people, and offers professional development for teachers.",
       "website": "https://www.bayareacreative.org"
     },
     "sources": [
       {
         "supports": [
+          "legalName",
           "summary",
           "orgType",
           "website",
+          "email",
           "ein"
         ],
-        "title": "Bay Area Creative (BAC)",
-        "url": "https://www.bayareacreative.org"
+        "title": "About - Bay Area Creative",
+        "url": "https://www.bayareacreative.org/about"
       },
       {
         "supports": [
-          "legalName",
           "ein",
           "orgType"
         ],
         "title": "Bay Area Creative Bac - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/832011288"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "BAY AREA CREATIVE BAC - California Arts Council",
+        "url": "https://arts.ca.gov/grantee/bay-area-creative-bac/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008602",
+    "notes": "Exact name match to a 501(c)(3) (EIN 83-2011288) whose own site and CA Arts Council page show in-school arts residencies at Oakland elementary schools and a service area including Oakland, fitting a no-cost classroom agreement at Franklin Elementary; the IRS city is Hayward but the candidate correctly left address null. Summary, EIN, website and the role-based Director@ email are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

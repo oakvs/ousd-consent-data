@@ -2,47 +2,101 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://catalog.csusb.edu/csu-system/",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://en.wikipedia.org/wiki/California_State_University",
       "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.calstate.edu/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
     }
   ],
   "key": "n-trustees-of-california-state-university",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches the governing body of the California State University system: a Board of Trustees governs the CSU (Wikipedia)",
-      "Agenda gives Long Beach, CA, and the CSU system headquarters (Chancellor's Office) is in Long Beach (Wikipedia)"
+      "Name matches: the California State University is governed by a board legally styled 'Trustees of the California State University' (Wikipedia; CSU System catalog page describes governance by the Board of Trustees)",
+      "Located in Long Beach, CA, matching the agenda text: the CSU Office of the Chancellor, where the Board of Trustees is headquartered, is at 401 Golden Shore, Long Beach (CSU System catalog page)",
+      "Agenda describes a service agreement with a CSU entity for student and family support services, consistent with a public university system that trains teachers, nurses and other professionals"
     ],
     "key": "n-trustees-of-california-state-university",
-    "notes": "WebSearch budget was exhausted and the official calstate.edu site returned HTTP 403 to automated fetching, so no official contact page or registry could be cited. Only Wikipedia was fetched. Also unclear whether the contracting unit is the system office or a specific campus (the legal contracting entity is 'The Trustees of the California State University'), so a reviewer should confirm before publishing. Website, phone, email and address left null.",
+    "notes": "Agenda does not name a specific campus; the entity is the system-level governing board (Chancellor's Office, Long Beach). A campus (e.g. CSU East Bay) may be the actual service provider. Public agency, so no EIN/SAM UEI/SOS entity number sought. calstate.edu blocks automated fetching (403).",
     "profile": {
-      "address": null,
+      "address": "401 Golden Shore, Long Beach, California 90802-4210",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "Long Beach, CA",
-      "legalName": null,
+      "legalName": "Trustees of the California State University",
       "orgType": "public_agency",
-      "phone": null,
+      "phone": "(562) 951-4000",
       "samUei": null,
-      "summary": "The California State University is California's system of public universities, with 22 main campuses across the state. It is governed by a Board of Trustees, and its headquarters is in Long Beach, California.",
-      "website": null
+      "summary": "The California State University (CSU) is California's public university system, with 22 member universities and more than 4,000 degree programs. It is governed by the Board of Trustees, with a chancellor as chief executive officer, and its system office is in Long Beach.",
+      "website": "https://www.calstate.edu/"
     },
     "sources": [
       {
         "supports": [
           "summary",
           "orgType",
+          "website",
+          "phone",
+          "address",
           "headquarters"
+        ],
+        "title": "The CSU System | CSUSB",
+        "url": "https://catalog.csusb.edu/csu-system/"
+      },
+      {
+        "supports": [
+          "legalName"
         ],
         "title": "California State University - Wikipedia",
         "url": "https://en.wikipedia.org/wiki/California_State_University"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "The California State University",
+        "url": "https://www.calstate.edu/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-trustees-of-california-state-university",
+    "notes": "The agenda names 'Trustees of the California State University' in Long Beach, CA, which is the legal name and headquarters (401 Golden Shore) of the CSU system board. The CSUSB catalog page and Wikipedia confirm the summary, address, phone, website and legal name, and the summary is neutral. The agenda does not name a campus, and the profile says so.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

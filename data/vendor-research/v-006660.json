@@ -2,7 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://en.wikipedia.org/wiki/Sysco",
+      "field": "source:https://investors.sysco.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sysco.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
       "pass": true
     }
   ],
@@ -11,38 +21,44 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Agenda name 'Sysco Food Services' matches the Sysco brand: a foodservice distributor, consistent with a K-12 pre-prepared meals and sandwich products contract (Wikipedia describes Sysco as selling and distributing food products to educational facilities)",
-      "Parent company Sysco Corporation is a registered public company (SEC EDGAR, SYSCO CORP, Houston, TX)"
+      "Agenda names 'Sysco Food Services' in Fremont, CA; Sysco's Bay Area distribution center (Sysco San Francisco) is listed at 5900 Stewart Ave, Fremont, CA in search results (directory listings; could not be fetched)",
+      "Sysco is a food distributor serving schools, matching OUSD's 'Food, transportation & operations' / Nutrition Services meal contract (Sysco investor page: sells and distributes food products to educational facilities)"
     ],
     "key": "v-006660",
-    "notes": "Web search budget was exhausted, so the Fremont, CA operating company (likely a Sysco subsidiary such as Sysco San Francisco, a separate legal entity from parent Sysco Corporation) could not be confirmed via CA Secretary of State or Sysco's own location page (JS-rendered pages returned no content). Parent-company facts only; no Fremont address, phone, or registry IDs filled in. Not publishable without manual review.",
+    "notes": "Could not confirm which Sysco legal entity (likely Sysco San Francisco, Inc., Fremont) is the contracting party; no registry (CA SOS / SAM.gov) page was fetchable. Fremont address/phone from directory snippets not cited because those pages could not be fetched. Profile limited to parent-company description.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": "Houston, TX",
+      "headquarters": null,
       "legalName": null,
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "Sysco Corporation is a company that sells, markets and distributes food products to restaurants, healthcare and educational facilities, sports stadiums and other places that serve food. It also sells foodservice supplies and equipment. It is based in Houston, Texas.",
-      "website": null
+      "summary": "Sysco is a large food distribution company. It sells, markets and distributes food products and related supplies to restaurants, health care and educational facilities, hotels and other places that serve meals. The local Fremont, California operation is part of Sysco Corporation, which is based in Houston, Texas.",
+      "website": "https://www.sysco.com/"
     },
     "sources": [
       {
         "supports": [
           "summary",
-          "orgType",
-          "headquarters"
+          "orgType"
         ],
-        "title": "Sysco - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Sysco"
+        "title": "Sysco Investor Relations",
+        "url": "https://investors.sysco.com/"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Sysco | Wholesale Restaurant Food Distributor",
+        "url": "https://www.sysco.com/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

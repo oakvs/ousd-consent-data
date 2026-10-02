@@ -1,17 +1,111 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.pelcosalesandservice.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pelcosalesandservice.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/refrigerator-repair/apex-refrigeration-corporation-1116-222308",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009089",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Pelco Sales & Service's About Us page says employees formed Apex Refrigeration Corporation in 1993, now operating as Pelco Sales and Service, matching the agenda's 'Apex Refrigeration Corporation (dba Pelco Sales and Service)'",
+      "Business is located in Concord, CA, matching the agenda's location",
+      "Website describes commercial refrigeration, walk-in box and freezer service, matching OUSD's walk-in freezer/cooler installation and refrigeration repair contracts for Nutrition Services",
+      "BBB lists Apex Refrigeration Corporation with the same main phone number (510) 653-9850 as the Pelco website"
+    ],
     "key": "v-009089",
-    "notes": "No credible candidate confirmed. Web search budget was exhausted before any search ran; the one guessed domain (apexrefrigeration.com) belongs to an unrelated Apex Refrigeration in Gresham, OR, and was rejected. Needs a rerun with search available (CA Secretary of State business search for Apex Refrigeration Corporation, Concord, CA; dba Pelco Sales & Service).",
-    "profile": null,
-    "sources": []
+    "notes": "No CA Secretary of State, EIN or SAM.gov record was checked, so those fields are null. BBB lists an Oakland address (1600 Kirkham St) while the website and agenda indicate Concord; Concord used per the vendor's own website.",
+    "profile": {
+      "address": "2430 Sprig Ct, Suite #E & #F, Concord, CA 94520",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "pelco1969@sbcglobal.net",
+      "headquarters": "Concord, CA",
+      "legalName": "Apex Refrigeration Corporation",
+      "orgType": "company",
+      "phone": "(510) 653-9850",
+      "samUei": null,
+      "summary": "A Bay Area company that repairs and sells commercial refrigeration equipment for the food service industry, such as walk-in coolers and freezers, ice machines and display cases. It operates under the name Pelco Sales and Service and traces its roots to a refrigeration business started in 1962.",
+      "website": "https://www.pelcosalesandservice.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Commercial Ice Machines (About Us) - Pelco Sales & Service",
+        "url": "https://www.pelcosalesandservice.com/about-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Commercial Refrigeration - Pelco Sales & Service",
+        "url": "https://www.pelcosalesandservice.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone"
+        ],
+        "title": "Apex Refrigeration Corporation - BBB",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/refrigerator-repair/apex-refrigeration-corporation-1116-222308"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009089",
+    "notes": "Pelco's About Us page states Apex Refrigeration Corporation was formed in 1993 and operates as Pelco Sales and Service in Concord, CA; the BBB listing shares the (510) 653-9850 phone. Services (walk-in boxes, freezers, ice machines, display cases) fit OUSD's walk-in cooler/freezer and refrigeration repair contracts, and every profile field and the neutral summary are shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

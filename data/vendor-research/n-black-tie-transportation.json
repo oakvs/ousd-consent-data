@@ -1,17 +1,117 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2672444",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.pleasanton.org/list/member/black-tie-transportation-1328",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blacktietrans.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.hacienda.org/news-events/hacienda-online/connection/2018/black-tie-transportation",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-black-tie-transportation",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Federal motor carrier record (FMCSA SAFER, USDOT 2672444) shows legal name 'BLACK TIE TRANSPORTATION LLC' at 7080 COMMERCE DRIVE, PLEASANTON, CA 94588, matching the agenda's name 'Black Tie Transportation LLC' and location 'Pleasanton, CA'",
+      "Pleasanton Chamber of Commerce member listing for Black Tie Transportation gives the same address (7080 Commerce Drive, Pleasanton, CA 94588) and the website blacktietrans.com",
+      "The company runs buses and shuttles (Hacienda business park page lists employee shuttles; search listings describe fleet up to 40-passenger buses), consistent with OUSD buying school pupil activity bus transportation",
+      "A different company named Black Tie Transportation Inc. in Winston-Salem, NC (blacktietransportation.net) was found and excluded"
+    ],
     "key": "n-black-tie-transportation",
-    "notes": "Identity not confirmed. The session's WebSearch budget was exhausted (200 of 200) so no candidate could be searched for, and a direct fetch of a guessed domain failed. Agenda gives only 'Black Tie Transportation LLC' in Pleasanton, CA (school pupil activity bus services). Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "The company's own site (blacktietrans.com) blocks automated fetching, so the phone, address and website come from the Pleasanton Chamber of Commerce listing. Another listing (Hacienda, 2018) shows a different phone, (925) 398-6280, and FMCSA shows (925) 989-0661; (925) 847-0747 is the number the chamber listing and search listings give for the company. No EIN, CA entity number or SAM UEI verified; website domain tied to this Pleasanton company via the chamber and Hacienda listings.",
+    "profile": {
+      "address": "7080 Commerce Drive, Pleasanton, CA 94588",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Pleasanton, CA",
+      "legalName": "BLACK TIE TRANSPORTATION LLC",
+      "orgType": "company",
+      "phone": "(925) 847-0747",
+      "samUei": null,
+      "summary": "A company in Pleasanton, California that provides chauffeured ground transportation across the San Francisco Bay Area. It offers airport rides, employee shuttles, and transportation for special events and group trips.",
+      "website": "http://www.blacktietrans.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "SAFER Web - Company Snapshot BLACK TIE TRANSPORTATION LLC",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2672444"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Black Tie Transportation",
+        "url": "https://business.pleasanton.org/list/member/black-tie-transportation-1328"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Contact",
+        "url": "https://blacktietrans.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Black Tie Transportation",
+        "url": "https://www.hacienda.org/news-events/hacienda-online/connection/2018/black-tie-transportation"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-black-tie-transportation",
+    "notes": "FMCSA snapshot (USDOT 2672444) shows BLACK TIE TRANSPORTATION LLC, an active passenger carrier with 33 power units at 7080 Commerce Drive, Pleasanton, matching the agenda's name, city and bus-transport purchase. The chamber listing supports the address, website, phone (925) 847-0747 and the services; the Hacienda page supports airport, employee shuttle and special event services.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

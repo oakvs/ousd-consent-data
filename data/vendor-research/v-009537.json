@@ -1,17 +1,76 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.wdunit.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wdunit.org/workforce-development",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009537",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Exact name match: agenda names 'Workforce Development Unit'; wdunit.org identifies 'Workforce Development Unit (WDU)'",
+      "Located in Oakland, CA, matching the agenda location",
+      "Website describes workforce development, job placement and apprenticeship placements and partnerships with schools, matching OUSD's 'Staff & hiring' contracts funded by the CA Apprenticeship Initiative",
+      "No page found that names OUSD as a WDU client, and no registry record (California Secretary of State, SAM.gov) was confirmed"
+    ],
     "key": "v-009537",
-    "notes": "No credible external organization found. 'Workforce Development Unit' appears to be an internal OUSD unit under the Talent / Human Resources Department (contract titles name that department; funded by the CA Apprenticeship Initiative), not an independent vendor. Search and the OUSD Talent page did not identify a distinct organization with its own registry entries or contact details.",
-    "profile": null,
-    "sources": []
+    "notes": "Medium confidence: name, city and subject area all match, but no source ties WDU to OUSD directly (its founder is publicly linked to Oakland early childhood apprenticeship work, but that was not verified on a fetched page). Legal name, California entity number and SAM UEI not confirmed from a registry; no street address or phone published on the site pages read. Self-described as an S-Corporation.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "admin@wdunit.org",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Workforce Development Unit (WDU) is an Oakland-based organization, founded in 2014, that works to expand education and career opportunities for youth and adults who have been left out of traditional pathways. Its services include early childhood, TK-12 and adult education support, higher education guidance, and workforce development such as career readiness workshops and job placement, internship and apprenticeship placements.",
+      "website": "https://www.wdunit.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "email",
+          "headquarters"
+        ],
+        "title": "About - Workforce Development Unit",
+        "url": "https://www.wdunit.org/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "headquarters"
+        ],
+        "title": "WDU - Workforce Development Unit",
+        "url": "https://www.wdunit.org/workforce-development"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

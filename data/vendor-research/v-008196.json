@@ -1,17 +1,103 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/800615097",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.commonvision.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.commonvision.org/our-team",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008196",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Common Vision', EIN 80-0615097, listed in Berkeley, CA (ProPublica Nonprofit Explorer), matching the agenda's Berkeley, CA",
+      "Organization's website says it runs garden, food and tree programs at Prescott Elementary School in Oakland, matching OUSD agreement titles naming Prescott Elementary",
+      "Organization's website lists a collaboration with Oakland Unified School District, matching the OUSD 'Classroom & academic programs' no-cost agreements"
+    ],
     "key": "v-008196",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted before any search could run, so no candidate organization was identified or confirmed. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda text gives only 'Common Vision' (Berkeley, CA), a name too generic to guess without registry or website confirmation.",
-    "profile": null,
-    "sources": []
+    "notes": "IRS/ProPublica lists the organization's address as Berkeley, CA (matches agenda); the organization's website gives its program address at Prescott Elementary School, 920 Campbell St, Oakland. No general phone or email was found on the pages fetched, so those are null. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "920 Campbell St, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "80-0615097",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Common Vision",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Common Vision is a nonprofit that works on education, food and the environment. It runs garden and environmental education programs at schools, food recovery and distribution programs, and tree planting and urban forestry projects, mostly in West Oakland.",
+      "website": "https://www.commonvision.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Common Vision - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/800615097"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Common Vision",
+        "url": "https://www.commonvision.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Common Vision - Our Team",
+        "url": "https://www.commonvision.org/our-team"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008196",
+    "notes": "Common Vision (EIN 80-0615097, 501(c)(3), IRS address Berkeley) runs garden/food/tree programs at OUSD's Prescott Elementary (920 Campbell St), consistent with the no-cost agreements; summary is supported by commonvision.org and neutral. The 920 Campbell St address is the Prescott school campus where it operates, while the IRS mailing address is Berkeley.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

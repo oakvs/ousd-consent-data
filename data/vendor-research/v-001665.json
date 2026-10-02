@@ -7,7 +7,7 @@
     },
     {
       "detail": null,
-      "field": "source:https://www.comtelsys.com/about",
+      "field": "source:https://www.beaconcom.com/comtel",
       "pass": true
     },
     {
@@ -22,16 +22,6 @@
     },
     {
       "detail": null,
-      "field": "address",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "legalName",
-      "pass": true
-    },
-    {
-      "detail": null,
       "field": "website",
       "pass": true
     }
@@ -39,59 +29,58 @@
   "key": "v-001665",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Company name matches exactly: 'Comtel Systems Technology, Inc.' (comtelsys.com); a California stock corporation of the same name is listed on OpenCorporates (not cited)",
-      "Company serves K-12 schools with public address, intercom and bell systems, matching OUSD's 'PA System Replacement Project' contracts",
-      "Northern California company with a (408) area-code phone, consistent with the Silicon Valley / Sunnyvale location in the agenda",
-      "CONTRADICTION/WEAK: website gives its address as Pleasanton, CA, not Sunnyvale; no page found mentioning Oakland or OUSD; web search budget was exhausted so no registry (CA SOS, SAM.gov) could be checked"
+      "Name matches 'Comtel Systems Technology' (comtelsys.com), a communications and security systems integrator; Beacon Communications' page on Comtel gives its Northern California base as Sunnyvale, CA, matching the agenda location 'Sunnyvale, CA'",
+      "Company website says it serves K-12 education with intercom, bell and sound reinforcement systems, consistent with OUSD contracts for PA (public address) system replacement projects",
+      "Company's phone (408) 543-5600 is a Silicon Valley area code consistent with a Sunnyvale-based firm"
     ],
     "key": "v-001665",
-    "notes": "Agenda says Sunnyvale, CA; the company website lists Pleasanton, CA (possible relocation, not confirmed). Parent company is Beacon Communications (acquired April 2022). No registry confirmation or Oakland/OUSD link found because the web search budget was exhausted. Re-run with search access to confirm identity via CA SOS / CSLB license 420981 before publishing.",
+    "notes": "Comtel's own site lists a Pleasanton, CA headquarters address (7133 Koll Center Pkwy) while Beacon's page and older listings give 1292 Hammerwood Ave, Sunnyvale, CA 94089; address and headquarters left null because of the conflict. Registry IDs (CA SOS, SAM.gov) were not checked, so legal name and IDs are null.",
     "profile": {
-      "address": "7133 Koll Center Pkwy, Suite 100, Pleasanton, CA 94566",
+      "address": null,
       "caEntityNumber": null,
       "ein": null,
       "email": "info@comtelsys.com",
-      "headquarters": "Pleasanton, CA",
-      "legalName": "Comtel Systems Technology, Inc.",
+      "headquarters": null,
+      "legalName": null,
       "orgType": "company",
       "phone": "(408) 543-5600",
       "samUei": null,
-      "summary": "A company that installs and services communications and security systems, including nurse call, electronic security, audio-visual, and structured cabling systems. It serves healthcare, education, government, and commercial customers in Northern California. For schools it offers bell, public address, and intercom systems.",
+      "summary": "Comtel Systems Technology is a company that designs, installs and maintains communications and security systems, such as nurse call, intercom, public address, access control and structured cabling. It serves healthcare, education, government and commercial customers, mainly in Northern California. It has been owned by Beacon Communications since 2022.",
       "website": "https://www.comtelsys.com"
     },
     "sources": [
       {
         "supports": [
-          "legalName",
           "summary",
           "orgType",
           "website",
           "phone",
-          "email",
-          "address",
-          "headquarters"
+          "email"
         ],
-        "title": "Comtel Systems Technology",
+        "title": "Comtel Systems Tech",
         "url": "https://www.comtelsys.com"
       },
       {
         "supports": [
           "summary",
-          "orgType",
           "phone",
-          "email",
-          "address",
-          "headquarters"
+          "email"
         ],
-        "title": "About Comtel Systems Technology",
-        "url": "https://www.comtelsys.com/about"
+        "title": "Comtel Systems Technology | Beacon Communications",
+        "url": "https://www.beaconcom.com/comtel"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001665",
+    "notes": "Both cited pages show Comtel Systems Technology, Inc. (Sunnyvale-area, serving K-12 with intercom/bell systems) with the stated phone, email, Northern California focus and the April 2022 Beacon Communications acquisition, matching the PA system replacement work OUSD contracts for. The summary is neutral; the only soft spot is 'public address' being inferred from intercom/bell/audio-visual wording, which is minor.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

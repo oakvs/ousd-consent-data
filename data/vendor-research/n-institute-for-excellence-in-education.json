@@ -7,6 +7,36 @@
     },
     {
       "detail": null,
+      "field": "source:https://excellenceined.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://excellenceined.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/officeofcharterschools/for-charter-school-staff/compliance-center",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "ein",
       "pass": true
     },
@@ -14,47 +44,82 @@
       "detail": null,
       "field": "legalName",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
     }
   ],
   "key": "n-institute-for-excellence-in-education",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered 501(c)(3) nonprofit: 'The Institute For Excellence In Education' (ProPublica Nonprofit Explorer, EIN 38-3635927)",
-      "Located in Mt Pleasant, MI, matching the agenda text 'Mt. Pleasant, MI'"
+      "Name matches a registered 501(c)(3) nonprofit 'The Institute For Excellence In Education' in Mt Pleasant, MI (ProPublica Nonprofit Explorer, EIN 38-3635927), matching the agenda's Mt. Pleasant, MI location",
+      "OUSD's Office of Charter Schools page says it contracts with Epicenter, a charter-authorizing software platform, matching the agenda's 'Technology' purpose and the 'Charter Schools Office' contract title",
+      "Epicenter's website (epicenternow.org) lists 'The Institute for Excellence in Education' as its legal name in its page metadata, linking the registered nonprofit to the Epicenter platform"
     ],
     "key": "n-institute-for-excellence-in-education",
-    "notes": "Only one registry source found (name and city match). Could not independently confirm the website, what services it provides, or any link to OUSD or its Charter Schools Office; the WebSearch budget was exhausted and guessed domains did not resolve or belonged to other organizations. Needs a second identity signal before publishing.",
+    "notes": "Epicenter link rests on the JSON-LD metadata of epicenternow.org (legalName) and the OUSD compliance page naming Epicenter; the Epicenter-related summary sentence is a reviewer-checkable inference from those. No CA Secretary of State or SAM.gov entry checked (Michigan organization).",
     "profile": {
-      "address": null,
+      "address": "711 W. Pickard Street, Mount Pleasant, MI 48858",
       "caEntityNumber": null,
       "ein": "38-3635927",
-      "email": null,
-      "headquarters": "Mt Pleasant, MI",
+      "email": "info@excellenceined.org",
+      "headquarters": "Mount Pleasant, MI",
       "legalName": "The Institute For Excellence In Education",
       "orgType": "nonprofit",
-      "phone": null,
+      "phone": "(989) 317-3510",
       "samUei": null,
-      "summary": "A nonprofit organization in Mt. Pleasant, Michigan, classified by the IRS as an educational institution providing management and technical assistance. No website or description of its services could be confirmed.",
-      "website": null
+      "summary": "A nonprofit based in Mount Pleasant, Michigan, that supports educators through professional development, coaching and training programs such as Cognitive Coaching and Adaptive Schools. It also offers curriculum materials and educational products. It is also the organization behind Epicenter, a software platform used by charter school authorizers to manage oversight and compliance documents.",
+      "website": "https://excellenceined.org/"
     },
     "sources": [
       {
         "supports": [
           "legalName",
-          "summary",
-          "orgType",
-          "headquarters",
-          "ein"
+          "ein",
+          "orgType"
         ],
         "title": "The Institute For Excellence In Education - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/383635927"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Institute For Excellence In Education",
+        "url": "https://excellenceined.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Institute For Excellence In Education",
+        "url": "https://excellenceined.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Compliance Center - Oakland Unified School District",
+        "url": "https://www.ousd.org/officeofcharterschools/for-charter-school-staff/compliance-center"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-institute-for-excellence-in-education",
+    "notes": "Exact legal name and Mt. Pleasant, MI location match the agenda; ProPublica confirms the 501(c)(3) and EIN, the organization's contact page confirms phone, email and address, and OUSD's compliance page confirms the Charter Schools Office contracts with Epicenter, which epicenternow.org says is operated under The Institute for Excellence in Education. The summary is neutral and each claim is supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

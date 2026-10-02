@@ -1,20 +1,92 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.datarequests.org/company/trellis-law/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://getlatka.com/companies/trellis-research",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
   "key": "n-trellis-research",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "OpenCorporates lists a California-registered 'TRELLIS RESEARCH, INC.' (entity 4147139) in Los Angeles, matching the agenda name and city. This is a secondary aggregator, not the Secretary of State record, and it is a single signal.",
-      "Could not confirm what the company does or find its website: the web search budget was exhausted and trellis.law (the likely site) returned HTTP 403 to automated fetching. No second independent signal was obtained."
+      "Name matches: 'Trellis Research Inc.' is the company behind trellis.law (datarequests.org privacy contact page; Latka profile)",
+      "Located in Los Angeles, CA, matching the agenda text 'Los Angeles, CA'",
+      "Offers a SaaS legal research and analytics platform, matching OUSD's 'SAAS Services Agreement' with the General Counsel / Legal Department"
     ],
     "key": "n-trellis-research",
-    "notes": "Plausible candidate only: Trellis Research, Inc., Los Angeles (possibly the company behind trellis.law, a court-records research platform, unverified). Needs a manual check against the CA Secretary of State and the company's own About/Contact pages before any publication.",
-    "profile": null,
-    "sources": []
+    "notes": "Official trellis.law pages return 403 to automated fetching, so contact details come from datarequests.org (a nonprofit database of company privacy contacts). A BBB listing shows an older/different LA address (2236 S Barrington Ave); a reviewer should confirm the current address on trellis.law/privacy-policy. No registry IDs found.",
+    "profile": {
+      "address": "2036 Armacost Ave, Los Angeles, CA 90025",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@trellis.law",
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Trellis Research Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Trellis Research is a for-profit technology company based in Los Angeles that runs a legal research and analytics platform focused on local courts. It uses data and artificial intelligence to help lawyers analyze court decisions and compare how different judges rule.",
+      "website": "https://trellis.law"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Trellis Research Inc.: Privacy contact details",
+        "url": "https://www.datarequests.org/company/trellis-law/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "Trellis Research Revenue 2023: $6M ARR (Bootstrapped)",
+        "url": "https://getlatka.com/companies/trellis-research"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-trellis-research",
+    "notes": "Name, Los Angeles location and a legal-research SaaS product all fit a SaaS agreement with OUSD's Legal Department; the datarequests.org and Latka pages show the legal name, address, email, website, HQ and the neutral summary. The address is from a single third-party source and a BBB listing reportedly shows an older address, but datarequests.org does list it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

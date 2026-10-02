@@ -1,17 +1,81 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://natscal.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008573",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website names it exactly 'North American Technical Services, Inc.', matching the agenda name",
+      "Located in Modesto, California (4713 Enterprise Way Suite 4), matching the agenda location 'Modesto, CA'",
+      "Website lists Special Inspections and DSA (Division of the State Architect) In-Plant Inspection, matching OUSD's 'Agreement for Special Inspection Services for Construction' for school modernization projects"
+    ],
     "key": "v-008573",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted, so no candidate could be found or confirmed. This is a tooling limit, not a finding that the vendor is unidentifiable. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda context: North American Technical Services, Inc., Modesto, CA; special inspection services for construction (Fremont HS and Roosevelt MS modernization).",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (CA Secretary of State, SAM.gov) were not retrieved. No general email found on the company site. Link to the specific OUSD projects was not independently confirmed beyond name, location and service match.",
+    "profile": {
+      "address": "4713 Enterprise Way Suite 4, Modesto, California 95356",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Modesto, CA",
+      "legalName": "North American Technical Services, Inc.",
+      "orgType": "company",
+      "phone": "(209) 545-1108",
+      "samUei": null,
+      "summary": "A company in Modesto, California that provides construction inspection and testing services. Its services include special inspection of construction work, construction materials testing, and inspection of modular and relocatable buildings for projects overseen by the Division of the State Architect. The company says it was established in 1990.",
+      "website": "https://natscal.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "North American Technical Services, Inc.",
+        "url": "https://natscal.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008573",
+    "notes": "The organization matches (name, Modesto address, special inspection services), but the cited site only lists 'Special Inspections', 'Construction Materials Testing' and 'DSA In-Plant Inspection' with no descriptions. The summary's claims about inspection of modular and relocatable buildings and projects overseen by the Division of the State Architect are not shown by the source.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
 }

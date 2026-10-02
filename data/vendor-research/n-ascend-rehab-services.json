@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ascendrehabinc.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ascendrehabinc.com/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-ascend-rehab-services",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the organization's website identifies it as 'Ascend Rehab Services, Inc.', matching 'Ascend Rehab Services' in the agenda",
+      "Headquartered in Union City, CA (29516 Kohoutek Way), matching the 'Union City, CA' location in the agenda",
+      "Website describes school-based speech and occupational therapy and specialized instruction, consistent with OUSD's special education nonpublic agency services master contract"
+    ],
     "key": "n-ascend-rehab-services",
-    "notes": "Not researched: the WebSearch budget for this session (200 of 200) was exhausted, so no candidate organization could be identified or confirmed. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda context: Ascend Rehab Services, Union City, CA; nonpublic agency special education master contract 2025-26.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry IDs checked (California Secretary of State search is not fetchable). orgType 'company' inferred from the 'Inc.' in the name; not confirmed in a registry. Website does not name any school district.",
+    "profile": {
+      "address": "29516 Kohoutek Way, Union City, CA 94587",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@ascendrehabinc.com",
+      "headquarters": "Union City, CA",
+      "legalName": "Ascend Rehab Services, Inc.",
+      "orgType": "company",
+      "phone": "510-441-8240",
+      "samUei": null,
+      "summary": "A company that provides speech therapy, occupational therapy, feeding therapy and specialized instruction for infants and children. Services are offered in clinics, homes, schools and by teletherapy. It is based in Union City and has clinics in several Bay Area and Central Valley cities.",
+      "website": "https://www.ascendrehabinc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Pediatric Rehab Center Offering Play Based Therapy",
+        "url": "https://www.ascendrehabinc.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Ascend Rehab Locations",
+        "url": "https://www.ascendrehabinc.com/locations/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-ascend-rehab-services",
+    "notes": "Ascend Rehab Services, Inc. is headquartered at 29516 Kohoutek Way, Union City, CA, matching the agenda location, and offers school-based speech/OT/specialized instruction consistent with a special education nonpublic agency master contract. Name, address, phone, email, website and the neutral summary (clinics in Union City, Antioch, Hayward, Livermore, Manteca) are all shown on the cited pages; the website does not name OUSD, but nothing conflicts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

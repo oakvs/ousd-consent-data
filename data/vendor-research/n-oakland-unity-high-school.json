@@ -1,17 +1,120 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.unityhigh.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/75-3107384",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/753107384",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-oakland-unity-high-school",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Oakland Unity High School is a public charter high school in Oakland, CA (6038 Brann St), matching the agenda name exactly (unityhigh.org About page)",
+      "GuideStar lists the nonprofit Unity Schools (EIN 75-3107384), website UNITYHIGH.ORG, as the operator of Oakland Unity High School (OUHS) and Oakland Unity Middle School",
+      "ProPublica Nonprofit Explorer lists Unity Schools as a 501(c)(3) educational nonprofit in Oakland, CA operating a high school",
+      "OUSD's Measure N page says charter schools receive Measure N funds, consistent with a Measures N and H MOU between OUSD and a charter high school"
+    ],
     "key": "n-oakland-unity-high-school",
-    "notes": "Research incomplete: the WebSearch budget for the session was exhausted (200 of 200) before any search ran, and direct fetches of guessed URLs (oaklandunity.org, oaklandunityhighschool.org, ousd.org/measures-n-h) failed or returned nothing, and ProPublica returned HTTP 429. No candidate organization was confirmed, so nothing was filled in. Re-run after the search budget is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal name 'Unity Schools' is the IRS-registered nonprofit; the school's site refers to 'Oakland Unity Charter Schools'. The agenda MOU counterparty is named 'Oakland Unity High School'. The address shown is the school site; GuideStar lists a different business address (410 7th St Ste 204b, Oakland). California Secretary of State entity number not checked (registry not fetchable).",
+    "profile": {
+      "address": "6038 Brann St. Oakland, CA 94605",
+      "caEntityNumber": null,
+      "ein": "75-3107384",
+      "email": "info@unityhigh.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Unity Schools",
+      "orgType": "nonprofit",
+      "phone": "(510) 635-7170",
+      "samUei": null,
+      "summary": "Oakland Unity High School is a public charter high school in Oakland, California, serving about 350 students in grades 9 to 12. It offers a college preparatory program and a career technical pathway in Information Technology and Digital Media. It is run by Unity Schools, a nonprofit that also operates Oakland Unity Middle School.",
+      "website": "https://www.unityhigh.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Oakland Unity High School",
+        "url": "https://www.unityhigh.org/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "summary",
+          "headquarters"
+        ],
+        "title": "Unity Schools - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/75-3107384"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Unity Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/753107384"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-oakland-unity-high-school",
+    "notes": "The school site, GuideStar and ProPublica agree that Oakland Unity High School is an OUSD-authorized public charter run by the Oakland nonprofit Unity Schools (EIN 75-3107384), which fits a Measures N and H MOU. Summary, contact details and EIN are all shown on the cited pages and the summary is neutral; the school address differs from the GuideStar business address, but the profile notes this.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

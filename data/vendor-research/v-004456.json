@@ -1,17 +1,53 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://www.urbanheatacademy.com/about-us.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-004456",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Exact name match: the website urbanheatacademy.com is run by 'Urban Heat Academy', matching the agenda name",
+      "Website describes an after-school and enrichment organization for grades K-12 with school sites in Oakland, CA, matching OUSD's 'After-school & summer programs' contract",
+      "Search-result listings (not fetched) place the organization at a PO Box in Alameda, CA, matching the agenda location; the organization's own site does not state a city"
+    ],
     "key": "v-004456",
-    "notes": "No credible candidate confirmed. Web search quota was exhausted before any search ran; direct fetches of ProPublica returned HTTP 429/404, and guessed domains (urbanheatacademy.org/.com) did not resolve or failed certificate checks. Not an individual; needs re-run when search is available. Agenda location: Alameda, CA.",
-    "profile": null,
-    "sources": []
+    "notes": "Medium confidence: no registry record found (ProPublica Nonprofit Explorer has no organization by this name; California Secretary of State and SAM.gov not confirmed). The organization's own site shows no contact details, legal name or address. Third-party listings suggest a PO Box in Alameda, CA, but those were not fetchable or citable, so contact fields were left null. The site's HTTPS certificate fails verification and it returns 403 to some automated fetchers.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": null,
+      "phone": null,
+      "samUei": null,
+      "summary": "Urban Heat Academy describes itself as an after-school and enrichment organization for students in grades K-12. It says it works to prepare youth for college through tutoring, arts and step programs, and health and fitness activities. It says it has school sites in Vallejo, Stockton and Oakland, California.",
+      "website": "http://www.urbanheatacademy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us - Urban Heat Academy",
+        "url": "http://www.urbanheatacademy.com/about-us.html"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

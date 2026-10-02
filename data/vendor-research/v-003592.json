@@ -1,17 +1,87 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://rmc.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rmc.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-003592",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Restoration Management Company' (Jon K. Takata Corporation dba) in Livermore, CA; rmc.com gives its headquarters as Livermore, CA",
+      "Company website says it serves schools and government agencies with water, fire and environmental restoration, matching a Risk Management (self-insurance) contract",
+      "Search results (Dun & Bradstreet, Mployer listings; not fetchable for verification) list Jon K. Takata Corporation as doing business as Restoration Management Company at 3090 Independence Dr, Livermore; the company's About page names Jon Takata as founder and president"
+    ],
     "key": "v-003592",
-    "notes": "Not researched: the session's WebSearch budget (200 calls) was exhausted, and direct guesses at the company website did not resolve. No candidate was found or verified. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal name 'Jon K. Takata Corporation' comes from the agenda and third-party listings only; it did not appear on rmc.com pages, so legalName is left null. Registry IDs (California entity number, SAM UEI) not found.",
+    "profile": {
+      "address": "3090 Independence Drive, Suite 200, Livermore, CA 94551",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Livermore, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-800-400-5058",
+      "samUei": null,
+      "summary": "Restoration Management Company is a company that provides emergency disaster restoration and cleanup services, including water damage restoration, fire and smoke damage cleanup, mold remediation and environmental remediation. It also offers construction and technical services for electronics and equipment. It serves clients such as healthcare, hospitality, schools and government agencies in several western and southern states.",
+      "website": "https://rmc.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact RMC | Speak with a Restoration Specialist 24/7",
+        "url": "https://rmc.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Restoration Management Company",
+        "url": "https://rmc.com/about-us/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003592",
+    "notes": "rmc.com lists its headquarters at 3090 Independence Drive, Livermore (matching the agenda city) and names Jon Takata as founder and president, consistent with Jon K. Takata Corporation dba Restoration Management Company. Disaster restoration for schools and government fits a Risk Management services agreement. Summary, website, phone, address and headquarters are all shown on the cited pages, and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

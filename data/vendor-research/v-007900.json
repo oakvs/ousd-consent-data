@@ -2,12 +2,22 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://olsonremcho.com/about/",
+      "field": "source:https://olsonremcho.com/about-us/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://olsonremcho.com/",
+      "field": "source:https://olsonremcho.com/practice-area/education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
       "pass": true
     },
     {
@@ -24,48 +34,58 @@
   "key": "v-007900",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches the firm's own site: 'Olson Remcho LLP' (olsonremcho.com), a California law firm, consistent with OUSD's 'Legal, insurance & risk' category and General Counsel office",
-      "The firm has an Oakland office (1901 Harrison Street, Suite 1550), consistent with an Oakland-area district, though the agenda gives no location",
-      "Firm lists Education and Government Law as practice areas; no page found that mentions OUSD directly, and no registry (CA Secretary of State) record was checked because web search was unavailable"
+      "Name matches: the firm's own About page names it 'Olson Remcho LLP', a law firm, matching the agenda's 'Olson Remcho Law Firm' under the General Counsel office (Legal, insurance & risk)",
+      "The firm has an Oakland, CA office, and OUSD is in Oakland",
+      "The firm's Education practice page says it settled an appeal by Oakland Unified School District, which shows a direct tie to OUSD",
+      "The firm's practice areas include government law and advising school district boards, which fits a General Counsel memorandum of understanding and engagement policy"
     ],
     "key": "v-007900",
-    "notes": "Medium confidence: name and Oakland office match, but no registry check (web search budget exhausted) and no page tying the firm to OUSD. Contact fields left null because the firm has three offices and no stated headquarters (Oakland 510-346-6200, Sacramento 916-442-2952, Long Beach 562-427-2100; no general email shown).",
+    "notes": "The firm has three offices (Sacramento, Oakland, Long Beach). The Oakland office address and phone are given because they match the agenda's district; headquarters left null because the site does not say which office is headquarters. No general email was found. No registry IDs were checked.",
     "profile": {
-      "address": null,
+      "address": "1901 Harrison Street, Suite 1550 Oakland, CA 94612",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": null,
       "legalName": "Olson Remcho LLP",
       "orgType": "company",
-      "phone": null,
+      "phone": "510-346-6200",
       "samUei": null,
-      "summary": "A California law firm that advises on political and government law, including elections, campaign finance, ethics and constitutional law. It represents government bodies, nonprofits, labor unions and businesses, and lists education among its practice areas. It has offices in Sacramento, Oakland and Long Beach.",
+      "summary": "Olson Remcho is a California law firm that focuses on political and government law. It advises government agencies, nonprofit organizations, labor unions, businesses, candidates and public officials on topics such as elections, campaign finance, litigation and government law. Its education practice covers school funding and the powers and duties of school district boards.",
       "website": "https://olsonremcho.com/"
     },
     "sources": [
       {
         "supports": [
+          "legalName",
           "summary",
-          "orgType"
+          "orgType",
+          "website",
+          "phone",
+          "address"
         ],
         "title": "About Us - Olson Remcho",
-        "url": "https://olsonremcho.com/about/"
+        "url": "https://olsonremcho.com/about-us/"
       },
       {
         "supports": [
-          "legalName",
-          "website"
+          "summary"
         ],
-        "title": "Olson Remcho",
-        "url": "https://olsonremcho.com/"
+        "title": "Education - Olson Remcho",
+        "url": "https://olsonremcho.com/practice-area/education/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007900",
+    "notes": "Olson Remcho LLP is a California political and government law firm with an Oakland office, and its education page cites an OUSD audit-appeal settlement, which fits a General Counsel engagement. The summary, phone, address, website and legal name are supported by the cited pages and are neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

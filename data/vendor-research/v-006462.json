@@ -2,12 +2,22 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://www.smartcat.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://www.smartcat.com/about-us/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.smartcat.com/ai-translation-software-for-schools/",
+      "field": "source:https://www.builtinboston.com/company/smartcat",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
       "pass": true
     },
     {
@@ -24,48 +34,65 @@
   "key": "v-006462",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Smartcat's own About page names the legal entity 'Smartcat Platform Inc.', matching the agenda name 'Smartcat Platform, Inc.' apart from a comma",
-      "Smartcat sells a translation platform marketed to school districts for documents such as IEPs (individualized education programs), which fits OUSD's Special Education and technology services contracts"
+      "Smartcat's own website names its legal entity 'Smartcat Platform Inc.', matching the agenda name 'Smartcat Platform, Inc.'",
+      "Built In Boston lists Smartcat's headquarters as Boston, Massachusetts, matching the agenda location 'Boston, MA'",
+      "Smartcat sells AI translation software and translator services to school districts, consistent with OUSD's special education and technology services contracts (translation of documents)"
     ],
     "key": "v-006462",
-    "notes": "Web search budget was exhausted, so no registry (SEC/Delaware/MA, SAM.gov) or Boston location could be checked. The About page lists a Delaware registered-agent style address (Wilmington), not Boston, so the agenda's Boston, MA location is unconfirmed. No public phone or general email was found on the pages fetched. Needs human review before publication.",
+    "notes": "The street address shown on Smartcat's website is a Wilmington, Delaware mailbox (PMB), not the Boston headquarters; no Boston street address, phone or general email was found on fetchable pages. Registry IDs not located. No public page found directly linking Smartcat to OUSD.",
     "profile": {
-      "address": null,
+      "address": "2810 N Church St PMB 50985, Wilmington, Delaware, 19802-4447, USA",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
+      "headquarters": "Boston, Massachusetts",
       "legalName": "Smartcat Platform Inc.",
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "Smartcat is a company that makes an AI-assisted translation platform. It helps organizations translate content into many languages, with human review built into the workflow. It also offers its platform to school districts for translating documents such as parent letters and individualized education programs (IEPs).",
-      "website": "https://www.smartcat.com"
+      "summary": "Smartcat is a technology company that runs a cloud platform for translating and localizing content such as documents, websites, videos and courses. It combines AI translation in more than 280 languages with a marketplace of professional human translators.",
+      "website": "https://www.smartcat.com/"
     },
     "sources": [
       {
         "supports": [
-          "legalName",
           "summary",
           "orgType",
-          "website"
+          "website",
+          "legalName",
+          "address"
         ],
-        "title": "About Smartcat",
+        "title": "Smartcat homepage",
+        "url": "https://www.smartcat.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "summary"
+        ],
+        "title": "Smartcat About Us",
         "url": "https://www.smartcat.com/about-us/"
       },
       {
         "supports": [
-          "summary"
+          "headquarters"
         ],
-        "title": "AI translation software for schools",
-        "url": "https://www.smartcat.com/ai-translation-software-for-schools/"
+        "title": "Smartcat Boston Office: Careers, Perks + Culture",
+        "url": "https://www.builtinboston.com/company/smartcat"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006462",
+    "notes": "Smartcat's site names the legal entity Smartcat Platform Inc., markets a School Districts translation solution (fits special education and technology services), and Built In Boston lists Boston HQ matching the agenda. Summary, website, legal name, mailbox address and headquarters are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

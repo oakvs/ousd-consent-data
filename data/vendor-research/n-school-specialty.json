@@ -1,9 +1,29 @@
 {
   "checks": [
     {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/wi/greenville/profile/school-furniture/school-specialty-llc-0694-31001024",
+      "pass": false
+    },
+    {
       "detail": null,
-      "field": "source:https://www.sec.gov/cgi-bin/browse-edgar?company=school+specialty&type=10-K&dateb=&owner=include&count=10",
+      "field": "source:https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001055454&type=10-K",
       "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
     }
   ],
   "key": "n-school-specialty",
@@ -11,38 +31,50 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Name matches SEC EDGAR registrant 'School Specialty Inc' (the parent company of the agenda's 'School Specialty, LLC')",
-      "EDGAR business address is in Greenville, WI, matching the agenda text 'Greenville, WI'"
+      "Legal name 'School Specialty, LLC' matches the agenda name exactly (BBB business profile)",
+      "Located in Greenville, WI, matching the agenda text (BBB profile and SEC EDGAR filer record for the predecessor School Specialty Inc at the same address)",
+      "Business profile describes educational products and school furniture, matching OUSD's furniture, installation, educational supplies and classroom project purchases"
     ],
     "key": "n-school-specialty",
-    "notes": "Only the parent registrant (School Specialty Inc, Delaware) was found, not the LLC named in the agenda. schoolspecialty.com returned HTTP 403 to every fetch and the web search budget was exhausted, so no website, contact details or registry IDs could be confirmed. Needs a re-run before any publication.",
+    "notes": "The company's own website (schoolspecialty.com) returns HTTP 403 to automated fetches, so website and general email were left null rather than unverified. No registry IDs were checked (SAM.gov and California SOS not reached). The SEC EDGAR record for School Specialty Inc (CIK 0001055454, W6316 Design Drive, Greenville, WI 54942, (920) 734-5712) is the predecessor filer, not the LLC itself. Confidence lowered to medium because the cited BBB page blocks automated fetching, so the automated check could not verify it.",
     "profile": {
-      "address": null,
+      "address": "W6316 Design Dr, Greenville, WI 54942",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "Greenville, WI",
-      "legalName": null,
+      "legalName": "School Specialty, LLC",
       "orgType": "company",
-      "phone": null,
+      "phone": "(888) 388-3224",
       "samUei": null,
-      "summary": "School Specialty is a company with its business address in Greenville, Wisconsin. Its own website blocked automated access, so what it does could not be confirmed from a cited page.",
+      "summary": "School Specialty, LLC is a company based in Greenville, Wisconsin, that sells products, programs and services to schools, including educational supplies and school furniture. It was founded in 1959.",
       "website": null
     },
     "sources": [
       {
         "supports": [
+          "legalName",
           "summary",
           "orgType",
+          "phone",
+          "address",
           "headquarters"
         ],
-        "title": "SEC EDGAR company search: School Specialty Inc",
-        "url": "https://www.sec.gov/cgi-bin/browse-edgar?company=school+specialty&type=10-K&dateb=&owner=include&count=10"
+        "title": "School Specialty, LLC | BBB Profile",
+        "url": "https://www.bbb.org/us/wi/greenville/profile/school-furniture/school-specialty-llc-0694-31001024"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "SEC EDGAR filer record, School Specialty Inc",
+        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001055454&type=10-K"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

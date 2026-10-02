@@ -1,17 +1,96 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.codesp.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.codesp.com/default.aspx?_cont=ContactUs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006535",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Organization's own website (codesp.com) gives the exact legal name 'Cooperative Organization for the Development of Employee Selection Procedures', matching the agenda text",
+      "Contact page address is in Huntington Beach, CA, matching the agenda location",
+      "Website describes employee selection and hiring tests for public school, county office of education and college districts, matching OUSD's 'Staff & hiring' contract purpose and the Talent/Human Resources office"
+    ],
     "key": "v-006535",
-    "notes": "Research incomplete: the session's WebSearch budget (200/200) was exhausted, and direct fetches of guessed sites (codesp.org) failed (DNS) and ProPublica returned HTTP 429. No candidate identified or confirmed. Not an individual; re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs not found. Contact page lists Suite 325; some other pages list Suite 400. Second email tests@codesp.com exists for test questions; general inbox used is codesp@codesp.com.",
+    "profile": {
+      "address": "20422 Beach Blvd. Suite 325 Huntington Beach, CA 92648",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "codesp@codesp.com",
+      "headquarters": "Huntington Beach, CA",
+      "legalName": "Cooperative Organization for the Development of Employee Selection Procedures",
+      "orgType": "public_agency",
+      "phone": "(714) 374-8644",
+      "samUei": null,
+      "summary": "A public-sector joint powers agency that provides web-based talent assessment tools to public agencies, including school and college districts. Its services include the CODESP Automated Test System (CATS) with online test item banks, interview builders and performance exercises for hiring employees.",
+      "website": "https://www.codesp.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "CODESP",
+        "url": "https://www.codesp.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "CODESP Contact Us",
+        "url": "https://www.codesp.com/default.aspx?_cont=ContactUs"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006535",
+    "notes": "codesp.com gives the exact legal name, a Huntington Beach address matching the agenda, and employee-selection services fitting OUSD's Talent/HR 'Staff & hiring' contract. The site describes a public-sector joint powers agency, and the summary, contact fields and generic inboxes are all supported and neutral, with no named individuals.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

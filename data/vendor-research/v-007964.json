@@ -2,12 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.girlsleadinggoals.org",
+      "field": "source:https://girlsleadinggoals.org/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.girlsleadinggoals.org/contact",
+      "field": "source:https://www.ktvu.com/news/roots-soul-soccer-clubs-bring-qualified-coaches-to-oakland-youth",
       "pass": true
     },
     {
@@ -29,16 +29,16 @@
   "key": "v-007964",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: the website footer reads 'Girls Leading Goals (SF SOL)' and the FAQ says 'SF SOL (formerly Girls Leading Goals)', matching the agenda name 'Girls Leading Goals'",
-      "Based in San Francisco, matching the agenda location 'San Francisco, CA'",
-      "Runs youth sports programs for girls including summer camps, which is consistent with OUSD's after-school and summer elementary sports contracts (but the site does not mention Oakland or OUSD)"
+      "Organization's own website (girlsleadinggoals.org) uses the name 'Girls Leading Goals' and operates as an all-girls soccer club in San Francisco, matching the agenda's 'Girls Leading Goals, San Francisco, CA'",
+      "KTVU news article names Girls Leading Goals as a nonprofit that partnered with Oakland Roots and Soul for a clinic at Highland Community Elementary School, with OUSD's Expanded Learning Office, matching OUSD's after-school and summer program contracts",
+      "Website describes year-round programs including summer camps and elementary-age soccer, consistent with OUSD's 'Expanded Learning Elementary Sports' and 'Summer Learning Programs' agreements"
     ],
     "key": "v-007964",
-    "notes": "Medium confidence only. Name and city match, and the activity is plausible for OUSD expanded-learning sports, but no registry record (IRS, CA Secretary of State, SAM.gov) could be checked (search budget exhausted, ProPublica returned HTTP 429), and the organization's site never mentions Oakland or OUSD. Legal structure (nonprofit vs company) and legal name are unconfirmed. OUSD titles also use the variant 'Girls Leading Girls', likely a typo. Needs reviewer confirmation before publishing.",
+    "notes": "Registry details left null on purpose. The site's footer names 'Girls Leading Goals (SF SOL)'. Idealist and a search snippet link the same Geary Blvd address and EIN 46-4563540 to 'Girls Leading Girls Inc' (ProPublica lists that EIN in Novato, CA), a 501(c)(3). The agenda also names 'Girls Leading Girls' in two older titles. I could not confirm on a cited page that Girls Leading Goals and Girls Leading Girls Inc are one legal entity, so legal name, org type and EIN are not given. A reviewer could check CA Secretary of State records.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -49,8 +49,8 @@
       "orgType": null,
       "phone": "(415) 496-5608",
       "samUei": null,
-      "summary": "Girls Leading Goals, also known as SF SOL, is an all-girls youth soccer club in San Francisco. It offers recreational and competitive teams, summer camps and winter futsal for girls of different ages, coached by women.",
-      "website": "https://www.girlsleadinggoals.org"
+      "summary": "Girls Leading Goals, which also operates as SF SOL, is an all-girls soccer club in San Francisco. It offers soccer programs for girls from about age 5 through competitive youth teams, plus summer camps and winter futsal, all coached by women.",
+      "website": "https://girlsleadinggoals.org/"
     },
     "sources": [
       {
@@ -61,19 +61,22 @@
           "email",
           "headquarters"
         ],
-        "title": "SF SOL (Girls Leading Goals)",
-        "url": "https://www.girlsleadinggoals.org"
+        "title": "SF SOL — All-Girls Soccer Club in San Francisco",
+        "url": "https://girlsleadinggoals.org/"
       },
       {
-        "supports": [
-          "phone",
-          "email"
-        ],
-        "title": "Contact - SF SOL",
-        "url": "https://www.girlsleadinggoals.org/contact"
+        "supports": [],
+        "title": "Roots, Soul soccer clubs bring qualified coaches to Oakland youth",
+        "url": "https://www.ktvu.com/news/roots-soul-soccer-clubs-bring-qualified-coaches-to-oakland-youth"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007964",
+    "notes": "The site (girlsleadinggoals.org, now branded SF SOL, formerly Girls Leading Goals) is a San Francisco all-girls soccer club, and KTVU names the nonprofit Girls Leading Goals as working with OUSD Expanded Learning in Oakland, which fits the after-school and summer sports contracts. Summary, website, phone, email and headquarters are shown on the cited site; the legal-name ambiguity with 'Girls Leading Girls' is correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

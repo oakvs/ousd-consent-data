@@ -2,46 +2,89 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://our-locations.socotec.us/en/california/alameda-county/alameda/socotec-alameda-ninyo-moore-542",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prnewswire.com/news-releases/socotec-acquires-ninyo--moore-doubling-its-size-in-the-united-states-and-strengthening-environmental--infrastructure-services-302343720.html",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://socotec.us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
       "pass": true
     }
   ],
   "key": "v-003087",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "ninyoandmoore.com (the firm's former domain) now permanently redirects to socotec.us, and the SOCOTEC US home page references 'Ninyo & Moore 40th Anniversary Open Houses', suggesting Ninyo & Moore is now part of SOCOTEC US",
-      "SOCOTEC US lists geotechnical engineering, construction materials testing and environmental health & safety services, which matches OUSD's facilities-related geotechnical, soil-testing and materials-testing contracts"
+      "SOCOTEC's Alameda location page is titled 'SOCOTEC Alameda (Ninyo & Moore)' and says the Alameda office was formerly operated by Ninyo & Moore, matching the agenda location of Alameda, CA",
+      "Ninyo & Moore's old website (ninyoandmoore.com) now redirects to socotec.us, and a SOCOTEC press release says SOCOTEC acquired Ninyo & Moore in 2025",
+      "Services (geotechnical engineering, construction materials testing, special inspection, hazardous materials assessment) match OUSD's School buildings & construction contracts (soil testing, materials testing and special inspection)"
     ],
     "key": "v-003087",
-    "notes": "Web search quota was exhausted, so no registry (CA Secretary of State, SAM.gov) or Alameda office page could be checked. Ninyo & Moore's old site redirects to socotec.us, but the legal relationship (acquisition, rebrand, or still a separate legal entity) and the Alameda office were not confirmed, and no contact details or registry IDs were found. Do not publish; re-research once search is available.",
+    "notes": "Ninyo & Moore was acquired by SOCOTEC in 2025 and its website now redirects to socotec.us. The current legal entity name and registry IDs (CA Secretary of State, EIN, UEI) could not be confirmed from fetchable registry pages, so they are left null. The agenda name may reflect a legal entity that has since been renamed. No main phone or general email was found on a cited page.",
     "profile": {
-      "address": null,
+      "address": "1301 Marina Village Pkwy, Suite 110, Alameda, CA 94501",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
+      "headquarters": "San Diego, CA",
       "legalName": null,
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "Ninyo & Moore appears to be a geotechnical, environmental and construction materials testing consulting firm that is now part of SOCOTEC US, an engineering and testing company. SOCOTEC US describes services such as geotechnical engineering, construction materials testing and laboratory services, and environmental health and safety assessments.",
-      "website": null
+      "summary": "Ninyo & Moore is a geotechnical and environmental engineering firm founded in San Diego in 1986. It provides geotechnical engineering, environmental services, construction materials testing, inspection services and industrial hygiene. It was acquired by SOCOTEC in 2025 and is now part of the SOCOTEC US brand.",
+      "website": "https://socotec.us/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "address",
           "orgType"
+        ],
+        "title": "SOCOTEC Alameda (Ninyo & Moore)",
+        "url": "https://our-locations.socotec.us/en/california/alameda-county/alameda/socotec-alameda-ninyo-moore-542"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "SOCOTEC acquires Ninyo & Moore, doubling its size in the United States",
+        "url": "https://www.prnewswire.com/news-releases/socotec-acquires-ninyo--moore-doubling-its-size-in-the-united-states-and-strengthening-environmental--infrastructure-services-302343720.html"
+      },
+      {
+        "supports": [
+          "website"
         ],
         "title": "SOCOTEC US",
         "url": "https://socotec.us/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003087",
+    "notes": "The SOCOTEC location page confirms the Alameda office at 1301 Marina Village Pkwy was formerly operated by Ninyo & Moore, and the press release confirms the 2025 acquisition, San Diego HQ, 1986 founding and the listed services, which fit OUSD's geotechnical, materials-testing and hazardous-soil contracts. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

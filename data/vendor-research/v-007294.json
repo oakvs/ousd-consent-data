@@ -1,17 +1,60 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bearvalleyusd.org/care-solace-mental-health-care-supp",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    }
+  ],
   "key": "v-007294",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda titles name 'Addiction Treatment Technologies, LLC dba Care Solace'; search results show that LLC owns the 'Care Solace' trademark (could not fetch the trademark page itself)",
+      "OUSD's own public pages describe a partnership with Care Solace for mental health and substance use referral, matching the contract category 'Student health, support & family services' (search result snippet; page could not be fetched)",
+      "Another public school district page describes the same Care Solace service and phone number",
+      "Location mismatch: the agenda says Los Angeles, CA, but search results place the company in Encinitas/Cardiff, CA; no registry record could be fetched"
+    ],
     "key": "v-007294",
-    "notes": "Not researched successfully: the session's WebSearch budget was exhausted, and the candidate organization's website (caresolace.com) returned HTTP 403 to automated fetching. No page could be fetched or cited, so identity could not be confirmed with two independent signals. Likely a company (agenda: Care Solace, Inc.; Los Angeles, CA; also 'Addiction Treatment Technologies, LLC dba Care Solace'), but nothing was verified. Needs a retry with search access.",
-    "profile": null,
-    "sources": []
+    "notes": "Official Care Solace site, OUSD page, Justia trademark page and registries were not fetchable (403) or not found, so identity rests on search-result evidence and a district page. Agenda location (Los Angeles) differs from search-reported location (Encinitas/Cardiff). No registry IDs verified. Not publishable.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "weserve@caresolace.org",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": null,
+      "phone": "888-515-0595",
+      "samUei": null,
+      "summary": "Care Solace provides a free and confidential service that helps students, school staff and families find mental health or substance use treatment providers matched to their needs. School districts contract with it to offer this service.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email"
+        ],
+        "title": "Bear Valley Unified School District - Care Solace - Mental Health Care Support",
+        "url": "https://www.bearvalleyusd.org/care-solace-mental-health-care-supp"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

@@ -1,17 +1,98 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://aspireeducation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/205274459",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-aspire-education",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: an Oakland, CA nonprofit operates as 'Aspire Education' (legal name Aspire Education Project, ProPublica, EIN shown) and offers tutoring and academic support, consistent with OUSD's 'Classroom & academic programs' category",
+      "Agenda text gives no city, and no fetched page links Aspire Education Project to Oakland School for the Arts or OUSD; a different organization (Aspire Public Schools, a charter network that operates OUSD-authorized schools) shares the 'Aspire' name and could be the intended vendor"
+    ],
     "key": "n-aspire-education",
-    "notes": "Not researched: the session's WebSearch budget was exhausted and a ProPublica fetch returned HTTP 429. The agenda gives no city, and 'Aspire Education' is a generic name that could match several unrelated organizations (e.g. Aspire Public Schools or others), so no candidate could be confirmed with two independent signals. Needs a re-run.",
-    "profile": null,
-    "sources": []
+    "notes": "Identity not confirmed as the vendor on the OUSD agenda. The agenda item is an Oakland School for the Arts (charter) Measures N and H Education Improvement Plan and names only 'Aspire Education' with no city. Aspire Education Project (Oakland tutoring nonprofit) is a plausible match, but Aspire Public Schools is a possible alternative and nothing found ties either to OSA. Do not publish without confirming against the plan document.",
+    "profile": {
+      "address": "101 Broadway, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "20-5274459",
+      "email": "info@aspireeducation.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Aspire Education Project",
+      "orgType": "nonprofit",
+      "phone": "(510) 658-7500",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California that provides tutoring and academic support for students, including community-based tutoring in partnership with schools and community organizations and a reading-mentoring program called Community Reading Buddies.",
+      "website": "https://aspireeducation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Aspire Education",
+        "url": "https://aspireeducation.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Aspire Education Project - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/205274459"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

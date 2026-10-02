@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/61576405",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/06-1576405",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eleducation.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001546",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'El Education Inc' (ProPublica Nonprofit Explorer, EIN 06-1576405), located in New York, NY, matching the agenda text 'New York, NY'",
+      "GuideStar profile for the same EIN describes a K-12 education nonprofit with website eleducation.org, matching OUSD's 'Classroom & academic programs' contracts",
+      "Melrose Leadership Academy (an OUSD school named in the agenda contract titles) has an Expeditionary Learning page on its OUSD website; EL Education was formerly named Expeditionary Learning"
+    ],
     "key": "v-001546",
-    "notes": "Not researched successfully, no identity confirmed. The session's WebSearch budget was exhausted. eleducation.org pages fetched returned only a 404 shell or a footer with no usable content. ProPublica returned HTTP 429 or 404. The agenda names EL Education of New York, NY, and the district buys classroom and academic programs, which fits the national school-improvement nonprofit EL Education. That is unverified, so nothing was filled in. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "eleducation.org renders client-side, so contact details could not be read from the official site; phone, email and address left null. Street address on registries is 247 W 35th St, 8th Floor, New York, NY 10001.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "06-1576405",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "El Education Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "EL Education is a national nonprofit based in New York City that works with K-12 schools in communities across the United States. It describes its approach as building knowledge, character and high-quality student work. It provides curriculum, professional learning and school support for educators.",
+      "website": "https://eleducation.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "El Education Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/61576405"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "EL Education, Inc. - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/06-1576405"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "EL Education",
+        "url": "https://eleducation.org"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001546",
+    "notes": "ProPublica and GuideStar both show El Education Inc (EIN 06-1576405), a 501(c)(3) K-12 nonprofit in New York, NY, matching the agenda's 'EL Education, New York, NY' and OUSD's academic and instruction contracts. Summary, website, HQ, EIN and org type are supported by the registries; the official site renders no content but is only cited for the website.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

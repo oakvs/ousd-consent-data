@@ -2,17 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.nv5.com",
+      "field": "source:https://www.sec.gov/Archives/edgar/data/1532961/000162828025007077/nvee-20241228xex211.htm",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://opencorporates.com/companies/us_ca/2369661",
+      "field": "source:https://www.nv5.com/about-nv5/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "caEntityNumber",
+      "field": "source:https://www.nv5.com/services/clean-energy/solar-pv-consulting/",
       "pass": true
     },
     {
@@ -33,45 +33,51 @@
   "research": {
     "confidence": "medium",
     "identitySignals": [
-      "Name matches a California-registered out-of-state stock corporation 'NV5 CONSULTANTS, INC.' (OpenCorporates, California entity 2369661, active)",
-      "NV5's website lists a San Rafael, California office in its office directory filter, matching the agenda location; the office page itself could not be read",
-      "NV5 describes engineering and clean energy services for buildings, consistent with a school solar (PV) project contract"
+      "Name matches 'NV5 Consultants, Inc.', listed as a subsidiary (doing business as NV5) of NV5 Global, Inc. in its SEC annual report exhibit 21.1",
+      "NV5 has a San Rafael, CA office (former Sage Energy Consulting, acquired by NV5 Global in 2021), matching the agenda location San Rafael, CA",
+      "NV5 offers solar PV consulting for school districts, matching OUSD's 'Phase II & III PV Project' and school facilities contracts"
     ],
     "key": "v-009208",
-    "notes": "Medium only: the San Rafael office page and an OUSD mention could not be confirmed (web search quota was exhausted), and it is not confirmed that the registered entity is the same one that contracts from San Rafael. NV5 Consultants, Inc. is a subsidiary of the larger NV5 group; NV5 pages gave conflicting headquarters addresses (Hollywood, FL vs Houston, TX), so no contact details or headquarters were filled in. Reviewer should verify before any publication.",
+    "notes": "The SEC subsidiary list shows two separate entities named NV5 Consultants, Inc. (Massachusetts and Minnesota); it was not verified which one OUSD contracts with, and no California Secretary of State record was checked. NV5 Global, Inc. is the parent (HQ Hollywood, FL); contact details were left out because the main phone and email on nv5.com belong to the parent, not necessarily to the San Rafael office or the contracting entity.",
     "profile": {
       "address": null,
-      "caEntityNumber": "2369661",
+      "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": null,
-      "legalName": "NV5 CONSULTANTS, INC.",
+      "legalName": "NV5 Consultants, Inc.",
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "NV5 is a company that provides engineering, testing, inspection and consulting services. Its work includes engineering design, asset management and geospatial data analysis for infrastructure and for buildings, including clean energy systems.",
+      "summary": "NV5 is an engineering, testing, inspection and consulting firm for the built environment, working in areas such as infrastructure, utilities and building technology. Its clean energy practice offers solar photovoltaic (PV) consulting, including feasibility studies, procurement and commissioning, for clients such as school districts. NV5 Consultants, Inc. is a subsidiary of NV5 Global, Inc.",
       "website": "https://www.nv5.com"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "orgType",
-          "website"
+          "legalName",
+          "orgType"
         ],
-        "title": "NV5",
-        "url": "https://www.nv5.com"
+        "title": "NV5 Global, Inc. subsidiaries (Exhibit 21.1)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1532961/000162828025007077/nvee-20241228xex211.htm"
       },
       {
         "supports": [
-          "legalName",
-          "caEntityNumber"
+          "summary",
+          "website"
         ],
-        "title": "NV5 CONSULTANTS, INC. - California branch (OpenCorporates)",
-        "url": "https://opencorporates.com/companies/us_ca/2369661"
+        "title": "About NV5 - NV5",
+        "url": "https://www.nv5.com/about-nv5/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Solar PV Consulting - NV5",
+        "url": "https://www.nv5.com/services/clean-energy/solar-pv-consulting/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

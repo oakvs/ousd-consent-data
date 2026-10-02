@@ -7,6 +7,31 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.venturesfoundation.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.venturesfoundation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "ein",
       "pass": true
     },
@@ -14,48 +39,77 @@
       "detail": null,
       "field": "legalName",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
     }
   ],
   "key": "v-006166",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered 501(c)(3) nonprofit: 'Philanthropic Ventures Foundation', EIN 94-3136771 (ProPublica Nonprofit Explorer)",
-      "Registered city is Oakland, CA, matching the agenda text",
-      "Could not confirm the organization's own website or any mention of OUSD or after-school programs; the candidate site pvfoundation.org returned no readable content"
+      "Name matches a registered 501(c)(3): 'Philanthropic Ventures Foundation' (ProPublica Nonprofit Explorer, EIN 94-3136771)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Foundation funds education, youth and teacher grants for after-school programs in Bay Area public schools, consistent with OUSD's 'After-school & summer programs' contracts and grant funding sources"
     ],
     "key": "v-006166",
-    "notes": "Only one registry source could be read; WebSearch budget was exhausted and the organization's website could not be fetched. No link to OUSD programs was confirmed, so confidence is medium (not publishable).",
+    "notes": "Phone, email and address were taken from the foundation's Contact Us page. California SOS entity number and SAM UEI were not looked up.",
     "profile": {
-      "address": null,
+      "address": "1222 Preservation Park Way, Oakland, CA 94612",
       "caEntityNumber": null,
       "ein": "94-3136771",
-      "email": null,
+      "email": "info@venturesfoundation.org",
       "headquarters": "Oakland, CA",
       "legalName": "Philanthropic Ventures Foundation",
       "orgType": "nonprofit",
-      "phone": null,
+      "phone": "(510) 645-1890",
       "samUei": null,
-      "summary": "A nonprofit grantmaking foundation based in Oakland, California. It receives contributions from donors and distributes grants to charitable causes.",
-      "website": null
+      "summary": "A nonprofit grantmaking foundation based in Oakland, California. It makes grants to teachers, schools and community groups in the San Francisco Bay Area, with a focus on education, youth and community needs. It also works with donors who want to give locally.",
+      "website": "https://www.venturesfoundation.org/"
     },
     "sources": [
       {
         "supports": [
           "legalName",
           "ein",
-          "headquarters",
           "orgType",
-          "summary"
+          "headquarters"
         ],
         "title": "Philanthropic Ventures Foundation - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/943136771"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "summary"
+        ],
+        "title": "Contact Us - Philanthropic Ventures Foundation",
+        "url": "https://www.venturesfoundation.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Philanthropic Ventures Foundation",
+        "url": "https://www.venturesfoundation.org/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006166",
+    "notes": "Exact name and Oakland location match the agenda, ProPublica confirms the 501(c)(3) and EIN 94-3136771, and the foundation's own site confirms address, phone, generic info@ email and the grantmaking description. The summary is neutral and supported; OUSD's service-agreement items likely reflect grant or pass-through funding, which fits a funder.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

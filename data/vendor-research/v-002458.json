@@ -2,7 +2,37 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.lacheim.org",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942268457",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lacheim.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lacheim.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,39 +44,66 @@
   "key": "v-002458",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "lacheim.org page titles read 'La Cheim | Educational & Mental Health Services' and 'La Cheim in Alameda & Contra Costa Counties', consistent with an El Sobrante, CA (Contra Costa County) school and with OUSD's 'Student health, support & family services' category",
-      "Page body text, registry records (ProPublica, CA SOS, SAM.gov) and any mention of OUSD could not be retrieved, so identity is not confirmed"
+      "Name matches a registered nonprofit: 'La Cheim School Inc' in El Sobrante, CA, EIN 94-2268457 (ProPublica Nonprofit Explorer), matching the agenda's 'La Cheim School' and 'El Sobrante, CA'",
+      "Official website lacheim.org lists La Cheim School, Inc. at 4892 San Pablo Dam Rd., El Sobrante, CA 94803, matching the agenda location",
+      "Website describes a non-public school plus mental health services for children and adolescents in Alameda and Contra Costa counties, consistent with OUSD's 'Student health, support & family services' contracts and the Garfield Elementary School agreements"
     ],
     "key": "v-002458",
-    "notes": "Research was blocked: the WebSearch budget was exhausted, ProPublica returned HTTP 429, IRS search returned 403, and WebFetch returned only truncated page titles for lacheim.org. Only the website candidate and page titles were seen. No registry confirmation or contact details. Needs manual or re-run research; do not publish.",
+    "notes": "Street address omitted to avoid a formatting mismatch with the multi-line contact page (4892 San Pablo Dam Rd., 2nd Floor Administration, El Sobrante, CA 94803). Emails on the contact page are HTML-entity encoded. CA entity number and SAM UEI not checked.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
-      "ein": null,
-      "email": null,
-      "headquarters": null,
-      "legalName": null,
-      "orgType": null,
-      "phone": null,
+      "ein": "94-2268457",
+      "email": "info@lacheim.org",
+      "headquarters": "El Sobrante, CA",
+      "legalName": "La Cheim School, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(510) 223-4236",
       "samUei": null,
-      "summary": "La Cheim describes itself as providing educational and mental health services in Alameda and Contra Costa Counties, California.",
+      "summary": "La Cheim is a nonprofit that provides education and mental health services to children, teens and adults in Alameda and Contra Costa counties. Its programs include a non-public school, a short-term residential treatment program for adolescents, a community-based youth program, and a day treatment and outpatient program for adults.",
       "website": "https://www.lacheim.org"
     },
     "sources": [
       {
         "supports": [
-          "summary",
-          "website"
+          "ein",
+          "orgType",
+          "headquarters"
         ],
-        "title": "La Cheim | Educational & Mental Health Services",
-        "url": "https://www.lacheim.org"
+        "title": "La Cheim School Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942268457"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "website",
+          "summary",
+          "headquarters"
+        ],
+        "title": "Contact Us | La Cheim",
+        "url": "https://www.lacheim.org/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About | La Cheim in Alameda & Contra Costa Counties",
+        "url": "https://www.lacheim.org/about"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002458",
+    "notes": "La Cheim School, Inc. at 4892 San Pablo Dam Rd, El Sobrante matches the agenda name and location; ProPublica confirms EIN 94-2268457 as a 501(c)(3) school operator, and the contact page confirms the generic info@ email and (510) 223-4236 for Administration & School. The summary is neutral and supported by the about, contact and youth-programs pages (the adolescent STRTP detail comes from the youth page rather than a cited source).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

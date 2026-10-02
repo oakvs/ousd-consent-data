@@ -2,7 +2,32 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://opencorporates.com/companies/us_ca/202129500001",
+      "field": "source:https://www.bizprofile.net/ca/irvine/applied-geokinetics-lp",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.geokinetics.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.geokinetics.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.topengineeringcompanies.com/7066/applied-geokinetics",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
       "pass": true
     },
     {
@@ -19,48 +44,87 @@
       "detail": null,
       "field": "legalName",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
     }
   ],
   "key": "v-008281",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered California limited partnership: 'APPLIED GEOKINETICS, LP', entity 202129500001, status Active (OpenCorporates, California registry data); the OUSD official title reads 'Applied GeoKinetics, LP'",
-      "Registered address is in Irvine, CA, matching the agenda text 'Irvine, CA'"
+      "Name matches a registered California limited partnership: 'Applied Geokinetics, LP' (agenda title says 'Applied GeoKinetics, LP'), principal address 77 Bunsen, Irvine, CA 92618, matching the agenda location of Irvine, CA",
+      "The company website (geokinetics.com, brand 'GeoKinetics') lists the same address (77 Bunsen, Irvine, CA 92618) and phone (949) 502-5353 that directory pages list for Applied GeoKinetics",
+      "Website describes geotechnical engineering, soil testing and construction quality control, consistent with OUSD's 'School buildings & construction' category"
     ],
     "key": "v-008281",
-    "notes": "WebSearch budget was exhausted, and the company website (appliedgeokinetics.com) refused connections, so only the registry aggregator was reachable. Identity rests on name plus Irvine location; the line of business (school buildings/construction per OUSD) was not independently confirmed from the company's own site. Related entities share the address: Applied GeoKinetics Holdings, Inc. (4783035), Applied GeoKinetics GP Holdings, LLC (202128610255), and an inactive Applied GeoKinetics corporation (2042416). No website, phone or email found.",
+    "notes": "Company's own site (appliedgeokinetics.com) was unreachable for automated fetch; the current site is geokinetics.com (brand 'GeoKinetics'), linked to Applied GeoKinetics via the identical street address and phone. Entity number is the document number shown by a third-party aggregator of California Secretary of State filings, not read directly from bizfile; reviewer may wish to verify. No page found that explicitly mentions OUSD.",
     "profile": {
       "address": "77 Bunsen, Irvine, CA 92618",
       "caEntityNumber": "202129500001",
       "ein": null,
-      "email": null,
+      "email": "info@Geokinetics.com",
       "headquarters": "Irvine, CA",
-      "legalName": "APPLIED GEOKINETICS, LP",
+      "legalName": "Applied Geokinetics, LP",
       "orgType": "company",
-      "phone": null,
+      "phone": "(949) 502-5353",
       "samUei": null,
-      "summary": "A California limited partnership based in Irvine, California. Public registry data does not describe what the business does.",
-      "website": null
+      "summary": "A geotechnical and environmental consulting firm based in Irvine, California. It does geotechnical engineering, soil and laboratory testing, foundation design, environmental site assessments and construction quality control inspections. It works with public and private clients and does business under the name GeoKinetics.",
+      "website": "https://www.geokinetics.com"
     },
     "sources": [
       {
         "supports": [
           "legalName",
-          "summary",
+          "caEntityNumber",
           "orgType",
+          "headquarters",
+          "address"
+        ],
+        "title": "Applied Geokinetics, LP Irvine, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/irvine/applied-geokinetics-lp"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
           "address",
           "headquarters",
-          "caEntityNumber"
+          "website"
         ],
-        "title": "APPLIED GEOKINETICS, LP - OpenCorporates",
-        "url": "https://opencorporates.com/companies/us_ca/202129500001"
+        "title": "GeoKinetics Contact",
+        "url": "https://www.geokinetics.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "GeoKinetics",
+        "url": "https://www.geokinetics.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Applied Geokinetics Irvine, CA",
+        "url": "https://www.topengineeringcompanies.com/7066/applied-geokinetics"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008281",
+    "notes": "Applied Geokinetics, LP (Irvine, CA; active CA LP, entity 202129500001 per bizprofile) shares the 77 Bunsen address and (949) 502-5353 phone with geokinetics.com and the topengineeringcompanies listing, matching the agenda's Irvine location and construction-related services. The summary's services and public/private clients are supported by the site and directory, and the only link between the Applied name and the GeoKinetics brand is the shared address and phone, which is adequate.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

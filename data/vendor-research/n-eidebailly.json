@@ -7,6 +7,31 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.eidebailly.com/locations/fargo",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eidebailly.com/industries/education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=7319381&GUID=90BC07AD-829C-4E64-9219-0067DACA3550",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "legalName",
       "pass": true
     },
@@ -19,28 +44,27 @@
   "key": "n-eidebailly",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: agenda 'EideBailly' corresponds to the accounting firm Eide Bailly LLP (eidebailly.com)",
-      "Agenda item is an 'Independent Auditor's Report on Compliance', which matches the firm's business as an accounting and advisory firm",
-      "Eide Bailly lists Bay Area offices (Walnut Creek, Menlo Park) near Oakland, CA",
-      "Could not find a public page directly linking Eide Bailly to Oakland Unified (web search budget was exhausted), so the OUSD link rests on name and service match"
+      "Agenda item is an 'Independent Auditor's Report on Compliance' by EideBailly for fiscal year ending June 30, 2025, matching Eide Bailly LLP, a licensed independent CPA firm that provides attest (audit) services (eidebailly.com About Us)",
+      "OUSD's own legislative record (File 25-1091) shows Eide Bailly presenting the District's Fiscal Systems Audit to the Board of Education, with an eidebailly.com contact address",
+      "Eide Bailly's education industry page says it serves 500+ school districts and educational institutions, matching OUSD's governance/audit contract"
     ],
     "key": "n-eidebailly",
-    "notes": "Confidence medium, not high: no independent page found tying Eide Bailly to OUSD, and the WebSearch budget ran out so no registry (CA SOS, SAM.gov) lookups were possible. Contact details and registry IDs left null. Headquarters and main phone were not on the pages fetched.",
+    "notes": "Address and phone are for the Fargo, ND office, which Eide Bailly's headquarters is generally listed at (search results); the cited Fargo page does not itself say 'headquarters'. No Oakland office exists. No general email, EIN, CA entity number or UEI verified.",
     "profile": {
-      "address": null,
+      "address": "4310 17th Ave. S. Fargo, ND 58103-3339",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
+      "headquarters": "Fargo, ND",
       "legalName": "Eide Bailly LLP",
       "orgType": "company",
-      "phone": null,
+      "phone": "701.239.8500",
       "samUei": null,
-      "summary": "Eide Bailly is a U.S. accounting and advisory firm that serves mid-sized and fast-growing organizations. Its services include tax, client accounting, technology consulting, data analytics, and mergers and acquisitions advice. It has more than 50 offices across the United States and in India.",
+      "summary": "Eide Bailly LLP is a certified public accounting (CPA) and advisory firm. It provides tax, accounting, audit, technology consulting and mergers-and-acquisitions advisory services to businesses, governments and schools. It has more than 50 offices in the United States and India.",
       "website": "https://www.eidebailly.com"
     },
     "sources": [
@@ -48,14 +72,43 @@
         "supports": [
           "summary",
           "orgType",
-          "website",
-          "legalName"
+          "legalName",
+          "website"
         ],
         "title": "About Us | Eide Bailly",
         "url": "https://www.eidebailly.com/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Fargo Accounting, Tax & Advisory Services",
+        "url": "https://www.eidebailly.com/locations/fargo"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education industry | Eide Bailly",
+        "url": "https://www.eidebailly.com/industries/education"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District - File #: 25-1091",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=7319381&GUID=90BC07AD-829C-4E64-9219-0067DACA3550"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-eidebailly",
+    "notes": "Eide Bailly LLP is a licensed CPA firm offering attest services, and OUSD's Legistar record (File 25-1091) shows Eide Bailly presenting audit work to the Board, so the organization matches the independent auditor's compliance report. The cited Fargo page does not call that office the headquarters (it lists it as one office), so headquarters is unsupported; the other fields match the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
 }

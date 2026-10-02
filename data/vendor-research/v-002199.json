@@ -1,17 +1,85 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.inspectionservices.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-002199",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's website is for 'Inspection Services, Inc.' (ISI), matching the agenda names 'ISI Inspection Services, Inc.' and 'Inspection Services, Inc.'",
+      "Headquartered at 1798 University Avenue, Berkeley, CA 94703, matching the agenda location Berkeley, CA",
+      "Website describes special inspection and materials testing services, including educational facilities, matching OUSD's 'Agreement for Materials Testing and Special Inspection Services' contracts in school buildings and construction"
+    ],
     "key": "v-002199",
-    "notes": "Not researched: the session's WebSearch budget was exhausted before any search could run, and a guessed domain (isiinspection.com) did not resolve. No candidate was identified or confirmed. Agenda gives 'ISI Inspection Services, Inc.' / 'Inspection Services, Inc.', Berkeley, CA, materials testing and special inspection (DSA) for school construction. Retry when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Identified from the company's own website only; no registry entry (California Secretary of State, SAM.gov) was checked, so entity number and UEI are null. The email shown is a marketing inbox on the company's contact details.",
+    "profile": {
+      "address": "1798 University Avenue, Berkeley, CA 94703",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "isimarketing@inspectionservices.net",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Inspection Services, Inc.",
+      "orgType": "company",
+      "phone": "510.900.2100",
+      "samUei": null,
+      "summary": "Inspection Services, Inc. (ISI) is a company that provides special inspection and materials testing services for construction projects, to help make sure they meet codes, specifications and safety standards. It has operated since 1995 and serves sectors such as municipal infrastructure, educational facilities, healthcare, and residential and commercial construction.",
+      "website": "https://www.inspectionservices.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Inspection Services, Inc.",
+        "url": "https://www.inspectionservices.net/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002199",
+    "notes": "The company website shows Inspection Services, Inc. at 1798 University Ave, Berkeley, offering special inspection and materials testing including K-12 schools, which matches the agenda names, Berkeley location and OUSD facilities contracts. All profile fields (founded 1995, address, phone, generic marketing email) are shown on the cited page and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

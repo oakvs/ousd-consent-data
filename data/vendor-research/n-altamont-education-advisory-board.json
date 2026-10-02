@@ -1,17 +1,65 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://www.altamonteab.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.altamonteab.org/grant-guidelines.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-altamont-education-advisory-board",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: the Altamont Education Advisory Board (altamonteab.org) makes grants for waste diversion and recycling education in Alameda County, consistent with OUSD's grant agreement for a compost sustainability fellow",
+      "Other public pages report that the Altamont Education Advisory Board has granted funds to school districts in Alameda County for school recycling and composting programs"
+    ],
     "key": "n-altamont-education-advisory-board",
-    "notes": "Not researched: the session's web search budget was exhausted and a ProPublica fetch returned HTTP 429, so no candidate organization could be confirmed. Agenda gives Banta, CA; the grant funds a compost sustainability fellow. Needs a re-run.",
-    "profile": null,
-    "sources": []
+    "notes": "Medium confidence: name and subject matter match, but the agenda's location (Banta, CA) could not be confirmed on any page, and nothing found directly ties this board to the OUSD grant. The board's own site shows no phone, mailing address, or registry IDs, and no registry record was found; it appears to be a settlement-created advisory body rather than a registered nonprofit, so legal name and orgType are uncertain.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "other",
+      "phone": null,
+      "samUei": null,
+      "summary": "A board created through the 1999 Altamont landfill settlement agreement. It recommends how to spend money from the settlement's Education Account on grants for waste reduction and recycling education, job training in waste diversion and recycling, and reducing the effects of landfill operations on nearby communities. It serves Alameda County and the City of San Ramon.",
+      "website": "http://www.altamonteab.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "ALTAMONT EDUCATION ADVISORY BOARD - Home",
+        "url": "http://www.altamonteab.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Grant Guidelines - ALTAMONT EDUCATION ADVISORY BOARD",
+        "url": "https://www.altamonteab.org/grant-guidelines.html"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

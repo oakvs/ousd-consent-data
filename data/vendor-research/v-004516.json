@@ -1,17 +1,76 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.t-ctherapy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-004516",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Business name on its own website exactly matches the agenda name 'Think Communication Therapy' (t-ctherapy.com)",
+      "Located in Oakland, CA (2162 Mountain Blvd), matching the agenda location",
+      "Website describes speech-language pathology services for children, consistent with OUSD's 'Student health, support & family services' category",
+      "Website names Emily Vincent, M.S. CCC-SLP as the practice's speech-language pathologist, matching the 'Professional Services Contract - Emily Vincent' titles under the same vendor in the agenda"
+    ],
     "key": "v-004516",
-    "notes": "No credible candidate confirmed. The session's web search budget was exhausted, a guessed website did not resolve, and ProPublica Nonprofit Explorer has no nonprofit by this name. OUSD titles also pair this name with a personal-name contract, so it may be a sole practitioner; this was not verified. Needs manual review or a rerun with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "Only the practice's own single-page website was used; no registry (CA SOS, SAM.gov) entry was checked, so legal name and registry IDs are null. The only email shown on the site is a named person's address, so it was omitted. Some third-party directories list a different Oakland address (230 Grand Ave), so the address may have changed over time. The website does not mention OUSD directly; identity rests on name, city, service type and the named clinician matching the agenda contract titles. The practice is a business with staff but is closely tied to one clinician; a reviewer may wish to confirm it is not a sole proprietor contracting in her own name.",
+    "profile": {
+      "address": "2162 Mountain Blvd, FL 2, Oakland CA 94611",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 893-8008",
+      "samUei": null,
+      "summary": "Think Communication Therapy is a speech-language pathology practice in Oakland, California. It provides assessments, therapy and education for children with speech, language and hearing disorders, mainly ages 0-5 and school-age. It offers private therapy, early intervention services through the Regional Center of the East Bay, and consultation and screenings in preschool settings.",
+      "website": "https://www.t-ctherapy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Think Communication Therapy",
+        "url": "https://www.t-ctherapy.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004516",
+    "notes": "The practice website matches the agenda name, the Oakland location, the speech-language service type and the named clinician Emily Vincent from the contract titles; the summary matches the site text and is neutral. The site does not state a legal structure, so orgType 'company' is unsupported and may be a sole proprietorship.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "orgType"
+    ],
+    "verdict": "confirmed"
+  }
 }

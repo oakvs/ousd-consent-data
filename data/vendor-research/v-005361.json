@@ -1,17 +1,99 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://arrowheadeval.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://arrowheadeval.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-005361",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Arrowhead Evaluation Services, Inc.' (official website footer)",
+      "Located in Redlands, CA (1680 Plum Lane), matching the agenda text 'Redlands, CA'",
+      "Provides independent medical evaluations for the claims community, consistent with an OUSD Risk Management / General Counsel services agreement (legal, insurance & risk)"
+    ],
     "key": "v-005361",
-    "notes": "Research could not be completed: the WebSearch budget for the session was exhausted and the one registry fetch (ProPublica Nonprofit Explorer) returned HTTP 429. No candidate was found or confirmed. Agenda gives only 'Arrowhead Evaluation Services', Redlands, CA (Risk Management, Services Agreement 2025-2026). Needs a re-run.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (California SOS entity number, SAM UEI) not looked up. No public page found linking this company to OUSD; match rests on exact name, city and service type.",
+    "profile": {
+      "address": "1680 Plum Lane, Redlands CA 92374",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@arrowheadeval.com",
+      "headquarters": "Redlands, CA",
+      "legalName": "Arrowhead Evaluation Services, Inc.",
+      "orgType": "company",
+      "phone": "(888) 888-0098",
+      "samUei": null,
+      "summary": "A California company that provides independent medical evaluations, including Qualified Medical Evaluations (QME), Agreed Medical Evaluations (AME) and Independent Medical Evaluations (IME). Its customers include claimants, insurance companies and attorneys who need medical opinions to settle medical disputes. It has offices in Redlands and Sacramento.",
+      "website": "https://arrowheadeval.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Arrowhead Evaluation Services, Inc.",
+        "url": "https://arrowheadeval.com/"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "Contact Us - Arrowhead Evaluation Services",
+        "url": "https://arrowheadeval.com/contact/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005361",
+    "notes": "The company's own site shows the exact name, a Redlands CA office at 1680 Plum Lane, and independent medical evaluation services for claims, which fits an OUSD Risk Management services agreement. Summary, phone, general email and address are all confirmed on the cited pages and the wording is neutral; no page links the company to OUSD directly, so the match rests on name, city and service type.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

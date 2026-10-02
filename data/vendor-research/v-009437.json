@@ -1,17 +1,91 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/berkeley/data-sync-communications-inc",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/berkeley/profile/low-voltage-contractors/data-sync-communication-inc-1116-923972",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-009437",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California general corporation 'Data Sync Communications, Inc.' (registration number 4679555) with principal address in Berkeley, CA, matching the agenda location 'Berkeley, CA' (bizprofile.net mirror of CA Secretary of State data)",
+      "BBB profile for 'Data Sync Communication, Inc.' at 1791 Solano Ave, Berkeley, CA describes low voltage system services, matching OUSD's school security improvement contracts",
+      "OUSD Legistar item 25-2101 names 'Data Sync Communication, Inc., Berkeley, CA' for camera installation on the Emerson Elementary School Security Improvement Project, consistent with the low voltage/security work found"
+    ],
     "key": "v-009437",
-    "notes": "Not researched: the session's web search budget was exhausted (200 of 200), so no candidate organization could be found or confirmed. Agenda text names Data Sync Communications, Inc. (Berkeley, CA) for school security improvement projects. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "No official company website found; website and email left null. Registry data comes from a third-party mirror (bizprofile.net) of California Secretary of State records; bizfileonline was not directly checked. Name appears as 'Communications' in the registry and 'Communication' on BBB and in some agenda items. A second phone number (510) 206-3340 appeared in a search snippet and was not used.",
+    "profile": {
+      "address": "1791 Solano Ave Ste A-10, Berkeley, CA 94707-2209",
+      "caEntityNumber": "4679555",
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Data Sync Communications, Inc.",
+      "orgType": "company",
+      "phone": "(510) 507-0802",
+      "samUei": null,
+      "summary": "A for-profit California corporation based in Berkeley that provides low voltage system services, including voice and data cabling and security camera installation. It is a small business listed as a BBB Accredited Business.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Data Sync Communications, Inc. Berkeley, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/berkeley/data-sync-communications-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Data Sync Communication, Inc. - BBB",
+        "url": "https://www.bbb.org/us/ca/berkeley/profile/low-voltage-contractors/data-sync-communication-inc-1116-923972"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009437",
+    "notes": "CA SOS mirror (entity 4679555, Berkeley, Voice/Data Cabling) and BBB (low voltage contractor, 1791 Solano Ave, 2 employees, accredited) match the Berkeley vendor OUSD pays for school security improvement projects; legal name, entity number, address, phone and org type are confirmed. The 'security camera installation' phrase in the summary comes from the OUSD agenda item rather than the cited pages (BBB says only 'low voltage system services'), but it is consistent with the OUSD records and the summary is otherwise neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

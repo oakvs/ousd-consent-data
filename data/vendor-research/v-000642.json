@@ -1,17 +1,67 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://www.bayconstructionco.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-000642",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Bay Construction Co. is a general contractor in Oakland, CA, matching the agenda location (Oakland, CA)",
+      "Its own website says it regularly works with Oakland Unified School District and does public works and commercial building, matching OUSD's school construction contracts",
+      "Its license classes include C-33 (painting), consistent with the exterior painting projects; no fire/alarm license class is listed, so the fire alarm projects are not confirmed"
+    ],
     "key": "v-000642",
-    "notes": "Could not identify a credible match. The agenda names the vendor inconsistently (\"Bay Construction, Inc.\" and \"Bay Construction Company\", Oakland, CA; fire/intrusion alarm and exterior painting work for OUSD). The WebSearch budget was exhausted, so no searches could be run. bayconstruction.com is a parked for-sale domain, and an OpenCorporates search showed no clearly matching active Oakland entity (only inactive or other-city entities). Needs manual research.",
-    "profile": null,
-    "sources": []
+    "notes": "Not confirmed against a registry. The company's website says it is run as 'Mark Lee and Yong Kay, Inc. DBA Bay Construction Co.', while the agenda says 'Bay Construction, Inc.' / 'Bay Construction Company'; the exact legal entity was not verified in CA Secretary of State or SAM.gov. The contact email on the site appears to be a personal address, so it was omitted. Legal name left null for that reason.",
+    "profile": {
+      "address": "4026 Martin Luther King Jr Way, Oakland, CA 94609",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 658-7225",
+      "samUei": null,
+      "summary": "A small general contractor based in the Temescal neighborhood of Oakland, California, in business since 1989. It does public works and commercial building projects, with a specialty in landscaping. Its website says it works with the City of Oakland, local school districts and other public agencies.",
+      "website": "http://www.bayconstructionco.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Bay Construction Co.",
+        "url": "http://www.bayconstructionco.net/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

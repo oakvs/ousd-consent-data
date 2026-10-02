@@ -1,17 +1,102 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://appmateng.com/About",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://appmateng.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-00468",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website names it 'Applied Materials & Engineering, Inc.', matching the agenda name 'Applied Materials & Engineering Inc.'",
+      "Located at 980 41st Street, Oakland, CA 94608, matching the agenda location of Oakland, CA",
+      "Website describes construction materials testing and special inspections for buildings, including projects permitted by DSA (Division of the State Architect), matching OUSD's 'Master Agreement for Materials Testing and Special Inspection Services - DSA Certified Project Inspectors' under School buildings & construction"
+    ],
     "key": "v-00468",
-    "notes": "Not researched to a conclusion: the session's WebSearch budget was exhausted (200 of 200), so no candidate organization could be found or confirmed. One guessed domain (ame-inc.com) turned out to be an unrelated New Jersey building-controls company and was rejected. Agenda gives Oakland, CA; materials testing and special inspection (DSA). Needs a re-run once search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry IDs (California Secretary of State entity number, SAM.gov UEI) were verified, so those fields are null. The agenda's Amendment No. 1 title names a different firm (Anthonio, Inc.) under the same master agreement; that is a separate vendor and was not researched here.",
+    "profile": {
+      "address": "980 41st Street, Oakland CA 94608",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@appmateng.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Applied Materials & Engineering, Inc.",
+      "orgType": "company",
+      "phone": "510-420-8190",
+      "samUei": null,
+      "summary": "A company in Oakland, California that provides construction materials testing, special inspections and consulting services for buildings and infrastructure. Its services include laboratory testing, structural investigations, and code-required field inspection of structural materials during construction. It was founded in 1988.",
+      "website": "https://appmateng.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "About Applied Materials & Engineering, Inc.",
+        "url": "https://appmateng.com/About"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Construction Materials Testing & Inspections",
+        "url": "https://appmateng.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-00468",
+    "notes": "Company website shows the exact name, an Oakland address, and construction materials testing and special inspection services for DSA-permitted work, which fits OUSD's materials testing and special inspection master agreement. The summary, founding year (1988), phone, email and address are all shown on the cited pages; only generic business contacts are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

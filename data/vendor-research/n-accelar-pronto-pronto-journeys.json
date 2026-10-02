@@ -2,7 +2,37 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://carrierchk.com/carrier/2952688",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://www.ipronto.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ipronto.com/district/oakland-usd",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,40 +44,69 @@
   "key": "n-accelar-pronto-pronto-journeys",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "prontojourneys.com and prontocorporation.com both redirect (301) to ipronto.com, whose footer names ProntoJourneys.com as an operating brand, matching the 'Pronto Corporation / Pronto Journeys' names in the agenda",
-      "OpenCorporates lists an active California stock corporation 'ACCELAR, INC.' (entity 2957387) at 84 W Santa Clara St, San Jose, CA, matching the agenda city, but no page found links Accelar, Inc. to Pronto Journeys or ipronto.com"
+      "FMCSA carrier record (via carrierchk.com) lists legal name ACCELAR INC with DBA Pronto Corporation, located in San Jose, CA, matching the agenda's 'Accelar, Inc. dba Pronto Corporation / Pronto Journeys' and 'San Jose, CA'",
+      "prontojourneys.com redirects to ipronto.com, whose footer names Pronto Corporation and whose phone 650-249-7415 matches the phone on the Accelar Inc carrier record",
+      "ipronto.com has a page stating Pronto has been a district-wide transportation partner to Oakland Unified School District (OUSD) since 2022, matching the agenda's school pupil activity bus transportation agreement"
     ],
     "key": "n-accelar-pronto-pronto-journeys",
-    "notes": "Web search quota was exhausted, so identity could not be confirmed. The ipronto.com site never mentions Accelar, Inc. or San Jose, and the California Pronto Corporation records found are in Los Angeles. The Accelar, Inc. San Jose entity (CA 2957387) matches the agenda legal name and city but is not linked to ipronto.com by any source. Do not publish without a human confirming the link (e.g. via the Secretary of State filing or the OUSD contract).",
+    "notes": "Website prontojourneys.com redirects to ipronto.com. Legal name, address and DOT/MC numbers come from a third-party mirror of FMCSA carrier data; CA Secretary of State, EIN and SAM UEI were not checked or found, so those are null. The address was not shown on ipronto.com.",
     "profile": {
-      "address": null,
+      "address": "84 W Santa Clara St Suite 700, San Jose, CA 95113",
       "caEntityNumber": null,
       "ein": null,
-      "email": null,
-      "headquarters": null,
-      "legalName": null,
+      "email": "CS@iPronto.com",
+      "headquarters": "San Jose, CA",
+      "legalName": "ACCELAR INC",
       "orgType": "company",
-      "phone": null,
+      "phone": "650-249-7415",
       "samUei": null,
-      "summary": "A company that runs an online platform for booking group transportation, shared rides and entertainment experiences. It works with a network of transportation affiliates rather than running its own fleet.",
-      "website": "https://www.ipronto.com/"
+      "summary": "Pronto Corporation, a business name of Accelar Inc, is a transportation company based in San Jose, California. Through its Pronto Journeys platform it arranges group and student transportation, such as school field trips, athletics trips and charters, using shuttles, buses and motorcoaches.",
+      "website": "https://www.ipronto.com"
     },
     "sources": [
       {
         "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "phone",
+          "orgType"
+        ],
+        "title": "ACCELAR INC - DOT 2952688",
+        "url": "https://carrierchk.com/carrier/2952688"
+      },
+      {
+        "supports": [
           "summary",
-          "orgType",
-          "website"
+          "website",
+          "phone",
+          "email",
+          "orgType"
         ],
         "title": "iPronto",
         "url": "https://www.ipronto.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "phone"
+        ],
+        "title": "Oakland Unified School District and Pronto",
+        "url": "https://www.ipronto.com/district/oakland-usd"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-accelar-pronto-pronto-journeys",
+    "notes": "The FMCSA mirror lists ACCELAR INC dba Pronto Corporation in San Jose with the same phone as ipronto.com, prontojourneys.com 301-redirects to ipronto.com, and ipronto.com/district/oakland-usd states Pronto has been OUSD's district-wide transportation partner since 2022. Address, phone, email, website and the neutral summary are all supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://beynonsports.com/en/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://beynonsports.com/en/page/a-history-of-dedication-to-excellence/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://beynonsports.com/en/articles/detail/local-beynon-crews-lead-upgrade-of-fresno-state-s-track-facility/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovny.com/corporation/2758447",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009594",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda names 'Beynon Sports Surfaces, Inc.' (also misspelled 'Benyon'); a company with exactly that legal name exists (New York Department of State record mirrored on opengovny.com, Maryland corporation, Hunt Valley, MD)",
+      "Agenda gives Fresno, CA; Beynon's own article says its West Coast office is in Fresno (near Fresno State)",
+      "Beynon builds synthetic athletic tracks and field surfaces, consistent with OUSD's McClymonds and Oakland High field replacement projects",
+      "No page found that directly names OUSD as a Beynon customer, so the link to OUSD rests on the name, the Fresno office and the project type"
+    ],
     "key": "v-009594",
-    "notes": "Identity not confirmed. beynonsports.com (Beynon Sports, track and field/sports surface builder) is a plausible candidate by name and sector, but its pages did not show a Fresno, CA location, legal name, contact details, or any tie to Oakland Unified; no registry (CA SOS, SAM.gov) could be checked because the search budget was exhausted and ProPublica returned HTTP 429. Needs re-run with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "Medium confidence: no source found directly linking Beynon to OUSD. Phone, email and street address were left null because the company's own pages fetched did not show them (contact pages returned 404). Fresno office address and phone appear only in third-party directories, which were not used. Company is a Maryland corporation, not California-registered as far as checked; CA SOS and SAM.gov were not searched successfully.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Hunt Valley, MD",
+      "legalName": "Beynon Sports Surfaces, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Beynon Sports makes and installs synthetic athletic surfaces such as running tracks, indoor fieldhouse surfaces and tennis courts for colleges, high schools and city parks. The company was founded by John T. Beynon and has been part of Tarkett Sports, which also owns FieldTurf, since 2008. It is based in Hunt Valley, Maryland, and has a West Coast office in Fresno, California.",
+      "website": "https://beynonsports.com/en/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Beynon Sports - Making fast look good",
+        "url": "https://beynonsports.com/en/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "A History of Dedication to Excellence - Beynon",
+        "url": "https://beynonsports.com/en/page/a-history-of-dedication-to-excellence/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Local Beynon Crews Lead Upgrade of Fresno State's Track Facility - Beynon",
+        "url": "https://beynonsports.com/en/articles/detail/local-beynon-crews-lead-upgrade-of-fresno-state-s-track-facility/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Beynon Sports Surfaces, Inc. - OpenGovNY",
+        "url": "https://opengovny.com/corporation/2758447"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

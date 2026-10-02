@@ -7,22 +7,7 @@
     },
     {
       "detail": null,
-      "field": "source:https://www.victor.org/",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "source:https://www.victor.org/chico",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "phone",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "address",
+      "field": "source:https://www.victor.org/santa-rosa/",
       "pass": true
     },
     {
@@ -44,36 +29,37 @@
   "key": "v-003106",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered 501(c)(3) nonprofit: 'Victor Treatment Centers Inc', Chico, CA (ProPublica Nonprofit Explorer, EIN 94-2264395), matching the agenda's 'Victor Treatment Center' in Chico, CA",
-      "victor.org has a Chico, Butte County office at 1360 East Lassen Avenue and lists non-public school services, matching OUSD's special education nonpublic school contract",
-      "The old domain victortc.org (Victor Treatment Centers) redirects to victor.org"
+      "Name matches a registered nonprofit: 'Victor Treatment Centers Inc', EIN 94-2264395, located in Chico, CA (ProPublica Nonprofit Explorer), matching the agenda's 'Victor Treatment Center' and 'Chico, CA'",
+      "Victor's North Valley School page says North Valley School is the non-public school affiliated with Victor Treatment Centers, matching the 'dba North Valley School' in the agenda",
+      "North Valley School is described as a private, non-profit, non-public school for grades 1-12 with educational and mental health services, matching OUSD's nonpublic school special education master contract"
     ],
     "key": "v-003106",
-    "notes": "Confidence medium because no cited page explicitly links the victor.org brand to the legal name 'Victor Treatment Centers Inc' (only the victortc.org redirect and matching Chico location), and North Valley School itself was not found on any fetched page. Search budget was exhausted, so no CA Secretary of State or SAM.gov lookup was done. Website calls the org 'Victor'; main statewide line (844) 547-1442; Chico phone used here.",
+    "notes": "North Valley School operates in Santa Rosa, CA (per victor.org); the agenda's Chico location matches the Victor Treatment Centers Inc registry address. Victor Treatment Centers is distinct from Victor Community Support Services (separate nonprofit, EIN 43-1959837). Phone, email and mailing address omitted because no clear main-line contact for the legal entity was confirmed; victor.org lists only regional office and school numbers. CA entity number and SAM UEI not looked up.",
     "profile": {
-      "address": "1360 East Lassen Avenue, Chico, CA 95973",
+      "address": null,
       "caEntityNumber": null,
       "ein": "94-2264395",
       "email": null,
       "headquarters": "Chico, CA",
       "legalName": "Victor Treatment Centers Inc",
       "orgType": "nonprofit",
-      "phone": "(530) 267-1700",
+      "phone": null,
       "samUei": null,
-      "summary": "A California nonprofit that provides community-based mental health and care coordination services for children, youth and families in many California counties. Its programs include school-based mental health services, early childhood services, and non-public school and short-term residential therapeutic programs.",
-      "website": "https://www.victor.org/"
+      "summary": "Victor Treatment Centers is a nonprofit that provides mental health services and residential treatment for children and youth in California. It operates North Valley School, a private, non-profit, non-public school for grades 1-12 that provides educational and mental health services in small classes for students who need specialized support.",
+      "website": "https://www.victor.org"
     },
     "sources": [
       {
         "supports": [
           "legalName",
           "ein",
+          "headquarters",
           "orgType",
-          "headquarters"
+          "summary"
         ],
         "title": "Victor Treatment Centers Inc - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/942264395"
@@ -83,19 +69,17 @@
           "summary",
           "website"
         ],
-        "title": "Victor",
-        "url": "https://www.victor.org/"
-      },
-      {
-        "supports": [
-          "phone",
-          "address"
-        ],
-        "title": "Chico - Victor",
-        "url": "https://www.victor.org/chico"
+        "title": "Santa Rosa - Victor",
+        "url": "https://www.victor.org/santa-rosa/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003106",
+    "notes": "ProPublica confirms Victor Treatment Centers Inc is a 501(c)(3) residential mental-health treatment nonprofit in Chico, EIN 94-2264395, and victor.org confirms North Valley School is its private nonprofit non-public school for grades 1-12 serving IEP students, matching the agenda's dba and the nonpublic school special education contract. The summary is neutral and supported; the Santa Rosa school address differs from the Chico registry address but is noted by the researcher and is consistent with one organization.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

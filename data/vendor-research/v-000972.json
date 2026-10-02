@@ -1,17 +1,89 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.livelifepoint.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.livelifepoint.com/about-1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-000972",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Official website livelifepoint.com says 'lifepoint' is a division of Carter-Kelly Consulting LLC, matching the agenda name 'Carter-Kelly Consulting/Lifepoint'",
+      "Website lists Oakland Tech High School among the places it has worked, matching the OUSD agreements for Oakland Technical High School",
+      "Services (family coaching, parenting and life-skills courses) are consistent with OUSD's 'Student health, support & family services' category",
+      "Based in Oakland, CA per search listings, matching the agenda location"
+    ],
     "key": "v-000972",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted, so no candidate organization could be found or confirmed. Re-queue after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda names: Carter-Kelly Consulting/LifePoint, Oakland, CA (Oakland Technical High School, student health and support services).",
-    "profile": null,
-    "sources": []
+    "notes": "Headquarters city taken from agenda text and search listings; no registry (CA SOS, SAM.gov) record was checked, so no entity number or UEI. General email not found on site (only a named person's address, deliberately omitted).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Carter-Kelly Consulting LLC",
+      "orgType": "company",
+      "phone": "510-463-1163",
+      "samUei": null,
+      "summary": "Carter-Kelly Consulting LLC runs lifepoint, a behavior learning resource center in the Oakland, California area. It offers family and life-skills coaching, parenting courses, workshops and consulting for individuals, families and organizations.",
+      "website": "https://www.livelifepoint.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "legalName"
+        ],
+        "title": "lifepoint",
+        "url": "https://www.livelifepoint.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "About",
+        "url": "https://www.livelifepoint.com/about-1"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000972",
+    "notes": "livelifepoint.com states lifepoint is a division of Carter-Kelly Consulting LLC, lists Oakland Tech High School under 'Trusted By', and shows phone 510-463-1163; services fit OUSD's family-services category. Neither cited page states an Oakland location (only the 510 area code), so headquarters is unsupported by the sources (it rests on the agenda text); the summary's 'Oakland, California area' wording is only loosely supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
 }

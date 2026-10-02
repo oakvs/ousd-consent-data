@@ -2,7 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:http://www.mobilityblueprint.net/",
+      "field": "source:https://mobilityblueprint.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mobilityblueprint.net/index.php/about-us/",
       "pass": true
     },
     {
@@ -16,25 +21,26 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Name matches exactly: the agenda names 'Mobility Blueprint' and the website at mobilityblueprint.net describes itself as 'Mobility Blueprint'",
-      "Website describes an educational consulting company providing data and mapping tools to school districts, plausibly consistent with enrollment-department services; no page found confirming Austin, TX or Oakland Unified"
+      "Name matches exactly: 'Mobility Blueprint', an educational consulting company (mobilityblueprint.net)",
+      "Headquartered in Austin, Texas, matching the agenda text 'Austin, TX'",
+      "Its student-enrollment and housing-mobility tools for school districts are consistent with an OUSD Enrollment Department services agreement, but no page found names Oakland Unified or First 5 directly"
     ],
     "key": "v-009156",
-    "notes": "Web search budget was exhausted, so no registry (SAM.gov, Texas/California SOS) or independent page could be checked. The company's website does not state a location, contact details, or mention Oakland Unified or Austin, TX, so identity is not confirmed beyond the name and a plausible service match. Should be re-run with search available before any publication.",
+    "notes": "Not confirmed that this is the entity OUSD contracts with: no found page links Mobility Blueprint to Oakland Unified or First 5 Alameda. No registry (Texas SOS, SAM.gov) record was located, so no legal name or IDs. The only contact details found on the site name an individual, so they were omitted.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
+      "headquarters": "Austin, TX",
       "legalName": null,
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "Mobility Blueprint describes itself as an educational consulting company. It provides mapping and data tools that help school districts use data to support student enrollment, retention and resource planning.",
-      "website": "http://www.mobilityblueprint.net/"
+      "summary": "Mobility Blueprint describes itself as an educational consulting company that provides tools to help school districts access data. Its map-based platforms show families housing and community services within school boundaries, with the goal of reducing student turnover and supporting enrollment.",
+      "website": "https://mobilityblueprint.net/"
     },
     "sources": [
       {
@@ -44,10 +50,18 @@
           "website"
         ],
         "title": "Mobility Blueprint",
-        "url": "http://www.mobilityblueprint.net/"
+        "url": "https://mobilityblueprint.net/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "About Us - Mobility Blueprint",
+        "url": "https://mobilityblueprint.net/index.php/about-us/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

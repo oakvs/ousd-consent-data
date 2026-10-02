@@ -1,20 +1,96 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/escondido/quiet-curtains",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.govconinabox.com/explore/contractors/profile/quiet-curtains-zkfrtl",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.acoustic-curtains.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-007796",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "low",
+    "confidence": "medium",
     "identitySignals": [
-      "Name matches a company called Quiet Curtains (acoustic-curtains.com, redirected from quietcurtains.com) that makes soundproof and acoustic curtains",
-      "That company's site shows San Diego, CA 92127, not Escondido, CA as in the agenda text, and does not mention schools, arts or Oakland"
+      "Name 'Quiet Curtains' matches a California general corporation located in Escondido, CA, matching the agenda's location (third-party filing aggregator bizprofile.net, not the Secretary of State site itself)",
+      "A federal contractor profile (govconinabox.com) lists QUIET CURTAINS at the same Escondido address, in acoustic curtains (NAICS 313310), which fits a school arts/music-funded purchase",
+      "WEAK/UNRESOLVED: the acoustic-curtains.com website lists a San Diego, CA 92127 address and a different phone than the federal profile, and does not mention Escondido, Oakland or schools, so the website was not confirmed as belonging to the Escondido entity"
     ],
     "key": "v-007796",
-    "notes": "Unconfirmed candidate only: Quiet Curtains, an acoustic curtain maker at acoustic-curtains.com, listed in San Diego, CA 92127 (phone and email on its site not used). Agenda location is Escondido, CA, and nothing found links it to OUSD or Prop 28 arts services. Registry searches (ProPublica returned HTTP 429; no SOS or SAM.gov lookup done) and further web searches were not possible because the session's web search budget was exhausted. Needs a manual check of the California Secretary of State entity record before any publication.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry facts (Escondido address, CA entity 3987865, UEI) come from third-party aggregators, not the Secretary of State or SAM.gov directly. The public website (acoustic-curtains.com / quietcurtains.com email) shows a San Diego address and phone (858) 272-3615 while the federal profile shows phone 858-286-7150; I could not confirm they are the same legal entity, so website/phone/email were left null. No source ties the company to OUSD or Oakland High School. Needs human review before publishing.",
+    "profile": {
+      "address": "1525 S Escondido Blvd Ste C, Escondido, CA 92025",
+      "caEntityNumber": "3987865",
+      "ein": null,
+      "email": null,
+      "headquarters": "Escondido, CA",
+      "legalName": "Quiet Curtains",
+      "orgType": "company",
+      "phone": null,
+      "samUei": "ZKFRTLHZB776",
+      "summary": "Quiet Curtains is a California company that makes custom acoustic and sound-blocking curtains for commercial, scientific and residential use.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Quiet Curtains Escondido, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/escondido/quiet-curtains"
+      },
+      {
+        "supports": [
+          "samUei",
+          "summary"
+        ],
+        "title": "QUIET CURTAINS",
+        "url": "https://www.govconinabox.com/explore/contractors/profile/quiet-curtains-zkfrtl"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Soundproof Curtains and Acoustic Curtains by Quiet Curtains",
+        "url": "https://www.acoustic-curtains.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

@@ -1,17 +1,109 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/san-francisco/bama-institute-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bama-institute.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bama-institute.com/bay-area-schools-locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008425",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Bama Institute, LLC' is an active California LLC (entity 201707310224) with principal address 530 Bush Street, Suite 301, San Francisco, CA 94108, matching the agenda's 'BAMA Institute, LLC' and 'San Francisco, CA'",
+      "The organization's own website (bama-institute.com) lists the same San Francisco address and describes career training schools, consistent with OUSD contracts for the Adult and Career Education and Linked Learning departments",
+      "Its programs are healthcare career training (phlebotomy and EKG technician), matching the career-education nature of the OUSD departments named in the contract titles"
+    ],
     "key": "v-008425",
-    "notes": "No candidate confirmed. The session's web search budget was exhausted, so no searches could run, and guessed domains (bamainstitute.com, bamainstitute.org) did not resolve. Agenda gives San Francisco, CA; funding sources suggest workforce/career pathway work. Needs a re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "No page found that directly links BAMA Institute to OUSD; identity rests on exact name, San Francisco location and the career-training match. No general email address is published (only an appointment-booking link). Registry entity number comes from a third-party mirror of California Secretary of State data (bizprofile.net), not bizfileonline directly. The institute also operates under the Bay Area Medical Academy name (the LLC's manager is Bay Area Medical Academy, Inc.). A reviewer may wish to confirm against the SOS record.",
+    "profile": {
+      "address": "530 Bush St., Suite 301, San Francisco, CA 94108",
+      "caEntityNumber": "201707310224",
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Bama Institute, LLC",
+      "orgType": "company",
+      "phone": "415-508-5404",
+      "samUei": null,
+      "summary": "BAMA Institute is a private career training school in the San Francisco Bay Area. It offers healthcare training programs such as phlebotomy (drawing blood) and EKG technician certification. It has campuses in San Francisco and San Jose.",
+      "website": "https://bama-institute.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Bama Institute, LLC San Francisco, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/san-francisco/bama-institute-llc"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Phlebotomy School in The Bay Area | BAMA Institute",
+        "url": "https://bama-institute.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Locations - BAMA Institute",
+        "url": "https://bama-institute.com/bay-area-schools-locations/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008425",
+    "notes": "Exact name match and San Francisco location with an active CA LLC (201707310224); a healthcare career-training school plausibly fits OUSD Linked Learning and Adult and Career Education contracts, though no source links it to OUSD directly. Summary, phone, address and registry number are all confirmed by the cited pages (registry number via a third-party mirror).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

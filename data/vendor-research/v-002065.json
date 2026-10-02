@@ -1,17 +1,95 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://hy-arch.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hy-arch.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/fremont-cdc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-002065",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Firm's own site (hy-arch.com) shows an Oakland, CA headquarters at 300 27th Street, matching the agenda location 'Oakland, CA'",
+      "Firm's own site describes architecture and planning for education and healthcare, matching OUSD's 'School buildings & construction' contracts",
+      "OUSD's own Fremont High School (Phase 2) project page names Hibser Yamauchi Architects as the architect, matching the Fremont High School Modernization agreements in the agenda"
+    ],
     "key": "v-002065",
-    "notes": "Research could not be completed: the WebSearch budget for the session was exhausted (200 of 200) and direct fetches of guessed domains failed (connection error or no such host). No credible candidate was identified or confirmed. This is a business (architecture firm), not an individual; retry when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "California Secretary of State and SAM.gov could not be read, so no entity number or UEI. No general email is published on the firm's site. Legal name 'Hibser Yamauchi Architects, Inc.' comes from the agenda but was not confirmed on a cited page, so legalName is null. Organization type 'company' is inferred from 'Inc.' in the agenda and the firm's own pages; no registry page was fetched.",
+    "profile": {
+      "address": "300 27th Street, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.446.2222",
+      "samUei": null,
+      "summary": "An architecture firm founded in 1977 that provides planning, design and interior services, mainly for schools and healthcare facilities. It is headquartered in Oakland, California, with an additional office in Davis, California.",
+      "website": "https://hy-arch.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us – Hibser Yamauchi Architects",
+        "url": "https://hy-arch.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact Us – Hibser Yamauchi Architects",
+        "url": "https://hy-arch.com/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "Fremont High School (Phase 2) - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/fremont-cdc"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002065",
+    "notes": "The firm's site shows an Oakland HQ at 300 27th Street, founded 1977, serving education and healthcare, with a Davis office and phone 510.446.2222. OUSD's Fremont High School page names Hibser Yamauchi Architects as architect, so it is the contracted vendor. The summary is neutral and every non-null field is supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

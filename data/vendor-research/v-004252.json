@@ -1,17 +1,126 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/522137825",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thecrucible.org/about-the-crucible/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thecrucible.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thecrucible.org/mcclymonds-in-person-classes/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-004252",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'The Crucible', Oakland, CA, EIN 52-2137825 (ProPublica Nonprofit Explorer), classified as a school (vocational/technical)",
+      "Located in West Oakland, CA, matching the agenda's 'Oakland, CA'",
+      "The Crucible's own site describes youth empowerment programs and a page about McClymonds High School students taking Crucible classes, matching OUSD's Castlemont, McClymonds and Rudsdale high school services agreements for classroom and academic programs"
+    ],
     "key": "v-004252",
-    "notes": "Research incomplete, not a finding of no match: the WebSearch budget for the session was exhausted (200/200), ProPublica returned HTTP 429, and thecrucible.org pages returned truncated content that could not be read. A likely candidate is The Crucible, an Oakland industrial-arts nonprofit, but identity and contact details were not confirmed against any fetched page. Re-queue once search budget is available.",
-    "profile": null,
-    "sources": []
+    "notes": "California Secretary of State entity number and SAM UEI not located; left null.",
+    "profile": {
+      "address": "1260 7th St. Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "52-2137825",
+      "email": "info@thecrucible.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "The Crucible",
+      "orgType": "nonprofit",
+      "phone": "(510) 444-0919",
+      "samUei": null,
+      "summary": "The Crucible is a nonprofit art school in West Oakland that teaches fine and industrial arts such as welding, blacksmithing, glass, and ceramics to people of many ages and backgrounds. It also offers scholarships, free programs, and youth programs, including work with Oakland public school students.",
+      "website": "https://www.thecrucible.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Crucible - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/522137825"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "ABOUT THE CRUCIBLE - The Crucible",
+        "url": "https://www.thecrucible.org/about-the-crucible/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "CONTACT - The Crucible",
+        "url": "https://www.thecrucible.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "For McClymonds High School Students, In-Person Crucible Classes Offer A Respite",
+        "url": "https://www.thecrucible.org/mcclymonds-in-person-classes/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004252",
+    "notes": "The Crucible is a West Oakland 501(c)(3) at 1260 7th St (EIN 52-2137825, ProPublica; the same EIN and address are on its own site), which matches the agenda's name and Oakland location, and it runs youth programs including McClymonds High School classes that fit the school services agreements. The summary, phone, general email, address and EIN are all shown on the cited pages and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

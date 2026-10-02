@@ -1,17 +1,53 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://datamediaservices.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006952",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "datamediaservices.com describes a structured cabling and low-voltage contractor offering surveillance systems, which is consistent with OUSD's school security improvement projects",
+      "A directory listing (Yelp) places a 'Data Media Services' in Stockton, CA with a 209 phone number, matching the agenda's Stockton location, but the company's own site gives an Oakland address and names itself inconsistently ('Delta Media Services'), so the match is not confirmed"
+    ],
     "key": "v-006952",
-    "notes": "Not researched to a conclusion: the session's WebSearch budget was exhausted (200 of 200), so no candidate could be found. A guessed domain (datamediaservices.com) returned a different company (Delta Media Services, Oakland), which does not match the agenda's 'Data Media Services, Inc.' in Stockton, CA; it was not used. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Not confirmed. No registry (CA Secretary of State, CSLB, SAM.gov) record was found for 'Data Media Services, Inc.' The candidate website lists an Oakland address and a 209 (Stockton-area) phone, mixes the names 'Data Media Services' and 'Delta Media Services', and a directory snippet suggests the operating entity may be 'Delta Media Services LLC'. No page links it to OUSD. Contact details deliberately omitted. Needs manual review against the CSLB license lookup.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A low-voltage contractor that designs and installs structured cabling, including data and voice cabling, network infrastructure and surveillance systems, for businesses.",
+      "website": "https://datamediaservices.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Welcome to Data Media Services",
+        "url": "https://datamediaservices.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

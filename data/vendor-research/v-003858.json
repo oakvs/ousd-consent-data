@@ -2,17 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.segalco.com/about-us",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "source:https://www.segalco.com/consulting-industries/public-sector-consulting/",
+      "field": "source:https://www.segalco.com/",
       "pass": true
     },
     {
       "detail": null,
       "field": "source:https://www.segalco.com/about-us/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Segal_(company)",
       "pass": true
     },
     {
@@ -38,23 +38,23 @@
   "research": {
     "confidence": "medium",
     "identitySignals": [
-      "Segal's own Office Locations page lists a Los Angeles (Glendale), CA office, matching the agenda's 'Glendale, CA'",
-      "Segal is a benefits, compensation and human resources consulting firm that lists public schools among its public sector clients, consistent with OUSD's Risk Management / self-insurance (Fund 67) services agreement",
-      "Name 'Segal' matches the agenda's 'The Segal Company'; the website footer names the corporate entity as 'The Segal Group, Inc.', so the exact contracting entity is not confirmed"
+      "Segal (formerly 'The Segal Company') is a benefits and actuarial consulting firm with a Glendale, CA office at 500 North Brand Boulevard, matching the agenda location 'Glendale, CA' (segalco.com locations page)",
+      "Segal's services (benefits, actuarial and insurance consulting) fit OUSD's 'Legal, insurance & risk' contract for the Risk Management Department paid from Fund 67 Self Insurance",
+      "Wikipedia notes the firm was formerly called The Martin E. Segal Company, later The Segal Co., matching the agenda name"
     ],
     "key": "v-003858",
-    "notes": "Registry lookups (California Secretary of State, SAM.gov) were not done because the web search budget was exhausted; only the organization's own pages were fetched. The agenda says 'The Segal Company' but the Segal website names 'The Segal Group, Inc.'; the contracting legal entity should be confirmed before publishing. The Glendale address is a regional office; the site does not state a headquarters. No general email is published on the pages checked.",
+    "notes": "No registry (CA Secretary of State, SAM.gov) record was checked, so legal entity name and IDs are null, and no page found links this firm to OUSD directly. The agenda says 'The Segal Company' in Glendale, CA; contact details given are for the New York headquarters. The Glendale office is at 500 North Brand Boulevard, Suite 1400, Glendale, CA 91203-3338, T (818) 956-6700. Medium confidence because the match rests on name, Glendale office and service type only.",
     "profile": {
-      "address": "500 North Brand Boulevard, Suite 1400, Glendale, CA 91203-3338",
+      "address": "66 Hudson Blvd, E / 20th floor / New York, NY 10001-2192",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
+      "headquarters": "New York, NY",
       "legalName": null,
       "orgType": "company",
-      "phone": "(818) 956-6700",
+      "phone": "(212) 251-5000",
       "samUei": null,
-      "summary": "Segal is a consulting firm that advises organizations on health benefits, retirement plans, pay and human resources. It works with public sector clients, including public schools, as well as other employers. The firm was founded in 1939 and has offices across North America.",
+      "summary": "Segal is a benefits, compensation and human resources consulting firm. It advises employers and multiemployer plans on health benefits, retirement, compensation and related areas. It is privately held and employee-owned, with offices across the United States and Canada.",
       "website": "https://www.segalco.com/"
     },
     "sources": [
@@ -64,26 +64,29 @@
           "orgType",
           "website"
         ],
-        "title": "Segal Overview",
-        "url": "https://www.segalco.com/about-us"
-      },
-      {
-        "supports": [
-          "summary"
-        ],
-        "title": "Public Sector Consulting",
-        "url": "https://www.segalco.com/consulting-industries/public-sector-consulting/"
+        "title": "Segal: HR and Benefits Consulting",
+        "url": "https://www.segalco.com/"
       },
       {
         "supports": [
           "phone",
-          "address"
+          "address",
+          "headquarters"
         ],
-        "title": "Office Locations",
+        "title": "Segal Office Locations",
         "url": "https://www.segalco.com/about-us/locations/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Segal (company) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Segal_(company)"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

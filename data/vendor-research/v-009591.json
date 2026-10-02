@@ -2,7 +2,32 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.shawsportsturf.com/about-us",
+      "field": "source:https://network.procore.com/p/shaw-integrated-and-turf-solutions-inc-calhoun",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://shawsportsturf.com/en-us/resources/news/shaw-sports-turf-to-return-in-2026-as-the-official-synthetic-turf-provider-of-the-college-football",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://shawsportsturf.com/en-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,40 +39,67 @@
   "key": "v-009591",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Shaw Sports Turf website describes synthetic turf development and installation for school, college and pro venues, matching OUSD's CMAS turf field replacement contracts (the agenda's dba is 'Shaw Sports Synthetic Turf')",
-      "OpenCorporates lists registered US branches named 'SHAW INTEGRATED AND TURF SOLUTIONS, INC.' with a Georgia principal address, matching the agenda's Georgia location (Calhoun, GA vs. Dalton, GA listed there, so not an exact match)"
+      "Procore Network lists 'Shaw Integrated And Turf Solutions Inc.' at 185 South Industrial Boulevard, Calhoun, GA, matching the agenda location (Calhoun, GA)",
+      "Shaw Sports Turf's own news page says its Game ON synthetic turf is manufactured in Calhoun, Georgia, matching the Calhoun location and the dba 'Shaw Sports Synthetic Turf'",
+      "The company sells synthetic sports turf, matching OUSD's turf field replacement contracts (McClymonds High, Oakland High, Calvin Simmons, Cesar Chavez)",
+      "A directory listing for Shaw Sports Turf gives the same Calhoun address, the website shawsportsturf.com and the phone number shown on the company's own news page"
     ],
     "key": "v-009591",
-    "notes": "Web search budget was exhausted, so no registry (Georgia SOS, SAM.gov) page could be checked. The exact legal entity 'Shaw Integrated and Turf Solutions, Inc.' was not confirmed on the company's own pages, and OpenCorporates lists a Dalton, GA principal address rather than Calhoun, GA. Contact details and registry IDs left null. Needs human review before publication.",
+    "notes": "Registry lookups (CA Secretary of State, SAM.gov) were not retrieved, so entity numbers and UEI are null. A search snippet suggests a Delaware corporation, unverified. Legal name and address come from a third-party contractor directory (Procore); the shawsportsturf.com site itself does not publish a general email or street address. The agenda dba 'Shaw Sports Synthetic Turf' differs slightly from the brand name 'Shaw Sports Turf'.",
     "profile": {
-      "address": null,
+      "address": "185 South Industrial Boulevard, Calhoun, GA",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
-      "headquarters": null,
-      "legalName": null,
+      "headquarters": "Calhoun, GA",
+      "legalName": "Shaw Integrated And Turf Solutions Inc.",
       "orgType": "company",
-      "phone": null,
+      "phone": "866-703-4004",
       "samUei": null,
-      "summary": "Shaw Sports Turf develops and installs synthetic turf playing surfaces for high school, college and professional sports venues in North America. It is part of Shaw Industries Group, Inc., a Berkshire Hathaway company.",
-      "website": "https://www.shawsportsturf.com"
+      "summary": "Shaw Sports Turf is a synthetic turf company that designs and supplies artificial turf systems for athletic fields, including football, baseball, softball and soccer fields. Its turf is manufactured in Calhoun, Georgia. It is part of Shaw Industries Group, Inc., a Berkshire Hathaway company.",
+      "website": "https://shawsportsturf.com"
     },
     "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Shaw Integrated And Turf Solutions Inc.",
+        "url": "https://network.procore.com/p/shaw-integrated-and-turf-solutions-inc-calhoun"
+      },
+      {
+        "supports": [
+          "phone",
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Shaw Sports Turf to return in 2026 as The Official Synthetic Turf Provider of the CFP",
+        "url": "https://shawsportsturf.com/en-us/resources/news/shaw-sports-turf-to-return-in-2026-as-the-official-synthetic-turf-provider-of-the-college-football"
+      },
       {
         "supports": [
           "summary",
           "orgType",
           "website"
         ],
-        "title": "About Us | Shaw Sports Turf",
-        "url": "https://www.shawsportsturf.com/about-us"
+        "title": "Shaw Sports Turf",
+        "url": "https://shawsportsturf.com/en-us"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009591",
+    "notes": "Procore lists Shaw Integrated And Turf Solutions Inc. at 185 South Industrial Boulevard, Calhoun, GA, matching the agenda location and legal name; Shaw Sports Turf's site confirms synthetic sports turf, Calhoun manufacturing, the phone number, and the Shaw Industries/Berkshire Hathaway parentage, matching OUSD's turf field contracts. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

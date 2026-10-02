@@ -1,17 +1,72 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://navaltamedia.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://navaltamedia.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-010121",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: navaltamedia.com describes 'Navalta Media', a communications and media strategy agency founded by Pati Navalta",
+      "Agenda gives Fairfield, CA; the California-registered LLC P. Navalta Content Strategies LLC (communications business led by the same founder, Pati Navalta Poblete) is based in Fairfield, CA, though the website itself lists only San Francisco and New York offices",
+      "Service type (communications/media strategy) is plausible for a services agreement with OUSD, but no cited page mentions OUSD"
+    ],
     "key": "v-010121",
-    "notes": "Identity not confirmed. The only candidate found was navaltamedia.com, a communications agency with San Francisco and New York offices; it does not mention Fairfield, CA or Oakland Unified, and the name match alone is one weak signal. No registry (CA Secretary of State, SAM.gov) could be checked because the web search budget was exhausted. Needs a manual or later re-run.",
-    "profile": null,
-    "sources": []
+    "notes": "Not confirmed to be the same entity as the OUSD vendor. The agenda lists Fairfield, CA, but the agency's website lists offices in San Francisco and New York. The only Fairfield link is the California LLC 'P. Navalta Content Strategies LLC' (entity number 202022310855, 4680 Lariat Drive, Fairfield, CA 94534, per bizprofile.net, a third-party aggregator), led by the same founder; no cited page states that this LLC operates as Navalta Media, and that address appears to be non-public/possibly residential so it was not used. Registry fields, address and phone deliberately omitted. Human review of the CA Secretary of State record (dba/statement of information) recommended before any publication.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@navaltamedia.com",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Navalta Media is a communications and media strategy agency. It offers messaging strategy, media training, ghostwriting and digital campaigns for mission-driven organizations.",
+      "website": "https://navaltamedia.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "email"
+        ],
+        "title": "About - Navalta Media",
+        "url": "https://navaltamedia.com/about/"
+      },
+      {
+        "supports": [
+          "website",
+          "email"
+        ],
+        "title": "Navalta Media is an impact-driven communications agency.",
+        "url": "https://navaltamedia.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

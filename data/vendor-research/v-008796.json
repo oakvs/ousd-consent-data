@@ -1,17 +1,95 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ce.solutions",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ce.solutions/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prnewswire.com/news-releases/catalyst-environmental-solutions-acquires-enplan-environmental-and-geospatial-technologies-to-further-expand-geographic-footprint-in-california-and-strengthen-suite-of-services-302572717.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008796",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches the agenda text 'Catalyst Environmental Solutions' (website ce.solutions)",
+      "Press release states the firm is headquartered in Santa Monica, California, matching the agenda location 'Santa Monica, CA'",
+      "Environmental consulting firm serving public-sector clients, plausible for a Risk Management services agreement tied to school buildings"
+    ],
     "key": "v-008796",
-    "notes": "Not researched: the session's WebSearch budget was exhausted (200 of 200), so no candidate organization could be found or confirmed. Guessed domains were not used. Note the agenda names the vendor 'Catalyst Environmental Solutions' but the official title says 'Catalyst Environmental Services', so the name itself is ambiguous. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry (CA SOS, SAM.gov) record was checked or confirmed, and no page links this firm to OUSD. The agenda title says 'Catalyst Environmental Services', while a different firm, Catalyst Environmental (catenv.com, Hayward, CA, hazardous waste and remediation contractor), also exists. The agenda's Santa Monica location and the 'Solutions' name favor ce.solutions, but a reviewer should confirm. The website's contact page lists a Sherman Oaks mailing address, not Santa Monica.",
+    "profile": {
+      "address": "14900 Magnolia Blvd #5333, Sherman Oaks, CA 91403",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "contact@ce.solutions",
+      "headquarters": "Santa Monica, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "818-387-5875",
+      "samUei": null,
+      "summary": "Catalyst Environmental Solutions is an environmental consulting firm. It works on energy, land development and remediation, and water resources, and helps public and private clients with environmental impact analysis, permitting, site cleanup and compliance.",
+      "website": "https://www.ce.solutions"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Catalyst Environmental Solutions",
+        "url": "https://www.ce.solutions"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact",
+        "url": "https://www.ce.solutions/contact"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Catalyst Environmental Solutions acquires ENPLAN Environmental and Geospatial Technologies",
+        "url": "https://www.prnewswire.com/news-releases/catalyst-environmental-solutions-acquires-enplan-environmental-and-geospatial-technologies-to-further-expand-geographic-footprint-in-california-and-strengthen-suite-of-services-302572717.html"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

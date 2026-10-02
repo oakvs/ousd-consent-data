@@ -2,12 +2,22 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://www.lessoncast.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://www.lessoncast.com/about",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.lessoncast.com/contact",
+      "field": "source:https://www.lessoncast.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.maryland.gov/news/towson-university-incubator-opens-doors-ed-tech-companies/",
       "pass": true
     },
     {
@@ -29,48 +39,71 @@
   "key": "v-009424",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Lessoncast's own Contact page gives Baltimore, Maryland as its location, matching the agenda text 'Baltimore, MD'",
-      "Lessoncast's website describes technology-supported professional learning for educators, consistent with OUSD's 'Classroom & academic programs' services agreements funded by Title 2-a Teacher Quality"
+      "Name matches: 'Lessoncast' is the organization's own name on lessoncast.com, and the agenda uses the same name",
+      "Contact page gives 'Baltimore, Maryland', matching the agenda location Baltimore, MD",
+      "Lessoncast provides professional development for teachers, matching OUSD's Title II-A Teacher Quality funding and Classroom & academic programs category",
+      "Maryland Department of Commerce page describes Lessoncast as a Maryland teacher professional development platform, founded by a former Baltimore City teacher"
     ],
     "key": "v-009424",
-    "notes": "Web search quota was exhausted, so no registry (Maryland SDAT, SAM.gov, IRS) confirmation was possible and legal name, org type and registry IDs are unknown. The site never mentions Oakland/OUSD, so the link rests on Baltimore location plus matching service type. Confidence kept at medium; a reviewer should confirm via a registry before publishing.",
+    "notes": "No registry record (SAM.gov, state registry) was checked, so legal name, entity numbers and street address are left null. Contact page lists only 'Baltimore, Maryland' as the address. The Maryland Commerce page places the company in the Towson University incubator (Towson, MD, Baltimore County); a copyright line mentions 'Lessoncast Learning Inc.'. No page found mentions OUSD directly.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": null,
       "email": "info@lessoncast.com",
-      "headquarters": "Baltimore, Maryland",
+      "headquarters": "Baltimore, MD",
       "legalName": null,
-      "orgType": null,
+      "orgType": "company",
       "phone": "(443) 839-0293",
       "samUei": null,
-      "summary": "Lessoncast is an organization that provides professional learning for teachers and schools. Its work uses technology to deliver short professional development modules and helps educators put school initiatives into classroom practice.",
+      "summary": "Lessoncast is a company that provides technology-supported professional learning for teachers and schools. It offers on-demand courses and customized services on topics such as Universal Design for Learning and inclusive education, and helps schools turn professional learning plans into classroom practice.",
       "website": "https://www.lessoncast.com"
     },
     "sources": [
       {
         "supports": [
+          "phone",
+          "email",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.lessoncast.com/contact"
+      },
+      {
+        "supports": [
           "summary"
         ],
-        "title": "About - Lessoncast",
+        "title": "About Lessoncast",
         "url": "https://www.lessoncast.com/about"
       },
       {
         "supports": [
-          "website",
-          "phone",
-          "email",
-          "headquarters"
+          "summary",
+          "orgType"
         ],
-        "title": "Contact - Lessoncast",
-        "url": "https://www.lessoncast.com/contact"
+        "title": "Lessoncast",
+        "url": "https://www.lessoncast.com"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Towson University Incubator Opens Doors for Baltimore Ed Tech Companies",
+        "url": "https://business.maryland.gov/news/towson-university-incubator-opens-doors-ed-tech-companies/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009424",
+    "notes": "Lessoncast is a Maryland teacher professional development company based in the Baltimore area, matching the agenda's Baltimore, MD location and the Title II-A teacher quality funding. Phone, email, headquarters, website, company type and the neutral summary are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

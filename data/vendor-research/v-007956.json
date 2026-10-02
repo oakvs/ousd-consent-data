@@ -7,12 +7,22 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.elevolearning.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "phone",
       "pass": true
     },
     {
       "detail": null,
       "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -24,43 +34,58 @@
   "key": "v-007956",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: the agenda names 'Coast2Coast Coaching dba Elevo Learning'; the site elevolearning.com is for 'Elevo Learning'",
-      "Located in San Diego, CA, matching the agenda text",
-      "Website describes expanded learning, sports and wellness programs in schools, matching OUSD's after-school, summer and elementary sports contracts"
+      "OUSD agenda item (File 25-0956) names the vendor 'Coast2Coast Coaching' with dba 'Elevo Learning', located in San Diego, CA",
+      "Elevo Learning's own privacy policy names its legal entity as 'Coast 2 Coast Coaching, Inc. doing business as Elevo Learning' at 4666 Cass St. Suite #200, San Diego, CA 92109, matching the agenda location",
+      "Elevo Learning's website describes expanded-learning, sports and wellness programs for schools, matching OUSD's after-school, summer and student-support contracts"
     ],
     "key": "v-007956",
-    "notes": "Could not confirm the link between 'Coast2Coast Coaching' and Elevo Learning from any page (the Elevo site does not mention Coast2Coast Coaching or Oakland), and could not check the CA Secretary of State, ProPublica or SAM.gov registries (web search budget exhausted, ProPublica returned HTTP 429). Legal entity name, org type and registry IDs left null. Needs a registry check before publishing.",
+    "notes": "Not to be confused with Elevo Institute (elevo.org), an unrelated Australian nonprofit. No California Secretary of State entity number or SAM UEI was verified. The only email found (privacy@elevolearning.com) is a privacy-specific inbox, so email is left null.",
     "profile": {
       "address": "4666 Cass St. Suite #200, San Diego, CA 92109",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "San Diego, CA",
-      "legalName": null,
-      "orgType": null,
+      "legalName": "Coast 2 Coast Coaching, Inc.",
+      "orgType": "company",
       "phone": "(323) 484-2402",
       "samUei": null,
-      "summary": "Elevo Learning runs in-school and out-of-school programs for students in California schools. Its services include expanded learning programs, sports, school day activities and wellness coaching.",
+      "summary": "A San Diego company that does business as Elevo Learning. It runs in-school and out-of-school programs for schools, including expanded learning programs, sports, school day activities and wellness coaching with a focus on social-emotional learning.",
       "website": "https://www.elevolearning.com"
     },
     "sources": [
       {
         "supports": [
           "summary",
-          "website",
-          "phone",
-          "address",
-          "headquarters"
+          "orgType",
+          "website"
         ],
         "title": "Elevo Learning",
         "url": "https://www.elevolearning.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Elevo Learning Privacy Policy",
+        "url": "https://www.elevolearning.com/privacy-policy"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007956",
+    "notes": "OUSD titles name 'Coast2Coast Coaching dba Elevo Learning' (San Diego), and the Elevo privacy policy names 'Coast 2 Coast Coaching, Inc. doing business as Elevo Learning' at 4666 Cass St, San Diego with phone (323) 484-2402. The homepage supports the neutral summary of expanded learning, sports, school day and wellness programs with an SEL focus.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

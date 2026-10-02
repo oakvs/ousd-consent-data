@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/870829250",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fiaoakland.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://fiaoakland.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008734",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Families In Action For Quality Education', EIN 87-0829250, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes parent and family literacy leadership and school-quality work in Oakland, matching OUSD's 'Student health, support & family services' and literacy-coach funding sources",
+      "FIA's About page says it was founded by East Oakland school leaders and families and names Hoover among partner schools, matching the 'Hoover Elementary School' agreement title"
+    ],
     "key": "v-008734",
-    "notes": "Research not completed: the session's WebSearch budget (200 of 200) was exhausted, and the ProPublica Nonprofit Explorer fetch returned HTTP 429. No candidate organization was identified or verified. This is an incomplete run, not evidence the organization does not exist; re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Phone, email and address left null: the organization's website pages fetched did not show them, and third-party listings disagree on the street address (333 vs 433 Hegenberger Rd). Not verified in a registry: CA entity number and SAM UEI.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "87-0829250",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Families In Action For Quality Education",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, founded in 2019 by school leaders and families in East Oakland. It works to improve access to quality public schools, especially for Black, Brown and underserved students. It runs parent and youth leadership institutes, a family literacy program called Lit for Literacy, and student leadership programs in district and charter schools.",
+      "website": "https://fiaoakland.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Families In Action For Quality Education - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/870829250"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Families in Action (FIA) Oakland",
+        "url": "https://www.fiaoakland.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - Families in Action Oakland",
+        "url": "https://fiaoakland.org/about-us/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008734",
+    "notes": "ProPublica confirms a 501(c)(3) of this exact name (EIN 87-0829250) in Oakland, and the FIA About page names Hoover and Allendale among partner schools, matching the two agreement titles. Summary details (founded March 2019 by East Oakland school leaders and families, leadership institutes, Lit for Literacy, student programs in district and charter schools) are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

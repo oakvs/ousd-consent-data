@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/richmond/julian-tree-care-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://juliantreecare.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006916",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California corporation: 'Julian Tree Care, Inc.' (entity number 4217797, active, general corporation), principal address in Richmond, CA, matching the agenda location",
+      "The corporation's listed chief executive is Julian C. Cabrera, matching the agenda title 'Julian Cabrera dba Julian Tree Care, Inc.'",
+      "Company website describes tree trimming, removal and vegetation work in the Bay Area, matching OUSD's vegetation fire management, weed abatement and tree removal maintenance agreements",
+      "Website lists Richmond, CA and phone (510) 256-7009, consistent with the registry's Richmond address; service areas include Oakland and Piedmont"
+    ],
     "key": "v-006916",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted, so no candidate could be found or verified. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda also names 'Julian Cabrera dba Julian Tree Care, Inc.' (Richmond, CA), so this may be a sole proprietor operating under a dba; check before publishing.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry details come from a third-party mirror of California Secretary of State filings (bizprofile.net), not the Secretary of State site itself. The company website shows a Richmond address in its page data but a Mill Valley address in its footer, and two different general email addresses, so email was left null. Agenda text variously names the vendor as 'Julian Tree Care Inc.' and 'Julian Cabrera dba Julian Tree Care, Inc.'; this is a corporation, not an individual contractor.",
+    "profile": {
+      "address": "561 Juliga Woods St, Richmond, CA 94804",
+      "caEntityNumber": "4217797",
+      "ein": null,
+      "email": null,
+      "headquarters": "Richmond, CA",
+      "legalName": "Julian Tree Care, Inc.",
+      "orgType": "company",
+      "phone": "(510) 256-7009",
+      "samUei": null,
+      "summary": "Julian Tree Care is a family-run, licensed tree service company serving the San Francisco Bay Area. It offers tree trimming and pruning, tree removal, stump grinding, wood chipping, yard clearing and 24-hour emergency tree services.",
+      "website": "https://juliantreecare.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "address",
+          "headquarters",
+          "caEntityNumber"
+        ],
+        "title": "Julian Tree Care, Inc. Richmond, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/richmond/julian-tree-care-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Tree Service | Tree Trimming | Licensed Arborist | Julian Tree Care",
+        "url": "https://juliantreecare.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006916",
+    "notes": "Julian Tree Care, Inc. (CA entity 4217797, Richmond, CEO Julian C. Cabrera) matches the agenda's Richmond location and 'Julian Cabrera dba Julian Tree Care, Inc.'; a BBB listing independently ties the Richmond address, phone (510) 256-7009 and CEO to the same business, and its tree/vegetation services fit OUSD's weed abatement and tree removal agreements. Summary, phone, website, address and registry fields are supported and neutral; email correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

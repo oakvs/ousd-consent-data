@@ -1,17 +1,83 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/santa-ana/a-good-sign-graphics",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://network.procore.com/p/a-good-sign-and-graphics-co-santa-ana",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-009628",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California general corporation 'A Good Sign & Graphics Co.' (entity number 3132344, active) with principal address in Santa Ana, CA, matching the agenda's 'Santa Ana, CA' (bizprofile.net, drawn from the CA Secretary of State registry)",
+      "Procore Construction Network profile for the same name and street address in Santa Ana describes signage manufacturing and installation for commercial, institutional and infrastructure projects, consistent with a construction agreement for a school facilities project"
+    ],
     "key": "v-009628",
-    "notes": "Not researched: the WebSearch budget for the session was exhausted, so no candidate could be identified or confirmed. A single guessed-domain fetch failed (expired certificate) and was not used. Agenda context: sign contractor in Santa Ana, CA, for the Marcus A. Foster Leadership Center project. Needs a re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Company website (agoodsign.com) could not be fetched (expired TLS certificate), so website, phone and email are left null rather than unverified. No page found directly linking the company to OUSD; identity rests on exact name, Santa Ana location and signage-contractor trade.",
+    "profile": {
+      "address": "2110 South Susan Street, Santa Ana, CA 92704",
+      "caEntityNumber": "3132344",
+      "ein": null,
+      "email": null,
+      "headquarters": "Santa Ana, CA",
+      "legalName": "A Good Sign & Graphics Co.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A Good Sign & Graphics Co. is a company in Santa Ana, California that makes and installs signs. It works on construction projects in commercial, healthcare, infrastructure and institutional settings.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "A Good Sign & Graphics Co. Santa Ana, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/santa-ana/a-good-sign-graphics"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "A Good Sign & Graphics Co. - Procore Construction Network",
+        "url": "https://network.procore.com/p/a-good-sign-and-graphics-co-santa-ana"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009628",
+    "notes": "Both cited pages confirm the exact name, Santa Ana address 2110 S Susan St, CA entity 3132344 (active general corporation), and signage manufacturing/installation for commercial, healthcare, infrastructure and institutional projects; this fits a signage scope on the Foster Leadership Center construction agreement. No direct page linking the company to OUSD, but name, city and trade all match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

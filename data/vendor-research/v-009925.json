@@ -1,17 +1,79 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.filippiniconsulting.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/authorized-person/alexis-filippini",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009925",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches an active California LLC 'Filippini Consulting LLC' in Oakland, CA, matching the agenda's 'Oakland, CA' (third-party business directory, not the state registry)",
+      "Website describes professional development and coaching for K-12 schools and districts, consistent with OUSD's 'Student health, support & family services' category",
+      "No page found that explicitly mentions OUSD or Oakland Academy of Knowledge, so the link to this specific contract is not confirmed"
+    ],
     "key": "v-009925",
-    "notes": "Not researched: the session's WebSearch budget was exhausted, so no candidate organization could be identified or confirmed. Re-run once the search limit is raised. This is not a finding that the vendor is an individual.",
-    "profile": null,
-    "sources": []
+    "notes": "Could not reach the CA Secretary of State registry, so the entity number is not given. Location and legal name come from a third-party directory. No source ties this firm to OUSD or Oakland Academy of Knowledge. Related nonprofit Words in the Wild is affiliated but is a separate organization.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "team@alexisfilippini.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Filippini Consulting LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "An education consulting company that provides professional development and coaching to teachers, school leaders and school districts. Its work focuses on teaching practices, positive behavior supports and literacy.",
+      "website": "https://www.filippiniconsulting.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email"
+        ],
+        "title": "Filippini Consulting",
+        "url": "https://www.filippiniconsulting.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Companies Represented by Alexis Filippini in Leadership Roles",
+        "url": "https://www.bizprofile.net/authorized-person/alexis-filippini"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

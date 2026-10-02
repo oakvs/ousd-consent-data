@@ -1,17 +1,115 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bmrhealth.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bmrhealth.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/pleasanton/bmr-health-services-inc-2",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-bmr-health-services",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches California Secretary of State-derived record: 'Bmr Health Services, Inc.', entity number 3372818, active, Pleasanton, CA (matches agenda location Pleasanton, CA)",
+      "Company website describes itself as a California-based Non-Public agency supplying speech, occupational and physical therapists and special education professionals to schools, matching OUSD's 'Nonpublic, Nonsectarian School/Agency' special education contract",
+      "Website address 7041 Koll Center Parkway Suite 210, Pleasanton CA 94566 matches the registry principal address"
+    ],
     "key": "n-bmr-health-services",
-    "notes": "Not researched: the session's WebSearch budget was exhausted (200 of 200) before any search for this vendor could run, so no candidate was found or confirmed. Agenda gives only 'BMR Health Services', Pleasanton, CA (special education nonpublic agency contract). Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Entity number comes from a third-party mirror of California Secretary of State data (bizprofile.net), not bizfileonline directly. Website does not name Oakland Unified; identity rests on name, city and service type.",
+    "profile": {
+      "address": "7041 Koll Center Parkway Suite 210, Pleasanton CA 94566",
+      "caEntityNumber": "3372818",
+      "ein": null,
+      "email": "info@bmrhealth.com",
+      "headquarters": "Pleasanton, CA",
+      "legalName": "BMR Health Services, Inc.",
+      "orgType": "company",
+      "phone": "+1 855 828 3200",
+      "samUei": null,
+      "summary": "A California company that recruits and places allied healthcare professionals, such as speech therapists, occupational therapists, physical therapists and special education specialists. It describes itself as a Non-Public agency and places staff in schools, hospitals and other care settings.",
+      "website": "https://www.bmrhealth.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "legalName"
+        ],
+        "title": "BMR Health Services",
+        "url": "https://www.bmrhealth.com"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About Us - BMR Health Services",
+        "url": "https://www.bmrhealth.com/about-us/"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Bmr Health Services, Inc. Pleasanton, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/pleasanton/bmr-health-services-inc-2"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-bmr-health-services",
+    "notes": "BMR Health Services, Inc. of Pleasanton, CA (entity 3372818, active) matches the agenda name and city, and its website describes a California Non-Public agency supplying therapists and special education staff, which fits OUSD's nonpublic agency special education contract. Contact fields, entity number, and the neutral summary are all supported by the cited pages; the contact email is a generic info@ address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

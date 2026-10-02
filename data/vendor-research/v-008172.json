@@ -1,17 +1,109 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/852209215",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ocelotlyouth.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ocelotlyouth.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.causeiq.com/organizations/lorenz-morales-consulting,852209215/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008172",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Lorenz Morales Consulting dba Ocelotl' in San Leandro, CA; Cause IQ lists Lorenz Morales Consulting in San Leandro, CA under EIN 85-2209215",
+      "ProPublica Nonprofit Explorer lists the legal name 'Ocelotl' under the same EIN 85-2209215, and the Ocelotl website shows EIN 85-2209215",
+      "Ocelotl's website lists OUSD (Oakland Unified School District) as a partner and describes school-based youth programs, matching OUSD's classroom and student support contracts"
+    ],
     "key": "v-008172",
-    "notes": "Agenda names 'Ocelotl' (San Leandro, CA), formerly 'Lorenz Morales Consulting dba Ocelotl' - possibly a sole proprietor consultancy named for a person, but not confirmed. Research could not be completed: WebSearch session budget was exhausted and the ProPublica registry returned HTTP 429. No credible candidate was identified; needs manual review.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry lists the legal name as Ocelotl (Oakland, CA); the agenda and Cause IQ place Lorenz Morales Consulting dba Ocelotl in San Leandro, so headquarters and address are left null. No public phone or email found on the website. Reviewer may wish to confirm the dba link on the IRS/CA SOS record.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "85-2209215",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Ocelotl",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Ocelotl is a nonprofit youth development organization that designs work-based learning and youth engagement programs with young people, especially young people of color. It also offers social-emotional wellness support and school-based and community programs in California.",
+      "website": "https://ocelotlyouth.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Ocelotl - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/852209215"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us - Ocelotl",
+        "url": "https://ocelotlyouth.org/about-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "ein"
+        ],
+        "title": "Ocelotl",
+        "url": "https://ocelotlyouth.org/"
+      },
+      {
+        "supports": [
+          "ein"
+        ],
+        "title": "Lorenz Morales Consulting",
+        "url": "https://www.causeiq.com/organizations/lorenz-morales-consulting,852209215/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008172",
+    "notes": "Cause IQ links 'Lorenz Morales Consulting' (San Leandro) and Ocelotl to EIN 85-2209215, which ProPublica and the Ocelotl website confirm as a 501(c)(3); the site lists OUSD as a partner and Madison Park Academy work, matching the agenda items. Summary, legal name, org type, website and EIN are supported and neutral; headquarters/address correctly left null given the Oakland vs San Leandro discrepancy.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

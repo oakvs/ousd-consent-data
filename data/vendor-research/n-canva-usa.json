@@ -2,46 +2,88 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://en.wikipedia.org/wiki/Canva",
+      "field": "source:https://opengovus.com/sam-entity/TZ8JGM4GJX35",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.canva.com/policies/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
     }
   ],
   "key": "n-canva-usa",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "Agenda names 'Canva USA, Inc.' for Technology services with a Student Data Privacy Agreement, consistent with the Canva design platform (Wikipedia: Canva is a graphic design platform used for presentations and other visual content)",
-      "NOT confirmed: no registry record or Canva-owned page for the entity 'Canva USA, Inc.' in Austin, TX could be fetched (canva.com returned 403; OpenCorporates showed no California match; web search budget was exhausted)"
+      "Federal SAM.gov entity record (via OpenGovUS mirror) lists 'CANVA US, INC.' at 3212 E Cesar Chavez St, Austin, TX, matching the agenda's 'Canva USA, Inc.' in Austin, TX",
+      "Canva's own privacy policy describes Canva Education for schools, matching OUSD's Technology Services contract with a Standard Student Data Privacy Agreement",
+      "Canva publicly offers California-specific student data privacy agreements to school districts, consistent with the agenda's Subscription Agreement and Student Data Privacy Agreement"
     ],
     "key": "n-canva-usa",
-    "notes": "Parent brand identified as Canva, but the specific US entity 'Canva USA, Inc.' (Austin, TX per agenda) was not confirmed in any registry. canva.com blocks automated fetching (403), and web search quota was exhausted, so no website, contact or registry IDs were filled. Needs manual review before publishing.",
+    "notes": "Agenda spells the name 'Canva USA, Inc.'; the federal SAM record spells it 'CANVA US, INC.' (Delaware corporation, Austin TX address). Other school districts' agreements are with the parent Canva Pty Ltd (Sydney, Australia), so the parent's headquarters is not used here. Canva's own pages block automated fetching (403), so no phone or email could be sourced; CA Secretary of State entity number and EIN not verified. The address comes from the SAM mirror, not an official Canva page.",
     "profile": {
-      "address": null,
+      "address": "3212 E Cesar Chavez St Bldg 1 Ste 1300, Austin, TX 78702-4938",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": null,
-      "legalName": null,
+      "legalName": "CANVA US, INC.",
       "orgType": "company",
       "phone": null,
-      "samUei": null,
-      "summary": "Canva is a software company that offers an online graphic design platform. People use it to make presentations, social media posts, posters and other visual content with a drag-and-drop editor. The company is based in Sydney, Australia, and its parent company is incorporated in Delaware.",
-      "website": null
+      "samUei": "TZ8JGM4GJX35",
+      "summary": "Canva is an online design platform used to create presentations, documents, social media graphics and other visual content. It offers business plans and a version for schools called Canva Education. Canva US, Inc. is the company's U.S. entity, registered in Delaware.",
+      "website": "https://www.canva.com"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "legalName",
+          "address",
+          "samUei",
           "orgType"
         ],
-        "title": "Canva - Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Canva"
+        "title": "Canva Us, Inc. - SAM entity record (OpenGovUS)",
+        "url": "https://opengovus.com/sam-entity/TZ8JGM4GJX35"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Canva Privacy Policy",
+        "url": "https://www.canva.com/policies/privacy-policy/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-canva-usa",
+    "notes": "The SAM.gov record (OpenGovUS mirror) shows CANVA US, INC., a Delaware for-profit corporation in Austin, TX. That matches the agenda's Canva USA, Inc. in Austin, and a subscription plus student data privacy agreement fits Canva Education. The privacy policy supports the design-platform, business-plan and Canva Education wording in the neutral summary, and the Delaware, address, UEI and legal name come from the SAM record.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

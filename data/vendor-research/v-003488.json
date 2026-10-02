@@ -1,17 +1,96 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://signlanguage.com/business-solutions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://signlanguage.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://zpbettertogether.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-003488",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda gives Austin, TX; Purple Communications' contact page lists its address at 11900 N. Jollyville Road #204209, Austin, TX 78759",
+      "Purple Communications provides sign language interpreting, video remote interpreting and real-time captioning including for K-12 education, consistent with OUSD's translation and interpretation services contract (RFP 22-139OE)",
+      "ZP Better Together's About page states Purple Communications is a legacy company merged into ZP Better Together and operating under the Purple brand"
+    ],
     "key": "v-003488",
-    "notes": "Could not confirm identity. Web search budget was exhausted this session. A candidate is ZP Better Together, LLC (zpbettertogether.com), which operates the 'Purple' and 'ZVRS' sign-language interpreting brands, but its page does not mention Austin, TX or OUSD and no registry record was checked. Needs re-run once search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal name left null: no cited page shows 'Purple Communications, Inc.'; site footers name ZP Better Together, LLC as parent/copyright holder. No registry IDs (EIN, CA entity number, UEI) were verified. No general email found on the contact page. Agenda once spells vendor 'Purpose Communications' (typo).",
+    "profile": {
+      "address": "11900 N. Jollyville Road #204209, Austin, TX 78759",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Austin, TX",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "800-900-9478",
+      "samUei": null,
+      "summary": "Purple Communications provides American Sign Language interpreting and captioning services, including on-site interpreting, video remote interpreting and real-time captioning (CART), for businesses, government agencies, medical settings and schools. It also offers video relay services. It operates under the Purple brand as part of ZP Better Together, LLC.",
+      "website": "https://signlanguage.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Purple Communications - American Sign Language Interpreting - Business Solutions",
+        "url": "https://signlanguage.com/business-solutions/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Purple Communications",
+        "url": "https://signlanguage.com/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About ZP - ZP Better Together",
+        "url": "https://zpbettertogether.com/about/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003488",
+    "notes": "Purple Communications (ASL interpreting, VRI, CART, VRS) at an Austin, TX address matches the agenda location and fits OUSD's interpretation and risk-management accommodation contracts; the ZP Better Together parent relationship and all contact fields are shown on the cited pages. The summary is neutral and supported, though I could not find an OUSD document naming Purple as the RFP 22-139OE awardee.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

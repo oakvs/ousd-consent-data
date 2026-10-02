@@ -1,17 +1,94 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://betterflooringinc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://betterflooringinc.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009590",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Company website lists an El Dorado Hills, CA office (4911 Windplay Dr), matching the agenda location 'El Dorado Hills, CA'",
+      "Company name 'Better Flooring' with Inc. status matches the agenda name 'Better Flooring, Inc.'",
+      "Company describes itself as a flooring contractor for commercial and institutional projects across California, consistent with OUSD cafeteria floor replacement contracts (School buildings & construction)"
+    ],
     "key": "v-009590",
-    "notes": "Research not completed: the WebSearch budget for the session was exhausted (200 of 200), so no candidate organization could be identified or confirmed. This is not a finding that the vendor does not exist; re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Website lists Fresno as the primary address and El Dorado Hills (4911 Windplay Dr, El Dorado Hills, CA 95762) as a second office; the agenda cites El Dorado Hills. No registry (CA Secretary of State, SAM.gov) record was confirmed, so legal name and registry IDs are null. The website does not mention OUSD.",
+    "profile": {
+      "address": "1148 N Cypress Ave, Fresno, CA 93727",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@betterflooringinc.com",
+      "headquarters": "Fresno, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(559) 233-2225",
+      "samUei": null,
+      "summary": "A California flooring contractor that installs and finishes floors for commercial and institutional projects, mainly in Central California. Its services include concrete, tile, wood, overlays, vapor control, resilient flooring, carpet, industrial coatings and terrazzo.",
+      "website": "https://betterflooringinc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Better Flooring",
+        "url": "https://betterflooringinc.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "Better Flooring - Contact",
+        "url": "https://betterflooringinc.com/contact"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009590",
+    "notes": "Better Flooring Inc. is a flooring contractor with an El Dorado Hills office (4911 Windplay Dr) matching the agenda location, and its services fit the cafeteria floor replacement contracts. The summary, website, phone, generic info@ email, Fresno address and headquarters are shown on the homepage and contact page; the company-level contacts are within scope.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

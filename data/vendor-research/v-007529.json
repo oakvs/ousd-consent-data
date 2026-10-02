@@ -1,17 +1,103 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/465710681",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ongb.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-007529",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Oakland Natives Give Back Fund' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 46-5710681), matching the agenda's 'Oakland, CA'",
+      "ongb.org describes programs on chronic absenteeism and educational equity, matching OUSD agreement titles such as 'Increasing Attendance' and student support services",
+      "Organization's website is for 'Oakland Natives Give Back (ONGB)' and lists an Oakland address, phone and info@ email"
+    ],
     "key": "v-007529",
-    "notes": "Not researched: the web search budget for the session was exhausted (200 of 200) before any search could run, and a guessed website domain did not resolve. No candidate organization was identified or confirmed. Re-run once the search limit is raised. Agenda context: 'Oakland Natives Give Back', Oakland, CA; services agreements for summer learning, attendance and student support.",
-    "profile": null,
-    "sources": []
+    "notes": "Address, phone and email copied as shown on ongb.org (email is in a mailto link, obfuscated in rendered text). Charity listings show an older address (1441 Franklin St); the website's current address is used. California entity number and SAM UEI not found.",
+    "profile": {
+      "address": "426 17th street Oakland CA 94612",
+      "caEntityNumber": null,
+      "ein": "46-5710681",
+      "email": "info@ongb.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Natives Give Back Fund",
+      "orgType": "nonprofit",
+      "phone": "510-225-6420",
+      "samUei": null,
+      "summary": "Oakland Natives Give Back is an Oakland nonprofit founded in 2008. It runs programs aimed at educational equity and at reducing chronic absenteeism, including backpack and school supply distributions, the Girls Equity Movement leadership program, and an attendance challenge with cash incentives.",
+      "website": "https://ongb.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oakland Natives Give Back Fund - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/465710681"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "orgType"
+        ],
+        "title": "Oakland Natives Give Back (ONGB)",
+        "url": "https://ongb.org/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007529",
+    "notes": "Oakland-based 501(c)(3) (EIN 46-5710681) whose ongb.org programs (attendance challenge, chronic absenteeism, backpack drives) match OUSD's attendance and student-support agreements. Summary, address, phone and email (mailto link) were confirmed on ongb.org, and legal name, EIN and location on ProPublica.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

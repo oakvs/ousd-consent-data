@@ -1,17 +1,102 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sandis.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sandis.net/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sandis.net/work/education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-003768",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Sandis's own website lists 'Oakland USD' as a featured K-12 district client on its Education page",
+      "Sandis has an office at 636 9th St, Oakland, CA 94607, matching the agenda location of Oakland, CA",
+      "Sandis offers civil engineering, land surveying and planning services, matching OUSD's facilities contracts (land surveying, demolition, site improvements, modernization)"
+    ],
     "key": "v-003768",
-    "notes": "Not researched to completion: the session's WebSearch budget was exhausted, so no candidate could be found or confirmed. Guessed domains did not identify the organization (sandis.com is an unrelated travel company; sandisci.com does not resolve). Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (CA Secretary of State, SAM.gov) were not checked because those search tools are not fetchable; legal name left null. The firm has several offices; the Oakland office is cited here and no single headquarters is confirmed.",
+    "profile": {
+      "address": "636 9th St, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@sandis.net",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.873.8866",
+      "samUei": null,
+      "summary": "Sandis is a company that provides civil engineering, traffic engineering, stormwater, land surveying, construction staking, 3D laser scanning and utility locating services, along with planning. It works for school districts, colleges, healthcare, civic and other clients in California and Washington.",
+      "website": "https://www.sandis.net"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email"
+        ],
+        "title": "Sandis",
+        "url": "https://www.sandis.net/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "summary"
+        ],
+        "title": "Contact Us - Sandis",
+        "url": "https://www.sandis.net/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education - Sandis",
+        "url": "https://www.sandis.net/work/education"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003768",
+    "notes": "Sandis's Education page lists Oakland USD as a K-12 client, it has an Oakland office at 636 9th St (510.873.8866), and its civil engineering, surveying and planning services match OUSD's facilities contracts. Summary, phone, email, address and website are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

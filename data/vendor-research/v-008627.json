@@ -1,17 +1,123 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/vallejo/khepera-curriculum-group-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.khepera.info/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.khepera.info/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/african-american-male-achievement/programs-services/high-school-aama",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008627",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California LLC 'Khepera Curriculum Group LLC' (entity 202018110247), active, based in Vallejo, CA, matching the agenda location (bizprofile.net listing of CA Secretary of State record)",
+      "Website khepera.info describes culturally relevant curriculum for students of color, matching OUSD's 'Classroom & academic programs' and Office of Equity / High School Network contracts",
+      "OUSD's own African American Male Achievement high school courses page links to the Khepera curriculum at khepera.info"
+    ],
     "key": "v-008627",
-    "notes": "No credible candidate confirmed. The web search budget for the session was exhausted before any search ran, a ProPublica fetch returned HTTP 429, and a guessed website domain did not resolve. Nothing was verified, so nothing was filled in. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "California registry data was read via the bizprofile.net mirror of Secretary of State records, not bizfileonline directly. Mailing address is a PO-box-style suite address. No EIN or SAM UEI found (for-profit LLC).",
+    "profile": {
+      "address": "164 Robles Way #365, Vallejo, CA 94591",
+      "caEntityNumber": "202018110247",
+      "ein": null,
+      "email": "contact@khepera.info",
+      "headquarters": "Vallejo, CA",
+      "legalName": "Khepera Curriculum Group LLC",
+      "orgType": "company",
+      "phone": "725-225-0759",
+      "samUei": null,
+      "summary": "A Vallejo, California company that develops and sells curriculum and training for schools, aimed at students of color. Its main course, Mastering Our Cultural Identity, uses youth culture to help students explore identity, manage emotions and build purpose. It also offers other curricula, such as an ethnic studies course.",
+      "website": "https://www.khepera.info/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Khepera Curriculum Group LLC Vallejo, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/vallejo/khepera-curriculum-group-llc"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About - Khepera",
+        "url": "https://www.khepera.info/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact - Khepera",
+        "url": "https://www.khepera.info/contact/"
+      },
+      {
+        "supports": [],
+        "title": "AAMA Courses - Oakland Unified School District",
+        "url": "https://www.ousd.org/african-american-male-achievement/programs-services/high-school-aama"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008627",
+    "notes": "The CA LLC record (entity 202018110247, Vallejo) matches the agenda name and location, and OUSD's own AAMA page links to khepera.info. Legal name, entity number, address, phone and email are shown on the cited sources, and the summary is neutral and supported by the About and Curriculum pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

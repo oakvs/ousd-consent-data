@@ -1,17 +1,85 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.junk-king.com/locations/contracosta",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://locator.wastebits.com/location/junk-king-contra-costa",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/livermore/profile/junk-removal/junk-king-contra-costa-1116-876782",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-005413",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a local franchise location 'Junk King Contra Costa' listed on junk-king.com and in the Better Business Bureau (BBB) directory",
+      "Junk removal and hauling matches OUSD's contracts for risk-management and warehouse services",
+      "WEAK/CONTRADICTORY: the agenda gives Tracy, CA, but the BBB lists this business in Livermore, CA and its service area is the East Bay / Contra Costa area; no source found linking it to Tracy, Oakland or OUSD"
+    ],
     "key": "v-005413",
-    "notes": "Junk King is a franchise brand (junk-king.com says services are performed by locally owned, independently operated franchise companies), but no 'Junk King Contra Costa' location page or operating entity could be found or confirmed. The brand's locations page lists Oakland, Fremont and Stockton (serves Tracy) franchises but no Contra Costa franchise, and the agenda gives Tracy, CA. WebSearch budget was exhausted so registry lookups (CA SOS) were not possible. Not confirmed; needs manual research.",
-    "profile": null,
-    "sources": []
+    "notes": "Identity not confirmed: agenda says Tracy, CA but the franchise appears to be based in Livermore, CA. No California Secretary of State entity found for 'Junk King Contra Costa', so the legal operating entity is unknown. Phone is from a third-party directory, not an official page. Do not publish without human review.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Livermore, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(925) 289-8511",
+      "samUei": null,
+      "summary": "A locally operated franchise of Junk King that provides junk removal and hauling services, including furniture and appliance removal, in the Contra Costa and East Bay area of California. It also offers dumpster rentals. Junk King is a North American junk removal franchise brand.",
+      "website": "https://www.junk-king.com/locations/contracosta"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Junk King",
+        "url": "https://www.junk-king.com/locations/contracosta"
+      },
+      {
+        "supports": [
+          "phone",
+          "summary"
+        ],
+        "title": "Junk King Contra Costa",
+        "url": "https://locator.wastebits.com/location/junk-king-contra-costa"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "Junk King Contra Costa",
+        "url": "https://www.bbb.org/us/ca/livermore/profile/junk-removal/junk-king-contra-costa-1116-876782"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

@@ -12,6 +12,11 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.oneatlas.com/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "phone",
       "pass": true
     },
@@ -27,6 +32,11 @@
     },
     {
       "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "website",
       "pass": true
     }
@@ -34,27 +44,28 @@
   "key": "v-007113",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Atlas's official contact page lists offices in both San Ramon, CA (2001 Crow Canyon Road, Ste 210) and Oakland, CA (534 23rd Avenue), matching the two locations in the agenda text",
-      "Atlas's website describes engineering and design and program, construction and quality management services, matching OUSD's facilities engineering and construction contracts (Fremont High modernization, turf field replacement projects)"
+      "Atlas's privacy policy at oneatlas.com names the entity 'Atlas Technical Consultants LLC', matching the agenda name 'Atlas Technical Consultants, LLC'",
+      "Atlas's contact page lists offices in San Ramon, CA and Oakland, CA, matching the two locations given in the agenda text",
+      "Atlas's homepage lists engineering and design, inspection and testing, and construction management services and an Education market, consistent with OUSD facilities engineering and turf field contracts"
     ],
     "key": "v-007113",
-    "notes": "Search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) check was possible. The site brands itself as 'Atlas' (footer: 'Atlas & affiliates') and the legal name 'Atlas Technical Consultants, LLC' was not seen on a cited page, so legalName is left null. Identity rests on matching Oakland and San Ramon offices plus matching services; confidence kept at medium pending a registry confirmation.",
+    "notes": "Not to be confused with atlas-tech.com (a different defense IT company in South Carolina) or atlasinc.com (Atlas Fluid Controls). No registry IDs found; the California entity number for this exact LLC could not be confirmed. No page found explicitly mentioning OUSD, so identity rests on exact name, matching San Ramon and Oakland offices, and service type.",
     "profile": {
       "address": "5050 South Syracuse Street, Suite 1150, Denver, CO 80237",
       "caEntityNumber": null,
       "ein": null,
       "email": "contact@oneatlas.com",
       "headquarters": "Denver, CO",
-      "legalName": null,
+      "legalName": "Atlas Technical Consultants LLC",
       "orgType": "company",
       "phone": "(866) 858-4499",
       "samUei": null,
-      "summary": "Atlas is a company that provides environmental and infrastructure consulting services. Its work covers testing, inspection and certification; environmental solutions; engineering and design; and program, construction and quality management. It serves markets such as education, government, transportation and water.",
-      "website": "https://www.oneatlas.com/"
+      "summary": "Atlas is an environmental and infrastructure consulting firm. It offers testing, inspection and certification, environmental services, engineering and design, and program, construction and quality management. It serves markets such as education, government, transportation, water and energy.",
+      "website": "https://www.oneatlas.com"
     },
     "sources": [
       {
@@ -63,7 +74,7 @@
           "orgType",
           "website"
         ],
-        "title": "Atlas: Environmental and Infrastructure",
+        "title": "Atlas - Environmental and Infrastructure",
         "url": "https://www.oneatlas.com/"
       },
       {
@@ -73,11 +84,27 @@
           "address",
           "headquarters"
         ],
-        "title": "Atlas Contact Information",
+        "title": "Contact Us - Phone - Atlas",
         "url": "https://www.oneatlas.com/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Privacy Policy - Atlas",
+        "url": "https://www.oneatlas.com/privacy-policy/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007113",
+    "notes": "Exact legal name matches the agenda (Atlas Technical Consultants LLC), the contact page lists Oakland and San Ramon offices matching the agenda locations, and engineering, testing and construction management services with an Education market fit OUSD facilities work. Phone, email, address, headquarters and the neutral summary are all shown on the cited oneatlas.com pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

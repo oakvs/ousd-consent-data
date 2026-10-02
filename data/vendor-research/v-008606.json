@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/912144555",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://writercoachconnection.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://writercoachconnection.org/writercoach-connection-returns-to-the-town/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-008606",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Community Alliance For Learning' in Oakland, CA (ProPublica Nonprofit Explorer, EIN shown), matching the agenda's Oakland, CA location",
+      "The nonprofit's educational-services focus matches OUSD's 'Classroom & academic programs' category",
+      "WriterCoach Connection's site says it returned to Oakland in 2023-2024 with a partnership at Elmhurst United Middle School, matching the three Elmhurst United Middle School services agreements (2023-24 to 2025-26)",
+      "WriterCoach Connection's mailing address is in Oakland, CA; its LinkedIn page is filed under the slug 'community-alliance-for-learning', tying the program name to the legal name"
+    ],
     "key": "v-008606",
-    "notes": "Research not completed: the session's WebSearch budget (200 of 200) was exhausted before any search ran, so no candidate organization was found or verified. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Operates as WriterCoach Connection. Search results (Berkeleyside, June 2026) report the nonprofit closed on May 29, 2026; I could not fetch that article (HTTP 429), so the closure statement in the summary is unverified from a fetched page and a reviewer may want to confirm. writercoachconnection.org root now redirects to ocoe.com, so website is left null. No general email or phone found (only named staff emails, excluded). California entity number not looked up.",
+    "profile": {
+      "address": "490 Lake Park Ave #10081, Oakland, CA 94610",
+      "caEntityNumber": null,
+      "ein": "91-2144555",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Community Alliance For Learning",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Community Alliance For Learning is an Oakland, California nonprofit that operated a program called WriterCoach Connection. The program trained volunteer coaches to work with middle and high school students in public schools on critical thinking and writing.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Community Alliance For Learning - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/912144555"
+      },
+      {
+        "supports": [
+          "summary",
+          "address"
+        ],
+        "title": "About - WriterCoach Connection",
+        "url": "https://writercoachconnection.org/about/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "WriterCoach Connection Returns to The Town - WriterCoach Connection",
+        "url": "https://writercoachconnection.org/writercoach-connection-returns-to-the-town/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008606",
+    "notes": "Community Alliance For Learning (EIN 91-2144555, Oakland) is the legal entity behind WriterCoach Connection (LinkedIn slug, Network for Good page, matching Oakland address), and the program's 2023-24 Elmhurst United Middle School partnership matches the three OUSD agreements. The summary uses past tense, is neutral and supported (the organization announced it closed in May 2026); EIN, address, orgType and headquarters are supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

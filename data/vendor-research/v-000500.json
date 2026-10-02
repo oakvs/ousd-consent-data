@@ -1,17 +1,99 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://amgofca.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/databases/doshacru/acruDetails.asp?regno=271",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-000500",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Exact legal name and dba match: OUSD Legistar record lists 'Asbestos Management Group of California, Inc., dba AMG'; Cal/OSHA asbestos registrant page lists 'Asbestos Management Group Of California, Inc. (dba: AMG)'",
+      "Company provides demolition and hazardous-material abatement, matching OUSD's contract for demolition of portables including abatement of hazardous materials at Ralph Bunche and Hillside school sites",
+      "Company website says it serves school districts and public agencies across Northern California, and is based in Oakland, CA, in the same East Bay area as the agenda's San Leandro, CA"
+    ],
     "key": "v-000500",
-    "notes": "Research not completed: the session's WebSearch budget (200 of 200) was exhausted, so no candidate could be searched for or identity-confirmed. Agenda names: 'Asbestos Management Group of California, Inc. (AMG)', San Leandro, CA; demolition/abatement contractor for OUSD facilities projects. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "OUSD's agenda and Legistar record give the vendor's location as San Leandro, CA, but the company's website and the Cal/OSHA registrant page list its address as 3438 Helen Street, Oakland, CA 94608 (some directories say Emeryville). No San Leandro office was found; the name, dba and line of work match exactly. No registry IDs (EIN, CA entity number, SAM UEI) were verified, so they are null.",
+    "profile": {
+      "address": "3438 Helen Street, Oakland, CA 94608",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "abatementquote@amgofca.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Asbestos Management Group of California, Inc.",
+      "orgType": "company",
+      "phone": "(510) 654-8441",
+      "samUei": null,
+      "summary": "A company that does environmental contracting work in Northern California. It removes asbestos, lead and mold, and also does demolition, deconstruction and hazardous material removal. It says it has worked with general contractors, public agencies, school districts, developers and homeowners since 1989.",
+      "website": "https://amgofca.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Asbestos Management Group - Home",
+        "url": "https://amgofca.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Cal/OSHA Asbestos Registrants Database - Asbestos Management Group Of California, Inc.",
+        "url": "https://www.dir.ca.gov/databases/doshacru/acruDetails.asp?regno=271"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000500",
+    "notes": "Legal name and dba (Asbestos Management Group of California, Inc., dba AMG) match the OUSD record exactly, and demolition/abatement fits the school-site demolition contracts. The San Leandro vs Oakland location mismatch is noted but no competing same-named organization exists; all profile fields (address, phone, generic business email, services, since 1989) are confirmed on amgofca.com and the Cal/OSHA registrant page, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

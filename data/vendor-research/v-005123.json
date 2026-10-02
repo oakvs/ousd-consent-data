@@ -9,21 +9,31 @@
       "detail": null,
       "field": "source:https://www.prnewswire.com/news-releases/relief-joint-powers-authority-for-public-educational-agencies-releases-more-than-6-million-to-members-99898119.html",
       "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.norcalrelief.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
     }
   ],
   "key": "v-005123",
   "modelId": "sonnet-agent",
-  "promptVersion": "vendor-research.v1.md",
+  "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
     "confidence": "medium",
     "identitySignals": [
-      "Keenan's pooled programs page describes Northern California ReLiEF (NCR) as a non-profit, member owned and operated California joint powers authority for local educational agencies",
-      "Keenan, which the agenda names as administrator, is based in Torrance, CA, matching the agenda location",
-      "An earlier OUSD board item (File 19-1280) names 'Northern California ReLiEF JPA, managed by Keenan & Associates, Torrance, CA' for excess property and liability coverage, matching the 'Legal, insurance & risk' category"
+      "Keenan & Associates (named in the agenda as administrator) describes Northern California ReLiEF (NCR) as a non-profit, member-owned California joint powers authority serving local educational agencies, matching OUSD's 'Legal, insurance & risk' excess property and liability coverage purchase",
+      "A 2010-era press release datelined Torrance, CA, which matches the agenda's Torrance location, names Keenan as ReLiEF's JPA manager and lists www.norcalrelief.org as the NCR website",
+      "The agenda text also names a second entity, PRISM (Public Risk Innovation, Solutions, and Management), a separate joint powers authority based in Folsom, CA; this record cannot be described as one organization"
     ],
     "key": "v-005123",
-    "notes": "No registry record (EIN, CA SOS, SAM) or dedicated contact page was found; the norcalrelief.org site did not render usable text to the fetcher. The agenda also names PRISM, a separate pool, which was not researched. Confidence is medium because the only direct identity evidence is the name match plus Keenan/Torrance and OUSD's own prior board item.",
+    "notes": "The vendor line covers two entities: Northern California ReLiEF (administered by Keenan, Torrance CA) and PRISM (Folsom, CA). This profile covers NCR only. NCR's own site (norcalrelief.org) is a JavaScript app with no readable text, and registry pages (State Controller) block automated fetch, so legal name, phone, address and registry IDs could not be verified from a citable page; they were left null. Reported address 2355 Crenshaw Blvd, Suite 200, Torrance, CA 90501 is Keenan's office; unverified for NCR.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -31,11 +41,11 @@
       "email": null,
       "headquarters": null,
       "legalName": null,
-      "orgType": "public_agency",
+      "orgType": "other",
       "phone": null,
       "samUei": null,
-      "summary": "Northern California ReLiEF is a non-profit, member-owned joint powers authority that shares risk for public educational agencies in Northern California. It provides property and liability coverage to local school agencies. It is managed by the insurance firm Keenan.",
-      "website": null
+      "summary": "Northern California ReLiEF is one of two regional risk-sharing programs that make up ReLiEF (Regional Liability Excess Fund). It is a non-profit, member-owned California joint powers authority that provides property and liability coverage to local educational agencies such as school districts.",
+      "website": "https://www.norcalrelief.org"
     },
     "sources": [
       {
@@ -43,7 +53,7 @@
           "summary",
           "orgType"
         ],
-        "title": "Pooled Programs",
+        "title": "Pooled Programs | Keenan",
         "url": "https://www.keenan.com/property-and-casualty/pooled-programs/"
       },
       {
@@ -52,9 +62,16 @@
         ],
         "title": "ReLiEF Joint Powers Authority for Public Educational Agencies Releases More Than $6 Million to Members",
         "url": "https://www.prnewswire.com/news-releases/relief-joint-powers-authority-for-public-educational-agencies-releases-more-than-6-million-to-members-99898119.html"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "NCR",
+        "url": "https://www.norcalrelief.org"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

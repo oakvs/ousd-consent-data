@@ -1,17 +1,91 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2016332",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/dharristours",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dharristours.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-d-harris-tours",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Federal motor carrier record (FMCSA SAFER) lists 'D HARRIS TOURS INC' with a Vallejo, CA mailing address, matching the agenda's 'D. Harris Tours, Inc.' in Vallejo, CA",
+      "SAFER lists the company as a passenger bus carrier (intrastate, 13 power units), matching OUSD's 'School Pupil Activity Bus (SPAB) Services Agreement' for transportation",
+      "LinkedIn company page for D Harris Tours describes a Bay Area bus company with SPAB-certified drivers serving student and school events, linking to dharristours.com"
+    ],
     "key": "n-d-harris-tours",
-    "notes": "Not confirmed. WebSearch budget was exhausted, so no registry (CA SOS, SAM.gov) lookup was possible. A guessed site (dharristours.com, 'D Harris Tours & Bus Rentals') returned only the business name to the fetcher, with no location or contact details, so identity could not be tied to Vallejo, CA. Needs a re-run with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "Company website is a JavaScript-only page, so contact details could not be read from it. The phone and mailing address in the federal record may be a personal or home contact, so they were deliberately omitted. Headquarters is taken from the Vallejo mailing address; the physical address on the federal record and LinkedIn is South San Francisco. No CA Secretary of State or SAM.gov record was verified from an official page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Vallejo, CA",
+      "legalName": "D HARRIS TOURS INC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A for-profit bus company serving the San Francisco Bay Area. It provides bus transportation for student trips, school and work events, weddings and graduations. It describes its drivers as certified for School Pupil Activity Bus (SPAB) service and its buses as accessible under the Americans with Disabilities Act (ADA).",
+      "website": "https://dharristours.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "SAFER Web - Company Snapshot D HARRIS TOURS INC",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2016332"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "D Harris Tours",
+        "url": "https://www.linkedin.com/company/dharristours"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "D Harris Tours & Bus Rentals",
+        "url": "https://dharristours.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-d-harris-tours",
+    "notes": "FMCSA SAFER shows D HARRIS TOURS INC, an active intrastate passenger bus carrier with a Vallejo mailing address matching the agenda, and LinkedIn's description matches the summary (SPAB-certified drivers, ADA buses, student and school events). Headquarters 'Vallejo, CA' is only a mailing address; both SAFER's physical address and LinkedIn give South San Francisco, so that field is not supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
 }

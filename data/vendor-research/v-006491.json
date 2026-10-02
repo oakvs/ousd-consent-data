@@ -1,17 +1,104 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.agsinc.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.agsinc.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.agsinc.com/markets",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006491",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "AGS's own website (agsinc.com) shows the Oakland Unified School District logo in its client list",
+      "AGS lists an Oakland branch office (1110 Franklin Street, Oakland, CA 94607), matching the agenda's 'Oakland, CA'",
+      "AGS provides geotechnical, civil and structural engineering and lists 'Educational' buildings among its markets, matching OUSD's contracts for geotechnical, geohazard, civil and engineering services on school modernization projects"
+    ],
     "key": "v-006491",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted before any search could run, and the name 'AGS, Inc.' is too generic to identify by guessing a website. Agenda context only: Oakland, CA; engineering, geotechnical and civil consulting for OUSD facilities projects. Needs a re-run once the search limit is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "Headquarters is in San Francisco; the agenda's Oakland location corresponds to AGS's Oakland branch office. No registry IDs (CA SOS, SAM.gov) were confirmed, so they are left null. Legal name not confirmed from a registry.",
+    "profile": {
+      "address": "111 New Montgomery Street, Suite 700, San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@agsinc.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(415) 777-2166",
+      "samUei": null,
+      "summary": "AGS is a multidisciplinary engineering firm. It provides geotechnical, environmental, civil and structural engineering, construction management and inspection, and laboratory testing services. Its clients include public agencies, organizations and private firms, and it works on building and facilities projects, among other markets.",
+      "website": "https://www.agsinc.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "headquarters"
+        ],
+        "title": "About - AGS",
+        "url": "https://www.agsinc.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - AGS",
+        "url": "https://www.agsinc.com/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Markets - AGS",
+        "url": "https://www.agsinc.com/markets"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006491",
+    "notes": "agsinc.com (SF headquarters, Oakland branch at 1110 Franklin St) shows the OUSD logo in its client list and offers geotechnical and civil engineering, matching OUSD's engineering contracts; a web search also names AGS as civil engineer on the McClymonds modernization. Summary, phone, email, address and headquarters all match the cited AGS pages and are neutral business contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

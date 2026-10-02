@@ -2,7 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.baycityboiler.com",
+      "field": "source:https://www.baycityboiler.com/boiler-service-company/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.baycityboiler.com/contact-page/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildzoom.com/contractor/bay-city-boiler-engineering",
       "pass": true
     },
     {
@@ -31,14 +41,14 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Candidate website baycityboiler.com lists a Hayward, CA office, matching the agenda location 'Hayward, CA'",
-      "Website describes commercial boiler sales, service and repair, matching OUSD's boiler replacement project contracts",
-      "Website footer links to a LinkedIn page named 'bay-city-boiler-&-engineering', matching the agenda name"
+      "Agenda names 'Bay City Boiler & Engineering Co, Inc.' in Hayward, CA; the company's website lists its Bay Area office at 23312 Cabot Blvd, Hayward, CA 94545, and its LinkedIn link uses the name 'Bay City Boiler & Engineering'",
+      "California contractor license 320288 (boiler, hot water heating and steam fitting) is listed under 'Bay City Boiler & Engineering' at 23312 Cabot Blvd, Hayward (BuildZoom), matching the same address as the website",
+      "The company sells and installs boilers, matching OUSD's many boiler replacement project agreements with this vendor"
     ],
     "key": "v-000641",
-    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) check was possible. The website's legal name is 'Bay City Boiler, Inc.', which differs from the agenda's 'Bay City Boiler & Engineering Co., Inc.'; the only link between them is a LinkedIn URL in the site footer. The site does not mention school districts or OUSD. Needs registry confirmation that these are the same entity before publishing.",
+    "notes": "The company website's copyright line reads 'Bay City Boiler, Inc.', while OUSD's agenda uses 'Bay City Boiler & Engineering Co., Inc.'. This is probably a shortened or rebranded name for the same business (same Hayward address, boiler trade), but the exact legal name and California Secretary of State entity number were not confirmed from a registry, so legalName and registry IDs are left null. The Hayward phone is shown as 510-786-3711 on the cited pages; the main toll-free line is 800-856-9669.",
     "profile": {
       "address": "23312 Cabot Blvd, Hayward, CA 94545",
       "caEntityNumber": null,
@@ -49,7 +59,7 @@
       "orgType": "company",
       "phone": "510-786-3711",
       "samUei": null,
-      "summary": "A company in the Bay Area that sells, services, repairs, maintains and rents commercial boilers. It also sells equipment and does metal fabrication work.",
+      "summary": "A privately held boiler company based in Hayward, California, founded in 1976. It sells, installs, retrofits, rents, repairs and maintains boiler equipment for commercial and industrial customers across Northern and Central California.",
       "website": "https://www.baycityboiler.com"
     },
     "sources": [
@@ -59,15 +69,41 @@
           "orgType",
           "website",
           "phone",
-          "email",
           "address",
           "headquarters"
         ],
-        "title": "Bay City Boiler, Inc.",
-        "url": "https://www.baycityboiler.com"
+        "title": "Bay City Boiler - About",
+        "url": "https://www.baycityboiler.com/boiler-service-company/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Bay City Boiler - Contact",
+        "url": "https://www.baycityboiler.com/contact-page/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Bay City Boiler & Engineering - BuildZoom",
+        "url": "https://www.buildzoom.com/contractor/bay-city-boiler-engineering"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000641",
+    "notes": "Identity is consistent (Hayward boiler contractor, CSLB license 320288 at 23312 Cabot Blvd, many OUSD boiler projects), and contact fields check out. However the summary says 'privately held', which no cited source shows, and 'commercial and industrial customers' is also not stated on the fetched pages; the website's legal name is 'Bay City Boiler, Inc.' vs the agenda's 'Bay City Boiler & Engineering Co., Inc.', so the summary is not fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
 }

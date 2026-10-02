@@ -1,17 +1,103 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.auroraesi.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.auroraesi.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.auroraesi.com/landing/environmental-compliance-for-bay-area-school-districts/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-000536",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the website auroraesi.com is titled 'Aurora Environmental Services, Inc.' and the company's own pages use the name AURORA Environmental Services",
+      "Has an office in Oakland, CA (220 4th Street, Suite 201), matching the agenda location",
+      "Company's school-district page lists Oakland Unified among the school districts it serves",
+      "Services (asbestos/lead/hazardous materials testing, environmental compliance for schools) match OUSD's 'School buildings & construction' and 'Legal, insurance & risk' contracts"
+    ],
     "key": "v-000536",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted before any search for this vendor could run, so no candidate was evaluated. This is not a finding that the organization could not be found. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Email omitted: the contact page obscures it. No registry IDs (CA Secretary of State, SAM.gov) were checked or found. Third-party listings give Martinez as headquarters, but the company's own contact page lists San Francisco as the corporate office; the website lists the Oakland office as a project office.",
+    "profile": {
+      "address": "150 Executive Park Blvd., Suite 3050, San Francisco, CA 94134",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Aurora Environmental Services, Inc.",
+      "orgType": "company",
+      "phone": "(415) 349-4124",
+      "samUei": null,
+      "summary": "A company that provides environmental health and safety consulting in the San Francisco Bay Area. Its services include asbestos, lead and mold investigations, indoor air quality testing, industrial hygiene, hazardous materials management and environmental compliance work for school districts.",
+      "website": "https://www.auroraesi.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Aurora Environmental Services, Inc.",
+        "url": "https://www.auroraesi.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - AURORA Environmental Services",
+        "url": "https://www.auroraesi.com/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Environmental Compliance for Bay Area School Districts - AURORA Environmental Services",
+        "url": "https://www.auroraesi.com/landing/environmental-compliance-for-bay-area-school-districts/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000536",
+    "notes": "Company site shows Aurora Environmental Services, Inc. with an Oakland project office and lists Oakland Unified as a client; its asbestos/lead/hazmat school compliance work fits OUSD's facilities and risk contracts. Phone, address and San Francisco corporate HQ match the contact page, and the summary is neutral and supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

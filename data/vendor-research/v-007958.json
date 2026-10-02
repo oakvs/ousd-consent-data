@@ -1,17 +1,131 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/834358319",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.2coachu.net/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.2coachu.net/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.2coachu.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/expanded-learning/after-school-enrichment-programs/elementary-school-sports/our-sports-providers-clone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-007958",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name '2coachu' (EIN 83-4358319) is registered as a 501(c)(3) nonprofit in Oakland, CA on ProPublica Nonprofit Explorer; the name matches the agenda's '2COACHU' and is highly distinctive",
+      "OUSD's own 'Sports Providers & Community Partners' page (YES! Sports, elementary school sports) lists 2CoachU with website https://www.2coachu.net, matching OUSD's 'After-school & summer programs' / Expanded Learning Elementary Sports Program contracts",
+      "2coachu.net describes youth academic and athletic programs for K-5 students and shows OUSD YES! Sports Expo imagery, matching the agenda's Community Schools and Student Services / Expanded Learning contracts"
+    ],
     "key": "v-007958",
-    "notes": "No credible candidate confirmed. Web search budget was exhausted before any search ran, direct fetches of 2coachu.com failed (socket closed), and ProPublica returned HTTP 429. Agenda says El Cerrito, CA and OUSD contracts them for after-school and summer programs (elementary sports). Needs re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Agenda gives El Cerrito, CA but the IRS/ProPublica registry lists Oakland, CA and the website says it is Oakland based; the two cities are neighbors and the org serves OUSD schools. No street address, CA entity number or UEI found, so left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-4358319",
+      "email": "info@2coachu.net",
+      "headquarters": "Oakland, CA",
+      "legalName": "2coachu",
+      "orgType": "nonprofit",
+      "phone": "(510)345-7234",
+      "samUei": null,
+      "summary": "2COACHU is a nonprofit youth development organization in the Oakland area. It runs after-school baseball programs, one-day clinics and private instruction for elementary-age students. It says its goal is to narrow the opportunity gap by supporting academic, athletic and social-emotional growth in K-5 students.",
+      "website": "https://www.2coachu.net"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "2coachu - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/834358319"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact Us - 2COACHU",
+        "url": "https://www.2coachu.net/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - 2COACHU",
+        "url": "https://www.2coachu.net/about-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "2COACHU",
+        "url": "https://www.2coachu.net/"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Sports Providers & Community Partners - Oakland Unified School District",
+        "url": "https://www.ousd.org/expanded-learning/after-school-enrichment-programs/elementary-school-sports/our-sports-providers-clone"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007958",
+    "notes": "The distinctive name 2COACHU appears on OUSD's own YES! Sports provider page, and the website describes K-5 baseball after-school programs, which fits the Expanded Learning contracts. ProPublica shows a 501(c)(3) at EIN 83-4358319 in Oakland. The agenda says El Cerrito, which is a neighboring city and likely a mailing or contact address. Summary, phone, email and website are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

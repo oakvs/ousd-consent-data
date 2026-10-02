@@ -1,17 +1,92 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://bamasf.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bamasf.edu/locations/san-francisco/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-bay-area-medical-academy",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the school's website footer shows 'Bay Area Medical Academy'",
+      "Has a San Francisco campus at 530 Bush St, matching the agenda's location of San Francisco, CA",
+      "Offers healthcare career training (medical assisting, phlebotomy, EKG), consistent with a workplace training partner under OUSD's High School Linked Learning / ECCCO career program"
+    ],
     "key": "n-bay-area-medical-academy",
-    "notes": "No credible candidate found. The WebSearch budget was exhausted before any search ran; direct fetches of ProPublica returned HTTP 429, and guessed website domains did not resolve. Needs a re-run with search access. Agenda context: MOU for the ECCCO program (High School Linked Learning Office), San Francisco, CA.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (CA entity number, EIN, UEI) not looked up. Org type 'company' inferred from it being a private for-profit-style postsecondary school (website mentions B Corp certification); not confirmed against a registry. Website did not list a general email. Direct confirmation of the OUSD MOU relationship was not found on a fetchable page; identity rests on exact name, San Francisco location and healthcare training focus.",
+    "profile": {
+      "address": "530 Bush St, Suite 201 San Francisco, CA 94108",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Bay Area Medical Academy",
+      "orgType": "company",
+      "phone": "415-217-0077",
+      "samUei": null,
+      "summary": "A private school that provides healthcare career training in the Bay Area, with campuses in San Francisco and San Jose. It offers medical assistant, phlebotomy and EKG technician training programs.",
+      "website": "https://bamasf.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Medical Assistant School in The Bay Area",
+        "url": "https://bamasf.edu/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName",
+          "summary"
+        ],
+        "title": "Medical Assistant School in San Francisco - BAMASF",
+        "url": "https://bamasf.edu/locations/san-francisco/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-bay-area-medical-academy",
+    "notes": "bamasf.edu confirms the name, private for-profit status, SF and San Jose campuses, the 530 Bush St address, phone 415-217-0077 and the medical assistant/phlebotomy/EKG certifications. An Oaklandside article independently names Bay Area Medical Academy as a field-experience partner of OUSD's High School Linked Learning Office, matching the agenda item.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,84 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941682218",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ace4education.org/learning-centers/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-association-for-continuing-education",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational nonprofit: 'Association For Continuing Education', EIN 94-1682218 (ProPublica Nonprofit Explorer)",
+      "Registered in Los Altos, CA, matching the agenda text 'Los Altos, CA'",
+      "Its website (ace4education.org, per search results) describes an 'ACE Learning Center' at Oakland International High School, matching the OUSD grant title 'ACE Learning Center Program - Oakland International High School'"
+    ],
     "key": "n-association-for-continuing-education",
-    "notes": "Not resolved: the session's WebSearch budget was exhausted before any candidate could be identified, and direct registry fetches were rate limited (ProPublica returned HTTP 429). Agenda text names 'Association for Continuing Education (ACE)', Los Altos, CA. Needs a re-run once the search limit is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "The ace4education.org site returns an empty body to automated fetchers, so the website and summary could not be read directly by this agent; they rest on search-result snippets for the site. No phone, email or street address recorded for the same reason. ProPublica also lists 164 Main St, Los Altos, CA (matches a street address shown in other directory listings).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1682218",
+      "email": null,
+      "headquarters": "Los Altos, CA",
+      "legalName": "Association For Continuing Education",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit educational organization based in Los Altos, California. It runs ACE Learning Centers at partner high schools, including Oakland International High School, which offer classes in English and technology skills for immigrant students and their families.",
+      "website": "https://www.ace4education.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Association For Continuing Education - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941682218"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Learning Centers",
+        "url": "https://www.ace4education.org/learning-centers/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-association-for-continuing-education",
+    "notes": "ProPublica confirms the 501(c)(3) Association For Continuing Education, EIN 94-1682218, in Los Altos, CA, matching the agenda. An archived copy of ace4education.org/learning-centers (the live site returns an empty body) describes an ACE Learning Center at Oakland International High School offering English and technology classes for immigrant students and families, which supports the neutral summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

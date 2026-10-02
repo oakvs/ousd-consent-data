@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.iupat.org/find-an-iupat-office/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dc16iupat.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/adult-and-career-education/classes/finishing-trades-pre-apprenticeship",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-international-union-of-painters-and-allied-trades-iupat-district-16",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD's Adult and Career Education page for the Finishing Trades Pre-Apprenticeship says the program is a collaboration between Oakland Adult & Career Education and District Council 16 (DC16), matching the agenda's 'Adult and Career Education Department' services agreement",
+      "The IUPAT's official office directory lists District Council 16 with the website www.dc16iupat.org, and that site describes DC16 as representing painters, drywall finishers, glaziers and floor coverers in Northern California, matching the agenda name 'IUPAT District 16'",
+      "DC16 serves the Oakland area (its Local Union 3 office is in Oakland), consistent with the agenda's 'Oakland, CA'; the district council's main office is in Livermore, CA"
+    ],
     "key": "n-international-union-of-painters-and-allied-trades-iupat-district-16",
-    "notes": "Could not confirm the organization. The WebSearch budget for the session was exhausted, so no searches ran. Guessed fetches did not find the Oakland-area IUPAT District Council 16: dc16.org is Southern California Pipe Trades District Council 16 (a different union), iupatdc16.org did not resolve, the iupat.org home page had no District Council 16 details, and ProPublica returned HTTP 429. Retry when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Labor union district council; no ProPublica/IRS nonprofit listing found under this name, so EIN, CA entity number and UEI are left null. Agenda gives Oakland, CA, but the DC16 main office is in Livermore; the Oakland link is the OUSD Adult and Career Education partnership. No general email found on the pages checked.",
+    "profile": {
+      "address": "2705 Constitution Drive, Livermore, CA 94551",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Livermore, CA",
+      "legalName": null,
+      "orgType": "other",
+      "phone": "(925) 245-1080",
+      "samUei": null,
+      "summary": "District Council 16 is a labor union body of the International Union of Painters and Allied Trades. It represents painters, drywall finishers, glaziers, floor coverers and other finishing-trades workers in Northern California, Nevada and the Lake Tahoe Basin. It negotiates labor agreements and runs apprenticeship training for the finishing trades.",
+      "website": "https://www.dc16iupat.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Find an IUPAT Office - IUPAT",
+        "url": "https://www.iupat.org/find-an-iupat-office/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "District Council 16",
+        "url": "https://www.dc16iupat.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Finishing Trades Pre-Apprenticeship - Oakland Unified School District",
+        "url": "https://www.ousd.org/adult-and-career-education/classes/finishing-trades-pre-apprenticeship"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-international-union-of-painters-and-allied-trades-iupat-district-16",
+    "notes": "The OUSD Adult and Career Education Finishing Trades Pre-Apprenticeship page refers to 'DC16 cohorts' run with Oakland Adult & Career Education, matching the agenda's Adult and Career Education services agreement. The IUPAT office directory confirms the address, phone, website and Northern California/Nevada/Lake Tahoe service area, and dc16iupat.org confirms the crafts and contract negotiation. The Livermore address differs from the agenda's Oakland, but the candidate notes this.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,81 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/alameda/1st-american-transit-inc",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/alameda/profile/limo-service/welcome-transportation-1116-373693",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    }
+  ],
   "key": "n-first-american-transit-welcome-transportation",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "California corporation '1st American Transit, Inc.' (entity 4033284, transportation) is listed at 638 Eagle Ave, Alameda, CA 94501 (bizprofile.net mirror of CA Secretary of State data), in Alameda like the agenda text",
+      "BBB lists 'Welcome Transportation' at the same address, 638 Eagle Ave, Alameda, CA 94501, offering transportation for people with disabilities, seniors and special needs children, matching OUSD's special education transportation contract",
+      "Name differs: registry says '1st American Transit, Inc.' while the agenda says 'First American Transit, Inc.'; no official website or direct statement linking the dba to the corporation was found"
+    ],
     "key": "n-first-american-transit-welcome-transportation",
-    "notes": "Web search budget was exhausted, so no registry or organization page could be checked. The only page fetched (welcometransportation.com) is a Florida charter bus company with no link to the Alameda, CA vendor, so it was not used. Identity not confirmed; needs re-run once search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Medium confidence: the same Alameda address links Welcome Transportation and 1st American Transit, Inc., but the registered name uses '1st' rather than 'First', and no official website was found (welcometransportation.com is an unrelated Florida charter bus company). Yelp shows Welcome Transportation as closed as of August 2026. Legal name left null because it does not exactly match the agenda name.",
+    "profile": {
+      "address": "638 Eagle Ave, Alameda, CA 94501",
+      "caEntityNumber": "4033284",
+      "ein": null,
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 522-8911",
+      "samUei": null,
+      "summary": "A transportation company based in Alameda, California, that offers taxi and limousine service and transportation for people with disabilities, older adults and children with special needs.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "1st American Transit, Inc. Alameda, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/alameda/1st-american-transit-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Welcome Transportation",
+        "url": "https://www.bbb.org/us/ca/alameda/profile/limo-service/welcome-transportation-1116-373693"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/adsphere-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bulkmailcenter.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-adsphere-city-print-and-mail",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "California corporation 'Adsphere, Inc.' (entity number 2326014, active) is registered in Oakland, CA with business classification 'BUSINESS SERVICES - PRINTING & MAILING', matching the agenda's mail and printing RFP award (bizprofile.net filing information)",
+      "City Print & Mail's own website (bulkmailcenter.com) lists the same street address as Adsphere, Inc.'s registered principal address (918 Alice Street, Oakland, CA 94607) and describes printing and mailing services, matching the agenda's 'Adsphere Inc. DBA City Print & Mail'",
+      "Agenda title is for a Mail and Printing services agreement, consistent with a bulk mail and printing company"
+    ],
     "key": "n-adsphere-city-print-and-mail",
-    "notes": "Not researched: the session's WebSearch budget was exhausted (200 of 200) before any search could run, so no candidate organization was found or confirmed. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry data is from a third-party mirror of California Secretary of State records (bizprofile.net), not bizfileonline directly. The DBA link between Adsphere, Inc. and City Print & Mail comes from the agenda text plus the shared 918 Alice Street address; no page found states the DBA explicitly. Some directories list 777 W Grand Ave as an alternate address. No public general email found.",
+    "profile": {
+      "address": "918 Alice Street, Oakland, CA 94607",
+      "caEntityNumber": "2326014",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Adsphere, Inc.",
+      "orgType": "company",
+      "phone": "510.835.8117",
+      "samUei": null,
+      "summary": "Adsphere, Inc. is a company in Oakland, California that does business as City Print & Mail. It offers direct mailing services, including mailing list procurement, duplication, printing and mailing, as well as data processing.",
+      "website": "https://www.bulkmailcenter.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Adsphere, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/adsphere-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "City Print & Mail",
+        "url": "https://www.bulkmailcenter.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-adsphere-city-print-and-mail",
+    "notes": "Registry mirror shows Adsphere, Inc. (CA entity 2326014, active, printing & mailing) at 918 Alice Street, Oakland, the same address, phone and services shown on City Print & Mail's site, which fits the mail and printing RFP award. The DBA link is inferred from the shared address rather than stated on any page, but all profile fields are supported and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

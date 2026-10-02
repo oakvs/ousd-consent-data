@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://camedu.io/policies/terms-of-service",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://camedu.io/parents",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://camedu.io/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009121",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The organization's own Terms of Service page names 'CAM Educational Services, LLC' exactly, matching the agenda vendor name",
+      "Its address is in Millbrae, CA (1331 El Camino Real), matching the agenda location 'Millbrae, CA'",
+      "Its website describes afterschool programs and summer camps for K-12 students, matching OUSD's 'After-school & summer programs' contracts"
+    ],
+    "key": "v-009121",
+    "notes": "No public registry (California Secretary of State, SAM.gov) page was fetched, so no entity number or UEI is given. Neither the website nor any page found mentions Oakland Unified; identity rests on exact legal name, Millbrae location and service type. No general email address found on the site.",
+    "profile": {
+      "address": "1331 El Camino Real, Millbrae, CA 94030",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Millbrae, CA",
+      "legalName": "CAM Educational Services, LLC",
+      "orgType": "company",
+      "phone": "650.892.8288",
+      "samUei": null,
+      "summary": "A company based in Millbrae, California that runs afterschool programs, tutoring, pre-school and summer camps for students in kindergarten through 12th grade. Its programs focus on subjects such as science, technology, engineering, art and math (STEAM), and it operates centers in San Mateo County and the Bay Area.",
+      "website": "https://camedu.io"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "CAM EDU Terms of Service",
+        "url": "https://camedu.io/policies/terms-of-service"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "CAM EDU.",
+        "url": "https://camedu.io/parents"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "CAM EDU About",
+        "url": "https://camedu.io/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009121",
+    "notes": "The Terms of Service page names CAM Educational Services, LLC at 1331 El Camino Real, Millbrae, CA with phone 650.892.8288, matching the agenda name and location. The parents and about pages support the afterschool, tutoring, pre-school, summer camp, K-12 and STEAM summary, which fits OUSD's after-school and summer program contract. None of the pages mention Oakland, so identity rests on the exact legal name, location and service type.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

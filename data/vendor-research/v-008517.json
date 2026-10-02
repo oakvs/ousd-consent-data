@@ -1,17 +1,109 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.mbt4schools.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mbt4schools.com/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/visalia/medical-billing-technologies-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008517",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Medical Billing Technologies, Inc.' matches the agenda name exactly (company website and California corporation filing summary)",
+      "Based in Visalia, CA, matching the agenda location 'Visalia, CA'",
+      "Company provides Medi-Cal billing for California school districts (LEA Medi-Cal billing), matching OUSD's 'LEA Medi-Cal' funding source and 'Student health, support & family services' contracts"
+    ],
     "key": "v-008517",
-    "notes": "Research could not be completed: the session's WebSearch budget was exhausted before any search ran, and a guessed vendor domain did not resolve. No candidate organization was found or verified. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "General email is obfuscated on the contact page, so omitted. California entity number comes from a third-party mirror of the Secretary of State record; reviewer may wish to confirm on bizfileonline.sos.ca.gov. No page found explicitly mentioning Oakland Unified.",
+    "profile": {
+      "address": "125 S. Bridge St, Visalia, CA 93291",
+      "caEntityNumber": "2385534",
+      "ein": null,
+      "email": null,
+      "headquarters": "Visalia, CA",
+      "legalName": "Medical Billing Technologies, Inc.",
+      "orgType": "company",
+      "phone": "(559) 627-6267",
+      "samUei": null,
+      "summary": "A California company based in Visalia that provides software and services to schools. It helps school districts manage special education and student services records and bill Medi-Cal for eligible health services through its OptiClaim billing software.",
+      "website": "https://www.mbt4schools.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Medical Billing Technologies - Home",
+        "url": "https://www.mbt4schools.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Medical Billing Technologies - Contact",
+        "url": "https://www.mbt4schools.com/contact.html"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Medical Billing Technologies, Inc. Visalia, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/visalia/medical-billing-technologies-inc"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008517",
+    "notes": "Legal name, Visalia location and LEA Medi-Cal billing focus match OUSD's records; the cited pages and the CA filing summary show the name, address, phone, entity number 2385534, OptiClaim and SIRAS special education records software. Summary is neutral and supported, and no personal contacts are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

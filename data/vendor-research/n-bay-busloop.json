@@ -1,17 +1,113 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.busloopusa.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.busloopusa.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/ceres/busloop",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-bay-busloop",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Busloop is a General Corporation located in Ceres, CA, matching the agenda's 'Ceres, CA' (bizprofile.net filing information)",
+      "School Bus Fleet reports Busloop provided charter bus transportation to Oakland Unified School District, matching OUSD's transportation contract",
+      "Busloop's website describes school transportation for schools and colleges across California, matching OUSD's 'Food, transportation & operations' category"
+    ],
     "key": "n-bay-busloop",
-    "notes": "No credible candidate found. The web search budget was exhausted, so only direct page fetches were possible. busloop.org is an unrelated South Florida charity event organization, not the Ceres, CA special education transportation vendor. baybusloop.com does not resolve. No registry could be checked (ProPublica returned 429). Needs a manual look, e.g. California Secretary of State search for BusLoop / Bay BusLoop in Ceres, CA.",
-    "profile": null,
-    "sources": []
+    "notes": "The agenda says 'Bay BusLoop'; the registered corporation and website use 'Busloop'. Matched on the Ceres, CA location and Busloop's documented work for OUSD (School Bus Fleet article: https://www.schoolbusfleet.com/news/charter-bus-company-helps-california-district-with-school-transportation). Entity number and address come from the third-party aggregator bizprofile.net, which cites California Secretary of State data; not independently checked on bizfileonline.sos.ca.gov. The website does not mention special education transportation specifically. The contact page also lists commute@bus-loop.com, not used.",
+    "profile": {
+      "address": "1080 Partee Lane, Ceres, CA 95307",
+      "caEntityNumber": "4847847",
+      "ein": null,
+      "email": "info@busloopusa.com",
+      "headquarters": "Ceres, CA",
+      "legalName": "Busloop",
+      "orgType": "company",
+      "phone": "(510) 209-6691",
+      "samUei": null,
+      "summary": "Busloop is a family-owned transportation company in California. It provides charter bus, school route and shuttle services for schools, colleges, youth organizations and communities.",
+      "website": "https://www.busloopusa.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Busloop",
+        "url": "https://www.busloopusa.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Busloop contact",
+        "url": "https://www.busloopusa.com/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "caEntityNumber"
+        ],
+        "title": "Busloop Ceres, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/ceres/busloop"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-bay-busloop",
+    "notes": "Busloop (CA corporation 4847847, Ceres, CA) matches the agenda's Ceres location, and School Bus Fleet documents Busloop providing transportation to OUSD; the agenda name 'Bay BusLoop' is a plausible variant. The summary, phone, email, address and entity number were all confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

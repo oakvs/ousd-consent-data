@@ -1,17 +1,66 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://stoneharborstaffing.com/seabright-staffing/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://stoneharborstaffing.com/blog/therapytravelers-is-now-epic-special-education-staffing",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
   "key": "n-therapy-travelers-epic-special-education-staffing",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Company's own page states 'TherapyTravelers is now Epic Special Education Staffing', matching the agenda's 'Therapy Travelers dba Epic Special Education Staffing'",
+      "Company site describes school-based special education staffing (therapists, psychologists, educators), matching OUSD's Special Education Department contract",
+      "Epic's old domain (epicspecialeducationstaffing.com) now redirects to the Seabright School and Therapy Staffing page, and that page's editor's note says Epic Special Education Staffing is now Seabright"
+    ],
     "key": "n-therapy-travelers-epic-special-education-staffing",
-    "notes": "Identity not confirmed. therapytravelers.com redirects to epicspecialeducationstaffing.com, which redirects to stoneharborstaffing.com/seabright-staffing/ (Seabright School and Therapy Staffing, a Stone Harbor Staffing Group brand); that page does not mention Epic or Therapy Travelers, and no El Segundo address or OUSD link was found. An OpenCorporates listing shows a California branch record 'Therapy Travelers' (entity 6214461) at a Sacramento address, which does not match the agenda's El Segundo. Web search budget was exhausted, so no registry or independent page could be fetched. Needs manual review.",
-    "profile": null,
-    "sources": []
+    "notes": "Brand has changed twice (TherapyTravelers -> Epic Special Education Staffing -> Seabright School and Therapy Staffing, part of Stone Harbor Staffing Group, per the company site). The El Segundo, CA location in the agenda was only seen on third-party listings (LinkedIn, directories), not on a fetched official page, so it is not confirmed here. Contact page showed no phone/email/address in fetched text. Legal entity name and registry IDs not verified (CA SOS / SAM not checked), so confidence is capped at medium.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A national special education staffing firm that places speech-language pathologists, occupational and physical therapists, school psychologists, special education teachers, school nurses and other school-based professionals with school districts. It was formerly called TherapyTravelers, then Epic Special Education Staffing, and now operates as Seabright School and Therapy Staffing within Stone Harbor Staffing Group.",
+      "website": "https://stoneharborstaffing.com/seabright-staffing/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Seabright School and Therapy Staffing",
+        "url": "https://stoneharborstaffing.com/seabright-staffing/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "TherapyTravelers is now Epic Special Education Staffing",
+        "url": "https://stoneharborstaffing.com/blog/therapytravelers-is-now-epic-special-education-staffing"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

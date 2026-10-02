@@ -2,17 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.amergis.com",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "source:https://www.amergis.com/about",
+      "field": "source:https://www.amergis.com/",
       "pass": true
     },
     {
       "detail": null,
       "field": "source:https://www.amergis.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prnewswire.com/news-releases/maxim-healthcare-staffing-is-now-amergis-302112047.html",
       "pass": true
     },
     {
@@ -34,15 +34,16 @@
   "key": "v-002767",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Amergis's own Contact page lists its headquarters at 7223 Lee Deforest Drive, Columbia, MD 21046, matching the agenda's 'Columbia, MD' for 'Amergis Healthcare Staffing'",
-      "Amergis's website describes healthcare and educational staffing (Amergis Education), consistent with OUSD contracting it for special-education support services"
+      "Name matches: Amergis Healthcare Staffing, headquartered in Columbia, MD, matching the agenda location 'Columbia, MD' (amergis.com contact page, press release)",
+      "Press release says Maxim Healthcare Staffing became Amergis in April 2024; OUSD's own agenda titles for this vendor number show the earlier name 'Maxim Healthcare Staffing Services, Inc.' followed by 'Amergis Healthcare Staffing'",
+      "Company staffs schools and provides educational staffing, consistent with OUSD's special education and support-personnel service agreements"
     ],
     "key": "v-002767",
-    "notes": "Search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) lookup was possible and no registry IDs or legal name were filled. The OUSD record also lists Maxim Healthcare Services / Maxim Healthcare Staffing Services, Inc. under the same vendor; Amergis is believed to be Maxim's rebrand, but the fetched Amergis pages did not state this, so the link is unconfirmed. Confidence is medium for that reason.",
+    "notes": "Registry IDs (SAM UEI, CA entity number) and legal name were not verified; left null. Agenda titles also reference Maxim Healthcare Services, a separate sister organization; the press release says Amergis is distinct from it. Identity relies on the Maxim Healthcare Staffing Services, Inc. to Amergis lineage.",
     "profile": {
       "address": "7223 Lee Deforest Drive, Columbia, MD 21046",
       "caEntityNumber": null,
@@ -53,25 +54,18 @@
       "orgType": "company",
       "phone": "(888) 800-1854",
       "samUei": null,
-      "summary": "Amergis is a national healthcare staffing company. It recruits and places nurses, allied health workers and other healthcare professionals with employers across the country. It also provides staffing for schools through its Amergis Education service.",
-      "website": "https://www.amergis.com"
+      "summary": "Amergis Healthcare Staffing is a national healthcare staffing company. It places nurses, allied health professionals, behavioral health professionals and other clinicians in hospitals, schools, government health programs, correctional facilities and managed care organizations. It was formerly known as Maxim Healthcare Staffing and rebranded as Amergis in April 2024.",
+      "website": "https://www.amergis.com/"
     },
     "sources": [
       {
         "supports": [
+          "website",
           "summary",
-          "orgType",
-          "website"
+          "orgType"
         ],
-        "title": "Amergis home page",
-        "url": "https://www.amergis.com"
-      },
-      {
-        "supports": [
-          "summary"
-        ],
-        "title": "About Amergis",
-        "url": "https://www.amergis.com/about"
+        "title": "Amergis Healthcare Staffing",
+        "url": "https://www.amergis.com/"
       },
       {
         "supports": [
@@ -79,11 +73,25 @@
           "address",
           "headquarters"
         ],
-        "title": "Contact Amergis",
+        "title": "Amergis Contact",
         "url": "https://www.amergis.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Maxim Healthcare Staffing is Now Amergis",
+        "url": "https://www.prnewswire.com/news-releases/maxim-healthcare-staffing-is-now-amergis-302112047.html"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002767",
+    "notes": "Amergis Healthcare Staffing (formerly Maxim Healthcare Staffing, HQ Columbia, MD) matches the agenda name and location; the contact page confirms address and phone, and the press release confirms the rebrand and the schools/educational staffing scope. One agenda title references Maxim Healthcare Services, which the press release says is a separate sister organization, so that single record may belong to a different entity, but the profile itself is accurate for Amergis.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,5 +1,16 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.thatartparty.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008889",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
@@ -7,13 +18,36 @@
   "research": {
     "confidence": "low",
     "identitySignals": [
-      "Name matches a Bay Area business called 'That Art Party' (thatartparty.com), but the site describes adult arts-and-crafts events, not school programs, and shows no city, legal name, or mention of Oakland schools or OUSD"
+      "A business named That Art Party operates in Oakland, CA, matching the agenda name and location (thatartparty.com; a search result lists the company as 'That Art Party LLC')",
+      "CONTRADICTION: its website FAQ says it is an adult-only space and does not work with young people, while OUSD contracts it for classroom and academic programs at Madison Park Academy; no page found links it to OUSD or schools"
     ],
     "key": "v-008889",
-    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) could be checked. Only one weak identity signal; not confirmed to be the same organization as OUSD's vendor. Nothing published.",
-    "profile": null,
-    "sources": []
+    "notes": "Plausible candidate only, not confirmed. Name and city match, but the company's own FAQ says it serves adults only, which does not fit a school classroom services agreement. No California Secretary of State or other registry record was found or fetched, and no page connects the company to OUSD. Do not publish without further verification (for example a CA SOS entity record for That Art Party LLC, or an OUSD or school page naming it).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "That Art Party is a Bay Area business that runs art and craft events and workshops for adults, including public play dates and private or corporate bookings.",
+      "website": "https://www.thatartparty.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "That Art Party - heart-centered adult arts and crafts in the Bay Area",
+        "url": "https://www.thatartparty.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

@@ -1,17 +1,60 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.city-data.com/business-entities/CA/KING-CONSTRUCTION-INSPECTION-INC-C2679922-CA.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
   "key": "v-007828",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a California Secretary of State corporation record (via city-data.com mirror): 'KING CONSTRUCTION INSPECTION, INC.', entity C2679922, status ACTIVE",
+      "Registered in Berkeley, CA, matching the Berkeley, CA location in the agenda text"
+    ],
     "key": "v-007828",
-    "notes": "Not researched: the session's WebSearch budget was exhausted, so no candidate organization could be found or confirmed. A guessed domain did not resolve. Re-run once the search limit is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry match is solid (name, Berkeley CA). Could not confirm the business description or OUSD link from a fetchable page: the company site kci-inc.com (shown in search results as describing Inspector of Record services for schools and hospitals) did not resolve from this environment, and the Peralta board PDF returned 403. inspectionservices.net / 1798 University Ave, Berkeley belongs to the related but separate Inspection Services, Inc., so its phone, email and address were not used. SOS street address (1626 Beverly Pl) differs from the University Ave address seen in search snippets, so address was left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "C2679922",
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "KING CONSTRUCTION INSPECTION, INC.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A for-profit California corporation based in Berkeley, CA, registered with the California Secretary of State in 2004. Its business activities could not be confirmed from a page that could be fetched.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "C2679922 - KING CONSTRUCTION INSPECTION, INC.",
+        "url": "https://www.city-data.com/business-entities/CA/KING-CONSTRUCTION-INSPECTION-INC-C2679922-CA.html"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

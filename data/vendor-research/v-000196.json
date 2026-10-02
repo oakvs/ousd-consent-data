@@ -2,7 +2,27 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.elevateoakland.org",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/800717753",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.elevateoakland.org/our-history",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.elevateoakland.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -16,39 +36,64 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Organization website (elevateoakland.org) names the same organization, Elevate Oakland, a 501(c)(3) nonprofit that runs arts and music programs in Oakland public schools",
-      "Website names Oakland Unified School District and lists partner schools including Edna Brewer Middle School, which also appears in the OUSD agreement titles for this vendor",
-      "Arts and music school programming is consistent with OUSD's after-school and classroom program contracts for this vendor"
+      "Elevate Oakland's own history page says 'Elevate Oakland (formerly 51Oakland)'; ProPublica lists a 501(c)(3) named 51oakland (EIN 80-0717753) in Oakland, CA, and GuideStar lists it as '51Oakland DBA Elevate Oakland' with the same EIN",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes artist-led arts and music programs during and after school in Oakland public schools and says it serves 30+ schools in Oakland Unified School District, matching OUSD's after-school and classroom program contracts"
     ],
     "key": "v-000196",
-    "notes": "Registry lookups (ProPublica, CA Secretary of State, SAM.gov) could not be completed: ProPublica returned HTTP 429 and the session's web search budget was exhausted. The organization's contact page lists only a web form, with no public phone, email or mailing address. Legal name, EIN and entity number are unconfirmed. Confidence is medium because identity rests on the organization's own website only; a registry check would likely raise it to high.",
+    "notes": "Registered legal name is 51Oakland; Elevate Oakland is its DBA/current name (GuideStar: '51Oakland DBA Elevate Oakland', same EIN). Website shows no phone, email or mailing address, so those are null. No CA SOS or SAM.gov lookup done.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "80-0717753",
       "email": null,
-      "headquarters": null,
-      "legalName": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "51Oakland",
       "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "Elevate Oakland is a nonprofit organization founded in 2011 that brings arts and music programs to Oakland youth through school partnerships. It provides musical instruments, artist residencies, live performances with professional musicians, and speaker series.",
-      "website": "https://www.elevateoakland.org"
+      "summary": "Elevate Oakland (formerly 51Oakland) is a nonprofit that brings art and music programs to Oakland public school students. Professional artists teach and mentor students during and after the school day, and the group arranges performances and provides instruments. It was founded in 2011 and reports serving more than 3,000 students in over 30 Oakland schools each year.",
+      "website": "https://www.elevateoakland.org/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "legalName",
+          "ein",
           "orgType",
-          "website"
+          "headquarters"
+        ],
+        "title": "51oakland - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/800717753"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "OUR HISTORY — Elevate Oakland",
+        "url": "https://www.elevateoakland.org/our-history"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
         ],
         "title": "Elevate Oakland",
-        "url": "https://www.elevateoakland.org"
+        "url": "https://www.elevateoakland.org/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000196",
+    "notes": "Same organization: Elevate Oakland's own pages say it was formerly 51Oakland, founded 2011, serving 30+ OUSD schools, and ProPublica confirms EIN 80-0717753 in Oakland. However the summary says artists teach 'during and after the school day', and neither cited page mentions after-school programming (the history page says during the school day), so the summary is not fully supported; it should be regenerated with that clause removed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "rejected"
+  }
 }

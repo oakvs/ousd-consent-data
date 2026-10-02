@@ -1,17 +1,79 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ignitethemindk12.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/spark-academics",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008879",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Website ignitethemindk12.com is copyrighted by 'Ignite the Mind Inc.', matching the agenda name 'Ignite The Mind, Inc.'",
+      "LinkedIn company page lists headquarters in Union City, California 94587 and links to ignitethemindk12.com, matching the agenda location 'Union City, CA'",
+      "Website describes K-12 tutoring and mentorship for school partners, consistent with OUSD's 'Classroom & academic programs' contracts",
+      "A different 'Ignite The Mind, LLC' (Conifer, CO, ignitethemind.net), a New York nonprofit 'Ignite The Mind' and an Irvine LLC exist and were ruled out as not matching Inc. / Union City"
+    ],
     "key": "v-008879",
-    "notes": "No credible candidate confirmed. The research session's web search budget was exhausted, so only direct fetches were possible. A ProPublica API search returned an 'Ignite The Mind' in New York, NY (EIN 84-5100966), which does not match the Union City, CA location in the agenda text, so it was not used. Needs a re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Could not find a California Secretary of State or SAM.gov record for 'Ignite the Mind, Inc.' to confirm it as a registered entity, and no fetched page mentions Oakland Unified; confidence is therefore medium. The website's only listed email belongs to a named individual and was not used. No street address was found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Union City, CA",
+      "legalName": "Ignite the Mind Inc.",
+      "orgType": "company",
+      "phone": "+1 (510)-931-9227",
+      "samUei": null,
+      "summary": "Ignite the Mind is a company that provides tutoring and mentorship for K-12 students. It offers one-on-one tutoring, small group sessions and support for school staff, and works with public and private schools in California and along the West Coast.",
+      "website": "https://www.ignitethemindk12.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "legalName"
+        ],
+        "title": "Ignite the Mind",
+        "url": "https://www.ignitethemindk12.com/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Ignite the Mind Tutoring | LinkedIn",
+        "url": "https://www.linkedin.com/company/spark-academics"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

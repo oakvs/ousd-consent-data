@@ -1,17 +1,94 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://geo-eng.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://geo-eng.net/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009582",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Company website names itself 'Geo-Engineering Solutions, Inc.', matching the agenda vendor name exactly (geo-eng.net)",
+      "Headquartered in San Ramon, CA, matching the agenda location 'San Ramon, CA'",
+      "Firm provides geotechnical engineering and construction-related testing with a K-12 school focus, matching OUSD's 'School buildings & construction' / Facilities Planning and Management contracts",
+      "Website lists projects in Oakland, CA (e.g. Achieve Academy, 2850 Hannah St.), though it does not name OUSD directly"
+    ],
     "key": "v-009582",
-    "notes": "No credible candidate found. Web search budget was exhausted before research could be done; the only guessed domain (geo-engineering-solutions.com) is a French building-moisture firm, which does not match San Ramon, CA. Needs re-research.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry (CA Secretary of State, SAM.gov) match was checked or confirmed, and OUSD is not named on the firm's website, so identity rests on name, city and service-type match. A third-party listing shows a different San Ramon address (2570 San Ramon Valley Blvd, Suite A102); the firm's own site address is used. Not publishable as high without registry confirmation.",
+    "profile": {
+      "address": "12925 Alcosta Blvd., Suite #8 San Ramon, CA 94583",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@geo-eng.net",
+      "headquarters": "San Ramon, CA",
+      "legalName": "Geo-Engineering Solutions, Inc.",
+      "orgType": "company",
+      "phone": "925-433-0450",
+      "samUei": null,
+      "summary": "A geotechnical engineering and engineering geology firm based in San Ramon, California. It provides geotechnical engineering, construction observation, engineering geology, materials testing and environmental services, including for K-12 school construction projects in the San Francisco Bay Area.",
+      "website": "https://geo-eng.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Geoengineering Solutions",
+        "url": "https://geo-eng.net/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Geoengineering Experts",
+        "url": "https://geo-eng.net/contact/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

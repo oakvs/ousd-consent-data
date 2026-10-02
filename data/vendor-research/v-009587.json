@@ -1,17 +1,109 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://craig-communications.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://craig-communications.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://craig-communications.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009587",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Company name 'Craig Communications' matches the agenda vendor 'Craig Communications, Inc.'",
+      "Its contact page gives a headquarters at 1900 Powell Street, Suite 700, Emeryville, CA 94608, matching the agenda's 'Emeryville, CA'",
+      "Its website describes community engagement and public outreach for large-scale construction and development projects, matching OUSD's 'Community Engagement Services Project' contract with Facilities Planning and Management (school buildings & construction)"
+    ],
     "key": "v-009587",
-    "notes": "No credible candidate confirmed. WebSearch budget was exhausted, so registries and search could not be used. The only 'Craig Communications' site found (craigcommunications.com) sells business phone systems and shows a California 805 area code. That does not match the agenda (Emeryville, CA; community engagement services for OUSD Facilities), so it was rejected as a likely different organization. Needs a manual or re-run with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry (California Secretary of State, SAM.gov) page was checked, so the legal name 'Inc.' and registry IDs are unconfirmed. The firm's website does not mention OUSD; the match rests on name, Emeryville location and the community-engagement/construction business line. The website displays its email as 'hello(at)craig-communications.com'.",
+    "profile": {
+      "address": "1900 Powell Street, Suite 700, Emeryville, CA 94608",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello(at)craig-communications.com",
+      "headquarters": "Emeryville, CA",
+      "legalName": "Craig Communications",
+      "orgType": "company",
+      "phone": "+1 (510) 680-0769",
+      "samUei": null,
+      "summary": "Craig Communications is a public affairs firm and certified small business. It helps clients build relationships with communities and stakeholders, including regulatory agencies, and gain support for their projects. Its services include community engagement, coalition building and regulatory relations, mostly for environmental, development and energy projects.",
+      "website": "https://craig-communications.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | Craig Communications",
+        "url": "https://craig-communications.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Craig Communications",
+        "url": "https://craig-communications.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "What Sets Us Apart",
+        "url": "https://craig-communications.com/about/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009587",
+    "notes": "The cited pages show Craig Communications, a public affairs firm at 1900 Powell St, Emeryville (the agenda's city), offering community engagement for development and construction projects, which fits the 'Community Engagement Services Project' contract. The summary and contact fields match the fetched pages and are neutral. The site does not mention OUSD, so the match rests on name, city and service line.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

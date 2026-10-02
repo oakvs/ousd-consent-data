@@ -1,17 +1,100 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://thrivingstudents.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://thrivingstudents.com/terms-and-conditions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=6208235&GUID=8D6A3DA8-9B6D-4FEC-BB22-43D8A19DB352&Options=&Search=",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008013",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the website thrivingstudents.com is operated by 'Thriving Students Collective', and OUSD's agreement is with 'Thriving Students Collective, Inc.'",
+      "The Terms and Conditions page gives a Lafayette, CA address, matching the 'Lafayette, CA' in the agenda text",
+      "The OUSD Legistar record (File 23-1282) for Thriving Students Collective, Inc. in Lafayette, CA describes licenses to the Thriving School Psychologist Collective platform and professional development for special education staff, matching the organization's mental health and learning support offerings and OUSD's Special Education contracts"
+    ],
     "key": "v-008013",
-    "notes": "Not researched: the session's WebSearch budget was exhausted (200/200), ProPublica returned HTTP 429, and a guessed domain did not resolve. No candidate was found or verified. Re-queue after the search budget is raised (CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION).",
-    "profile": null,
-    "sources": []
+    "notes": "No registry record (CA Secretary of State, SAM.gov) was checked or found, so legal name and registry IDs are null. Business-profile sites list it as a for-profit company; orgType 'company' is inferred from the 'Inc.' in OUSD's records. The website footer lists an Oakland address (166 Santa Clara Ave Suite 304, Oakland, CA 94619) while the Terms notice address and OUSD's agenda give Lafayette; the Lafayette address is used. A reviewer may want to verify the current principal address.",
+    "profile": {
+      "address": "954 Risa Rd. Suite A, Lafayette, CA 94549",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@thrivingstudents.com",
+      "headquarters": "Lafayette, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Thriving Students Collective provides mental health and learning support resources for schools and families. It offers online platforms, professional development courses and expert-led videos for educators, school psychologists and other mental health professionals who support students.",
+      "website": "https://thrivingstudents.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "about our team - Thriving Students Collective",
+        "url": "https://thrivingstudents.com/about/"
+      },
+      {
+        "supports": [
+          "address",
+          "email",
+          "headquarters"
+        ],
+        "title": "Terms and Conditions - Thriving Students Collective",
+        "url": "https://thrivingstudents.com/terms-and-conditions/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oakland Unified School District - File #: 23-1282",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=6208235&GUID=8D6A3DA8-9B6D-4FEC-BB22-43D8A19DB352&Options=&Search="
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008013",
+    "notes": "Name, Lafayette CA location and special-education/school-psychologist platform licenses in OUSD File 23-1282 match thrivingstudents.com; summary and email are supported by the About page. The About page lists an Oakland address while the Terms page gives a Lafayette notice address c/o a named individual, so the current address and headquarters are not reliably confirmed and are dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address",
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
 }

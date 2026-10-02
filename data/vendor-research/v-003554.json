@@ -1,17 +1,79 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=6659903&GUID=71DE6BCD-6041-4454-B763-55AF038196F5",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.redtomatoes-notary-apostille.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-003554",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Board legislative record (File 24-1227) titled 'Services Agreement 2023-2024 - Red Tomatoes Org - Sankofa United Elementary School' names 'Red Tomatoes Org, Oakland, CA' for DOJ live scan fingerprinting services for Sankofa families, matching the agenda name and Oakland location",
+      "Red Tomatoes Org's own website (redtomatoes.org, redirecting to redtomatoes-notary-apostille.com) lists an Oakland, CA address and offers live scan fingerprinting, matching the service OUSD contracted for",
+      "Service type (fingerprinting for school volunteers) is consistent with OUSD's 'Student health, support & family services' category and the Sankofa United Elementary School contracts"
+    ],
     "key": "v-003554",
-    "notes": "No credible candidate confirmed. The WebSearch budget for the session was exhausted before any search could run; ProPublica Nonprofit Explorer returned HTTP 429 and its API URL returned 404. The guessed domain redtomatoes.org redirects to a notary/apostille business, which was not fetched and has no confirmed connection to the vendor. Needs a re-run once search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry details (EIN, CA entity number, UEI) and legal name were not found; the organization appears to be a for-profit notary/fingerprinting business despite the 'Org' in its name, so no nonprofit registry entry is expected. Email and street address are shown on the website's rendered pages but did not appear in the raw HTML, so they are omitted.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-847-4828",
+      "samUei": null,
+      "summary": "Red Tomatoes Org is a business in Oakland, California that provides mobile notary services, apostille authentication and fingerprinting, including live scan fingerprinting and FBI background reports. It serves customers across the San Francisco Bay Area.",
+      "website": "https://www.redtomatoes-notary-apostille.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Oakland Unified School District - File #: 24-1227",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=6659903&GUID=71DE6BCD-6041-4454-B763-55AF038196F5"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Red Tomatoes Org - Mobile Notary and Apostille, Oakland",
+        "url": "https://www.redtomatoes-notary-apostille.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003554",
+    "notes": "OUSD File 24-1227 names Red Tomatoes Org, Oakland CA, for DOJ live scan fingerprinting for Sankofa families, and the cited website is an Oakland business offering live scan fingerprinting, mobile notary and apostille services at the listed phone number. Summary, orgType, website, phone and headquarters are all supported and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

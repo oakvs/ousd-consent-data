@@ -1,17 +1,86 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ce-labs.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ce-labs.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001171",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the agenda: 'Consolidated Engineering Laboratories' (ce-labs.com)",
+      "Company lists an Oakland office (534 23rd Avenue, Oakland, CA 94606) and San Ramon headquarters, matching the two agenda locations Oakland, CA and San Ramon, CA",
+      "Company provides engineering and construction materials testing, matching OUSD's 'Materials Testing and Special Inspection Services' construction contracts"
+    ],
     "key": "v-001171",
-    "notes": "Research could not be completed: the session's web search budget was exhausted (200 of 200), so no candidate organization could be found or confirmed. Guessed-domain fetches (celab.com is an unrelated Italian company; cel-inc.com returned 404) did not identify the vendor. Agenda text suggests a materials testing / special inspection firm in Oakland and San Ramon, CA. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "No CA Secretary of State entity number, EIN or SAM UEI verified (bizfile is not fetchable). Legal name (possibly 'Consolidated Engineering Laboratories, Inc.' or 'Consolidated Engineering Labs, Inc.') not confirmed from a registry, so left null. No general email published on the contact page. Oakland office phone (510) 436-7626 also listed.",
+    "profile": {
+      "address": "2001 Crow Canyon Road, Suite 200 San Ramon, CA 94583",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Ramon, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(925) 314-7100",
+      "samUei": null,
+      "summary": "Consolidated Engineering Laboratories is a company that provides engineering and materials testing services to the construction industry. It is headquartered in San Ramon, California, and has offices and laboratories across the Western United States, including an office in Oakland.",
+      "website": "https://www.ce-labs.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "CEL Offices",
+        "url": "https://www.ce-labs.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "Engineering and Materials Testing",
+        "url": "https://www.ce-labs.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001171",
+    "notes": "ce-labs.com is an engineering and construction materials testing firm headquartered in San Ramon with an Oakland office, matching the agenda name, both agenda locations and the materials testing/special inspection contracts. Website, phone, address, headquarters and summary are confirmed on the cited contact and home pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

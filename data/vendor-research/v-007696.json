@@ -7,7 +7,32 @@
     },
     {
       "detail": null,
-      "field": "source:https://www.socialgoodfund.org",
+      "field": "source:https://www.socialgoodfund.org/get-in-touch/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.socialgoodfund.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.baypeace.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
       "pass": true
     },
     {
@@ -29,29 +54,29 @@
   "key": "v-007696",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered 501(c)(3): 'Social Good Fund Inc' (ProPublica Nonprofit Explorer, EIN 46-1323531)",
-      "ProPublica lists the address as Richmond, CA, matching the agenda text 'Richmond, CA'",
-      "The organization's website (socialgoodfund.org) footer shows the same EIN 46-1323531, linking the website to the registry record",
-      "As a fiscal sponsor of community projects, it plausibly holds contracts for programs run by sponsored projects such as the agenda's 'BAY-Peace'; this link is not confirmed on any page"
+      "Name matches a registered nonprofit: 'Social Good Fund Inc' (ProPublica Nonprofit Explorer, EIN 46-1323531), located in Richmond, CA, matching the agenda location",
+      "Organization's own site describes Social Good Fund as a California nonprofit that provides fiscal sponsorship for community projects, matching OUSD's after-school and summer program contracts run through sponsored projects",
+      "BAY-Peace (named in an earlier OUSD agreement title for the same vendor) states on its own site that it is 'a fiscally sponsored project of Social Good Fund'",
+      "West Oakland Walk, an Oakland project, is fiscally sponsored by Social Good Fund, consistent with the West Oakland Middle School agreement"
     ],
     "key": "v-007696",
-    "notes": "Not confirmed that this organization is the OUSD contractor: no page found linking Social Good Fund to Oakland schools or to the 'BAY-Peace' project. The website contact page could not be found, so phone, email and street address are null. The web search budget was exhausted, so no California Secretary of State or SAM.gov lookup was done. Website does not itself mention Richmond; the city comes from ProPublica.",
+    "notes": "Agenda titles also reference BAY-Peace, a youth project fiscally sponsored by Social Good Fund; the vendor of record is the fiscal sponsor. Phone is shown as 510-621-7223 on the contact page. California Secretary of State entity number and SAM.gov UEI were not looked up.",
     "profile": {
-      "address": null,
+      "address": "P.O. Box #5473, Richmond, CA 94805",
       "caEntityNumber": null,
       "ein": "46-1323531",
-      "email": null,
+      "email": "socialgood@socialgoodfund.org",
       "headquarters": "Richmond, CA",
       "legalName": "Social Good Fund Inc",
       "orgType": "nonprofit",
-      "phone": null,
+      "phone": "510-621-7223",
       "samUei": null,
-      "summary": "Social Good Fund is a California nonprofit that acts as a fiscal sponsor. It gives administrative, financial and operational support to community, arts and environmental projects, so they can operate under its 501(c)(3) tax-exempt status without forming their own nonprofit.",
-      "website": "https://www.socialgoodfund.org"
+      "summary": "Social Good Fund is a California nonprofit corporation and registered 501(c)(3) organization based in Richmond, California. It acts as a fiscal sponsor, which means it provides legal and financial infrastructure so community, arts, environmental and other social-benefit projects can receive tax-deductible donations without forming their own nonprofit.",
+      "website": "https://www.socialgoodfund.org/"
     },
     "sources": [
       {
@@ -66,16 +91,38 @@
       },
       {
         "supports": [
+          "phone",
+          "email",
+          "address",
           "summary",
+          "orgType"
+        ],
+        "title": "Contact Us - Social Good Fund",
+        "url": "https://www.socialgoodfund.org/get-in-touch/"
+      },
+      {
+        "supports": [
           "website",
+          "summary",
           "orgType",
           "ein"
         ],
         "title": "Social Good Fund",
-        "url": "https://www.socialgoodfund.org"
+        "url": "https://www.socialgoodfund.org/"
+      },
+      {
+        "supports": [],
+        "title": "BAY-PEACE: BETTER ALTERNATIVES FOR YOUTH - About Us",
+        "url": "https://www.baypeace.org/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007696",
+    "notes": "ProPublica and the vendor's own site confirm Social Good Fund Inc (EIN 46-1323531, Richmond CA, 501(c)(3), fiscal sponsor), matching the agenda name and city; BAY-Peace's site states it is a fiscally sponsored project of Social Good Fund, explaining the earlier agreement title. All profile fields and the neutral summary are supported, and contacts are generic business details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

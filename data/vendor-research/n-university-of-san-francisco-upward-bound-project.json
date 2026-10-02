@@ -2,7 +2,37 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156628",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://www.usfca.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://usfblogs.usfca.edu/sgilmore/program-information/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -16,39 +46,67 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches the University of San Francisco, a private university at usfca.edu",
-      "Located in San Francisco, CA, matching the agenda text"
+      "Name matches a registered 501(c)(3) educational institution: 'University Of San Francisco', San Francisco, CA (ProPublica Nonprofit Explorer, EIN 94-1156628), matching the agenda's 'San Francisco, CA'",
+      "USF's own blog describes an Upward Bound Math & Science college-preparation program run at USF for public high school students, matching the agenda's 'Upward Bound Project' and the 'Classroom & academic programs' category",
+      "Agenda title names the University of San Francisco directly, and the university's homepage shows it is a private university in San Francisco, CA"
     ],
     "key": "n-university-of-san-francisco-upward-bound-project",
-    "notes": "Web search budget was exhausted and ProPublica returned HTTP 429, so no registry (EIN, CA SOS, SAM) was checked. Could not find or confirm a page for the Upward Bound Project or any link to Oakland/OUSD. Phone and address were not copied because only a summarized view of the home page was available. Profile describes the university generally; the Upward Bound program itself is unverified.",
+    "notes": "The vendor is the University of San Francisco as a whole; the Upward Bound Project is a program it runs. Contact details are the university's main line and address, not the Upward Bound program's. No general email was found. CA entity number and SAM UEI not checked/found.",
     "profile": {
-      "address": null,
+      "address": "2130 Fulton Street, San Francisco, CA 94117-1080",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "94-1156628",
       "email": null,
       "headquarters": "San Francisco, CA",
-      "legalName": null,
+      "legalName": "University of San Francisco",
       "orgType": "nonprofit",
-      "phone": null,
+      "phone": "415-422-5555",
       "samUei": null,
-      "summary": "The University of San Francisco is a private university in San Francisco, California, with its main campus on Fulton Street and additional locations in downtown San Francisco, Orange County and Sacramento.",
+      "summary": "A private Jesuit university in San Francisco, California. It offers undergraduate and graduate degrees. The university also hosts the Upward Bound Math & Science program, a federally funded college-preparation program that offers advising, tutoring, mentoring and a summer program to eligible public high school students.",
       "website": "https://www.usfca.edu/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "University Of San Francisco - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156628"
+      },
+      {
+        "supports": [
           "website",
+          "phone",
+          "address",
+          "summary",
           "headquarters",
-          "orgType"
+          "legalName"
         ],
         "title": "University of San Francisco",
         "url": "https://www.usfca.edu/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Program Information - Upward Bound at USF",
+        "url": "https://usfblogs.usfca.edu/sgilmore/program-information/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-university-of-san-francisco-upward-bound-project",
+    "notes": "The organization is the University of San Francisco (EIN 94-1156628, 2130 Fulton St, 415-422-5555 all confirmed), matching the agenda. However, the summary calls the Upward Bound program 'federally funded', and the cited program page gives no funding information. That page also lists only San Francisco high schools as served, so the summary's program description is not clearly tied to the OUSD contract. Identity, legalName, ein, website, phone, address and headquarters are fine; the summary should be rewritten without the funding claim.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
 }

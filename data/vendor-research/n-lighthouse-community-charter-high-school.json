@@ -1,17 +1,109 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943370410",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lighthousecharter.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lighthousecharter.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-lighthouse-community-charter-high-school",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Lighthouse Community Public Schools is a registered 501(c)(3) nonprofit in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3370410) that operates the Lighthouse charter school campus, matching the agenda's 'Lighthouse Community Charter High School' (a grades 6-12 school at 444 Hegenberger Road, Oakland)",
+      "The organization's website describes public charter schools serving Oakland students TK-12 and refers to the OUSD board in connection with charter renewal hearings, matching an OUSD Measures N and H (classroom and academic programs) agreement with a charter high school",
+      "The organization's contact page lists the Lighthouse upper school (6-12) at 444 Hegenberger Road, Oakland, CA 94621, in the city served by OUSD"
+    ],
     "key": "n-lighthouse-community-charter-high-school",
-    "notes": "Research could not be completed: the session's WebSearch budget was exhausted (200 of 200) before any search ran, a ProPublica fetch returned HTTP 429, and guessed domains did not resolve. No candidate was confirmed, so nothing was filled in. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "The agenda names the school (Lighthouse Community Charter High School); the legal entity is the nonprofit Lighthouse Community Public Schools, which operates it. The phone and street address shown are for the Lighthouse upper school (grades 6-12) campus; the organization's Shared Services Office is at 433 Hegenberger Road, Suite 222. No California Secretary of State entity number or SAM UEI was checked.",
+    "profile": {
+      "address": "444 Hegenberger Road, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "94-3370410",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Lighthouse Community Public Schools",
+      "orgType": "nonprofit",
+      "phone": "(510) 562-8225",
+      "samUei": null,
+      "summary": "A nonprofit that operates public charter schools in East Oakland, California, serving students from transitional kindergarten through 12th grade. It runs two campuses, Lighthouse and Lodestar, each with lower and upper divisions. Its programs include college and career preparation, athletics, after-school programs and summer school.",
+      "website": "https://lighthousecharter.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Lighthouse Community Public Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943370410"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Lighthouse Community Public Schools",
+        "url": "https://lighthousecharter.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Lighthouse Community Public Schools",
+        "url": "https://lighthousecharter.org/contact/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-lighthouse-community-charter-high-school",
+    "notes": "Lighthouse Community Public Schools (EIN 94-3370410, 501(c)(3), Oakland) operates the Lighthouse campus whose 6-12 division is the school named in the agenda; ProPublica, the homepage and the contact page support the legal name, EIN, address, phone and summary. 'East Oakland' in the summary is not stated in the fetched sources but matches the cited addresses (94621, 94603); the phone and address are the upper-school campus, which fits the Measures N and H school-level MOU.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

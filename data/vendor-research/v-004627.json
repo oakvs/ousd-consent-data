@@ -1,17 +1,114 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/510172331",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://discoverwildcare.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://discoverwildcare.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-004627",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Wildcare' in San Rafael, CA (ProPublica Nonprofit Explorer, EIN 51-0172331), matching the agenda's 'San Rafael, CA'",
+      "WildCare's website describes school programs and nature education for children (nature van visits, wildlife ambassador programs), consistent with OUSD's 'Classroom & academic programs' elementary school service agreements"
+    ],
     "key": "v-004627",
-    "notes": "Research not completed: the WebSearch budget for the session was exhausted (200/200) and WebFetch failed for wildcarebayarea.org (no output) and ProPublica (HTTP 429). No identity could be confirmed. Likely candidate to re-run later: WildCare (San Rafael, CA, a Marin County wildlife rehabilitation and education nonprofit), but this is unverified.",
-    "profile": null,
-    "sources": []
+    "notes": "No page found explicitly mentioning OUSD; identity rests on name, San Rafael location and school-program match. Mailing address is 76 Albert Park Lane; a separate interim physical location is 37 Schmidt Lane. CA Secretary of State and SAM.gov not checked.",
+    "profile": {
+      "address": "76 Albert Park Lane, San Rafael, CA 94901",
+      "caEntityNumber": null,
+      "ein": "51-0172331",
+      "email": "discover@discoverwildcare.org",
+      "headquarters": "San Rafael, CA",
+      "legalName": "Wildcare",
+      "orgType": "nonprofit",
+      "phone": "415-456-7283",
+      "samUei": null,
+      "summary": "WildCare is a nonprofit in San Rafael, California, that runs a wildlife hospital and treats injured wild animals. It also teaches children and adults about wildlife through school and group programs, and advocates for wildlife protection and open spaces.",
+      "website": "https://discoverwildcare.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Wildcare - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/510172331"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "ABOUT - WildCare",
+        "url": "https://discoverwildcare.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - WildCare",
+        "url": "https://discoverwildcare.org/contact/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004627",
+    "notes": "WildCare is a San Rafael 501(c)(3) (EIN 51-0172331) whose site lists school and Nature Van programs, matching the agenda's San Rafael location and its elementary school services agreements. The summary, phone, generic email and the 76 Albert Park Lane mailing address are all confirmed on the cited pages. No page names OUSD, so identity rests on name, location and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

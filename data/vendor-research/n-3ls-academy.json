@@ -1,17 +1,94 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://3lstheacademy.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://3lstheacademy.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.venturesfoundation.org/2024/12/3ls-breaking-cycles-of-illiteracy-one-neighborhood-at-a-time/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-3ls-academy",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Organization's own site names it '3LS The Academy' / '3Ls: The Academy', matching the agenda name '3Ls The Academy'",
+      "Located in Oakland, CA (94609), matching the agenda location 'Oakland, CA'",
+      "Website and press describe literacy programs for students and school leaders in Oakland schools, matching OUSD's 'Classroom & academic programs' category and the Chief Academic Officer as presenting office",
+      "The Oaklandside article describes 3Ls working in Oakland schools in the Sobrante Park neighborhood, and the Ventures Foundation page describes it as an Oakland education nonprofit"
+    ],
     "key": "n-3ls-academy",
-    "notes": "No credible candidate identified. The WebSearch budget for this session was exhausted before any search could run, and the one registry fetch (ProPublica) returned HTTP 429. Needs re-run.",
-    "profile": null,
-    "sources": []
+    "notes": "Not found in ProPublica Nonprofit Explorer by name, so no EIN; Secretary of State and SAM.gov were not checked, so no entity number or UEI. Legal name not confirmed in a registry (the site footer says '3LS The Academy'). The only email shown on the site is a named person's address (first name), so it is omitted. The site gives only 'Oakland, CA 94609' as an address, so no street address. Nonprofit status comes from a Ventures Foundation article, not a registry.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": "510-685-1329",
+      "samUei": null,
+      "summary": "3Ls The Academy (Literacy, Leadership and Liberation) is an Oakland education nonprofit founded by educator Dr. Sabrina Moore. It runs literacy programs in Oakland neighborhoods, including a literacy hub, a family reading club, and leadership coaching for school leaders.",
+      "website": "https://3lstheacademy.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "3LS The Academy",
+        "url": "https://3lstheacademy.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters"
+        ],
+        "title": "Contact - 3LS The Academy",
+        "url": "https://3lstheacademy.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "3Ls: Breaking Cycles of Illiteracy One Neighborhood at a Time",
+        "url": "https://www.venturesfoundation.org/2024/12/3ls-breaking-cycles-of-illiteracy-one-neighborhood-at-a-time/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-3ls-academy",
+    "notes": "Identity matches (Oakland literacy org, 3Ls The Academy, founder Dr. Sabrina Moore, programs confirmed on its site and the Ventures Foundation page). However the summary calls it an 'Oakland education nonprofit' and orgType is 'nonprofit', and neither cited source states nonprofit status (the Ventures page only shows it is a grantee; no 501(c)(3) or registry evidence), so the summary is not fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "orgType"
+    ],
+    "verdict": "rejected"
+  }
 }

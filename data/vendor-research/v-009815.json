@@ -1,17 +1,90 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cloudbaseservices.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cloudbaseservices.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009815",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: the agenda names 'CloudBase Services' and the company's own contact page names it 'CloudBase Services'",
+      "Located in Berkeley, CA, matching the agenda text",
+      "Offers technology (business software and data-system consulting), matching OUSD's 'Technology' contract category; however no public page found links the company to OUSD, expanded learning or summer programs"
+    ],
     "key": "v-009815",
-    "notes": "Could not confirm any candidate organization. The session's web search budget was exhausted (200 of 200) before any search ran, and the one registry fetch (ProPublica) returned HTTP 429. Rerun when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Identity is plausible but not confirmed: name and Berkeley location match, and the technology category fits, but no public page found ties CloudBase Services to OUSD or to expanded learning / summer programs. The firm's About page mentions its founder has education-sector experience only generally. California SOS entity number (a third-party site lists 200506010074) could not be verified on the official registry, so it is omitted. A reviewer should confirm via the OUSD contract documents.",
+    "profile": {
+      "address": "1400 Shattuck Ave. #15, Berkeley, CA 94709",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "sales@cloudbaseservices.com",
+      "headquarters": "Berkeley, CA",
+      "legalName": "CloudBase Services",
+      "orgType": "company",
+      "phone": "510-526-5690",
+      "samUei": null,
+      "summary": "A Berkeley, California business-process consulting and software firm. It designs and builds custom applications and data systems, with expertise in Quickbase and Microsoft Power Platform, to help organizations automate their processes.",
+      "website": "https://cloudbaseservices.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - CloudBase Services",
+        "url": "https://cloudbaseservices.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - CloudBase Services",
+        "url": "https://cloudbaseservices.com/about-us/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

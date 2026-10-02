@@ -1,17 +1,129 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.360tcpr.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.360tcpr.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/360-total-concept-consulting",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/opportunities/lbu-policy/outreach-and-meetings",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-000192",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: '360 Total Concept Consulting, Inc.', an active California general corporation based in Oakland, CA (bizprofile.net filing information), matching the agenda location Oakland, CA",
+      "OUSD's own Facilities page says OUSD Facilities has partnered with 360 Total Concept to administer the District's Local Business Utilization Program, matching the Facilities Planning and Management contracts funded by the Measure Y building fund",
+      "Company website describes communications, facilities and food management, community engagement and contract compliance services for public agencies"
+    ],
     "key": "v-000192",
-    "notes": "Not researched: the session's web search budget (200 of 200 WebSearch calls) was exhausted, so no candidate organization could be found or identity-confirmed. A guessed domain (360totalconcept.com) did not resolve. Not an individual; agenda names it as a corporation (360 Total Concept Consulting, Inc., Oakland, CA; Facilities Planning and Management, Measure Y). Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "California entity number and address come from a third-party aggregator of Secretary of State data (bizprofile.net), not bizfileonline.sos.ca.gov directly. OUSD page refers to the firm as '360 Total Concept' and says it administers OUSD's Local Business Utilization Program. No EIN or SAM UEI verified.",
+    "profile": {
+      "address": "7677 Oakport Street, Suite 230, Oakland, CA 94621",
+      "caEntityNumber": "3922506",
+      "ein": null,
+      "email": "hello@360tcpr.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "360 Total Concept Consulting, Inc.",
+      "orgType": "company",
+      "phone": "(510) 836-0360",
+      "samUei": null,
+      "summary": "A management consulting firm that provides communications, facilities and food management, community engagement, contract compliance and other program management services. Its clients include transit authorities, airports, public agencies, development projects and corporations.",
+      "website": "https://www.360tcpr.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "legalName"
+        ],
+        "title": "360 Total Concept Consulting, Inc.",
+        "url": "https://www.360tcpr.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact - 360 Total Concept",
+        "url": "https://www.360tcpr.com/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "360 Total Concept Consulting, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/360-total-concept-consulting"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Outreach and Meetings - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/opportunities/lbu-policy/outreach-and-meetings"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000192",
+    "notes": "Exact legal name match, Oakland CA active corporation (entity 3922506, 7677 Oakport St) per bizprofile.net, and OUSD's own LBU page names 360 Total Concept as administering its Local Business Utilization Program on the Bond Program, consistent with Facilities contracts. Summary, phone, email, website and address are all confirmed by the cited pages and are neutral business details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

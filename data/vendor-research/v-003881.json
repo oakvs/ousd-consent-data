@@ -1,17 +1,118 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://skarc.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://skarc.com/expertise/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/shah-kawasaki-architects-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-003881",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California general corporation 'Shah Kawasaki Architects, Inc.', Architectural Services, based in Oakland, CA (business filing summary)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Firm website (skarc.com) lists work for Oakland Unified School District, including the Cole Administration Center, Manzanita Elementary and Martin Luther King Jr. Elementary, matching the agenda project names",
+      "Architecture firm, matching OUSD's 'School buildings & construction' category"
+    ],
     "key": "v-003881",
-    "notes": "Not researched to a conclusion: the web search tool's session budget was exhausted, and guessed domains did not resolve. No credible candidate was identified or confirmed. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "California entity number comes from a third-party aggregator of Secretary of State filings (bizprofile.net), not directly from bizfileonline.sos.ca.gov; a reviewer may want to confirm it there. EIN and SAM UEI not found.",
+    "profile": {
+      "address": "570 10th Street, Suite 201, Oakland, CA 94607",
+      "caEntityNumber": "2074839",
+      "ein": null,
+      "email": "architect@skarc.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Shah Kawasaki Architects, Inc.",
+      "orgType": "company",
+      "phone": "(510) 663-6090",
+      "samUei": null,
+      "summary": "An architecture firm based in Oakland, California, founded in 1999. It designs public and community buildings such as fire stations, schools, recreation centers and civic buildings.",
+      "website": "https://skarc.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Shah Kawasaki Architects",
+        "url": "https://skarc.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Expertise - Shah Kawasaki Architects",
+        "url": "https://skarc.com/expertise/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Shah Kawasaki Architects, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/shah-kawasaki-architects-inc"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003881",
+    "notes": "Oakland architecture firm whose site names the OUSD Cole Administration Center, Manzanita and MLK Jr. Elementary projects matching the agenda items. Contact details, legal name, CA entity number 2074839 and 1999 formation date are shown on the cited pages; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

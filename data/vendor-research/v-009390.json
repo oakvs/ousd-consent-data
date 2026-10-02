@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://questnursingschool.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://questnursingschool.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bppe.ca.gov/webapplications/annualReports/2020/details/57476910",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009390",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Quest Education Center, LLC dba Quest Nursing Education Center' in Oakland, CA; the school's own site and the California BPPE annual report show Quest Nursing Education Center at 917 Harrison Street, Oakland, CA 94607",
+      "The BPPE (California Bureau for Private Postsecondary Education) annual report lists the institution's form of business organization as a Limited Liability Company (LLC), matching the 'LLC' in the agenda name",
+      "The school offers nursing and allied-health career training (CNA, medical assistant, EMT, vocational nursing), consistent with OUSD contracting it for Adult and Career Education and Linked Learning career pathway programs",
+      "A public provider directory (NPPES-based) lists the legal business name 'Quest Education Center' at the same Oakland address"
+    ],
+    "key": "v-009390",
+    "notes": "The legal name 'Quest Education Center, LLC' comes from the agenda; no fetched registry page showed it in that exact form, so legalName is left null. California Secretary of State entity number, SAM UEI not found (registries not reachable via fetch). Business is an LLC per BPPE, so no EIN expected from nonprofit registries. The listed email is the school's registrar inbox on a Gmail address as shown on the contact page.",
+    "profile": {
+      "address": "917 Harrison Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "qnecregistrar@gmail.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 452-1444",
+      "samUei": null,
+      "summary": "Quest Nursing Education Center is a private school in Oakland, California that has offered health care training in the Bay Area since 2008. Its programs include vocational nursing, certified nursing assistant, medical assistant, emergency medical technician, phlebotomy and home health aide training.",
+      "website": "https://questnursingschool.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Quest Nursing Education Center",
+        "url": "https://questnursingschool.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Nursing School in Oakland CA",
+        "url": "https://questnursingschool.com/contact/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Quest Nursing Education Center - 2020 Annual Report - BPPE",
+        "url": "https://www.bppe.ca.gov/webapplications/annualReports/2020/details/57476910"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009390",
+    "notes": "Same organization: the school's site and BPPE report show Quest Nursing Education Center, an LLC, at 917 Harrison St, Oakland, and OUSD legistar items describe the Adult and Career Education and Linked Learning CNA agreements with Quest Education Center, LLC dba Quest Nursing Education Center. Summary, website, phone, address and the generic registrar email are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

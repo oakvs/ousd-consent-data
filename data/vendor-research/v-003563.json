@@ -1,17 +1,133 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943112099",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.reftrans.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.reftrans.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.reftrans.org/rit-at-glance",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://fremont.ousd.org/staff/community-partners/refugee-immigrant-transitions-rit",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-003563",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Refugee & Immigrant Transitions', EIN 94-3112099, San Francisco, CA (ProPublica Nonprofit Explorer), matching the agenda location San Francisco, CA",
+      "OUSD's own Fremont High School page lists Refugee & Immigrant Transitions (RIT) as a community partner running programs for refugee and immigrant students, matching the Fremont and Castlemont services agreements",
+      "Organization website (reftrans.org) describes education, family engagement and community leadership programs for newcomers, matching OUSD's 'Student health, support & family services' and English Language Learner department contracts"
+    ],
     "key": "v-003563",
-    "notes": "Not researched successfully: the session's WebSearch budget was exhausted, so no candidate could be searched for. Direct fetches of guessed domains failed (DNS or 404), and ProPublica Nonprofit Explorer returned HTTP 429 and the IRS search returned 403. No identity could be confirmed, so nothing was filled in. Retry when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Mailing address left null: reftrans.org does not show one; the Alameda County Newcomers directory lists an Oakland address (1811 11th Ave) that could not be reconciled with the San Francisco HQ. No CA SOS or SAM.gov lookup done.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-3112099",
+      "email": "info@reftrans.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Refugee & Immigrant Transitions",
+      "orgType": "nonprofit",
+      "phone": "(415) 989-2151",
+      "samUei": null,
+      "summary": "A nonprofit based in San Francisco that works with people who have sought refuge in the United States. It offers free education, family engagement, and community leadership programs for refugees and immigrants across the Bay Area. It was founded in 1982.",
+      "website": "https://www.reftrans.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Refugee & Immigrant Transitions - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943112099"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Refugee & Immigrant Transitions",
+        "url": "https://www.reftrans.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact - Refugee & Immigrant Transitions",
+        "url": "https://www.reftrans.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "RIT at Glance - Refugee & Immigrant Transitions",
+        "url": "https://www.reftrans.org/rit-at-glance"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Refugee & Immigrant Transitions RIT - Fremont High School",
+        "url": "https://fremont.ousd.org/staff/community-partners/refugee-immigrant-transitions-rit"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003563",
+    "notes": "ProPublica confirms the San Francisco 501(c)(3) with EIN 94-3112099, and OUSD's Fremont High page names RIT as a partner serving newcomer students, which fits the agreements. The reftrans.org pages support the summary (free programs, founded 1982), phone (415) 989-2151 and the general info@ email.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,95 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.consortiumtraining.com/home",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.consortiumtraining.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008594",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Website consortiumtraining.com lists its address as 8374 Market Street, Suite 162, Bradenton, FL 34202, matching the agenda location 'Bradenton, FL'",
+      "Name 'Consortium Training & Consulting' matches the agenda's 'CTC Consortium Training & Consulting'",
+      "Website describes critical incident response and emergency preparedness training for K-12 schools, matching OUSD's Risk Management and student support contracts",
+      "Website lists Oakland Unified School District among its clients"
+    ],
     "key": "v-008594",
-    "notes": "Could not confirm identity. The session's web search budget was exhausted before any search ran, and the Florida Sunbiz registry returned HTTP 403 to automated fetch. No candidate organization was found, so nothing was filled in. Agenda names: 'Consortium Critical Incident Training and Consulting' / 'CTC Consortium Training & Consulting', Bradenton, FL. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (EIN, CA entity number, SAM UEI) not looked up. Phone omitted because the site shows it with an extension (866-284-4933 ext. 0) and the exact formatting was not verified. Legal name taken from the website's own legal-name field; no registry check, so the entity type (LLC/Inc.) is unknown.",
+    "profile": {
+      "address": "8374 Market Street, Suite 162, Bradenton, FL 34202",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@consortiumtraining.com",
+      "headquarters": "Bradenton, FL",
+      "legalName": "Consortium Training & Consulting",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A company that provides training and consulting on critical incident response, disaster preparation and emergency response. It serves K-12 schools, colleges, healthcare facilities, law enforcement, workplaces and affordable housing organizations. Its offerings include in-person and virtual trainings, on-demand courses, tabletop exercises and emergency guidebooks.",
+      "website": "https://www.consortiumtraining.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Consortium Training & Consulting",
+        "url": "https://www.consortiumtraining.com/home"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Consortium Training & Consulting Contact Information",
+        "url": "https://www.consortiumtraining.com/contact"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008594",
+    "notes": "The cited pages show Consortium Training & Consulting at 8374 Market Street, Bradenton, FL, which matches the agenda location and name, and the site lists Oakland Unified School District as a client. The summary, address and generic info@ email are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

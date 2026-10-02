@@ -1,17 +1,111 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.tulumsystems.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.tulumsystems.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/tulum-innovative-engineering-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-004387",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Distinctive name matches the agenda: 'Tulum Innovative Engineering, Inc.' is a California general corporation (entity 3837027) with principal address in Oakland, CA, matching the agenda location",
+      "Website describes wireline and wireless communications and electrical services, matching OUSD's 'Technology' and 'School buildings & construction' (electrical and data center projects) contracts",
+      "Filing record lists General Contractor (B) and Electrical Contractor (C-10) classifications, consistent with the construction and electrical agreement titles"
+    ],
     "key": "v-004387",
-    "notes": "Not researched: the WebSearch budget for this session was exhausted (200 of 200), so no candidate organization could be found or confirmed. A guessed website did not resolve. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "California entity number comes from a third-party aggregator of the Secretary of State record (bizfileonline could not be fetched); reviewer may want to confirm on bizfileonline.sos.ca.gov. The contact page lists only a named individual's email, so no email was recorded. The website does not mention OUSD.",
+    "profile": {
+      "address": "3101 Hyde Street, Oakland, CA 94601",
+      "caEntityNumber": "3837027",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Tulum Innovative Engineering, Inc.",
+      "orgType": "company",
+      "phone": "(510) 355-8159",
+      "samUei": null,
+      "summary": "A company based in Oakland, California that provides wireline and wireless communications and electrical services. Its work includes network infrastructure for voice, data and video, solar installations, and security and fire alarm systems.",
+      "website": "https://www.tulumsystems.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Tulum Innovative Engineering Inc",
+        "url": "https://www.tulumsystems.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact — Tulum Innovative Engineering Inc",
+        "url": "https://www.tulumsystems.com/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Tulum Innovative Engineering, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/tulum-innovative-engineering-inc"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004387",
+    "notes": "Distinctive name, Oakland address, and B/C-10 contractor classifications match OUSD's construction, electrical and data center agreements. Summary, phone, address, website, and CA entity number 3837027 are all shown on the cited sources; the summary is neutral and no individual's email was recorded.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

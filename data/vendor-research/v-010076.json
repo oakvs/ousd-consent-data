@@ -1,17 +1,93 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://wteverything.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://wteverything.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-010076",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Business name 'Window Tints Everything' matches the agenda name exactly and is located at 7125 Laurel Canyon Blvd, North Hollywood, CA, matching the agenda location (North Hollywood, CA)",
+      "Website describes commercial window film and tinting for schools and government buildings, matching OUSD's 'Reflective Window Film Project' at Hoover, Bridges and Sequoia Schools (School buildings & construction)"
+    ],
     "key": "v-010076",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted before any search could run, so no candidate was found or confirmed. Re-queue after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda: 'Window Tints Everything', North Hollywood, CA (reflective window film at Hoover, Bridges, Sequoia schools).",
-    "profile": null,
-    "sources": []
+    "notes": "No California Secretary of State, CSLB or SAM.gov registry record was found, so the legal entity name and registry IDs are null. The old domain windowtintseverything.com redirects to an unrelated site and was not used. Third-party listings give inconsistent founding years (1980 vs 1994), so none is stated.",
+    "profile": {
+      "address": "7125 Laurel Canyon Blvd, North Hollywood, CA 91605",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@wteverything.com",
+      "headquarters": "North Hollywood, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(323) 466-0608",
+      "samUei": null,
+      "summary": "A window tinting company in North Hollywood, California. It installs residential, commercial and vehicle window films, including security, anti-graffiti and decorative films. Its website says it serves homes, schools, hospitals, government buildings and retail centers in the Los Angeles area.",
+      "website": "https://wteverything.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Residential Window Tinting Los Angeles | Cut Heat 78% | 4.9★",
+        "url": "https://wteverything.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact Window Tints Everything",
+        "url": "https://wteverything.com/contact/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-010076",
+    "notes": "Name and North Hollywood location match the agenda and the services fit a reflective window film project, but the summary says the company installs vehicle window films while the cited homepage explicitly states it does not offer automotive tinting. The summary must be rewritten before publication.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
 }

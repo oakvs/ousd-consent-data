@@ -7,6 +7,21 @@
     },
     {
       "detail": null,
+      "field": "source:https://technical.ly/entrepreneurship/elite-gaming-live-student-esports-tech-careers/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.tedcomd.com/news-events/press-releases/2023/tedco-invests-elite-gaming-live",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "email",
       "pass": true
     },
@@ -19,15 +34,16 @@
   "key": "v-009664",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a company registered in several states, including a California registration and a Columbia, MD address on its District of Columbia filing (OpenCorporates listing), matching the agenda's 'Columbia, MD'",
-      "Website elitegaminglive.com describes an esports league for grades 3-12 run through schools and organizations, matching OUSD's 'After-school & summer programs' contracts"
+      "Distinctive name match: EliteGamingLIVE (the company's own website) / Elite Gaming Live (TEDCO), matching the agenda's 'EliteGamingLIVE, Inc' and 'EliteGaming Live'",
+      "TEDCO (Maryland state-backed technology investor) press release places Elite Gaming Live in Columbia, Maryland, matching the agenda's 'Columbia, MD'",
+      "The company's website describes a school esports and STEM league for grades 3-12 that schools use as an after-school program, matching OUSD's 'After-school & summer programs' / Expanded Learning Opportunities contracts"
     ],
     "key": "v-009664",
-    "notes": "Website does not state a headquarters and does not mention Oakland. Registry listings (OpenCorporates) show EliteGamingLIVE filings in MD, DE, NJ, CA and others with differing addresses (Baltimore, Brooklyn, Columbia MD), so the link between the website and the agenda's Columbia, MD entity is not independently confirmed. Web search budget was exhausted, so no SOS/SAM record could be read directly. Phone, address and registry IDs omitted. Not suitable for publication without review.",
+    "notes": "No registry record (Maryland SDAT, SAM.gov, California SOS) was checked, so legal name, entity numbers and UEI are left null. Headquarters left null because sources conflict: TEDCO says Columbia, MD; several directory sites and Technical.ly say Baltimore, MD. No page found that mentions Oakland Unified directly. Phone and email are as shown on the company website.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -36,9 +52,9 @@
       "headquarters": null,
       "legalName": null,
       "orgType": "company",
-      "phone": null,
+      "phone": "347-519-5430",
       "samUei": null,
-      "summary": "EliteGamingLIVE runs a competitive gaming league for students in grades 3-12. It uses esports to introduce young people to science, technology, engineering and math. It works with schools and youth organizations.",
+      "summary": "EliteGamingLIVE is a company that runs a video game (esports) league and a science, technology, engineering and math (STEM) learning program for students in grades 3 through 12. Schools and youth organizations use it as an after-school program. Students compete in games and also work through lessons about technology careers.",
       "website": "https://www.elitegaminglive.com"
     },
     "sources": [
@@ -47,13 +63,32 @@
           "summary",
           "orgType",
           "website",
+          "phone",
           "email"
         ],
         "title": "EliteGamingLIVE",
         "url": "https://www.elitegaminglive.com"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Elite Gaming Live teaches esports career opportunities beyond just becoming a pro gamer",
+        "url": "https://technical.ly/entrepreneurship/elite-gaming-live-student-esports-tech-careers/"
+      },
+      {
+        "supports": [],
+        "title": "TEDCO Invests in Elite Gaming Live",
+        "url": "https://www.tedcomd.com/news-events/press-releases/2023/tedco-invests-elite-gaming-live"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009664",
+    "notes": "The distinctive name, the Columbia, MD location (TEDCO) and the after-school esports/STEM program for grades 3-12 all match the agenda's EliteGamingLIVE, Inc. and its after-school contract. The summary, website, phone and generic business email were confirmed on the company site and Technical.ly, and the summary is neutral. Headquarters is rightly left null because the sources conflict (Columbia vs Baltimore).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

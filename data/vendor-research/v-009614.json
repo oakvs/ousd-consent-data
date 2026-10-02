@@ -1,17 +1,97 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://drycreek.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://drycreek.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://drycreek.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009614",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Business name matches: the company's website describes 'Dry Creek Construction Company', a general contractor, and the agenda names 'Dry Creek Construction'",
+      "Corporate headquarters at 105 Enterprise Ct., Galt, CA 95632 matches the agenda location 'Galt, CA'",
+      "Company does water and fire damage restoration and reconstruction, which fits a Risk Management Department services agreement paid from Property & Liability funds, and its website lists educational facilities among the clients it serves"
+    ],
     "key": "v-009614",
-    "notes": "Not researched: the session's WebSearch budget (200/200) was exhausted, so no candidate could be identified or confirmed. Re-queue after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda: Dry Creek Construction, Galt, CA (school buildings & construction, Risk Management services agreement).",
-    "profile": null,
-    "sources": []
+    "notes": "Legal entity name (likely an LLC) was not confirmed on a page, so legalName is null. The company's site shows two different general email addresses (info@drycreek.com and info@drycreekconstructionco.com), so email was left out. The contact page also shows the Galt ZIP once as 95362 (apparent typo) and once as 95632. Did not check CA Secretary of State or SAM.gov, so no entity number or UEI.",
+    "profile": {
+      "address": "105 Enterprise Ct., Galt, CA 95632",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Galt, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(209) 744-8005",
+      "samUei": null,
+      "summary": "A general contractor based in Galt, California. It does construction, water and fire damage restoration, and environmental cleanup such as asbestos, lead and mold removal. It serves commercial, residential, healthcare, education and public sector clients in Northern and Central California and Northern Nevada.",
+      "website": "https://drycreek.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Dry Creek",
+        "url": "https://drycreek.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us - Dry Creek",
+        "url": "https://drycreek.com/about-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Dry Creek",
+        "url": "https://drycreek.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009614",
+    "notes": "Dry Creek's corporate address is in Galt, CA, matching the agenda location. It is a general contractor doing restoration and environmental work for education and public sector clients, which fits a Risk Management services agreement. The cited pages support the phone, address, headquarters, services, regions and client sectors in the summary. The site's About page also calls Sacramento the headquarters, but the Galt address is the stated corporate address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,96 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/923921922",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dreamyouthclinic.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eastbayexpress.com/oakland-students-fight-sex-trafficking-with-their-voices/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-dream-clinic",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Dream Youth Clinic Inc is a registered 501(c)(3) nonprofit in Oakland, CA (ProPublica, EIN shown), a close but not exact match to the agenda name 'Dream Clinic' in Oakland, CA",
+      "Dream Youth Clinic has partnered with Oakland Unified on a youth anti-trafficking poster project (East Bay Express), so a working relationship with OUSD exists",
+      "No page found links Dream Youth Clinic to the ECCCO workplace-training MOU itself, and the agenda name omits 'Youth', so the match is not confirmed"
+    ],
     "key": "n-dream-clinic",
-    "notes": "No credible candidate found. The WebSearch budget for the session was exhausted, so only direct fetches were possible; dreamclinic.org is an unrelated clinic in Osaka, Japan, and ProPublica/IRS pages were blocked (429/403). Needs a re-run once searches are available.",
-    "profile": null,
-    "sources": []
+    "notes": "Unconfirmed match: the agenda says 'Dream Clinic' for a Workplace Training Partners MOU (ECCCO internships). Dream Youth Clinic is the only Oakland organization found with a similar name, but no page ties it to this MOU. Reviewer should check the MOU document before publishing. Phone and address omitted because the site lists two locations and several lines.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "92-3921922",
+      "email": "contact@dreamyouthclinic.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Dream Youth Clinic Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit in Oakland, California that offers no-cost, youth-led health services and youth health groups, centered on reproductive justice, for Black youth, youth of color and gender-expansive young people in the Bay Area.",
+      "website": "https://www.dreamyouthclinic.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Dream Youth Clinic Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/923921922"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Dream Youth Clinic",
+        "url": "https://www.dreamyouthclinic.org/"
+      },
+      {
+        "supports": [],
+        "title": "Oakland students fight sex trafficking with their voices",
+        "url": "https://eastbayexpress.com/oakland-students-fight-sex-trafficking-with-their-voices/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

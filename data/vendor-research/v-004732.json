@@ -2,17 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.youthalive.org/",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943143254",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.youthalive.org/about/",
+      "field": "source:https://youthalive.org/about-us/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.youthalive.org/programs/",
+      "field": "source:https://youthalive.org/contact/",
       "pass": true
     },
     {
@@ -32,6 +32,16 @@
     },
     {
       "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "website",
       "pass": true
     }
@@ -39,60 +49,67 @@
   "key": "v-004732",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Youth ALIVE! describes itself as a nonprofit based in Oakland, CA, matching the agenda location 'Oakland, CA'",
-      "Its programs (Teens on Target violence-prevention workshops for Oakland students) match OUSD's 'After-school & summer programs' contracts with the Community Schools and Student Services Department"
+      "Name matches a registered 501(c)(3) nonprofit 'Youth Alive' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3143254), matching the agenda's 'Youth ALIVE!' and 'Oakland, CA'",
+      "Organization's own website (youthalive.org) describes itself as Oakland's violence prevention, intervention and healing agency, with youth programs such as Teens on Target that train high school students, consistent with a Community Schools and Student Services agreement"
     ],
     "key": "v-004732",
-    "notes": "Identity rests on the organization's own website only. The search budget ran out and ProPublica returned HTTP 429, so no registry (IRS, CA SOS, SAM.gov) confirmed the legal name or EIN, and no page cited a direct OUSD relationship. Confidence is medium for that reason; a reviewer should check the EIN and legal name in ProPublica.",
+    "notes": "Legal name in ProPublica is 'Youth Alive'; agenda uses 'Youth ALIVE!'. No page fetched explicitly mentions OUSD. CA entity number and SAM UEI not looked up.",
     "profile": {
-      "address": "520 3rd Street, Suite 101 Oakland, CA 94607",
+      "address": "520 3rd Street, Suite 101, Oakland, CA 94607",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "94-3143254",
       "email": "mail@youthalive.org",
       "headquarters": "Oakland, CA",
-      "legalName": null,
+      "legalName": "Youth Alive",
       "orgType": "nonprofit",
       "phone": "(510) 594-2588",
       "samUei": null,
-      "summary": "Youth ALIVE! is a nonprofit based in Oakland, California. It works to break the cycle of violence, heal trauma, and support young people as community leaders. Its programs include violence prevention workshops led by teens, violence intervention, and counseling and healing services.",
-      "website": "https://www.youthalive.org/"
+      "summary": "Youth ALIVE! is an Oakland nonprofit that works to prevent violence and support people affected by it. Its programs include violence prevention for youth, intervention work with people at risk of violence, and counseling and support for families of homicide victims. Its services are free and community-based.",
+      "website": "https://youthalive.org"
     },
     "sources": [
       {
         "supports": [
-          "website",
-          "phone",
-          "email",
-          "address",
-          "headquarters",
-          "summary",
-          "orgType"
-        ],
-        "title": "Youth ALIVE!",
-        "url": "https://www.youthalive.org/"
-      },
-      {
-        "supports": [
-          "summary",
+          "legalName",
+          "ein",
           "orgType",
           "headquarters"
         ],
-        "title": "About Youth ALIVE!",
-        "url": "https://www.youthalive.org/about/"
+        "title": "Youth Alive - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943143254"
       },
       {
         "supports": [
-          "summary"
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address"
         ],
-        "title": "Youth ALIVE! Programs",
-        "url": "https://www.youthalive.org/programs/"
+        "title": "About Us - Youth ALIVE!",
+        "url": "https://youthalive.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - Youth ALIVE!",
+        "url": "https://youthalive.org/contact/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004732",
+    "notes": "Youth ALIVE! in Oakland is a 501(c)(3) (EIN 94-3143254 per ProPublica), and its own site confirms the violence prevention and youth programs, free services, and the phone, email and address, which fit a no-cost services agreement with Community Schools and Student Services. The summary is neutral and supported; no source names OUSD directly, but name, city and service fit are consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

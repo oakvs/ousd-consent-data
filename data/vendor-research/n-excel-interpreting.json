@@ -1,17 +1,86 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://excelinterpreting.com/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-excel-interpreting",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Company website footer names 'Excel Interpreting, LLC', matching the agenda name 'Excel Interpreting, LLC'",
+      "Headquartered in Sacramento, CA, matching the agenda location 'Sacramento, CA'",
+      "Website describes interpreting and document translation services, matching OUSD's 'Translation and Interpretation Services' RFP #22-139OE",
+      "Website lists a satellite office in Oakland, CA"
+    ],
     "key": "n-excel-interpreting",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted before any search ran, and a guessed direct fetch of excelinterpreting.com returned 404. No candidate organization was identified. This is an LLC (not an individual), so it should be retried once the search budget is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "The www.excelinterpreting.com host currently serves a different template page (404 'Lango'), possibly indicating a site change or acquisition; the apex domain excelinterpreting.com serves the company site. No registry IDs (CA SOS, SAM.gov) were verified.",
+    "profile": {
+      "address": "2081 Arena Bld. Suite 260 Sacramento, CA 95834",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@excelinterpreting.com",
+      "headquarters": "Sacramento, CA",
+      "legalName": "Excel Interpreting, LLC",
+      "orgType": "company",
+      "phone": "1 (800) 915-0638",
+      "samUei": null,
+      "summary": "Excel Interpreting & Translating is a Sacramento-based language services company. It provides in-person interpreting, telephone interpreting and document translation through a network of contract interpreters and translators in many languages.",
+      "website": "https://excelinterpreting.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Excel Interpreting & Translating - About Us",
+        "url": "https://excelinterpreting.com/about.html"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-excel-interpreting",
+    "notes": "The cited About page shows the footer name Excel Interpreting, LLC, a Sacramento headquarters, and interpreting and translation services, all matching the agenda name, city and RFP 22-139OE. Name, address, phone, generic info@ email and the neutral summary are all shown on the page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

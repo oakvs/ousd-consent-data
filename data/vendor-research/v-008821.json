@@ -1,17 +1,78 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943386695",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://build.org/california/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008821",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Candidate: BUILD (Businesses United In Investing Lending And Development), whose public site titles its California program 'BUILD California'; registered in Redwood City, CA per ProPublica, matching the agenda location 'Redwood City, CA'",
+      "BUILD runs a high school entrepreneurship program in Oakland partner schools, consistent with OUSD 'Classroom & academic programs' contracts and Castlemont High School's entrepreneurship academy",
+      "NOT confirmed: no page found naming BUILD at Castlemont High School; a different organization, Build California (buildcalifornia.com, Associated General Contractors construction-careers initiative), shares the exact agenda name"
+    ],
     "key": "v-008821",
-    "notes": "No credible candidate confirmed. The session's web search budget was exhausted, so no registry or organization pages could be found. buildcalifornia.org appears to be a parked domain and was not used. Needs re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Identity not confirmed. Agenda name 'Build California' could also be the AGC-led construction-careers initiative at buildcalifornia.com; BUILD (build.org) was chosen because of the Redwood City location and entrepreneurship programming in Oakland, but no source ties either to Castlemont High School. Contact details omitted deliberately pending confirmation. Needs human review before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-3386695",
+      "email": null,
+      "headquarters": "Redwood City, CA",
+      "legalName": "Businesses United In Investing Lending And Development",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "BUILD is a nonprofit that teaches entrepreneurship to high school students in under-resourced communities. It works with partner schools and fits its curriculum into Career Technical Education pathways, where students design and launch small businesses. It serves over 1,500 students a year in California.",
+      "website": "https://build.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Businesses United In Investing Lending And Development - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943386695"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "BUILD California",
+        "url": "https://build.org/california/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

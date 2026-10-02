@@ -2,12 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.jensenhughes.com/about",
+      "field": "source:https://www.jensenhughes.com/contact",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.jensenhughes.com/contact-us",
+      "field": "source:https://www.jensenhughes.com/contact/office-locations/san-francisco-concord",
       "pass": true
     },
     {
@@ -24,15 +24,16 @@
   "key": "n-jensen-hughes",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: Jensen Hughes (jensenhughes.com), a fire protection engineering consultancy, consistent with OUSD's fire alarm, intrusion alarm and sprinkler engineering agreements",
-      "Company has 100+ offices worldwide, but no Concord, CA office listing could be fetched, so the agenda location (Concord, CA) is unconfirmed; no registry (CA Secretary of State, SAM.gov) record could be checked"
+      "Jensen Hughes lists a San Francisco - Concord office at 1220 Concord Avenue, Suite 400, Concord, CA 94520, matching the agenda's 'Concord, CA'",
+      "Jensen Hughes offers fire protection engineering and code consulting, matching OUSD's fire alarm, intrusion alarm and sprinkler engineering agreements for school buildings",
+      "Company name 'Jensen Hughes' matches the agenda's 'Jensen Hughes, Inc.'"
     ],
     "key": "n-jensen-hughes",
-    "notes": "Web search budget was exhausted, so no registry lookup or Concord, CA office confirmation was possible. Agenda location (Concord, CA) is not confirmed against the company's office list. Address shown is the corporate headquarters, not the local office. Needs a re-run with search available before publishing.",
+    "notes": "The agenda's Concord, CA location corresponds to the company's Concord office (1220 Concord Avenue, Suite 400, Concord, CA 94520), but the address and headquarters given here are the corporate headquarters. No main phone or general email was found on the contact page, so those are null. Registry IDs and the exact legal entity (Jensen Hughes, Inc.) were not verified in a registry.",
     "profile": {
       "address": "8830 Stanford Boulevard, Suite 300, Columbia, MD 21045",
       "caEntityNumber": null,
@@ -43,7 +44,7 @@
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "Jensen Hughes is a global consulting and engineering firm. It began in fire protection engineering and also provides accessibility consulting, risk and hazard analysis, process safety and security risk consulting, and emergency management. It was formed in 2014 by the merger of Hughes Associates and Rolf Jensen & Associates.",
+      "summary": "Jensen Hughes is an engineering and consulting company that works on fire protection and other safety issues in buildings. Its services include fire system design and testing, code consulting, building commissioning, and structural, mechanical and electrical design. It has offices in North America, Europe, the United Kingdom, Asia, the Pacific and the Middle East.",
       "website": "https://www.jensenhughes.com"
     },
     "sources": [
@@ -51,21 +52,26 @@
         "supports": [
           "summary",
           "orgType",
-          "website"
-        ],
-        "title": "About Jensen Hughes",
-        "url": "https://www.jensenhughes.com/about"
-      },
-      {
-        "supports": [
+          "website",
           "address",
           "headquarters"
         ],
-        "title": "Contact Us | Jensen Hughes",
-        "url": "https://www.jensenhughes.com/contact-us"
+        "title": "Contact | Jensen Hughes",
+        "url": "https://www.jensenhughes.com/contact"
+      },
+      {
+        "supports": [],
+        "title": "San Francisco - Concord Office",
+        "url": "https://www.jensenhughes.com/contact/office-locations/san-francisco-concord"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-jensen-hughes",
+    "notes": "Jensen Hughes has a Concord, CA office (1220 Concord Ave, Suite 400) offering fire protection engineering and code consulting, matching the agenda's Concord location and OUSD's fire/intrusion alarm engineering amendments. The contact page confirms HQ at 8830 Stanford Blvd, Columbia MD and the 100+ offices across the listed regions; the summary's service list is stated verbatim on jensenhughes.com/about (not cited, but accurate) and is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

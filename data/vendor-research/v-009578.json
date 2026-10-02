@@ -2,22 +2,27 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.mettel.net/",
+      "field": "source:https://www.mettel.net/company/",
       "pass": true
     },
     {
       "detail": null,
-      "field": "source:https://www.mettel.net/contact-us",
-      "pass": true
-    },
-    {
-      "detail": null,
-      "field": "phone",
+      "field": "source:https://www.highergov.com/awardee/manhattan-telecommunications-corporation-llc-10002732/",
       "pass": true
     },
     {
       "detail": null,
       "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -29,50 +34,59 @@
   "key": "v-009578",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "The agenda names the vendor 'Manhattan Telecommunications, LLC (MetTel)', and the MetTel website (mettel.net) is the telecom company using that brand name",
-      "MetTel's contact page gives a headquarters at 55 Water Street, New York, NY, matching the agenda location 'New York, NY'",
-      "MetTel sells managed voice, network and mobility services, matching OUSD's 'Technology' contract category (Technology Services Department)"
+      "Agenda names 'Manhattan Telecommunications, LLC (MetTel)'; the federal registration record for Manhattan Telecommunications Corporation LLC lists the doing-business-as name METTEL (HigherGov, from SAM.gov data)",
+      "Agenda gives New York, NY; MetTel's global headquarters is 55 Water Street, New York, NY (mettel.net)",
+      "MetTel is a business telecommunications and IT services provider, matching OUSD's 'Technology' contract category and the Technology Services Department"
     ],
     "key": "v-009578",
-    "notes": "Legal entity (Manhattan Telecommunications, LLC vs. Corporation) was not confirmed on any cited page and no registry (NY DOS, SAM.gov) was checked because the web search budget was exhausted; the link between the legal name and the MetTel brand rests on the agenda text itself. Phone is listed on the contact page for Corporate Sales. No general email found. Needs a reviewer to confirm the legal entity before publishing.",
+    "notes": "Agenda legal name is 'Manhattan Telecommunications, LLC'; the registered entity is 'Manhattan Telecommunications Corporation LLC' (dba MetTel). UEI comes from HigherGov, a third-party aggregator of SAM.gov data, not SAM.gov directly. Phone omitted because the site lists several lines (sales, support) rather than one main line. California Secretary of State entity number not checked.",
     "profile": {
       "address": "55 Water Street, 32nd Floor, New York, NY 10041",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "New York, NY",
-      "legalName": null,
+      "legalName": "Manhattan Telecommunications Corporation LLC",
       "orgType": "company",
-      "phone": "(877) 963-8663",
-      "samUei": null,
-      "summary": "MetTel is a telecommunications and technology services company based in New York City. It provides managed voice, network, security and mobility services to businesses and public-sector customers.",
-      "website": "https://www.mettel.net/"
+      "phone": null,
+      "samUei": "C5D6CL7CMPH5",
+      "summary": "MetTel is a business telecommunications provider based in New York. It offers managed network services, cloud communications, mobility solutions and security services, including voice, broadband and SD-WAN (software-defined wide area network) products. It serves businesses and government customers.",
+      "website": "https://www.mettel.net"
     },
     "sources": [
       {
         "supports": [
           "summary",
-          "orgType",
-          "website"
+          "website",
+          "address",
+          "headquarters",
+          "orgType"
         ],
-        "title": "MetTel",
-        "url": "https://www.mettel.net/"
+        "title": "MetTel Company History",
+        "url": "https://www.mettel.net/company/"
       },
       {
         "supports": [
-          "phone",
-          "address",
+          "legalName",
+          "samUei",
+          "orgType",
           "headquarters"
         ],
-        "title": "MetTel Contact Us",
-        "url": "https://www.mettel.net/contact-us"
+        "title": "Manhattan Telecommunications Corporation",
+        "url": "https://www.highergov.com/awardee/manhattan-telecommunications-corporation-llc-10002732/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009578",
+    "notes": "HigherGov (SAM.gov data) lists Manhattan Telecommunications Corporation LLC dba MetTel in New York, NY, matching the agenda name, '(MetTel)' and city; mettel.net confirms the 55 Water Street HQ, services and government customers. Summary and fields are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

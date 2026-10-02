@@ -7,6 +7,11 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.kqed.org/news/12048998/brave-bay-area-nations-first-rape-crisis-center-to-shut-down-after-54-years",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "ein",
       "pass": true
     },
@@ -19,16 +24,16 @@
   "key": "v-008276",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "OUSD's own agenda titles list this same vendor as 'Bay Area Women Against Rape (BAWAR)' for 2022-2024 and 'BRAVE Bay Area' for 2024-2026, suggesting a rename (not independently confirmed on a public page)",
-      "ProPublica lists a registered 501(c)(3) named 'Bay Area Women Against Rape' located in Oakland, CA, matching the agenda location",
-      "OUSD funding source 'Human Trafficking Prevention' and a student support services contract are consistent with a rape-crisis/violence-prevention nonprofit"
+      "OUSD's own agreement titles for 2022-2024 name Bay Area Women Against Rape (BAWAR) and the 2024-2026 ones name BRAVE Bay Area for the same department, consistent with the 2024 rename reported by news outlets",
+      "ProPublica Nonprofit Explorer lists Bay Area Women Against Rape, a 501(c)(3) in Oakland, CA, matching the agenda location",
+      "KQED describes BRAVE Bay Area as a 54-year-old Alameda County rape crisis and survivor-support organization, matching OUSD's 'Student health, support & family services' and 'Human Trafficking Prevention' funding category"
     ],
     "key": "v-008276",
-    "notes": "Could not find or fetch the organization's own website (guessed domains did not resolve; web search budget was exhausted). The link between 'BRAVE Bay Area' and the registered 'Bay Area Women Against Rape' rests on OUSD's own agenda titles only; a reviewer should confirm the rename and fill in website/contact details. Summary is minimal and partly drawn from OUSD records, so it is not suitable for publishing as-is.",
+    "notes": "Organization reportedly closed at end of September 2025 (per news coverage). The organization's own website (bawar.org) could not be fetched (self-signed certificate error), so website and contact details are left null. The BRAVE Bay Area / Bay Area Women Against Rape link rests on OUSD's own agreement titles and search-result snippets from Oaklandside, KQED and SFGate (formerly known as Bay Area Women Against Rape). Legal name per ProPublica may predate the BRAVE rename.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -39,22 +44,35 @@
       "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "A 501(c)(3) charitable nonprofit organization based in Oakland, California. Per OUSD records it provides student health and support services, including human trafficking prevention, for the school district.",
+      "summary": "A nonprofit in Oakland, California, that provided counseling, a 24/7 helpline and advocate training for survivors of gender-based violence, serving the region for over 54 years. It operated under the name BRAVE Bay Area. News reports say it planned to close in September 2025.",
       "website": null
     },
     "sources": [
       {
         "supports": [
           "legalName",
-          "orgType",
+          "ein",
           "headquarters",
-          "ein"
+          "orgType"
         ],
         "title": "Bay Area Women Against Rape - Nonprofit Explorer - ProPublica",
         "url": "https://projects.propublica.org/nonprofits/organizations/942300454"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "BRAVE Bay Area, Nation's First Rape Crisis Center, to Shut Down After 54 Years",
+        "url": "https://www.kqed.org/news/12048998/brave-bay-area-nations-first-rape-crisis-center-to-shut-down-after-54-years"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008276",
+    "notes": "KQED confirms BRAVE Bay Area was formerly Bay Area Women Against Rape (counseling, 24/7 helpline, advocate training, 54+ years, closing September 2025), and OUSD's own agreement titles switch from BAWAR to BRAVE Bay Area for the same department. ProPublica confirms the Oakland 501(c)(3) with EIN 94-2300454; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

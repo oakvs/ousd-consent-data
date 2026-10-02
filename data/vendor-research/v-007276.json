@@ -2,7 +2,22 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.chefstoys.com/",
+      "field": "source:https://chefstoys.com/pages/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://chefstoys.com/pages/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fermag.com/articles/8270-trimark-usa-buys-chefs-toys/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
       "pass": true
     },
     {
@@ -14,41 +29,62 @@
   "key": "v-007276",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "chefstoys.com is a restaurant supply and commercial kitchen equipment retailer, consistent with OUSD's 'Food Service Kitchen Equipment and Training' contracts",
-      "chefstoys.com lists California locations including San Francisco and Oakland, consistent with the agenda's San Francisco, CA",
-      "Could NOT confirm via a registry (CA Secretary of State, SAM.gov) that 'Chefs' Toys, LLC' is the legal entity, or that it is the TriMark entity named in the agenda; trimarkusa.com (Mansfield, MA) does not mention Chefs' Toys"
+      "Name matches: the agenda's 'TriMark dba Chefs' Toys' and the assignment from 'TriMark, Inc. to Chef's Toys, LLC' match Chefs' Toys, a commercial kitchen equipment dealer that TriMark USA acquired on March 1, 2018 (Foodservice Equipment Reports)",
+      "Chefs' Toys's own website lists a San Francisco store (and an Oakland store), matching the agenda's location of San Francisco, CA",
+      "Chefs' Toys sells commercial kitchen equipment, matching OUSD's 'Food Service Kitchen Equipment and Training' contracts for Nutrition Services"
     ],
     "key": "v-007276",
-    "notes": "Search budget was exhausted, so no registry lookups were possible. The TriMark-to-Chefs' Toys relationship (assignment agreement in agenda) and legal entity are unconfirmed. Do not publish without registry verification.",
+    "notes": "Registry IDs (California entity number, SAM UEI), phone and mailing address not found on official pages; headquarters is inconsistent across sources (Fountain Valley, Corona, Beverly Hills), so left null. Legal name 'Chefs' Toys, LLC' appears only in the agenda and third-party directories, not on the company site.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": null,
-      "email": null,
+      "email": "sales@chefstoys.com",
       "headquarters": null,
       "legalName": null,
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "Chefs' Toys is a restaurant supply store and kitchen equipment retailer. It sells commercial cooking equipment, refrigeration, food preparation machines, cutlery, tableware and janitorial supplies.",
-      "website": "https://www.chefstoys.com/"
+      "summary": "Chefs' Toys is a seller of commercial restaurant and kitchen equipment and supplies in California. Its catalog includes cooking equipment, refrigeration, food preparation machines, cutlery, tableware and janitorial supplies. It runs stores in several California cities and sells online. TriMark USA, a foodservice equipment distributor, acquired the company in 2018.",
+      "website": "https://chefstoys.com"
     },
     "sources": [
       {
         "supports": [
           "summary",
           "orgType",
-          "website"
+          "website",
+          "email"
         ],
-        "title": "Chefs' Toys",
-        "url": "https://www.chefstoys.com/"
+        "title": "About Us - Chefs' Toys",
+        "url": "https://chefstoys.com/pages/about-us"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Contact Us - Chefs' Toys",
+        "url": "https://chefstoys.com/pages/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "TriMark USA Buys Chefs' Toys",
+        "url": "https://www.fermag.com/articles/8270-trimark-usa-buys-chefs-toys/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007276",
+    "notes": "The agenda's 'TriMark dba Chefs' Toys' and the TriMark, Inc. to Chef's Toys, LLC assignment match the Chefs' Toys kitchen equipment dealer that TriMark USA acquired in 2018 (fermag.com); the company site lists San Francisco and Oakland stores and sells the equipment OUSD buys. The summary, website and generic sales@ email are supported by the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

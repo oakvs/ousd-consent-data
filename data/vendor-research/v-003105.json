@@ -1,17 +1,114 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://noramfence.net/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://noramfence.net/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/fence-contractors/north-american-fence-railing-1116-899817",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-003105",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website names it 'North American Fence and Railing Inc.', matching the agenda name 'North American Fence & Railing, Inc.'",
+      "Located at 515 23rd Ave, Oakland, CA, matching the agenda location 'Oakland, CA'; the Better Business Bureau listing shows the same name and address",
+      "Company designs and installs fencing and railings, matching OUSD's construction agreements for a fencing project (Laurel Child Development Center Fencing Project) and interim housing site work"
+    ],
     "key": "v-003105",
-    "notes": "Not researched: the WebSearch budget for this session was exhausted (200 of 200), so no candidate could be found or confirmed. A direct fetch of northamericanfence.com returned no usable content and is not confirmed as this vendor. Likely a Bay Area fencing contractor (Oakland, CA per agenda; school construction contracts) but unverified. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (California Secretary of State entity number, SAM.gov UEI) were not looked up. The BBB listing shows a different phone number ((650) 757-2140); the phone given here comes from the company's own website. No page found that mentions OUSD directly; the link to OUSD rests on name, city and trade.",
+    "profile": {
+      "address": "515 23rd Ave. Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@noramfence.net",
+      "headquarters": "Oakland, CA",
+      "legalName": "North American Fence and Railing Inc.",
+      "orgType": "company",
+      "phone": "+1 (510) 436-0755",
+      "samUei": null,
+      "summary": "A fencing and railing contractor based in Oakland, California. It designs, fabricates and installs chain-link fences, ornamental iron, railings and gates or gate openers, including higher-security fencing, for residential and industrial properties.",
+      "website": "https://noramfence.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - North American Fence & Rail",
+        "url": "https://noramfence.net/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "North American Fence & Rail",
+        "url": "https://noramfence.net/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "address"
+        ],
+        "title": "North American Fence & Railing - BBB",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/fence-contractors/north-american-fence-railing-1116-899817"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003105",
+    "notes": "The company site and BBB listing show a fence and railing contractor at 515 23rd Ave, Oakland, which fits the agenda name, Oakland location and OUSD's fencing and site-work contracts (the company site also lists Oakland SLBE certification). The summary and the website, phone, email and address fields match the company's own site; the BBB phone differs, but the candidate notes this and used the company's number, and the email is a generic business address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

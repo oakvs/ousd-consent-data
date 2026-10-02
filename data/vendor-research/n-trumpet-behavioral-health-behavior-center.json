@@ -1,17 +1,60 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bluesprigautism.com/trumpet-behavioral-health/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bluesprigautism.com/about-us/affiliated-companies/",
+      "pass": true
+    }
+  ],
   "key": "n-trumpet-behavioral-health-behavior-center",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "BlueSprig Autism's affiliated-companies page lists both 'Trumpet Behavioral Health' and 'The Behavior Center' as affiliated ABA therapy providers, consistent with the agenda's 'Trumpet Behavioral Health dba The Behavior Center'",
+      "BlueSprig's Trumpet Behavioral Health page says Trumpet is a division of BlueSprig Autism and offers school-based ABA services, consistent with OUSD's special education nonpublic agency contract",
+      "Search results show Trumpet Behavioral Health operating centers in the Houston, TX area, matching the agenda's Houston, TX location"
+    ],
     "key": "n-trumpet-behavioral-health-behavior-center",
-    "notes": "Identity not confirmed. The web search budget was exhausted so no search could be run. Direct fetches failed: trumpetbehavioralhealth.com refused the connection, and thebehaviorcenter.com redirects to a domain-for-sale page. No registry or organization page was read, so nothing is filled in. Needs a re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Could not confirm the exact legal entity that signed the OUSD addendum (Houston, TX per agenda) in any registry (no CA SOS, SAM.gov or Texas SOS record verified), nor whether 'The Behavior Center' dba is a distinct entity from Trumpet (BlueSprig lists them as separate affiliates). Website, contact details and registry IDs left null because the only fetched pages are the parent company's and list location-specific details. Confidence medium: not publishable without registry confirmation.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Trumpet Behavioral Health provides Applied Behavior Analysis (ABA) therapy for children with autism and other developmental disabilities. Services are offered in centers, homes, communities, schools and online. It is a division of BlueSprig Autism, a provider group that also lists The Behavior Center as an affiliated ABA therapy provider.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Trumpet Behavioral Health - Bluesprig Autism",
+        "url": "https://www.bluesprigautism.com/trumpet-behavioral-health/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Affiliated Companies - Bluesprig Autism",
+        "url": "https://www.bluesprigautism.com/about-us/affiliated-companies/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

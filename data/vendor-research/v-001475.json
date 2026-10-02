@@ -1,17 +1,105 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943164093",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ebboa.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001475",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'East Bay Basketball Officials Association', EIN 94-3164093, located in Hercules, CA (ProPublica Nonprofit Explorer), matching the agenda location Hercules, CA",
+      "The organization's own website (ebboa.org) lists a Hercules, CA address and says it serves Oakland USD (Oakland Unified School District) and other Oakland-area organizations",
+      "The website describes training and assigning high school basketball officials, consistent with OUSD's Services Agreements with the Oakland Athletic League"
+    ],
     "key": "v-001475",
-    "notes": "Research incomplete, not a finding about the organization: the WebSearch budget for the session was exhausted (200 of 200) and the ProPublica Nonprofit Explorer fetch returned HTTP 429, so no candidate could be identified or confirmed. Agenda text names 'East Bay Basketball Officials Association' in Hercules, CA (Oakland Athletic League services contracts). Re-run once search access is restored.",
-    "profile": null,
-    "sources": []
+    "notes": "Phone, email and address are from ebboa.org. Third-party directories list a different phone number (510-331-5559); the organization's own site was used. Mailing address is a PO box.",
+    "profile": {
+      "address": "PO BOX 5125, Hercules, CA 94547",
+      "caEntityNumber": null,
+      "ein": "94-3164093",
+      "email": "contactus@ebboa.org",
+      "headquarters": "Hercules, CA",
+      "legalName": "East Bay Basketball Officials Association",
+      "orgType": "nonprofit",
+      "phone": "510-773-4413",
+      "samUei": null,
+      "summary": "A nonprofit association that trains and certifies basketball officials (referees) for high school games in the East Bay. It assigns officials to games, and offers professional development, mentoring and evaluations for its members.",
+      "website": "https://ebboa.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Bay Basketball Officials Association - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943164093"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "East Bay Basketball Officials Association (EBBOA)",
+        "url": "https://ebboa.org"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001475",
+    "notes": "Same organization: ProPublica shows a 501(c)(3) of this exact name and EIN in Hercules, CA, and ebboa.org lists Oakland USD among the leagues it serves and the same PO box, phone and email. The summary's claim that it 'certifies' officials is not shown on the cited site (training, game assignment, evaluations, mentoring and professional development are), so the summary is listed as unsupported; all other fields check out.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
 }

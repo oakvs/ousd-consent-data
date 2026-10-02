@@ -1,17 +1,85 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://platinumpkggroup.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-platinum-packaging-group",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'The Platinum Packaging Group' (company website, platinumpkggroup.com)",
+      "Headquartered in Paramount, CA, matching the agenda text 'Paramount, CA'",
+      "Website says the company serves school districts and food service operations with paper trays and food packaging machinery, consistent with OUSD's Nutrition Services Department contract (food, child nutrition funding)"
+    ],
     "key": "n-platinum-packaging-group",
-    "notes": "Research not completed: the session's web search budget was exhausted before any search ran, and guessed domains (platinumpackaginggroup.com) did not resolve. No candidate organization was identified or confirmed. Agenda gives 'The Platinum Packaging Group', Paramount, CA, Nutrition Services services agreement. Worth re-running when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "California Secretary of State entity number and SAM.gov UEI not looked up (registry pages need interactive search). Third-party directories list the entity as 'The Platinum Packaging Group, Inc.'; the cited site uses 'The Platinum Packaging Group'.",
+    "profile": {
+      "address": "7625-7627-7629 Somerset Boulevard, Paramount, CA 90723",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@platinumpkggroup.com",
+      "headquarters": "Paramount, CA",
+      "legalName": "The Platinum Packaging Group",
+      "orgType": "company",
+      "phone": "(562) 630-6700",
+      "samUei": null,
+      "summary": "A packaging manufacturer and distributor based in Paramount, California. It sells packaging machinery, such as tray sealers and bagging equipment, along with flexible packaging films and food trays. Its website says it serves school districts and food service operations.",
+      "website": "https://platinumpkggroup.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About The Platinum Packaging Group",
+        "url": "https://platinumpkggroup.com/about-us/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-platinum-packaging-group",
+    "notes": "The cited About page shows the exact name, the Paramount, CA address, phone and info@ email, packaging machinery, films and trays, and school-district testimonials, which fit a Nutrition Services packaging agreement. The summary is neutral and supported by the page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

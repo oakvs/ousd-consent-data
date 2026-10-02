@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4247418",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://coldtemps.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://coldtemps.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006954",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "FMCSA SAFER company snapshot lists legal name 'COLD AIR REFRIGERATION INC' with DBA 'COLD TEMP SOLUTIONS' at 825 Arnold Dr Ste 116, Martinez, CA, matching the agenda's 'Cold Air Refrigeration, Inc. dba Cold Temp' and 'Martinez, CA'",
+      "The old domain coldairrefrigeration.com permanently redirects (301) to coldtemps.com, the Cold Temp Solutions website, which shows the same Martinez address and phone as the SAFER record",
+      "Website describes industrial and commercial refrigeration for food storage and distribution, consistent with OUSD's Nutrition Services 'Food, transportation & operations' services agreement"
+    ],
+    "key": "v-006954",
+    "notes": "Website footer names the entity 'CAR Inc DBA Cold Temp Solutions'; legal name taken from the federal SAFER record. No CA Secretary of State entity number, EIN or SAM UEI verified.",
+    "profile": {
+      "address": "825 Arnold Drive, Suite 116, Martinez, CA 94553",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "inquiry@coldtemps.com",
+      "headquarters": "Martinez, CA",
+      "legalName": "COLD AIR REFRIGERATION INC",
+      "orgType": "company",
+      "phone": "(925) 374-4014",
+      "samUei": null,
+      "summary": "Cold Air Refrigeration, Inc., which does business as Cold Temp Solutions, is a company in Martinez, California. It designs, installs and maintains industrial and commercial refrigeration systems for food storage, pharmaceutical, post-harvest and winery facilities, and offers 24/7 emergency response. It has operated since 2017.",
+      "website": "https://coldtemps.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "SAFER Web - Company Snapshot COLD AIR REFRIGERATION INC",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=4247418"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "email",
+          "headquarters"
+        ],
+        "title": "Cold Temp Solutions",
+        "url": "https://coldtemps.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "email",
+          "phone"
+        ],
+        "title": "Cold Temp Solutions - Contact Us",
+        "url": "https://coldtemps.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006954",
+    "notes": "The SAFER record shows legal name Cold Air Refrigeration Inc, DBA Cold Temp Solutions, at 825 Arnold Dr, Martinez CA. This matches the agenda name and city, and the coldtemps.com site shows the same address, phone and email. Refrigeration services fit a Nutrition Services agreement. The summary matches the website and is neutral, and the contact details are generic business ones.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

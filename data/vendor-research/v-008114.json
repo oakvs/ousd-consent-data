@@ -1,17 +1,115 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bsafeinspection.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bsafeinspection.com/about-3",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/sunland/b-safe-playground-inspection",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008114",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Corporate filing for 'B Safe Playground Inspection Services, Inc.' in Sunland, CA matches the agenda location (Sunland, CA) and the agenda name",
+      "Company website names 'BSAFE Playground Inspection Services, Inc.' as its legal name, matching the agenda text",
+      "Website describes playground inspections and surfacing impact testing for schools and lists the Bay Area as a service area, consistent with OUSD play yard site improvement projects"
+    ],
     "key": "v-008114",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted before any search ran, so no candidate organization was found or confirmed. Agenda gives 'BSAFE Playground Inspection Services, Inc.' in Sunland, CA (play yard site improvement work). Needs a re-run once the search limit is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "Entity number and address come from a third-party mirror of California Secretary of State data (bizprofile.net), not the Secretary of State site itself. The website does not list a street address; the phone number has a 916 (Sacramento) area code.",
+    "profile": {
+      "address": "10349 Ormond St, Sunland, CA 91040",
+      "caEntityNumber": "4672063",
+      "ein": null,
+      "email": "admin@bsafeinspection.com",
+      "headquarters": "Sunland, CA",
+      "legalName": "BSAFE Playground Inspection Services, Inc.",
+      "orgType": "company",
+      "phone": "(916) 850-5071",
+      "samUei": null,
+      "summary": "A company that inspects playgrounds and tests playground surfacing in California. It offers impact testing and G-Max testing (which measures how well a surface absorbs a fall), and writes inspection and compliance reports for community playgrounds and school play structures.",
+      "website": "https://www.bsafeinspection.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "BSAFE Playground Inspection Services",
+        "url": "https://www.bsafeinspection.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "ABOUT",
+        "url": "https://www.bsafeinspection.com/about-3"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "B Safe Playground Inspection Services, Inc. Sunland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/sunland/b-safe-playground-inspection"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008114",
+    "notes": "The bizprofile filing (B Safe Playground Inspection Services, Inc., Sunland CA, entity 4672063, active) matches the agenda name and city, and the company website uses the exact legal name and describes playground surfacing impact testing and G-Max testing, which fits OUSD play yard site improvement agreements. Summary, contact fields, address and entity number are all supported by the cited pages; the address and entity number come from a third-party mirror, as the candidate itself notes.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

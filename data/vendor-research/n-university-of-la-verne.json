@@ -2,7 +2,7 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://projects.propublica.org/nonprofits/api/v2/search.json?q=University+of+La+Verne",
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/951644026",
       "pass": true
     },
     {
@@ -29,26 +29,27 @@
   "key": "n-university-of-la-verne",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches a registered nonprofit: 'University Of La Verne', EIN 95-1644026, La Verne, CA (ProPublica Nonprofit Explorer search)",
-      "Wikipedia describes the University of La Verne as a private university in La Verne, California with education and business colleges and regional campuses in the greater Los Angeles area, plausible for a university MOU with OUSD Talent/Human Resources (staff and hiring); no page found directly linking it to OUSD"
+      "Name matches a registered 501(c)(3) educational institution: 'University Of La Verne', La Verne, CA, EIN 95-1644026 (ProPublica Nonprofit Explorer)",
+      "OUSD Board minutes (Feb 25, 2026, File 26-0265) describe the 'University of La Verne' in this MOU as a private, nonprofit university in California, for teacher-credential intern and practica programs, matching ULV's credential programs and the agenda's Talent/Human Resources office",
+      "Wikipedia describes the University of La Verne as a private university in La Verne, California with a College of Education, consistent with a teacher-credential partnership"
     ],
     "key": "n-university-of-la-verne",
-    "notes": "The university's own site (laverne.edu / ulv.edu) blocked automated fetching (403 / connection refused), the search tool budget was exhausted, and ProPublica organization pages were rate-limited, so contact details were not verified and are left null. Website comes from Wikipedia only. No source linked the university to OUSD directly, so confidence is capped at medium.",
+    "notes": "Official site laverne.edu blocks automated fetching (Cloudflare 403), so phone, email and address were not verified from it and are left null. Website taken from Wikipedia infobox. CA entity number and SAM UEI not checked (registries require JavaScript). OUSD tie confirmed from OUSD Board minutes 2026-02-25 item 26-0265 (ousd.legistar.com).",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": "95-1644026",
       "email": null,
       "headquarters": "La Verne, CA",
-      "legalName": "University Of La Verne",
+      "legalName": "University of La Verne",
       "orgType": "nonprofit",
       "phone": null,
       "samUei": null,
-      "summary": "A private university in La Verne, California. It offers undergraduate and graduate degrees through several colleges, including Arts and Sciences, Business and Public Management, Education, Law, and Health and Community Well-Being. It also runs regional campuses in the greater Los Angeles area and Kern County.",
+      "summary": "The University of La Verne is a private, nonprofit university in La Verne, California. It awards undergraduate, graduate and doctoral degrees through its colleges, including a College of Education, and it operates regional campuses across California.",
       "website": "https://laverne.edu"
     },
     "sources": [
@@ -56,22 +57,29 @@
         "supports": [
           "legalName",
           "ein",
-          "headquarters",
-          "orgType"
+          "orgType",
+          "headquarters"
         ],
-        "title": "ProPublica Nonprofit Explorer search: University of La Verne",
-        "url": "https://projects.propublica.org/nonprofits/api/v2/search.json?q=University+of+La+Verne"
+        "title": "University Of La Verne - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/951644026"
       },
       {
         "supports": [
           "summary",
-          "website"
+          "website",
+          "headquarters"
         ],
         "title": "University of La Verne - Wikipedia",
         "url": "https://en.wikipedia.org/wiki/University_of_La_Verne"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-university-of-la-verne",
+    "notes": "The agenda names 'University of La Verne' for a Talent/HR MOU, which fits the single private nonprofit university in La Verne, CA with a College of Education. ProPublica (EIN 95-1644026, 501(c)(3)) and Wikipedia support the legal name, type, headquarters, website and the neutral summary; I could not independently retrieve the cited OUSD minutes, but the name is distinctive and the services fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

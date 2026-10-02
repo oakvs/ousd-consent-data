@@ -1,17 +1,101 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/202006310793",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ballforlifeoakland.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ballforlifeoakland.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006975",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California LLC registered in Oakland, CA: BALL FOR LIFE OAKLAND LLC, entity number 202006310793, active (OpenCorporates, from CA Secretary of State data)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes school-based sports and social-emotional learning programs and names Escuelita (OUSD) as a partner school, matching OUSD's student support and classroom program contracts and the La Escuelita Elementary School agreements"
+    ],
     "key": "v-006975",
-    "notes": "No credible candidate found. The session's web search budget was exhausted, so no searches could be run; guessed domains did not resolve. Needs re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "The website's mailing address (248 3rd St. #496) differs from the registry address (495 Jackson St #496, Oakland, CA 94607); both are Oakland box numbers. Website address used as the public contact. No phone or general email found on the contact page. Not a registered 501(c)(3); the website indicates a fiscal sponsor (L.C. Lillie Cox Haven of Hope) for donations.",
+    "profile": {
+      "address": "248 3rd St. #496, Oakland, CA 94607",
+      "caEntityNumber": "202006310793",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Ball for Life Oakland LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Ball for Life Oakland is a company in Oakland, California that offers youth programs built around sports and play. Its programs include mindful sports electives in basketball and soccer, after-school programs, recess enrichment, and professional development for educators. It says the programs support students' social-emotional learning and wellness.",
+      "website": "https://ballforlifeoakland.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Entity Details :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/202006310793"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About - Ball for Life Oakland",
+        "url": "https://ballforlifeoakland.org/about"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Contact - Ball for Life Oakland",
+        "url": "https://ballforlifeoakland.org/contact"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006975",
+    "notes": "OpenCorporates shows an active CA LLC named Ball for Life Oakland LLC (202006310793) in Oakland, and the organization's website lists Escuelita (OUSD) as a partner, matching the La Escuelita agreements. The summary, address, website, legal name and entity number are supported by the cited pages; orgType 'company' matches the LLC registration.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

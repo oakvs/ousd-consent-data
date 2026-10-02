@@ -7,6 +7,16 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.grants.ca.gov/grants/fy22-23-urban-and-community-forestry-green-schoolyards/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/projects/district-wide-projects/living-schoolyards/partners",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "legalName",
       "pass": true
     }
@@ -14,16 +24,16 @@
   "key": "n-california-department-of-forestry-and-fire-protection-cal-fire",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Agenda names the vendor as the State of California Department of Forestry and Fire Protection (CAL FIRE), a single, uniquely named state agency, so there is no similar-name ambiguity",
-      "Wikipedia confirms the legal name 'California Department of Forestry and Fire Protection', commonly known as CAL FIRE, and its statewide forest and wildfire role",
-      "Observed: calfire.ca.gov redirects (HTTP 301) to fire.ca.gov. The official fire.ca.gov site returned HTTP 403 to automated fetching, so the grant itself and the agency's contact details could not be confirmed from the agency's own pages"
+      "The agenda names the California Department of Forestry and Fire Protection (CAL FIRE), a California state agency; Wikipedia describes CAL FIRE as the state fire department under the California Natural Resources Agency",
+      "The California Grants Portal lists the FY22-23 Urban and Community Forestry Green Schoolyards grant as administered by the Department of Forestry and Fire Protection (CAL FIRE), matching OUSD's 'Oakland Living Schoolyards Implementation Project' grant award",
+      "OUSD's own Living Schoolyards Partners page says OUSD was awarded CalFire grants for 2 implementation sites and 14 planning sites in 2024"
     ],
     "key": "n-california-department-of-forestry-and-fire-protection-cal-fire",
-    "notes": "Identity is very likely correct (unique state agency), but confidence is capped at medium: the agency's official site (fire.ca.gov) blocks automated fetching (403), the web search budget was exhausted, and no independent page linking CAL FIRE to the Oakland Living Schoolyards grant was found. Website and contact fields left null because they could not be verified on a fetched page. A reviewer can add https://www.fire.ca.gov/ and its contact page manually.",
+    "notes": "Public state agency. The official site fire.ca.gov returns HTTP 403 to automated fetches, so website, phone, email and address were left null rather than uncited. Phone and email on the grants portal are specific to the urban forestry grant program, not the agency's main line.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -34,7 +44,7 @@
       "orgType": "public_agency",
       "phone": null,
       "samUei": null,
-      "summary": "A California state agency, commonly called CAL FIRE. It manages wildfire prevention and suppression across state responsibility lands, oversees private and public forests in California, and provides emergency services in many counties through contracts with local governments.",
+      "summary": "CAL FIRE is a California state agency. It provides fire protection in areas of the state under state responsibility and manages the state's private and public forests. It also runs grant programs, including urban and community forestry grants for green schoolyards.",
       "website": null
     },
     "sources": [
@@ -46,9 +56,27 @@
         ],
         "title": "California Department of Forestry and Fire Protection - Wikipedia",
         "url": "https://en.wikipedia.org/wiki/California_Department_of_Forestry_and_Fire_Protection"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "FY22-23 Urban and Community Forestry Green Schoolyards - California Grants Portal",
+        "url": "https://www.grants.ca.gov/grants/fy22-23-urban-and-community-forestry-green-schoolyards/"
+      },
+      {
+        "supports": [],
+        "title": "Living Schoolyards Partners - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/projects/district-wide-projects/living-schoolyards/partners"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-california-department-of-forestry-and-fire-protection-cal-fire",
+    "notes": "CAL FIRE is the state agency that administers the Urban and Community Forestry Green Schoolyards grant (grants.ca.gov), and OUSD's own page confirms its 2024 CalFire awards, matching the agenda's grant items. Legal name, org type and the neutral summary are supported by Wikipedia and the grants portal; all contact fields are null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,104 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.360dtherapy.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.360dtherapy.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/santa-clara/profile/healthcare-staffing/360-degree-customer-inc-1216-1000002980",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-360-degree-customer",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a business listed as '360 Degree Customer, Inc.' at 473 Sapena Ct STE 7, Santa Clara, CA 95054 (BBB profile), matching the agenda's Santa Clara, CA",
+      "The company website 360dtherapy.com lists the same street address (473 Sapena Ct #7, Santa Clara) and uses an @360customer.com email, linking the 360 Degree Therapy brand to 360 Degree Customer",
+      "Website describes staffing speech-language pathologists, special education teachers and therapists for schools, matching OUSD's special education nonpublic agency contract"
+    ],
     "key": "n-360-degree-customer",
-    "notes": "No credible candidate found. The web search budget for the session was exhausted before any search could run; the only direct fetches (ProPublica Nonprofit Explorer, a guessed domain) returned a rate-limit error, a 404 and a parked-domain page respectively, none of which identify the organization. Needs a retry with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry not checked: California Secretary of State entity number not found. Website is branded 360 Degree Therapy; link to the legal name is via shared street address and the 360customer.com email domain. BBB lists a different phone number than the website. LinkedIn snippet says San Jose; website and BBB say Santa Clara. No page found mentioning OUSD.",
+    "profile": {
+      "address": "473 Sapena Ct #7, Santa Clara, CA 95054",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hr@360customer.com",
+      "headquarters": "Santa Clara, CA",
+      "legalName": "360 Degree Customer, Inc.",
+      "orgType": "company",
+      "phone": "408-406-7253",
+      "samUei": null,
+      "summary": "A company in Santa Clara, California that provides staffing for therapy and education professionals, such as speech-language pathologists, occupational therapists and special education teachers. It places staff with schools, hospitals and rehabilitation centers. It also operates under the name 360 Degree Therapy.",
+      "website": "https://www.360dtherapy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Contact Us - 360 Degree Therapy",
+        "url": "https://www.360dtherapy.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "360 Degree Therapy",
+        "url": "https://www.360dtherapy.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters"
+        ],
+        "title": "360 Degree Customer, Inc.",
+        "url": "https://www.bbb.org/us/ca/santa-clara/profile/healthcare-staffing/360-degree-customer-inc-1216-1000002980"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

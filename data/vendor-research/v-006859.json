@@ -1,17 +1,122 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/851578971",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ikunaed.org/faq",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ikunaed.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/the-ikuna-group",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006859",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Registered 501(c)(3) 'Ikuna Group' based in Oakland, CA, matching the agenda's 'The IKUNA Group, Oakland, CA' (ProPublica Nonprofit Explorer, EIN 85-1578971)",
+      "California entity 'The Ikuna Group' is active in Oakland, CA (bizprofile.net listing of Secretary of State data)",
+      "Organization's website says it runs literacy and student-support programs for Pacific Islander students and that its founders are alumni of Oakland Unified schools, matching OUSD's classroom and after-school/summer program contracts"
+    ],
     "key": "v-006859",
-    "notes": "Not researched: the session's web search budget was exhausted before any search could run, and guessed domains did not resolve. No candidate organization was identified. Re-run this vendor after raising the search limit.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal name differs slightly by registry: ProPublica/IRS lists 'Ikuna Group'; California listing shows 'The Ikuna Group' (aggregator of Secretary of State data). Entity number comes from a third-party aggregator, not bizfileonline directly. No phone or mailing address found on the organization's own site; a registered address appears only on the aggregator and was omitted.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "4606431",
+      "ein": "85-1578971",
+      "email": "dogood@theikunagroup.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Ikuna Group",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "IKUNA Group is a nonprofit based in Oakland, California that supports Pacific Islander youth and their communities. Its programs include Fananga, which provides reading materials and read-along sessions to improve literacy for elementary students, and Wayfinder, which supports middle and high school students.",
+      "website": "https://www.ikunaed.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Ikuna Group - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/851578971"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "website",
+          "orgType"
+        ],
+        "title": "FAQ - IKUNA GROUP",
+        "url": "https://www.ikunaed.org/faq"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "IKUNA GROUP",
+        "url": "https://www.ikunaed.org/"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "headquarters"
+        ],
+        "title": "The Ikuna Group Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/the-ikuna-group"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006859",
+    "notes": "ProPublica (501(c)(3), Oakland, K-12 education), the organization's FAQ (Oakland, founded by OUSD alumni, Fananga/Wayfinder programs in Oakland Unified schools) and the CA filing (Oakland, same directors as ProPublica) all point to the organization OUSD contracts with for academic, summer and equity programs. Summary, EIN, entity number, website and the generic organizational email are each supported and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

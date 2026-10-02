@@ -1,17 +1,111 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.tulumsystems.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.tulumsystems.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/3837027",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-004837",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches an active California stock corporation 'TULUM INNOVATIVE ENGINEERING, INC.' (entity 3837027), registered in Oakland, CA (OpenCorporates), matching the agenda's Oakland, CA",
+      "Company website describes a licensed communications and electrical contractor headquartered at 3101 Hyde Street, Oakland, matching OUSD's school construction / site improvement contract"
+    ],
     "key": "v-004837",
-    "notes": "No credible candidate found: the session's web search budget was exhausted (200/200) before any search could run, and guessed domains did not resolve. Re-run when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "The company's site lists only a named person's email, so no email was recorded. The company site does not mention OUSD; identity rests on name, Oakland location and trade match. Website also uses 'Tulum Systems' as a trade name.",
+    "profile": {
+      "address": "3101 Hyde Street, Oakland, California 94601",
+      "caEntityNumber": "3837027",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Tulum Innovative Engineering Inc",
+      "orgType": "company",
+      "phone": "(510) 355-8159",
+      "samUei": null,
+      "summary": "Tulum Innovative Engineering is a licensed communications and electrical contractor based in Oakland, California. It designs and installs voice, data and video network systems, and provides electrical services such as solar power, security and fire alarm systems. It works with public and private sector clients.",
+      "website": "https://www.tulumsystems.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact — Tulum Innovative Engineering Inc",
+        "url": "https://www.tulumsystems.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Tulum Innovative Engineering Inc",
+        "url": "https://www.tulumsystems.com/"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Entity Details :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/3837027"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004837",
+    "notes": "The cited company site and the OpenCorporates record both show Tulum Innovative Engineering, Inc. at 3101 Hyde Street, Oakland, an active CA stock corporation (3837027), which matches the agenda's Oakland location and a licensed electrical and communications contractor on a school site improvement project. The summary and contact fields are supported by the cited pages and are neutral. No individual's email was recorded.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,53 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lunabellindustries.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008835",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches: Luna-Bell Industries (lunabellindustries.com) offers environmental testing and inspection (asbestos, lead, mold, radon), which could plausibly relate to a school district risk management department",
+      "NOT confirmed: the website gives no street address or city (only 'Greater Bay Area' and a 415 phone number), so it cannot be tied to Pittsburg, CA as in the agenda text; no mention of OUSD or schools found; no registry record (CA SOS, SAM.gov) located"
+    ],
     "key": "v-008835",
-    "notes": "Web search budget was exhausted, so identity could not be confirmed. An aggregator listing (OpenCorporates, not an approved registry, not cited) showed an inactive California stock corporation 'Luna-Bell Industries Corporation' at Pittsburg, CA, matching only the name and city. No website, description of services or link to OUSD risk management was found, so no profile is published. Needs manual review.",
-    "profile": null,
-    "sources": []
+    "notes": "Plausible candidate only. Could not confirm it is the Pittsburg, CA vendor in the agenda: no address or registry record found, and no OUSD link. Do not publish without a CA Secretary of State or similar match.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Luna-Bell Industries is described on its website as a company providing environmental testing and inspection services, such as testing for asbestos, lead, mold and radon, for homes, commercial properties and worksites in the Greater Bay Area.",
+      "website": "https://www.lunabellindustries.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Luna-Bell Industries",
+        "url": "https://www.lunabellindustries.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

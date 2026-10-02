@@ -2,12 +2,37 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.apenaengineering.com",
+      "field": "source:https://apenaengineering.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/san-leandro/apena-construction-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.unitedcontractors.org/membership/member-directory/apena-engineering",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
       "pass": true
     },
     {
       "detail": null,
       "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
       "pass": true
     },
     {
@@ -24,43 +49,66 @@
   "key": "n-apena-engineering",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: the company website's footer gives the legal name 'APENA Engineering, Inc.', matching 'Apena Engineering Inc.' in the agenda",
-      "Website describes a Bay Area general engineering contractor doing grading, paving and site work, consistent with a school site improvements project",
-      "A Bizapedia page title (content blocked by a security check, so not cited) lists 'APENA ENGINEERING INC. in San Leandro, CA', matching the agenda location; not independently confirmed from a readable page"
+      "Name matches a California general corporation 'Apena Engineering Inc.' located in San Leandro, CA, matching the agenda's vendor name and San Leandro location (bizprofile.net, California Secretary of State data)",
+      "Company's own website describes a general engineering contractor for grading, paving and site work, matching OUSD's contract for school site improvements (School buildings & construction)",
+      "United Contractors member directory lists Apena Engineering with the same website, apenaengineering.com"
     ],
     "key": "n-apena-engineering",
-    "notes": "Search budget was exhausted, so no registry (CA Secretary of State, SAM.gov, CSLB) could be checked. The San Leandro location could not be confirmed from a readable page; the company website names no city. Needs a registry check before publishing.",
+    "notes": "No public page found that directly links Apena Engineering to the Oakland Academy of Knowledge project; identity rests on name, San Leandro location and trade match. The entity was renamed from 'Apena Construction Inc.' in September 2024 per bizprofile.net, which still uses the old URL slug. Company website does not list phone or address; phone comes from the United Contractors directory and address from the registry mirror.",
     "profile": {
-      "address": null,
-      "caEntityNumber": null,
+      "address": "207 Oakes Blvd, San Leandro, CA 94577",
+      "caEntityNumber": "5563271",
       "ein": null,
       "email": "info@apenaengineering.com",
-      "headquarters": null,
-      "legalName": "APENA Engineering, Inc.",
+      "headquarters": "San Leandro, CA",
+      "legalName": "Apena Engineering Inc.",
       "orgType": "company",
-      "phone": null,
+      "phone": "(510) 575-2547",
       "samUei": null,
-      "summary": "A Bay Area general engineering contractor that specializes in small-to-medium sized grading and paving projects. Its services include site preparation, earthwork, asphalt work, underground utilities and pipe installation. It says it is licensed to work throughout California.",
-      "website": "https://www.apenaengineering.com"
+      "summary": "A general engineering contractor based in the San Francisco Bay Area. It does small to medium sized grading and paving projects, including site preparation, earthwork, asphalt paving and underground utilities, and is licensed to work throughout California.",
+      "website": "https://apenaengineering.com/"
     },
     "sources": [
       {
         "supports": [
-          "legalName",
           "summary",
-          "orgType",
           "website",
-          "email"
+          "email",
+          "orgType"
         ],
-        "title": "APENA Engineering",
-        "url": "https://www.apenaengineering.com"
+        "title": "APEÑA Engineering",
+        "url": "https://apenaengineering.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Apena Engineering Inc. San Leandro, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/san-leandro/apena-construction-inc"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Apena Engineering",
+        "url": "https://www.unitedcontractors.org/membership/member-directory/apena-engineering"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-apena-engineering",
+    "notes": "The California registry mirror shows Apena Engineering Inc. (entity 5563271, General Corporation) at 207 Oakes Blvd, San Leandro, which matches the agenda name and city. The company site and United Contractors directory support the grading, paving and site-work summary, website, generic info@ email and phone. The profile has no editorial language and no personal contact details, and the notes disclose that the rename and the missing direct link to the OUSD project were checked.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

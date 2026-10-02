@@ -1,17 +1,102 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.protecteducation.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.protecteducation.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tipsweb-prod.s3.us-east-2.amazonaws.com/assets/Vendorspdf/230804_CONTRACT_Medical_Protect_ED.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-006797",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "TIPS vendor agreement (PDF) names 'WCNSM Enterprise LLC dba Protect|ED or Protect|Education' at 10300 Alliance Road, Blue Ash, OH 45242, matching the agenda's 'WCNSM Enterprize LLC. dba Protection Education', 'Protect/ED' and 'Blue Ash, OH'",
+      "Protect|ED's website says it sells NanoStrike air disinfection and purification units for K-12 schools, matching OUSD's 'District-wide Facilities Air Purification Project' and 'Pilot Testing of Air Purification Equipment' agreements",
+      "Protect|ED's website lists the same street address (10300 Alliance Rd. STE 315, Cincinnati, OH 45242) that the TIPS agreement gives for Blue Ash",
+      "Web search result summary: WCNSM Enterprise LLC owns the 'PROTECT | ED' trademark and does business as Protect Ed (Justia trademarks page blocked automated fetching)"
+    ],
     "key": "v-006797",
-    "notes": "No credible candidate confirmed. The session's web search budget was exhausted before any search could run, and guessed vendor domains did not load. Agenda names the vendor as Protect/ED (dba Protection Education; legal name in agenda text WCNSM Enteprize LLC) in Blue Ash, OH. Needs re-research when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "Legal name per TIPS cooperative-purchasing agreement; the OUSD agenda spells it 'WCNSM Enteprize LLC'. The company's website gives its address as Cincinnati, OH 45242; the TIPS agreement gives the same street address as Blue Ash, OH (a suburb of Cincinnati). No EIN, California entity number or SAM UEI was found on a fetchable page. Legal name 'WCNSM Enterprise LLC' (dba Protect|ED) appears in the TIPS agreement PDF but could not be verified by the automated check, so legalName is left null.",
+    "profile": {
+      "address": "10300 Alliance Rd. STE 315, Cincinnati, OH 45242",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@protecteducation.com",
+      "headquarters": "Blue Ash, OH",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(513) 640-6007",
+      "samUei": null,
+      "summary": "Protect|ED (Protect Education) is a company that sells air disinfection and purification equipment to K-12 schools. It offers NanoStrike air purification units for classrooms, athletic facilities, cafeterias and other school spaces. It describes itself as a team of healthcare, education and manufacturing professionals supporting school communities.",
+      "website": "https://www.protecteducation.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Air Disinfection & Purification for Schools & Classrooms - Protect|ED",
+        "url": "https://www.protecteducation.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - Protect|ED",
+        "url": "https://www.protecteducation.com/contact"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "TIPS Vendor Agreement - WCNSM Enterprise LLC dba Protect|ED",
+        "url": "https://tipsweb-prod.s3.us-east-2.amazonaws.com/assets/Vendorspdf/230804_CONTRACT_Medical_Protect_ED.pdf"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006797",
+    "notes": "The TIPS agreement (checked via pdftotext) names WCNSM Enterprise LLC dba Protect|ED at 10300 Alliance Rd, Blue Ash, OH, matching the agenda name, state and air-purification purchases. The website and contact page confirm the summary, phone, email and address, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

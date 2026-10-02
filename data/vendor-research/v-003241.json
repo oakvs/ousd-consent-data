@@ -7,7 +7,12 @@
     },
     {
       "detail": null,
-      "field": "source:https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000075488&type=10-K",
+      "field": "source:https://www.ousd.org/facilities-planning-management/about/facilities-department/sustainability/sustainability-services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
       "pass": true
     },
     {
@@ -24,49 +29,56 @@
   "key": "v-003241",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Legal name matches the SEC registrant 'PACIFIC GAS & ELECTRIC Co' (CIK 0000075488), a California-incorporated electric and gas utility, matching the agenda name 'Pacific Gas & Electric Company'",
-      "pge.com describes PG&E as delivering natural gas and electric service across northern and central California, which includes Oakland, consistent with an electrical vehicle charger installation at an Oakland school"
+      "Name matches: PG&E's own company profile page names the legal entity 'Pacific Gas and Electric Company'",
+      "OUSD's Sustainability Services page says 3 additional electric vehicle chargers were awarded to East Oakland Pride Elementary School through the PG&E Rebate Program, matching the agenda's East Oakland Pride Elementary EV Charger Installation Project",
+      "The OUSD page links to the PG&E EV Charge Schools program, matching the agenda's 'PG&E EV Charge Schools and Parks Program Contract'",
+      "PG&E is a utility serving Northern and Central California including Oakland, consistent with a facilities/electrical-charging contract"
     ],
     "key": "v-003241",
-    "notes": "Agenda gives San Francisco, CA, while current sources show headquarters in Oakland (300 Lakeside Drive); likely a historical or billing address difference, not confirmed. Could not locate or fetch a page for the 'EV Charge Schools and Parks' program (search budget exhausted, guessed URLs 404), so the OUSD-specific link is unverified. No general business phone or mailing address was cited; the 1-877-660-6789 number on pge.com is a residential customer service line and was left out. CA entity number and SAM UEI not checked.",
+    "notes": "Agenda lists San Francisco, CA, which was PG&E's former headquarters city; the company profile now lists Oakland. Same organization. Registry IDs and a mailing address were not verified, so they are left null.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "Oakland, CA",
-      "legalName": "Pacific Gas & Electric Co",
+      "legalName": "Pacific Gas and Electric Company",
       "orgType": "company",
-      "phone": null,
+      "phone": "1-877-660-6789",
       "samUei": null,
-      "summary": "Pacific Gas and Electric Company (PG&E) is a utility in California. It delivers natural gas and electric service to about 16 million people across northern and central California. It was incorporated in California in 1905.",
+      "summary": "Pacific Gas and Electric Company (PG&E) is an investor-owned utility that provides natural gas and electric service to about 16 million people across a 70,000-square-mile area of northern and central California. It is a subsidiary of PG&E Corporation and is headquartered in Oakland, California.",
       "website": "https://www.pge.com"
     },
     "sources": [
       {
         "supports": [
+          "legalName",
           "summary",
           "orgType",
-          "headquarters",
-          "website"
+          "website",
+          "phone",
+          "headquarters"
         ],
-        "title": "PG&E Company Information",
+        "title": "PG&E Company Profile",
         "url": "https://www.pge.com/en/about/company-information/company-profile.html"
       },
       {
-        "supports": [
-          "legalName",
-          "headquarters"
-        ],
-        "title": "Pacific Gas & Electric Co. - SEC EDGAR company information",
-        "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000075488&type=10-K"
+        "supports": [],
+        "title": "Sustainability Services - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/about/facilities-department/sustainability/sustainability-services"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003241",
+    "notes": "PG&E's company profile confirms the legal name, Oakland headquarters, 16 million customers, 70,000 sq mi territory, PG&E Corporation parent, phone and website; the OUSD sustainability page confirms the PG&E EV Charge Schools program and East Oakland Pride chargers, matching the agenda. The San Francisco agenda location is the former HQ city, so it is not a mismatch.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -1,17 +1,85 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://stemsoulteach.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nhmlac.org/teacher-advisory-council",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=6720472&GUID=FD4B3EEE-4D42-46A5-95C3-772B2FB05402&Options=&Search=",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009035",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "OUSD Legistar file 24-1406 lists a Services Agreement with STEMSoul Teach, LLC of Los Angeles, CA for summer instructor training, matching the agenda text and location",
+      "The Natural History Museum of Los Angeles County's Teacher Advisory Council page names STEMSoul TEACH, LLC, directed by DeAnna Lee-Rivers, and describes afterschool programs and summer camps, matching OUSD's after-school and summer program contracts",
+      "stemsoulteach.org describes curriculum development and teacher training and uses the same 'born from the belief' wording as the museum page's description of STEMSoul TEACH, LLC",
+      "Not confirmed: a separate nonprofit, STEMSOUL, INC. (California entity C4647505, EIN 85-4236716), is run by the same person, but no page cited here shows it is the same legal entity as the LLC, so no registry IDs are given"
+    ],
     "key": "v-009035",
-    "notes": "Not researched to a conclusion: the session's web search budget was exhausted, and direct fetches of guessed domains (stemsoul.com returned no content; stemsoulteach.com does not resolve) confirmed nothing. No candidate organization was verified, so nothing is filled in. Agenda names 'STEMSoul Teach, LLC' (Los Angeles, CA), an after-school and summer programs vendor; worth re-running once search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "The website does not state a legal entity type and shows no phone, email or address. A similarly named nonprofit, STEMSOUL, INC. (Diamond Bar/Los Angeles, CA), exists with the same director, but the link to STEMSoul TEACH, LLC is unverified, so registry IDs were left out. Confidence is medium because the website-to-LLC link rests on matching wording and name only.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "STEMSoul TEACH, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "STEMSoul develops science, technology, engineering and math (STEM) curriculum and teacher training programs. It uses a social justice approach and hands-on, culturally responsive learning. It also develops learning experiences for afterschool programs and summer camps.",
+      "website": "https://stemsoulteach.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us - StemSoul",
+        "url": "https://stemsoulteach.org/about-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "summary"
+        ],
+        "title": "Teacher Advisory Council",
+        "url": "https://nhmlac.org/teacher-advisory-council"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Oakland Unified School District - File #: 24-1406",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=6720472&GUID=FD4B3EEE-4D42-46A5-95C3-772B2FB05402&Options=&Search="
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

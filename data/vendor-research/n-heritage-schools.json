@@ -1,17 +1,109 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/870514958",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sd.cde.ca.gov/schooldirectory/details?cdscode=77764226131114",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.heritagertc.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-heritage-schools",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Heritage Schools Inc', Provo, UT, EIN 87-0514958 (ProPublica Nonprofit Explorer), matching the agenda location 'Provo, UT'",
+      "California Department of Education School Directory lists 'Heritage Schools, Inc.' at 5600 North Heritage School Dr., Provo, UT as an out-of-state Nonpublic Certified School, matching OUSD's 'Nonpublic, Nonsectarian School' special education master contract",
+      "The CDE directory lists website www.heritagertc.org, and that site (The Heritage Community) describes residential treatment academies for teens at the same Provo address"
+    ],
     "key": "n-heritage-schools",
-    "notes": "No credible candidate confirmed. The WebSearch budget for the session was exhausted, so only direct fetches were possible. heritageschools.org is Heritage International Public School in Durg, India (wrong organization). ProPublica Nonprofit Explorer returned no nonprofit matching 'Heritage Schools Provo'. Guessed domains did not resolve. Needs a retry with search available (agenda: Heritage Schools, Provo, UT; special education nonpublic school master contract).",
-    "profile": null,
-    "sources": []
+    "notes": "Operates publicly as 'The Heritage Community'. The website lists a main phone of 800-433-9413 and no general email; the phone given is the number in the CDE directory. No California entity number or SAM UEI looked up.",
+    "profile": {
+      "address": "5600 North Heritage School Dr., Provo, UT 84604",
+      "caEntityNumber": null,
+      "ein": "87-0514958",
+      "email": null,
+      "headquarters": "Provo, UT",
+      "legalName": "Heritage Schools Inc",
+      "orgType": "nonprofit",
+      "phone": "(801) 226-4600",
+      "samUei": null,
+      "summary": "A nonprofit based in Provo, Utah that runs residential treatment programs for teenagers, operating as the Heritage Community. Its academies offer mental health treatment, including programs for neurodiverse youth. It is certified as a nonpublic school in California's school directory.",
+      "website": "https://www.heritagertc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Heritage Schools Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/870514958"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Heritage Schools, Inc. - School Directory Details (CA Dept of Education)",
+        "url": "https://sd.cde.ca.gov/schooldirectory/details?cdscode=77764226131114"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "The Heritage Community",
+        "url": "https://www.heritagertc.org"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-heritage-schools",
+    "notes": "ProPublica, the CDE School Directory (out-of-state Nonpublic Certified School, Provo UT) and heritagertc.org all agree on name, address, phone, EIN and nonprofit status, matching the agenda's Provo, UT and the nonpublic school master contract. The summary is neutral and supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

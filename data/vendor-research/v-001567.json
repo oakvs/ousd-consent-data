@@ -1,17 +1,96 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://erplumbingsfbay.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildzoom.com/contractor/emergency-rooter-oakland",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?GUID=D888DAE7-8EED-44F6-915E-AC9FEC2B2F7A&ID=7660870&Options=&Search=",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-001567",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Emergency Rooter Construction' (erplumbingsfbay.com) and 'Emergency Rooter' (BuildZoom, CSLB license 729165), based in Oakland, CA, matching the agenda location",
+      "Website describes general engineering, plumbing, utility and sewer lateral (PSL) work, matching OUSD's sewer lateral repair, kitchen plumbing and lead abatement agreements for school buildings",
+      "OUSD Legistar file 25-2121 names 'Emergency Rooter, Oakland, CA' for the District-Wide Lead Abatement Project (plumbing pipe, fixture and sink work at school sites)"
+    ],
     "key": "v-001567",
-    "notes": "No credible candidate confirmed. The only organization found (emergencyrooter.com) is a plumbing company based in Los Angeles serving Southern California, with no mention of Oakland or school districts, so it was not accepted as a match for the Oakland, CA vendor. Web search was unavailable (session search budget exhausted), so no registry (CA Secretary of State, CSLB, SAM.gov) check was done. Needs a manual or later re-run.",
-    "profile": null,
-    "sources": []
+    "notes": "BuildZoom lists the business structure as sole ownership (a business operating under a trade name). The only general email on the site is a named person's address, so email was left null. Address comes from BuildZoom and search results, not the company's own site. A Yelp listing 'Emergency Rooter & Plumbing' (closed) at 801 98th Ave, Oakland appears to be an older listing. No Secretary of State, EIN or SAM.gov record was found.",
+    "profile": {
+      "address": "2346 E 20th St, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.388.0567",
+      "samUei": null,
+      "summary": "Emergency Rooter Construction is a licensed general engineering contractor based in Oakland, California. It describes itself as building infrastructure and providing utility solutions, including plumbing and sewer work, across the San Francisco Bay Area for over 30 years.",
+      "website": "https://erplumbingsfbay.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Emergency Rooter Construction",
+        "url": "https://erplumbingsfbay.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Emergency Rooter",
+        "url": "https://www.buildzoom.com/contractor/emergency-rooter-oakland"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District - File #: 25-2121",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?GUID=D888DAE7-8EED-44F6-915E-AC9FEC2B2F7A&ID=7660870&Options=&Search="
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001567",
+    "notes": "The Legistar file 25-2121 names Emergency Rooter, Oakland, CA for plumbing and lead abatement work at schools. That matches the Oakland CSLB #729165 general engineering contractor on erplumbingsfbay.com and BuildZoom. The summary, phone, address, headquarters and orgType are supported and neutral, and the named-person contacts were correctly left out.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

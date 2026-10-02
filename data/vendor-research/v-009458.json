@@ -12,6 +12,11 @@
     },
     {
       "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/garfield-elementary-school",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "phone",
       "pass": true
     },
@@ -29,17 +34,18 @@
   "key": "v-009458",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Swinerton's own website describes a construction company, matching OUSD's 'School buildings & construction' contracts for lease-leaseback building work",
-      "Swinerton lists an office in Oakland, CA, matching the agenda location 'Oakland, CA'"
+      "OUSD's Garfield Elementary School project page names 'Swinerton Builders' as the general contractor, matching the agenda's Garfield lease-leaseback contracts",
+      "Swinerton has an Oakland, CA office, matching the agenda location; Wikipedia says its construction division operates under the Swinerton Builders brand",
+      "Swinerton describes itself as a general contractor, matching OUSD's 'School buildings & construction' category"
     ],
     "key": "v-009458",
-    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) could be checked. The agenda name is 'Swinerton Builders, Inc.' but the website shows 'Swinerton Incorporated', so this may be a parent/subsidiary mismatch; legal name left null. No OUSD or Swinerton page found confirming the Garfield Elementary project. Phone and address are the Oakland regional office, not necessarily a main line or headquarters.",
+    "notes": "Contact details are for the Oakland regional office, not headquarters. Legal entity name, CA entity number and EIN not confirmed from a registry page, so left null. Swinerton Builders is the construction brand of Swinerton Incorporated.",
     "profile": {
-      "address": "10 Clay Street, Suite 275 | Oakland, CA 94607",
+      "address": "10 Clay Street, Suite 275, Oakland, CA 94607",
       "caEntityNumber": null,
       "ein": null,
       "email": null,
@@ -48,7 +54,7 @@
       "orgType": "company",
       "phone": "510.834.3711",
       "samUei": null,
-      "summary": "Swinerton is a construction company founded in 1888. It is 100% employee-owned and has 24 regional offices across the United States. It provides construction services for many types of projects, from tenant improvements to medical facilities.",
+      "summary": "Swinerton is a construction company that provides general contracting services, from small tenant improvements to large buildings and medical campuses. Founded in 1888, it says it is 100% employee-owned and works through regional offices across the United States.",
       "website": "https://swinerton.com/"
     },
     "sources": [
@@ -66,11 +72,22 @@
           "phone",
           "address"
         ],
-        "title": "Swinerton Oakland office",
+        "title": "Oakland - Swinerton",
         "url": "https://swinerton.com/locations/oakland/"
+      },
+      {
+        "supports": [],
+        "title": "Garfield Elementary School - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/projects/major-projects/current-projects/garfield-elementary-school"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009458",
+    "notes": "OUSD's Garfield Elementary project page lists Swinerton Builders (linking to swinerton.com) as general contractor, matching the agenda contracts. The Swinerton homepage supports the summary (general contractor, founded 1888, 100% employee-owned, 24 regional offices) and the Oakland office page supports the address and phone.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

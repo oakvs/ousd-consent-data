@@ -2,12 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.publicprofit.net",
+      "field": "source:https://www.publicprofit.net/",
       "pass": true
     },
     {
       "detail": null,
       "field": "source:https://www.publicprofit.net/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ofcy.org/evaluation/past-evaluation-reports/",
       "pass": true
     },
     {
@@ -27,6 +32,11 @@
     },
     {
       "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "website",
       "pass": true
     }
@@ -36,34 +46,37 @@
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Public Profit's own contact page gives an Oakland, CA address, matching the agenda location 'Oakland, CA'",
-      "Website describes evaluation, training and capacity building, and program design services, consistent with OUSD contract titles such as 'After School Programs Evaluation' and 'Universal Expanded Day Program Evaluation'"
+      "Public Profit's own website lists its office at 1624 Franklin, Suite 600, Oakland, CA 94612, matching the agenda location Oakland, CA",
+      "Its website describes evaluation, training and capacity building for mission-driven organizations, matching OUSD's after-school and student support program contracts",
+      "The Oakland Fund for Children and Youth (a City of Oakland program) hosts Public Profit's school-based after-school evaluation reports for Oakland schools, matching OUSD's after-school evaluation agreements"
     ],
     "key": "v-003483",
-    "notes": "Identity rests only on the organization's own website (Oakland address and evaluation services matching OUSD contract titles). No registry record (ProPublica, CA Secretary of State, SAM.gov) or OUSD-related page could be found or fetched, and the web search budget was exhausted, so legal name, org type and registry IDs are unconfirmed. A reviewer should confirm via CA Secretary of State and an OUSD page naming Public Profit before publishing.",
+    "notes": "No California Secretary of State entity number, EIN or SAM UEI could be confirmed on a fetchable page, so those fields are null. Organization type 'company' is inferred from it being a for-profit consulting firm (third-party listings describe it as an LLC); not confirmed in a registry.",
     "profile": {
       "address": "1624 Franklin, Suite 600, Oakland, CA 94612",
       "caEntityNumber": null,
       "ein": null,
       "email": "info@publicprofit.net",
       "headquarters": "Oakland, CA",
-      "legalName": null,
-      "orgType": null,
+      "legalName": "Public Profit",
+      "orgType": "company",
       "phone": "(510) 835-1669",
       "samUei": null,
-      "summary": "Public Profit offers evaluation services, training and capacity building, strategic program design, and data visualization for mission-driven organizations. It is based in Oakland, California.",
-      "website": "https://www.publicprofit.net"
+      "summary": "Public Profit is an Oakland, California consulting firm that works with mission-driven organizations such as nonprofits, schools and foundations. It provides evaluation services, training and capacity building, program design, and data visualization to help them measure their impact and use data in decisions.",
+      "website": "https://www.publicprofit.net/"
     },
     "sources": [
       {
         "supports": [
           "summary",
-          "website"
+          "orgType",
+          "website",
+          "legalName"
         ],
         "title": "Public Profit",
-        "url": "https://www.publicprofit.net"
+        "url": "https://www.publicprofit.net/"
       },
       {
         "supports": [
@@ -74,9 +87,23 @@
         ],
         "title": "Contact Us - Public Profit",
         "url": "https://www.publicprofit.net/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "Past Evaluation Reports - Oakland Fund for Children and Youth",
+        "url": "https://www.ofcy.org/evaluation/past-evaluation-reports/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003483",
+    "notes": "Identity is solid (Oakland address on the contact page; OFCY page lists Public Profit as evaluator of Oakland school-based after-school programs), and phone, email and address are confirmed. However the summary says it works with 'schools and foundations', which the homepage does not state (it says only nonprofits and mission-driven organizations), and orgType 'company' is not shown by any cited source.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary",
+      "orgType"
+    ],
+    "verdict": "rejected"
+  }
 }

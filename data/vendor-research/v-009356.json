@@ -1,17 +1,95 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lifeiloveschool.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/932934529",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009356",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Life I Love School' located in Oakland, CA (ProPublica Nonprofit Explorer, EIN 93-2934529), matching the agenda's Oakland, CA",
+      "Website describes school-based wellness programs for girls in grades 3-8 in Oakland schools, matching OUSD's 'Student health, support & family services' contracts",
+      "California Arts Council grant page says the organization partners with Madison Park Academy, an OUSD school that appears in the agenda's contract titles"
+    ],
     "key": "v-009356",
-    "notes": "Not researched: the WebSearch budget for this session was exhausted (200/200) and ProPublica Nonprofit Explorer returned HTTP 429. No candidate organization was found or verified, so this is an incomplete run, not evidence the vendor lacks a public presence. Re-run after the search limit is raised.",
-    "profile": null,
-    "sources": []
+    "notes": "Only a general inbox was used. The California Arts Council page lists what appears to be a residential apartment address, so no mailing address was recorded. No phone number found. Madison Park Academy partnership is from arts.ca.gov/grantee/life-i-love-school/.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "93-2934529",
+      "email": "hello@lifeiloveschool.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Life I Love School",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Life I Love School is an Oakland nonprofit that runs wellness programs for Black and Brown girls in schools. Its weekly program for grades 3-8 uses brain science and creative activities to build self-awareness and belonging. It also offers wellness circles for educators and parents, and trains wellness coaches.",
+      "website": "https://www.lifeiloveschool.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "orgType",
+          "legalName",
+          "ein"
+        ],
+        "title": "Life I Love School",
+        "url": "https://www.lifeiloveschool.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Life I Love School - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/932934529"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009356",
+    "notes": "Same organization: the Oakland 501(c)(3) (EIN 93-2934529) serves Reach Academy and Madison Park Academy, matching the agenda titles. But the summary says it 'trains wellness coaches', and the site only says programming is led by trained wellness coaches; it describes no coach-training program, so the summary overstates the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
 }

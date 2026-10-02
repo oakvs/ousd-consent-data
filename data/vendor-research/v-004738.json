@@ -2,6 +2,11 @@
   "checks": [
     {
       "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/203321544",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "source:https://www.youthuprising.org/",
       "pass": true
     },
@@ -27,6 +32,16 @@
     },
     {
       "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
       "field": "website",
       "pass": true
     }
@@ -34,33 +49,42 @@
   "key": "v-004738",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Organization's own website lists its address as 8711 MacArthur Blvd, Oakland, CA 94605, matching the agenda's 'Oakland, CA'",
-      "Website describes health, wellness, educational and career programming for youth ages 13-24, consistent with OUSD's 'Student health, support & family services' contracts"
+      "Name matches a registered 501(c)(3) nonprofit: 'Youth Uprising' (ProPublica Nonprofit Explorer, EIN 20-3321544), located in Oakland, CA, matching the agenda text",
+      "Website (youthuprising.org) shows an East Oakland address and describes health and wellness services for youth ages 13-24, matching OUSD's 'Student health, support & family services' contracts"
     ],
     "key": "v-004738",
-    "notes": "Medium confidence: no public registry (ProPublica returned 429, IRS returned 403) and no independent page linking the organization to OUSD or Castlemont High School was found (the Castlemont school homepage does not mention it). WebSearch budget was exhausted, so no registry IDs or legal name were obtained. Identity rests on matching name, Oakland location and service type.",
+    "notes": "caEntityNumber and samUei not looked up. Castlemont High School link not confirmed on the organization's website.",
     "profile": {
-      "address": "8711 MacArthur Blvd, Oakland, CA 94605",
+      "address": "8711 MacArthur Boulevard, Oakland, CA 94605",
       "caEntityNumber": null,
-      "ein": null,
+      "ein": "20-3321544",
       "email": "info@youthuprising.org",
       "headquarters": "Oakland, CA",
-      "legalName": null,
+      "legalName": "Youth Uprising",
       "orgType": "nonprofit",
       "phone": "510-777-9909",
       "samUei": null,
-      "summary": "Youth UpRising is a nonprofit in East Oakland that works to develop leadership among young people and improve the systems that affect them. It offers health, wellness, education, career, arts and cultural programs for youth and young adults ages 13 to 24 in Alameda County.",
+      "summary": "Youth UpRising is a nonprofit in East Oakland that serves young people ages 13 to 24 in Alameda County. Its programs include health and wellness services, career education, arts programming and civic engagement. It also works to improve systems that affect youth, such as public safety, education and housing.",
       "website": "https://www.youthuprising.org/"
     },
     "sources": [
       {
         "supports": [
-          "summary",
+          "legalName",
+          "ein",
           "orgType",
+          "headquarters"
+        ],
+        "title": "Youth Uprising - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/203321544"
+      },
+      {
+        "supports": [
+          "summary",
           "website",
           "phone",
           "address",
@@ -71,8 +95,8 @@
       },
       {
         "supports": [
-          "email",
           "phone",
+          "email",
           "address"
         ],
         "title": "Contact - Youth UpRising",
@@ -80,6 +104,12 @@
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004738",
+    "notes": "Name, Oakland location, 501(c)(3) status and EIN (ProPublica) and the website's health/wellness youth programming match OUSD's student health and support contracts; summary, phone, email and address are confirmed on youthuprising.org and its contact page. Only the Castlemont link is not shown on the site, but the profile does not claim it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

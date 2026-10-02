@@ -2,7 +2,37 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.welligent.com",
+      "field": "source:https://continuumcloud.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://continuumcloud.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://welligent.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,40 +44,66 @@
   "key": "v-007559",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Welligent's own site (welligent.com) describes cloud-based electronic health record software and says Welligent is part of ContinuumCloud, matching OUSD's agreement titles ('Electronic Health Records System', 'Continuum Cloud dba Welligent').",
-      "Product type (electronic health records for health and special education services) matches OUSD's Health Services and Special Education contracts, categorized as Technology."
+      "OUSD agenda titles describe the vendor as 'Continuum Cloud dba Welligent' and an assignment of an electronic health records contract to Continuum Cloud, LLC; ContinuumCloud, LLC's own About page lists Welligent as its electronic health record (EHR) product",
+      "ContinuumCloud's contact page gives headquarters at Tampa, FL, matching the agenda location 'Tampa, FL'",
+      "Welligent's website describes a cloud-based EHR serving Student Health, matching OUSD's Health Services and Special Education department contracts for 'Electronic Health Records System' maintenance and support"
     ],
     "key": "v-007559",
-    "notes": "Tampa, FL (from agenda) could not be confirmed: WebSearch budget was exhausted, so no registry (FL Sunbiz, CA SOS, SAM.gov) lookup was done, and the contact page redirected to a staging host. Only ownership by ContinuumCloud and the product match were verified. Needs registry confirmation before publishing.",
+    "notes": "OUSD's vendor name is 'Welligent, LLC'; OUSD agenda titles also say 'Continuum Cloud dba Welligent' and one item assigns the contract to Continuum Cloud, LLC. Welligent is a product/brand of ContinuumCloud, LLC, so legal name, phone, email and address come from the parent company's pages (ContinuumCloud, LLC). No registry IDs checked.",
     "profile": {
-      "address": null,
+      "address": "100 S Ashley Dr, Suite 1500, Tampa, FL 33602",
       "caEntityNumber": null,
       "ein": null,
-      "email": null,
-      "headquarters": null,
-      "legalName": null,
+      "email": "hello@continuumcloud.com",
+      "headquarters": "Tampa, FL",
+      "legalName": "ContinuumCloud, LLC",
       "orgType": "company",
-      "phone": null,
+      "phone": "(888) 871-1631",
       "samUei": null,
-      "summary": "Welligent makes cloud-based electronic health record software for behavioral health and human services organizations. The software handles documentation, scheduling, billing and caseload management. It is part of ContinuumCloud, a company that provides software for these organizations.",
-      "website": "https://www.welligent.com"
+      "summary": "Welligent is a cloud-based electronic health record (EHR) software platform for behavioral health and human services organizations, including mental health, public health and student health programs. It is part of ContinuumCloud, a company that offers cloud software for behavioral health and human services.",
+      "website": "https://welligent.com"
     },
     "sources": [
       {
         "supports": [
+          "legalName",
           "summary",
-          "orgType",
-          "website"
+          "orgType"
+        ],
+        "title": "About Us - ContinuumCloud",
+        "url": "https://continuumcloud.com/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - ContinuumCloud",
+        "url": "https://continuumcloud.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
         ],
         "title": "Welligent",
-        "url": "https://www.welligent.com"
+        "url": "https://welligent.com/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007559",
+    "notes": "OUSD agenda titles tie Welligent, LLC to Continuum Cloud dba Welligent (EHR contracts, Tampa, FL), matching ContinuumCloud, LLC, whose Welligent EHR product and Tampa HQ are confirmed on the cited pages. Summary, phone, general email and address are all shown on the cited pages and are neutral business contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

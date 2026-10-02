@@ -1,17 +1,109 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://grid-scape.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://grid-scape.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://grid-scape.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009558",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: company website's contact page lists 'Gridscape Solutions' with a US office in Fremont, CA, matching the agenda's 'Gridscape Solutions, Inc.' of Fremont, CA",
+      "Business matches the contract: Gridscape develops solar, battery and microgrid energy systems, consistent with OUSD's 'Solar Photovoltaics Phase 2' design-build contract and the Facilities Division",
+      "Gridscape has other Bay Area public-sector solar work (City of Fremont fire stations, Chabot College, Ava Community Energy microgrids), consistent with an Alameda County solar contractor"
+    ],
     "key": "v-009558",
-    "notes": "No credible candidate confirmed. WebSearch budget was exhausted for the session, and guessed domains either did not resolve or belonged to an unrelated site (gridscape.com is a Tennessee sports site). Re-queue when search is available.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry (CA Secretary of State, SAM.gov) page could be fetched, so entity number and UEI are null. Website contact page names the company 'Gridscape Solutions' without 'Inc.'; a 2018 City of Fremont document calls it 'Gridscape Solutions, LLC' while the agenda says 'Inc.', so entity form was not verified. Third-party listings give an older Fremont address (46711 Fremont Blvd); the official contact page address is used.",
+    "profile": {
+      "address": "40475 Encyclopedia Circle, Fremont, CA 94538",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "sales@grid-scape.com",
+      "headquarters": "Fremont, CA",
+      "legalName": "Gridscape Solutions",
+      "orgType": "company",
+      "phone": "+1 510-894-6030",
+      "samUei": null,
+      "summary": "Gridscape is a California company that develops and operates solar-plus-battery microgrids, which are local energy systems that can keep buildings powered during outages. It also offers electric vehicle charging and fleet electrification, and software called EnergyScope that manages energy use. It works with cities, colleges and other public and private customers in California.",
+      "website": "https://grid-scape.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - Gridscape",
+        "url": "https://grid-scape.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Gridscape",
+        "url": "https://grid-scape.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Gridscape",
+        "url": "https://grid-scape.com/about/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009558",
+    "notes": "Exact name match and Fremont, CA headquarters (contact page) fit the agenda's Gridscape Solutions, Inc. of Fremont, and a solar/microgrid developer fits a Solar PV design-build contract; no source ties it directly to OUSD, but no conflicting organization appeared. Contact fields, summary and customer types are supported by the cited pages and the summary is neutral; entity form (Inc. vs LLC) is unverified and not claimed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

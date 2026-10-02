@@ -1,17 +1,60 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cprnearme.com/location/cascade-training-center-ca-roseville/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    }
+  ],
   "key": "v-008540",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "medium",
+    "identitySignals": [
+      "Search results show Cascade Healthcare Services, LLC operates 'Cascade Training Center' sites, including one at 151 N Sunrise Ave, Suite 906, Roseville, CA, matching the agenda's dba name and Roseville location (official cascadetraining.com pages returned HTTP 403 to fetches, so this was seen only in search snippets)",
+      "Search results show Cascade Training Center also has an Oakland, CA location and trains nurses and staff in education and child care settings, which fits OUSD health services and special education contracts (also from search snippets only)",
+      "CPR Near Me directory lists 'Cascade Training Center' at 151 N Sunrise Ave #906, Roseville, CA 95661, a CPR and first-aid training provider"
+    ],
     "key": "v-008540",
-    "notes": "Not researched: the session's web search budget was exhausted (200 of 200) before any search ran, so no candidate organization was found or confirmed. A guessed domain (cascadetrainingcenter.com) did not resolve to this vendor and was not used. Needs a re-run once the search limit is raised. Not an individual: the agenda names Cascade Healthcare Services, LLC dba Cascade Training Center, Roseville, CA.",
-    "profile": null,
-    "sources": []
+    "notes": "Official site (cascadetraining.com), classes.chealthcare.com, Yelp and the CA SOS registry could not be fetched (403 or JS-only), so the legal name, website, org type and registry IDs are unverified and left null. Contact details come from a third-party directory, not the organization. The Roseville address may be a training site rather than the legal headquarters. Not publishable at medium confidence.",
+    "profile": {
+      "address": "151 N Sunrise Ave #906, Roseville, CA 95661",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Roseville, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "(916) 905-0030",
+      "samUei": null,
+      "summary": "Cascade Training Center is a provider of American Heart Association certified courses, such as CPR, Basic Life Support, Automated External Defibrillator use and first aid, with a training center in Roseville, California.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cascade Training Center - Health - 151 N Sunrise Ave 906, Roseville, CA 95661 - CPR Near Me",
+        "url": "https://cprnearme.com/location/cascade-training-center-ca-roseville/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

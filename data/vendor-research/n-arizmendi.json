@@ -1,17 +1,60 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://arizmendibakery.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-arizmendi",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "Name 'Arizmendi' matches Arizmendi Bakery, a worker-owned cooperative bakery in Oakland, CA (arizmendibakery.com), consistent with the agenda location Oakland, CA",
+      "NOT confirmed: no page found linking Arizmendi to OUSD's ECCCO internship program; the agenda gives only the single word 'Arizmendi', and several separate Arizmendi cooperatives and an Arizmendi Association exist in the Bay Area"
+    ],
     "key": "n-arizmendi",
-    "notes": "Ambiguous: 'Arizmendi' could be the Arizmendi Association of Cooperatives (Oakland) or one of several member bakeries/cooperatives. No page fetched linked any of them to OUSD's ECCCO workplace training partnership, and the web search budget was exhausted, so identity could not be confirmed with two independent signals.",
-    "profile": null,
-    "sources": []
+    "notes": "Low confidence: could not tie 'Arizmendi' to the OUSD ECCCO workplace training MOU. Could be the Lakeshore bakery, another Arizmendi cooperative, or the Arizmendi Association. Do not publish without human review of the actual MOU.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 268-8849",
+      "samUei": null,
+      "summary": "A worker-owned cooperative bakery on Lakeshore Avenue in Oakland, California, opened in 1997. It is one of several separately owned Arizmendi bakery cooperatives in the San Francisco Bay Area.",
+      "website": "https://arizmendibakery.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "About Us - Arizmendi Bakery",
+        "url": "https://arizmendibakery.com/about"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

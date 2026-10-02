@@ -1,17 +1,105 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://eastbayconsortium.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eastbayconsortium.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cep.berkeley.edu/east-bay-consortium-of-educational-institutions-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-east-bay-solano-county-consortium",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "UC Berkeley Center for Educational Partnerships lists 'East Bay Solano County Consortium (EBSCC)' and links to eastbayconsortium.org as its website, the site of The East Bay Consortium of Educational Institutions, Inc.",
+      "Located in Oakland, CA, matching the agenda text",
+      "Registered 501(c)(3) nonprofit 'East Bay Consortium of Educational Institutions' in Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Its website lists college advising at Oakland high schools such as Castlemont, Fremont, Life Academy, McClymonds and MetWest, consistent with a data sharing agreement with OUSD's high school Linked Learning office"
+    ],
     "key": "n-east-bay-solano-county-consortium",
-    "notes": "Research could not be completed: the session's WebSearch budget was exhausted (200 of 200) before any search ran, so no candidate organization was found or verified. Re-run once the limit is raised. The agenda text suggests a regional Linked Learning (high school career pathways) partnership, but that is unverified.",
-    "profile": null,
-    "sources": []
+    "notes": "The name 'East Bay Solano County Consortium' does not appear on the organization's own website; the equivalence rests on the UC Berkeley CEP page and Cal-SOAP listings (the project is known as the East Bay and Solano County Cal-SOAP). No main phone number is published on the site; EIN left null because the ProPublica page was not cited.",
+    "profile": {
+      "address": "PO Box 31674, Oakland, CA 94604",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@eastbayconsortium.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "The East Bay Consortium of Educational Institutions, Inc.",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that is one of the California Student Opportunity and Access Projects (Cal-SOAP) administered by the California Student Aid Commission. It provides college advising, academic enrichment, tutoring, mentoring and financial aid workshops to help East Bay students finish high school and enroll in college.",
+      "website": "https://eastbayconsortium.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - East Bay Consortium",
+        "url": "https://eastbayconsortium.org/about-us/"
+      },
+      {
+        "supports": [
+          "email",
+          "address"
+        ],
+        "title": "Contact Us - East Bay Consortium",
+        "url": "https://eastbayconsortium.org/contact-us/"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "CEP Programs - East Bay Consortium of Educational Institutions, Inc.",
+        "url": "https://cep.berkeley.edu/east-bay-consortium-of-educational-institutions-inc"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-east-bay-solano-county-consortium",
+    "notes": "The CEP page lists East Bay Solano County Consortium (EBSCC) linking to eastbayconsortium.org, and search results confirm EBSCC is the East Bay and Solano County Cal-SOAP run by The East Bay Consortium of Educational Institutions, Inc. in Oakland; legal name, Cal-SOAP status, services, PO Box and info@ email are all shown on the About and Contact pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

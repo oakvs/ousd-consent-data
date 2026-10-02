@@ -1,17 +1,107 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://gdvi.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://gdvi.net/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.globenewswire.com/news-release/2003/10/23/302083/2716/en/Global-Diversified-Industries-Inc-Commenced-Delivery-on-Six-Modular-Buildings-with-a-Contract-Value-of-Approximately-1-000-000-for-California-s-Fifth-Largest-School-District.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-008477",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Company website (gdvi.net, reached from globalmodular.net) names 'Global Modular, Inc.' at 450 Commerce Ave. Atwater, CA 95301, matching the agenda name and the 'Atwater, CA' location",
+      "Website describes modular relocatable school buildings and classrooms, matching OUSD's 'School buildings & construction' contracts; the Fremont High School project included new modular classroom buildings",
+      "A 2003 press release says Global Modular, Inc. delivered six modular buildings ordered by Oakland Unified School District, showing a prior working relationship with OUSD"
+    ],
     "key": "v-008477",
-    "notes": "Not researched to a conclusion: the session's WebSearch budget (200 calls) was exhausted, and direct fetches found nothing usable (globalmodular.com redirects to a domain-for-sale page; globalmodularinc.com does not resolve). No credible candidate was confirmed for Global Modular, Inc. (Atwater, CA; Fremont High School Modernization design-build). Re-queue after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION.",
-    "profile": null,
-    "sources": []
+    "notes": "Registry IDs (EIN, CA entity number, SAM UEI) were not looked up. Website domain gdvi.net belongs to the parent, Global Diversified Industries, but globalmodular.net redirects there and the pages present Global Modular, Inc. The 2003 press release placed the parent in Chowchilla, CA; the company's current site gives Atwater.",
+    "profile": {
+      "address": "450 Commerce Ave. Atwater, CA 95301",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Atwater, CA",
+      "legalName": "Global Modular, Inc.",
+      "orgType": "company",
+      "phone": "(866) 306-3700",
+      "samUei": null,
+      "summary": "Global Modular, Inc. designs, manufactures and installs modular buildings in California. Its products include relocatable classrooms, cafeterias, gymnasiums, laboratories, child care centers, restrooms and administrative buildings, mainly for schools and other institutions.",
+      "website": "https://gdvi.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Global Modular, Inc.",
+        "url": "https://gdvi.net/"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About GDVI",
+        "url": "https://gdvi.net/about"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Global Diversified Industries, Inc. Commenced Delivery on Six Modular Buildings for California's Fifth Largest School District",
+        "url": "https://www.globenewswire.com/news-release/2003/10/23/302083/2716/en/Global-Diversified-Industries-Inc-Commenced-Delivery-on-Six-Modular-Buildings-with-a-Contract-Value-of-Approximately-1-000-000-for-California-s-Fifth-Largest-School-District.html"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008477",
+    "notes": "The cited company pages show Global Modular, Inc. at 450 Commerce Ave., Atwater, CA 95301, (866) 306-3700, which matches the agenda name and location. The page says the company designs, builds and installs modular school-type buildings. A 2003 press release names Global Modular as a subsidiary that delivered six buildings to OUSD. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

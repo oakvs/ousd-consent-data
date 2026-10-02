@@ -1,17 +1,120 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/821426126",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seal.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seal.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seal.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009125",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Sobrato Early Academic Language Program', EIN 82-1426126, Milpitas, CA (ProPublica Nonprofit Explorer), matching the agenda's Milpitas, CA",
+      "Official site seal.org describes professional development for English Learners and Dual Language Learners, matching OUSD's English Language Learner and Multilingual Achievement department contracts",
+      "seal.org references Oakland Unified School District (OUSD) as a district partnering with SEAL"
+    ],
     "key": "v-009125",
-    "notes": "Research could not be completed: the session's web search budget was exhausted, so no candidate could be found. Direct fetches of guessed URLs failed (DNS errors, 404s, a 429 from ProPublica). The only page that loaded, sobrato.com/contact, is for The Sobrato Organization (a real estate and philanthropy group in Mountain View), not the SEAL program or the Milpitas-listed entity, so it was not used. SEAL appears to be a program connected to Sobrato Philanthropies, but the legal entity that contracts with OUSD (nonprofit, company or other) is unconfirmed. Needs a rerun with search available.",
-    "profile": null,
-    "sources": []
+    "notes": "Address left null: seal.org/donate shows a mailing address of 382 S Abbott Ave, Milpitas, CA 95035, while directories list 521 Valley Way, Milpitas, CA 95035; the two conflict. No California SOS entity number or SAM UEI checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "82-1426126",
+      "email": "hello@seal.org",
+      "headquarters": "Milpitas, CA",
+      "legalName": "Sobrato Early Academic Language Program",
+      "orgType": "nonprofit",
+      "phone": "408.256.0247",
+      "samUei": null,
+      "summary": "A nonprofit based in Milpitas, California, that supports schools and districts that serve English Learners and Dual Language Learners. It provides professional development, coaching and implementation support to help teachers build students' language and literacy skills, especially in preschool through third grade.",
+      "website": "https://www.seal.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Sobrato Early Academic Language Program - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/821426126"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About SEAL",
+        "url": "https://www.seal.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact SEAL",
+        "url": "https://www.seal.org/contact"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "SEAL",
+        "url": "https://www.seal.org/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009125",
+    "notes": "ProPublica confirms the 501(c)(3) Sobrato Early Academic Language Program (EIN 82-1426126) in Milpitas, CA, matching the agenda; seal.org lists OUSD as a district partner and confirms the EL/DLL professional development, preschool-3rd grade scope, phone and general email. Summary is neutral and supported; address was correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

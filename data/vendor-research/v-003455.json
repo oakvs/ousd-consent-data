@@ -2,7 +2,12 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.intertek.com/psi/",
+      "field": "source:https://www.intertek.com/building/psi/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.intertek.com/building/psi/locations/california/oakland/",
       "pass": true
     },
     {
@@ -24,15 +29,17 @@
   "key": "v-003455",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Legal name 'Professional Service Industries, Inc.' (abbreviated PSI) appears in OUSD agenda titles and matches the Intertek PSI Solutions page, which names 'Professional Service Industries, Inc. (Intertek-PSI)'",
-      "Intertek PSI offers environmental consulting, testing and inspection services, consistent with OUSD facilities contracts for asbestos (AHERA) work and construction modernization projects"
+      "Legal name 'Professional Service Industries, Inc.' (Intertek-PSI) matches the agenda's 'Professional Service Industries, Inc., (PSI)'",
+      "Provides environmental consulting, industrial hygiene, geotechnical and construction testing services, consistent with OUSD's asbestos (AHERA) and facilities project contracts",
+      "Has an Oakland, CA office (4703 Tidewater Avenue) serving Alameda County, consistent with an Oakland school district contract",
+      "Illinois-based company (agenda lists Chicago, IL); exact headquarters address not confirmed on cited pages"
     ],
     "key": "v-003455",
-    "notes": "Only one source was available because the web search budget was exhausted. The agenda gives Chicago, IL, but the Intertek PSI pages did not confirm a Chicago or Illinois office, and no registry (CA Secretary of State, SAM.gov) was checked. Needs a reviewer or a re-run with search before publishing. Terraphase Engineering also appears in one OUSD title and is a separate entity.",
+    "notes": "Headquarters location and registry IDs (CA entity number, SAM UEI) not verified from fetchable pages; secondary sources conflict on HQ (Oakbrook Terrace vs Arlington Heights, IL), so address/headquarters left null. Website is Intertek's PSI page since psiusa.com redirects there. Phone is the main number shown on that page.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
@@ -43,8 +50,8 @@
       "orgType": "company",
       "phone": "+1 800 967 5352",
       "samUei": null,
-      "summary": "Professional Service Industries, Inc. (PSI) is a United States company that provides construction testing and inspection, geotechnical, environmental consulting, industrial hygiene and specialty testing services. It is owned by Intertek, a global quality assurance company.",
-      "website": "https://www.intertek.com/psi/"
+      "summary": "Professional Service Industries, Inc. (also called Intertek-PSI) is a company, part of Intertek, that provides construction assurance, testing and inspection for civil and commercial construction. Its services include construction materials testing, geotechnical engineering, environmental consulting and industrial hygiene. It operates through a national network of offices and laboratories, including an office in Oakland, California.",
+      "website": "https://www.intertek.com/building/psi/"
     },
     "sources": [
       {
@@ -55,11 +62,24 @@
           "website",
           "phone"
         ],
-        "title": "Intertek PSI Solutions",
-        "url": "https://www.intertek.com/psi/"
+        "title": "Intertek PSI",
+        "url": "https://www.intertek.com/building/psi/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Intertek PSI Oakland",
+        "url": "https://www.intertek.com/building/psi/locations/california/oakland/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003455",
+    "notes": "Legal name Professional Service Industries, Inc. (Intertek-PSI) matches the agenda; the Intertek PSI pages show construction testing, geotechnical, environmental consulting and industrial hygiene, and the Oakland office page lists asbestos surveys, which fits the AHERA and facilities contracts. Summary, website and phone are supported by the cited pages and the wording is neutral; headquarters and address were correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

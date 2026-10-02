@@ -1,17 +1,105 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cal-inc.com/classes/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/calinc-training-llc-10076920/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-000851",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: agenda 'CALINC Training, LLC' matches the legal name 'CALINC TRAINING LLC' in the federal SAM-derived registry listing (HigherGov) and on cal-inc.com",
+      "Located in Vacaville, CA, matching the agenda text (2040 Peabody Road, Suite 400, Vacaville, CA 95687)",
+      "Company offers asbestos, lead and hazardous-materials abatement and safety training, consistent with a Risk Management Department services agreement; its website says it serves Oakland, Sacramento and Vacaville"
+    ],
     "key": "v-000851",
-    "notes": "Not researched: the session's WebSearch budget (200 of 200) was exhausted, so no candidate organization could be identified or confirmed. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Agenda text: CALINC Training, LLC, Vacaville, CA (Risk Management Department services agreements).",
-    "profile": null,
-    "sources": []
+    "notes": "Email is the training department's general inbox, not a named person. California Secretary of State entity number not checked (registry not fetched); EIN not applicable/not found. UEI taken from HigherGov's mirror of SAM.gov data, not SAM.gov directly.",
+    "profile": {
+      "address": "2040 Peabody Road, Suite 400, Vacaville, CA 95687",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "training@cal-inc.com",
+      "headquarters": "Vacaville, CA",
+      "legalName": "CALINC Training, LLC",
+      "orgType": "company",
+      "phone": "(800) 359-4467",
+      "samUei": "GHR6NXGXEEZ7",
+      "summary": "CALINC Training, LLC does business as CAL INC. It is a California company that provides asbestos, lead and mold abatement, demolition and general construction services. It also runs environmental, safety and hazardous-materials training classes for EPA, OSHA and California Department of Public Health certifications.",
+      "website": "https://cal-inc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Environmental, Safety, and HazMat Training Classes | EPA, CDPH, OSHA Certifications",
+        "url": "https://cal-inc.com/classes/"
+      },
+      {
+        "supports": [
+          "samUei",
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Calinc Training (GHR6NXGXEEZ7)",
+        "url": "https://www.highergov.com/awardee/calinc-training-llc-10076920/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000851",
+    "notes": "The legal name CALINC Training, LLC and the Vacaville, CA address match the agenda, and the company does business as CAL INC, matching the Cal Inc. agreement titles. The Risk Management services agreements fit an abatement and safety-training firm. cal-inc.com and HigherGov support the summary, contact fields and UEI; the email is a general training inbox.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

@@ -2,11 +2,6 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.bizprofile.net/ca/santa-clara/moka-engineering-and-construction",
-      "pass": true
-    },
-    {
-      "detail": null,
       "field": "source:https://www.buildzoom.com/contractor/moka-engineering-construction-llc",
       "pass": true
     },
@@ -22,11 +17,6 @@
     },
     {
       "detail": null,
-      "field": "caEntityNumber",
-      "pass": true
-    },
-    {
-      "detail": null,
       "field": "legalName",
       "pass": true
     }
@@ -38,49 +28,41 @@
   "research": {
     "confidence": "medium",
     "identitySignals": [
-      "Name matches a California LLC: 'Moka Engineering And Construction LLC' (bizprofile.net filing information, entity 202027910050), located in Santa Clara, CA, matching the agenda location",
-      "Holds an active California General Building contractor license (#1079408) at 3315 Montgomery Dr, Santa Clara, consistent with OUSD's 'School buildings & construction' contracts (BuildZoom)",
-      "Search listings (not fetched) describe a Moka Construction award for OUSD's Stonehurst Elementary Phase II Site Improvements, matching an agenda item; not independently confirmed on a fetched page"
+      "Name matches 'Moka Engineering & Construction LLC' (BuildZoom, California Contractors State License Board data, license 1079408, General Building and General Engineering)",
+      "Located in Santa Clara, CA, matching the agenda text",
+      "A licensed construction contractor, matching OUSD's 'School buildings & construction' contracts",
+      "Could not confirm via the Secretary of State, SAM.gov, the company's own website (mokaconstruction.com returned 404) or a public page linking it to OUSD; the 'Inc.' vs 'LLC' naming in the agenda is also inconsistent"
     ],
     "key": "v-009178",
-    "notes": "Agenda names both 'Inc.' and 'LLC' variants; the only registry match found is an LLC (formed 2020). The company's own website (mokaconstruction.com) returned 404 on fetch, so website and email are left null. The OUSD award link came only from search-result snippets and was not confirmed on a fetched page. Agenda 'Inc.' naming is a discrepancy worth a reviewer check. Registry data came from a third-party aggregator, not the CA Secretary of State directly.",
+    "notes": "Only third-party aggregator pages (BuildZoom, BBB, BizProfile) were found; no registry or official website could be fetched. BizProfile lists CA entity number 202027910050 but with a Texas state of formation, so it was left out. Aggregators mention www.mokaconstruction.com but it returned 404. Needs manual verification against CA SOS and CSLB before publishing.",
     "profile": {
-      "address": "3315 Montgomery Dr., Unit 312, Santa Clara, CA 95054",
-      "caEntityNumber": "202027910050",
+      "address": "3315 Montgomery Dr, Santa Clara, CA 95054",
+      "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": "Santa Clara, CA",
-      "legalName": "Moka Engineering And Construction LLC",
+      "legalName": "Moka Engineering & Construction LLC",
       "orgType": "company",
       "phone": "(650) 383-0245",
       "samUei": null,
-      "summary": "A licensed general contractor based in Santa Clara, California. It does construction work in the San Francisco Bay Area, including seismic retrofitting, foundation repair, cast-in-place concrete and deep excavation.",
+      "summary": "A licensed general building and general engineering contractor based in Santa Clara, California. Public contractor listings show it does foundation repair, seismic retrofitting and related construction work.",
       "website": null
     },
     "sources": [
       {
         "supports": [
           "legalName",
-          "caEntityNumber",
-          "address",
-          "headquarters",
-          "orgType"
-        ],
-        "title": "Moka Engineering And Construction LLC Santa Clara, CA - filing information",
-        "url": "https://www.bizprofile.net/ca/santa-clara/moka-engineering-and-construction"
-      },
-      {
-        "supports": [
           "summary",
+          "orgType",
           "phone",
-          "headquarters",
-          "orgType"
+          "address",
+          "headquarters"
         ],
-        "title": "Moka Engineering & Construction",
+        "title": "Moka Engineering & Construction LLC - BuildZoom",
         "url": "https://www.buildzoom.com/contractor/moka-engineering-construction-llc"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

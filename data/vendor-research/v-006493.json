@@ -2,7 +2,17 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.fm3research.com/about",
+      "field": "source:https://fm3research.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://fm3research.com/clients_category/education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
       "pass": true
     },
     {
@@ -14,40 +24,53 @@
   "key": "v-006493",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "low",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: agenda says 'FM3 Research'; fm3research.com describes 'FM3 Research' (Fairbank, Maslin, Maullin, Metz & Associates), an opinion research firm that conducts surveys and focus groups",
-      "Services plausibly match OUSD's Student Assignment Department and Office of General Counsel survey/research agreements; the firm has Bay Area offices, but no page fetched confirmed a Berkeley address or any OUSD work"
+      "Agenda name 'FM3 Research' matches the firm's own brand: Fairbank, Maslin, Maullin, Metz & Associates (FM3 Research), a California opinion research firm (fm3research.com)",
+      "FM3's own Education clients page lists Oakland Unified School District as a client",
+      "FM3 has Bay Area (Oakland) and Los Angeles offices, consistent with the Berkeley, CA location in the agenda text (Bay Area); survey/opinion research fits the Student Assignment and General Counsel departments that contracted them"
     ],
     "key": "v-006493",
-    "notes": "Web search budget was exhausted, so no registry (CA Secretary of State, SAM.gov) or independent third-party page could be checked. Only the firm's own website was available. The site shows no address, phone or email in fetchable text, does not mention Berkeley or school districts, and the agenda location (Berkeley) could not be confirmed. Needs a re-run with search available before publishing.",
+    "notes": "Agenda gives Berkeley, CA; FM3's site and a third-party city page describe offices in Oakland and Los Angeles, and no Berkeley address was found, so no address or headquarters is given. The firm's site shows no phone or general email (contact form only). No registry (CA SOS, SAM.gov) page was fetched, so no entity number or UEI is given. A City of Oswego page lists the name with 'Inc.' but was not cited.",
     "profile": {
       "address": null,
       "caEntityNumber": null,
       "ein": null,
       "email": null,
       "headquarters": null,
-      "legalName": null,
+      "legalName": "Fairbank, Maslin, Maullin, Metz & Associates",
       "orgType": "company",
       "phone": null,
       "samUei": null,
-      "summary": "FM3 Research is an opinion research firm founded in 1981. It conducts surveys and focus groups for political campaigns, government agencies, nonprofits and businesses to understand public opinion. It has offices in California and Oregon.",
-      "website": "https://www.fm3research.com/"
+      "summary": "FM3 Research is a California public opinion research firm that began in 1981. It runs surveys, focus groups and other research for government agencies, nonprofits, businesses and campaigns, and gives strategic advice based on the results.",
+      "website": "https://fm3research.com/"
     },
     "sources": [
       {
         "supports": [
+          "legalName",
           "summary",
           "orgType",
           "website"
         ],
-        "title": "About FM3 Research",
-        "url": "https://www.fm3research.com/about"
+        "title": "About Us - Fairbank, Maslin, Maullin, Metz & Associates (FM3)",
+        "url": "https://fm3research.com/about-us/"
+      },
+      {
+        "supports": [],
+        "title": "Education Archives - Fairbank, Maslin, Maullin, Metz & Associates (FM3)",
+        "url": "https://fm3research.com/clients_category/education/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006493",
+    "notes": "The FM3 About page confirms the legal name, 1981 start, survey and focus-group services, client types and Bay Area presence, and its Education clients page lists Oakland Unified as a client. The opinion-research service fits the Student Assignment and General Counsel contracts, and the summary is neutral and supported; the Berkeley agenda location is a small unresolved difference but the profile gives no address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

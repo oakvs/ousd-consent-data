@@ -1,17 +1,86 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://hpanation.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hpanation.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hpanation.com/school-programs/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009657",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'High Performance Academy' (hpanation.com), the name used in the OUSD agenda",
+      "Based in Clovis, CA (primary headquarters with indoor soccer center), matching the agenda location 'Clovis, CA'",
+      "Website describes before/after-school and summer learning programs, matching OUSD's 'After-school & summer programs' contract category"
+    ],
     "key": "v-009657",
-    "notes": "No credible candidate confirmed. The session's web search budget was exhausted, so no web searches could be run. ProPublica Nonprofit Explorer shows no California nonprofit named 'High Performance Academy'. highperformanceacademy.com redirects to an unrelated personal-development offer (growthday.com), which does not match a Clovis, CA after-school provider. Needs a manual lookup (CA Secretary of State, Clovis-area search).",
-    "profile": null,
-    "sources": []
+    "notes": "No registry record (EIN, CA SOS, SAM.gov) was found, so legal name and organization type (nonprofit vs company) are unconfirmed. No Oakland mention on the site; identity rests on name, Clovis location and after-school program match. Contact page only offers a texting number and a form, so no phone, email or address given.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Clovis, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": null,
+      "samUei": null,
+      "summary": "High Performance Academy (HPA) is an organization based in Clovis, California, founded in 2012. It runs soccer training, youth sports and enrichment programs, including before-school and after-school programs, summer learning and camps, at schools and sites across California.",
+      "website": "https://hpanation.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "High Performance Academy - Fresno",
+        "url": "https://hpanation.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "About Us - High Performance Academy",
+        "url": "https://hpanation.com/about-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "School Programs - High Performance Academy",
+        "url": "https://hpanation.com/school-programs/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009657",
+    "notes": "Name, Clovis CA base and before/after-school, summer and community-schools programs match the OUSD agenda record, so identity is plausible (no Oakland mention on the site, but the agenda location matches). The summary's 'at schools and sites across California' overstates the sources, which show only Central Valley sites (Madera, Fresno, Clovis), so the summary is flagged; website and headquarters are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
 }

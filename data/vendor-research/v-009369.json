@@ -1,17 +1,53 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cds-doors.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "v-009369",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
   "publishable": false,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "low",
+    "identitySignals": [
+      "Business named 'Commercial Door Solutions' has a website (cds-doors.com) describing itself as based in Napa, California, matching the agenda location 'Napa, CA'",
+      "The business repairs, maintains and installs commercial doors, which is plausible for a Nutrition Services operations contract, but no page mentions schools, OUSD or food service",
+      "NOT confirmed: no registry record (California Secretary of State, SAM.gov) was found; the contact page gives a Vallejo street address while the home page says Napa, and search snippets show a different phone number (707-365-7241) and a second, apparently unrelated site (commercialdoors.co) using the same name"
+    ],
     "key": "v-009369",
-    "notes": "No credible candidate confirmed. The only 'Commercial Door Solutions' site found (commercialdoorsolutions.com) is in New Haven, MO, which contradicts the agenda location of Napa, CA, so it was rejected. Web search budget was exhausted, so registry (CA SOS, SAM.gov) lookups for a Napa entity could not be done.",
-    "profile": null,
-    "sources": []
+    "notes": "Candidate only. No registry confirmation and no link to OUSD found. Conflicting location (Napa vs Vallejo address on contact page) and conflicting phone numbers across sources; the only email shown is a named individual's, so it was omitted. Not suitable for publication without a Secretary of State record or other tie to the district.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": null,
+      "phone": null,
+      "samUei": null,
+      "summary": "Commercial Door Solutions is a business that sells, services and installs commercial doors, dock levelers and gate systems for businesses in the North Bay area of California.",
+      "website": "https://cds-doors.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Doors, Commercial - Commercial Door Solutions - Napa, California",
+        "url": "https://cds-doors.com/"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
+  "researchedAt": "2026-10-02",
   "review": null
 }

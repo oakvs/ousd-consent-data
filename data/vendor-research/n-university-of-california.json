@@ -2,11 +2,6 @@
   "checks": [
     {
       "detail": null,
-      "field": "source:https://www.universityofcalifornia.edu/about-us",
-      "pass": true
-    },
-    {
-      "detail": null,
       "field": "source:https://www.universityofcalifornia.edu/",
       "pass": true
     },
@@ -18,6 +13,11 @@
     {
       "detail": null,
       "field": "source:https://www.ucop.edu/about/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://compass.ucop.edu/",
       "pass": true
     },
     {
@@ -39,16 +39,16 @@
   "key": "n-university-of-california",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "medium",
+    "confidence": "high",
     "identitySignals": [
-      "Name matches: the University of California system, whose headquarters is the Office of the President (ucop.edu/about)",
-      "Location matches the agenda text: the Office of the President is at 1111 Franklin Street, Oakland, CA 94607 (ucop.edu)",
-      "NOT confirmed: the agenda names the 'High School Linked Learning Office', but no fetched page described that office or a school subscriber program, so the exact contracting unit is unverified"
+      "Agenda names 'University of California' in Oakland, CA; the University of California Office of the President (UCOP), the system headquarters, is in Oakland, CA (ucop.edu)",
+      "The agenda title 'Statement of Work School Subscriber ... and Terms of Service and Privacy Policy' matches the School Subscriber agreement used by the UC Transcript Evaluation Service (now UC Compass), a program administered by UCOP that provides A-G course completion data to California school districts",
+      "The contract type 'Partnerships & data sharing' for a high school office matches UC Compass, which shares A-G completion data with district high schools"
     ],
     "key": "n-university-of-california",
-    "notes": "Searches were unavailable (budget exhausted), so the Linked Learning office could not be confirmed. The profile describes the whole UC system and its Oakland headquarters; the contracting unit may be a separate office. Reviewer should confirm before publishing.",
+    "notes": "Specific UC unit inferred as UCOP (UC Compass / Transcript Evaluation Service) from the agenda title wording; the board item itself was not fetched. No phone or general email found on cited pages, so left null. Legal name 'The Regents of the University of California' not confirmed on a cited page.",
     "profile": {
       "address": "1111 Franklin Street, Oakland, CA 94607",
       "caEntityNumber": null,
@@ -59,23 +59,16 @@
       "orgType": "public_agency",
       "phone": null,
       "samUei": null,
-      "summary": "The University of California is a public university system with 10 campuses, six academic health centers and three national laboratories, serving more than 300,000 students. It was founded in 1869. The system is governed by a Board of Regents and administered from the Office of the President in Oakland, California.",
+      "summary": "The University of California is a public university system with 10 campuses, 6 academic health centers and 3 national laboratories, serving over 300,000 students. Its Office of the President, in Oakland, is the system headquarters and runs systemwide programs, including UC Compass, which gives California school districts data on student progress toward UC and CSU course requirements.",
       "website": "https://www.universityofcalifornia.edu/"
     },
     "sources": [
       {
         "supports": [
+          "legalName",
           "summary",
           "orgType",
-          "legalName"
-        ],
-        "title": "About us | University of California",
-        "url": "https://www.universityofcalifornia.edu/about-us"
-      },
-      {
-        "supports": [
-          "website",
-          "legalName"
+          "website"
         ],
         "title": "University of California",
         "url": "https://www.universityofcalifornia.edu/"
@@ -90,13 +83,27 @@
       },
       {
         "supports": [
+          "summary",
           "headquarters"
         ],
-        "title": "About UC Office of the President",
+        "title": "About UCOP",
         "url": "https://www.ucop.edu/about/index.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Compass",
+        "url": "https://compass.ucop.edu/"
       }
     ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-university-of-california",
+    "notes": "University of California (UCOP, Oakland) fits the agenda's Oakland location and a no-cost School Subscriber data-sharing agreement, which matches UC Compass; the cited pages support the summary (10 campuses, 6 health centers, 3 labs, 300,000+ students, UCOP in Oakland, Compass A-G data for districts), the address and the website. The specific UC unit is inferred from the agenda title and the board item was not fetched, but the profile is at system level and stays neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }

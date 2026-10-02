@@ -1,17 +1,110 @@
 {
-  "checks": [],
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://johnwaitmasonry.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://johnwaitmasonry.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/lodi/profile/mason-contractors/john-d-wait-masonry-inc-1156-350696",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
   "key": "n-john-d-wait-masonry",
   "modelId": "sonnet-agent",
   "promptVersion": "vendor-research.v2.md",
-  "publishable": false,
+  "publishable": true,
   "research": {
-    "confidence": "none",
-    "identitySignals": [],
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'John D. Wait Masonry Inc.' is a masonry contractor, and the Better Business Bureau lists 'John D Wait Masonry, Inc.' in Lodi, CA, matching the agenda's Lodi, CA",
+      "Company website johnwaitmasonry.com lists a Lodi, CA address and describes residential, commercial, architectural precast and stone masonry work, consistent with OUSD contracting for school buildings and construction",
+      "Two independent pages (the company's own site and the BBB profile) give the same phone number, (209) 334-6722, for a Lodi, CA masonry company"
+    ],
     "key": "n-john-d-wait-masonry",
-    "notes": "Research not completed: the session's WebSearch budget (200 of 200) was exhausted, so no candidate was found or verified. Re-run after raising CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION. Not an individual; the agenda names John D. Wait Masonry, Inc., Lodi, CA.",
-    "profile": null,
-    "sources": []
+    "notes": "No registry IDs (EIN, CA entity number, SAM UEI) were verified, so those are null. The BBB profile lists a different street address (16201 Tretheway Rd, Lodi) than the company's own website (310 N Cluff Ave #205); the website address is used. No page found explicitly links the company to OUSD or the Cole Administration Center project. Legal name left null because the exact form 'John D Wait Masonry Inc.' appears only in the site's page metadata, not in a fetchable visible page; the BBB page that shows 'John D Wait Masonry, Inc.' blocks automated fetching.",
+    "profile": {
+      "address": "310 N Cluff Ave #205, Lodi, CA 95240",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Office@johnwaitmasonry.com",
+      "headquarters": "Lodi, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "209-334-6722",
+      "samUei": null,
+      "summary": "A masonry contractor based in Lodi, California. It offers residential, commercial, architectural precast and stone masonry work.",
+      "website": "https://johnwaitmasonry.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "John D. Wait Masonry - Contact",
+        "url": "https://johnwaitmasonry.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "John D. Wait Masonry",
+        "url": "https://johnwaitmasonry.com/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "phone",
+          "headquarters"
+        ],
+        "title": "John D Wait Masonry, Inc. - BBB Profile",
+        "url": "https://www.bbb.org/us/ca/lodi/profile/mason-contractors/john-d-wait-masonry-inc-1156-350696"
+      }
+    ]
   },
-  "researchedAt": "2026-10-01",
-  "review": null
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-john-d-wait-masonry",
+    "notes": "The company name (John D. Wait Masonry Inc.) and Lodi, CA location match the agenda exactly, and masonry fits a school construction contract. The company website and the BBB listing confirm the phone number, address, email and masonry services, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
 }
