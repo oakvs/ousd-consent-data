@@ -22,7 +22,7 @@ Done once, by a person, because each step needs an account sign-in. Check them o
   | `IA_ACCESS_KEY`, `IA_SECRET_KEY` | Optional: Internet Archive S3 keys (archive.org/account/s3.php), for release zips. |
 
 - **Variables (optional):** `CONSENT_LLM_MONTHLY_CAP_USD` (default 25), `NTFY_SERVER` (default https://ntfy.sh), and `CODEBERG_KNOWN_HOSTS` (Codeberg's ed25519 host key line, from `ssh-keyscan -t ed25519 codeberg.org`, checked against Codeberg's published fingerprints, so the mirror never trusts a key on first use).
-- Subscribe to the ntfy topic in the ntfy app on your phone.
+- Subscribe to the ntfy topic in the ntfy app on your phone, then send a test (`curl -d test https://ntfy.sh/<topic>`). On iPhone, if messages show up in the app but no banner appears, turn notifications for ntfy off and back on in iOS Settings.
 
 **2. Codeberg (mirror): `codeberg.org/oakvs/ousd-consent-data`**
 
