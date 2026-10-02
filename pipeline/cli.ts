@@ -5,7 +5,11 @@
  *   tsx pipeline/cli.ts <command> [options]
  *
  * Commands:
- *   run [--dry-run] [--no-push] [--summary F] One full update cycle: check → ingest → build → commit → push → deploy hook
+ *   run [--dry-run] [--no-push] [--no-llm] [--summary F]
+ *                                             One full update cycle: check → ingest → build → commit → push → deploy hook,
+ *                                             then summaries + second readings through the Claude API → commit → push
+ *   llm [--key K]                             Run the LLM step (summaries, second readings) and rebuild; no git
+ *   llm-compare --key K [--sample N]          Redo one meeting's LLM step on a scratch copy and compare with the stored results
  *   discover --date YYYY-MM-DD [--key K]      Resolve a meeting's EventId; prints it and the consent item count
  *   ingest --key K [--event N]                Fetch a meeting from Legistar into data/raw
  *   backfill --from D --to D [--limit N]      resolve → ingest for every registry meeting in range, then build
@@ -68,6 +72,8 @@ const { positionals, values } = parseArgs({
     dir: { type: 'string' },
     'dry-run': { type: 'boolean', default: false },
     'no-push': { type: 'boolean', default: false },
+    'no-llm': { type: 'boolean', default: false },
+    sample: { type: 'string' },
     summary: { type: 'string' },
     force: { type: 'boolean', default: false },
     size: { type: 'string' },
@@ -153,10 +159,40 @@ async function main(): Promise<void> {
       const summary = await run({
         dryRun: values['dry-run'],
         push: !values['no-push'],
+        llm: !values['no-llm'],
         deployHookUrl: process.env.VERCEL_DEPLOY_HOOK_URL,
       })
       printSummary(summary)
       if (values.summary) await writeJson(path.resolve(values.summary), summary)
+      break
+    }
+    case 'llm': {
+      const { llmPhase } = await import('./llm/phase')
+      const { oaklandToday } = await import('@oakvs/consent-schema/format')
+      const { llmCommitMessage } = await import('./run/message')
+      const { toLlmChanges } = await import('./run/run')
+      const phase = await llmPhase({ today: oaklandToday(), keys: values.key ? [values.key] : undefined })
+      if (phase.status === 'skipped') {
+        console.log(`LLM step skipped: ${phase.reason}`)
+        process.exitCode = 1
+        break
+      }
+      const built = await buildAll()
+      console.log(llmCommitMessage(toLlmChanges(phase, built)).body)
+      break
+    }
+    case 'llm-compare': {
+      if (!values.key) throw new Error('--key is required')
+      const { compareMeeting } = await import('./llm/compare')
+      const report = await compareMeeting(values.key, { sample: values.sample ? Number(values.sample) : undefined })
+      const out = path.join(process.cwd(), '.cache', `llm-compare-${values.key}.json`)
+      await writeJson(out, report)
+      console.log(`${report.key}: ${report.enriched}/${report.items} item(s) re-enriched, $${(report.usage?.costUsd ?? 0).toFixed(2)}`)
+      for (const [field, a] of Object.entries(report.agreement)) console.log(`  ${field.padEnd(18)} ${a.same}/${a.total} agree`)
+      const v = report.verificationMoney
+      console.log(`  second-reading money ${v.same}/${v.total} agree`)
+      for (const f of report.failed) console.log(`  FAILED ${f}`)
+      console.log(`full report → ${path.relative(process.cwd(), out)}`)
       break
     }
     case 'discover': {

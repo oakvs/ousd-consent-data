@@ -16,6 +16,8 @@
     "type-check": "tsc --noEmit",
     "consent": "tsx pipeline/cli.ts",
     "consent:run": "tsx pipeline/cli.ts run",
+    "consent:llm": "tsx pipeline/cli.ts llm",
+    "consent:llm-compare": "tsx pipeline/cli.ts llm-compare",
     "consent:discover": "tsx pipeline/cli.ts discover",
     "consent:ingest": "tsx pipeline/cli.ts ingest",
     "consent:backfill": "tsx pipeline/cli.ts backfill",
@@ -38,6 +40,7 @@
     "consent:upcoming": "tsx pipeline/cli.ts upcoming"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
     "@oakvs/consent-schema": "*",
     "zod": "^4.6.5"
   },

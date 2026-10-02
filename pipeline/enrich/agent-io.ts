@@ -11,7 +11,7 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 import { Enrichment } from '@oakvs/consent-schema/schema'
-import type { TEnrichmentRecord, TEnrichmentsFile, TRawItem } from '@oakvs/consent-schema/schema'
+import type { TEnrichment, TEnrichmentRecord, TEnrichmentsFile, TRawItem } from '@oakvs/consent-schema/schema'
 
 import { enrichmentCacheKey } from '../import/prototype'
 import { listRawKeys, paths, readEnrichments, readRaw, writeJson } from '../store'
@@ -96,22 +96,40 @@ export async function checkChunk(chunk: string): Promise<TChunkProblem[]> {
       continue
     }
     const { file: _file, ...rest } = candidate
-    const parsed = Enrichment.safeParse(rest)
-    if (!parsed.success) {
-      for (const issue of parsed.error.issues) {
-        problems.push({ ...at, severity: 'error', message: `schema: ${issue.path.join('.') || '(root)'}: ${issue.message}` })
-      }
-      continue
-    }
-    const { checks } = runChecks({ text: source.text, enrichment: parsed.data, sourceIssue: null })
-    for (const c of checks.filter(x => !x.pass)) {
-      // A stated misprint excuses an amount that can't be found verbatim.
-      const explained = c.name === 'amounts_in_text' && parsed.data.sourceIssueCandidate
-      if (BLOCKING_CHECKS.has(c.name) && !explained) problems.push({ ...at, severity: 'error', message: `${c.name}: ${c.detail}` })
-      else if (WARNING_CHECKS.has(c.name) || explained) problems.push({ ...at, severity: 'warning', message: `${c.name}: ${c.detail}` })
-    }
+    for (const p of checkEnrichment(source.text, rest).problems) problems.push({ ...at, ...p })
   }
   return problems
+}
+
+export type TEnrichmentCheck = {
+  /** The parsed enrichment, when it passes the schema (it may still have errors from the checks). */
+  enrichment: TEnrichment | null
+  problems: { severity: 'error' | 'warning'; message: string }[]
+}
+
+/**
+ * The checks every enrichment must pass, whoever wrote it: the schema, every
+ * `evidence` an exact substring of the text, every amount present in the
+ * text. Errors must be fixed; warnings are advisory. Shared by the agent
+ * workflow (`enrich-check`) and the API enrichment.
+ */
+export function checkEnrichment(text: string, candidate: unknown): TEnrichmentCheck {
+  const parsed = Enrichment.safeParse(candidate)
+  if (!parsed.success) {
+    return {
+      enrichment: null,
+      problems: parsed.error.issues.map(issue => ({ severity: 'error' as const, message: `schema: ${issue.path.join('.') || '(root)'}: ${issue.message}` })),
+    }
+  }
+  const problems: TEnrichmentCheck['problems'] = []
+  const { checks } = runChecks({ text, enrichment: parsed.data, sourceIssue: null })
+  for (const c of checks.filter(x => !x.pass)) {
+    // A stated misprint excuses an amount that can't be found verbatim.
+    const explained = c.name === 'amounts_in_text' && parsed.data.sourceIssueCandidate
+    if (BLOCKING_CHECKS.has(c.name) && !explained) problems.push({ severity: 'error', message: `${c.name}: ${c.detail}` })
+    else if (WARNING_CHECKS.has(c.name) || explained) problems.push({ severity: 'warning', message: `${c.name}: ${c.detail}` })
+  }
+  return { enrichment: parsed.data, problems }
 }
 
 export type TImportSummary = { meetingKey: string; imported: number; rejected: number }

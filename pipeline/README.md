@@ -8,6 +8,8 @@ The pipeline behind the [OUSD Consent Tracker](https://oakvs.world/consent-track
 npm run consent:run -- --dry-run                     # one update cycle on a scratch copy; prints what would change
 npm run consent:run -- --no-push                     # one update cycle; commits locally, no push or deploy
 npm run consent:run                                  # one update cycle: commit, push, then POST $VERCEL_DEPLOY_HOOK_URL
+npm run consent:llm -- [--key K]                     # just the LLM step (summaries, second readings), then rebuild; no git
+npm run consent:llm-compare -- --key 2026-09-23 --sample 20   # redo a meeting's LLM step on a scratch copy and compare
 npm run consent:discover -- --date 2026-09-23        # resolve EventId, print consent item count
 npm run consent:ingest -- --key 2026-09-23 [--event 5810]
 npm run consent:backfill -- --from 2025-08-01 --to 2026-09-30 [--limit N] [--force]
@@ -24,6 +26,8 @@ npm test
 | `meetings.json` | Postgres `meetings` | Registry. Meeting key is `YYYY-MM-DD`, or `-special` on a two-meeting day. |
 | `raw/{key}.json` | `raw_snapshots` + `items` | Normalized Legistar. **Source of truth**, committed. |
 | `enrichments/{key}.json` | `enrichments` | LLM output keyed by file number, with `modelId`, `promptVersion` and `cacheKey`. |
+| `verifications/{key}.json` | — | Independent second readings, tied to the enrichment they checked by its `cacheKey`. |
+| `llm-state.json` | — | LLM bookkeeping: monthly spend, and items whose replies kept failing (retried once a day, given up after 3 days). Not published. |
 | `overrides/{key}.json` | NocoDB `overrides` | Human edits. They always win and are never overwritten by re-enrichment. |
 | `vendors/aliases.json` | `vendors.aliases` | Normalized name → vendor number or canonical name. |
 | `published/` | what the site reads | Fully derived. `build` regenerates it byte-identically. |
@@ -42,7 +46,7 @@ The data repo is the state; there is no database. Each run:
 
 A quiet run costs about 15 Legistar requests. Runs refuse to start on a dirty work tree, and a lock file (`.cache/run.lock`) keeps two runs on one machine from overlapping. `--summary run.json` writes the run's changes as JSON for alerts.
 
-The LLM steps (summaries and second readings) aren't part of `consent run` yet; it reports how many items are waiting for summaries.
+5. **LLM publish**: summaries for new or changed items, then second readings, then build → commit (`2026-10-14: summaries — 87 items, 24 second readings (2 flagged for review)`) → push → deploy hook. Skipped without `ANTHROPIC_API_KEY` or with `--no-llm`. Raw data is already public by then; items show "Summary pending" until this lands, and a failed step is retried by the next run. If the step dies part-way, what it finished is still committed.
 
 ## Meeting → EventId
 
@@ -55,16 +59,24 @@ The LLM steps (summaries and second readings) aren't part of `consent run` yet; 
 
 Even single events (`/events/{id}`) error for OUSD, so the next meeting is inferred from **matters** with a future `MatterAgendaDate`: staff file items with a target date weeks before the agenda is published. A date counts once ≥ 5 items are filed as `Board, General Consent Report` for it (within 90 days), which filters out stray or mis-dated items (one is dated 3036). The result is a preview: it has no time or meeting type, and items can move until the agenda is published. The landing page shows it only while the date is ahead and newer than the latest published meeting. `build` doesn't touch `published/upcoming.json`.
 
-## Enrichment interface (not built yet)
+## LLM steps (Claude API)
 
-There are no live LLM calls in the prototype. To add them, write `enrich/` so it:
+Code in `llm/`. One item per request, with structured outputs constraining the reply's shape and code checking its values; a failed check goes back to the model, up to 3 attempts. The long system prompt is cached.
 
-- Reads `raw/{key}.json` and, for each item with no current record, calls the model with the codebook prompt (`prompts/enrich.v2.md`, see §8.1) and a strict JSON schema generated from `Enrichment` in `packages/consent-schema/src/schema.ts`. Input: `{agendaNumber, file, title, text, matterType, presenter, group, fundingSource}`.
-- Keys the cache with `enrichmentCacheKey(text, title, promptVersion, modelId)` from `import/prototype.ts`, and skips items whose key is unchanged.
-- On a schema or check failure, retries up to 2 times, feeding back the failing check from `validate/checks.ts`.
-- Writes `EnrichmentRecord`s to `enrichments/{key}.json`. `build` then does the rest: overrides, checks, review routing, derived flags and totals.
+| Step | Model (pinned) | Prompt | Checks |
+|---|---|---|---|
+| Summary | `claude-opus-5-5`, effort `high` | `prompts/enrich.v4.md` | `checkEnrichment` (schema, evidence verbatim, every amount in the text), the same as `enrich-check` |
+| Second reading | `claude-sonnet-5-5`, effort `high` | `prompts/verify.v2.md` | `checkVerification`, the same as `verify-check` |
+| Money tiebreak (third reading) | `claude-opus-5-5`, effort `high` | `prompts/verify.v2.md` | same |
 
-Run the golden set before switching `modelId` or `promptVersion`.
+- **What gets a summary:** items with no record, or whose text or title changed since their record (the record's `cacheKey` no longer matches). Changing the model or prompt does not redo existing summaries; use `llm-compare` first, then delete records to redo them.
+- **What gets a second reading** is unchanged from the agent workflow (`tasksForMeeting`): the top 20 amounts per meeting, money that fails a check, every suggested problem in the text, and headlines that name an individual. The reader never sees the first reading's numbers. A totals-changing disagreement gets a third reading from a different model, and code takes the majority.
+- **Records** carry the `modelId` that actually answered. Server-side refusal fallbacks are on (`fallbacks: "default"`), so a declined request may be answered by a fallback model, and the record says so.
+- **Failures** (checks still failing after 3 attempts, or a decline) are logged in `llm-state.json`. Each item is retried at most once a day and given up on after 3 days, so one stubborn item can't cost money every 30 minutes.
+- **Spend:** each run's estimated cost is added to `llm-state.json`. The step stops for the month at `CONSENT_LLM_MONTHLY_CAP_USD` (default $25). Also set a spend limit on the Anthropic API key itself.
+- **Overrides:** override models with `CONSENT_ENRICH_MODEL`, `CONSENT_VERIFY_MODEL` and `CONSENT_TIEBREAK_MODEL`.
+
+Locally, put the key in `.env` (gitignored) and run with `npx tsx --env-file=.env pipeline/cli.ts <command>`. The agent workflow (`enrich-export` / `enrich-check` / `enrich-import`, and the `verify-*` equivalents) still works for backfills.
 
 ## Known quirks found while building this
 

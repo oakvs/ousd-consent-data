@@ -16,6 +16,7 @@ import path from 'node:path'
 
 import { VerificationRecord } from '@oakvs/consent-schema/schema'
 import type { TRawItem, TVerificationsFile } from '@oakvs/consent-schema/schema'
+import type { z } from 'zod'
 
 import { applyOverride, currentVerification, highValueFiles } from '../build/meeting'
 import { listRawKeys, paths, readEnrichments, readOverrides, readRaw, readVerifications, writeJson } from '../store'
@@ -43,7 +44,7 @@ export type TVerifyChunk = { chunk: string; meetingKey: string; items: TVerifyIn
 const inputPath = (chunk: string): string => path.join(VERIFY_DIR, `${chunk}.input.json`)
 const outputPath = (chunk: string): string => path.join(VERIFY_DIR, `${chunk}.output.json`)
 
-async function tasksForMeeting(key: string): Promise<TVerifyInputItem[]> {
+export async function tasksForMeeting(key: string): Promise<TVerifyInputItem[]> {
   const [raw, enrichments, overrides, verifications] = await Promise.all([
     readRaw(key), readEnrichments(key), readOverrides(key), readVerifications(key),
   ])
@@ -120,7 +121,8 @@ export async function exportVerifyChunks(keys: string[] | null, size: number): P
   return manifest
 }
 
-const OutputItem = VerificationRecord.pick({ money: true, issue: true, vendorKind: true, headlineFix: true })
+export const OutputItem = VerificationRecord.pick({ money: true, issue: true, vendorKind: true, headlineFix: true })
+export type TVerifyOutput = z.infer<typeof OutputItem>
 
 export type TVerifyProblem = { agendaNumber: string | null; message: string }
 
@@ -138,36 +140,64 @@ export async function checkVerifyChunk(chunk: string): Promise<TVerifyProblem[]>
 
   for (const src of input.items) {
     const raw = byFile.get(src.file) as Record<string, unknown> | undefined
-    const at = src.agendaNumber
     if (!raw) {
-      problems.push({ agendaNumber: at, message: 'missing from output' })
+      problems.push({ agendaNumber: src.agendaNumber, message: 'missing from output' })
       continue
     }
-    const parsed = OutputItem.safeParse({ money: null, issue: null, vendorKind: null, headlineFix: null, ...raw })
-    if (!parsed.success) {
-      for (const issue of parsed.error.issues) problems.push({ agendaNumber: at, message: `schema: ${issue.path.join('.')}: ${issue.message}` })
-      continue
-    }
-    const v = parsed.data
-    for (const task of ['money', 'issue'] as const) {
-      if (src.tasks.includes(task) && v[task] == null) problems.push({ agendaNumber: at, message: `task "${task}" requested but missing` })
-      if (!src.tasks.includes(task) && v[task] != null) problems.push({ agendaNumber: at, message: `task "${task}" not requested; set it to null` })
-    }
-    if (src.tasks.includes('headline')) {
-      if (v.vendorKind == null) problems.push({ agendaNumber: at, message: 'task "headline" requires vendorKind ("individual" or "organization")' })
-      if (v.vendorKind === 'individual' && !v.headlineFix) problems.push({ agendaNumber: at, message: 'vendorKind is "individual" but headlineFix is missing' })
-      if (v.vendorKind === 'organization' && v.headlineFix) problems.push({ agendaNumber: at, message: 'vendorKind is "organization": organizations stay named, so headlineFix must be null' })
-    } else if (v.vendorKind != null || v.headlineFix != null) {
-      problems.push({ agendaNumber: at, message: 'task "headline" not requested; set vendorKind and headlineFix to null' })
-    }
-    if (v.issue?.quote && !src.text.includes(v.issue.quote) && !src.title.includes(v.issue.quote)) {
-      problems.push({ agendaNumber: at, message: `issue.quote is not an exact substring of the title or text: ${JSON.stringify(v.issue.quote)}` })
-    }
-    if (v.headlineFix && src.vendorName && v.headlineFix.includes(src.vendorName)) {
-      problems.push({ agendaNumber: at, message: 'headlineFix still names the individual' })
-    }
+    for (const message of checkVerification(src, raw).problems) problems.push({ agendaNumber: src.agendaNumber, message })
   }
   return problems
+}
+
+/**
+ * The checks every second reading must pass, whoever wrote it: the schema,
+ * exactly the requested tasks filled in, quotes copied verbatim, and no
+ * individual's name left in a fixed headline. Shared by `verify-check` and
+ * the API verification.
+ */
+export function checkVerification(src: TVerifyInputItem, candidate: unknown): { output: TVerifyOutput | null; problems: string[] } {
+  const parsed = OutputItem.safeParse({ money: null, issue: null, vendorKind: null, headlineFix: null, ...(candidate as object) })
+  if (!parsed.success) return { output: null, problems: parsed.error.issues.map(issue => `schema: ${issue.path.join('.')}: ${issue.message}`) }
+  const v = parsed.data
+  const problems: string[] = []
+  for (const task of ['money', 'issue'] as const) {
+    if (src.tasks.includes(task) && v[task] == null) problems.push(`task "${task}" requested but missing`)
+    if (!src.tasks.includes(task) && v[task] != null) problems.push(`task "${task}" not requested; set it to null`)
+  }
+  if (src.tasks.includes('headline')) {
+    if (v.vendorKind == null) problems.push('task "headline" requires vendorKind ("individual" or "organization")')
+    if (v.vendorKind === 'individual' && !v.headlineFix) problems.push('vendorKind is "individual" but headlineFix is missing')
+    if (v.vendorKind === 'organization' && v.headlineFix) problems.push('vendorKind is "organization": organizations stay named, so headlineFix must be null')
+  } else if (v.vendorKind != null || v.headlineFix != null) {
+    problems.push('task "headline" not requested; set vendorKind and headlineFix to null')
+  }
+  if (v.issue?.quote && !src.text.includes(v.issue.quote) && !src.title.includes(v.issue.quote)) {
+    problems.push(`issue.quote is not an exact substring of the title or text: ${JSON.stringify(v.issue.quote)}`)
+  }
+  if (v.headlineFix && src.vendorName && v.headlineFix.includes(src.vendorName)) problems.push('headlineFix still names the individual')
+  return { output: v, problems }
+}
+
+/**
+ * Store one reading. A follow-up (tiebreak or missing money reading) attaches
+ * to the existing record for the same enrichment; anything else replaces it.
+ * Returns false when there is nothing current to attach a follow-up to.
+ */
+export function storeVerification(
+  file: TVerificationsFile,
+  fileNo: string,
+  enrichmentCacheKey: string,
+  output: TVerifyOutput,
+  { modelId, promptVersion, followUp }: { modelId: string; promptVersion: string; followUp: TVerifyInputItem['followUp'] | null },
+): boolean {
+  if (followUp) {
+    const existing = file.items[fileNo]
+    if (existing?.enrichmentCacheKey !== enrichmentCacheKey || !output.money) return false
+    file.items[fileNo] = { ...existing, [followUp === 'tiebreak' ? 'tiebreakMoney' : 'money']: output.money }
+    return true
+  }
+  file.items[fileNo] = VerificationRecord.parse({ modelId, promptVersion, enrichmentCacheKey, ...output })
+  return true
 }
 
 export async function importVerifyChunks(keys: string[] | null, modelId: string): Promise<{ meetingKey: string; imported: number }[]> {
@@ -192,23 +222,8 @@ export async function importVerifyChunks(keys: string[] | null, modelId: string)
         const record = enrichments.items[fileNo]
         const parsed = OutputItem.safeParse({ money: null, issue: null, vendorKind: null, headlineFix: null, ...raw })
         if (!record || !parsed.success) continue
-        const followUp = /\.t\d+$/.test(chunk) ? 'tiebreakMoney' : /\.m\d+$/.test(chunk) ? 'money' : null
-        if (followUp) {
-          // Follow-up reading: attach to the existing record for the same enrichment.
-          const existing = file.items[fileNo]
-          if (existing?.enrichmentCacheKey === record.cacheKey && parsed.data.money) {
-            file.items[fileNo] = { ...existing, [followUp]: parsed.data.money }
-            imported++
-          }
-          continue
-        }
-        file.items[fileNo] = VerificationRecord.parse({
-          modelId,
-          promptVersion: VERIFY_PROMPT_VERSION,
-          enrichmentCacheKey: record.cacheKey,
-          ...parsed.data,
-        })
-        imported++
+        const followUp = /\.t\d+$/.test(chunk) ? 'tiebreak' : /\.m\d+$/.test(chunk) ? 'money' : null
+        if (storeVerification(file, fileNo, record.cacheKey, parsed.data, { modelId, promptVersion: VERIFY_PROMPT_VERSION, followUp })) imported++
       }
     }
     await writeJson(paths.verifications(key), file)

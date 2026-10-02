@@ -73,3 +73,49 @@ export function commitMessage(c: TRunChanges): { subject: string; body: string }
   ]
   return { subject, body: body.map(l => `- ${l}`).join('\n') }
 }
+
+// ─── LLM publish ─────────────────────────────────────────────────────────────
+
+export type TLlmMeetingChange = {
+  key: string
+  summaries: number
+  secondReadings: number
+  failed: number
+  waiting: number
+  gaveUp: number
+  /** Items the build routed to review (needs_review or blocked) after this step. */
+  flagged: number
+}
+
+export type TLlmChanges = {
+  meetings: TLlmMeetingChange[]
+  costUsd: number
+  monthSpendUsd: number
+  capUsd: number
+  capped: boolean
+}
+
+const usd = (n: number): string => `$${n.toFixed(2)}`
+
+export function llmCommitMessage(c: TLlmChanges): { subject: string; body: string } {
+  const lines = c.meetings
+    .filter(m => m.summaries || m.secondReadings)
+    .map(m => {
+      const parts = [
+        m.summaries ? `summaries — ${plural(m.summaries, 'item')}` : null,
+        m.secondReadings ? plural(m.secondReadings, 'second reading') : null,
+      ].filter(Boolean).join(', ')
+      return `${m.key}: ${parts}${m.flagged ? ` (${m.flagged} flagged for review)` : ''}`
+    })
+  const problems = c.meetings.flatMap(m => [
+    m.failed ? `${m.key}: ${plural(m.failed, 'item')} failed the checks (retried tomorrow)` : null,
+    m.gaveUp ? `${m.key}: ${plural(m.gaveUp, 'item')} still failing after 3 days — needs a human` : null,
+  ]).filter((l): l is string => l != null)
+  const subject = lines.length ? lines.join('; ') : problems.length ? `llm: ${problems[0]}` : 'llm: bookkeeping'
+  const body = [
+    ...lines,
+    ...problems,
+    `LLM cost ${usd(c.costUsd)} (this month ${usd(c.monthSpendUsd)} of ${usd(c.capUsd)})${c.capped ? ' — monthly cap reached, step stopped' : ''}`,
+  ]
+  return { subject, body: body.map(l => `- ${l}`).join('\n') }
+}

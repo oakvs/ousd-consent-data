@@ -12,10 +12,12 @@
  *        a hash; re-ingest only on a change, refreshing outcomes once a day
  *        from the meeting date until it is final
  *   2. fast publish: build → commit → push → deploy hook
- *   3. LLM publish: not yet (BRIEF step 5); the run reports how many items
- *      are waiting for summaries.
+ *   3. LLM publish: summaries for new or changed items, then second
+ *      readings → build → commit → push → deploy hook. Skipped without
+ *      ANTHROPIC_API_KEY or with --no-llm; stopped by the monthly cap.
  *
- * `--dry-run` works on a scratch copy of data/ and prints what would change.
+ * `--dry-run` works on a scratch copy of data/ and prints what would change;
+ * it reports what the LLM step would do but never calls the API.
  * `--no-push` commits locally and stops there.
  * If a push is rejected, the run resets to where it started, pulls, and runs
  * again (up to 3 times).
@@ -29,6 +31,7 @@ import { oaklandToday } from '@oakvs/consent-schema/format'
 import type { TRegistryEntry } from '@oakvs/consent-schema/schema'
 
 import { buildAll } from '../build/write'
+import { llmPhase, llmPlan } from '../llm/phase'
 import { ingestMeeting } from '../ingest'
 import { getEventItems, stats } from '../legistar/client'
 import { ANCHOR_EVENT_ID, probeEvents, resolveEventId } from '../legistar/discover'
@@ -37,10 +40,13 @@ import { isSettled, registerFutureDates } from '../registry/entries'
 import { getDataRoot, readRegistry, setDataRoot, stableStringify, writeRegistry } from '../store'
 
 import { changedPaths, git, hasUpstream, head, trackedChanges, tryGit } from './git'
-import { commitMessage } from './message'
+import { commitMessage, llmCommitMessage } from './message'
 
+import type { TBuildSummary } from '../build/write'
 import type { TProbedEvents } from '../legistar/discover'
-import type { TMeetingChange, TRunChanges } from './message'
+import type { ILlm } from '../llm/client'
+import type { TLlmPhaseResult } from '../llm/phase'
+import type { TLlmChanges, TMeetingChange, TRunChanges } from './message'
 
 /** Resolve EventIds for meetings from this many days ago … */
 const RESOLVE_BEHIND_DAYS = 14
@@ -56,7 +62,23 @@ export type TRunOptions = {
   push?: boolean
   now?: Date
   deployHookUrl?: string
+  /** Run the LLM step (default true; it still skips without credentials). */
+  llm?: boolean
+  /** For tests: a fake in place of the Claude API. */
+  llmClient?: ILlm
 }
+
+export type TLlmSummary =
+  | { status: 'disabled' }
+  | { status: 'planned'; plan: { key: string; enrich: number; verify: number }[] }
+  | (TLlmPhaseResult & {
+    changes: TLlmChanges
+    commit: { sha: string; subject: string } | null
+    pushed: boolean
+    deployed: boolean
+    /** Set when the step died part-way; whatever it finished was still committed. */
+    error: string | null
+  })
 
 export type TRunSummary = TRunChanges & {
   startedAt: string
@@ -68,6 +90,7 @@ export type TRunSummary = TRunChanges & {
   pushed: boolean
   deployed: boolean
   legistarRequests: number
+  llm: TLlmSummary
 }
 
 const addDays = (iso: string, days: number): string => {
@@ -207,8 +230,10 @@ async function dryRun(now: Date): Promise<TRunSummary> {
   try {
     const changes = await cycle(now)
     const changedFiles = (await diffTrees(real, copy)).map(f => path.join('data', f))
+    const plan = await llmPlan()
     return {
       ...changes,
+      llm: { status: 'planned', plan },
       startedAt,
       dryRun: true,
       changedFiles,
@@ -230,15 +255,36 @@ async function deploy(url: string): Promise<boolean> {
   return res.ok
 }
 
-async function liveRun(now: Date, push: boolean, deployHookUrl: string | undefined): Promise<TRunSummary> {
-  const startedAt = new Date().toISOString()
-  const dirty = await trackedChanges()
-  if (dirty.length) throw new Error(`work tree has uncommitted changes; commit or stash first:\n${dirty.join('\n')}`)
-  const strayData = await changedPaths('data')
-  if (strayData.length) throw new Error(`data/ has untracked files; commit or remove them first:\n${strayData.join('\n')}`)
-  if (push && !(await hasUpstream())) throw new Error('this branch has no upstream to push to; set one or use --no-push')
-  if (push) await git(['pull', '--ff-only'])
+/** Summary numbers for the LLM commit, with how many items the build flagged per meeting. */
+export function toLlmChanges(phase: TLlmPhaseResult, built: TBuildSummary): TLlmChanges {
+  return {
+    meetings: phase.meetings.map(m => {
+      const meeting = built.meetings.find(b => b.meeting.key === m.key)
+      return {
+        key: m.key,
+        summaries: m.enrich.done.length,
+        secondReadings: m.verify.done.length,
+        failed: m.enrich.failed.length + m.verify.failed.length,
+        waiting: m.enrich.waiting.length + m.verify.waiting.length,
+        gaveUp: m.enrich.gaveUp.length + m.verify.gaveUp.length,
+        flagged: meeting?.items.filter(i => i.review.status === 'needs_review' || i.review.status === 'blocked').length ?? 0,
+      }
+    }),
+    costUsd: phase.usage?.costUsd ?? 0,
+    monthSpendUsd: phase.monthSpendUsd,
+    capUsd: phase.capUsd,
+    capped: phase.status === 'capped',
+  }
+}
 
+async function commitData(subject: string, body: string): Promise<{ sha: string; subject: string }> {
+  await git(['add', '--all', '--', 'data'])
+  await git(['commit', '--quiet', '-m', subject, '-m', body])
+  return { sha: await head(), subject }
+}
+
+/** Step 1–2: check, ingest, build, commit, push. Re-runs from scratch if the push is rejected. */
+async function fastPublish(now: Date, push: boolean, deployHookUrl: string | undefined, startedAt: string): Promise<TRunSummary> {
   for (let attempt = 1; ; attempt++) {
     const base = await head()
     const changes = await cycle(now)
@@ -253,13 +299,12 @@ async function liveRun(now: Date, push: boolean, deployHookUrl: string | undefin
       pushed: false,
       deployed: false,
       legistarRequests: stats.network,
+      llm: { status: 'disabled' },
     }
     if (changedFiles.length === 0) return summary
 
     const { subject, body } = commitMessage(changes)
-    await git(['add', '--all', '--', 'data'])
-    await git(['commit', '--quiet', '-m', subject, '-m', body])
-    summary.commit = { sha: await head(), subject }
+    summary.commit = await commitData(subject, body)
     if (!push) return summary
 
     const pushed = await tryGit(['push', '--quiet'])
@@ -277,8 +322,62 @@ async function liveRun(now: Date, push: boolean, deployHookUrl: string | undefin
   }
 }
 
-export async function run({ dryRun: dry = false, push = true, now = new Date(), deployHookUrl }: TRunOptions = {}): Promise<TRunSummary> {
-  return withLock(() => (dry ? dryRun(now) : liveRun(now, push, deployHookUrl)))
+/**
+ * Step 3: the LLM publish. Its work is paid for, so a rejected push is
+ * rebased rather than thrown away. If the step dies part-way, what it
+ * finished is still committed and pushed, then the error is re-thrown.
+ */
+async function llmPublish(now: Date, push: boolean, deployHookUrl: string | undefined, llmClient: ILlm | undefined): Promise<TLlmSummary> {
+  let phase: TLlmPhaseResult | null = null
+  let failure: unknown = null
+  try {
+    phase = await llmPhase({ llm: llmClient, today: oaklandToday(now) })
+  } catch (error) {
+    failure = error
+  }
+  if (phase?.status === 'skipped') {
+    return { ...phase, changes: toLlmChanges(phase, { meetings: [], vendors: 0 }), commit: null, pushed: false, deployed: false, error: null }
+  }
+  const built = await buildAll()
+  const result: TLlmPhaseResult = phase ?? { status: 'ran', reason: null, meetings: [], usage: null, monthSpendUsd: 0, capUsd: 0 }
+  const changes = toLlmChanges(result, built)
+  const summary: TLlmSummary = { ...result, changes, commit: null, pushed: false, deployed: false, error: failure ? (failure as Error).message : null }
+
+  const changedFiles = (await changedPaths('data')).map(l => l.slice(3))
+  if (changedFiles.length) {
+    const { subject, body } = llmCommitMessage(changes)
+    summary.commit = await commitData(failure ? `${subject} (partial: LLM step failed)` : subject, body)
+    if (push) {
+      let pushed = await tryGit(['push', '--quiet'])
+      if (!pushed.ok) {
+        await git(['pull', '--rebase', '--quiet'])
+        pushed = await tryGit(['push', '--quiet'])
+      }
+      if (!pushed.ok) throw new Error(`LLM publish: push rejected after a rebase: ${pushed.stderr}`)
+      summary.pushed = true
+      if (deployHookUrl && changedFiles.some(f => f.startsWith('data/published/'))) summary.deployed = await deploy(deployHookUrl)
+    }
+  }
+  if (failure) throw failure
+  return summary
+}
+
+async function liveRun(now: Date, push: boolean, deployHookUrl: string | undefined, llm: boolean, llmClient: ILlm | undefined): Promise<TRunSummary> {
+  const startedAt = new Date().toISOString()
+  const dirty = await trackedChanges()
+  if (dirty.length) throw new Error(`work tree has uncommitted changes; commit or stash first:\n${dirty.join('\n')}`)
+  const strayData = await changedPaths('data')
+  if (strayData.length) throw new Error(`data/ has untracked files; commit or remove them first:\n${strayData.join('\n')}`)
+  if (push && !(await hasUpstream())) throw new Error('this branch has no upstream to push to; set one or use --no-push')
+  if (push) await git(['pull', '--ff-only'])
+
+  const summary = await fastPublish(now, push, deployHookUrl, startedAt)
+  if (llm) summary.llm = await llmPublish(now, push, deployHookUrl, llmClient)
+  return summary
+}
+
+export async function run({ dryRun: dry = false, push = true, now = new Date(), deployHookUrl, llm = true, llmClient }: TRunOptions = {}): Promise<TRunSummary> {
+  return withLock(() => (dry ? dryRun(now) : liveRun(now, push, deployHookUrl, llm, llmClient)))
 }
 
 export function printSummary(s: TRunSummary): void {
@@ -292,4 +391,19 @@ export function printSummary(s: TRunSummary): void {
     console.log(body)
   }
   if (s.pushed) console.log(`pushed${s.deployed ? ', deploy hook called' : ''}`)
+
+  const llm = s.llm
+  if (llm.status === 'disabled') return
+  if (llm.status === 'planned') {
+    const enrich = llm.plan.reduce((n, p) => n + p.enrich, 0)
+    const verify = llm.plan.reduce((n, p) => n + p.verify, 0)
+    console.log(enrich || verify ? `LLM step would run: ${enrich} summar${enrich === 1 ? 'y' : 'ies'}, ${verify} second reading(s)` : 'LLM step: nothing to do')
+    return
+  }
+  if (llm.status === 'skipped') return void console.log(`LLM step skipped: ${llm.reason}`)
+  if (llm.meetings.length === 0 && !llm.commit && !llm.error) return void console.log('LLM step: nothing to do')
+  const m = llmCommitMessage(llm.changes)
+  if (llm.commit) console.log(`LLM commit ${llm.commit.sha.slice(0, 7)}: ${llm.commit.subject}`)
+  console.log(m.body)
+  if (llm.error) console.log(`LLM step failed: ${llm.error}`)
 }
