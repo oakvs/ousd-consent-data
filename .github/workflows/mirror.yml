@@ -1,0 +1,31 @@
+# Mirror pushes made by people (or other workflows) to Codeberg. Pushes by
+# the scheduled run use GITHUB_TOKEN, which doesn't trigger workflows, so
+# run.yml mirrors those itself.
+name: mirror
+
+on:
+  push:
+    branches: [main]
+    tags: ['*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror
+  cancel-in-progress: false
+
+jobs:
+  codeberg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Push to Codeberg
+        env:
+          CODEBERG_DEPLOY_KEY: ${{ secrets.CODEBERG_DEPLOY_KEY }}
+          CODEBERG_KNOWN_HOSTS: ${{ vars.CODEBERG_KNOWN_HOSTS }}
+        run: scripts/mirror.sh

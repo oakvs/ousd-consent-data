@@ -1,0 +1,27 @@
+# Tests and the type-check on every pull request and push to main. Among
+# other things: the build reproduces data/published and data/exports byte
+# for byte, every data file validates against schema/, and no staff email
+# appears anywhere under data/.
+name: test
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run type-check
+      - run: npm test

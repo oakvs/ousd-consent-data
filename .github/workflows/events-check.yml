@@ -1,0 +1,28 @@
+# Quarterly: is Legistar's /events endpoint working for OUSD again? If it
+# is, meeting discovery could be simplified (RUNBOOK → Periodic).
+name: legistar events check
+
+on:
+  schedule:
+    - cron: '0 17 1 1,4,7,10 *' # 9 or 10 a.m. Oakland time, first day of each quarter
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
+      NTFY_SERVER: ${{ vars.NTFY_SERVER }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx tsx pipeline/cli.ts events-check

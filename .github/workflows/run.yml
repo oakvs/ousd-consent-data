@@ -1,0 +1,82 @@
+# Every 30 minutes: one `consent run` (check Legistar → publish the official
+# text → publish summaries), then alerts and the Codeberg mirror.
+# Operations: RUNBOOK.md. A homelab cron runs the same command as a standby
+# when this schedule is late or down (`consent standby`).
+name: consent run
+
+on:
+  schedule:
+    # Off the top of the hour, when GitHub's scheduler is busiest. Times are UTC.
+    - cron: '7,37 * * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Dry run (scratch copy of data/, no commits, no Claude API calls)
+        type: boolean
+        default: false
+
+permissions:
+  contents: write # commit and push data/
+  actions: read # look up the previous run's result
+
+# One run at a time; a run that is already going is never cancelled.
+concurrency:
+  group: consent-run
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
+      NTFY_SERVER: ${{ vars.NTFY_SERVER }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history, so the mirror push always works
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Git identity
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+      - name: consent run
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          VERCEL_DEPLOY_HOOK_URL: ${{ secrets.VERCEL_DEPLOY_HOOK_URL }}
+          CONSENT_LLM_MONTHLY_CAP_USD: ${{ vars.CONSENT_LLM_MONTHLY_CAP_USD }}
+          DRY_RUN: ${{ inputs.dry_run && '--dry-run' || '' }}
+        run: npx tsx pipeline/cli.ts run --summary "$RUNNER_TEMP/run.json" $DRY_RUN
+
+      - name: Alerts
+        run: npx tsx pipeline/cli.ts notify --summary "$RUNNER_TEMP/run.json"
+
+      - name: Mirror to Codeberg
+        id: mirror
+        if: ${{ !inputs.dry_run }}
+        continue-on-error: true
+        env:
+          CODEBERG_DEPLOY_KEY: ${{ secrets.CODEBERG_DEPLOY_KEY }}
+          CODEBERG_KNOWN_HOSTS: ${{ vars.CODEBERG_KNOWN_HOSTS }}
+        run: scripts/mirror.sh
+
+      - name: Mirror failure alert
+        if: ${{ steps.mirror.outcome == 'failure' }}
+        run: npx tsx pipeline/cli.ts notify-text --priority low --title 'Codeberg mirror push failed' --message "See $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
+      - name: Failure alert (two in a row)
+        if: ${{ failure() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          previous=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow run.yml --status completed --limit 1 --json conclusion --jq '.[0].conclusion // ""')
+          npx tsx pipeline/cli.ts notify-failure --previous "$previous"

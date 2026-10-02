@@ -1,0 +1,72 @@
+# When a release is published (e.g. `gh release create v2026.10`):
+# - Zenodo mints a DOI by itself, through its GitHub integration (enable the
+#   repo once at zenodo.org → GitHub). It reads CITATION.cff.
+# - This workflow asks Software Heritage to archive the GitHub and Codeberg
+#   repos, saves the site in the Wayback Machine, and, when Internet Archive
+#   keys are set, uploads a zip of data/ to archive.org.
+# Every step here is best effort: a failure is reported, never blocks.
+name: archive release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+      NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}
+      NTFY_SERVER: ${{ vars.NTFY_SERVER }}
+      TAG: ${{ github.event.release.tag_name || github.ref_name }}
+      # Job-level so the step's `if` can see whether they're set.
+      IA_ACCESS_KEY: ${{ secrets.IA_ACCESS_KEY }}
+      IA_SECRET_KEY: ${{ secrets.IA_SECRET_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Software Heritage save requests
+        continue-on-error: true
+        run: |
+          for url in "https://github.com/$GITHUB_REPOSITORY" "https://codeberg.org/$GITHUB_REPOSITORY"; do
+            curl -fsS -X POST "https://archive.softwareheritage.org/api/1/origin/save/git/url/$url/" -o /dev/null -w "Software Heritage $url: %{http_code}\n"
+          done
+
+      - name: Wayback Machine snapshot of the site
+        continue-on-error: true
+        run: |
+          for url in https://oakvs.world/consent-tracker https://oakvs.world/consent-tracker/vendors; do
+            curl -fsS -o /dev/null -w "Wayback $url: %{http_code}\n" "https://web.archive.org/save/$url"
+          done
+
+      - name: Internet Archive data zip
+        id: ia
+        if: ${{ env.IA_ACCESS_KEY != '' }}
+        continue-on-error: true
+        run: |
+          pip install --quiet internetarchive
+          git archive --format=zip --prefix="ousd-consent-data-$TAG/" -o "ousd-consent-data-$TAG.zip" HEAD data schema README.md LICENSE LICENSE-DATA CITATION.cff
+          ia configure --access-key "$IA_ACCESS_KEY" --secret-key "$IA_SECRET_KEY" >/dev/null
+          ia upload "ousd-consent-data-$TAG" "ousd-consent-data-$TAG.zip" \
+            --metadata="mediatype:data" \
+            --metadata="title:OUSD Consent Tracker data, $TAG" \
+            --metadata="creator:Oakland vs. the World" \
+            --metadata="licenseurl:https://creativecommons.org/licenses/by/4.0/" \
+            --metadata="source:https://github.com/$GITHUB_REPOSITORY"
+
+      - uses: actions/setup-node@v4
+        if: ${{ always() && env.NTFY_TOPIC != '' }}
+        with:
+          node-version: 22
+          cache: npm
+      - name: Report
+        if: ${{ always() && env.NTFY_TOPIC != '' }}
+        run: |
+          npm ci --silent
+          npx tsx pipeline/cli.ts notify-text --priority low --title "Release $TAG archived" \
+            --message "Software Heritage and Wayback requested; Internet Archive: ${{ steps.ia.outcome || 'skipped (no keys)' }}. Zenodo mints its DOI separately."

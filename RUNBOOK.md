@@ -2,6 +2,57 @@
 
 How to operate the OUSD Consent Tracker pipeline: what normally happens, how to check on it, and what to do when something goes wrong. Background on how the pipeline works is in [`pipeline/README.md`](pipeline/README.md).
 
+## One-time setup
+
+Done once, by a person, because each step needs an account sign-in. Check them off in order.
+
+**1. GitHub (primary): `github.com/oakvs/ousd-consent-data`**
+
+- Create the repo (public), push `main`, and keep `main` pushable by GitHub Actions. If you add branch protection, allow `github-actions[bot]` to push.
+- **Settings → Actions → General → Workflow permissions:** "Read and write permissions".
+- **Settings → Secrets and variables → Actions → Secrets:**
+
+  | Secret | Value |
+  |---|---|
+  | `ANTHROPIC_API_KEY` | An API key for this project only, with a monthly spend limit set in the Claude Console. |
+  | `VERCEL_DEPLOY_HOOK_URL` | Vercel → the oakvs project → Settings → Git → Deploy Hooks → create one for `main`. |
+  | `NTFY_TOPIC` | A long random topic name, e.g. the output of `openssl rand -hex 16`. Anyone who knows it can read and post, so treat it as a secret. |
+  | `NTFY_TOKEN` | Optional: an access token, if you reserve the topic on ntfy.sh or self-host ntfy. |
+  | `CODEBERG_DEPLOY_KEY` | The private half of the Codeberg deploy key (step 2). |
+  | `IA_ACCESS_KEY`, `IA_SECRET_KEY` | Optional: Internet Archive S3 keys (archive.org/account/s3.php), for release zips. |
+
+- **Variables (optional):** `CONSENT_LLM_MONTHLY_CAP_USD` (default 25), `NTFY_SERVER` (default https://ntfy.sh), and `CODEBERG_KNOWN_HOSTS` (Codeberg's ed25519 host key line, from `ssh-keyscan -t ed25519 codeberg.org`, checked against Codeberg's published fingerprints, so the mirror never trusts a key on first use).
+- Subscribe to the ntfy topic in the ntfy app on your phone.
+
+**2. Codeberg (mirror): `codeberg.org/oakvs/ousd-consent-data`**
+
+- Create the `oakvs` organization and an empty repo `ousd-consent-data`.
+- Make a key for the mirror and add the public half as a deploy key **with write access** (repo → Settings → Deploy keys):
+
+  ```bash
+  ssh-keygen -t ed25519 -N '' -C 'github-actions mirror' -f codeberg-mirror
+  ```
+
+  Paste `codeberg-mirror` (the private half) into the GitHub secret `CODEBERG_DEPLOY_KEY`, then delete both files.
+- The first mirror push comes from the first scheduled run, or run the `mirror` workflow by hand.
+
+**3. Homelab standby**
+
+- On a machine that's always on: install Node 22, clone the GitHub repo with an SSH key that can push to it (a GitHub deploy key with write access on this repo only), and create `.env` with `ANTHROPIC_API_KEY`, `VERCEL_DEPLOY_HOOK_URL` and `NTFY_TOPIC` (and `NTFY_TOKEN` if used).
+- Set a git identity in that clone (e.g. `git config user.name 'consent standby'`). Turn off commit signing there unless the machine has an unlocked signing key, or cron runs will hang.
+- Optional: add a `codeberg` remote with its own deploy key, so the standby also updates the mirror.
+- Add the cron line from the top of `scripts/standby.sh`. Test it once by hand with `scripts/standby.sh --dry-run`.
+- The homelab's own Forgejo can keep a third copy as a **pull mirror** of the GitHub repo (Forgejo → New migration → GitHub, tick "This repository will be a mirror"). That needs no secrets in CI.
+
+**4. Zenodo (DOIs for releases)**
+
+- Sign in to zenodo.org with GitHub, open **GitHub** in the account menu, and switch on `oakvs/ousd-consent-data`. As an org repo, it may need an org owner to approve the Zenodo app first (GitHub → oakvs → Settings → Third-party access).
+
+**5. Check it all**
+
+- Actions → **consent run** → Run workflow, with "Dry run" ticked. It should finish green, and the step summary should show the run.
+- Then run it once without the dry run. Check the commit (if any), the Codeberg mirror, and that an ntfy message arrives for anything it published.
+
 ## Normal operation
 
 `consent run` runs every 30 minutes. A typical run makes about 15 Legistar requests, finds nothing new, and exits without a commit. When something changes, it commits `data/`, pushes, and calls the Vercel deploy hook if `data/published/` changed.
@@ -48,8 +99,44 @@ Locally, keep secrets in `.env` (gitignored) and run with `npx tsx --env-file=.e
 | `CONSENT_ENRICH_MODEL` | Summaries. | `claude-opus-5-5` |
 | `CONSENT_VERIFY_MODEL` | Second readings. | `claude-sonnet-5-5` |
 | `CONSENT_TIEBREAK_MODEL` | Third readings when money readings disagree. | `claude-opus-5-5` |
+| `NTFY_TOPIC` | Where alerts go. Without it, alerts are only printed. | — |
+| `NTFY_SERVER`, `NTFY_TOKEN` | A self-hosted or protected ntfy. | `https://ntfy.sh`, none |
+| `CODEBERG_DEPLOY_KEY`, `CODEBERG_KNOWN_HOSTS` | The Codeberg mirror push (`scripts/mirror.sh`). | —, fetched with `ssh-keyscan` |
+| `CONSENT_STANDBY_GRACE_MIN` | The standby skips if a CI run started within this many minutes. | `40` |
 
 Also set a monthly spend limit on the Anthropic API key itself, in the Claude Console. The pipeline's cap uses estimated prices; the Console's is the real backstop.
+
+## Scheduler, standby and alerts
+
+- **GitHub Actions** (`.github/workflows/run.yml`) runs `consent run` at :07 and :37 past each hour, one at a time (concurrency group `consent-run`). Scheduled runs can start late, sometimes by 10–20 minutes. The run page's summary shows what happened.
+- **The homelab standby** (`scripts/standby.sh` from cron, every 30 minutes) checks the workflow's recent runs. It runs `consent run` only if no CI run started in the last 40 minutes (or the one that did failed), then pushes to its `codeberg` remote if it has one. If both run at once, git sorts it out: the later push is rejected, and that run pulls and re-runs.
+- **The dead-man switch** lives in the standby, because CI can't report its own absence. No successful run anywhere for 6 hours → an urgent alert, repeated every 6 hours, then a "succeeding again" message. If CI has stopped but the standby is covering, you get one high-priority alert a day.
+- **GitHub disables schedules** in public repos after 60 days without activity. The routine bookkeeping commits count as activity, so this shouldn't happen. If it does, the standby's alert above is how you'll find out: re-enable the workflow under Actions.
+- If GitHub itself is down, runs can't push, and the data waits. The Codeberg and homelab copies stay readable, and the next run catches up.
+
+| Alert | Priority |
+|---|---|
+| Agenda posted, with item count | default |
+| Agenda revised | low |
+| Summaries published, with second readings and how many were flagged | default, or high if any are flagged |
+| Items still failing after 3 days | high |
+| LLM step failed part-way; monthly cap reached | high |
+| LLM spend crossed 80% of the monthly cap | default |
+| Two failed runs in a row | urgent |
+| No successful run in 6 hours (standby) | urgent |
+| Codeberg mirror push failed | low |
+| Quarterly Legistar `/events` check | low, or high if it works again |
+
+## Mirrors, releases and archives
+
+- **Codeberg** gets every push: `run.yml` mirrors after each run, and `mirror.yml` mirrors pushes made by people. The push is never forced. If someone pushes to Codeberg directly, mirroring fails until the two agree again.
+- **Releases:** tag a release when a school year ends, or when a meeting worth citing goes final:
+
+  ```bash
+  gh release create v2026.10 --title 'October 2026' --notes 'Data through the October 14, 2026 meeting.'
+  ```
+
+  Zenodo mints a DOI for it. `release.yml` asks Software Heritage to archive both repos, saves the site in the Wayback Machine, and uploads a zip of `data/` to the Internet Archive if its keys are set. Software Heritage also crawls public repos on its own.
 
 ## When something goes wrong
 
@@ -124,13 +211,7 @@ A meeting is final 14+ days after it happened, once every item has a Legistar ac
 
 ## Periodic
 
-- **Quarterly:** check whether Legistar's `/events` endpoint works for OUSD again. If it does, discovery could be simplified.
-
-  ```bash
-  curl -s -o /dev/null -w '%{http_code}\n' 'https://webapi.legistar.com/v1/ousd/events?$top=1'
-  ```
-
-  Today it returns an error for every event; a `200` with JSON means it's fixed.
+- **Quarterly:** `events-check.yml` checks whether Legistar's `/events` endpoint works for OUSD again, and sends the answer to ntfy. If it does, meeting discovery could be simplified. To check by hand: `npx tsx pipeline/cli.ts events-check`. As of October 2026 it returns HTTP 400.
 - **Vendor research** for new vendors is a separate, occasional batch job, not part of the 30-minute loop. See `research-*` in `pipeline/cli.ts`.
 
 ## Before merging a code change

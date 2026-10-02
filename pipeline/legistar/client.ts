@@ -17,7 +17,7 @@ export const LEGISTAR_BASE = 'https://webapi.legistar.com/v1/ousd'
 export const LEGISTAR_WEB = 'https://ousd.legistar.com'
 
 const CACHE_DIR = path.join(process.cwd(), '.cache', 'legistar')
-const USER_AGENT = `oakvs-consent-tracker/0.1 (+${siteConfig.url}/consent-tracker/about)`
+export const USER_AGENT = `oakvs-consent-tracker/0.1 (+${siteConfig.url}/consent-tracker/about)`
 const MAX_CONCURRENCY = 4
 const MAX_TRIES = 5
 

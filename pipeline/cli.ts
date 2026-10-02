@@ -8,6 +8,11 @@
  *   run [--dry-run] [--no-push] [--no-llm] [--summary F]
  *                                             One full update cycle: check → ingest → build → commit → push → deploy hook,
  *                                             then summaries + second readings through the Claude API → commit → push
+ *   notify --summary F                        Send alerts for a run summary (ntfy), and the GitHub step summary
+ *   notify-failure --previous CONCLUSION      Alert when this and the previous run both failed
+ *   notify-text --title T --message M [--priority P]
+ *   standby [--repo R] [--dry-run]            Homelab standby: dead-man check, then `run` if CI hasn't run recently
+ *   events-check                              Quarterly: is Legistar's /events endpoint working for OUSD again?
  *   llm [--key K]                             Run the LLM step (summaries, second readings) and rebuild; no git
  *   llm-compare --key K [--sample N] [--files A,B]
  *                                             Redo one meeting's LLM step on a scratch copy and compare with the stored results
@@ -76,6 +81,11 @@ const { positionals, values } = parseArgs({
     'no-llm': { type: 'boolean', default: false },
     sample: { type: 'string' },
     files: { type: 'string' },
+    previous: { type: 'string' },
+    title: { type: 'string' },
+    message: { type: 'string' },
+    priority: { type: 'string' },
+    repo: { type: 'string' },
     summary: { type: 'string' },
     force: { type: 'boolean', default: false },
     size: { type: 'string' },
@@ -166,6 +176,34 @@ async function main(): Promise<void> {
       })
       printSummary(summary)
       if (values.summary) await writeJson(path.resolve(values.summary), summary)
+      break
+    }
+    case 'notify': {
+      if (!values.summary) throw new Error('--summary is required')
+      const { notifyFromSummary } = await import('./ops/commands')
+      await notifyFromSummary(values.summary)
+      break
+    }
+    case 'notify-failure': {
+      const { notifyFailure } = await import('./ops/commands')
+      await notifyFailure(values.previous ?? '')
+      break
+    }
+    case 'notify-text': {
+      if (!values.title || !values.message) throw new Error('--title and --message are required')
+      const { notifyText } = await import('./ops/commands')
+      const priority = (['min', 'low', 'default', 'high', 'urgent'] as const).find(p => p === values.priority) ?? 'default'
+      await notifyText(values.title, values.message, priority)
+      break
+    }
+    case 'standby': {
+      const { standby } = await import('./ops/commands')
+      await standby({ repo: values.repo, dryRun: values['dry-run'] })
+      break
+    }
+    case 'events-check': {
+      const { eventsCheck } = await import('./ops/commands')
+      await eventsCheck()
       break
     }
     case 'llm': {
