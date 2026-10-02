@@ -1,0 +1,455 @@
+{
+  "contributors": [
+    {
+      "path": "https://oakvs.world",
+      "role": "author",
+      "title": "Oakland vs. the World"
+    }
+  ],
+  "description": "Every item on the Oakland Unified School District Board of Education General Consent Report, from Legistar, with plain-English summaries, classifications and dollar amounts checked in code. meetings/{meeting_key}.csv holds the rows of items.csv one meeting at a time. The JSON under ../published/ has the same data with full detail (history, checks, attachments).",
+  "homepage": "https://oakvs.world/consent-tracker",
+  "keywords": [
+    "Oakland",
+    "OUSD",
+    "school board",
+    "consent agenda",
+    "contracts",
+    "public spending",
+    "Legistar"
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0 (summaries, classifications, vendor profiles; official Legistar text is public record)"
+    }
+  ],
+  "name": "ousd-consent-data",
+  "profile": "tabular-data-package",
+  "resources": [
+    {
+      "description": "One row per consent item, all meetings.",
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "encoding": "utf-8",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "items",
+      "path": "items.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "description": "Stable id: meeting key and file number, e.g. 2026-09-23:26-1736.",
+            "name": "item_id",
+            "type": "string"
+          },
+          {
+            "description": "Meeting key: the date, with a suffix when two meetings share a day.",
+            "name": "meeting_key",
+            "type": "string"
+          },
+          {
+            "description": "Date of the Board meeting.",
+            "name": "meeting_date",
+            "type": "date"
+          },
+          {
+            "description": "regular, special or organizational.",
+            "name": "meeting_kind",
+            "type": "string"
+          },
+          {
+            "description": "Agenda item number, e.g. R.-1.",
+            "name": "agenda_number",
+            "type": "string"
+          },
+          {
+            "description": "Position in Legistar's agenda order.",
+            "name": "agenda_sequence",
+            "type": "integer"
+          },
+          {
+            "description": "general (General Consent Report) or bonds.",
+            "name": "consent_section",
+            "type": "string"
+          },
+          {
+            "description": "Agenda group the item is listed under, usually the presenting office.",
+            "name": "group",
+            "type": "string"
+          },
+          {
+            "description": "Legistar file number, e.g. 26-1736.",
+            "name": "file_number",
+            "type": "string"
+          },
+          {
+            "description": "The item on Legistar, the official record.",
+            "name": "legistar_url",
+            "type": "string"
+          },
+          {
+            "description": "Official short title (Legistar).",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "description": "Official action text (Legistar), the source of truth for everything below.",
+            "name": "official_text",
+            "type": "string"
+          },
+          {
+            "description": "Legistar matter type.",
+            "name": "matter_type",
+            "type": "string"
+          },
+          {
+            "description": "Presenting office (Legistar).",
+            "name": "presenter",
+            "type": "string"
+          },
+          {
+            "description": "OUSD vendor number(s) from Legistar, space-separated.",
+            "name": "vendor_number",
+            "type": "string"
+          },
+          {
+            "description": "This project's vendor id; see vendors.csv.",
+            "name": "vendor_key",
+            "type": "string"
+          },
+          {
+            "description": "Funding source (Legistar).",
+            "name": "funding_source",
+            "type": "string"
+          },
+          {
+            "description": "Plain-English headline (AI-written, checked).",
+            "name": "headline",
+            "type": "string"
+          },
+          {
+            "description": "Plain-English summary (AI-written, checked).",
+            "name": "summary",
+            "type": "string"
+          },
+          {
+            "description": "What the item is for (AI classification).",
+            "name": "category",
+            "type": "string"
+          },
+          {
+            "description": "Kind of action, e.g. new_agreement, amendment (AI classification).",
+            "name": "action_type",
+            "type": "string"
+          },
+          {
+            "description": "Vendor or partner named in the text (AI-extracted).",
+            "name": "vendor_name",
+            "type": "string"
+          },
+          {
+            "description": "individual or organization (AI-judged).",
+            "name": "vendor_kind",
+            "type": "string"
+          },
+          {
+            "description": "Schools or sites named in the text, semicolon-separated.",
+            "name": "schools",
+            "type": "string"
+          },
+          {
+            "description": "expense, revenue, decrease or no_cost.",
+            "name": "money_direction",
+            "type": "string"
+          },
+          {
+            "description": "not_to_exceed, fixed, cumulative, per_year or sales_cap.",
+            "name": "amount_type",
+            "type": "string"
+          },
+          {
+            "description": "Dollars this vote adds, authorizes or receives, as stated in the text. Empty when not stated.",
+            "name": "amount",
+            "type": "number"
+          },
+          {
+            "description": "Low end, when the text gives a yearly range.",
+            "name": "amount_range_low",
+            "type": "number"
+          },
+          {
+            "description": "High end, when the text gives a yearly range.",
+            "name": "amount_range_high",
+            "type": "number"
+          },
+          {
+            "description": "Earlier contract total, when the text states it.",
+            "name": "prior_total",
+            "type": "number"
+          },
+          {
+            "description": "New contract total, when the text states it.",
+            "name": "new_total",
+            "type": "number"
+          },
+          {
+            "description": "True when the amount passed the automated checks (and any second reading).",
+            "name": "amount_verified",
+            "type": "boolean"
+          },
+          {
+            "description": "Start of the agreement or service period, if stated.",
+            "name": "term_start",
+            "type": "date"
+          },
+          {
+            "description": "End of the agreement or service period, if stated.",
+            "name": "term_end",
+            "type": "date"
+          },
+          {
+            "description": "Flags such as no_competitive_bid or after_work_began, semicolon-separated.",
+            "name": "flags",
+            "type": "string"
+          },
+          {
+            "description": "A confirmed problem in the official text itself (e.g. totals that do not add up).",
+            "name": "source_issue",
+            "type": "string"
+          },
+          {
+            "description": "Set when the item was taken off the single consent vote; says what happened.",
+            "name": "pulled_from_consent",
+            "type": "string"
+          },
+          {
+            "description": "Final action on the item (Legistar).",
+            "name": "outcome_action",
+            "type": "string"
+          },
+          {
+            "description": "Date of that action.",
+            "name": "outcome_date",
+            "type": "date"
+          },
+          {
+            "description": "True when the item was adopted or approved.",
+            "name": "adopted",
+            "type": "boolean"
+          },
+          {
+            "description": "auto_ok, needs_review, blocked, human_reviewed, or pending (no summary yet).",
+            "name": "review_status",
+            "type": "string"
+          },
+          {
+            "description": "Model that wrote the summary.",
+            "name": "model_id",
+            "type": "string"
+          },
+          {
+            "description": "Prompt version used for the summary.",
+            "name": "prompt_version",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "item_id"
+      }
+    },
+    {
+      "description": "One row per meeting, with totals.",
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "encoding": "utf-8",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "meetings",
+      "path": "meetings.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "description": "Meeting key.",
+            "name": "meeting_key",
+            "type": "string"
+          },
+          {
+            "description": "Date of the Board meeting.",
+            "name": "meeting_date",
+            "type": "date"
+          },
+          {
+            "description": "regular, special or organizational.",
+            "name": "meeting_kind",
+            "type": "string"
+          },
+          {
+            "description": "Meeting title.",
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "description": "Legistar EventId.",
+            "name": "legistar_event_id",
+            "type": "integer"
+          },
+          {
+            "description": "The meeting on Legistar, when known.",
+            "name": "legistar_meeting_url",
+            "type": "string"
+          },
+          {
+            "description": "Consent items.",
+            "name": "items",
+            "type": "integer"
+          },
+          {
+            "description": "Items with a summary.",
+            "name": "summarized_items",
+            "type": "integer"
+          },
+          {
+            "description": "Total spending authorized, excluding yearly caps and sales caps.",
+            "name": "spending_total",
+            "type": "number"
+          },
+          {
+            "description": "Items in spending_total.",
+            "name": "spending_items",
+            "type": "integer"
+          },
+          {
+            "description": "Sum of per-year spending limits.",
+            "name": "yearly_caps_total",
+            "type": "number"
+          },
+          {
+            "description": "Money coming to the district.",
+            "name": "revenue_total",
+            "type": "number"
+          },
+          {
+            "description": "Reductions to earlier contracts.",
+            "name": "decrease_total",
+            "type": "number"
+          },
+          {
+            "description": "Meeting-level note, e.g. a consent report postponed as a whole.",
+            "name": "note",
+            "type": "string"
+          },
+          {
+            "description": "When the source data last changed (ISO timestamp).",
+            "name": "updated_at",
+            "type": "string"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "meeting_key"
+      }
+    },
+    {
+      "description": "One row per vendor.",
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true,
+        "lineTerminator": "\n",
+        "quoteChar": "\""
+      },
+      "encoding": "utf-8",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "name": "vendors",
+      "path": "vendors.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "description": "This project's vendor id.",
+            "name": "vendor_key",
+            "type": "string"
+          },
+          {
+            "description": "OUSD vendor number, when known.",
+            "name": "vendor_number",
+            "type": "string"
+          },
+          {
+            "description": "Vendor name.",
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "description": "individual or organization.",
+            "name": "kind",
+            "type": "string"
+          },
+          {
+            "description": "Most common category of its items.",
+            "name": "top_category",
+            "type": "string"
+          },
+          {
+            "description": "Meetings it appeared in.",
+            "name": "meetings",
+            "type": "integer"
+          },
+          {
+            "description": "Consent items naming it.",
+            "name": "appearances",
+            "type": "integer"
+          },
+          {
+            "description": "Of those, items approved.",
+            "name": "approved_count",
+            "type": "integer"
+          },
+          {
+            "description": "Dollars on its approved items.",
+            "name": "approved_total",
+            "type": "number"
+          },
+          {
+            "description": "Legistar records carrying its vendor number, in any year.",
+            "name": "legistar_records",
+            "type": "integer"
+          },
+          {
+            "description": "Date of the latest meeting naming it.",
+            "name": "last_seen",
+            "type": "date"
+          }
+        ],
+        "missingValues": [
+          ""
+        ],
+        "primaryKey": "vendor_key"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "path": "https://ousd.legistar.com",
+      "title": "OUSD Legistar (Board of Education)"
+    }
+  ],
+  "title": "OUSD Board of Education consent agenda items"
+}

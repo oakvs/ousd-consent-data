@@ -1,0 +1,302 @@
+{
+  "$id": "https://raw.githubusercontent.com/oakvs/ousd-consent-data/main/schema/vendor-research.schema.json",
+  "title": "Vendor research",
+  "description": "data/vendor-research/{key}.json (schema version 1.0.0). Generated from packages/consent-schema; do not edit by hand.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "researchedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "modelId": {
+      "type": "string"
+    },
+    "promptVersion": {
+      "type": "string"
+    },
+    "research": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "identitySignals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low",
+            "none"
+          ]
+        },
+        "profile": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "legalName": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "summary": {
+                  "type": "string",
+                  "maxLength": 600
+                },
+                "orgType": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "enum": [
+                        "nonprofit",
+                        "company",
+                        "public_agency",
+                        "other"
+                      ]
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "website": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "phone": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "email": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "address": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "headquarters": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "ein": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^\\d{2}-\\d{7}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "caEntityNumber": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "samUei": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [
+                "legalName",
+                "summary",
+                "orgType",
+                "website",
+                "phone",
+                "email",
+                "address",
+                "headquarters",
+                "ein",
+                "caEntityNumber",
+                "samUei"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri"
+              },
+              "title": {
+                "type": "string"
+              },
+              "supports": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "legalName",
+                    "summary",
+                    "orgType",
+                    "website",
+                    "phone",
+                    "email",
+                    "address",
+                    "headquarters",
+                    "ein",
+                    "caEntityNumber",
+                    "samUei"
+                  ]
+                }
+              }
+            },
+            "required": [
+              "url",
+              "title",
+              "supports"
+            ]
+          }
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "key",
+        "identitySignals",
+        "confidence",
+        "profile",
+        "sources",
+        "notes"
+      ]
+    },
+    "review": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string"
+            },
+            "verdict": {
+              "type": "string",
+              "enum": [
+                "confirmed",
+                "rejected"
+              ]
+            },
+            "sameOrganization": {
+              "type": "boolean"
+            },
+            "unsupportedFields": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "legalName",
+                  "summary",
+                  "orgType",
+                  "website",
+                  "phone",
+                  "email",
+                  "address",
+                  "headquarters",
+                  "ein",
+                  "caEntityNumber",
+                  "samUei"
+                ]
+              }
+            },
+            "notes": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "key",
+            "verdict",
+            "sameOrganization",
+            "unsupportedFields",
+            "notes"
+          ]
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "field": {
+            "type": "string"
+          },
+          "pass": {
+            "type": "boolean"
+          },
+          "detail": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "field",
+          "pass",
+          "detail"
+        ]
+      }
+    },
+    "publishable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "key",
+    "researchedAt",
+    "modelId",
+    "promptVersion",
+    "research",
+    "review",
+    "checks",
+    "publishable"
+  ]
+}

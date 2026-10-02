@@ -1,0 +1,332 @@
+{
+  "$id": "https://raw.githubusercontent.com/oakvs/ousd-consent-data/main/schema/raw-snapshot.schema.json",
+  "title": "Raw Legistar snapshot",
+  "description": "data/raw/{key}.json (schema version 1.0.0). Generated from packages/consent-schema; do not edit by hand.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "meetingKey": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}(-[a-z]+)?$"
+    },
+    "eventId": {
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "fetchedAt": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "legistar",
+        "prototype"
+      ]
+    },
+    "consentVotes": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          },
+          "motion": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mover": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "seconder": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "passed": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "votes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "vote": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "vote"
+              ]
+            }
+          }
+        },
+        "required": [
+          "title",
+          "action",
+          "motion",
+          "mover",
+          "seconder",
+          "passed",
+          "votes"
+        ]
+      }
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "agendaNumber": {
+            "type": "string"
+          },
+          "agendaSequence": {
+            "type": "number"
+          },
+          "consentSection": {
+            "type": "string",
+            "enum": [
+              "general",
+              "bonds"
+            ]
+          },
+          "group": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "file": {
+            "type": "string"
+          },
+          "matterId": {
+            "type": "number"
+          },
+          "matterGuid": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "title": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "matterType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "presenter": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "vendorNo": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "resourceSite": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fundingSource": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "introDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "required": [
+                "name",
+                "url"
+              ]
+            }
+          },
+          "history": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string",
+                  "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                },
+                "action": {
+                  "type": "string"
+                },
+                "body": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "eventId": {
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "historyId": {
+                  "default": null,
+                  "type": [
+                    "number",
+                    "null"
+                  ]
+                },
+                "consent": {
+                  "default": null,
+                  "type": [
+                    "boolean",
+                    "null"
+                  ]
+                },
+                "motion": {
+                  "default": null,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "mover": {
+                  "default": null,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "seconder": {
+                  "default": null,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "passed": {
+                  "default": null,
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "votes": {
+                  "default": null,
+                  "anyOf": [
+                    {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string"
+                          },
+                          "vote": {
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "name",
+                          "vote"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "date",
+                "action",
+                "body",
+                "eventId"
+              ]
+            }
+          }
+        },
+        "required": [
+          "agendaNumber",
+          "agendaSequence",
+          "consentSection",
+          "group",
+          "file",
+          "matterId",
+          "matterGuid",
+          "title",
+          "text",
+          "matterType",
+          "presenter",
+          "vendorNo",
+          "resourceSite",
+          "fundingSource",
+          "introDate",
+          "attachments",
+          "history"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "meetingKey",
+    "eventId",
+    "fetchedAt",
+    "source",
+    "items"
+  ]
+}

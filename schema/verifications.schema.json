@@ -1,0 +1,255 @@
+{
+  "$id": "https://raw.githubusercontent.com/oakvs/ousd-consent-data/main/schema/verifications.schema.json",
+  "title": "Second readings",
+  "description": "data/verifications/{key}.json (schema version 1.0.0). Generated from packages/consent-schema; do not edit by hand.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "meetingKey": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}(-[a-z]+)?$"
+    },
+    "items": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "modelId": {
+            "type": "string"
+          },
+          "promptVersion": {
+            "type": "string"
+          },
+          "enrichmentCacheKey": {
+            "type": "string"
+          },
+          "money": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "direction": {
+                    "type": "string",
+                    "enum": [
+                      "expense",
+                      "revenue",
+                      "decrease",
+                      "no_cost"
+                    ]
+                  },
+                  "amountType": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "not_to_exceed",
+                          "fixed",
+                          "cumulative",
+                          "per_year",
+                          "sales_cap"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "thisAction": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "priorTotal": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "newTotal": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "direction",
+                  "amountType",
+                  "thisAction",
+                  "priorTotal",
+                  "newTotal"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "tiebreakMoney": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "direction": {
+                    "type": "string",
+                    "enum": [
+                      "expense",
+                      "revenue",
+                      "decrease",
+                      "no_cost"
+                    ]
+                  },
+                  "amountType": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "enum": [
+                          "not_to_exceed",
+                          "fixed",
+                          "cumulative",
+                          "per_year",
+                          "sales_cap"
+                        ]
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "thisAction": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "priorTotal": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  },
+                  "newTotal": {
+                    "type": [
+                      "number",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "direction",
+                  "amountType",
+                  "thisAction",
+                  "priorTotal",
+                  "newTotal"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "issue": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "verdict": {
+                    "type": "string",
+                    "enum": [
+                      "material",
+                      "cosmetic",
+                      "not_real"
+                    ]
+                  },
+                  "topic": {
+                    "type": "string",
+                    "enum": [
+                      "money",
+                      "vendor",
+                      "school",
+                      "scope",
+                      "term",
+                      "other"
+                    ]
+                  },
+                  "explanation": {
+                    "type": "string",
+                    "maxLength": 400
+                  },
+                  "quote": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "verdict",
+                  "topic",
+                  "explanation",
+                  "quote"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "vendorKind": {
+            "default": null,
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "individual",
+                  "organization"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "headlineFix": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 140
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "modelId",
+          "promptVersion",
+          "enrichmentCacheKey",
+          "money",
+          "issue",
+          "headlineFix"
+        ]
+      }
+    }
+  },
+  "required": [
+    "meetingKey",
+    "items"
+  ]
+}

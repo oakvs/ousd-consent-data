@@ -1,0 +1,142 @@
+{
+  "$id": "https://raw.githubusercontent.com/oakvs/ousd-consent-data/main/schema/vendor-legistar.schema.json",
+  "title": "Legistar records per vendor",
+  "description": "data/legistar/vendors/{key}.json (schema version 1.0.0). Generated from packages/consent-schema; do not edit by hand.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "key": {
+      "type": "string"
+    },
+    "vendorNo": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "matters": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "matterId": {
+            "type": "number"
+          },
+          "file": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "type": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "status": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "department": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "introDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "agendaDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "passedDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "enactmentNumber": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "vendorNo": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fundingSource": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "resourceSite": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "legistarUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "relatedMatterIds": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "matterId",
+          "file",
+          "title",
+          "type",
+          "status",
+          "department",
+          "introDate",
+          "agendaDate",
+          "passedDate",
+          "enactmentNumber",
+          "vendorNo",
+          "fundingSource",
+          "resourceSite",
+          "legistarUrl",
+          "relatedMatterIds"
+        ]
+      }
+    }
+  },
+  "required": [
+    "key",
+    "vendorNo",
+    "matters"
+  ]
+}

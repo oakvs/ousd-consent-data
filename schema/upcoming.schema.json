@@ -1,0 +1,50 @@
+{
+  "$id": "https://raw.githubusercontent.com/oakvs/ousd-consent-data/main/schema/upcoming.schema.json",
+  "title": "Next meeting",
+  "description": "data/published/upcoming.json (schema version 1.0.0). Generated from packages/consent-schema; do not edit by hand.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "checkedAt": {
+      "type": "string"
+    },
+    "meeting": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "consentItems": {
+              "type": "number"
+            },
+            "boardItems": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "date",
+            "consentItems",
+            "boardItems"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "checkedAt",
+    "meeting"
+  ],
+  "additionalProperties": false
+}

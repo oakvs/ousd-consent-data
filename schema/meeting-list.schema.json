@@ -1,0 +1,633 @@
+{
+  "$id": "https://raw.githubusercontent.com/oakvs/ousd-consent-data/main/schema/meeting-list.schema.json",
+  "title": "Meeting list",
+  "description": "data/published/meetings/{key}.list.json (schema version 1.0.0). Generated from packages/consent-schema; do not edit by hand.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "meeting": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}(-[a-z]+)?$"
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "time": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "regular",
+            "special",
+            "organizational"
+          ]
+        },
+        "title": {
+          "type": "string"
+        },
+        "eventId": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "agendaPdfUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "legistarMeetingUrl": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uri"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revision": {
+          "type": "number"
+        },
+        "updatedAt": {
+          "type": "string"
+        },
+        "note": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "consentVotes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "action": {
+                "type": "string"
+              },
+              "motion": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "mover": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "seconder": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "passed": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "votes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "vote": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "vote"
+                  ],
+                  "additionalProperties": false
+                }
+              }
+            },
+            "required": [
+              "title",
+              "action",
+              "motion",
+              "mover",
+              "seconder",
+              "passed",
+              "votes"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "key",
+        "date",
+        "time",
+        "kind",
+        "title",
+        "eventId",
+        "agendaPdfUrl",
+        "legistarMeetingUrl",
+        "revision",
+        "updatedAt",
+        "note",
+        "consentVotes"
+      ],
+      "additionalProperties": false
+    },
+    "totals": {
+      "type": "object",
+      "properties": {
+        "items": {
+          "type": "number"
+        },
+        "enrichedItems": {
+          "type": "number"
+        },
+        "spendingTotal": {
+          "type": "number"
+        },
+        "spendingItems": {
+          "type": "number"
+        },
+        "yearlyCapsTotal": {
+          "type": "number"
+        },
+        "yearlyCapItems": {
+          "type": "number"
+        },
+        "revenueTotal": {
+          "type": "number"
+        },
+        "revenueItems": {
+          "type": "number"
+        },
+        "decreaseTotal": {
+          "type": "number"
+        },
+        "flagCounts": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "number"
+          }
+        },
+        "byCategory": {
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "items": {
+                "type": "number"
+              },
+              "spending": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "items",
+              "spending"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "items",
+        "enrichedItems",
+        "spendingTotal",
+        "spendingItems",
+        "yearlyCapsTotal",
+        "yearlyCapItems",
+        "revenueTotal",
+        "revenueItems",
+        "decreaseTotal",
+        "flagCounts",
+        "byCategory"
+      ],
+      "additionalProperties": false
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "vendorKey": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "agendaNumber": {
+            "type": "string"
+          },
+          "agendaSequence": {
+            "type": "number"
+          },
+          "consentSection": {
+            "type": "string",
+            "enum": [
+              "general",
+              "bonds"
+            ]
+          },
+          "group": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "file": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "matterType": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "presenter": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "vendorNo": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "fundingSource": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "flags": {
+            "type": "array",
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "enum": [
+                    "no_competitive_bid",
+                    "multi_year",
+                    "time_extension_only",
+                    "emergency"
+                  ]
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "after_work_began",
+                    "raises_existing_contract",
+                    "previously_delayed",
+                    "source_issue",
+                    "large_increase",
+                    "yearly_cap",
+                    "no_total_stated",
+                    "pulled_from_consent"
+                  ]
+                }
+              ]
+            }
+          },
+          "sourceIssue": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "amountVerified": {
+            "type": "boolean"
+          },
+          "pulled": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "summary": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "summary"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "review": {
+            "type": "object",
+            "properties": {
+              "status": {
+                "type": "string",
+                "enum": [
+                  "auto_ok",
+                  "needs_review",
+                  "blocked",
+                  "human_reviewed",
+                  "pending"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ],
+            "additionalProperties": false
+          },
+          "outcome": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "action": {
+                    "type": "string"
+                  },
+                  "date": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  },
+                  "adopted": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "action",
+                  "date",
+                  "adopted"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "enrichment": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "headline": {
+                    "type": "string",
+                    "maxLength": 140
+                  },
+                  "summary": {
+                    "type": "string",
+                    "maxLength": 900
+                  },
+                  "category": {
+                    "type": "string",
+                    "enum": [
+                      "Special education",
+                      "Classroom & academic programs",
+                      "After-school & summer programs",
+                      "Student health, support & family services",
+                      "School buildings & construction",
+                      "Food, transportation & operations",
+                      "Technology",
+                      "Staff & hiring",
+                      "Legal, insurance & risk",
+                      "School plans",
+                      "Partnerships & data sharing",
+                      "Governance & board business"
+                    ]
+                  },
+                  "actionType": {
+                    "type": "string",
+                    "enum": [
+                      "new_agreement",
+                      "amendment",
+                      "change_order",
+                      "bid_award",
+                      "cooperative_purchase",
+                      "mou_or_data_sharing",
+                      "grant_or_funding_in",
+                      "school_plan",
+                      "personnel",
+                      "resolution_or_policy",
+                      "termination",
+                      "other"
+                    ]
+                  },
+                  "vendor": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "location": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      },
+                      "kind": {
+                        "default": null,
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "individual",
+                              "organization"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [
+                      "name",
+                      "location",
+                      "kind"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "schools": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "money": {
+                    "type": "object",
+                    "properties": {
+                      "direction": {
+                        "type": "string",
+                        "enum": [
+                          "expense",
+                          "revenue",
+                          "decrease",
+                          "no_cost"
+                        ]
+                      },
+                      "amountType": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "enum": [
+                              "not_to_exceed",
+                              "fixed",
+                              "cumulative",
+                              "per_year",
+                              "sales_cap"
+                            ]
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "thisAction": {
+                        "anyOf": [
+                          {
+                            "type": "number",
+                            "minimum": 0
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "thisActionRange": {
+                        "anyOf": [
+                          {
+                            "type": "array",
+                            "prefixItems": [
+                              {
+                                "type": "number"
+                              },
+                              {
+                                "type": "number"
+                              }
+                            ],
+                            "items": false,
+                            "minItems": 2,
+                            "maxItems": 2
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "priorTotal": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      },
+                      "newTotal": {
+                        "type": [
+                          "number",
+                          "null"
+                        ]
+                      }
+                    },
+                    "required": [
+                      "direction",
+                      "amountType",
+                      "thisAction",
+                      "thisActionRange",
+                      "priorTotal",
+                      "newTotal"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "required": [
+                  "headline",
+                  "summary",
+                  "category",
+                  "actionType",
+                  "vendor",
+                  "schools",
+                  "money"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "vendorKey",
+          "agendaNumber",
+          "agendaSequence",
+          "consentSection",
+          "group",
+          "file",
+          "title",
+          "matterType",
+          "presenter",
+          "vendorNo",
+          "fundingSource",
+          "flags",
+          "sourceIssue",
+          "amountVerified",
+          "pulled",
+          "review",
+          "outcome",
+          "enrichment"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "meeting",
+    "totals",
+    "items"
+  ],
+  "additionalProperties": false
+}

@@ -26,6 +26,7 @@ import {
   writeJson,
 } from '../store'
 
+import { writeExports } from './exports'
 import { buildMeeting, overrideKey } from './meeting'
 import { buildVendors } from './vendors'
 
@@ -110,6 +111,8 @@ export async function buildAll(): Promise<TBuildSummary> {
   const vendors = buildVendors(meetings, aliases, await readAllVendorLegistar(), await readAllResearch())
   for (const v of vendors.files) await writeJson(path.join(out, 'vendors', `${v.key}.json`), VendorFile.parse(v))
   await writeJson(path.join(out, 'vendors', 'index.json'), vendors.index)
+
+  await writeExports(meetings, vendors.index)
 
   return { meetings, vendors: vendors.files.length }
 }

@@ -1,0 +1,95 @@
+{
+  "$id": "https://raw.githubusercontent.com/oakvs/ousd-consent-data/main/schema/vendor-index.schema.json",
+  "title": "Vendor index",
+  "description": "data/published/vendors/index.json (schema version 1.0.0). Generated from packages/consent-schema; do not edit by hand.",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "vendors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "vendorNo": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "name": {
+            "type": "string"
+          },
+          "kind": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "individual",
+                  "organization"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "topCategory": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "meetings": {
+            "type": "number"
+          },
+          "appearances": {
+            "type": "number"
+          },
+          "approvedCount": {
+            "type": "number"
+          },
+          "approvedTotal": {
+            "type": "number"
+          },
+          "legistarRecords": {
+            "type": "number"
+          },
+          "lastSeen": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "hasProfile": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "key",
+          "vendorNo",
+          "name",
+          "kind",
+          "topCategory",
+          "meetings",
+          "appearances",
+          "approvedCount",
+          "approvedTotal",
+          "legistarRecords",
+          "lastSeen",
+          "hasProfile"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "vendors"
+  ],
+  "additionalProperties": false
+}
