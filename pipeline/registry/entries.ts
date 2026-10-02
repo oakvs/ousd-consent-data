@@ -49,10 +49,13 @@ export function registerFutureDates(registry: TRegistry, dates: string[]): TRegi
   return added
 }
 
-/** A meeting is final 14+ days after it happened, once every item has an action dated that day or later. */
+/** A meeting is final 14+ days after it happened, once every item has an action dated that day or later … */
 export const FINAL_AFTER_DAYS = 14
+/** … or 180 days after it, regardless. Some items never get a later action in Legistar, and re-checking them forever costs requests. */
+export const STALE_AFTER_DAYS = 180
 
 export function isSettled(entry: TRegistryEntry, snapshot: TRawSnapshot, now: Date = new Date()): boolean {
   const daysSince = (now.getTime() - Date.parse(entry.date)) / 86_400_000
+  if (daysSince > STALE_AFTER_DAYS) return true
   return daysSince > FINAL_AFTER_DAYS && snapshot.items.every(i => i.history.some(h => h.date >= entry.date))
 }

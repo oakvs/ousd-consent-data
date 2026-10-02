@@ -104,3 +104,16 @@ describe('vendor-number matching', () => {
     expect(sameVendorNo('N/A', ['1201'])).toBe(false)
   })
 })
+
+describe('final meetings', () => {
+  it('settles 14 days on once every item has a later action, or after 180 days regardless', async () => {
+    const { isSettled } = await import('../registry/entries')
+    const entry = blankEntry('2026-02-11')
+    const open = { items: [{ history: [] }] } as unknown as Parameters<typeof isSettled>[1]
+    const done = { items: [{ history: [{ date: '2026-02-11' }] }] } as unknown as Parameters<typeof isSettled>[1]
+    expect(isSettled(entry, done, new Date('2026-02-20'))).toBe(false)
+    expect(isSettled(entry, done, new Date('2026-03-01'))).toBe(true)
+    expect(isSettled(entry, open, new Date('2026-06-01'))).toBe(false)
+    expect(isSettled(entry, open, new Date('2026-10-01'))).toBe(true)
+  })
+})

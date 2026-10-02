@@ -202,7 +202,7 @@ The LLM commit says "monthly cap reached". Spend per month is in `data/llm-state
 
 ### A meeting never becomes final
 
-A meeting is final 14+ days after it happened, once every item has a Legistar action dated that day or later. If an item never gets one, the meeting stays open, and its outcomes are re-checked once a day (one request per item). 2026-02-11 is like this. If you've confirmed it's settled, set its `status` to `"final"` in `data/meetings.json` and commit.
+A meeting is final 14 or more days after it happened, once every item has a Legistar action dated that day or later. Some items never get one, so a meeting also becomes final 180 days after it, whatever Legistar shows. Until then, open meetings are re-checked every run and their outcomes once a day. To close one sooner, set its `status` to `"final"` in `data/meetings.json` and commit.
 
 ### Privacy
 

@@ -17,6 +17,7 @@
  *   llm-compare --key K [--sample N] [--files A,B]
  *                                             Redo one meeting's LLM step on a scratch copy and compare with the stored results
  *   discover --date YYYY-MM-DD [--key K]      Resolve a meeting's EventId; prints it and the consent item count
+ *   discover-past --from D --to D [--dry-run] Find past Board meetings with a consent report and add them to the registry (for a backfill)
  *   ingest --key K [--event N]                Fetch a meeting from Legistar into data/raw
  *   backfill --from D --to D [--limit N]      resolve → ingest for every registry meeting in range, then build
  *   import-prototype [--dir <dir>]            Seed 2026-06-24 from the v1 prototype files
@@ -127,7 +128,9 @@ async function resolveAndIngest(registry: TRegistry, entry: TRegistryEntry): Pro
   }
   let result: Awaited<ReturnType<typeof ingestMeeting>>
   try {
-    result = await ingestMeeting(entry.key, entry.eventId, { fresh: entry.status !== 'final' })
+    // Old meetings' records don't change, so a backfill reads them from the cache where it can.
+    const recent = Date.now() - Date.parse(entry.date) < 60 * 86_400_000
+    result = await ingestMeeting(entry.key, entry.eventId, { fresh: entry.status !== 'final' && recent })
   } catch (error) {
     if (/No consent section/.test((error as Error).message)) {
       entry.status = 'skipped'
@@ -236,6 +239,40 @@ async function main(): Promise<void> {
       console.log(`  second-reading money ${v.same}/${v.total} agree`)
       for (const f of report.failed) console.log(`  FAILED ${f}`)
       console.log(`full report → ${path.relative(process.cwd(), out)}`)
+      break
+    }
+    case 'discover-past': {
+      if (!values.from || !values.to) throw new Error('--from and --to are required')
+      const { discoverPastMeetings } = await import('./legistar/discover')
+      const { expectedMeetingKind } = await import('@oakvs/consent-schema/format')
+      const registry = await readRegistry()
+      const found = await discoverPastMeetings(values.from, values.to)
+      const byDate = new Map<string, typeof found>()
+      for (const m of found) byDate.set(m.date, [...(byDate.get(m.date) ?? []), m])
+      const knownEvents = new Set(registry.meetings.map(m => m.eventId).filter(e => e != null))
+      let added = 0
+      for (const [date, events] of byDate) {
+        // The bigger consent report gets the bare date; a second meeting that day is the special one.
+        const sorted = [...events].sort((a, b) => b.consentItems - a.consentItems)
+        sorted.forEach((m, i) => {
+          const key = i === 0 ? date : i === 1 ? `${date}-special` : null
+          if (!key || knownEvents.has(m.eventId) || registry.meetings.some(e => e.key === key)) {
+            console.log(`  ${date}: event ${m.eventId} (${m.consentItems} consent items) ${key ? 'already registered' : 'skipped: third meeting that day'}`)
+            return
+          }
+          const entry = blankEntry(key, i === 0 ? expectedMeetingKind(date) : 'special')
+          entry.eventId = m.eventId
+          entry.resolvedBy = 'history'
+          upsert(registry, entry)
+          added++
+          console.log(`  ${key}: event ${m.eventId}, ${m.consentItems} consent items (${entry.kind})`)
+        })
+      }
+      if (values['dry-run']) console.log(`(dry run) would add ${added} meeting(s)`)
+      else {
+        await writeRegistry(registry)
+        console.log(`registry: added ${added} meeting(s); ${registry.meetings.length} in all`)
+      }
       break
     }
     case 'discover': {
