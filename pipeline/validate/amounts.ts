@@ -15,9 +15,25 @@ export type TExtractedAmount = {
 
 const AMOUNT = /\$?\s?(\d{1,3}(?:,\d{3})+|\d+)(\.\d+)?\s*(million|billion|m\b|b\b|k\b)?/gi
 
+/**
+ * OUSD's text sometimes has a stray space after a thousands comma
+ * ("$811, 391.00", "$5, 141,095.00"). Close it up, but only right after a
+ * dollar sign, so lists of plain numbers ("1, 234") are left alone.
+ */
+const STRAY_SPACE = /(\$\s?\d{1,3}(?:,\d{3})*),[ \u00a0](?=\d{3}(?!\d))/g
+const closeStraySpaces = (text: string): string => {
+  let prev: string
+  let next = text
+  do {
+    prev = next
+    next = prev.replace(STRAY_SPACE, '$1,')
+  } while (next !== prev)
+  return next
+}
+
 export function extractAmounts(text: string): TExtractedAmount[] {
   const out: TExtractedAmount[] = []
-  for (const match of text.matchAll(AMOUNT)) {
+  for (const match of closeStraySpaces(text).matchAll(AMOUNT)) {
     const [raw, whole, decimals = '', unitRaw] = match
     const hasDollar = raw.trimStart().startsWith('$')
     const unit = unitRaw?.toLowerCase()

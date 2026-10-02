@@ -226,6 +226,22 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
     }
   }).sort((a, b) => a.agendaSequence - b.agendaSequence)
 
+  // OUSD occasionally lists the same matter twice on one agenda (e.g. 2023-04-26, T.-18 and T.-20).
+  // Both listings are on the official agenda, so both stay; the repeat gets its own id and a note,
+  // and the matter is counted once in the totals.
+  const firstListing = new Map<string, TPublishedItem>()
+  const repeats = new Set<TPublishedItem>()
+  for (const item of items) {
+    const first = firstListing.get(item.file)
+    if (!first) {
+      firstListing.set(item.file, item)
+      continue
+    }
+    item.id = `${key}:${item.file}:${item.agendaNumber}`
+    item.notes = [...item.notes, { kind: 'cosmetic', text: `Listed twice on this agenda, also as ${first.agendaNumber}. Counted once in the meeting's totals.` }]
+    repeats.add(item)
+  }
+
   return {
     schemaVersion: SCHEMA_VERSION,
     meeting: {
@@ -248,7 +264,7 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
           : null)
         ?? laterDecisionNote(items, meetingDate),
     },
-    totals: computeTotals(items),
+    totals: computeTotals(items.filter(i => !repeats.has(i))),
     items,
   }
 }

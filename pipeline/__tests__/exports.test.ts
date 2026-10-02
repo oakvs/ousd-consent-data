@@ -74,7 +74,7 @@ describe('committed exports', () => {
     expect(await read('data/exports/meetings.csv')).toBe(toCsv(MEETING_COLUMNS, meetings))
     const vendors = VendorIndexFile.parse(await json('data/published/vendors/index.json'))
     expect(await read('data/exports/vendors.csv')).toBe(toCsv(VENDOR_COLUMNS, [...vendors.vendors].sort((a, b) => a.key.localeCompare(b.key))))
-    expect(parseCsv(await read('data/exports/items.csv'))).toHaveLength(2149 + 1)
+    expect(parseCsv(await read('data/exports/items.csv'))).toHaveLength(rows.length + 1)
   })
 
   it('describe every CSV column in datapackage.json', async () => {

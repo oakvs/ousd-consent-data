@@ -207,3 +207,12 @@ describe('derived flags', () => {
     expect(deriveFlags({ ...base, enrichment: makeEnrichment(), sourceIssue: 'Numbers do not add up' })).toContain('source_issue')
   })
 })
+
+describe('stray spaces in printed amounts', () => {
+  it('reads "$811, 391.00" as $811,391.00, but leaves plain number lists alone', async () => {
+    const { amountInText } = await import('../validate/amounts')
+    expect(amountInText(811391, 'a prior total of $811, 391.00, reduced')).toBe(true)
+    expect(amountInText(5141095, 'a new total of $5, 141,095.00')).toBe(true)
+    expect(amountInText(1234, 'grades 1, 234 and more')).toBe(false)
+  })
+})
