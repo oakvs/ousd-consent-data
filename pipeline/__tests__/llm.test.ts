@@ -230,3 +230,12 @@ describe('LLM commit message', () => {
     expect(m.body).toContain('LLM cost $3.21 (this month $3.21 of $25.00)')
   })
 })
+
+describe('second-reading tasks', () => {
+  it('skips follow-up readings for items whose money a person has overridden', async () => {
+    const { tasksForMeeting } = await import('../enrich/verify-io')
+    // 23-2931's money was corrected by hand on 2026-10-03; it now "disagrees" with the stored reading.
+    const tasks = await tasksForMeeting('2024-02-14')
+    expect(tasks.find(t => t.file === '23-2931')).toBeUndefined()
+  })
+})

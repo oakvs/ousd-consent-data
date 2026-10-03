@@ -61,6 +61,8 @@ export async function tasksForMeeting(key: string): Promise<TVerifyInputItem[]> 
     if (!enrichment || !record) continue
     const existing = currentVerification(verifications?.items[item.file], record.cacheKey)
     if (existing) {
+      // A person has settled the money; another machine reading can't change what's published.
+      if (override?.fields.money) continue
       // Already read twice: only a totals-changing disagreement needs a third reading.
       const base = { file: item.file, agendaNumber: item.agendaNumber, title: item.title, text: item.text, candidate: null, headline: null, vendorName: null }
       if (existing.money && !existing.tiebreakMoney && totalsDisagreements(enrichment.money, existing.money).length) {
