@@ -156,7 +156,8 @@ export function buildVendors(
         lastSeen: dates.at(-1)!,
         approvedTotal: sum(counted.filter(a => a.direction === 'expense' && a.amountType !== 'per_year' && a.amountType !== 'sales_cap')),
         yearlyCapsTotal: sum(counted.filter(a => a.direction === 'expense' && a.amountType === 'per_year')),
-        revenueTotal: sum(counted.filter(a => a.direction === 'revenue')),
+        // A grant application isn't money received; it's counted when the award is accepted.
+        revenueTotal: sum(counted.filter(a => a.direction === 'revenue' && !a.flags.includes('grant_application'))),
         approvedCount: counted.length,
         pendingAmounts: group.appearances.filter(a => a.countsTowardTotals && !a.enriched).length,
         fundingSources: unique([...group.appearances.map(a => a.fundingSource), ...history.map(h => h.fundingSource)]),

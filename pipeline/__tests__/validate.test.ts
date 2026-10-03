@@ -241,4 +241,17 @@ describe('payment ratifications', () => {
     expect(t.paymentsRatifiedTotal).toBe(300_000_000)
     expect(t.paymentsRatifiedItems).toBe(1)
   })
+
+  it('flags grant applications, but not E-Rate purchases', () => {
+    const revenue = makeEnrichment({ money: { direction: 'revenue', thisAction: 82_394_086 } })
+    for (const title of [
+      'Grant Application - California Department of Education - California Community Schools Partnership Program',
+      '23-127123Grant Application - California Schools Healthy Air, Plumbing, and Efficiency Program',
+      'Continued Funding Application Fiscal Year 2025-2026 - California Department of Education',
+      'Consolidated Application and Reporting System (CARS) - Application for Funding',
+    ]) expect(deriveFlags({ ...base, title, enrichment: revenue })).toContain('grant_application')
+    const purchase = makeEnrichment({ money: { direction: 'expense', thisAction: 475_000 } })
+    expect(deriveFlags({ ...base, title: '2020-2021 - E-Rate Category 2 Application, Procurement of Equipment', enrichment: purchase })).not.toContain('grant_application')
+    expect(deriveFlags({ ...base, title: 'Grant Agreement - City of Oakland - OFCY', enrichment: revenue })).not.toContain('grant_application')
+  })
 })

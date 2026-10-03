@@ -66,6 +66,11 @@ export const ACTION_LABELS: Record<TActionType, string> = {
 export type TFlagTone = 'warn' | 'crit' | 'info'
 
 export const FLAG_LABELS: Record<TFlag, { label: string; explain: string; tone: TFlagTone }> = {
+  grant_application: {
+    label: 'Grant application',
+    explain: 'The district is applying for this money, not receiving it yet. Not counted as money coming in; an award usually comes back to the Board to be accepted.',
+    tone: 'info',
+  },
   payment_ratification: {
     label: 'Ratifies payments already made',
     explain: 'Payroll or vendor checks the district has already paid, under contracts and salaries approved elsewhere. Shown here but not counted as new spending.',
@@ -164,6 +169,7 @@ export const JARGON = Object.keys(JARGON_EXPANSIONS)
 export const FLAG_ORDER: readonly TFlag[] = [
   'pulled_from_consent',
   'payment_ratification',
+  'grant_application',
   'after_work_began',
   'no_competitive_bid',
   'raises_existing_contract',

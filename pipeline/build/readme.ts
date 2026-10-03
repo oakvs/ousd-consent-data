@@ -65,10 +65,13 @@ export function readmeSections({ index, meetings, vendors, enrichments, verifica
   const ratified = meetings.flatMap(m => m.items)
     .filter(i => i.countsTowardTotals && i.flags.includes('payment_ratification'))
     .reduce((t, i) => t + (i.enrichment?.money.thisAction ?? 0), 0)
+  const appliedFor = meetings.flatMap(m => m.items)
+    .filter(i => i.countsTowardTotals && i.flags.includes('grant_application'))
+    .reduce((t, i) => t + (i.enrichment?.money.thisAction ?? 0), 0)
   const stats = `As of ${formatDate(asOf, 'long')}, it covers ${n(ms.length)} Board meetings, from ${formatDate(first.date, 'long')} to ${formatDate(last.date, 'long')}. `
     + `That's ${n(sum('items'))} consent items authorizing ${dollars(sum('spendingTotal'))} in spending, plus ${dollars(sum('revenueTotal'))} in grants and other money coming in, `
     + `across ${n(vendors.vendors.length)} vendors and partners. `
-    + `The Board also ratified ${dollars(ratified)} in payroll and vendor checks already paid, which isn't counted as spending.`
+    + `Not counted in those totals: ${dollars(appliedFor)} in grant applications, and ${dollars(ratified)} in payroll and vendor checks the Board ratified after they were paid.`
 
   const counts: Record<string, number> = {}
   for (const m of meetings) for (const i of m.items) counts[i.review.status] = (counts[i.review.status] ?? 0) + 1

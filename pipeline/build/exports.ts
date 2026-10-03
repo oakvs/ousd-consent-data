@@ -89,6 +89,7 @@ export const MEETING_COLUMNS: TColumn<TMeetingFile>[] = [
   { name: 'yearly_caps_total', type: 'number', description: 'Sum of per-year spending limits.', get: m => m.totals.yearlyCapsTotal },
   { name: 'revenue_total', type: 'number', description: 'Money coming to the district.', get: m => m.totals.revenueTotal },
   { name: 'decrease_total', type: 'number', description: 'Reductions to earlier contracts.', get: m => m.totals.decreaseTotal },
+  { name: 'applied_for_total', type: 'number', description: 'Grants and funding applied for; not counted in revenue_total.', get: m => m.totals.appliedForTotal },
   { name: 'payments_ratified_total', type: 'number', description: 'Payroll and vendor checks already paid that the Board ratified; not counted in spending_total.', get: m => m.totals.paymentsRatifiedTotal },
   { name: 'note', type: 'string', description: 'Meeting-level note, e.g. a consent report postponed as a whole.', get: m => m.meeting.note },
   { name: 'updated_at', type: 'string', description: 'When the source data last changed (ISO timestamp).', get: m => m.meeting.updatedAt },

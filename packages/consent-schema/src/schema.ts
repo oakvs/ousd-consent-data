@@ -64,6 +64,7 @@ export const DerivedFlag = z.enum([
   'no_total_stated',
   'pulled_from_consent',
   'payment_ratification',
+  'grant_application',
 ])
 export type TDerivedFlag = z.infer<typeof DerivedFlag>
 
@@ -420,6 +421,9 @@ export const Totals = z.object({
    */
   paymentsRatifiedTotal: z.number(),
   paymentsRatifiedItems: z.number(),
+  /** Grants and funding the district applied for; kept out of revenueTotal until accepted. */
+  appliedForTotal: z.number(),
+  appliedForItems: z.number(),
   flagCounts: z.record(z.string(), z.number()),
   byCategory: z.record(z.string(), z.object({ items: z.number(), spending: z.number() })),
 })

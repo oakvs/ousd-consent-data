@@ -6,7 +6,7 @@ The data backs the [Consent Report Tracker on the Oakland vs. the World blog](ht
 
 The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
-<!-- generated:stats -->As of October 3, 2026, it covers 162 Board meetings, from August 14, 2019 to September 23, 2026. That's 12,062 consent items authorizing $2.17 billion in spending, plus $711.0 million in grants and other money coming in, across 2,184 vendors and partners. The Board also ratified $3.77 billion in payroll and vendor checks already paid, which isn't counted as spending.<!-- /generated:stats -->
+<!-- generated:stats -->As of October 3, 2026, it covers 162 Board meetings, from August 14, 2019 to September 23, 2026. That's 12,062 consent items authorizing $2.17 billion in spending, plus $469.4 million in grants and other money coming in, across 2,184 vendors and partners. Not counted in those totals: $241.5 million in grant applications, and $3.77 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
 
 ## Why this exists
 
@@ -105,7 +105,7 @@ For a change to an existing contract, it's only the new money. If a $100,000 con
 
 Totals count only what the Board actually adopted, and each action only once. Items that were withdrawn, failed, postponed or later repealed stay on the meeting's list but add nothing. When a meeting doesn't act on its consent report and the same items come back at the next one, they count at the meeting where they were adopted. If an item shows up twice on one agenda, it counts once. Each item's `countsTowardTotals` field says whether it's counted.
 
-Payroll and accounts-payable warrants are a special case. Every few months the Board ratifies the paychecks and vendor checks the district has already issued, often hundreds of millions of dollars at a time. Those payments were made under contracts and salaries approved elsewhere, so counting them as spending would count the same money twice. They're listed with a "Ratifies payments already made" flag and totaled separately.
+Payroll and accounts-payable warrants are a special case. Every few months the Board ratifies the paychecks and vendor checks the district has already issued, often hundreds of millions of dollars at a time. Those payments were made under contracts and salaries approved elsewhere, so counting them as spending would count the same money twice. They're listed with a "Ratifies payments already made" flag and totaled separately. Grant applications work the same way: applying for money isn't receiving it, and an award usually comes back to the Board to be accepted, so applications get a "Grant application" flag and their own total.
 
 Grants and other money coming in are counted separately from spending. Cuts to existing contracts are noted on the item but aren't subtracted. Yearly limits ("up to $X per year") are totaled on their own, so they don't get mixed in with one-time amounts. Caps on what the district can earn by auctioning surplus property aren't spending, so they're left out.
 
