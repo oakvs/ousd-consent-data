@@ -1,12 +1,12 @@
 # OUSD Consent Tracker data
 
-This repository holds data tracking every item the Oakland Unified School District (OUSD) Board of Education has voted on through its General Consent Report since <!-- generated:since -->August 2021<!-- /generated:since -->, and a pipeline to fetch, store and enrich that data via LLMs. Included in the dataset is the official text from Legistar, a short plain-language summary, dollar amounts, the outcome and votes, a vendor profile. 
+This repository holds data tracking every item the Oakland Unified School District (OUSD) Board of Education has voted on through its General Consent Report since <!-- generated:since -->August 2019<!-- /generated:since -->, and a pipeline to fetch, store and enrich that data via LLMs. Included in the dataset is the official text from Legistar, a short plain-language summary, dollar amounts, the outcome and votes, a vendor profile. 
 
 The data backs the [Consent Report Tracker on the Oakland vs. the World blog](https://oakvs.world/consent-tracker), and this repo is made public for anyone who wants the data itself, or wants to see exactly how it's made.
 
 The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
-<!-- generated:stats -->As of October 3, 2026, it covers 116 Board meetings, from August 11, 2021 to September 23, 2026. That's 9,301 consent items authorizing $4.53 billion in spending, plus $581.7 million in grants and other money coming in, across 1,828 vendors and partners.<!-- /generated:stats -->
+<!-- generated:stats -->As of October 3, 2026, it covers 162 Board meetings, from August 14, 2019 to September 23, 2026. That's 12,062 consent items authorizing $5.94 billion in spending, plus $711.2 million in grants and other money coming in, across 2,245 vendors and partners.<!-- /generated:stats -->
 
 ## Why this exists
 
@@ -83,10 +83,10 @@ Every change becomes a commit in this repository with a readable message, like `
 <!-- generated:models -->
 | Records | Model |
 |---|---|
-| Summaries, August 2021 – June 2025 (7,154 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `enrich.v3`) |
+| Summaries, August 2019 – June 2025 (9,915 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `enrich.v3`) |
 | Summaries, August 2025 – September 2026 (1,886 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `enrich.v2`) |
 | Summaries, June 2026 (263 items) | An earlier prototype (`prototype-v1`, prompt `enrich.v1`) |
-| Second readings, August 2021 – September 2026 (2,779 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `verify.v1`) |
+| Second readings, August 2019 – September 2026 (3,708 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `verify.v1`) |
 | Vendor research (1,449 vendors, 1,013 published) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`) |
 <!-- /generated:models -->
 
@@ -127,13 +127,13 @@ Flags point out how something was done. They don't say anything about anyone's m
 | Time extension only | Moves the end date without adding money | AI, from the text |
 | Emergency | The text describes emergency work or contracting | AI, from the text |
 
-Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 9,231 items are `auto_ok`, 56 are `human_reviewed` and 23 are `needs_review`.<!-- /generated:review -->
+Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 11,978 items are `auto_ok`, 56 are `human_reviewed` and 38 are `needs_review`.<!-- /generated:review -->
 
 ## Known limitations
 
 The checks make the worst kind of mistake, a wrong or made-up dollar amount, very unlikely. A summary can still get the gist of an item wrong, though, and categories are sometimes a judgment call. When in doubt, go by the official text, which is always right next to the summary.
 
-Coverage starts in <!-- generated:since -->August 2021<!-- /generated:since --> and only includes consent items. Items on the regular agenda aren't here, and neither are meetings without a consent report.
+Coverage starts in <!-- generated:since -->August 2019<!-- /generated:since --> and only includes consent items. Items on the regular agenda aren't here, and neither are meetings without a consent report.
 
 Legistar has some quirks the pipeline works around. Its "Pass" flag sometimes disagrees with the recorded motion, for instance, and items pulled from a consent report are sometimes decided at a later meeting. The known ones are listed in [`pipeline/README.md`](pipeline/README.md).
 

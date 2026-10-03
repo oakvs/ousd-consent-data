@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { FILE_NUMBER, normalizeCode } from '../normalize/raw-item'
+import { FILE_NUMBER, agendaLabel, cleanFileNumber, normalizeCode } from '../normalize/raw-item'
 import { cleanTitle, findConsentRows } from '../normalize/sections'
 import { blankEntry, registerFutureDates } from '../registry/entries'
 
@@ -115,5 +115,18 @@ describe('final meetings', () => {
     expect(isSettled(entry, done, new Date('2026-03-01'))).toBe(true)
     expect(isSettled(entry, open, new Date('2026-06-01'))).toBe(false)
     expect(isSettled(entry, open, new Date('2026-10-01'))).toBe(true)
+  })
+})
+
+describe('odd Legistar rows', () => {
+  it('strips stray punctuation from a file number (2020-01-22, "+20-0100")', () => {
+    expect(cleanFileNumber('+20-0100')).toBe('20-0100')
+    expect(cleanFileNumber(' 21-1738A ')).toBe('21-1738A')
+    expect(FILE_NUMBER.test(cleanFileNumber('+20-0100'))).toBe(true)
+  })
+
+  it('labels an unnumbered consent item by its agenda order (2020-06-29 special meeting)', () => {
+    expect(agendaLabel({ EventItemAgendaNumber: null, EventItemAgendaSequence: 12 })).toBe('#12')
+    expect(agendaLabel({ EventItemAgendaNumber: ' T.-3 ', EventItemAgendaSequence: 40 })).toBe('T.-3')
   })
 })

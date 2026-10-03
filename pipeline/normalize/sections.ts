@@ -69,7 +69,9 @@ export function findConsentRows(eventItems: TLegistarEventItem[]): TSectionRow[]
       continue
     }
 
-    if (number.startsWith(`${section.letter}.-`) || row.EventItemConsent === 1) {
+    // Unnumbered rows inside the section count too: the 2020 virtual special meetings list
+    // consent items without numbers, and Legistar clears the consent flag on a withdrawn one.
+    if (!number || number.startsWith(`${section.letter}.-`) || row.EventItemConsent === 1) {
       out.push({ row, consentSection: section.kind, group })
     }
   }

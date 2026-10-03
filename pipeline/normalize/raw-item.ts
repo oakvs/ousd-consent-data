@@ -50,17 +50,28 @@ export function normalizeHistory(histories: TLegistarHistory[]): THistoryEntry[]
     .sort((a, b) => a.date.localeCompare(b.date) || a.action.localeCompare(b.action))
 }
 
+/** Legistar file number, without stray leading punctuation (2020-01-22 lists "+20-0100"). */
+export const cleanFileNumber = (file: string | null | undefined): string => (file ?? '').trim().replace(/^[^0-9A-Za-z]+/, '')
+
+/**
+ * The item's agenda number. Two virtual special meetings in 2020 (June 29, Aug 1) list their
+ * consent items unnumbered; those get "#" plus their place in Legistar's agenda order, which
+ * can't be mistaken for an official number.
+ */
+export const agendaLabel = (row: Pick<TSectionRow['row'], 'EventItemAgendaNumber' | 'EventItemAgendaSequence'>): string =>
+  row.EventItemAgendaNumber?.trim() || `#${row.EventItemAgendaSequence}`
+
 export function toRawItem(
   { row, consentSection, group }: TSectionRow,
   matter: TLegistarMatter | null,
   histories: TLegistarHistory[],
 ): TRawItem {
-  const file = (row.EventItemMatterFile ?? matter?.MatterFile ?? '').trim()
+  const file = cleanFileNumber(row.EventItemMatterFile ?? matter?.MatterFile)
   if (!FILE_NUMBER.test(file)) {
     throw new Error(`Unexpected file number ${JSON.stringify(file)} at ${row.EventItemAgendaNumber}`)
   }
   return {
-    agendaNumber: row.EventItemAgendaNumber!.trim(),
+    agendaNumber: agendaLabel(row),
     agendaSequence: row.EventItemAgendaSequence!,
     consentSection,
     group,
