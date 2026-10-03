@@ -389,9 +389,19 @@ export const PublishedItem = RawItem.extend({
   lineage: Lineage,
   /** Id of the item this one repeats (the same action listed twice); left out of all totals. */
   duplicateOf: z.string().optional(),
+  /**
+   * Whether this listing's money counts in totals (meeting, vendor, README). False for a repeat,
+   * for an item the Board didn't adopt (withdrawn, failed, postponed, repealed), and for an
+   * earlier listing of a file that was listed again later (counted at its latest listing).
+   */
+  countsTowardTotals: z.boolean(),
 })
 export type TPublishedItem = z.infer<typeof PublishedItem>
 
+/**
+ * Money totals (spending, caps, revenue, decreases, byCategory) count only items the Board
+ * adopted, or hasn't decided yet; `items`, `enrichedItems` and `flagCounts` count every listing.
+ */
 export const Totals = z.object({
   items: z.number(),
   enrichedItems: z.number(),

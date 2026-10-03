@@ -61,6 +61,7 @@ function item(file: string, overrides: Partial<TPublishedItem> = {}): TPublished
     notes: [],
     review: { status: 'auto_ok', modelId: null, promptVersion: null, reviewedAt: null, correction: null, verifiedBy: null, alerts: [] },
     outcome: null,
+    countsTowardTotals: true,
     lineage: { amendmentNo: null, otherMeetings: [] },
     ...overrides,
   }
@@ -275,7 +276,7 @@ describe('vendors', () => {
     expect(normalizeVendorName('Rob’s Skate Academy, LLC')).toBe('robs skate academy')
   })
 
-  it('counts a re-agendized file number once, at its latest meeting', () => {
+  it("follows the build's countsTowardTotals for a re-agendized file number", () => {
     const adopted = { action: 'Adopted', date: '2026-06-29', meetingEventId: 5786, adopted: true }
     const meeting = (key: string, items: TPublishedItem[]): TMeetingFile => ({
       schemaVersion: '1.0.0',
@@ -284,7 +285,7 @@ describe('vendors', () => {
       items,
     })
     const { files } = buildVendors([
-      meeting('2026-06-10', [item('26-1036', { vendorNo: '009906', outcome: adopted })]),
+      meeting('2026-06-10', [item('26-1036', { vendorNo: '009906', outcome: adopted, countsTowardTotals: false })]),
       meeting('2026-06-24', [item('26-1036', { vendorNo: '009906', outcome: adopted })]),
     ], NO_ALIASES)
     expect(files).toHaveLength(1)
@@ -401,5 +402,22 @@ describe('duplicate listings', () => {
       const v = VendorFile.parse(JSON.parse(await readFile(path.join(vendorDir, f), 'utf8')))
       for (const a of v.appearances) if (dupIds.has(a.id)) expect(a.countsTowardTotals, a.id).toBe(false)
     }
+  })
+})
+
+describe('counting each action once', () => {
+  it('counts every file number in at most one meeting, and never one the Board rejected', async () => {
+    const dir = path.join(PUBLISHED, 'meetings')
+    const countedAt = new Map<string, string[]>()
+    for (const f of (await readdir(dir)).filter(n => !n.endsWith('.list.json'))) {
+      const m = MeetingFile.parse(JSON.parse(await readFile(path.join(dir, f), 'utf8')))
+      for (const i of m.items.filter(x => x.countsTowardTotals)) {
+        expect(i.outcome?.adopted, i.id).not.toBe(false)
+        expect(i.duplicateOf, i.id).toBeUndefined()
+        countedAt.set(i.file, [...(countedAt.get(i.file) ?? []), m.meeting.key])
+      }
+    }
+    const twice = [...countedAt].filter(([, keys]) => keys.length > 1)
+    expect(twice).toEqual([])
   })
 })

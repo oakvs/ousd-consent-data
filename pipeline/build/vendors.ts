@@ -86,10 +86,6 @@ export function buildVendors(
   research = researchByCurrentKey(research, aliases)
   const sorted = [...meetings].sort((a, b) => a.meeting.key.localeCompare(b.meeting.key))
 
-  // Latest meeting key per file number.
-  const latest = new Map<string, string>()
-  for (const m of sorted) for (const item of m.items) latest.set(item.file, m.meeting.key)
-
   const groups = new Map<string, TGroup>()
   for (const m of sorted) {
     for (const item of m.items) {
@@ -128,7 +124,7 @@ export function buildVendors(
         fundingSource: item.fundingSource,
         outcome: item.outcome,
         flags: item.flags,
-        countsTowardTotals: !item.duplicateOf && latest.get(item.file) === m.meeting.key,
+        countsTowardTotals: item.countsTowardTotals,
       })
       groups.set(key, group)
     }

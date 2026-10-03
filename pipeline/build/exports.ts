@@ -71,6 +71,7 @@ export const ITEM_COLUMNS: TColumn<TItemRow>[] = [
   { name: 'review_status', type: 'string', description: 'auto_ok, needs_review, blocked, human_reviewed, or pending (no summary yet).', get: r => r.item.review.status },
   { name: 'model_id', type: 'string', description: 'Model that wrote the summary.', get: r => r.item.review.modelId },
   { name: 'prompt_version', type: 'string', description: 'Prompt version used for the summary.', get: r => r.item.review.promptVersion },
+  { name: 'counts_toward_totals', type: 'boolean', description: "Whether this row's money counts in totals: false for repeats, items not adopted, and earlier listings of a re-listed item.", get: r => r.item.countsTowardTotals },
   { name: 'duplicate_of', type: 'string', description: 'Item id this row repeats (the same action listed twice); repeats are left out of totals.', get: r => r.item.duplicateOf ?? null },
 ]
 

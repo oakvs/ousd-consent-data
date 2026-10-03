@@ -225,6 +225,7 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
         alerts: status === 'needs_review' ? alerts : [],
       },
       outcome: deriveOutcome(item.history, meetingDate),
+      countsTowardTotals: true,
       lineage: {
         amendmentNo: parseAmendmentNo(item.title, item.text),
         otherMeetings: (fileAppearances.get(item.file) ?? []).filter(k => k !== key),
@@ -254,6 +255,14 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
     if (!original || !item || original === item) throw new Error(`${key} ${rawItem.file}: duplicateOf ${override.duplicateOf} isn't another item on this agenda`)
     item.duplicateOf = original.id
     item.notes = [...item.notes, { kind: 'cosmetic', text: `The same action as ${original.agendaNumber} (${original.file}), listed under a second file number. Counted once in totals.` }]
+  }
+
+  // Each action's money counts once: at the file's latest listing (an item re-listed after a
+  // meeting that didn't act counts where it was decided), and only if the Board didn't reject it.
+  // Undecided items (an upcoming meeting) still count.
+  for (const item of items) {
+    const latestListing = [...(fileAppearances.get(item.file) ?? [key])].sort().at(-1)
+    item.countsTowardTotals = !item.duplicateOf && item.outcome?.adopted !== false && latestListing === key
   }
 
   return {

@@ -6,7 +6,7 @@ The data backs the [Consent Report Tracker on the Oakland vs. the World blog](ht
 
 The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
-<!-- generated:stats -->As of October 2, 2026, it covers 92 Board meetings, from August 10, 2022 to September 23, 2026. That's 7,598 consent items authorizing $3.86 billion in spending, plus $469.4 million in grants and other money coming in, across 1,548 vendors and partners.<!-- /generated:stats -->
+<!-- generated:stats -->As of October 2, 2026, it covers 92 Board meetings, from August 10, 2022 to September 23, 2026. That's 7,598 consent items authorizing $3.75 billion in spending, plus $451.4 million in grants and other money coming in, across 1,548 vendors and partners.<!-- /generated:stats -->
 
 ## Why this exists
 
@@ -101,6 +101,8 @@ Each item with money shows one main number, which is what that vote approves.
 For a new contract, that's the most the district has agreed to pay. Most contracts set a "not to exceed" ceiling, so the district may end up paying less, but it can't pay more without another vote.
 
 For a change to an existing contract, it's only the new money. If a $100,000 contract goes up to $150,000, the vote counts as $50,000, since the original $100,000 was approved at an earlier meeting.
+
+Totals count only what the Board actually adopted, and each action only once. Items that were withdrawn, failed, postponed or later repealed stay on the meeting's list but add nothing. When a meeting doesn't act on its consent report and the same items come back at the next one, they count at the meeting where they were adopted. If an item shows up twice on one agenda, it counts once. Each item's `countsTowardTotals` field says whether it's counted.
 
 Grants and other money coming in are counted separately from spending. Cuts to existing contracts are noted on the item but aren't subtracted. Yearly limits ("up to $X per year") are totaled on their own, so they don't get mixed in with one-time amounts. Caps on what the district can earn by auctioning surplus property aren't spending, so they're left out.
 

@@ -1,5 +1,8 @@
 /**
  * Meeting totals (§7.4). Spending excludes per-year caps and sales caps.
+ *
+ * Every listed item counts toward `items`, `enrichedItems` and `flagCounts`. Money and
+ * categories count only items with `countsTowardTotals` (see buildMeeting).
  */
 import { spendingAmount } from '@oakvs/consent-schema/format'
 import type { TPublishedItem, TTotals } from '@oakvs/consent-schema/schema'
@@ -24,6 +27,7 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
     const e = item.enrichment
     if (!e) continue
     totals.enrichedItems++
+    if (!item.countsTowardTotals) continue
     const { money } = e
 
     const spend = spendingAmount(money)
