@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://rodaleadership.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/roda-leadership-development-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008532",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California LLC 'Roda Leadership Development LLC' based in Oakland, CA, matching the agenda location (bizprofile.net mirror of Secretary of State filing)",
+      "Organization's website (rodaleadership.com) describes leadership coaching and development for schools and communities, matching OUSD's contracts for classroom/academic and student support programs",
+      "OUSD board file 24-3120 describes a 2024-25 services agreement with Roda Leadership Development at Esperanza Elementary School, matching the agenda titles"
+    ],
+    "key": "v-008532",
+    "notes": "Contact email on the website is a named individual's personal Gmail address, and the registered address appears to be a residential street address, so both were omitted. California entity number comes from a third-party mirror of Secretary of State data (bizprofile.net), not bizfileonline directly. OUSD file 24-3120 (ousd.legistar.com) confirms the Esperanza Elementary agreement.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "202136110410",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Roda Leadership Development LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A small Oakland-based consulting company that provides leadership coaching and development services. It works with school leaders and community members on building more equitable schools and communities, including community-led planning processes and education research support.",
+      "website": "https://rodaleadership.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About — Roda Leadership Development",
+        "url": "https://rodaleadership.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Roda Leadership Development LLC Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/roda-leadership-development-llc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008532",
+    "notes": "The California LLC Roda Leadership Development LLC (entity 202136110410, active, Oakland) matches the agenda name and Oakland location. Its website describes school leadership coaching, equity-focused school redesign and community-led processes, which fits OUSD's school-based services agreements. The summary is neutral and consistent with the sources; the word 'small' is an inference, but a minor one. Personal email and the residential registered address were correctly omitted. I could not retrieve Legistar file 24-3120 independently.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

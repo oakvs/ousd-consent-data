@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/884421089",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://alexandertutoring.com/andromeda/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-009472",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Andromeda Education Inc', EIN 88-4421089, category Educational Services and Schools (ProPublica Nonprofit Explorer)",
+      "Alexander Tutoring's Andromeda page describes Andromeda Education as a free math tutoring nonprofit serving grades 7-12 students in Bay Area districts, consistent with OUSD's 'Classroom & academic programs' category",
+      "WEAK: ProPublica lists the IRS address city as Bel Tiburon, CA (Marin County, adjacent to Sausalito), not Sausalito as in the agenda text",
+      "NOT FOUND: no page found that mentions Oakland Unified or the Sojourner Truth Independent Study program"
+    ],
+    "key": "v-009472",
+    "notes": "Agenda says Sausalito; the IRS record shows Bel Tiburon, CA, a nearby but different city, and no source tied this organization to OUSD or Sojourner Truth. The organization's own website (andromedaeducation.com) did not resolve, so no website, address or headquarters were recorded. Registry listing shows tax exemption issued 2026, while the OUSD agreement was 2024-2025, so a reviewer should confirm this is the same entity.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "88-4421089",
+      "email": "info@andromedaeducation.com",
+      "headquarters": null,
+      "legalName": "Andromeda Education Inc",
+      "orgType": "nonprofit",
+      "phone": "(415) 855-5132",
+      "samUei": null,
+      "summary": "Andromeda Education is a nonprofit that provides free one-to-one math tutoring for students in grades 7 through 12 who qualify for free or reduced-price lunch. It works with school districts across the San Francisco Bay Area and was started in partnership with Alexander Tutoring.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Andromeda Education Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/884421089"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "orgType"
+        ],
+        "title": "Andromeda - Alexander Tutoring",
+        "url": "https://alexandertutoring.com/andromeda/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

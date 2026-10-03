@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://radicistudios.com/policies/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://radicistudios.com/pages/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://radicistudios.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007980",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Radici Studios' privacy policy gives a Berkeley, CA 94709 mailing address, matching the 'Berkeley, CA' location in the agenda text",
+      "Radici Studios' About page says its work includes Oakland Unified School District (OUSD)",
+      "The studio runs art workshops and education programs for people of all ages, matching OUSD's 'Classroom & academic programs' services agreement with the Early Childhood Development Department"
+    ],
+    "key": "v-007980",
+    "notes": "Small woman-owned art studio, apparently a sole-proprietor-style business trading as Radici Studios; no EIN, CA entity number or UEI found. The only email on the site is the founder's named address (jen@) and the phone number has a Colorado area code, so both were left out. Legal entity type not stated on the site; orgType 'company' is an inference.",
+    "profile": {
+      "address": "P.O. Box 9415, Berkeley CA 94709",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Radici Studios",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Radici Studios is an art and education business founded by artist and teacher Jen Bloomer. It creates murals, prints and apparel on themes of human rights and connection, and leads creative workshops for children and adults. It has worked with schools, foundations and community organizations in the Bay Area.",
+      "website": "https://radicistudios.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Privacy policy - Radici Studios",
+        "url": "https://radicistudios.com/policies/privacy-policy"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About - Radici Studios",
+        "url": "https://radicistudios.com/pages/about"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Radici Studios",
+        "url": "https://radicistudios.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007980",
+    "notes": "The privacy policy gives a Berkeley, CA 94709 P.O. box matching the agenda location, and the About page lists OUSD among its clients, alongside art workshops and education work that fit an Early Childhood Development services agreement. The summary is supported and neutral, and the named founder's email and the out-of-area phone number were correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

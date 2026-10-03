@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.quetzalec.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.quetzalec.com/clients",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/quetzal-education-consulting",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007078",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: Quetzal Education Consulting, a California general corporation (entity 4584868) with principal address in Oakland, CA (bizprofile.net mirror of CA Secretary of State filing)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Company website describes education consulting for schools and districts, matching OUSD's classroom/academic and equity-related service agreements",
+      "Company's own Clients page lists Oakland Unified School District as a client"
+    ],
+    "key": "v-007078",
+    "notes": "Entity number comes from a third-party mirror of California Secretary of State data (bizprofile.net); the SOS site itself was not fetched. Entity type shown there is General Corporation, status Active.",
+    "profile": {
+      "address": "2648 International Blvd Ste 115, Oakland, CA 94601",
+      "caEntityNumber": "4584868",
+      "ein": null,
+      "email": "info@quetzalec.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Quetzal Education Consulting",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Quetzal Education Consulting is an Oakland-based education consulting firm. It works with schools, school districts, universities and nonprofits on anti-oppression consultation, anti-racist math and STEM education, systemic change, workshops and professional development. It says it supports institutions building liberatory education with Black and Brown communities.",
+      "website": "https://www.quetzalec.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About — Quetzal Education Consulting",
+        "url": "https://www.quetzalec.com/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address"
+        ],
+        "title": "Clients — Quetzal Education Consulting",
+        "url": "https://www.quetzalec.com/clients"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Quetzal Education Consulting Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/quetzal-education-consulting"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007078",
+    "notes": "Name, Oakland location and CA general corporation filing (entity 4584868, 2648 International Blvd Ste 115) match; the company's Clients page lists Oakland Unified School District, and its anti-oppression, math/STEM and ELA consulting fits the equity, multilingual and school agreements. Summary, email (generic info@) and address are supported by the About and Clients pages and the filing mirror, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

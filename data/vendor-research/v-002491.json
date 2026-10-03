@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/corporate-translation-services-llc-10049019/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.language.link/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/wa/battle-ground/corporate-translation-services-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002491",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Corporate Translation Services, LLC' (HigherGov federal awardee profile; Washington business filing on BizProfile)",
+      "Located in Battle Ground, WA, matching the agenda text (Battle Ground, WA / Vancouver, WA); Washington filing lists 1417 SE Rasmussen Blvd, Battle Ground, WA",
+      "Business is translation and interpretation (NAICS 541930), consistent with OUSD contracting for family services and special education language support",
+      "Company website language.link says it was originally founded as Corporate Translation Services, Inc. in 1991 and HigherGov lists dba Language Link with website language.link"
+    ],
+    "key": "v-002491",
+    "notes": "Company website now shows an Atlanta, GA address and 800 number for the parent (BIG Language Solutions), which differs from the Battle Ground, WA location in the agenda and filings; contact fields and headquarters left null to avoid publishing parent-company details. The Washington (not California) entity is registered (UBI 601294245, Delaware LLC); no California entity number found. No page found mentioning OUSD.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Corporate Translation Services, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": "T55FNY4MCVN5",
+      "summary": "A for-profit company, doing business as Language Link, that provides translation, interpretation and localization services in more than 300 languages and dialects. It was founded in 1991 in the Pacific Northwest and now operates as part of BIG Language Solutions.",
+      "website": "https://www.language.link"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "samUei",
+          "website",
+          "summary"
+        ],
+        "title": "Corporate Translation Services",
+        "url": "https://www.highergov.com/awardee/corporate-translation-services-llc-10049019/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Language Link",
+        "url": "https://www.language.link/about-us/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Corporate Translation Services, LLC Battle Ground, WA - filing information",
+        "url": "https://www.bizprofile.net/wa/battle-ground/corporate-translation-services-llc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002491",
+    "notes": "Exact legal name and Battle Ground, WA location match the agenda; HigherGov confirms dba Language Link, UEI T55FNY4MCVN5, website, NAICS 541930, 1991 founding and 300+ languages, and language.link confirms the Corporate Translation Services origin, Pacific Northwest roots and BIG Language Solutions parent. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

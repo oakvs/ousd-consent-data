@@ -1,0 +1,55 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/san-pablo/profile/tree-service/best-quality-tree-service-1116-537417",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    }
+  ],
+  "key": "v-009051",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name 'Best Quality Tree Service' matches a local tree-service business listed by the Better Business Bureau (BBB)",
+      "Located in San Pablo, CA, matching the agenda text",
+      "Tree service / vegetation work is plausibly related to OUSD's weed abatement and vegetation fire management contract, but no page found links this business to OUSD"
+    ],
+    "key": "v-009051",
+    "notes": "No official website, no California Secretary of State, SAM.gov or other registry record found, and no page linking the business to OUSD. Directory listings (Yelp, Nextdoor) give phone (510) 779-3008 while BBB gives (510) 228-2373, so phone was omitted. Business appears owner-operated (possibly a sole proprietorship); only the business name and business address are used. Not confirmed enough to publish.",
+    "profile": {
+      "address": "1648 Miner Ave, San Pablo, CA 94806-2123",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Pablo, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A local tree service business in San Pablo, California, serving the San Francisco Bay Area.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Best Quality Tree Service - BBB",
+        "url": "https://www.bbb.org/us/ca/san-pablo/profile/tree-service/best-quality-tree-service-1116-537417"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

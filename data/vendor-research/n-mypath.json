@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943098928",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mypathus.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-mypath",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered San Francisco nonprofit: 'Mypath' (ProPublica Nonprofit Explorer, EIN 94-3098928, San Francisco, CA), matching the agenda's 'MyPath, San Francisco, CA'",
+      "Organization works with youth, including partners in Oakland (City of Oakland Summer Youth Employment Program listed on its partners page), which loosely fits a youth-focused services agreement with OUSD's High School Linked Learning Office",
+      "No public page found that directly links MyPath to OUSD, so the match rests mainly on name and city"
+    ],
+    "key": "n-mypath",
+    "notes": "Medium confidence: no public page found tying MyPath to OUSD or its Linked Learning office; match relies on exact name, San Francisco location, and youth-services focus. The website's email address is obfuscated, so it was omitted. Reviewer should confirm via the OUSD agenda item or contract that this is the youth financial-capability nonprofit.",
+    "profile": {
+      "address": "2430 Mission Street, San Francisco, 94110",
+      "caEntityNumber": null,
+      "ein": "94-3098928",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Mypath",
+      "orgType": "nonprofit",
+      "phone": "415-206-0846",
+      "samUei": null,
+      "summary": "MyPath is a nonprofit based in San Francisco that works to connect young people from under-resourced communities with opportunities to bank, save and build credit. It runs savings and credit-building programs, financial mentoring and youth leadership programs, and gives technical help to partner organizations.",
+      "website": "https://mypathus.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Mypath - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943098928"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About - MyPath",
+        "url": "https://mypathus.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

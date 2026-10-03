@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.thepinkneyfoundation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/83-1000830",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/831000830",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008077",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'The Pinkney Foundation', EIN 83-1000830 (GuideStar; ProPublica Nonprofit Explorer lists 'Pinkney Foundation')",
+      "GuideStar lists the address as Pittsburg, CA, matching the agenda text 'Pittsburg, CA'",
+      "Youth development nonprofit offering youth programs, matching OUSD's 'After-school & summer programs' contract category",
+      "GuideStar lists Oakland among its service areas"
+    ],
+    "key": "v-008077",
+    "notes": "ProPublica lists the city as Oakland, CA while GuideStar and the website title list Pittsburg, CA; the agenda says Pittsburg, CA. No OUSD mention found on the organization's site. No phone found.",
+    "profile": {
+      "address": "23 Rangewood Ct, Pittsburg, CA 94565-6445",
+      "caEntityNumber": null,
+      "ein": "83-1000830",
+      "email": "info@thepinkneyfoundation.org",
+      "headquarters": "Pittsburg, CA",
+      "legalName": "The Pinkney Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit youth development organization in the San Francisco Bay Area. It offers programs for young people in areas such as financial literacy, golf instruction, mentorship, education and workforce development.",
+      "website": "https://www.thepinkneyfoundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "Youth Development, The Pinkney Foundation -California-Pittsburg-United States",
+        "url": "https://www.thepinkneyfoundation.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "address",
+          "headquarters",
+          "ein",
+          "summary"
+        ],
+        "title": "The Pinkney Foundation - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/83-1000830"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "Pinkney Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/831000830"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008077",
+    "notes": "Name, Pittsburg CA location and youth-development focus match the agenda; the website and GuideStar confirm EIN 83-1000830, the address, programs and generic info@ email, and GuideStar lists Oakland as a service area (ProPublica's Oakland city is a minor discrepancy). The summary is neutral and supported, though no source directly mentions OUSD.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

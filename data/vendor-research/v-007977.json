@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/fremont/profile/summer-camp/kidztopros-1116-927340",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    }
+  ],
+  "key": "v-007977",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "A Better Business Bureau listing for 'Kidztopros' is in Fremont, CA, matching the agenda's 'Fremont, CA' (BBB)",
+      "Search results describe KidzToPros as an after-school enrichment and sports program provider, matching OUSD's 'Expanded Learning Elementary Sports Program' contract (not confirmed on a fetched page)"
+    ],
+    "key": "v-007977",
+    "notes": "Low confidence. The kidztopros.com domain no longer resolves. Search results say KidzToPros was relaunched as Brains & Motion Education (brains-and-motion.com, reportedly headquartered in Arlington, VA, with different phone) under new leadership and described as not the same company; the Brains & Motion homepage itself does not confirm the succession. No CA Secretary of State entity, EIN or SAM UEI was found, so the legal entity 'KidzToPros, Inc.' is unconfirmed and the BBB contact details may be stale. No fetched page mentions OUSD. Do not publish.",
+    "profile": {
+      "address": "1584 Fulton Pl, Fremont, CA 94539-7936",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fremont, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "(877) 202-1554",
+      "samUei": null,
+      "summary": "KidzToPros is listed by the Better Business Bureau as a summer camp business in Fremont, California. Search results describe it as a provider of after-school enrichment programs and camps for children.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Kidztopros - BBB Business Profile",
+        "url": "https://www.bbb.org/us/ca/fremont/profile/summer-camp/kidztopros-1116-927340"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942889684",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.earthisland.org/index.php/page/who-we-are",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.earthisland.org/index.php/news/entry/bay-area-wilderness-training-receives-420000-grant-from-riddell-family-to-support-oakland-goes-outdoors-initiative",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001468",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Earth Island Institute Inc', EIN 94-2889684, Berkeley, CA (ProPublica Nonprofit Explorer), matching the agenda's Berkeley, CA location",
+      "Earth Island Institute's own site lists Bay Area Wilderness Training as one of its fiscally sponsored projects, matching the 'dba Bay Area Wilderness Training' in the agenda",
+      "Earth Island Institute's news page says BAWT is 'a project of Earth Island Institute' and that a grant gives Oakland Unified School District students access to BAWT's gear library, matching OUSD's after-school and summer program contracts"
+    ],
+    "key": "v-001468",
+    "notes": "Vendor is the legal entity Earth Island Institute; Bay Area Wilderness Training (bawt.org, 1100 57th Ave, Oakland) is a fiscally sponsored project operating under it. General email omitted because the only one shown on the who-we-are page is a named person's address. CA entity number and SAM UEI not checked (registries not fetched).",
+    "profile": {
+      "address": "2150 Allston Way, Suite 460, Berkeley, California 94704",
+      "caEntityNumber": null,
+      "ein": "94-2889684",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Earth Island Institute Inc",
+      "orgType": "nonprofit",
+      "phone": "510-859-9100",
+      "samUei": null,
+      "summary": "Earth Island Institute is a nonprofit environmental organization based in Berkeley, California. It provides fiscal sponsorship and support to many grassroots environmental projects, runs an award-winning magazine and offers leadership development programs. Bay Area Wilderness Training is one of its sponsored projects.",
+      "website": "https://www.earthisland.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Earth Island Institute Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942889684"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "orgType"
+        ],
+        "title": "Who We Are :: Earth Island Institute",
+        "url": "https://www.earthisland.org/index.php/page/who-we-are"
+      },
+      {
+        "supports": [],
+        "title": "Bay Area Wilderness Training Receives $420,000 Grant from Riddell Family to Support Oakland Goes Outdoors Initiative :: Earth Island Institute",
+        "url": "https://www.earthisland.org/index.php/news/entry/bay-area-wilderness-training-receives-420000-grant-from-riddell-family-to-support-oakland-goes-outdoors-initiative"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001468",
+    "notes": "The agenda's 'Earth Island Institute dba Bay Area Wilderness Training' in Berkeley matches the Berkeley nonprofit EIN 94-2889684, and Earth Island's own pages show BAWT as its project and name OUSD students as BAWT beneficiaries. All profile fields (name, EIN, phone, address, summary) are supported; the named-person email was correctly omitted. 'Award-winning' in the summary repeats the source's own wording but is mildly promotional.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

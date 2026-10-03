@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://sd.cde.ca.gov/schooldirectory/details?cdscode=77764220136812",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.iser.com/cherrygulch-ID.html",
+      "pass": true
+    }
+  ],
+  "key": "n-cherry-gulch",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "California Department of Education School Directory lists 'Cherry Gulch' in Emmett, ID 83617 as an Out-of-State Nonpublic Certified School (grades 5-9), matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services Master Contract' and the agenda location 'Emmett, ID'",
+      "ISER directory describes Cherry Gulch Therapeutic Boarding School in Emmett, ID 83617, serving boys with learning differences and emotional and behavioral problems, consistent with OUSD's Special Education Department contract"
+    ],
+    "key": "n-cherry-gulch",
+    "notes": "Website and contact details intentionally omitted: the school appears to have closed (CA directory: closed 2025-05-24; other sources give conflicting closure dates) and cherrygulch.org currently serves a misconfigured server certificate and no readable page. Third-party directories (ISER) list PO Box 678, Emmett, ID 83617, 208-365-3437, info@cherrygulch.org, but these were not confirmed on an official page. Not found in ProPublica Nonprofit Explorer (likely for-profit; D&B lists 'Cherry Gulch, Inc.' but page was blocked), so legal name, EIN and entity numbers left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Emmett, ID",
+      "legalName": null,
+      "orgType": "other",
+      "phone": null,
+      "samUei": null,
+      "summary": "Cherry Gulch was a ranch-style therapeutic boarding school in Emmett, Idaho, for boys who were about 10 to 14 years old when they enrolled. It offered schooling along with weekly therapy for students with learning differences and emotional or behavioral challenges. California was certified to place students there as an out-of-state nonpublic school. California's school directory lists it as closed as of May 24, 2025.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Cherry Gulch - School Directory Details (CA Dept of Education)",
+        "url": "https://sd.cde.ca.gov/schooldirectory/details?cdscode=77764220136812"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Cherry Gulch Therapeutic Boarding School for Boys - ISER",
+        "url": "https://www.iser.com/cherrygulch-ID.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-cherry-gulch",
+    "notes": "CDE directory lists Cherry Gulch in Emmett, ID as an out-of-state nonpublic certified school (grades 5-9, closed 2025-05-24), matching the agenda's Emmett, ID location and NPS master contract; ISER confirms boys 10-14, ranch-style, learning differences and emotional/behavioral needs, and 10-15 hours weekly of therapeutic services. Summary is supported and neutral; contact fields are appropriately null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

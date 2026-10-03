@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://hertzenvironmental.com/about-hertz/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hertzenvironmental.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/san-francisco/hertz-environmental-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002056",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California registered corporation: 'Hertz Environmental, Inc.', San Francisco, CA (entity 3360427, active), per a business-filing aggregator",
+      "Located in San Francisco, CA, matching the agenda text; the company's website lists a San Francisco office",
+      "Website describes environmental consulting for construction projects (storm water pollution prevention plans, site inspections, sampling), matching OUSD's school building and construction facilities contracts"
+    ],
+    "key": "v-002056",
+    "notes": "Registry details come from a third-party aggregator of California Secretary of State data, not the Secretary of State site directly. The registry lists 50 California Street, Suite 1500, San Francisco as principal address; the company website lists 201 Mission Street, Suite 1200 as its San Francisco office, which is used here. Website names a personal email for the CEO, so no email is given. No page found explicitly mentioning OUSD.",
+    "profile": {
+      "address": "201 Mission Street, Suite 1200, San Francisco CA 94105",
+      "caEntityNumber": "3360427",
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Hertz Environmental, Inc.",
+      "orgType": "company",
+      "phone": "(415) 432-4510",
+      "samUei": null,
+      "summary": "A California environmental consulting company that serves the construction and industrial sectors. Its main focus is helping projects follow the state's Construction General Permit for storm water, including storm water pollution prevention plans, contractor training, site inspections, sampling and state reporting.",
+      "website": "https://hertzenvironmental.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About HERTZ",
+        "url": "https://hertzenvironmental.com/about-hertz/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "HERTZ Environmental contact",
+        "url": "https://hertzenvironmental.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters"
+        ],
+        "title": "Hertz Environmental, Inc. San Francisco, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/san-francisco/hertz-environmental-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002056",
+    "notes": "Hertz Environmental, Inc. is a San Francisco-based construction storm water consultancy (CA entity 3360427), matching the agenda name, city and OUSD facilities/construction contracts. Website and registry sources support the summary, phone, address, website and entity number; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

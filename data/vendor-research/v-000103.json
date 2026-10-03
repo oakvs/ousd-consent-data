@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237357906",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandside.org/2024/02/28/financial-meltdown-of-oakland-foundation-has-groups-asking-where-the-money-went/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blackpressusa.com/marcus-foster-education-institute-turns-50-recognizes-100-change-makers/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-000103",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Marcus A Foster Educational Institute' (ProPublica Nonprofit Explorer, EIN 23-7357906, Oakland, CA)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Founded in 1973 by Oakland Unified superintendent Marcus Foster to support Oakland schools, and a fiscal sponsor of youth programs funded by the City of Oakland and OUSD, matching a City-of-Oakland-funded student support services agreement"
+    ],
+    "key": "v-000103",
+    "notes": "Organization identity is solid, but it appears to have stopped normal operations: its listed website (marcusfoster.org) returns an empty page, its Franklin St office was lost in Dec 2023, and per Oaklandside (Feb 2024) it faced revocation of nonprofit status; GuideStar says it is not on the current IRS Business Master File. Phone, email, address and website were therefore deliberately omitted as stale and not verifiable on a live official page. CA entity number and UEI not found. Reviewer should decide whether to publish a profile for an apparently inactive organization.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "23-7357906",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Marcus A Foster Educational Institute",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit founded in 1973 in Oakland, California, to support Oakland public schools. It gave scholarships to students and acted as a fiscal sponsor, handling money and paperwork for other community and youth programs.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Marcus A Foster Educational Institute - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237357906"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "What happened to Oakland's Marcus Foster Education Institute?",
+        "url": "https://oaklandside.org/2024/02/28/financial-meltdown-of-oakland-foundation-has-groups-asking-where-the-money-went/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Marcus Foster Education Institute Turns 50, Recognizes 100 Change Makers",
+        "url": "https://blackpressusa.com/marcus-foster-education-institute-turns-50-recognizes-100-change-makers/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

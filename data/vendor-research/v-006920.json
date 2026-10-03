@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://americas.mayekawa.com/mna/company/offices/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://americas.mayekawa.com/mna/company/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006920",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Mayekawa's North America offices page lists a York, PA office (3395 Farmtrail Road), matching the 'York, PA' location in the agenda text for Mayekawa USA Inc.",
+      "The company makes and services industrial refrigeration systems and compressors, matching OUSD's refrigeration maintenance agreement for the Central Kitchen and its facilities-division contracts."
+    ],
+    "key": "v-006920",
+    "notes": "Registry IDs not looked up. Contact details are for the York, PA office listed on the company site; the site does not name a single corporate headquarters. Phone is shown as '(1) 717-779-0138' on the page.",
+    "profile": {
+      "address": "3395 Farmtrail Road, York, PA 17406, U.S.A.",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@mayekawausa.com",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(1) 717-779-0138",
+      "samUei": null,
+      "summary": "Mayekawa is a compressor manufacturer serving the Americas. It makes screw compressors, refrigeration systems, chillers, heat pumps and freezers, and serves food processing, cold storage, beverage, oil and gas, and marine customers. The company was established in 1924.",
+      "website": "https://americas.mayekawa.com/mna/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Offices - Mayekawa North America",
+        "url": "https://americas.mayekawa.com/mna/company/offices/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Mayekawa Americas company page",
+        "url": "https://americas.mayekawa.com/mna/company/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006920",
+    "notes": "The offices page lists MAYEKAWA U.S.A., INC. at 3395 Farmtrail Road, York, PA, matching the agenda location, and an industrial refrigeration maker fits the Central Kitchen refrigeration maintenance contract. Address, phone, generic info@ email, products, industries and the 1924 start are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

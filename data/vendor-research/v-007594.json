@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/812803249",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://agncy.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007594",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Distinctive name 'Agncy Design Inc' matches a registered 501(c)(3) nonprofit in Massachusetts (ProPublica Nonprofit Explorer, EIN 81-2803249), matching the agenda's Massachusetts location",
+      "The organization's own website (agncy.org) lists Oakland Unified School District among organizations it has worked with",
+      "Mission of using design to reduce structural inequity is consistent with OUSD's Chief of Staff / Talent services agreements for governance and board business"
+    ],
+    "key": "v-007594",
+    "notes": "ProPublica lists the city as Boston, MA; the agenda says Brookline, MA (adjacent cities; a web search also showed a Brookline office). Headquarters left null because the sources disagree. Only general email found is a named person's address (augusta@agncy.org), so omitted per rules. No phone found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "81-2803249",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Agncy Design Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Agncy Design is a nonprofit based in the Boston, Massachusetts area. Its stated mission is to use design to reduce structural inequity in America. It works with community partners and organizations, including school districts.",
+      "website": "https://agncy.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Agncy Design Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/812803249"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Agncy Design",
+        "url": "https://agncy.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007594",
+    "notes": "ProPublica shows Agncy Design Inc as a Massachusetts 501(c)(3) (EIN 81-2803249), and agncy.org states the mission quoted and lists Oakland Unified School District among its clients, which fits the Brookline/Boston MA location. All non-null fields and the neutral summary are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

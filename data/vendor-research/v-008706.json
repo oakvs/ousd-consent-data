@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://edesignc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edesignc.com/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008706",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: agenda 'EDesign-C, Inc.' vs the firm's own site 'EDesignC, Inc.' (hyphen difference only)",
+      "Has an Oakland, CA office (212 9th Street, Suite 203), matching the agenda location Oakland, CA",
+      "Website describes electrical and building system engineering design for schools and public facilities, matching OUSD's Facilities electrical upgrade design agreement"
+    ],
+    "key": "v-008706",
+    "notes": "Registry IDs (CA Secretary of State, SAM.gov) were not looked up. The firm has three offices; the Oakland office address and phone are used because the agenda gives Oakland. No explicit mention of OUSD found on the firm's site.",
+    "profile": {
+      "address": "212 9th Street, Suite 203, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@edesignc.com",
+      "headquarters": null,
+      "legalName": "EDesignC, Inc.",
+      "orgType": "company",
+      "phone": "(510) 433-0913",
+      "samUei": null,
+      "summary": "EDesignC, Inc. is an engineering design firm that provides mechanical, electrical and plumbing design services. It specializes in energy, electrical and building system design. Its projects include schools, community buildings, government facilities, commercial buildings and affordable housing. It has offices in San Francisco, Oakland and Pleasant Hill, California.",
+      "website": "https://edesignc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "email"
+        ],
+        "title": "EDesignC, Inc.",
+        "url": "https://edesignc.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "email"
+        ],
+        "title": "Locations - EDesignC",
+        "url": "https://edesignc.com/locations/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008706",
+    "notes": "EDesignC, Inc. has an Oakland office and does electrical/MEP engineering design for schools, which fits the OUSD electrical upgrade design agreement; the legal name differs from the agenda only by a hyphen. I fetched both cited pages and they support every populated field. The summary is neutral. The site does not mention OUSD, so the match rests on name, city and service.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

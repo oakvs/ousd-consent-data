@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.azregents.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.asu.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.asu.edu/about/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009157",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The Arizona Board of Regents' own website says it is the governing body of Arizona's public universities, including Arizona State University, matching the agenda name 'Arizona Board of Regents (Arizona State University)'",
+      "Arizona State University's contact page gives a Tempe, AZ campus address, matching the agenda location 'Tempe, AZ'",
+      "ASU is a public research university, consistent with an education-related service agreement for OUSD's Linked Learning (career and college pathways) office"
+    ],
+    "key": "v-009157",
+    "notes": "OUSD contracts with the Arizona Board of Regents on behalf of Arizona State University. Contact details shown are ASU's main (Tempe campus) details, not the Board of Regents' Phoenix office. ASU's general email is obfuscated on the page, so it was left null. No EIN, CA entity number or UEI verified.",
+    "profile": {
+      "address": "1151 S Forest Ave, Tempe, AZ 85281",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Tempe, AZ",
+      "legalName": "Arizona Board of Regents",
+      "orgType": "public_agency",
+      "phone": "855-278-5080",
+      "samUei": null,
+      "summary": "The Arizona Board of Regents is the governing body of Arizona's three public universities: Arizona State University, Northern Arizona University and the University of Arizona. Arizona State University is a public research university with its main campus in Tempe, Arizona.",
+      "website": "https://www.asu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Arizona Board of Regents",
+        "url": "https://www.azregents.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About ASU",
+        "url": "https://www.asu.edu/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact ASU",
+        "url": "https://www.asu.edu/about/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009157",
+    "notes": "ABOR is the contracting legal entity for ASU, and the agenda's Tempe, AZ location and the Linked Learning education service fit; the summary is supported by the ABOR and ASU pages and is neutral. Phone and address are ASU's Tempe main contact details (confirmed on the ASU contact page), but ABOR's own site lists a Phoenix office, so headquarters 'Tempe, AZ' is not supported as ABOR's headquarters.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://barretto.co/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://barretto.co/case-studies/metwest-high-school/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009425",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Barretto-Co. website lists an Oakland, CA address, matching the agenda location 'Oakland, CA'",
+      "Barretto-Co. published a case study on its own site about branding work for MetWest High School in Oakland, matching the OUSD agenda title 'Services Agreement 2024-2025 - Barretto-Co. LLC - Met West High School'",
+      "Company name 'Barretto-Co.' matches the agenda name, and it is an LLC design and branding firm (consistent with a services agreement for a school)"
+    ],
+    "key": "v-009425",
+    "notes": "Registry details (CA entity number, legal name) not confirmed from a fetchable registry page; omitted. Agenda name is 'Barretto-Co. LLC'.",
+    "profile": {
+      "address": "4400 Keller Ave, Box 259, Oakland, CA 94605",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@barretto-co.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "415.312.1288",
+      "samUei": null,
+      "summary": "Barretto-Co. is a Bay Area creative agency and Certified B Corporation that does branding and design for mission-driven organizations. Its services include visual identity systems, logos, marketing materials, websites, and packaging.",
+      "website": "https://barretto.co/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Barretto Co.",
+        "url": "https://barretto.co/"
+      },
+      {
+        "supports": [],
+        "title": "MetWest High School - Barretto-Co.",
+        "url": "https://barretto.co/case-studies/metwest-high-school/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009425",
+    "notes": "The Barretto-Co. site shows an Oakland address, B Corp status, and branding services, and its case study describes identity work for MetWest High School in OUSD, matching the agenda title and location. All non-null fields are shown on the homepage; the summary is neutral, and the email is a generic info@ address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

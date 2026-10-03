@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/woodland-hills/ponzuric-learning-solutions-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jennyponzuric.com/ponzuric-learning-solutions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jennyponzuric.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009129",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: 'Ponzuric Learning Solutions, Inc.' is an active California general corporation (educational services) per a California filing-data listing",
+      "The corporation's mailing address is in Chatsworth, CA, matching the 'Chatsworth, CA' location in the agenda text",
+      "The company's own website describes special education services (psychoeducational evaluations, training for school psychologists and special education leaders), matching OUSD's 'Special education' services agreement"
+    ],
+    "key": "v-009129",
+    "notes": "Incorporated business (not an individual contractor), operated by its founder. The company's website shows no general phone, email or mailing address, so those are null. Principal address in filing data is in Woodland Hills; the mailing address is a PO Box in Chatsworth. California entity number comes from a third-party filing-data aggregator, not the Secretary of State site directly.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "4602573",
+      "ein": null,
+      "email": null,
+      "headquarters": "Chatsworth, CA",
+      "legalName": "Ponzuric Learning Solutions, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California company that provides educational testing and psychological evaluations for students with learning disabilities, ADHD and executive functioning difficulties. It also offers training, consulting and online communities for school psychologists and special education staff.",
+      "website": "https://jennyponzuric.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "caEntityNumber",
+          "headquarters"
+        ],
+        "title": "Ponzuric Learning Solutions, Inc. Woodland Hills, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/woodland-hills/ponzuric-learning-solutions-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Ponzuric Learning Solutions - educational testing",
+        "url": "https://jennyponzuric.com/ponzuric-learning-solutions/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Jenny Ponzuric",
+        "url": "https://jennyponzuric.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009129",
+    "notes": "Exact name match to an active CA corporation (entity 4602573) with a Chatsworth mailing address and special-education/school-psychology services matching the OUSD agreement; summary is supported and neutral. Headquarters is unsupported because the filing lists the principal address in Woodland Hills and Chatsworth is only a PO Box mailing address.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

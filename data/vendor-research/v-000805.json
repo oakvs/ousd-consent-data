@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.btmancini.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.btmancini.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.btmancini.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000805",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Company name 'B.T. Mancini Co., Inc.' matches the agenda name exactly",
+      "Company's own contact page lists a Santa Clara, CA office (305 Mathew St), matching the agenda location 'Santa Clara, CA'",
+      "Company is a construction specialty contractor (flooring, structural, architectural products), consistent with OUSD 'School buildings & construction' / gymnasium improvements; no page found that links it to OUSD directly"
+    ],
+    "key": "v-000805",
+    "notes": "Medium confidence: name and Santa Clara office match, but no source directly ties this company to the OUSD gymnasium project, and the agenda calls it an 'Engineering Services Agreement'. Santa Clara office is (408) 942-7900, 305 Mathew St, Santa Clara, CA 95050. CA Secretary of State and SAM.gov records were not retrievable.",
+    "profile": {
+      "address": "8561 23rd Ave, Sacramento, CA 95826",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "B.T. Mancini Co., Inc.",
+      "orgType": "company",
+      "phone": "(916) 381-3660",
+      "samUei": null,
+      "summary": "A specialty contractor founded in 1964 that serves the commercial construction industry in Northern California and Northern Nevada. It provides architectural products, structural systems and floor covering, including supply and installation.",
+      "website": "https://www.btmancini.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - B.T. Mancini Co., Inc.",
+        "url": "https://www.btmancini.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - B.T. Mancini Co., Inc.",
+        "url": "https://www.btmancini.com/about/"
+      },
+      {
+        "supports": [
+          "website",
+          "legalName"
+        ],
+        "title": "B.T. Mancini Co., Inc.",
+        "url": "https://www.btmancini.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/274707108",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/27-4707108",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-000914",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Community & Youth Outreach Inc', Oakland, CA, EIN 27-4707108 (ProPublica Nonprofit Explorer); the agenda names 'Community & Youth Outreach, Inc.' in Oakland, CA",
+      "ProPublica lists the NTEE category as Youth Development, and GuideStar describes street outreach, life coaching and case management for high-risk youth, matching OUSD's 'Student health, support & family services' contracts",
+      "GuideStar lists the legal name 'Community & Youth Outreach, Inc.' with an Oakland, CA address, matching the agenda text exactly"
+    ],
+    "key": "v-000914",
+    "notes": "Website, phone and address deliberately omitted. The listed site cyoinc.org now redirects to an unrelated spam page, so it cannot be verified as the organization's site. GuideStar's phone and address could not be confirmed on an official page. Registry data suggests the organization may have ceased operations (ProPublica shows a deficit in FY2025 and it is absent from the IRS's latest exempt-organizations list; a search result said a final 990 was filed in 2025). A reviewer may want to confirm status before publishing. California SOS entity number not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "27-4707108",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Community & Youth Outreach, Inc.",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that works to prevent violence and connect people to support. Its programs include street outreach in East and Central Oakland, life coaching for high-risk youth and adults, and case management for youth leaving juvenile detention.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Community & Youth Outreach Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/274707108"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "headquarters",
+          "ein"
+        ],
+        "title": "CALIFORNIA YOUTH OUTREACH - OAKLAND INC - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/27-4707108"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000914",
+    "notes": "ProPublica and GuideStar both show Community & Youth Outreach, Inc., Oakland CA, EIN 27-4707108, matching the agenda name, location and student-support services. The summary says life coaching for 'youth and adults' but GuideStar says 'youth and young adults', and its present tense is unsettled given FY2025 wind-down signals, so the summary is dropped; identity fields (legalName, orgType, headquarters, ein) are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

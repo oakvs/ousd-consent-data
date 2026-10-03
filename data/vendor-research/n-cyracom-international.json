@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/CyraCom_Language_Solutions",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-cyracom-international",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'CyraCom International, Inc.' is the legal name on the SAM.gov-derived vendor profile (GovCB) and on the Wikipedia article",
+      "Located in Tucson, AZ, matching the agenda text 'Tucson, AZ' (Wikipedia: headquartered in Tucson, Arizona; GovCB: Tucson, Arizona)",
+      "Provides over-the-phone and video interpretation, consistent with a Special Education Department services agreement (language access for families)"
+    ],
+    "key": "n-cyracom-international",
+    "notes": "CyraCom's own website blocked automated fetching (SSL handshake failure), so contact details were not verified against an official page and are left null. Third-party pages gave conflicting Tucson street addresses, so address was omitted. No direct OUSD-CyraCom link found online; identity rests on exact name, Tucson location and service type.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Tucson, AZ",
+      "legalName": "CyraCom International, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "CyraCom International, Inc. is a language services company based in Tucson, Arizona. It provides over-the-phone and video interpretation and language assessment services.",
+      "website": "https://www.cyracom.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "CyraCom Language Solutions - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/CyraCom_Language_Solutions"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-cyracom-international",
+    "notes": "The cited Wikipedia article names CyraCom International, Inc., headquartered in Tucson, AZ, which matches the agenda, and describes over-the-phone and video interpretation and language assessment, a fit for a Special Education services agreement. The summary, orgType, website and headquarters are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

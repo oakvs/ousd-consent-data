@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://pub-econ.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://pub-econ.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003480",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Public Economics, Inc.' (pub-econ.com), a company based in Orange, CA, matching the agenda location 'Orange, CA'",
+      "Website describes school facilities needs analyses, fee justification studies and strategic funding plans for school districts, matching OUSD's Facilities Planning and Management contracts",
+      "An OUSD Legistar document, 'Preliminary Funding Plan for Dr. Marcus Foster Educational Leadership Campus', is on Public Economics, Inc. letterhead (221 S. Glassell Street, Orange, CA), showing the firm works for OUSD facilities"
+    ],
+    "key": "v-003480",
+    "notes": "No general email on the contact page. Registry IDs not looked up. The firm's OUSD letterhead lists a different Orange address (221 S. Glassell Street); the website's mailing address is used.",
+    "profile": {
+      "address": "2230 W. Chapman Ave. Orange, California 92868",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Orange, CA",
+      "legalName": "Public Economics, Inc.",
+      "orgType": "company",
+      "phone": "(714) 647-6242",
+      "samUei": null,
+      "summary": "A California consulting firm that advises school districts, community college districts and county offices of education on facilities funding. Its services include redevelopment consulting, school facilities needs analyses and fee justification studies, strategic funding plans, financial advisory services and New Markets Tax Credits.",
+      "website": "https://pub-econ.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us - Public Economics, Inc.",
+        "url": "https://pub-econ.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact Us - Public Economics, Inc.",
+        "url": "https://pub-econ.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003480",
+    "notes": "Exact name and Orange, CA location match the agenda, and the firm's facilities funding and fee study services fit OUSD's Facilities Planning and Management agreements. The cited About and Contact pages support the summary, legal name, phone, address and headquarters, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

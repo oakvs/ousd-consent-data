@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/582428317",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://northbaysra.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://northbaysra.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007947",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered nonprofit exactly: 'North Bay Soccer Referee Association Inc' (ProPublica Nonprofit Explorer, EIN 58-2428317)",
+      "Organization's website says it provides soccer referees to high schools in Sonoma, Napa, Marin, Contra Costa and Alameda Counties, matching OUSD's Oakland Athletic League services agreement",
+      "Website lists Sonoma County first among its service areas, consistent with the agenda's 'Sonoma, CA'; the registered mailing address is in San Rafael, CA, which differs from the agenda city"
+    ],
+    "key": "v-007947",
+    "notes": "Agenda gives Sonoma, CA; the IRS/ProPublica record and the website's mailing address are in San Rafael, CA (PO Box). The organization's service area includes Sonoma and Alameda Counties, so the match is likely, but the location difference and the absence of any Oakland/OUSD mention on its site keep this at medium. No phone number published. California Secretary of State entity number not checked.",
+    "profile": {
+      "address": "PO Box 4149, San Rafael, CA 94913",
+      "caEntityNumber": null,
+      "ein": "58-2428317",
+      "email": "admin@northbaysra.com",
+      "headquarters": "San Rafael, CA",
+      "legalName": "North Bay Soccer Referee Association Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit association of soccer referees in the North San Francisco Bay Area. It provides referees to high schools, middle schools and futsal leagues in Sonoma, Napa, Marin, Contra Costa and Alameda Counties. It trains its referees in classroom and field sessions and offers mentoring and assessment programs.",
+      "website": "https://northbaysra.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "North Bay Soccer Referee Association Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/582428317"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address"
+        ],
+        "title": "About Us – North Bay Soccer Referee Association",
+        "url": "https://northbaysra.com/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address"
+        ],
+        "title": "North Bay Soccer Referee Association",
+        "url": "https://northbaysra.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

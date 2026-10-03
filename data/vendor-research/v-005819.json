@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://seesaw.com/service-privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://seesaw.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://seesaw.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005819",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Seesaw Learning, Inc.' on the company's own privacy policy exactly matches the agenda name",
+      "Company address is in San Francisco, CA, matching the agenda location",
+      "Seesaw is a K-12 classroom learning platform, consistent with a Technology contract presented by the Chief Academic Officer for the Academics and Instruction Department"
+    ],
+    "key": "v-005819",
+    "notes": "Registry IDs (CA entity number, SAM UEI) were seen only on third-party aggregator pages, not on official registries, so they were left null. Address is the mailing address (PMB) shown in the company's privacy policy.",
+    "profile": {
+      "address": "548 Market St, PMB 98963, San Francisco, CA 94104-5401",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Seesaw Learning, Inc.",
+      "orgType": "company",
+      "phone": "1-855-673-3729",
+      "samUei": null,
+      "summary": "Seesaw Learning is a company that makes a learning platform for K-6 classrooms. Teachers use it to create assignments, build digital student portfolios, track progress and share learning with families. The company also offers supplemental curriculum in writing, early literacy, computer science and English language development.",
+      "website": "https://seesaw.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "phone"
+        ],
+        "title": "Service Privacy Policy - Seesaw",
+        "url": "https://seesaw.com/service-privacy-policy/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone"
+        ],
+        "title": "About Us - Seesaw",
+        "url": "http://seesaw.com/about-us"
+      },
+      {
+        "supports": [
+          "website",
+          "phone"
+        ],
+        "title": "Contact Us - Seesaw",
+        "url": "http://seesaw.com/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005819",
+    "notes": "Privacy policy names Seesaw Learning, Inc. with a San Francisco mailing address matching the agenda, and a K-6 learning platform fits a Technology master services agreement for Academics and Instruction. Summary, address and phone (a sales line) are supported by the cited pages and are neutral business details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

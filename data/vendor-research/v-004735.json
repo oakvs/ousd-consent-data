@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/912134499",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://youthspeaks.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://youthspeaks.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004735",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Youth Speaks Inc', EIN 91-2134499, San Francisco, CA (ProPublica Nonprofit Explorer)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "Website describes spoken word, writing workshops and youth development programs, matching OUSD's 'Classroom & academic programs' contracts",
+      "Website mentions Oakland youth participants and Bay Area youth programming"
+    ],
+    "key": "v-004735",
+    "notes": null,
+    "profile": {
+      "address": "265 Shotwell St. Unit B, San Francisco, CA 94110",
+      "caEntityNumber": null,
+      "ein": "91-2134499",
+      "email": "info@youthspeaks.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Youth Speaks Inc",
+      "orgType": "nonprofit",
+      "phone": "415-255-9035",
+      "samUei": null,
+      "summary": "Youth Speaks is a nonprofit literary arts organization founded in 1996 in San Francisco. It offers spoken word performance, writing workshops, fellowships and other youth development programs for young people. It also hosts the Brave New Voices poetry festival.",
+      "website": "https://youthspeaks.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Youth Speaks Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/912134499"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Youth Speaks - Contact",
+        "url": "https://youthspeaks.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address"
+        ],
+        "title": "Youth Speaks - About",
+        "url": "https://youthspeaks.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004735",
+    "notes": "Youth Speaks Inc is a San Francisco 501(c)(3) (EIN 91-2134499 per ProPublica); location and spoken-word/writing education programs fit OUSD's classroom and academic services agreements. Contact details, founding year and program list were all confirmed on the cited ProPublica, contact and about pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

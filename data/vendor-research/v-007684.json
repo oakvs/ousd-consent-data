@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943308385",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://communitydevelopmentfinance.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007684",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Community Development Finance', Oakland, CA, EIN 94-3308385 (ProPublica Nonprofit Explorer), matching the agenda name and 'Oakland, CA'",
+      "Organization's own website says it partners with Oakland Unified School District through the Teachers Rooted in Oakland (TRiO) initiative",
+      "Organization is based in Oakland, CA (3411 East 12th Street), matching the agenda location"
+    ],
+    "key": "v-007684",
+    "notes": "Phone shown on the site as +1 (510) 479-1037. The agenda lists services for OPSR Counseling and Linked Learning departments; the website's OUSD tie is the TRiO teacher housing initiative, so the specific contract purpose was not independently confirmed.",
+    "profile": {
+      "address": "3411 East 12th Street, Suite 124, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "94-3308385",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Community Development Finance",
+      "orgType": "nonprofit",
+      "phone": "(510) 479-1037",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that helps low-income households and businesses get access to capital and financial literacy through affordable financial services. It has offered lending programs, financial coaching and small business services. It has also partnered with Oakland Unified and others on an initiative to support teacher recruitment and retention.",
+      "website": "https://communitydevelopmentfinance.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Community Development Finance - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943308385"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Community Development Finance, 501(c)(3)",
+        "url": "https://communitydevelopmentfinance.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007684",
+    "notes": "Exact name and Oakland location match; ProPublica confirms EIN 94-3308385 and the organization's site confirms address, phone, 501(c)(3) status, services and an OUSD partnership (TRiO). The specific OPSR Counseling/Linked Learning contract purpose could not be independently confirmed, but financial coaching for students is plausible and the summary makes no claim about it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

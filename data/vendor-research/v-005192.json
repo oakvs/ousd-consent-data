@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cep.berkeley.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cep.berkeley.edu/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dcac.berkeley.edu/oakland-high-school",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005192",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'The Regents of the University of California, Center for Educational Partnerships' in Berkeley, CA; the Center for Educational Partnerships (CEP) is a UC Berkeley unit located at 1 Hearst Field Annex, Berkeley, CA 94720-1060 (cep.berkeley.edu contact page)",
+      "CEP's own site describes K-14 outreach to increase access to higher education, matching OUSD's 'Classroom & academic programs' and college-advising contract titles",
+      "CEP's Destination College Advising Corps (dcac.berkeley.edu) has a page for Oakland High School, one of the schools named in the OUSD agreement titles"
+    ],
+    "key": "v-005192",
+    "notes": "Contracting entity is The Regents of the University of California (a public agency); CEP is a UC Berkeley unit. legalName left null because the cited pages do not show 'The Regents of the University of California' exactly. UC Regents is a constitutional corporation of the State of California, so no EIN, CA Secretary of State number or SAM UEI was sought.",
+    "profile": {
+      "address": "1 Hearst Field Annex, Building C Berkeley, CA 94720-1060",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "edpartnerships@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 642-6680",
+      "samUei": null,
+      "summary": "The Center for Educational Partnerships is a unit of the University of California, Berkeley. It provides outreach and engagement with students, families and educators from kindergarten through community college to increase access to higher education. It runs ten programs, including direct services to students and families and professional development for educators.",
+      "website": "https://cep.berkeley.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Home | Center for Educational Partnerships",
+        "url": "https://cep.berkeley.edu/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Center for Educational Partnerships",
+        "url": "https://cep.berkeley.edu/contact-us"
+      },
+      {
+        "supports": [],
+        "title": "Oakland High School | Destination College Advising Corps",
+        "url": "https://dcac.berkeley.edu/oakland-high-school"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005192",
+    "notes": "CEP is a UC Berkeley unit in Berkeley, CA, matching the agenda's Regents of the University of California / Center for Educational Partnerships naming and location; its DCAC page lists Oakland High School as a partner school. The summary, contact details, address and org type are supported by the cited home and contact pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

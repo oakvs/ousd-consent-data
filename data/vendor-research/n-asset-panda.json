@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.assetpanda.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.assetpanda.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-asset-panda",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name 'Asset Panda' matches the company's own website, and its address is Dallas, TX, matching the agenda location 'Dallas, TX'",
+      "Asset Panda sells asset-tracking software and lists K-12 school districts as customers, matching OUSD's 'Technology' Service Agreement and National Data Privacy Agreement handled by the Technology Services Department"
+    ],
+    "key": "n-asset-panda",
+    "notes": "Registry IDs (EIN, CA entity number, UEI) not searched or confirmed. Contact-page email is obfuscated, so omitted. Legal entity suffix (possibly LLC) not confirmed on cited pages.",
+    "profile": {
+      "address": "4143 Maple Ave, Suite 200, Dallas, TX 75219",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Dallas, TX",
+      "legalName": "Asset Panda",
+      "orgType": "company",
+      "phone": "(888) 928-6112",
+      "samUei": null,
+      "summary": "Asset Panda is a company that makes asset management software. Organizations use it to track equipment and other assets, run inspections and maintenance, and keep audit records. Its customers include government agencies, K-12 school districts, colleges, healthcare providers and nonprofits.",
+      "website": "https://www.assetpanda.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters",
+          "phone",
+          "address"
+        ],
+        "title": "Asset Panda: The #1 Asset Management Software",
+        "url": "https://www.assetpanda.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact Us - Asset Panda",
+        "url": "https://www.assetpanda.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-asset-panda",
+    "notes": "Asset Panda's own site shows Dallas, TX HQ at 4143 Maple Ave Suite 200, phone (888) 928-6112, asset-tracking software with K-12 districts as customers, matching the agenda's Dallas, TX location and Technology Services Department agreement. All profile fields and the neutral summary are supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

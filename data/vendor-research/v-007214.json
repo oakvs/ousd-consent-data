@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://buildingblockinteriors.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://buildingblockinteriors.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://buildingblockinteriors.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007214",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website describes a contract furniture dealership for schools and offices, matching OUSD purchase agreements for furniture projects (Central Office Consolidation, Cole Administration Center Furniture)",
+      "About Us page says headquarters are in Fremont, California, matching the agenda location 'Fremont, CA'",
+      "Company homepage lists Oakland Unified School District among its past clients"
+    ],
+    "key": "v-007214",
+    "notes": "Website contact page lists a Santa Clara address (370 Laurelwood Rd, Suite 101) while About page says headquarters in Fremont; address left null because of the inconsistency. No registry (CA SOS / SAM) entry was checked, so legal name and IDs are null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@buildingblockinteriors.com",
+      "headquarters": "Fremont, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-573-4604",
+      "samUei": null,
+      "summary": "Building Block Interiors is a contract furniture dealership. It offers space planning, furniture buying, delivery, installation and after-sales support for schools and offices. It was founded in 2012 and says it has completed projects in more than 18 states.",
+      "website": "https://buildingblockinteriors.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us - Building Block Interiors",
+        "url": "https://buildingblockinteriors.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "Contact Us - Building Block Interiors",
+        "url": "https://buildingblockinteriors.com/contact-us/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Homepage - Building Block Interiors",
+        "url": "https://buildingblockinteriors.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007214",
+    "notes": "Homepage lists Oakland Unified among clients, and the company has a Fremont office and furniture services matching OUSD's furniture purchase agreements. The summary, phone, email, website, founding year and 18+ states are supported. The sources give Santa Clara as the headquarters and Fremont as only an office, so the headquarters field is unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

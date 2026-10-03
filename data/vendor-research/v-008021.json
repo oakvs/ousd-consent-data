@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/270955890",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.village-connect.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.village-connect.org/connect",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008021",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Village-connect Inc' (ProPublica Nonprofit Explorer, EIN 27-0955890), unusual hyphenated name matching the agenda's 'Village-Connect'",
+      "Located in San Leandro, CA, exactly matching the agenda's location",
+      "Website describes family support, coaching and school-based K-12 support, consistent with OUSD's 'Student health, support & family services' contracts; ProPublica classifies it as Human Services / Family Services",
+      "Website does not name OUSD, so there is no direct public confirmation of the district relationship"
+    ],
+    "key": "v-008021",
+    "notes": "Third-party directories list the address as 1250a Fairmont Dr # 317; the organization's own Connect page shows 1228 Fairmont Dr. STE 317, which is used here. Website does not mention OUSD.",
+    "profile": {
+      "address": "1228 Fairmont Dr. STE 317, San Leandro, CA 94578",
+      "caEntityNumber": null,
+      "ein": "27-0955890",
+      "email": "info@village-connect.org",
+      "headquarters": "San Leandro, CA",
+      "legalName": "Village-connect Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 564-4240",
+      "samUei": null,
+      "summary": "Village-Connect is a nonprofit based in San Leandro that has served the San Francisco Bay Area since 2009. It offers coaching, leadership development and learning programs for families, students and communities, including family intensives, workshops, playgroups and school-based K-12 support.",
+      "website": "https://www.village-connect.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Village-connect Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/270955890"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "orgType"
+        ],
+        "title": "Village-Connect",
+        "url": "https://www.village-connect.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Connect - Village-Connect",
+        "url": "https://www.village-connect.org/connect"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008021",
+    "notes": "Distinctive hyphenated name, San Leandro location and family/school-based coaching services match the agenda records; ProPublica confirms the 501(c)(3), EIN and city, and the organization's own pages confirm the summary, phone, email and address. The site does not mention OUSD, but nothing conflicts and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

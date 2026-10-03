@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473240638",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.openupresources.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.openupresources.org/help-support/how-to-order/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/47-3240638",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003188",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Open Up Resources', EIN 47-3240638 (ProPublica Nonprofit Explorer, Menlo Park, CA)",
+      "GuideStar profile for the same EIN lists a PO Box in Gladstone, OR 97027, matching the agenda location 'Gladstone, OR'",
+      "Organization publishes K-12 math and English language arts curriculum, matching OUSD's 'Classroom & academic programs' and a 'Chief Academic Officer' services agreement for a school"
+    ],
+    "key": "v-003188",
+    "notes": "Agenda gives Gladstone, OR, which is the PO Box payment address on GuideStar; headquarters is Menlo Park, CA. No public main phone or general inbox found on the organization's pages.",
+    "profile": {
+      "address": "101 Jefferson Dr., 1st Floor, Menlo Park, CA 94025",
+      "caEntityNumber": null,
+      "ein": "47-3240638",
+      "email": null,
+      "headquarters": "Menlo Park, CA",
+      "legalName": "Open Up Resources",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit publisher of K-12 math and English language arts curriculum. It also offers professional learning programs and teacher community resources for schools and districts.",
+      "website": "https://www.openupresources.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Open Up Resources - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473240638"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Open Up Resources - About Us",
+        "url": "https://www.openupresources.org/about-us/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "How to Order - Open Up Resources",
+        "url": "https://www.openupresources.org/help-support/how-to-order/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein"
+        ],
+        "title": "OPEN UP RESOURCES - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/47-3240638"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003188",
+    "notes": "Open Up Resources is a 501(c)(3) K-12 math/ELA curriculum publisher (EIN 47-3240638); GuideStar lists a Gladstone, OR 97027 payment PO box matching the agenda location, and the address, website, org type and neutral summary are supported by ProPublica, GuideStar and the organization's own pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://probation.acgov.org/about-us/contact-us.page",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://probation.acgov.org/index.page",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-probation-department",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the county agency exactly: 'Alameda County Probation Department' (official site probation.acgov.org); OUSD's own funding-source field also names the Alameda County Probation Department, a public agency with no ambiguity about which entity this is",
+      "Headquartered in Oakland, CA (1111 Jackson Street), the same city OUSD serves",
+      "Agency runs juvenile services (Positive Youth Development Division), consistent with an OUSD 'Student health, support & family services' MOU for a High School Network"
+    ],
+    "key": "n-alameda-county-probation-department",
+    "notes": "Public county agency; no EIN/entity number/UEI sought. No general email found on the contact page. Could not find a public page explicitly describing the OUSD High School Network MOU; identity rests on exact agency name and OUSD funding-source field.",
+    "profile": {
+      "address": "PO Box 2059, 1111 Jackson Street, Oakland, CA 94607-2059",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Alameda County Probation Department",
+      "orgType": "public_agency",
+      "phone": "510-268-7050",
+      "samUei": null,
+      "summary": "A county government agency that supervises adults and youth in Alameda County who are on probation. It runs adult reentry and victim restitution programs and, for young people, a Positive Youth Development Division and juvenile facilities. It also handles record sealing and community service programs.",
+      "website": "https://probation.acgov.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Alameda County Probation Department - Contact Us",
+        "url": "https://probation.acgov.org/about-us/contact-us.page"
+      },
+      {
+        "supports": [
+          "website",
+          "orgType"
+        ],
+        "title": "Alameda County Probation Department",
+        "url": "http://probation.acgov.org/index.page"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-alameda-county-probation-department",
+    "notes": "The agenda names the Alameda County Probation Department itself, a single unambiguous county agency, and a probation MOU for the High School Network fits its juvenile services. The cited contact and home pages confirm the phone, address, services and public-agency status, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

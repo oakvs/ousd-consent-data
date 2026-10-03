@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/922658577",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.familiesunited.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.familiesunited.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008687",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) 'Families United For Equity' in San Leandro, CA (ProPublica Nonprofit Explorer, EIN 92-2658577), matching the agenda's San Leandro, CA location",
+      "Website familiesunited.org identifies the organization as 'Families United For Equity' and lists San Leandro, CA as an office location",
+      "Website describes IEP support, educational advocacy and parent workshops for families, consistent with an Office of Equity services agreement for family-facing programs"
+    ],
+    "key": "v-008687",
+    "notes": "Another phone, (833) 762-1110, appears on a third-party NPI registry page; the organization's own website shows (510) 508-7997, which is used here. Street address (209 Joaquin Ave, San Leandro) appears only on the third-party NPI registry, so it is omitted. Website does not mention OUSD by name.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "92-2658577",
+      "email": "info@familiesunited.org",
+      "headquarters": "San Leandro, CA",
+      "legalName": "Families United For Equity",
+      "orgType": "nonprofit",
+      "phone": "(510) 508-7997",
+      "samUei": null,
+      "summary": "A nonprofit based in San Leandro, California, that helps families of children and adults with developmental disabilities reach services and supports. It offers navigation and advocacy, parent workshops and training, IEP (Individualized Education Program) support, and help with regional center intake. It serves Bay Area communities.",
+      "website": "https://www.familiesunited.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Families United For Equity - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/922658577"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "About Families United",
+        "url": "https://www.familiesunited.org/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Contact Families United Support",
+        "url": "https://www.familiesunited.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008687",
+    "notes": "ProPublica lists Families United For Equity (EIN 92-2658577, San Leandro) as a 501(c)(3), and familiesunited.org (San Leandro office, IEP support and educational advocacy, a fit for an Office of Equity agreement) is linked to it by name on its social media presence. Services in the summary are supported, but 'serves Bay Area communities' is not stated by the sources (the site says 4 counties served, with a Stockton office), so the summary should be dropped or reworded; other fields are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

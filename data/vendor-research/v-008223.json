@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://public-works.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://public-works.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.governing.com/authors/eric-b-schnurer.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandside.org/2023/08/24/oakland-unified-overhaul-central-office-school-closures/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008223",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Public Works LLC's own website (public-works.org) lists a West Chester, PA 19380 location, matching the agenda text 'West Chester, PA'",
+      "Governing magazine's author page names Eric B. Schnurer as founder and president of Public Works LLC and links to public-works.org",
+      "The Oaklandside article on OUSD's Continuous School Improvement redesign report names Eric Schnurer as founder and president of Public Works LLC, the firm that authored the report matching the agenda item titles"
+    ],
+    "key": "v-008223",
+    "notes": "Registry IDs (EIN, entity number, UEI) not looked up; business is a for-profit consulting LLC. Contact page gives only 'West Chester, PA 19380' so no street address recorded.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@public-works.org",
+      "headquarters": "West Chester, PA",
+      "legalName": "Public Works LLC",
+      "orgType": "company",
+      "phone": "610.296.9443",
+      "samUei": null,
+      "summary": "Public Works LLC is a consulting firm that helps government, education and mission-driven organizations improve efficiency and carry out policy reforms. Its services include efficiency reviews, strategic planning and policy development.",
+      "website": "https://public-works.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Public Works LLC",
+        "url": "https://public-works.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Contact - Public Works LLC",
+        "url": "https://public-works.org/contact/"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Eric B. Schnurer",
+        "url": "https://www.governing.com/authors/eric-b-schnurer.html"
+      },
+      {
+        "supports": [],
+        "title": "How can Oakland Unified be more efficient? Report lays out plan, including school closures",
+        "url": "https://oaklandside.org/2023/08/24/oakland-unified-overhaul-central-office-school-closures/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008223",
+    "notes": "Oaklandside names Public Works LLC (founder/president Eric Schnurer) as author of the OUSD redesign report matching the agenda titles; Governing's author page ties Schnurer and Public Works LLC to the same consulting firm, and public-works.org and its contact page confirm West Chester, PA 19380, phone and generic info@ email. The summary is neutral and consistent with the site's description of efficiency reviews and strategic planning for government and education clients.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

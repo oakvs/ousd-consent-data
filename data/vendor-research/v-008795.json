@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.specplay.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.specplay.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008795",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Specified Play Equipment Co. (SPEC) is a playground and park design/construction company headquartered in Belmont, CA, matching the agenda location 'Belmont, CA' (specplay.com contact page)",
+      "A San Francisco Port bid tabulation lists the bidder as 'YOSSO GROUP INC. (SPECIFIED PLAY EQUIPMENT CO...)', linking the legal name and dba from the agenda",
+      "Its work building school playgrounds and park projects matches OUSD contracting it for a school site improvements project (Esperanza at Stonehurst Elementary) through Facilities Planning and Management"
+    ],
+    "key": "v-008795",
+    "notes": "Agenda legal name is Yosso Group, Inc. dba Specified Play Equipment Co.; the website names the business 'Specified Play Equipment Company' and does not state the Yosso Group name, so legalName is left null. The Yosso Group / SPEC link comes from a San Francisco Port bid tabulation PDF and BBB listings. CA SOS entity number not verified.",
+    "profile": {
+      "address": "121 Industrial Road, Suite 1, Belmont, CA 94002",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@specplay.com",
+      "headquarters": "Belmont, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(800) 475-1071",
+      "samUei": null,
+      "summary": "Specified Play Equipment Company (SPEC) is a family-owned company that designs and builds playgrounds, parks and recreation spaces. Its clients include cities, schools and design professionals, and it works in California and other states.",
+      "website": "https://www.specplay.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "SPEC Play - Contact",
+        "url": "https://www.specplay.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "SPEC Play",
+        "url": "https://www.specplay.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008795",
+    "notes": "Cited specplay.com pages confirm the Belmont, CA address, phone, general email, family-owned playground/park design-build business serving schools and cities in multiple states; search results independently list Yosso Group, Inc. as an alternate name of Specified Play Equipment Co. in Belmont, matching the agenda dba and a school site improvements contract. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

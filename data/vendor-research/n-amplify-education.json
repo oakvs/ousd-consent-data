@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://amplify.com/support/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://amplify.com/programs/mclass/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Amplify_(company)",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-amplify-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Amplify Education, Inc.' appears on Amplify's own support page footer, matching the agenda name exactly",
+      "Located in Brooklyn, New York City, NY, consistent with the agenda's 'New York, NY'",
+      "Amplify's website describes mCLASS, a K-8 literacy assessment tool, matching the OUSD contract title 'mClass Literacy Tool'"
+    ],
+    "key": "n-amplify-education",
+    "notes": "Registry IDs (EIN not applicable, CA SOS, SAM UEI) not verified. Agenda says New York, NY; Amplify's HQ is in Brooklyn, a New York City borough.",
+    "profile": {
+      "address": "55 Washington St., Brooklyn, NY 11201",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Brooklyn, NY",
+      "legalName": "Amplify Education, Inc.",
+      "orgType": "company",
+      "phone": "+1 (800) 823-1969",
+      "samUei": null,
+      "summary": "A private education company that creates curriculum in English language arts, math and science for K-12 schools. It also makes assessment tools, such as mCLASS, that give teachers data on student reading skills.",
+      "website": "https://amplify.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Amplify support | Amplify",
+        "url": "https://amplify.com/support/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "mCLASS - K-8 Literacy Assessment & Dyslexia Screening",
+        "url": "https://amplify.com/programs/mclass/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Amplify (company) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Amplify_(company)"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-amplify-education",
+    "notes": "Amplify Education, Inc. (Brooklyn/New York City) matches the agenda name and city, and its mCLASS literacy tool matches the contract title. Legal name, phone, address and website are shown on the support page, and the neutral summary is supported by the mCLASS page and Wikipedia.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

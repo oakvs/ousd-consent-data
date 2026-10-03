@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://opencorporates.com/companies/us_ca/4169640",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.emeryvillept.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://stacphysicaltherapy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007726",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California professional stock corporation, 'STAC PHYSICAL THERAPY EMERYVILLE, INC.', status Active (OpenCorporates, California registry data)",
+      "STAC Physical Therapy's own website lists Emeryville as a Northern California location and links to emeryvillept.com, matching the agenda's 'Emeryville, CA'",
+      "Clinic at 2322 Powell Street, Emeryville provides physical therapy, consistent with OUSD special education services contracts",
+      "STAC Physical Therapy's website has a School Districts partnerships section and pediatric therapy programs"
+    ],
+    "key": "v-007726",
+    "notes": "Registered office of the corporation is 1900 Laurel Avenue, Manhattan Beach, CA (STAC parent practice); headquarters left null. Contact details are for the Emeryville clinic site. Entity number from OpenCorporates mirror of CA SOS data; SOS site not fetched.",
+    "profile": {
+      "address": "2322 Powell Street, Emeryville, CA 94608",
+      "caEntityNumber": "4169640",
+      "ein": null,
+      "email": "admin@emeryvillept.com",
+      "headquarters": null,
+      "legalName": "STAC PHYSICAL THERAPY EMERYVILLE, INC.",
+      "orgType": "company",
+      "phone": "(510) 653-5151",
+      "samUei": null,
+      "summary": "A California professional corporation that runs a physical therapy clinic in Emeryville, doing business as Emeryville Sports Physical Therapy. It offers one-on-one physical therapy, sports science and massage therapy for sports injuries, recovery after surgery and chronic pain. It is part of the STAC Physical Therapy group of clinics.",
+      "website": "https://www.emeryvillept.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "STAC PHYSICAL THERAPY EMERYVILLE, INC. - OpenCorporates",
+        "url": "http://opencorporates.com/companies/us_ca/4169640"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Emeryville Sports Physical Therapy",
+        "url": "https://www.emeryvillept.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "STAC Physical Therapy",
+        "url": "https://stacphysicaltherapy.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007726",
+    "notes": "The legal name matches exactly an active CA professional corporation (OpenCorporates 4169640) and STAC's own site lists the Emeryville clinic at emeryvillept.com, matching the agenda city; STAC advertises school-district and pediatric services consistent with a special education PT contract. Contact details are confirmed on emeryvillept.com; the 'doing business as' link rests on STAC's site pointing to that clinic, and the surgery/chronic-pain wording is only loosely supported by the clinic page but is not misleading.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

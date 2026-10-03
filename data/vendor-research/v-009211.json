@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.mcortelecom.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mcortelecom.com/contact-us-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009211",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website names it 'MCOR TELECOM, INC', matching the agenda name 'MCOR Telecom, Inc.'",
+      "Located at 1605 South Main Street, Milpitas, CA, matching the agenda location 'Milpitas, CA'",
+      "Website describes low-voltage structured cabling and network installation and lists Education as a market sector, consistent with OUSD facilities 'Door Entry System' projects"
+    ],
+    "key": "v-009211",
+    "notes": "Registry IDs not found (CA SOS not searchable via available tools). General email on the contact page appears to be a named individual's address (ralph@), so it was omitted. No page found explicitly mentioning OUSD.",
+    "profile": {
+      "address": "1605 South Main Street, Suite 112, Milpitas, CA 95035",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Milpitas, CA",
+      "legalName": "MCOR TELECOM, INC",
+      "orgType": "company",
+      "phone": "(408) 946-8386",
+      "samUei": null,
+      "summary": "A company that installs and tests commercial cabling systems, including network data, voice and fiber optic cabling. It also does data center design and build-outs and cable removal. It serves commercial, industrial, education and government customers in California.",
+      "website": "https://www.mcortelecom.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "MCOR TELECOM, INC",
+        "url": "https://www.mcortelecom.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact us",
+        "url": "https://www.mcortelecom.com/contact-us-2/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009211",
+    "notes": "Company site and contact page show MCOR TELECOM, INC at 1605 S Main St Suite 112, Milpitas (matches agenda name and city), a low-voltage cabling contractor serving the education sector, consistent with door entry system projects. Name, phone, address and the services in the summary are confirmed; the phrase 'in California' is a mild inference from the location (the site does not state a service area), and the named-individual email was correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

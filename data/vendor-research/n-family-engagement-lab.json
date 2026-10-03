@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/371905784",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.familyengagementlab.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.familyengagementlab.org/contact_us.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-family-engagement-lab",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Family Engagement Lab' based in San Francisco, CA (ProPublica Nonprofit Explorer, EIN 37-1905784), matching the agenda location San Francisco, CA",
+      "Organization's website describes family engagement programs (FASTalk) connecting classroom learning with family support at home, matching OUSD's 'Student health, support & family services' category and the Academics and Instruction Department",
+      "Organization's homepage includes a testimonial from a teacher in Oakland Unified, showing it works with OUSD schools"
+    ],
+    "key": "n-family-engagement-lab",
+    "notes": "No public phone or general email found on the organization's pages. California SOS entity number and SAM UEI not verified.",
+    "profile": {
+      "address": "548 Market Street #42210, San Francisco, CA 94104",
+      "caEntityNumber": null,
+      "ein": "37-1905784",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Family Engagement Lab",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Family Engagement Lab is a nonprofit that researches and builds ways for schools and families to work together on student learning. Its main program, FASTalk (Families & Schools Talk), gives schools and districts family learning resources, communication routines and implementation support that connect classroom lessons with learning at home.",
+      "website": "https://www.familyengagementlab.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Family Engagement Lab - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/371905784"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Family Engagement Lab - Family Engagement & Student Learning",
+        "url": "https://www.familyengagementlab.org/"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Contact Us - Family Engagement Lab",
+        "url": "https://www.familyengagementlab.org/contact_us.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-family-engagement-lab",
+    "notes": "ProPublica confirms a San Francisco 501(c)(3) named Family Engagement Lab (EIN 37-1905784), and the organization's site confirms the mailing address, the FASTalk program and an Oakland Unified teacher testimonial, which fits the SF location and the family-services contract. The summary is neutral and supported by the site.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

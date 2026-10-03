@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.theahsg.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.theahsg.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prweb.com/releases/american-health-staffing-group-completes-acquisition-of-pediastaff-expanding-specialized-healthcare-staffing-services-into-k-12-school-setting-301970470.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-american-health-staffing",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'American Health Staffing Group' (AHSG), a healthcare staffing company whose website lists its legal name as American Health Staffing Group LLC",
+      "Headquartered in Edmond, OK, matching the 'Edmond, OK' location given in the OUSD agenda text",
+      "AHSG's PediaStaff brand provides pediatric therapy and educational staffing for K-12 schools, consistent with OUSD contracting the vendor for special education nonpublic agency services"
+    ],
+    "key": "n-american-health-staffing",
+    "notes": "Agenda name is 'American Health Staffing' (no 'Group'); matched on Edmond, OK location and school therapy staffing via PediaStaff. No OUSD or California-specific page found. No registry IDs checked; main phone not shown on the parent company site (AHS Staffing brand site lists a different toll-free number), so phone left null.",
+    "profile": {
+      "address": "3009 Astoria Ct, Edmond, OK",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@theahsg.com",
+      "headquarters": "Edmond, OK",
+      "legalName": "American Health Staffing Group LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A privately held healthcare staffing company based in Edmond, Oklahoma. It places nurses, allied health workers and dialysis staff with health care organizations across the United States. Through its PediaStaff brand, it also provides pediatric therapy and educational staffing for schools.",
+      "website": "https://www.theahsg.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "American Health Staffing Group",
+        "url": "https://www.theahsg.com/"
+      },
+      {
+        "supports": [
+          "email",
+          "address"
+        ],
+        "title": "Contact - American Health Staffing Group",
+        "url": "https://www.theahsg.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "American Health Staffing Group Completes Acquisition of PediaStaff, Expanding Specialized Healthcare Staffing Services into K-12 School Setting",
+        "url": "https://www.prweb.com/releases/american-health-staffing-group-completes-acquisition-of-pediastaff-expanding-specialized-healthcare-staffing-services-into-k-12-school-setting-301970470.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-american-health-staffing",
+    "notes": "The agenda's Edmond, OK location matches American Health Staffing Group LLC's address (3009 Astoria Ct, Edmond, OK), and its PediaStaff brand supplies school therapy staffing, which fits a special education nonpublic agency contract. The company site and the PRWeb release support the legal name, address, generic email, services and privately held status; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

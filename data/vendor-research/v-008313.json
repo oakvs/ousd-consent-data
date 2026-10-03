@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943171180",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.biotechpartners.org/about-biotech-partners",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.biotechpartners.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008313",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Biotech Partners' (ProPublica Nonprofit Explorer, EIN 94-3171180, East Bay, CA)",
+      "Organization's website gives a Berkeley, CA address, matching the agenda's 'Berkeley, CA'",
+      "Website lists Oakland Tech (Oakland Technical High School) as a partner school, matching the agenda title 'Services Agreement 2022-2023 - Biotech Partners - Oakland Technical High School'",
+      "Biotech education programs in high school classrooms match OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "v-008313",
+    "notes": "Only contact email on the site is a named staff member's, so email is omitted. No main phone number found. ProPublica/IRS lists the filing address as Emeryville, CA; the organization's own website gives 800 Dwight Way, Berkeley (mailing: P.O. Box 2186, Berkeley). CA Secretary of State entity number not looked up.",
+    "profile": {
+      "address": "800 Dwight Way, Berkeley, CA 94710",
+      "caEntityNumber": null,
+      "ein": "94-3171180",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Biotech Partners",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Biotech Partners is a nonprofit that helps high school students who are underrepresented in biotechnology. Its Biotech Academy offers classroom instruction and paid summer internships at bioscience companies, and its Bioscience Career Institute combines a year-long biotech job with community college courses. It works with schools including Berkeley High and Oakland Tech.",
+      "website": "https://www.biotechpartners.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Biotech Partners - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943171180"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Biotech Partners",
+        "url": "https://www.biotechpartners.org/about-biotech-partners"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Biotech Partners",
+        "url": "https://www.biotechpartners.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008313",
+    "notes": "Biotech Partners is a Berkeley-based nonprofit (800 Dwight Way) whose site names Oakland Tech as a partner school, matching the agenda's Berkeley location and Oakland Tech services agreement; EIN, address, programs and nonprofit status are confirmed by the cited sources (IRS filing address in Emeryville is noted in the candidate).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

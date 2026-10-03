@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.alamedacountyca.gov/board/bos_calendar/documents/DocsAgendaReg_02_06_24/HEALTH%20CARE%20SERVICES/Regular%20Calendar/HCSA_362705.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://consultdara.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009278",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: Alameda County Health Care Services Agency board letter names 'DDG Training and Consulting LLC' with 'Location: Sierra Madre', matching the agenda text 'Sierra Madre, CA'",
+      "Services match: the county letter says the firm trains on the Family Café model and the Strengthening Families Protective Factors Framework to reach students and families; its own website describes family and community engagement training using World Café methods, matching an OUSD Early Childhood Development Department services agreement",
+      "Website consultdara.net is titled 'DDG Training and Consulting'"
+    ],
+    "key": "v-009278",
+    "notes": "No public phone, email or street address found on the company website (contact form only). A third-party listing suggests a California entity number but it could not be verified on an official registry page, so it is omitted. Legal name 'DDG Training and Consulting LLC' appears in the cited Alameda County PDF, but the checker could not confirm it from the PDF, so the field is left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sierra Madre, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A small consulting company based in Sierra Madre, California. It provides training, technical assistance and professional development to help organizations and public systems engage families and communities, using the Family Café approach and the Strengthening Families Protective Factors Framework.",
+      "website": "https://consultdara.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Alameda County Health Care Services Agency board agenda item, February 6, 2024",
+        "url": "https://www.alamedacountyca.gov/board/bos_calendar/documents/DocsAgendaReg_02_06_24/HEALTH%20CARE%20SERVICES/Regular%20Calendar/HCSA_362705.pdf"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "DDG Training and Consulting",
+        "url": "https://consultdara.net/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009278",
+    "notes": "The Alameda County board letter names DDG Training and Consulting LLC (principal Dara Griffin, Location: Sierra Madre) for Family Café and Strengthening Families training, matching the agenda name and city. consultdara.net is the same firm: it is titled DDG Training and Consulting, describes Dara Griffin's Family Café and Strengthening Families work, and offers training, technical assistance and professional development. The description 'small' is not stated outright in any source, but the firm presents as a one-principal consultancy; the rest of the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/161642307",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://spaat.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://spaat.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004011",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'Student Program For Academic And Athletic Transitioning', EIN 16-1642307, Oakland, CA (ProPublica Nonprofit Explorer), matching the agenda's Oakland, CA",
+      "spaat.org describes mentoring, tutoring and coaching for student-athletes and names McClymonds High School in Oakland, matching OUSD's McClymonds after-school and summer program contracts",
+      "spaat.org lists Oakland Unified School District as a partner"
+    ],
+    "key": "v-004011",
+    "notes": "Phone and street address not shown on the organization's own pages (third-party listings show (510) 836-9999 and 360 Grand Ave, Oakland, but these were not used). Not searched in CA SOS or SAM.gov.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "16-1642307",
+      "email": "admin@spaat.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Student Program For Academic And Athletic Transitioning",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "SPAAT is an Oakland nonprofit that supports high school student-athletes. It offers mentoring, tutoring and coaching to help students move from high school to college, careers and adulthood. It was founded in 2003 and works with students in Oakland schools.",
+      "website": "https://spaat.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Student Program For Academic And Athletic Transitioning (SPAAT) - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/161642307"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "website"
+        ],
+        "title": "About : Student Program for Academic & Athletic Transitioning",
+        "url": "https://spaat.org/about/"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Contact : Student Program for Academic & Athletic Transitioning",
+        "url": "https://spaat.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004011",
+    "notes": "ProPublica confirms the 501(c)(3) of the exact name (EIN 16-1642307) in Oakland, CA; spaat.org lists OUSD as a partner and confirms the 2003 founding, mentoring/coaching, and the generic admin@spaat.org email. Tutoring appears on spaat.org/programs rather than the cited about page, but is supported; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

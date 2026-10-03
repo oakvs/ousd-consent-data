@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/452402944",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.empowerinitiative.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008923",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) 'Empower Initiative' (EIN 45-2402944) per ProPublica Nonprofit Explorer and GuideStar",
+      "CONTRADICTION: the registered organization is in Oakland, CA, but the agenda text gives Hayward, CA",
+      "Its website (empowerinitiative.org) describes leadership development but does not mention schools, adult education, Oakland Unified or Hayward, so no link to OUSD's 'Classroom & academic programs' contracts was found"
+    ],
+    "key": "v-008923",
+    "notes": "Candidate not confirmed. The only matching registered organization is in Oakland, while the agenda says Hayward, and no page links it to OUSD adult education or Dewey Academy. It may be a different, unregistered or for-profit 'Empower Initiative' in Hayward. Do not publish without human verification.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "45-2402944",
+      "email": "info@empowerinitiative.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Empower Initiative",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A leadership development organization that works to build the ability of institutions and individuals to create cultural and structural belonging. It offers leadership development programs and supports marginalized communities in changing public systems.",
+      "website": "https://www.empowerinitiative.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Empower Initiative - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/452402944"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "Empower Initiative",
+        "url": "https://www.empowerinitiative.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

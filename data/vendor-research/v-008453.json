@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/construction/dawson-construction-management-1116-968981",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.constructionresourcecenter.org/showcase/dawson-construction-management/",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
+  "key": "v-008453",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: 'Dawson Construction Management' (BBB profile and Construction Resource Center listing, which adds 'dba DCM Inc.')",
+      "Located in Oakland, CA (8311 Aster Ave, Oakland, CA 94605), matching the agenda text",
+      "Listed as a construction firm, loosely consistent with a facilities maintenance contract; no page found that ties it to OUSD or to vegetation/weed abatement work"
+    ],
+    "key": "v-008453",
+    "notes": "The company's own website (dawsonconstructionmanagement.com, per the Construction Resource Center listing) could not be fetched because of an invalid TLS certificate, so it was not verified or included. No registry entry (CA Secretary of State, SAM.gov) was checked or found. No source links this firm to OUSD or to vegetation/weed abatement, and the agenda item (weed abatement) is outside the listed services, so identity is not fully confirmed.",
+    "profile": {
+      "address": "8311 Aster Ave, Oakland, CA 94605",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Dawson Construction Management",
+      "orgType": "company",
+      "phone": "(510) 593-5408",
+      "samUei": null,
+      "summary": "A construction firm based in Oakland, California. Its listing says it provides demolition, residential and commercial renovation, new construction, and lead and mold abatement, and that it serves contractors, property management companies, realtors and municipalities.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Dawson Construction Management - BBB",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/construction/dawson-construction-management-1116-968981"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Dawson Construction Management - Construction Resource Center",
+        "url": "https://www.constructionresourcecenter.org/showcase/dawson-construction-management/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

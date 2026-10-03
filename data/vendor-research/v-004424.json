@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/205643483",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://unamesa.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.inplay.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004424",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Unamesa Association' (ProPublica Nonprofit Explorer, EIN 20-5643483, Palo Alto, CA)",
+      "UnaMesa's own website says InPlay was launched in 2015 as its project to connect students to out-of-school learning, matching the agenda's 'UnaMesa Association dba InPlay' and OUSD's after-school and summer program contracts",
+      "InPlay's website names Oakland Unified School District as a partner for summer programs, matching OUSD's Community Schools and Student Services contracts",
+      "Registry city (Palo Alto) differs from the agenda's San Mateo, CA but is on the same Peninsula and the dba name matches exactly"
+    ],
+    "key": "v-004424",
+    "notes": "Agenda gives San Mateo, CA; ProPublica and UnaMesa's site give Palo Alto. Street address deliberately omitted because of that discrepancy. InPlay launched as an independent nonprofit in 2024 (separate entity, Inplay Learning Network); the OUSD contracts are 2020-2024 under UnaMesa Association dba InPlay, so the UnaMesa record is the right match.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "20-5643483",
+      "email": null,
+      "headquarters": "Palo Alto, CA",
+      "legalName": "UnaMesa Association",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "UnaMesa Association is a nonprofit (501(c)(3)) charity that supports social entrepreneurs working on healthcare, education and social services. In 2015 it launched InPlay, a platform that connects students and families to summer and after-school programs. InPlay also provides registration and program-management tools for school districts, and became its own independent nonprofit in 2024.",
+      "website": "https://unamesa.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Unamesa Association - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/205643483"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "legalName"
+        ],
+        "title": "UnaMesa - Innovation for all",
+        "url": "https://unamesa.org/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "InPlay",
+        "url": "https://www.inplay.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004424",
+    "notes": "ProPublica confirms UnaMesa Association (EIN 20-5643483, 501(c)(3), Palo Alto); unamesa.org describes the 2015 InPlay launch and its 2024 independence, and inplay.org names Oakland USD as a partner and describes the summer/after-school registration tools. The dba name matches the agenda exactly; the San Mateo vs Palo Alto difference is minor and the address was omitted. The summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

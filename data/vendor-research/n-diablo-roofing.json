@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.diabloroof.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.diabloroof.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/roofing-contractors/diablo-roofing-inc-1116-957104",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?From=RSS&ID=7398291&GUID=D684DF17-57FE-46B8-BFE7-1F121AB3D31E",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-diablo-roofing",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the agenda's 'Diablo Roofing, Inc.' (Oakland, CA) is the same name and city shown on the company's own website and on its BBB profile (10227 International Boulevard, Oakland, CA 94603)",
+      "OUSD's Board file for the Westlake Middle School Gym Roof Replacement lists the contractor as Diablo Roofing, Inc. (Oakland, CA), and the company's website describes commercial roofing, matching OUSD's 'School buildings & construction' contract",
+      "The company website and the BBB profile give the same address and phone number, and BBB lists a founding date of June 23, 2020, which matches the business start date shown on BuildZoom for the same Oakland address and phone"
+    ],
+    "key": "n-diablo-roofing",
+    "notes": "No EIN, California Secretary of State entity number or SAM UEI was found or verified. BuildZoom lists the licensed contractor as 'Diablo Roofing & Waterproofing Inc' (CSLB license 1069338) at the same address and phone; the exact legal name may differ slightly from the 'Diablo Roofing, Inc.' trade name used on the website, BBB and OUSD agenda. A reviewer may want to confirm against the CA Secretary of State record.",
+    "profile": {
+      "address": "10227 International Boulevard, Oakland, CA 94603",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@diabloroof.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Diablo Roofing, Inc.",
+      "orgType": "company",
+      "phone": "510-600-5394",
+      "samUei": null,
+      "summary": "Diablo Roofing is a roofing contractor based in Oakland, California. It installs, repairs and replaces roofs and does waterproofing work for commercial and multifamily buildings in Northern California.",
+      "website": "https://www.diabloroof.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Roofing Experts",
+        "url": "https://www.diabloroof.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Roofing",
+        "url": "https://www.diabloroof.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Diablo Roofing, Inc.",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/roofing-contractors/diablo-roofing-inc-1116-957104"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Oakland Unified School District - File #: 25-1046",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?From=RSS&ID=7398291&GUID=D684DF17-57FE-46B8-BFE7-1F121AB3D31E"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-diablo-roofing",
+    "notes": "Diablo Roofing, Inc. of Oakland, CA matches the OUSD Legistar record (Westlake Middle School gym roof replacement, Oakland CA) and the company site and BBB agree on name, address and phone. The summary and contact fields are supported and neutral; no EIN, entity number or UEI is claimed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.tucsequipmentfoodservice.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.tucsequipment.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006348",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'TUCS Equipment Inc.' on the company's own websites, and located in Princeton, MN, matching the agenda text 'Princeton, MN'",
+      "Company makes commercial foodservice equipment (kettles, mixers, chillers) and lists K-12 schools as a market it serves, consistent with OUSD contracting it for Central Kitchen staff training in the Nutrition Services Department",
+      "Its site lists 'Service, Training, and Parts' as services, consistent with an equipment-training services agreement"
+    ],
+    "key": "v-006348",
+    "notes": "Registry IDs and legal name not looked up. Contact details taken from the company's own sites. Agenda gives only 'Princeton, MN'; no page found that mentions OUSD directly.",
+    "profile": {
+      "address": "755 S Old Highway 18, Princeton, MN 55371",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "sales@tucsequipment.com",
+      "headquarters": "Princeton, MN",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(800) 801-4965",
+      "samUei": null,
+      "summary": "TUCS Equipment Inc. is a company in Princeton, Minnesota that makes foodservice and food processing equipment. Its products include kettles, mixers, water bath tanks and bagging systems for cooking, chilling, packaging and handling food. It sells to commercial kitchens, including K-12 schools, and offers service, training and parts.",
+      "website": "https://www.tucsequipment.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Tucs Equipment",
+        "url": "https://www.tucsequipmentfoodservice.com/"
+      },
+      {
+        "supports": [
+          "website",
+          "address",
+          "headquarters",
+          "email"
+        ],
+        "title": "TUCS Equipment",
+        "url": "https://www.tucsequipment.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006348",
+    "notes": "Both company sites show TUCS Equipment Inc. at 755 S Old Highway 18, Princeton, MN, matching the agenda city, and list K-12 schools plus service, training and parts, which fits a central kitchen equipment training agreement. The summary, phone, email and address are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

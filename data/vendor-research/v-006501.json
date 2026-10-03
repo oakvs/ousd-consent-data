@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/472673814",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.postnewsgroup.com/youth-referee-organization-rise/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-006501",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name closely matches: ProPublica lists 'Tailor Made Officials Inc' (EIN 47-2673814), a 501(c)(3) in Oakland, CA; the Post News Group article names 'Tailor Made Officials Basketball Association' (TMOBA), based in the Oakland area",
+      "Both describe a basketball/sports officiating organization, consistent with a services agreement with the Oakland Athletic League for athletics programs",
+      "Agenda location 'Canyon, CA' (a small community near Oakland) is not confirmed by registry data, which shows Oakland; the legal name 'Tailor Made Officials Inc' also differs slightly from the agenda's 'Basketball Assn, Inc.'"
+    ],
+    "key": "v-006501",
+    "notes": "Medium confidence: the IRS-registered name (Tailor Made Officials Inc, Oakland) is very likely the same entity as the agenda's Tailor Made Officials Basketball Assn, Inc., but the agenda's Canyon, CA location and the name difference are not confirmed. The organization's own website (tailormadeofficialsinc.org, seen in a news article) did not resolve, so no website, email or address was verified. A 'Tailor Made Institute' page lists a PO Box in Canyon, CA, which may be related but was not verifiable.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "47-2673814",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Tailor Made Officials Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 459-8905",
+      "samUei": null,
+      "summary": "A nonprofit that trains youth and adults in sports officiating, including basketball referees and scorekeepers. It offers free training sessions several times a week and works with leagues and events across the San Francisco Bay Area.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Tailor Made Officials Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/472673814"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone"
+        ],
+        "title": "Youth Referee Organization on the Rise in Oakland",
+        "url": "https://www.postnewsgroup.com/youth-referee-organization-rise/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

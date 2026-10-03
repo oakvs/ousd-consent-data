@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/833328307",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://newanchor.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://newanchor.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009000",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) public charity: 'New Anchor Foundation' (ProPublica Nonprofit Explorer, EIN 83-3328307), listed in Covina, CA, matching the agenda's 'Covina, CA'",
+      "The organization's own website names the same legal entity and EIN ('New Anchor Foundation, a US 501 (c)(3) public charity, EIN 83-3328307') and says it connects Bay Area refugees with hosted housing, consistent with OUSD funding from a Refugee Program Bureau source and a contract with the English Language Learner and Multilingual Achievement Department",
+      "The website describes the organization as Bay Area focused (and its About page as based in Oakland), consistent with a contract with an Oakland school district"
+    ],
+    "key": "v-009000",
+    "notes": "ProPublica lists the organization in Covina, CA (matching the agenda), while the organization's About page says it is based in Oakland, CA. Headquarters left null because of this discrepancy. No public phone, email or mailing address was found on the website; no contact page exists at /contact/. No explicit page mention of OUSD found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-3328307",
+      "email": null,
+      "headquarters": null,
+      "legalName": "New Anchor Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "New Anchor Foundation is a nonprofit public charity that helps connect refugees and asylum seekers in the Bay Area with hosted housing in community members' homes during their first months in the United States. It also works to raise awareness about the global refugee crisis.",
+      "website": "https://newanchor.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "New Anchor Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/833328307"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "ein",
+          "legalName"
+        ],
+        "title": "New Anchor -- Non-Profit Foundation Connecting Refugees with Housing",
+        "url": "https://newanchor.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us",
+        "url": "https://newanchor.org/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009000",
+    "notes": "ProPublica lists New Anchor Foundation (EIN 83-3328307) in Covina, CA, matching the agenda, and the organization's own site repeats the same legal name and EIN, describes refugee hosted housing in the Oakland/Bay Area, and fits a refugee-program-funded ELL department contract. The summary, legal name, EIN, orgType and website are supported by the cited pages and are neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

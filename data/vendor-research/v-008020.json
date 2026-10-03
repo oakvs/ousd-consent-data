@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942275076",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://holdenhigh.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008020",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: ProPublica lists 'Contra Costa Alternative School Inc' with operating name Holden High School, a 501(c)(3) school in Orinda, CA, matching the agenda's 'Holden High School' and 'Orinda, CA'",
+      "Holden High School's own website describes a school for students with learning, mental health and executive functioning challenges, consistent with OUSD's special education services agreements",
+      "Address on the school's website is 10 Irwin Way, Orinda, CA 94563, matching the agenda location"
+    ],
+    "key": "v-008020",
+    "notes": "Legal name is from ProPublica; the school's website uses the name Holden High School. No Oakland/OUSD mention found on the website; identity rests on name, city and service-type match.",
+    "profile": {
+      "address": "10 Irwin Way, Orinda, CA 94563",
+      "caEntityNumber": null,
+      "ein": "94-2275076",
+      "email": "admissions@holdenhigh.org",
+      "headquarters": "Orinda, CA",
+      "legalName": "Contra Costa Alternative School Inc",
+      "orgType": "nonprofit",
+      "phone": "925-254-0199",
+      "samUei": null,
+      "summary": "Holden High School is a private nonprofit high school in Orinda, California. It serves teenagers with learning differences and with mental health or executive functioning challenges, offering small classes, individualized academics and social-emotional support.",
+      "website": "https://holdenhigh.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Contra Costa Alternative School Inc (Holden High School) - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942275076"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Holden High School - Orinda",
+        "url": "https://holdenhigh.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008020",
+    "notes": "ProPublica confirms Contra Costa Alternative School Inc (EIN 94-2275076) operates as Holden High School in Orinda, CA, matching the agenda name and city; the school's site confirms address, phone, generic admissions email, and serves students with learning/mental health challenges from Contra Costa and Alameda counties, consistent with special education service agreements. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

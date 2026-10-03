@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://htaconsulting.com/wp2017/about/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.htaconsulting.com",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://files.eric.ed.gov/fulltext/ED594052.pdf",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-002018",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "An OUSD evaluation report (Oakland Accelerates, ERIC ED594052) is credited to 'Hatchuel Tabernik & Associates (HTA)', which lists 2560 9th Street, Berkeley, CA 94710 and the website htaconsulting.com, matching the agenda's Berkeley, CA location and the vendor name.",
+      "The report was prepared for an Oakland Unified School District program funded by a U.S. Department of Education i3 grant, matching OUSD's agenda items for the U.S. Department of Education grant and Community Schools contracts.",
+      "htaconsulting.com (now branded 'HTA Consulting') lists a Berkeley, CA 94710 office and offers evaluation, research and grant writing for educational and social sector organizations, matching OUSD's classroom and after-school program contracts."
+    ],
+    "key": "v-002018",
+    "notes": "Site is now branded HTA Consulting; agenda uses the older name Hatchuel Tabernik & Associates, Inc. Legal name, CA entity number and EIN not confirmed from a registry (SOS site not fetched), so left null. General email is obfuscated on the site and was omitted.",
+    "profile": {
+      "address": "2560 Ninth Street, Suite 319A Berkeley, CA 94710",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-559-3193",
+      "samUei": null,
+      "summary": "HTA, short for Hatchuel Tabernik & Associates and now branded HTA Consulting, is a consulting firm in Berkeley, California. It works with nonprofit and public agencies and other social sector and education organizations. Its services include evaluation and research, grant writing, community and strategic planning, and capacity building.",
+      "website": "https://www.htaconsulting.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "About Us | Empowering Organizations | HTA Consulting",
+        "url": "https://htaconsulting.com/wp2017/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "HTA Consulting",
+        "url": "https://www.htaconsulting.com"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "The Oakland Accelerates Program Final Results of a District-wide Strategy",
+        "url": "https://files.eric.ed.gov/fulltext/ED594052.pdf"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002018",
+    "notes": "The About page names 'Hatchuel Tabernik and Associates (HTA Consulting)' at the Berkeley, CA address and phone cited, and the ERIC report credits Hatchuel Tabernik & Associates (htaconsulting.com, Berkeley) with evaluating an OUSD i3-funded program. The summary, website, phone, address and headquarters match the fetched pages and are neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

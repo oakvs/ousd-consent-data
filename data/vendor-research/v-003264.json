@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/330259359",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.piqe.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.piqe.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.piqe.org/where-we-work/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003264",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'PIQE' is the well-known acronym of the Parent Institute for Quality Education, a registered 501(c)(3) nonprofit (ProPublica, EIN 33-0259359)",
+      "PIQE's own site lists a Bay Area regional office serving Alameda and Santa Clara counties, consistent with the agenda location Santa Clara, CA and Oakland (Alameda County)",
+      "PIQE runs parent and family engagement programs with school districts, matching OUSD's 'Student health, support & family services' category and contracts at Greenleaf Elementary and Urban Promise Academy"
+    ],
+    "key": "v-003264",
+    "notes": "Santa Clara in the agenda refers to PIQE's Bay Area regional office; the profile uses the national home office in National City, CA, as shown on the contact page. Pages did not directly mention OUSD, so the OUSD link rests on location and service match. CA SOS number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "2405 E Plaza Blvd, National City, CA 91950",
+      "caEntityNumber": null,
+      "ein": "33-0259359",
+      "email": "Info@piqe.org",
+      "headquarters": "National City, CA",
+      "legalName": "Parent Institute For Quality Education Inc",
+      "orgType": "nonprofit",
+      "phone": "(619) 420-4499",
+      "samUei": null,
+      "summary": "A nonprofit founded in 1987 that offers workshops and ongoing support to help families partner with schools and communities so their children can succeed. It works with school districts across California and in other states.",
+      "website": "https://www.piqe.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Parent Institute For Quality Education Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/330259359"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - PIQE",
+        "url": "https://www.piqe.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Home - PIQE",
+        "url": "https://www.piqe.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "PIQE Offices Near You - PIQE",
+        "url": "https://www.piqe.org/where-we-work/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003264",
+    "notes": "PIQE is the well-known acronym of the Parent Institute for Quality Education; its family-engagement services fit OUSD's school-based agreements and its Bay Area office covers Alameda and Santa Clara counties. ProPublica, the contact page, the home page and the offices page support every non-null field, and the summary is neutral; none of the pages mention OUSD directly, so the match rests on name, service and region.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

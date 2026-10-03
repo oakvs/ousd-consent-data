@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/844196472",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.diversityinleadership.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.diversityinleadership.org/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/84-4196472",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-laurel-leadership-diversity-in-leadership-institute",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists 'Laurel Leadership Institute', a 501(c)(3) in Los Angeles, CA (EIN 84-4196472), matching the agenda name 'Laurel Leadership' and location Los Angeles, CA",
+      "The Diversity in Leadership Institute website's privacy policy names 'Laurel Leadership Institute, Los Angeles, CA' as the company, linking the dba 'Diversity in Leadership Institute' to the registered nonprofit",
+      "GuideStar lists the same EIN 84-4196472 with the website diversityinleadership.org and the dba relationship between Laurel Leadership Institute and Diversity in Leadership Institute",
+      "Website describes consultancy to school districts and development of public school leaders, consistent with a Talent/Human Resources services agreement for staff and hiring"
+    ],
+    "key": "n-laurel-leadership-diversity-in-leadership-institute",
+    "notes": "Operates under the name Diversity in Leadership Institute; IRS legal name per ProPublica is Laurel Leadership Institute (GuideStar lists the reverse). Mailing address shown on the site is 2200 W Century Blvd #47757; GuideStar lists PO Box 180114, Los Angeles, CA 90018. No phone number found. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2200 W Century Blvd #47757, Los Angeles, CA 90047",
+      "caEntityNumber": null,
+      "ein": "84-4196472",
+      "email": "info@diversityinleadership.org",
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Laurel Leadership Institute",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Diversity in Leadership Institute is a nonprofit based in Los Angeles that identifies, develops and supports racially diverse public school leaders. Its work includes a fellowship program for aspiring principals of color, consulting services for school districts and charter schools, and coalition building and advocacy to close opportunity gaps for students.",
+      "website": "https://www.diversityinleadership.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Laurel Leadership Institute - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/844196472"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address",
+          "orgType"
+        ],
+        "title": "Diversity in Leadership",
+        "url": "https://www.diversityinleadership.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Privacy Policy - Diversity in Leadership",
+        "url": "https://www.diversityinleadership.org/privacy-policy"
+      },
+      {
+        "supports": [
+          "ein",
+          "website",
+          "orgType"
+        ],
+        "title": "Laurel Leadership Institute - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/84-4196472"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-laurel-leadership-diversity-in-leadership-institute",
+    "notes": "The agenda's dba 'Laurel Leadership, dba Diversity in Leadership Institute' in Los Angeles matches ProPublica (Laurel Leadership Institute, EIN 84-4196472, Los Angeles 501(c)(3)), GuideStar (same EIN, website diversityinleadership.org), and the site and privacy policy, which name both entities. The summary, email, address and website are supported by the fetched sources, and the district-consulting services fit a Talent/HR services agreement.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://borderlan.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://borderlan.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/borderlan-inc-13146419/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000745",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: BorderLAN, Inc., an IT/network security company headquartered at 950 Boardwalk, Suite 300, San Marcos, CA, matching the agenda location 'San Marcos, CA'",
+      "Company website describes web filtering, student safety and IT services for school districts, matching OUSD's 'Technology' services agreement presented by the Academics and Instruction department",
+      "Federal registration (SAM.gov data via HigherGov) lists Borderlan, Inc. in San Marcos, CA as a network security solutions provider"
+    ],
+    "key": "v-000745",
+    "notes": "Phone, email and address were read via page fetch; the site renders contact details dynamically. Legal name and UEI come from HigherGov's mirror of the SAM.gov registration, not SAM.gov directly. No CA Secretary of State number found.",
+    "profile": {
+      "address": "950 Boardwalk, Suite 300, San Marcos, CA 92078",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@borderlan.com",
+      "headquarters": "San Marcos, CA",
+      "legalName": "Borderlan, Inc.",
+      "orgType": "company",
+      "phone": "855-945-8100",
+      "samUei": "JB1YHRZKJFL9",
+      "summary": "BorderLAN is a company in San Marcos, California that provides cybersecurity and IT services, including web filtering, backup and disaster recovery, and managed services. It serves school districts, universities and other organizations, with products for student web safety and Chromebook and iPad control.",
+      "website": "https://borderlan.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "BorderLAN Contact",
+        "url": "https://borderlan.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "BorderLAN",
+        "url": "https://borderlan.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "samUei",
+          "headquarters"
+        ],
+        "title": "Borderlan Profile",
+        "url": "https://www.highergov.com/awardee/borderlan-inc-13146419/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000745",
+    "notes": "BorderLAN, Inc. in San Marcos, CA matches the agenda name and city, and its K-12 web filtering and IT services fit a Technology agreement. The contact page, homepage and HigherGov page support every non-null field, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

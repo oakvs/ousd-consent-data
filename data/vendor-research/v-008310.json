@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/923562928",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/92-3562928",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thebutterflymovement.com/welcome.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008310",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Butterfly Movement' (ProPublica Nonprofit Explorer and GuideStar, EIN 92-3562928)",
+      "GuideStar profile mentions work with Castlemont High School students and the school farm, matching the OUSD contract for Castlemont High School",
+      "Website and GuideStar describe youth development, urban agriculture and community work in Oakland, loosely matching the agenda's Green California Partnership Academy funding"
+    ],
+    "key": "v-008310",
+    "notes": "Medium confidence only. (1) The IRS-registered entity (EIN 92-3562928, exemption granted May 2024) lists a Sacramento address, while the agenda says Emeryville, CA; an Emeryville mailing address appeared only in a search snippet and was not verified on a fetched page. (2) The 2022-23 OUSD contract predates the 2024 exemption, so the contracting entity may have been a predecessor or fiscally sponsored. (3) The website's own text shows EIN 95-3562928, which differs from the registries' 92-3562928. No phone, email or address verified; no CA SOS or SAM lookup completed.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "92-3562928",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Butterfly Movement",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit organization that works to build up Black women and girls through personal development, small-business incubation and social advocacy. Its programs include urban agriculture and nature-based activities such as Soul Stroll.",
+      "website": "https://www.thebutterflymovement.com/welcome.html"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Butterfly Movement - Nonprofit Explorer (ProPublica)",
+        "url": "https://projects.propublica.org/nonprofits/organizations/923562928"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "ein"
+        ],
+        "title": "Butterfly Movement - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/92-3562928"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "The Butterfly Movement",
+        "url": "https://www.thebutterflymovement.com/welcome.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ssg.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/951716914",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ssg.org/divisions/ottp/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008081",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches 'Occupational Therapy Training Program (OTTP)', a division of Special Service for Groups (SSG), per ssg.org and ottp.org",
+      "Agenda location Los Angeles, CA matches SSG's headquarters in Los Angeles and OTTP's Los Angeles County origin",
+      "OTTP's Northern California division (ottpnc.org) states it works with Oakland Unified School District and has an Oakland office, matching an OUSD Early Childhood services agreement"
+    ],
+    "key": "v-008081",
+    "notes": "The agenda names only the division 'Occupational Therapy Training Program' (Los Angeles, CA). The parent legal entity is Special Service for Groups, which has two OTTP divisions: OTTP (Los Angeles County, Gardena) and OTTP-NorCal/OTTP-SF (San Francisco, Oakland, Sacramento; its site says it works with OUSD). The contract is likely with SSG, but which division serves OUSD is not confirmed, so contact details are for SSG headquarters, not a division. Reviewer should confirm the division.",
+    "profile": {
+      "address": "905 E. 8th Street, Los Angeles CA 90021",
+      "caEntityNumber": null,
+      "ein": "95-1716914",
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Special Service For Groups Inc",
+      "orgType": "nonprofit",
+      "phone": "(213) 553-1800",
+      "samUei": null,
+      "summary": "Special Service for Groups is a nonprofit health and human service organization based in Los Angeles. It runs community-based programs for vulnerable communities. Its Occupational Therapy Training Program is a division that provides occupational therapy and mental health services to children, youth, families and adults.",
+      "website": "https://www.ssg.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Special Service for Groups",
+        "url": "https://www.ssg.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Special Service For Groups Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/951716914"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Occupational Therapy Training Program (OTTP) - SSG",
+        "url": "https://www.ssg.org/divisions/ottp/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.studentclearinghouse.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.studentclearinghouse.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/521836384",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.studentclearinghouse.org/solutions/ed-insights/studenttracker/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-national-student-clearinghouse",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'National Student Clearinghouse' in Herndon, VA (ProPublica Nonprofit Explorer, EIN 52-1836384)",
+      "OUSD's contract is with the High School Linked Learning Office for a services and data sharing agreement; the Clearinghouse's StudentTracker service provides college enrollment and degree data to high schools and districts",
+      "An OUSD High School Linked Learning Office annual report states that enrollment data comes from the National Student Clearinghouse"
+    ],
+    "key": "n-national-student-clearinghouse",
+    "notes": "No general phone or email found on the official pages, so left null. Agenda gives no location; identity rests on name match to the registered nonprofit and the service fit with the High School Linked Learning Office. Separate affiliate National Student Clearinghouse Research Center (EIN 27-1255674) exists but is not the contracting party as far as known.",
+    "profile": {
+      "address": "2300 Dulles Station Blvd., Suite 220, Herndon, VA 20171",
+      "caEntityNumber": null,
+      "ein": "52-1836384",
+      "email": null,
+      "headquarters": "Herndon, VA",
+      "legalName": "National Student Clearinghouse",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit organization founded in 1993 by the higher education community. It provides education data, verification and data exchange services to schools, colleges, and other education and workforce groups. Its StudentTracker service gives high schools and school districts data on whether graduates enroll in and complete college.",
+      "website": "https://www.studentclearinghouse.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About - National Student Clearinghouse",
+        "url": "https://www.studentclearinghouse.org/about/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - National Student Clearinghouse",
+        "url": "https://www.studentclearinghouse.org/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National Student Clearinghouse - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/521836384"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "StudentTracker - National Student Clearinghouse",
+        "url": "https://www.studentclearinghouse.org/solutions/ed-insights/studenttracker/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-national-student-clearinghouse",
+    "notes": "The National Student Clearinghouse is a 501(c)(3) in Herndon, VA founded in 1993 (about page, ProPublica EIN 52-1836384), and its StudentTracker service for high schools and districts fits OUSD's Linked Learning data sharing agreement. The address, EIN and summary match the sources, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

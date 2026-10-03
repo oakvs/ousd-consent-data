@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/san-rafael/profile/general-contractor/national-response-team-1116-874781",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    }
+  ],
+  "key": "v-006763",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches 'National Response Team', a business listed with the Better Business Bureau in San Rafael, CA, matching the agenda's location",
+      "The company provides fire and water damage restoration, which is plausibly a service bought by a district Risk Management Department, but no page found links it to OUSD or schools"
+    ],
+    "key": "v-006763",
+    "notes": "Only a name and city match. The company's own website (national-response-team.com) did not resolve, and no registry or page ties this company to OUSD or schools. Risk of a different or similarly named entity; needs human review. Not publishable.",
+    "profile": {
+      "address": "825A Francisco Blvd W, San Rafael, CA 94901-5307",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Rafael, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(888) 760-2760",
+      "samUei": null,
+      "summary": "National Response Team is a company in San Rafael, California, that provides fire, water and mold restoration and crawlspace cleaning services.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "National Response Team",
+        "url": "https://www.bbb.org/us/ca/san-rafael/profile/general-contractor/national-response-team-1116-874781"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

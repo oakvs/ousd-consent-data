@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://qbs.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://qbs.com/about-qbs/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://qbs.com/who-we-help/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.qbs.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007075",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'QBS LLC' matches the agenda name exactly (footer of qbs.com: '© 2026 QBS LLC'), and the company is in Massachusetts, matching the agenda's 'North Attleboro, MA'",
+      "QBS's website describes behavioral crisis-prevention (Safety-Care) training and consulting for schools and districts, matching OUSD's 'Student health, support & family services' category and the Community Schools and Student Services Department",
+      "Directory listings in search results place QBS's corporate office at 49 Plain St, North Attleboro, MA (an earlier address; the company's site now lists Foxboro, a neighboring town)"
+    ],
+    "key": "v-007075",
+    "notes": "Agenda says North Attleboro, MA; the company's current site lists Foxboro, MA (earlier directory listings show 49 Plain St, North Attleboro). No registry (MA Secretary of State, SAM.gov) record was fetched, so no entity IDs are given. 'Founded 1997' comes from the company's own About page.",
+    "profile": {
+      "address": "200 Foxborough Blvd, Suite 600 Foxboro, MA 02035",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@qbs.com",
+      "headquarters": "Foxboro, MA",
+      "legalName": "QBS LLC",
+      "orgType": "company",
+      "phone": "855-727-6246",
+      "samUei": null,
+      "summary": "QBS is a company that provides behavioral crisis prevention and de-escalation training, called Safety-Care, along with related behavioral consulting. It serves schools and school districts, healthcare, human services and applied behavior analysis organizations. The company says it was founded in 1997.",
+      "website": "https://qbs.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - QBS",
+        "url": "https://qbs.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About QBS",
+        "url": "https://qbs.com/about-qbs/"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName"
+        ],
+        "title": "Who We Help: Schools, ABA, Healthcare & Human Services",
+        "url": "https://qbs.com/who-we-help/"
+      },
+      {
+        "supports": [
+          "website",
+          "legalName"
+        ],
+        "title": "QBS",
+        "url": "https://www.qbs.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007075",
+    "notes": "qbs.com pages show legal name QBS LLC, Massachusetts location (Foxboro, near the agenda's North Attleboro), and Safety-Care crisis-prevention training for schools, which fits OUSD's student services contracts. All profile fields (phone, email, address, founded 1997, sectors served) were confirmed on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

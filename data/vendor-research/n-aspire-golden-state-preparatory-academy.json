@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://aspirepublicschools.org/contact-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943311088",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aspirepublicschools.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-aspire-golden-state-preparatory-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Aspire Public Schools' own website names 'Aspire Golden State Prep' as an Oakland campus, and its Contact page lists 'Golden State College Prep Academy' as one of its schools",
+      "Aspire Public Schools is a registered 501(c)(3) nonprofit headquartered in Oakland, CA (ProPublica, EIN 94-3311088), matching the Oakland-based Measures N and H commission MOU for a K-12 school in OUSD",
+      "The agenda item is a Measures N and H College and Career Readiness MOU for a school, consistent with a charter high school operated by a college-preparatory school network"
+    ],
+    "key": "n-aspire-golden-state-preparatory-academy",
+    "notes": "The agenda vendor is a school (Aspire Golden State College Preparatory Academy, 1009 66th Ave, Oakland), operated by the Aspire Public Schools network. Profile is for the operating nonprofit, Aspire Public Schools; contact details are the network's main office, not the school's own line. Agenda name omits 'College'. CA SOS entity number not checked (site requires JavaScript).",
+    "profile": {
+      "address": "1001 22nd Avenue, Suite 100, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "94-3311088",
+      "email": "info@aspirepublicschools.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Aspire Public Schools",
+      "orgType": "nonprofit",
+      "phone": "(510) 434-5000",
+      "samUei": null,
+      "summary": "Aspire Public Schools is a nonprofit that runs a network of public charter schools in California. It describes its mission as preparing underserved students for college, training highly effective teachers and sharing innovative best practices. Aspire Golden State College Preparatory Academy is one of its Oakland schools.",
+      "website": "https://aspirepublicschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - Aspire Public Schools",
+        "url": "https://aspirepublicschools.org/contact-2/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Aspire Public Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943311088"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Aspire Public Schools",
+        "url": "https://aspirepublicschools.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-aspire-golden-state-preparatory-academy",
+    "notes": "Aspire Public Schools' own site references Aspire Golden State Prep as an Oakland campus and its contact page references Golden State College Prep, so the operating nonprofit is the right entity; contact details, EIN (ProPublica) and the neutral mission-based summary are all confirmed on the cited pages. The profile covers the network's main office, not the school's own line, which the candidate notes disclose.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

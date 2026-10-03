@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.berkeley.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.berkeley.edu/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bse.berkeley.edu/ousd-bse-delpi-expansion",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-on-behalf-of-berkeley-campus",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the Regents of the University of California on behalf of the Berkeley campus, located in Berkeley, CA; UC Berkeley's own website describes it as a public university in the University of California system",
+      "UC Berkeley's School of Education page describes a partnership with Oakland Unified School District on building a pipeline of school administrators, with OUSD's Chief Talent Officer quoted, matching the agenda's Talent / Human Resources office"
+    ],
+    "key": "n-regents-of-university-of-california-on-behalf-of-berkeley-campus",
+    "notes": "Public university campus of the University of California; no EIN or entity number listed. Contact page email is obfuscated, and no mailing address is shown, so both left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "510-642-6000",
+      "samUei": null,
+      "summary": "UC Berkeley is a public university in the University of California system, founded in 1868. It offers undergraduate, graduate and professional degree programs and conducts research. Its School of Education runs educator and school leader preparation programs, including partnerships with Bay Area school districts.",
+      "website": "https://www.berkeley.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About UC Berkeley",
+        "url": "https://www.berkeley.edu/about"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us - UC Berkeley",
+        "url": "https://www.berkeley.edu/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "OUSD and UC Berkeley expand partnership",
+        "url": "https://bse.berkeley.edu/ousd-bse-delpi-expansion"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-regents-of-university-of-california-on-behalf-of-berkeley-campus",
+    "notes": "The Regents of the University of California on behalf of Berkeley is UC Berkeley. The cited bse.berkeley.edu page shows an OUSD partnership with Berkeley's Principal Leadership Institute and quotes OUSD's Chief Talent Officer, which fits the Talent / Staff & hiring item. The phone number (campus operator, 510-642-6000) and the 1868 founding of the UC system are on the cited pages. The summary says 'Bay Area school districts' in the plural, but the sources show only the OUSD partnership; this is minor and left as is.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

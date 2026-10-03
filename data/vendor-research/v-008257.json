@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/862489204",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thewocan.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thewocan.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008257",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Alkebulan Fiscal Sponsors', Oakland, CA, EIN 86-2489204 (ProPublica Nonprofit Explorer), matching the agenda's Oakland, CA location",
+      "The West Oakland Cultural Action Network website (thewocan.org) carries a copyright line naming 'Alkebulan Fiscal Sponsors DBA/ W.O.C.A.N.' with the same EIN 86-2489204, confirming the dba relationship given in the agenda",
+      "City of Oakland FY23-24 cultural funding grantee list names Alkebulan Fiscal Sponsors, consistent with OUSD's 'City of Oakland' funding source for these agreements"
+    ],
+    "key": "v-008257",
+    "notes": "No phone, general email or street address found on official pages (the contact page lists only a Gmail address for media and sponsorship inquiries, which was not used). California SOS and SAM.gov were not checked. Alkebulan Fiscal Sponsors also appears to act as a fiscal sponsor for other projects, not described in the summary because it was not confirmed on a fetched page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "86-2489204",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Alkebulan Fiscal Sponsors",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit organization based in Oakland, California, that operates under the name West Oakland Cultural Action Network (WOCAN). WOCAN supports efforts to preserve and uplift the cultural, political, economic and social conditions of the Hoover, Clawson and McClymonds neighborhoods of West Oakland.",
+      "website": "https://www.thewocan.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Alkebulan Fiscal Sponsors - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/862489204"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "West Oakland Cultural Action Network",
+        "url": "https://www.thewocan.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName"
+        ],
+        "title": "Contact - West Oakland Cultural Action Network",
+        "url": "https://www.thewocan.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008257",
+    "notes": "ProPublica lists Alkebulan Fiscal Sponsors, Oakland CA, EIN 86-2489204 (501(c)(3)); thewocan.org and its contact page carry a footer naming 'Alkebulan Fiscal Sponsors DBA/ W.O.C.A.N. 86-2489204', matching the agenda's dba and Oakland location. The summary and fields are supported by the cited pages and are neutral; no personal contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/B%26H_Photo",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ny/new-york/profile/photography-equipment/b-h-photo-video-pro-audio-0121-429",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bhphotovideo.com/",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-000555",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: BBB lists 'B & H Photo-Video, Pro Audio' at 420 9th Avenue, New York, NY, identical to the agenda name 'B & H Photo, Video, Pro Audio'",
+      "Located in New York City, NY, matching the agenda location",
+      "Wikipedia describes B&H Photo as a Manhattan retailer of cameras, video equipment, audio gear and electronics, consistent with a purchase agreement for classroom equipment for a Career Technical Education classroom project"
+    ],
+    "key": "v-000555",
+    "notes": "B&H's own site blocks automated fetching, so contact details are taken from the BBB profile. Legal name per BBB; Wikipedia gives B&H Photo & Electronics Corp. Not a California-registered or nonprofit entity, so no registry IDs were looked up.",
+    "profile": {
+      "address": "420 9th Avenue, New York, NY 10001-1614",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "B & H Photo-Video, Pro Audio",
+      "orgType": "company",
+      "phone": "(800) 606-6969",
+      "samUei": null,
+      "summary": "B&H Photo is a retailer of photo, video and audio equipment, computers and other electronics. It sells mainly online and also operates one large store in Manhattan, New York City. It was founded in 1973.",
+      "website": "https://www.bhphotovideo.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "B&H Photo - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/B%26H_Photo"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "B & H Photo-Video, Pro Audio - BBB Profile",
+        "url": "https://www.bbb.org/us/ny/new-york/profile/photography-equipment/b-h-photo-video-pro-audio-0121-429"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "B&H Photo Video Digital Cameras, Photography, Computers",
+        "url": "https://www.bhphotovideo.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000555",
+    "notes": "Agenda name and New York City location match the BBB listing and Wikipedia's description of B&H Photo (one Manhattan store, mostly online, founded 1973), which fits a purchase of equipment for a CTE classroom. Summary, address and phone are confirmed by the fetched sources; the website's own page returned 403 to automated fetching but it is B&H's well-known domain.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

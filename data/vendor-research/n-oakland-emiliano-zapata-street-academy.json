@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.streetacademy.online/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/streetacademy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-emiliano-zapata-street-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the school's own website is titled 'Oakland Emiliano Zapata Street Academy' and states it awards Oakland Unified School District diplomas",
+      "OUSD's own school page lists 'Street Academy', grades 9-12, at 417 29th Street, Oakland, CA, matching an OUSD Measures N and H (college and career readiness) MOU for school year 2025-2026",
+      "The agenda item is a Measures N and H Commission MOU with the school, consistent with a district high school receiving Measure N/H career pathway funds"
+    ],
+    "key": "n-oakland-emiliano-zapata-street-academy",
+    "notes": "This is an OUSD school itself (not an outside vendor). Do not confuse with the separate nonprofit Street Academy Foundation, which is not included. The domain oaklandstreetacademy.org currently serves an unrelated gambling site and must not be used.",
+    "profile": {
+      "address": "417 29th Street, Oakland, CA",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Emiliano Zapata Street Academy",
+      "orgType": "public_agency",
+      "phone": "(510) 879-2313",
+      "samUei": null,
+      "summary": "Oakland Emiliano Zapata Street Academy is a small alternative public high school in the Oakland Unified School District, serving grades 9-12. It has operated for over five decades and is accredited by the Western Association of Schools and Colleges. Students earn Oakland Unified School District diplomas.",
+      "website": "https://www.streetacademy.online/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Oakland Emiliano Zapata Street Academy",
+        "url": "https://www.streetacademy.online/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Street Academy",
+        "url": "https://www.ousd.org/streetacademy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-oakland-emiliano-zapata-street-academy",
+    "notes": "The school's own site and OUSD's school page (grades 9-12, 417 29th Street, (510) 879-2313) confirm this is the OUSD high school named in the Measures N and H MOU. Name, WASC accreditation, over five decades of operation, OUSD diplomas and small-class/alternative character are all supported, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://codecombat.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://codecombat.com/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006719",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Code Combat' in San Francisco, CA; CodeCombat Inc. lists a San Francisco, CA mailing address (2261 Market Street #4388) on its own website",
+      "CodeCombat sells a game-based coding curriculum for students, matching OUSD's 'Classroom & academic programs' category and a Services Agreement for an independent study program"
+    ],
+    "key": "v-006719",
+    "notes": "Phone, email and registry IDs not confirmed on fetchable pages (email is obfuscated on the site). No public page found linking CodeCombat to OUSD; identity rests on name, city and product match.",
+    "profile": {
+      "address": "2261 Market Street #4388, San Francisco, CA 94114",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "CodeCombat Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "CodeCombat is a company that makes educational games and courses that teach students to program in Python and JavaScript. Students learn by writing real code to progress through game levels. It also runs a related platform called Ozaria and started as an open-source community project.",
+      "website": "https://codecombat.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "About CodeCombat",
+        "url": "https://codecombat.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "CodeCombat Privacy Notice",
+        "url": "https://codecombat.com/privacy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006719",
+    "notes": "CodeCombat Inc. in San Francisco sells game-based Python/JavaScript coding curriculum, matching the agenda name, city and the classroom/academic services agreement. The About and Privacy pages confirm the legal name, address, headquarters, Ozaria mention and community-project origins; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

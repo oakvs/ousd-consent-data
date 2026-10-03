@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/43534001",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.empowerschools.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://empowerschools.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008626",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Empower Schools Inc', Boston, MA (ProPublica Nonprofit Explorer, EIN shown), matching the agenda's 'Empower Schools, Boston, MA'",
+      "Organization's website describes work with school districts and state agencies on school innovation and improvement, consistent with OUSD's 'Classroom & academic programs' contract through the Chief Academic Officer / Continuous School Improvement Department"
+    ],
+    "key": "v-008626",
+    "notes": "No public Oakland-specific page was found linking Empower Schools to OUSD; identity rests on exact name, Boston registration matching the agenda, and mission match. Website's contact page lists a Cambridge, MA mailing address while the IRS/ProPublica record shows Boston; headquarters left null. No general phone or email found.",
+    "profile": {
+      "address": "20 University Rd, Suite 500, Cambridge, MA 02138",
+      "caEntityNumber": null,
+      "ein": "04-3534001",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Empower Schools Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Empower Schools is a nonprofit education organization. It works with state agencies, policymakers, school districts and communities on school innovation. Its work includes innovation schools, rural innovation, and early college and career pathways.",
+      "website": "https://www.empowerschools.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Empower Schools Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/43534001"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Empower Schools | Driving Student Success in School and in Life",
+        "url": "https://www.empowerschools.org/"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Contact Us - Empower Schools",
+        "url": "https://empowerschools.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008626",
+    "notes": "ProPublica shows Empower Schools Inc, Boston MA, EIN 04-3534001, 501(c)(3); the website describes school-district and state partnerships on innovation schools, rural innovation and early college pathways, which fits a Continuous School Improvement services agreement. The contact page confirms the Cambridge address; no Oakland-specific link was found, but the name, Massachusetts location and services all match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

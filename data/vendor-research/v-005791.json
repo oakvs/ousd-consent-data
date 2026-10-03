@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.docusign.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://investor.docusign.com/resources/investor-contacts/default.aspx",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.docusign.com/company/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005791",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches DocuSign, Inc., a company headquartered at 221 Main Street, San Francisco, CA, matching the agenda's 'San Francisco, CA' (company investor contacts page)",
+      "DocuSign sells electronic signature and agreement software, matching OUSD's 'Technology' category for a 'DocuSign Master Services Agreement'",
+      "OUSD's own public pages describe using DocuSign for substitute hiring and onboarding (search result from ousd.org)"
+    ],
+    "key": "v-005791",
+    "notes": "Address is from the company's investor contacts page (headquarters listing), which blocks automated fetching. Phone is the sales line on the contact page. No general inbox, EIN, CA entity number or UEI confirmed.",
+    "profile": {
+      "address": "221 Main Street Suite 800 San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "DocuSign, Inc.",
+      "orgType": "company",
+      "phone": "1-877-720-2040",
+      "samUei": null,
+      "summary": "DocuSign is a technology company that makes software for electronic signatures and agreement management. Its platform lets organizations send, sign and track documents online and automate agreement workflows.",
+      "website": "https://www.docusign.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Docusign | #1 in Electronic Signature and Intelligent Agreement Management",
+        "url": "https://www.docusign.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Docusign Inc. - Resources - Investor Contacts",
+        "url": "https://investor.docusign.com/resources/investor-contacts/default.aspx"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Docusign",
+        "url": "https://www.docusign.com/company/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005791",
+    "notes": "DocuSign, Inc. is headquartered in San Francisco (221 Main Street, Suite 800, per its investor contacts page), matching the agenda location, and its e-signature software fits a 'DocuSign Master Services Agreement' under Technology. Summary, website, address, HQ and the sales phone number are each confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

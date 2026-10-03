@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.belfor.com/en/us/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.omniapartners.com/suppliers/belfor-usa-group-inc/public-sector",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008767",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "BELFOR's own website lists 'BELFOR USA Group, Inc.' among its legal entities, matching the agenda name",
+      "BELFOR has a Hayward, CA office (20902 Cabot Boulevard) that its website says serves the East Bay/Oakland, matching the agenda location 'Hayward, CA'",
+      "BELFOR is a property restoration company; its services (fire, water damage, reconstruction) fit a district Risk Management Department contract funded from Property & Liability",
+      "OMNIA Partners, a public cooperative purchasing organization, lists 'Belfor USA Group, Inc.' as a supplier to public agencies and school districts"
+    ],
+    "key": "v-008767",
+    "notes": "Phone is BELFOR's 24-hour emergency hotline, shown as its main number on belfor.com. The Hayward office (20902 Cabot Boulevard, Hayward, CA 94545; 510.785.3473) is a branch, so address was left null. No registry IDs were found on fetched pages.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Birmingham, MI",
+      "legalName": "BELFOR USA Group, Inc.",
+      "orgType": "company",
+      "phone": "800-856-3333",
+      "samUei": null,
+      "summary": "BELFOR is a property restoration company that repairs buildings after disasters such as fires, floods and storms. Its services include water damage repair, fire damage restoration, mold remediation and reconstruction for homes and businesses. It is headquartered in Birmingham, Michigan, and has offices in many places, including Hayward, California.",
+      "website": "https://www.belfor.com/en/us"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "headquarters"
+        ],
+        "title": "About BELFOR",
+        "url": "https://www.belfor.com/en/us/about-us"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Belfor USA Group, Inc. - OMNIA Partners",
+        "url": "https://www.omniapartners.com/suppliers/belfor-usa-group-inc/public-sector"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008767",
+    "notes": "BELFOR USA Group, Inc. is shown by OMNIA Partners as a licensed restoration contractor serving public education. The belfor.com about page confirms the services, the Birmingham, MI headquarters and the 800-856-3333 hotline, and BELFOR's Hayward, CA office (the agenda location) is confirmed by search results. The summary is neutral and supported, and a restoration contract fits a Risk Management, Property & Liability purchase.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

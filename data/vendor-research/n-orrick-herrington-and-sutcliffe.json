@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.orrick.com/en/About-Us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.orrick.com/Locations/Bay-Area-San-Francisco-and-Silicon-Valley",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Orrick,_Herrington_%26_Sutcliffe",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-orrick-herrington-and-sutcliffe",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'Orrick, Herrington & Sutcliffe LLP', a law firm headquartered in San Francisco, CA (Wikipedia; Orrick's own San Francisco office page), matching the agenda location 'San Francisco, CA'",
+      "The firm is a law firm, matching OUSD's 'Legal, insurance & risk' category and the General Counsel / Chief Governance Officer presenting offices"
+    ],
+    "key": "n-orrick-herrington-and-sutcliffe",
+    "notes": "Registry IDs not looked up. Phone and address are the San Francisco office as shown on Orrick's location page. No general email found.",
+    "profile": {
+      "address": "405 Howard Street, San Francisco, CA 94105-2669",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Orrick, Herrington & Sutcliffe LLP",
+      "orgType": "company",
+      "phone": "+1 415 773 5700",
+      "samUei": null,
+      "summary": "A global law firm that serves clients in the technology and innovation, energy and infrastructure, finance, and life sciences and health tech sectors. It has offices in more than 25 markets worldwide and is headquartered in San Francisco, California.",
+      "website": "https://www.orrick.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "About Us | Orrick",
+        "url": "https://www.orrick.com/en/About-Us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Bay Area (San Francisco and Silicon Valley) | Orrick",
+        "url": "https://www.orrick.com/Locations/Bay-Area-San-Francisco-and-Silicon-Valley"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "summary"
+        ],
+        "title": "Orrick, Herrington & Sutcliffe - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Orrick,_Herrington_%26_Sutcliffe"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-orrick-herrington-and-sutcliffe",
+    "notes": "Orrick, Herrington & Sutcliffe LLP is a San Francisco-headquartered law firm, matching the agenda name, location and the General Counsel/legal category. About Us, the location page (405 Howard St, +1 415 773 5700) and Wikipedia (San Francisco HQ) support the summary, address, phone, website and headquarters; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

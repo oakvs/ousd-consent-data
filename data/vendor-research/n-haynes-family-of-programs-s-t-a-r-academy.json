@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.leroyhaynes.org/non-public-agency-community-outreach/non-public-agency-services-s-t-a-r-academy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.leroyhaynes.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/951506150",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-haynes-family-of-programs-s-t-a-r-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Haynes Family Of Programs', La Verne, CA, EIN 95-1506150 (ProPublica Nonprofit Explorer)",
+      "Located in La Verne, CA, matching the agenda text",
+      "The organization's own S.T.A.R. Academy page describes it as a California Department of Education approved Non-Public Agency providing special education services, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services Master Contract' for Special Education"
+    ],
+    "key": "n-haynes-family-of-programs-s-t-a-r-academy",
+    "notes": "Page does not mention Oakland Unified; identity rests on name, city and the special education non-public agency match. General email is obfuscated on the site, so omitted.",
+    "profile": {
+      "address": "233 Baseline, Box 400, La Verne, CA 91750",
+      "caEntityNumber": null,
+      "ein": "95-1506150",
+      "email": null,
+      "headquarters": "La Verne, CA",
+      "legalName": "Haynes Family of Programs",
+      "orgType": "nonprofit",
+      "phone": "(909) 593-2581",
+      "samUei": null,
+      "summary": "Haynes Family of Programs is a nonprofit in La Verne, California that provides mental health, residential and education services for children and families. Its S.T.A.R. Academy is a California Department of Education approved Non-Public Agency that provides special education services, such as academic support, therapy and transition services, to students whose needs cannot be met in their home districts.",
+      "website": "https://www.leroyhaynes.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Non-Public Agency Services/S.T.A.R. Academy | Haynes Family of Programs",
+        "url": "https://www.leroyhaynes.org/non-public-agency-community-outreach/non-public-agency-services-s-t-a-r-academy/"
+      },
+      {
+        "supports": [
+          "website",
+          "legalName"
+        ],
+        "title": "Haynes Family of Programs | Family of Programs",
+        "url": "https://www.leroyhaynes.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Haynes Family Of Programs - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/951506150"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-haynes-family-of-programs-s-t-a-r-academy",
+    "notes": "The vendor name, La Verne location and CDE-approved Non-Public Agency special education services match OUSD's nonpublic school/agency master contract. The org's site and ProPublica (EIN 95-1506150, 501(c)(3)) support the summary, address, main phone, website and org type.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

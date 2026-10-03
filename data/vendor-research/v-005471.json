@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://catapultlearning.com/terms-of-use-and-privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://catapultlearning.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://catapultlearning.com",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ny/elmsford/profile/tutoring/catapult-learning-llc-0121-87146339",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005471",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Catapult Learning's Terms of Use names 'Catapult Learning West, LLC' as one of the entities owning or operating the catapultlearning.com website, an exact match to the agenda name",
+      "The sibling entity Catapult Learning LLC is listed with a PO Box in Elmsford, NY 10523 (BBB), matching the Elmsford, NY location in the agenda text",
+      "The website describes tutoring, academic intervention and professional development for K-12 schools and Title I programs, matching OUSD's 'Classroom & academic programs' contracts paid from Title I and Title II-A funds"
+    ],
+    "key": "v-005471",
+    "notes": "The phone, email and Philadelphia mailing address are shown on the Catapult Learning brand website and belong to the shared Catapult Learning (parent/sibling entity Catapult Learning, LLC) operation, not specifically to the West, LLC entity. The agenda's Elmsford, NY location matches a PO Box for sibling entity Catapult Learning LLC on BBB. No registry IDs (CA SOS, SAM UEI) were verified, so they are null. No public page found that explicitly mentions OUSD.",
+    "profile": {
+      "address": "150 Rouse Blvd., Suite 210, Philadelphia, PA 19112",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@catapultlearning.com",
+      "headquarters": null,
+      "legalName": "Catapult Learning West, LLC",
+      "orgType": "company",
+      "phone": "800-841-8730",
+      "samUei": null,
+      "summary": "Catapult Learning is a division of FullBloom that provides K-12 schools with academic support services. These include high-impact tutoring in reading and math, academic intervention, professional development for educators, summer programs and student wellness services. It works with public and private schools across the United States.",
+      "website": "https://catapultlearning.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType"
+        ],
+        "title": "Terms of Use & Privacy Policy | Catapult Learning",
+        "url": "https://catapultlearning.com/terms-of-use-and-privacy-policy/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact Us | Catapult Learning",
+        "url": "https://catapultlearning.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Catapult Learning",
+        "url": "https://catapultlearning.com"
+      },
+      {
+        "supports": [],
+        "title": "Catapult Learning LLC | BBB Profile",
+        "url": "https://www.bbb.org/us/ny/elmsford/profile/tutoring/catapult-learning-llc-0121-87146339"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005471",
+    "notes": "The Terms of Use page names Catapult Learning West, LLC as an operating entity of Catapult Learning, a division of FullBloom, which matches the agenda name and the K-12 academic services OUSD buys. The website, phone, general email and Philadelphia address appear on the brand's contact page and the summary matches the homepage; the contact details belong to the shared Catapult Learning brand, not specifically the West entity.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

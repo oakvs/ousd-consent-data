@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/environmental-health-department",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/contact-us-ehd/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-department-of-environmental-health",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the county's official Environmental Health Department page on health.alamedacountyca.gov (formerly deh.acgov.org, which redirects there)",
+      "Oakland Unified School District is located in Alameda County, the jurisdiction of this county agency",
+      "The agency's work on land and water protection (hazardous waste and site cleanup oversight) matches the agenda item, a Voluntary Remedial Action Agreement for a school site, under 'School buildings & construction'"
+    ],
+    "key": "n-alameda-county-department-of-environmental-health",
+    "notes": "County public agency; no registry IDs apply. The department page lists a different office (1000 San Leandro Blvd., Suite 300, San Leandro; (510) 618-3452), likely the parent Health Care Services Agency; the Contact page lists 1131 Harbor Bay Parkway, Alameda and (510) 567-6700, used here. Could not find a public page directly linking this agency to the Glenview Elementary agreement, so identity rests on name, jurisdiction and program match.",
+    "profile": {
+      "address": "1131 Harbor Bay Parkway, Alameda, CA 94502-6577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "ACHealth-PIO@acgov.org",
+      "headquarters": "Alameda, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 567-6700",
+      "samUei": null,
+      "summary": "A county government department that works to keep air, water and food safe in Alameda County. It enforces environmental health codes to reduce exposure to toxins and diseases. Its programs include food safety inspections, recreational water quality, hazardous waste management, land and water protection, and vector control.",
+      "website": "https://health.alamedacountyca.gov/department/environmental-health-department"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Alameda County Environmental Health Department",
+        "url": "https://health.alamedacountyca.gov/department/environmental-health-department"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Environmental Health Department Contact Information",
+        "url": "https://health.alamedacountyca.gov/contact-us-ehd/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-alameda-county-department-of-environmental-health",
+    "notes": "The agenda names the Alameda County Department of Environmental Health directly for a Voluntary Remedial Action Agreement at Glenview Elementary, which fits the county agency's land and water protection oversight. Both cited pages support the summary, website, address and phone (the contact page lists 1131 Harbor Bay Parkway, (510) 567-6700). The email is a generic department PIO address, not an individual's.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

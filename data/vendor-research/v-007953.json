@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/262500555",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.skatelikeagirl.com/faq-contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007953",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Skate Like A Girl', Seattle, WA (ProPublica Nonprofit Explorer, EIN 26-2500555)",
+      "Located in Seattle, WA, matching the agenda text; mailing address 305 Harrison St, Seattle, WA 98109",
+      "Organization runs youth skateboarding programs with an SF Bay Area chapter (Oakland land acknowledgement on its chapter page), consistent with OUSD's after-school and summer programs contract"
+    ],
+    "key": "v-007953",
+    "notes": "Agenda says Seattle, WA; organization is HQ'd in Seattle with an SF Bay Area chapter. No general email address on the contact page (inquiry form only), so email is null.",
+    "profile": {
+      "address": "305 Harrison St, Seattle, WA 98109",
+      "caEntityNumber": null,
+      "ein": "26-2500555",
+      "email": null,
+      "headquarters": "Seattle, WA",
+      "legalName": "Skate Like A Girl",
+      "orgType": "nonprofit",
+      "phone": "888-401-0195",
+      "samUei": null,
+      "summary": "A nonprofit that uses skateboarding to build confidence and leadership in youth, women, and trans and gender-expansive people. It runs camps, classes, and community sessions through chapters in Seattle, Portland, and the San Francisco Bay Area.",
+      "website": "https://www.skatelikeagirl.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Skate Like A Girl - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/262500555"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "FAQ & CONTACT - SKATE LIKE A GIRL",
+        "url": "https://www.skatelikeagirl.com/faq-contact.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007953",
+    "notes": "ProPublica confirms Skate Like A Girl, Seattle WA, EIN 26-2500555, 501(c)(3); the org's contact page confirms phone 888-401-0195, the 305 Harrison St address, and Seattle/Portland/SF Bay Area chapters, matching the agenda's Seattle location and after-school/summer youth programming. The summary is neutral and consistent with the site (youth summer camps, sessions, workshops).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

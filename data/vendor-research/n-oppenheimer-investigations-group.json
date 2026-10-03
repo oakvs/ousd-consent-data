@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://oiglaw.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oiglaw.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.globenewswire.com/news-release/2021/01/05/2153702/0/en/Oppenheimer-Investigations-Group-Launches.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oppenheimer-investigations-group",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Oppenheimer Investigations Group' (LLP), a Bay Area law firm (oiglaw.com)",
+      "Firm's 2021 launch press release places it in Berkeley, California, matching the agenda's 'Berkeley, CA'; its current contact page lists an Oakland address (the firm appears to have moved)",
+      "Firm provides workplace and school investigations and Title IX reviews for public entities and educational institutions, consistent with OUSD's General Counsel / Talent 'Legal, insurance & risk' engagement agreements",
+      "KQED reporting describes an Oppenheimer Investigations Group investigation report for an Oakland school"
+    ],
+    "key": "n-oppenheimer-investigations-group",
+    "notes": "Agenda says Berkeley, CA; firm's current site lists an Oakland address, while its 2021 launch release says Berkeley. No direct page found linking the firm to OUSD's board contracts. No general email found. CA SOS entity number and SAM UEI not looked up (registries not fetched).",
+    "profile": {
+      "address": "1300 Clay Street, Suite 600, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Oppenheimer Investigations Group LLP",
+      "orgType": "company",
+      "phone": "(510) 393-4212",
+      "samUei": null,
+      "summary": "A law firm in the San Francisco Bay Area that conducts impartial workplace and school investigations, including complaints of harassment, discrimination and retaliation, and Title IX reviews. It also provides trainings, executive coaching, expert testimony and mediation services for public agencies, companies and educational institutions.",
+      "website": "https://oiglaw.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Oppenheimer Investigations Group LLP",
+        "url": "https://oiglaw.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Oppenheimer Investigations Group LLP - Contact",
+        "url": "https://oiglaw.com/contact/"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Oppenheimer Investigations Group Launches",
+        "url": "https://www.globenewswire.com/news-release/2021/01/05/2153702/0/en/Oppenheimer-Investigations-Group-Launches.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-oppenheimer-investigations-group",
+    "notes": "Exact name match to a Bay Area law firm (LLP) providing school and workplace investigations, consistent with OUSD General Counsel/Talent MOUEP engagements; launch release places it in Berkeley (matching the agenda) and the current site lists Oakland. Legal name, services summary, phone, address and website are all confirmed on the cited pages; no email is given and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

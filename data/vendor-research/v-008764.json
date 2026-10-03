@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.fam1stfamilyfoundation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/27-3822104",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/273822104",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008764",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Fam 1st Family Foundation', EIN 27-3822104 (ProPublica Nonprofit Explorer and GuideStar)",
+      "GuideStar lists primary location Oakland, CA and a mission focused on underserved youth in Oakland; the agenda gives San Francisco, which is in the same Bay Area",
+      "The organization's own website shows OUSD and the Oakland Athletic League among its partners, matching the OUSD contract titled 'Services Agreement ... Oakland Athletic League'",
+      "Website describes youth mentorship, education and athletics programs, matching OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "v-008764",
+    "notes": "IRS records list a PO Box in Wenatchee, WA as the mailing address; the website lists the Oakland youth center at 3233 Market Street. Address omitted because the two sources differ and the agenda lists San Francisco.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "27-3822104",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Fam 1st Family Foundation",
+      "orgType": "nonprofit",
+      "phone": "+1 510 595 3221",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that supports young people through mentorship, education, athletics, creativity and community programs. It operates a youth center in Oakland and focuses on underserved youth.",
+      "website": "https://www.fam1stfamilyfoundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Fam1st Family Foundation",
+        "url": "https://www.fam1stfamilyfoundation.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Fam 1st Family Foundation - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/27-3822104"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Fam 1st Family Foundation - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/273822104"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008764",
+    "notes": "The foundation's website lists OUSD and the Oakland Athletic League as partners, matching the OAL services agreements, and the EIN, 501(c)(3) status and program descriptions match ProPublica and GuideStar. Headquarters 'Oakland, CA' is not confirmed because ProPublica and GuideStar list Wenatchee, WA as the registered location (Oakland is where the youth center operates), so that field is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

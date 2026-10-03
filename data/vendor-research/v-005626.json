@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/831250189",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ctwi.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ctwi.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005626",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Construction Trades Workforce Initiative' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 83-1250189), matching the agenda's Oakland, CA location",
+      "Website ctwi.org describes union construction workforce and pre-apprenticeship programs, consistent with OUSD's Adult Education and Linked Learning career-pathway agreements",
+      "ctwi.org mentions collaborating with OUSD to strengthen a pre-apprentice construction program"
+    ],
+    "key": "v-005626",
+    "notes": "No general phone or email found on the site (only staff emails, which are excluded). CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "7750 Pardee Ln, Suite 100, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "83-1250189",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Construction Trades Workforce Initiative",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit workforce development organization that connects job seekers, employers and policymakers in the union construction industry. It delivers workforce programs and builds partnerships that create pathways to construction careers for women, youth, justice-involved people and communities of color.",
+      "website": "https://ctwi.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Construction Trades Workforce Initiative - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/831250189"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "CTWI",
+        "url": "https://ctwi.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Construction Trades Workforce Initiative",
+        "url": "https://ctwi.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005626",
+    "notes": "ProPublica shows a 501(c)(3) of the same name (EIN 83-1250189) in Oakland, CA, and ctwi.org confirms the Pardee Ln address, the union construction workforce mission, the populations served, and a collaboration with OUSD on a pre-apprentice program. This fits OUSD's Adult Education and Linked Learning agreements. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

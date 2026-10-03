@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safetightsecurity.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://safetightsecurity.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.govchime.com/vendors/MVP2U3CAX2B7",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007930",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website safetightsecurity.com lists legal name 'SafeTight Security LLC.' located in Oakland, CA, matching the agenda's 'Safetight Security, Oakland, CA'",
+      "Company installs security cameras and access control systems, matching the OUSD contract for Madison Park Academy surveillance camera installation",
+      "Company website lists Oakland Unified School District among its client logos",
+      "Federal contractor registry profile (SAM.gov data) shows SAFETIGHT SECURITY LLC. in Oakland, CA, a California LLC"
+    ],
+    "key": "v-007930",
+    "notes": "UEI taken from a federal contractor aggregator page (SAM.gov data), not SAM.gov directly. Street address (appears to be a Pardee Drive suite) and CA entity number not verified from a primary source, so omitted.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@safetightsecurity.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "SafeTight Security LLC.",
+      "orgType": "company",
+      "phone": "(510) 439-9500",
+      "samUei": "MVP2U3CAX2B7",
+      "summary": "A security systems company based in Oakland, California. It designs, installs and services security cameras, access control, alarm systems and related equipment for homes and businesses across the San Francisco Bay Area.",
+      "website": "https://safetightsecurity.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Fast Security System Installation",
+        "url": "https://safetightsecurity.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "SafeTight Security contact",
+        "url": "https://safetightsecurity.com/contact/"
+      },
+      {
+        "supports": [
+          "samUei",
+          "orgType",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "SAFETIGHT SECURITY LLC. (CA) - Federal Contractor Profile",
+        "url": "https://www.govchime.com/vendors/MVP2U3CAX2B7"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007930",
+    "notes": "SafeTight Security LLC is based in Oakland, installs security cameras (matching the Madison Park Academy camera installation contract), and its site lists Oakland Unified School District as a client. Name, phone, email, headquarters and SAM UEI are confirmed on the cited pages, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

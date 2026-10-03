@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://nexploreusa.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nexploreusa.com/about/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/fl/miami/nexplore-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005069",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Nexplore USA's own Locations & Partners page lists Oakland USD as a partner",
+      "Same page gives a Miami, FL corporate office, matching the agenda's Miami, FL / Hallandale Beach, FL locations",
+      "Nexplore USA runs after-school, in-school and summer enrichment programs, matching OUSD's 'After-school & summer programs' contracts and its Summer Learning Program agreements",
+      "A registry listing shows an active 'Nexplore LLC' with a Miami, FL principal address, focused on enrichment programs"
+    ],
+    "key": "v-005069",
+    "notes": "The agenda also names 'Nexplore USA' and 'Nexplore' for the same vendor. Do not confuse with nexplore.com, an unrelated German construction-software company. The official site shows no phone, email or street address in fetchable text, so those are null. Entity number comes from a third-party registry aggregator (bizprofile.net), not directly from the California Secretary of State.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "201710710191",
+      "ein": null,
+      "email": null,
+      "headquarters": "Miami, FL",
+      "legalName": "Nexplore LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Nexplore is a company that provides after-school, in-school and summer enrichment programs for schools and youth organizations. Its programs cover STEM, digital technology, art, life skills and fitness. It works in many states, using its own sites and franchise partners.",
+      "website": "https://nexploreusa.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Nexplore USA | – Youth Enrichment Programs for Schools",
+        "url": "https://nexploreusa.com/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "summary"
+        ],
+        "title": "Locations & Partners – Nexplore USA",
+        "url": "https://nexploreusa.com/about/locations/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber"
+        ],
+        "title": "Nexplore LLC Miami, FL - filing information",
+        "url": "https://www.bizprofile.net/fl/miami/nexplore-llc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005069",
+    "notes": "Nexplore USA's locations page lists Oakland USD as a partner and gives a Miami, FL corporate office, matching the agenda's Florida locations and the after-school and summer program contracts; the summary is supported and neutral. The number 201710710191 is a Florida document number on a Florida registry page, not a California entity number, so caEntityNumber is unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "caEntityNumber"
+    ],
+    "verdict": "confirmed"
+  }
+}

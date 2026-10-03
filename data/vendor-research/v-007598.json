@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://network.procore.com/p/western-roofing-service-san-leandro",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://arcbac.org/contractor-members/western-roofing-service/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-007598",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Procore Network lists the legal name 'Roofing Constructors, Inc' at 15002 Wicks Blvd, San Leandro, CA, matching the agenda's San Leandro, CA location",
+      "The Procore listing is titled 'Roofing Constructors, Inc' under the slug 'western-roofing-service-san-leandro', and the BBB lists Roofing Constructors Inc. at the same address operating as Western Roofing Service, matching the agenda's dba name",
+      "ARCBAC lists 'Western Roofing Service' at the same San Leandro address as a commercial roofing contractor, matching OUSD's roofing agreements (roof replacement and roof maintenance) with the Facilities division"
+    ],
+    "key": "v-007598",
+    "notes": "Official site westroof.com refused automated connections, so website and email come from the ARCBAC member listing and Procore (which also gives www.westroof.com). Phone omitted because third-party pages disagree: (510) 686-4951 vs (415) 648-6472. CA entity number not found in public search results; not looked up in bizfile.",
+    "profile": {
+      "address": "15002 Wicks Boulevard, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@westroof.com",
+      "headquarters": "San Leandro, CA",
+      "legalName": "Roofing Constructors, Inc",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Western Roofing Service is the trade name of Roofing Constructors, Inc, a roofing contractor based in San Leandro, California. It was founded in 1952 and does repair, re-roofing and new roofing, plus waterproofing, mostly on commercial, industrial and institutional buildings in Northern and Central California.",
+      "website": "https://www.westroof.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Roofing Constructors, Inc",
+        "url": "https://network.procore.com/p/western-roofing-service-san-leandro"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address"
+        ],
+        "title": "Western Roofing Service - ARCBAC",
+        "url": "https://arcbac.org/contractor-members/western-roofing-service/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007598",
+    "notes": "Procore lists legal name Roofing Constructors, Inc at 15002 Wicks Blvd, San Leandro with website westroof.com; ARCBAC lists Western Roofing Service at the same address (founded 1952, commercial/industrial/institutional roofing and waterproofing, info@westroof.com), consistent with OUSD roofing agreements and the San Leandro location. Summary is neutral and supported; phone correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

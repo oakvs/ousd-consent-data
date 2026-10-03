@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/274215840",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cep.ngo/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cep.ngo/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006824",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered Oakland nonprofit, 'Community Education Partnerships' (ProPublica Nonprofit Explorer, EIN 27-4215840, Oakland, CA); the agenda gives Oakland, CA",
+      "Its website describes tutoring and school support for students experiencing housing instability, matching OUSD's contracts funded by Homeless Children & Youth grants",
+      "Its homepage lists Oakland Unified School District as a supporter/partner"
+    ],
+    "key": "v-006824",
+    "notes": "General email is obfuscated on the contact page, so it was left null. A search snippet showed a different phone number, (510) 929-6168; the organization's own contact page lists (646)460-3982 as the main phone, which is used here. California SOS and SAM.gov were not checked.",
+    "profile": {
+      "address": "2201 Broadway, Suite M8 Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "27-4215840",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Community Education Partnerships",
+      "orgType": "nonprofit",
+      "phone": "(646)460-3982",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that supports children and youth experiencing housing instability. It provides one-on-one tutoring and mentoring, early literacy programs, and school supplies, backpacks and books. It also helps with school attendance and raises awareness about housing instability and students' educational rights.",
+      "website": "https://www.cep.ngo/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Community Education Partnerships - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/274215840"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "COMMUNITY EDUCATION PARTNERSHIPS - Home",
+        "url": "https://www.cep.ngo/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact - COMMUNITY EDUCATION PARTNERSHIPS",
+        "url": "https://www.cep.ngo/contact.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006824",
+    "notes": "Community Education Partnerships is an Oakland 501(c)(3) (EIN 27-4215840) serving students experiencing housing instability, and its homepage names OUSD as a partner, which fits the Homeless Children & Youth funded contracts. Summary, phone, address, website and EIN are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

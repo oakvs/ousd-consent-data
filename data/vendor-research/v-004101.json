@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680404081",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seiinc.org/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seiinc.org/our-history.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/opportunities/internships-and-fellowships",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004101",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Strategic Energy Innovations', San Rafael, CA, EIN 68-0404081 (ProPublica Nonprofit Explorer)",
+      "Located in San Rafael, CA, matching the agenda text",
+      "Runs the Climate Corps fellowship program, matching the agenda titles 'Climate Corps Education Outside Agreement' and 'MOU - Strategic Energy Innovations/Climate Corps'",
+      "OUSD's own Facilities page says OUSD hosted a fellow through the SEI Climate Corps program"
+    ],
+    "key": "v-004101",
+    "notes": "General email omitted: it is Cloudflare-obfuscated on the SEI contact page and could not be verified by the checker.",
+    "profile": {
+      "address": "100 Smith Ranch Road, Suite 124, San Rafael, CA 94903",
+      "caEntityNumber": null,
+      "ein": "68-0404081",
+      "email": null,
+      "headquarters": "San Rafael, CA",
+      "legalName": "Strategic Energy Innovations",
+      "orgType": "nonprofit",
+      "phone": "(415) 507-2181",
+      "samUei": null,
+      "summary": "A nonprofit based in San Rafael, California, that builds sustainability leaders through education and workforce programs. Its programs include Energize Schools (K-12 climate education), Climate Corps (a fellowship placing emerging professionals with partner organizations), Energize Colleges, and Energize Careers.",
+      "website": "https://www.seiinc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Strategic Energy Innovations - Nonprofit Explorer (ProPublica)",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680404081"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact - SEI",
+        "url": "https://www.seiinc.org/contact.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "Our History - SEI",
+        "url": "https://www.seiinc.org/our-history.html"
+      },
+      {
+        "supports": [],
+        "title": "Internships and Fellowships - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/opportunities/internships-and-fellowships"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004101",
+    "notes": "Name, San Rafael location, and Climate Corps program match the agenda titles; ProPublica confirms the 501(c)(3) and EIN, and SEI's contact and history pages confirm phone, address, and the four programs. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

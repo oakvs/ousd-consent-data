@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://urbanedacademy.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/461329910",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-urban-ed-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Urban Ed Academy' (ProPublica Nonprofit Explorer, EIN 46-1329910), located in San Francisco, CA, matching the agenda location",
+      "Website describes recruiting and supporting Black male educators for San Francisco and Oakland schools, matching OUSD's 'Staff & hiring' contract through the Talent/Human Resources department",
+      "Organization's website says its educators are placed in schools in San Francisco and Oakland"
+    ],
+    "key": "n-urban-ed-academy",
+    "notes": "Website announces the organization will sunset operations on July 1, 2025; OUSD agreement was for 2023-2024. California SOS entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1485 Bayshore Blvd. Suite 317, MB 187, San Francisco, CA 94124",
+      "caEntityNumber": null,
+      "ein": "46-1329910",
+      "email": "contact@urbanedacademy.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Urban Ed Academy",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Urban Ed Academy is a San Francisco nonprofit that works to increase the number of Black male educators in classrooms. Its Man the Bay fellowship recruits and prepares Black male educators and offers housing support and professional development. Its website says it works with schools in San Francisco and Oakland and that it planned to sunset operations on July 1, 2025.",
+      "website": "https://urbanedacademy.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Urban Ed Academy",
+        "url": "https://urbanedacademy.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Urban Ed Academy - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/461329910"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-urban-ed-academy",
+    "notes": "Exact name match, San Francisco location matches the agenda, and the website confirms Black male educator recruitment for SF and Oakland schools, which fits a Talent/HR staffing agreement. Website and ProPublica support the summary, address, email, EIN and 501(c)(3) status; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

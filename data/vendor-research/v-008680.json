@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://westshield.com/home/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/huntington-beach/profile/transportation/west-shield-adolescent-services-1126-1000167149",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008680",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: 'West Shield Adolescent Services, Inc.' on the organization's own website (westshield.com)",
+      "Headquartered in Huntington Beach, CA, matching the agenda text (BBB profile lists 16835 Algonquin St, Huntington Beach, CA 92649)",
+      "Provides therapeutic transport of adolescents to specialized schools, programs and residential facilities, consistent with a Special Education Department services agreement"
+    ],
+    "key": "v-008680",
+    "notes": "No explicit public link to OUSD found; identity rests on exact name, Huntington Beach location and service type. Email on the site is a named person's address, so omitted. BBB and other listings show differing PMB box numbers, so the mailing address was omitted. No EIN, CA entity number or UEI verified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Huntington Beach, CA",
+      "legalName": "West Shield Adolescent Services, Inc.",
+      "orgType": "company",
+      "phone": "1-800-899-8585",
+      "samUei": null,
+      "summary": "A private company based in Huntington Beach, California, that provides transportation for teens and adolescents to treatment programs, residential facilities and specialized schools. It also offers crisis intervention and runaway location services.",
+      "website": "https://westshield.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Home - West Shield Adolescent Services",
+        "url": "https://westshield.com/home/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "orgType"
+        ],
+        "title": "West Shield Adolescent Services - BBB",
+        "url": "https://www.bbb.org/us/ca/huntington-beach/profile/transportation/west-shield-adolescent-services-1126-1000167149"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008680",
+    "notes": "Exact legal name and Huntington Beach, CA location (BBB) match the agenda, and the therapeutic adolescent transport services fit a Special Education Department services agreement. Website and BBB support the name, phone, company type, headquarters and a neutral summary; no personal contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

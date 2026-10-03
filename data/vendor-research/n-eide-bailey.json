@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.eidebailly.com/locations/menlo-park",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eidebailly.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-eide-bailey",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Eide Bailey, LLP' (a misspelling of Eide Bailly) in Menlo Park, CA; Eide Bailly LLP's own site lists a Menlo Park office at 4040 Campbell Ave., Ste. 200",
+      "Eide Bailly is a CPA and advisory firm offering audit services, matching the agenda title 'Services Agreement - Fiscal Systems Audit'",
+      "OUSD's own Legistar record (File 25-1091) shows a Fiscal Systems Audit presentation to the Board by 'Edie Bailly, CPA' (variant spelling of Eide Bailly), the same audit engagement"
+    ],
+    "key": "n-eide-bailey",
+    "notes": "Agenda spelling 'Eide Bailey' is a typo of 'Eide Bailly'. Phone and address are for the Menlo Park office, matching the agenda location. Headquarters, EIN, CA entity number and UEI not verified from registries, so left null.",
+    "profile": {
+      "address": "4040 Campbell Ave., Ste. 200 Menlo Park, CA 94025-1053",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Eide Bailly LLP",
+      "orgType": "company",
+      "phone": "650.522.3400",
+      "samUei": null,
+      "summary": "Eide Bailly is a professional services firm that provides tax, audit, accounting, advisory and technology consulting services to businesses and public-sector clients. It operates through more than 50 offices in the United States and India, including an office in Menlo Park, California.",
+      "website": "https://www.eidebailly.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "orgType",
+          "summary",
+          "website"
+        ],
+        "title": "Menlo Park Accounting, Tax & Advisory Services",
+        "url": "https://www.eidebailly.com/locations/menlo-park"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Eide Bailly",
+        "url": "https://www.eidebailly.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-eide-bailey",
+    "notes": "Agenda 'Eide Bailey, LLP' in Menlo Park for a Fiscal Systems Audit matches Eide Bailly LLP, a CPA/audit firm whose Menlo Park office page confirms the address, phone and legal name. The about page supports the neutral summary (tax, audit, advisory, technology; 50+ offices in the US and India; government among its clients).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

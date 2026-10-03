@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/271274290",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://reach.edu/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://reach.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.causeiq.com/organizations/reach-institute-for-school-leadership,271274290/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003534",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists EIN 27-1274290 as Reach University, Oakland, CA (501(c)(3), education); Cause IQ lists the same EIN 27-1274290 as Reach Institute for School Leadership, also known as Reach University, at 1221 Preservation Park Way, Oakland, CA",
+      "Located in Oakland, CA, matching the agenda text",
+      "A public page (Share New Mexico / Reach profile) states Reach Institute for School Leadership partners with Oakland Unified School District to recruit, prepare and support teachers and leaders, matching OUSD's 'Staff & hiring' contracts"
+    ],
+    "key": "v-003534",
+    "notes": "ProPublica lists the legal name as Reach University (same EIN as Reach Institute for School Leadership; the Institute is now the university's graduate school). No California SOS entity number or UEI checked/found. Phone (510) 501-5075 appears only on third-party pages, not on reach.edu, so omitted. Reach's mailing address (Alameda) differs from the Oakland physical address; the Oakland address is used.",
+    "profile": {
+      "address": "1221 Preservation Park Way, Suite 100, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "27-1274290",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Reach University",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that offers teacher credential programs and job-embedded degree programs for working adults, especially people who work in schools. It was founded as the Reach Institute for School Leadership, which is now the university's graduate school of education.",
+      "website": "https://reach.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Reach University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/271274290"
+      },
+      {
+        "supports": [
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact Us - Reach University",
+        "url": "https://reach.edu/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Reach University",
+        "url": "https://reach.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "ein"
+        ],
+        "title": "Reach Institute for School Leadership",
+        "url": "https://www.causeiq.com/organizations/reach-institute-for-school-leadership,271274290/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003534",
+    "notes": "ProPublica and Cause IQ show EIN 27-1274290 as Reach University, also known as Reach Institute for School Leadership, at 1221 Preservation Park Way, Oakland, matching the agenda name, city and a staff/teacher-pipeline contract. The reach.edu home page does not itself mention the Institute, but the Cause IQ page and independent search results confirm the Institute is now the university's graduate school of education, so the summary holds.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

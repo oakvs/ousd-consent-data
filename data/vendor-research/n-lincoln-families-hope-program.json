@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156501",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lincolnfamilies.org/history",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lincolnfamilies.org/hope",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lincolnfamilies.org/service-locations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-lincoln-families-hope-program",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Lincoln Families (HOPE Program)'; Lincoln Families' own website has a program called HOPE (Helping Open Pathways to Education)",
+      "Headquartered in Oakland, CA (150 Linden Street), matching the agenda location",
+      "HOPE provides school-based counseling, family engagement and teacher consultation, matching OUSD's 'Student health, support & family services' category",
+      "ProPublica lists a registered 501(c)(3) named 'Lincoln' in Oakland, CA with EIN 94-1156501, the same Tax ID shown on lincolnfamilies.org"
+    ],
+    "key": "n-lincoln-families-hope-program",
+    "notes": "The registered legal name on ProPublica is 'Lincoln'; the organization operates as 'Lincoln Families'. No page found explicitly mentions OUSD, but the program name, location and service category all match. California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "150 Linden Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-1156501",
+      "email": "info@lincolnfamilies.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Lincoln",
+      "orgType": "nonprofit",
+      "phone": "510.273.4700",
+      "samUei": null,
+      "summary": "Lincoln Families is a nonprofit youth and family services agency in Oakland, founded in 1883. It runs school-based and community-based programs, including mental health services, foster care support, early childhood programs and family resource centers, in Alameda and Contra Costa Counties. Its HOPE program (Helping Open Pathways to Education) offers student counseling, family engagement, teacher consultation and whole-school supports.",
+      "website": "https://www.lincolnfamilies.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Lincoln - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156501"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "History - Lincoln Families",
+        "url": "https://www.lincolnfamilies.org/history"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email"
+        ],
+        "title": "HOPE - Lincoln Families",
+        "url": "https://www.lincolnfamilies.org/hope"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "phone",
+          "email"
+        ],
+        "title": "Locations - Lincoln Families",
+        "url": "https://www.lincolnfamilies.org/service-locations"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-lincoln-families-hope-program",
+    "notes": "Lincoln Families' site confirms the HOPE program (school-based counseling), the 150 Linden St Oakland headquarters, contact details and EIN 94-1156501, which ProPublica lists as the 501(c)(3) 'Lincoln' in Oakland. The summary is neutral and consistent with the sources, though no page names OUSD explicitly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://mbakerintl.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mbakerintl.com/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mbakerintl.com/news-insights/news-release/michael-baker-international-names-jim-porter-p-e-vice-president-and-northern-california-office-executive/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002842",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches Michael Baker International, an engineering, architecture and construction-management firm (mbakerintl.com), consistent with OUSD contracting them for a school classroom building and modernization project",
+      "Michael Baker International's own press release (July 2021) says its Northern California office executive oversees operations in Oakland, Rancho Cordova and Walnut Creek, matching the agenda location of Walnut Creek, CA",
+      "Michael Baker International's education page says the firm serves K-12 schools and school districts"
+    ],
+    "key": "v-002842",
+    "notes": "Contact details are for the national corporate headquarters in Pittsburgh. The current offices page lists Oakland and Berkeley but no Walnut Creek office; a third-party listing shows a Walnut Creek office, which was not cited. The vendor is a large national firm; no registry IDs (SOS, SAM) could be verified from fetchable pages, so they are left null. Legal name left null because the exact form (Inc. vs LLC) was not confirmed on a cited page.",
+    "profile": {
+      "address": "500 Grant Street Suite 5400 Pittsburgh, PA 15219",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Pittsburgh, PA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "412-918-4000",
+      "samUei": null,
+      "summary": "Michael Baker International is a professional services firm that provides engineering, architecture, planning, environmental, construction management and consulting services. Its work covers transportation, water, healthcare, education and other public infrastructure. It has more than 120 offices in the United States.",
+      "website": "https://mbakerintl.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Us - Michael Baker International",
+        "url": "https://mbakerintl.com/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Offices and Locations",
+        "url": "https://mbakerintl.com/locations/"
+      },
+      {
+        "supports": [],
+        "title": "Michael Baker International Names Jim Porter, P.E., Vice President and Northern California Office Executive",
+        "url": "https://mbakerintl.com/news-insights/news-release/michael-baker-international-names-jim-porter-p-e-vice-president-and-northern-california-office-executive/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002842",
+    "notes": "Michael Baker International is a national engineering/architecture/construction-management firm; the cited news release confirms its Northern California executive oversees Walnut Creek (the agenda city), and a facilities design contract fits its services. The summary, website, HQ address and phone are confirmed on the cited About and Locations pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

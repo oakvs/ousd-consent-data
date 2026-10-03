@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/843666972",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/84-3666972",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandgenesis.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007994",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Oakland Genesis Soccer Club Corporation' (ProPublica Nonprofit Explorer, EIN 84-3666972), exactly the 'Corporation' name variant used in OUSD's agenda text",
+      "Located in Oakland, CA (ProPublica and GuideStar), matching the agenda location",
+      "Organization website describes free youth programming with academic support, mentorship and transportation, matching OUSD's 'After-school & summer programs' and 'Student health, support & family services' categories"
+    ],
+    "key": "v-007994",
+    "notes": "Website contact page lists only named staff emails and no general phone, email or mailing address, so phone and email are null. Address is from GuideStar. Did not find a page on the org's own site mentioning Oakland Unified; search results indicate it runs afterschool programs at OUSD middle schools but that was not confirmed on a fetched page.",
+    "profile": {
+      "address": "4445 Davenport Ave, Oakland, CA 94619-2914",
+      "caEntityNumber": null,
+      "ein": "84-3666972",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Genesis Soccer Club Corporation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California that provides free youth development programs for young people ages 9 to 18 from under-resourced communities. Programs include competitive soccer coaching, academic support, transportation, mentorship, nutrition, and college and career counseling.",
+      "website": "https://www.oaklandgenesis.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Oakland Genesis Soccer Club Corporation - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/843666972"
+      },
+      {
+        "supports": [
+          "address",
+          "legalName",
+          "ein",
+          "website",
+          "headquarters"
+        ],
+        "title": "Oakland Genesis - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/84-3666972"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Oakland Genesis",
+        "url": "https://www.oaklandgenesis.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007994",
+    "notes": "ProPublica and GuideStar both show Oakland Genesis Soccer Club Corporation, EIN 84-3666972, in Oakland CA, matching the agenda name and city; the org's site confirms the free youth programs, ages 9-18 and East Oakland focus, which fits OUSD's after-school/student support contracts at East Oakland schools. All profile fields and the neutral summary are supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

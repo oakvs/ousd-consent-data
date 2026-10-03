@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.95percentgroup.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.95percentgroup.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009132",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name on the company's own site is '95 Percent Group LLC', matching the agenda's '95 Percent Group, LLC'",
+      "Headquartered in Lincolnshire, IL, matching the location given in the agenda text",
+      "Company sells literacy instruction products and professional learning for schools, matching OUSD's 'Classroom & academic programs' / Academics and Instruction Department contract"
+    ],
+    "key": "v-009132",
+    "notes": "No registry IDs (Illinois SOS, SAM.gov) were checked or found. No public page confirming work with OUSD was found; identity rests on exact legal name, matching city, and matching product line.",
+    "profile": {
+      "address": "475 Half Day Road, Suite 350, Lincolnshire, IL 60069",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "orders@95percentgroup.com",
+      "headquarters": "Lincolnshire, IL",
+      "legalName": "95 Percent Group LLC",
+      "orgType": "company",
+      "phone": "847-499-8200",
+      "samUei": null,
+      "summary": "95 Percent Group is a company that provides literacy instruction products, professional learning programs and research resources for schools. Its materials are based on the science of reading and cover different grade levels and student needs.",
+      "website": "https://www.95percentgroup.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "About Us - 95 Percent Group",
+        "url": "https://www.95percentgroup.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Contact Us - 95 Percent Group",
+        "url": "https://www.95percentgroup.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009132",
+    "notes": "The company's own About and Contact pages show the legal name 95 Percent Group LLC, a Lincolnshire, IL address, and literacy instruction and professional development products, which match the agenda name, city and Academics and Instruction contract. The summary, phone, generic orders@ email and address are all confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

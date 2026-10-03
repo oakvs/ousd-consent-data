@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://touchmath.com/legal-information/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.touchmath.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.touchmath.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006353",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "touchmath.com's Legal Information page states 'This site is owned and operated by TouchMath Acquisition, LLC', matching the agenda vendor name exactly",
+      "Located in Colorado Springs, CO, matching the agenda text",
+      "Website describes a multisensory math program for students who struggle with math, matching OUSD's 'Classroom & academic programs' / Special Education Department services agreement"
+    ],
+    "key": "v-006353",
+    "notes": "No registry IDs looked up. Contact page lists the address under the TouchMath brand; the legal page lists the same address for TouchMath, LLC (a related entity).",
+    "profile": {
+      "address": "2 N Nevada Ave, Ste 1200, Colorado Springs, CO 80903-1702",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "customerservice@touchmath.com",
+      "headquarters": "Colorado Springs, CO",
+      "legalName": "TouchMath Acquisition, LLC",
+      "orgType": "company",
+      "phone": "1.800.888.9191",
+      "samUei": null,
+      "summary": "TouchMath Acquisition, LLC owns and operates TouchMath, a company that makes a multisensory math program for students who struggle with foundational math and abstract concepts, from preschool through transition. It sells the program to schools and districts.",
+      "website": "https://www.touchmath.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType"
+        ],
+        "title": "Legal Information - TouchMath",
+        "url": "https://touchmath.com/legal-information/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - TouchMath",
+        "url": "https://www.touchmath.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact Us - TouchMath",
+        "url": "https://www.touchmath.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006353",
+    "notes": "touchmath.com legal page states the site is owned and operated by TouchMath Acquisition, LLC, matching the agenda name, and the Colorado Springs address and math-program services fit the Special Education services agreement. Summary, phone, generic customer-service email and address are all shown on the cited pages and are neutral business details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

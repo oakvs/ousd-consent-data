@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/813347726",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://yoots.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://yoots.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://yoots.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008832",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Youth Transportation Organization', EIN 81-3347726, San Rafael, CA (ProPublica Nonprofit Explorer)",
+      "Located in San Rafael, CA, matching the agenda text",
+      "Website (yoots.org) names the organization 'Youth Transportation Organization (Yoots)' and describes transportation management for afterschool and summer programs, matching OUSD's 'After-school & summer programs' contract category"
+    ],
+    "key": "v-008832",
+    "notes": "Website and contact page do not list an email or mailing address; those left null. Phone from the Contact page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "81-3347726",
+      "email": null,
+      "headquarters": "San Rafael, CA",
+      "legalName": "Youth Transportation Organization",
+      "orgType": "nonprofit",
+      "phone": "415.610.7599",
+      "samUei": null,
+      "summary": "Youth Transportation Organization, also known as Yoots, is a nonprofit based in San Rafael, California. It works to remove transportation as a barrier for under-served youth. It helps schools and youth programs with field trips, charter buses, school bus logistics and BART trips in the San Francisco Bay Area.",
+      "website": "https://yoots.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Youth Transportation Organization - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/813347726"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - Yoots",
+        "url": "https://yoots.org/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "legalName"
+        ],
+        "title": "Yoots",
+        "url": "https://yoots.org"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us - Yoots",
+        "url": "https://yoots.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008832",
+    "notes": "ProPublica shows a San Rafael 501(c)(3) with the agenda's name and EIN 81-3347726 (transportation nonprofit); yoots.org describes afterschool/summer program transportation management, which fits the OUSD contract category. Summary, phone (415.610.7599 on the contact page), website and headquarters are each supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

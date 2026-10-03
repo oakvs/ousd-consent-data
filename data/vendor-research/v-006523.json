@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://rival-hr.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rival-hr.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006523",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Rival's own About page states the company operates as 'SilkRoad Technology Inc, dba Rival', matching the agenda name SilkRoad Technology, Inc.",
+      "Headquartered in Chicago, IL, matching the agenda location",
+      "SilkRoad Technology acquired Entelo, Inc. in August 2022; OUSD's agenda also lists earlier Entelo, Inc. talent/HR services agreements with the same Talent/Human Resources department",
+      "Recruiting and HR software matches OUSD's 'Staff & hiring' contracts"
+    ],
+    "key": "v-006523",
+    "notes": "SilkRoad Technology rebranded to Rival in 2023 (Wikipedia: Rival (software company)); silkroad.com now redirects to rival-hr.com. Phone is shown on the About page in the form +1 (312) 574-3700. No registry IDs checked.",
+    "profile": {
+      "address": "311 W. Monroe St., Suite 401, Chicago, IL 60606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Chicago, IL",
+      "legalName": "SilkRoad Technology Inc",
+      "orgType": "company",
+      "phone": "+1 (312) 574-3700",
+      "samUei": null,
+      "summary": "A software company, formerly named SilkRoad Technology and now doing business as Rival, that makes HR software. Its products cover finding and recruiting job candidates, applicant tracking, onboarding new employees, and managing employee workflows.",
+      "website": "https://rival-hr.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Rival HR - About",
+        "url": "https://rival-hr.com/about"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Rival HR",
+        "url": "https://rival-hr.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006523",
+    "notes": "Rival's About page states 'SilkRoad Technology Inc, dba Rival' with the Chicago address and phone shown, matching the agenda vendor name and location; Wikipedia confirms the 2023 rebrand and the 2022 Entelo asset purchase. The summary is neutral and the recruiting, onboarding and workflow products on the cited pages fit OUSD's Staff & hiring contracts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

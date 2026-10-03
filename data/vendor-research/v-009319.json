@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.icanhelp.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.icanhelp.net/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/47-1589233",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009319",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "GuideStar lists the nonprofit Digital4Good (EIN 47-1589233) as 'Also Known As: #ICANHELP', matching the agenda name '#ICANHELP'",
+      "GuideStar gives an Antioch, CA address (2250 Renwick Ln), matching the agenda location 'Antioch, CA'",
+      "Website icanhelp.net describes school-based digital citizenship and student programs, consistent with OUSD's 'Classroom & academic programs' and Title 4 Student Support funding for a high school services agreement",
+      "ProPublica Nonprofit Explorer lists Digital4good, EIN 47-1589233, as a California 501(c)(3) youth-focused nonprofit"
+    ],
+    "key": "v-009319",
+    "notes": "Published addresses conflict: GuideStar lists Antioch, CA (2250 Renwick Ln), ProPublica lists Discovery Bay, and the website contact page lists Temecula, CA. Address, headquarters and phone were therefore left null. No public phone number was found on a fetchable cited page. California entity number and SAM UEI were not looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "47-1589233",
+      "email": "admin@icanhelp.net",
+      "headquarters": null,
+      "legalName": "Digital4Good",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Digital4Good, which also operates as #ICANHELP, is an educational nonprofit focused on digital citizenship and online safety. It provides curricula, workshops and presentations to schools, and runs student clubs, internships and volunteer programs. It works with students, parents and educators.",
+      "website": "https://www.icanhelp.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Digital4Good: Empowering Students in Digital Citizenship & Safety",
+        "url": "https://www.icanhelp.net/"
+      },
+      {
+        "supports": [
+          "email",
+          "legalName"
+        ],
+        "title": "Contact",
+        "url": "https://www.icanhelp.net/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Digital4Good - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/47-1589233"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009319",
+    "notes": "GuideStar lists Digital4Good (EIN 47-1589233) as also known as #ICANHELP with an Antioch, CA address matching the agenda, and the icanhelp.net site confirms the Digital4Good/#ICANHELP identity and school programs fitting OUSD's Title 4 student support services agreement. The summary, website, generic admin email, EIN, legal name and org type are all supported by the cited pages; conflicting addresses were correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

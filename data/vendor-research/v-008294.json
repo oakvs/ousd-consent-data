@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/880905470",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/concord/arts-media-and-entertainment",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.creativeeducatorsnetwork.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008294",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Arts Media And Entertainment Institute Inc' (ProPublica Nonprofit Explorer, EIN 88-0905470) and a California nonprofit public benefit corporation 'Arts, Media, And Entertainment Institute Inc.' (entity 4851112)",
+      "Earlier IRS-based directory listings (Charity Navigator, Cause IQ search results) gave a Concord, CA address (2041 East St), matching the agenda's 'Concord, CA'; current records show Woodland Hills, CA, so the organization has since moved",
+      "Its website (ameinstitute.org, now redirecting to creativeeducatorsnetwork.org) says it trains arts, media and entertainment educators and links schools to creative careers, matching OUSD's Linked Learning / CTE Incentive Grant services contract",
+      "The organization's current website lists it as the former Arts, Media and Entertainment Institute"
+    ],
+    "key": "v-008294",
+    "notes": "Website redirects from ameinstitute.org to creativeeducatorsnetwork.org (renamed). Agenda says Concord, CA, which matches earlier IRS-based directory addresses; current address is Woodland Hills. No public phone found on the site (a directory lists (619) 743-0519 but it is not on the organization's own pages), so phone is omitted.",
+    "profile": {
+      "address": "21255 Burbank Blvd, Suite 120, Woodland Hills, CA 91367",
+      "caEntityNumber": "4851112",
+      "ein": "88-0905470",
+      "email": "info@creativeeducatorsnetwork.org",
+      "headquarters": "Woodland Hills, CA",
+      "legalName": "Arts Media And Entertainment Institute Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that provides professional training for educators who teach arts, media and entertainment subjects such as film, animation and design. It works to connect public schools with creative industries so students, especially those with fewer opportunities, can prepare for creative careers. It now operates as the Creative Educators Network.",
+      "website": "https://www.creativeeducatorsnetwork.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Arts Media And Entertainment Institute Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/880905470"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Arts, Media, And Entertainment Institute Inc. - filing information",
+        "url": "https://www.bizprofile.net/ca/concord/arts-media-and-entertainment"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Creative Educators Network",
+        "url": "https://www.creativeeducatorsnetwork.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008294",
+    "notes": "Same organization: CA SOS filing shows a Feb 2024 principal-address change to Concord, CA (matching the agenda), the same entity is now in Woodland Hills, ameinstitute.org 301-redirects to creativeeducatorsnetwork.org, and that site's footer names the Arts Media and Entertainment Institute. Legal name, EIN, entity number, email and address are confirmed; the summary's example subjects (film, animation, design) are only loosely implied by the sources but the core claims are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

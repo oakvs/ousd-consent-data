@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/264694946",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.streetsoccerusa.org/sc/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.streetsoccerusa.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008829",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Street Soccer USA Inc' (ProPublica Nonprofit Explorer, EIN 26-4694946), headquartered in Brooklyn, NY, matching the agenda's 'Brooklyn, NY'",
+      "Its website lists a San Francisco, CA Bay Area program, matching the agenda's 'San Francisco, CA'",
+      "Website describes partnering with schools and running after-school programs, matching OUSD's 'After-school & summer programs' contracts"
+    ],
+    "key": "v-008829",
+    "notes": "No Oakland-specific page found; identity rests on name, Brooklyn HQ, San Francisco Bay Area program, and school after-school programming. Only a regional Bay Area email (bayarea@) and named staff emails were found, so email left null.",
+    "profile": {
+      "address": "106B Nassau Avenue #240, Brooklyn, NY 11222",
+      "caEntityNumber": null,
+      "ein": "26-4694946",
+      "email": null,
+      "headquarters": "Brooklyn, NY",
+      "legalName": "Street Soccer USA Inc",
+      "orgType": "nonprofit",
+      "phone": "(415) 872-9910",
+      "samUei": null,
+      "summary": "Street Soccer USA is a national nonprofit that runs free, year-round soccer and youth development programs in under-resourced neighborhoods in cities across the United States. It partners with schools and community groups to run programs and build soccer parks and learning centers. Its programs combine soccer with social-emotional skill building and connections to education and employment resources.",
+      "website": "https://www.streetsoccerusa.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Street Soccer USA Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/264694946"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Street Soccer USA",
+        "url": "https://www.streetsoccerusa.org/sc/about.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Street Soccer USA",
+        "url": "https://www.streetsoccerusa.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008829",
+    "notes": "ProPublica confirms Street Soccer USA Inc is a Brooklyn, NY 501(c)(3) (EIN 26-4694946), matching the agenda's Brooklyn location. The website shows the same phone and address and Bay Area activity (San Francisco, Oakland), and school/community partnerships fit OUSD's after-school contract. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

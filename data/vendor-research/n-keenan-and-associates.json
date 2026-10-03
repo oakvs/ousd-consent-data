@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.keenan.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.keenan.com/about-keenan/office-locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-keenan-and-associates",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Headquarters in Torrance, CA matches the agenda location 'Torrance, CA' (keenan.com Office Locations page)",
+      "Keenan & Associates is an insurance broker and risk management firm, matching OUSD's 'Legal, insurance & risk' contracts through the Risk Management Department",
+      "Keenan's website lists schools and colleges as a core client sector, consistent with a school district contract"
+    ],
+    "key": "n-keenan-and-associates",
+    "notes": "Legal name, CA entity number, EIN and UEI not confirmed from a registry, so left null. No general email found on the official site.",
+    "profile": {
+      "address": "2355 Crenshaw Blvd., Suite 200 Torrance, CA 90501",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Torrance, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "310-212-3344",
+      "samUei": null,
+      "summary": "Keenan & Associates is an insurance broker and employee benefits consulting firm based in Torrance, California. It provides employee benefits consulting, property and casualty insurance, risk management and claims services. It serves school districts, colleges, public agencies, health care organizations and nonprofits.",
+      "website": "https://www.keenan.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Insurance Broker | Employee Benefits Consulting | Keenan",
+        "url": "https://www.keenan.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Office Locations | Keenan",
+        "url": "https://www.keenan.com/about-keenan/office-locations/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-keenan-and-associates",
+    "notes": "Keenan & Associates (Torrance, CA) is a risk management and insurance brokerage serving schools, matching OUSD's Risk Management Department contracts. The homepage supports the summary and client sectors, and the office locations page lists Torrance as Corporate Headquarters with the cited address and phone.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

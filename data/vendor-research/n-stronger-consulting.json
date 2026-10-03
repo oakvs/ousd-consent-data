@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opengovco.com/business/20201591161",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://strongerconsulting.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://strongerconsultinginc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nsifund.org/stronger-consulting-inc/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-stronger-consulting",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Stronger Consulting Inc.' appears in a business-entity record (entity number 20201591161, foreign corporation, California jurisdiction) with a Boise, ID address, matching the agenda's 'Stronger Consulting, Inc.' and 'Boise, ID'",
+      "A separate public listing (Nonprofit Sustainability Initiative) gives the same street address, 1775 W. State Street #230, and the website strongerconsulting.com for 'Stronger Consulting, Inc.'",
+      "Website describes executive search and recruiting for charter school networks and education nonprofits, matching OUSD's 'Staff & hiring' contract for the Charter Schools Office"
+    ],
+    "key": "n-stronger-consulting",
+    "notes": "Phone numbers found on third-party pages conflict with each other and are not on the firm's own site, so phone and email are omitted. The firm's own site lists partners in Portland, Salt Lake City and Jersey City; the Boise address comes from a business-entity record and a third-party listing, not the firm's site. The business-entity page is a mirror of registry data, not the registry itself.",
+    "profile": {
+      "address": "1775 W State St, #230, Boise, ID 83702",
+      "caEntityNumber": "20201591161",
+      "ein": null,
+      "email": null,
+      "headquarters": "Boise, ID",
+      "legalName": "Stronger Consulting Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A for-profit consulting firm that provides executive search and organizational consulting for school systems, charter school networks and nonprofits. Its services include recruiting senior leaders, strategic planning, fundraising and program design.",
+      "website": "https://strongerconsulting.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Stronger Consulting Inc. · 1775 W. State Street, #230, Boise, ID 83702",
+        "url": "https://opengovco.com/business/20201591161"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Stronger Consulting · Executive Search & Strategic Advisory for Education",
+        "url": "https://strongerconsulting.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Home - Stronger Consulting INC",
+        "url": "https://strongerconsultinginc.com/"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Stronger Consulting, Inc - Nonprofit Sustainability Initiative (NSI)",
+        "url": "https://nsifund.org/stronger-consulting-inc/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-stronger-consulting",
+    "notes": "Name, the 1775 W State St Boise address (registry mirror and NSI listing) and the executive-search/recruiting services fit the Charter Schools Office staffing contract, so the organization matches and the summary is supported and neutral. Entity 20201591161 is a Colorado foreign-entity registration (California-formed, Colorado agent), not a California entity number, and the firm's own sites suggest a Los Angeles base (310 phone) and name no headquarters, so headquarters and caEntityNumber are not supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters",
+      "caEntityNumber"
+    ],
+    "verdict": "confirmed"
+  }
+}

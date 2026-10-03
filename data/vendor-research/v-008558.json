@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/853126167",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://pantrykids.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008558",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Pantry Kids Inc' (ProPublica Nonprofit Explorer, EIN 85-3126167)",
+      "Registry city is Evans, GA, exactly matching the location given in the OUSD agenda text",
+      "Organization's website describes providing snacks to kids in need and snack-packing events in the Bay Area, consistent with OUSD's 'Student health, support & family services' / Homeless Children & Youth funding"
+    ],
+    "key": "v-008558",
+    "notes": "Website does not mention OUSD, Oakland or Evans specifically; identity rests on exact name plus registry city matching the agenda, and the Bay Area kids-snack mission. No phone or street address published.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "85-3126167",
+      "email": "Pantrykidsinc@Gmail.com",
+      "headquarters": "Evans, GA",
+      "legalName": "Pantry Kids Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Pantry Kids Inc is a nonprofit that helps kids in need by providing snacks between meals. Volunteers pack snack bags at community events, mostly in the Bay Area, and the organization partners with groups such as the Women's Drop In Center, Monument Crisis Center and Goodwill. It was started in 2020.",
+      "website": "https://pantrykids.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Pantry Kids Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/853126167"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "orgType"
+        ],
+        "title": "Pantry Kids Inc",
+        "url": "https://pantrykids.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008558",
+    "notes": "ProPublica shows Pantry Kids Inc, 501(c)(3), EIN 85-3126167, in Evans, GA (matches agenda), and its website describes Bay Area snack-packing for kids, which fits OUSD's student/family services and homeless youth funding. Summary, website, generic organizational email and EIN are all supported and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

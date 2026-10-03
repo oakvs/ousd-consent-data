@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ars-moving.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ars-moving.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/hughson/anchor-relocation-service-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3629780",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009512",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California registered corporation 'Anchor Relocation Service Inc.' based in Hughson, CA, matching the agenda location (bizprofile.net filing information; FMCSA SAFER snapshot)",
+      "Company website describes commercial and institutional moves for businesses, schools and public agencies, matching OUSD contracting them for school facilities projects (relocation during modernization and window replacement)",
+      "Federal motor carrier record lists the same legal name at 1505 Colbert Ct, Hughson, CA, matching the state filing address",
+      "Old domain anchorrelocationservices.com redirects to ars-moving.com, whose pages are titled Anchor Relocation Service Inc."
+    ],
+    "key": "v-009512",
+    "notes": "Entity number comes from a third-party aggregator of California SOS data; the SOS site itself was not fetched. The only email on the website is a named person's address, so it was omitted. FMCSA lists a different phone, (209) 882-2028; the website's main number was used.",
+    "profile": {
+      "address": "1505 COLBERT CT, HUGHSON, CA 95326-9153",
+      "caEntityNumber": "4628214",
+      "ein": null,
+      "email": null,
+      "headquarters": "Hughson, CA",
+      "legalName": "Anchor Relocation Service Inc.",
+      "orgType": "company",
+      "phone": "(510) 939-2117",
+      "samUei": null,
+      "summary": "A California moving company that provides commercial and institutional relocation services. It moves offices, schools and other public agencies, including educational institutions and specialized equipment, across California.",
+      "website": "https://www.ars-moving.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Anchor Relocation Service",
+        "url": "https://www.ars-moving.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Anchor Relocation Service Inc.",
+        "url": "https://www.ars-moving.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Anchor Relocation Service Inc. Hughson, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/hughson/anchor-relocation-service-inc"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "SAFER Web - Company Snapshot ANCHOR RELOCATION SERVICE INC",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=3629780"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009512",
+    "notes": "Legal name, entity number 4628214 and Hughson address match across the bizprofile filing and FMCSA record, and the Hughson location matches the agenda; the website describes commercial and institutional moves for businesses, schools and public agencies, which fits facilities-project relocation work. Summary, phone, website and address are all supported and neutral, and the named-person email was correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

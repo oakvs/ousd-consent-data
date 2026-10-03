@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/270549307",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ujimaafoundation.org/contact-us-1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ujimaafoundation.org/programs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004421",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Ujimaa Foundation', Oakland, CA, EIN 27-0549307 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes after-school programs run at Oakland schools, matching OUSD's 'After-school & summer programs' contracts",
+      "Website's contact page lists an after-school program at Carl B. Munck Elementary School, the same school named in the OUSD agenda contract titles"
+    ],
+    "key": "v-004421",
+    "notes": "OUSD agenda titles also list Higher Ground Neighborhood Development Corporation under this vendor number; that appears to be a different organization and was not researched here. Reviewer may want to check whether the vendor record conflates two entities. Street address and CA entity number not confirmed on a citable page, so left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "27-0549307",
+      "email": "Admin@UjimaaFoundation.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Ujimaa Foundation",
+      "orgType": "nonprofit",
+      "phone": "(510) 282-2997",
+      "samUei": null,
+      "summary": "The Ujimaa Foundation is an Oakland-based nonprofit that runs after-school programs for youth at schools, often as the lead agency for a school's program. Activities include academic support, science and technology, martial arts and sports, performing arts, and gardening.",
+      "website": "https://www.ujimaafoundation.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Ujimaa Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/270549307"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "Contact Us - Ujimaa Foundation",
+        "url": "https://www.ujimaafoundation.org/contact-us-1"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Programs - Ujimaa Foundation",
+        "url": "https://www.ujimaafoundation.org/programs"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004421",
+    "notes": "Ujimaa Foundation (Oakland, EIN 27-0549307, 501(c)(3)) is confirmed by ProPublica, and its own site lists the Carl B. Munck Elementary after-school program named in the OUSD contract titles; phone, generic admin email, and the neutral summary are supported by the contact and programs pages. Several OUSD titles under this vendor number name Higher Ground Neighborhood Development Corporation, a separate entity not covered by this profile, so the vendor record may conflate two organizations.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

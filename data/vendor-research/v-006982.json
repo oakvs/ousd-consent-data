@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/853857584",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://immigrantfamilies.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://immigrantfamilies.org/donate/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006982",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Immigrant Family Defense Fund', EIN 85-3857584, located in Oakland, CA (ProPublica Nonprofit Explorer), matching the agenda's Oakland, CA location",
+      "Website describes legal help for immigrant parents and children enrolled in California schools, matching OUSD's 'Student health, support & family services' and English Language Learner and Multilingual Achievement Department contracts",
+      "Mailing address on the organization's website is in Oakland, CA 94612"
+    ],
+    "key": "v-006982",
+    "notes": "No page found explicitly mentioning Oakland Unified; identity rests on name, Oakland location, and service match.",
+    "profile": {
+      "address": "1714 Franklin St. #100-405, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "85-3857584",
+      "email": "info@immigrantfamilies.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Immigrant Family Defense Fund",
+      "orgType": "nonprofit",
+      "phone": "(510) 241-3811",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California that helps immigrant parents and children in California schools who face the threat of deportation get legal representation. It also helps people held in immigration detention get released on bond.",
+      "website": "https://immigrantfamilies.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Immigrant Family Defense Fund - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/853857584"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "legalName"
+        ],
+        "title": "Immigrant Family Defense Fund",
+        "url": "https://immigrantfamilies.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Get Involved",
+        "url": "https://immigrantfamilies.org/donate/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006982",
+    "notes": "ProPublica shows a 501(c)(3) of the same name and EIN in Oakland, CA; the website describes legal help for immigrant families in California schools, which fits OUSD's ELL/Multilingual department and refugee-program funding. All profile fields (summary, phone, email, address, EIN) are shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

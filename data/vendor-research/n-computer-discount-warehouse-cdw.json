@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/cdw-government-llc-10116552/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/CDW",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-computer-discount-warehouse-cdw",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Computer Discount Warehouse (CDW), A Subsidiary of Computer Discount Warehouse Government (CDWG)'; federal registry data lists CDW GOVERNMENT LLC (CDW-G) as the government and education sales arm of CDW",
+      "Wikipedia confirms CDW is the shortened name of Computer Discount Warehouse, an IT products and services provider serving education and government",
+      "OUSD contracts them for 'Technology', consistent with an information technology reseller serving education"
+    ],
+    "key": "n-computer-discount-warehouse-cdw",
+    "notes": "cdw.com and cdwg.com pages timed out when fetched, so website, phone, email and address were left null rather than guessed. National company, no Oakland location given in the agenda.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Vernon Hills, IL",
+      "legalName": "CDW GOVERNMENT LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": "PHZDZ8SJ5CM1",
+      "summary": "CDW Government is the government and education sales unit of CDW, a technology company that sells information technology products and services. It serves education, government and healthcare organizations. CDW began as Computer Discount Warehouse and is based in Vernon Hills, Illinois.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "samUei",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "CDW Government Profile",
+        "url": "https://www.highergov.com/awardee/cdw-government-llc-10116552/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "CDW",
+        "url": "https://en.wikipedia.org/wiki/CDW"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-computer-discount-warehouse-cdw",
+    "notes": "The agenda names Computer Discount Warehouse (CDW) and its CDWG subsidiary for Technology; HigherGov confirms CDW GOVERNMENT LLC, SAM UEI PHZDZ8SJ5CM1, Vernon Hills IL, serving education and government. Wikipedia confirms the Computer Discount Warehouse name history and Vernon Hills HQ. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

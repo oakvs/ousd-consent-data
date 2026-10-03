@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.studentsgrow.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.studentsgrow.com/psychoeducational-assessment/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.studentsgrow.com/about-dr-branstetter/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008465",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Practice name 'Grow Assessment and Counseling Services' (studentsgrow.com) closely matches the agenda name 'GROW Psychological Assessment & Counseling Services, PC'",
+      "The practice's published mailing address is in Lafayette, CA 94549, matching the agenda location 'Lafayette, CA'",
+      "Website describes psychoeducational assessments for children with learning difficulties, including school-based meetings with teachers, consistent with OUSD contracting for special education services"
+    ],
+    "key": "v-008465",
+    "notes": "Legal entity (professional corporation) and CA entity number not verified in the Secretary of State registry, so legalName and registry IDs left null. Only personal-name emails (rebecca@, sarah@) are shown on the site, so email omitted. Phone is shown on the assessment page as 'Call: 510-681-4303'. Search snippets also mention an Oakland office, not confirmed on a fetched page.",
+    "profile": {
+      "address": "954 Risa Rd, Suite A, Lafayette, CA 94549",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Lafayette, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-681-4303",
+      "samUei": null,
+      "summary": "A private practice in the San Francisco Bay Area that provides psychoeducational assessments and counseling for children and adolescents with learning, attention and emotional challenges. Assessments include testing, a written report and meetings with teachers and school staff to plan supports.",
+      "website": "https://www.studentsgrow.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Grow Assessment and Counseling Services",
+        "url": "https://www.studentsgrow.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone"
+        ],
+        "title": "Psychoeducational Assessments - Grow Assessment and Counseling Services",
+        "url": "https://www.studentsgrow.com/psychoeducational-assessment/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "About Dr. Branstetter",
+        "url": "https://www.studentsgrow.com/about-dr-branstetter/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008465",
+    "notes": "Organization matches (GROW Assessment and Counseling Services, 954 Risa Rd, Lafayette, CA; psychoeducational assessments with school-staff consultation fit special education), and website, phone and address are confirmed. However the summary claims the practice provides counseling, which the site does not advertise (it offers psychoeducational testing and executive functioning coaching), so the summary is not supported as written.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

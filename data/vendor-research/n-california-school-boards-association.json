@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941510492",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-1510492",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.causeiq.com/organizations/california-school-boards-association,941510492/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.csba.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-school-boards-association",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(4) 'California School Boards Association', EIN 94-1510492 (ProPublica Nonprofit Explorer)",
+      "Located in West Sacramento, CA at 3251 Beacon Blvd, matching the agenda text 'West Sacramento, CA' (GuideStar)",
+      "Organization serves school boards and provides legal and governance support, matching OUSD's 'Governance & board business' contract by the General Counsel office (CauseIQ description)"
+    ],
+    "key": "n-california-school-boards-association",
+    "notes": "Main phone not confirmed on a cited page, so omitted. CA Secretary of State and SAM.gov not checked. csba.org was reportedly affected by a cyberattack and its About/Contact pages returned 404 at time of research.",
+    "profile": {
+      "address": "3251 Beacon Blvd, West Sacramento, CA 95691",
+      "caEntityNumber": null,
+      "ein": "94-1510492",
+      "email": "csba@csba.org",
+      "headquarters": "West Sacramento, CA",
+      "legalName": "California School Boards Association",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit membership association for school boards in California. It supports school board governance with research, policy and legal support, technology tools, leadership training, and state and federal advocacy.",
+      "website": "https://www.csba.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "California School Boards Association - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941510492"
+      },
+      {
+        "supports": [
+          "address",
+          "website",
+          "headquarters",
+          "ein"
+        ],
+        "title": "California School Boards Association - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-1510492"
+      },
+      {
+        "supports": [
+          "summary",
+          "address"
+        ],
+        "title": "California School Boards Association - Cause IQ",
+        "url": "https://www.causeiq.com/organizations/california-school-boards-association,941510492/"
+      },
+      {
+        "supports": [
+          "email",
+          "website"
+        ],
+        "title": "California School Boards Association",
+        "url": "https://www.csba.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-california-school-boards-association",
+    "notes": "CSBA is a West Sacramento nonprofit (EIN 94-1510492, 501(c)(4)) serving school boards with governance, legal and policy support, which fits the General Counsel governance agreement and the agenda location. Legal name, EIN, address, website, email and summary are all confirmed by the fetched sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

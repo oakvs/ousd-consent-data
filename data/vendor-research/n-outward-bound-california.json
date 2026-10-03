@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/264206241",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.outwardbound.org/obca/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.outwardbound.org/obca/contact-us/",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-outward-bound-california",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Outward Bound California' (ProPublica Nonprofit Explorer, EIN 26-4206241), located in San Francisco, CA, matching the agenda's 'San Francisco, CA'",
+      "Organization's own website describes youth, high school and middle school outdoor programs for schools and groups, consistent with OUSD's 'After-school & summer programs' and High School Linked Learning Office contract",
+      "Website address is in San Francisco, CA (548 Market St PMB 68876), matching the ProPublica city"
+    ],
+    "key": "n-outward-bound-california",
+    "notes": "Website is a subpage of the national Outward Bound site (outwardbound.org/obca/); outwardboundcalifornia.org redirects there. No general email found. No OUSD or Oakland mention found on the organization's pages; identity rests on name, city and program match.",
+    "profile": {
+      "address": "548 Market St PMB 68876, San Francisco, California 94104-5401",
+      "caEntityNumber": null,
+      "ein": "26-4206241",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Outward Bound California",
+      "orgType": "nonprofit",
+      "phone": "415.933.6222",
+      "samUei": null,
+      "summary": "A nonprofit that runs outdoor education programs in California, including backpacking, rock climbing and challenge course activities. It offers courses for youth, schools and groups, adults, corporate teams and veterans, and serves more than 3,000 people a year.",
+      "website": "https://www.outwardbound.org/obca/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Outward Bound California - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/264206241"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Outward Bound California",
+        "url": "https://www.outwardbound.org/obca/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "legalName"
+        ],
+        "title": "Contact Us - Outward Bound California",
+        "url": "https://www.outwardbound.org/obca/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-outward-bound-california",
+    "notes": "Name, San Francisco location and school/youth outdoor programs match the agenda record; ProPublica confirms legal name, EIN 26-4206241 and 501(c)(3) status, and the organization's site and contact page confirm phone, address, programs, audiences and the 3,000+ students per year figure. The summary is neutral and supported; the sources do not mention OUSD, so identity rests on name, city and program fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

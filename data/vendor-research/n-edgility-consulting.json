@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_nh/733074",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edgilitytalent.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edgilitytalent.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-edgility-consulting",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered New Hampshire LLC: 'Edgility Consulting, LLC' (OpenCorporates, entity 733074), with a registered address in Keene, NH, matching the agenda location 'Keene, NH'",
+      "The website edgilitytalent.com carries the title 'Contact - Edgility Consulting' and describes talent management, compensation and hiring services for schools and nonprofits, matching OUSD's 'Staff & hiring' contract category",
+      "The registry address (17 Elm Street, Suite C211, Keene, NH) is the same address that public listings give for Edgility Talent Partners"
+    ],
+    "key": "n-edgility-consulting",
+    "notes": "OpenCorporates shows the New Hampshire LLC with a withdraw/dissolve/cancel filing dated August 17, 2026, so the legal entity may be dissolved or succeeded by another entity while the business continues as Edgility Talent Partners. The website does not state its legal entity name; the link between the website and the LLC rests on the matching name in the page title, the Keene location and the service type. Reviewer may want to confirm. Street address left null because the contact page does not show one. OpenCorporates lists different phone numbers (603-903-7366, 888-449-2638) than the website; the website number is used.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@edgilitytalent.com",
+      "headquarters": "Keene, NH",
+      "legalName": "Edgility Consulting, LLC",
+      "orgType": "company",
+      "phone": "(603) 307-2532",
+      "samUei": null,
+      "summary": "Edgility Talent Partners (formerly and legally Edgility Consulting, LLC) is a consulting firm that helps schools, nonprofits and other mission-driven organizations with talent management and pay. Its services include compensation design, performance management, talent planning, succession planning and board advisory support.",
+      "website": "https://www.edgilitytalent.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "EDGILITY CONSULTING, LLC :: New Hampshire (US) :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_nh/733074"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "website",
+          "summary"
+        ],
+        "title": "Contact - Edgility Consulting",
+        "url": "https://www.edgilitytalent.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Talent Management and Compensation Services",
+        "url": "https://www.edgilitytalent.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-edgility-consulting",
+    "notes": "The NH LLC 'Edgility Consulting, LLC' is registered at 17 Elm St, Keene, NH, matching the agenda location. Edgility Talent Partners lists the same Keene address, its contact page is titled 'Edgility Consulting' and says the firm is also referred to as Edgility Consulting, and its talent and hiring services for schools fit 'Staff & hiring'. Website, phone, email, services and summary are supported by the cited pages. The LLC shows a dissolve/withdraw filing in August 2026, so the 'legally' wording in the summary is loose, but the profile does not claim the entity is active.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

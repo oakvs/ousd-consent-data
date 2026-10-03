@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942161304",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://caasf.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://caasf.org/mission-vision-history/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008193",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Chinese For Affirmative Action' (ProPublica Nonprofit Explorer, EIN 94-2161304)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "Website lists education equity among its focus areas, consistent with OUSD's 'Student health, support & family services' contract"
+    ],
+    "key": "v-008193",
+    "notes": "No page found mentioning OUSD directly; identity rests on exact name, San Francisco location and education-equity work.",
+    "profile": {
+      "address": "17 Walter U. Lum Place, San Francisco, CA 94108",
+      "caEntityNumber": null,
+      "ein": "94-2161304",
+      "email": "info@caasf.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Chinese For Affirmative Action",
+      "orgType": "nonprofit",
+      "phone": "415.274.6750",
+      "samUei": null,
+      "summary": "A San Francisco nonprofit civil rights organization founded in 1969. It works on behalf of Asian American and Pacific Islander communities on immigrant rights, language diversity, education equity, economic justice and community safety.",
+      "website": "https://caasf.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Chinese For Affirmative Action - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942161304"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact Us - Chinese for Affirmative Action",
+        "url": "https://caasf.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Mission, Vision & History - Chinese for Affirmative Action",
+        "url": "https://caasf.org/mission-vision-history/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008193",
+    "notes": "Exact name and San Francisco location match the agenda; ProPublica confirms the 501(c)(3) and EIN, and caasf.org pages confirm the contact details, 1969 founding and issue areas. Summary is neutral and supported; no OUSD-specific page exists, but the match is a unique full name plus city.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

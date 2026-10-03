@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/946135772",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.act-sf.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.act-sf.org/community/teaching-and-learning/actsmart-residencies/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000399",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'American Conservatory Theatre Foundation', San Francisco, CA (ProPublica, EIN 94-6135772), matching the agenda's San Francisco, CA location",
+      "A.C.T. website describes in-school theater residencies (ACTsmart) and lists Peralta Elementary School among its residency partners, matching the OUSD agreements for Peralta Elementary School",
+      "A.C.T. describes education programs serving Bay Area young people and educators, consistent with OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "v-000399",
+    "notes": "Phone, email and address omitted: the website's only listed contact is a box office line and ticketing email, not a general business contact. ProPublica lists the legal name as 'American Conservatory Theatre Foundation'; the agenda uses 'American Conservatory Theater'. CA entity number and SAM UEI not found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-6135772",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "American Conservatory Theatre Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "American Conservatory Theater (A.C.T.) is a nonprofit theater company in San Francisco. It produces theater performances, offers acting training for young people and adults, and runs education programs including in-school theater residencies for schools and community organizations.",
+      "website": "https://www.act-sf.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "American Conservatory Theatre Foundation - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/946135772"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About A.C.T.",
+        "url": "https://www.act-sf.org/about-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "ACTsmart Residencies",
+        "url": "https://www.act-sf.org/community/teaching-and-learning/actsmart-residencies/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000399",
+    "notes": "ProPublica confirms American Conservatory Theatre Foundation, a San Francisco 501(c)(3) (EIN 94-6135772), matching the agenda's SF location. The A.C.T. site confirms it is a nonprofit theater with youth and adult training, and its ACTsmart residencies page lists Peralta Elementary School, matching the OUSD agreements. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

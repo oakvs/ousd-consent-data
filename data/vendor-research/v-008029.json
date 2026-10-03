@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.powerfuled.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/260326342",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008029",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Center For Powerful Public Schools' (ProPublica Nonprofit Explorer, EIN 26-0326342); the name is distinctive and no similarly named organization turned up",
+      "Based in Los Angeles, CA per its own website, matching the agenda's 'Los Angeles, CA'",
+      "Its website describes coaching, professional development and family and community engagement work for public schools, consistent with OUSD contracting it for community schools and student services",
+      "No page found mentions Oakland or OUSD directly"
+    ],
+    "key": "v-008029",
+    "notes": "No direct web evidence of an OUSD tie was found; identity rests on the distinctive name, the Los Angeles location and the type of services. ProPublica lists the IRS address city as South Pasadena, CA, while the organization's website and GuideStar say Los Angeles; address was therefore omitted. No phone or general email appears on the website (contact form only).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "26-0326342",
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Center For Powerful Public Schools",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that works with public schools and districts, mainly in Los Angeles. It offers coaching, technical assistance and professional development for teachers and school leaders, plus family and community engagement support. Its stated mission is to build the skills of educators so that schools can prepare every student for college, career and life.",
+      "website": "https://www.powerfuled.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Center for Powerful Public Schools",
+        "url": "https://www.powerfuled.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Center For Powerful Public Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/260326342"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008029",
+    "notes": "Agenda name 'The Center for Powerful Public Schools' (Los Angeles, CA) matches the distinctive nonprofit at powerfuled.org (LA-based; ProPublica EIN 26-0326342), whose coaching, PD and family/community engagement services fit OUSD's community schools and student services contracts. Summary and mission wording are supported by the website; no direct OUSD mention was found, but the name, location and service fit are consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

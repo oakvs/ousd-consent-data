@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://relayhub.com/compuclaim-is-now-relay/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cbinsights.com/company/compuclaim",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001162",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Relay's announcement says the legal entity remains 'CompuClaim, LLC' (Relay is the new brand name), the same name as in the OUSD agenda",
+      "Located in Newport, Rhode Island, matching the agenda text 'Newport, RI' (CB Insights lists headquarters at Newport, RI)",
+      "Business is school-based Medicaid billing for K-12 districts, matching OUSD's Medi-Cal Billing Option / LEA Medi-Cal funding and Student health services contracts"
+    ],
+    "key": "v-001162",
+    "notes": "Brand changed to Relay (relayhub.com); legal entity remains CompuClaim, LLC per the company. No public phone, email or address found on the company site, and the old compuclaim.com site did not load. Registry IDs not found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Newport, RI",
+      "legalName": "CompuClaim, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "CompuClaim, LLC is a company that provides software and services to K-12 school districts for Medicaid billing, claiming and documentation of special education and health services. It now uses the brand name Relay. It was founded in 1993 and is based in Newport, Rhode Island.",
+      "website": "https://relayhub.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "CompuClaim is now Relay!",
+        "url": "https://relayhub.com/compuclaim-is-now-relay/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "summary"
+        ],
+        "title": "CompuClaim - Products, Competitors, Financials, Employees, Headquarters Locations",
+        "url": "https://www.cbinsights.com/company/compuclaim"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001162",
+    "notes": "Name (CompuClaim, LLC), Newport RI location and Medicaid billing business match the agenda and OUSD's Medi-Cal Billing Option funding. The Relay page confirms the rebrand and legal name; CB Insights confirms the 1993 founding, Newport RI headquarters and K-12 Medicaid billing. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

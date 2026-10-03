@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://murakaminelson.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://murakaminelson.com/firm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002660",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm's own website names itself 'murakami/nelson architectural corporation', matching the distinctive agenda name 'Murakami/Nelson Architectural Corporation'",
+      "Firm is based in Oakland, CA (4096 Piedmont Avenue), matching the agenda location 'Oakland, CA'",
+      "Firm is an architecture practice with an Education portfolio, matching OUSD contracting it for architectural services on a school field and bleachers project (School buildings & construction)"
+    ],
+    "key": "v-002660",
+    "notes": "Phone, email and registry IDs not found on the firm's own pages (CA Secretary of State search not retrievable). Third-party directories list an older address (100 Filbert St, Oakland) and phone (510) 444-7959; not used. The firm's site does not list OUSD projects; the OUSD link rests on name, location and sector match.",
+    "profile": {
+      "address": "4096 Piedmont Avenue, Suite #324, Oakland, California 94611",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Murakami/Nelson Architectural Corporation",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "An architecture firm in Oakland, California, that has practiced since 1955. It offers urban planning, new buildings, adaptive re-use, historic preservation, programming, space planning and tenant improvements. Its projects include civic, commercial, education, planning, residential and transportation work.",
+      "website": "http://murakaminelson.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Contact — murakami/Nelson",
+        "url": "http://murakaminelson.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Firm — murakami/Nelson",
+        "url": "http://murakaminelson.com/firm"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002660",
+    "notes": "The firm's own site shows the exact distinctive name (Murakami/Nelson Architectural Corporation), an Oakland address, and an architecture practice with an education portfolio, which fits OUSD's architectural services contract. The site does not mention OUSD or Castlemont, so the link rests on the name, location and sector match. The summary and address match the cited firm and contact pages and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

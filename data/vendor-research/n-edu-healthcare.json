@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.nhcompanyregistry.com/companies/edu-healthcare-llc/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.speechpathology.com/partners/edu-healthcare/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/edu-healthcare",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eduhealthcare.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-edu-healthcare",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches EDU HEALTHCARE, LLC, a company with a principal address at 18820 Statesville Road, Cornelius, NC, matching the agenda's 'Cornelius, NC' (New Hampshire company registry listing)",
+      "Company provides therapy, nursing and special education staffing to public and private school districts nationwide, matching OUSD's 'Special education' contract and Special Education Funding source (SpeechPathology.com partner page, LinkedIn company page)",
+      "Website eduhealthcare.com is listed consistently on LinkedIn and SpeechPathology.com for the same company"
+    ],
+    "key": "n-edu-healthcare",
+    "notes": "The company's own website is JavaScript-rendered and could not be read, so contact details come from third-party pages. LinkedIn lists headquarters as Huntersville, NC and SpeechPathology.com says Charlotte, NC; the registry address and the agenda both say Cornelius, NC. No EIN, CA entity number or SAM UEI found.",
+    "profile": {
+      "address": "18820 Statesville Road, Cornelius, NC, 28031",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Cornelius, NC",
+      "legalName": "EDU HEALTHCARE, LLC",
+      "orgType": "company",
+      "phone": "866-757-1272",
+      "samUei": null,
+      "summary": "EDU Healthcare is a woman-owned company that provides healthcare and special education services to school districts in all 50 states. It places therapists, nurses and special education staff in public and private schools, including speech, occupational and physical therapy, school psychology and counseling.",
+      "website": "http://www.eduhealthcare.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "EDU HEALTHCARE, LLC",
+        "url": "https://www.nhcompanyregistry.com/companies/edu-healthcare-llc/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "website"
+        ],
+        "title": "EDU Healthcare",
+        "url": "https://www.speechpathology.com/partners/edu-healthcare/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "EDU Healthcare",
+        "url": "https://www.linkedin.com/company/edu-healthcare"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "EDU Healthcare - Healthcare & Education Staffing Jobs Nationwide",
+        "url": "https://www.eduhealthcare.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-edu-healthcare",
+    "notes": "The NH registry lists EDU HEALTHCARE, LLC at 18820 Statesville Road, Cornelius, NC with healthcare staffing as its purpose, which matches the agenda's Cornelius, NC and the special education services contract. SpeechPathology.com and LinkedIn support the neutral summary, the website and the phone number; their Charlotte and Huntersville headquarters differ from the registry but are in the same area, and the profile uses the registry address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

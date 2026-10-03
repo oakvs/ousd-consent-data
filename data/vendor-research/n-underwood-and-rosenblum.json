@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.uandr.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.uandr.com/land-surveying/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.uandr.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-underwood-and-rosenblum",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own contact page names 'Underwood & Rosenblum, Inc.', exactly matching the agenda name",
+      "Located in San Jose, CA (1630 Oakland Road), matching the agenda's San Jose, CA",
+      "Website describes land surveying including topographic surveys and experience serving school districts, matching OUSD's 'Site Survey Services Project at Various Schools Sites' contract"
+    ],
+    "key": "n-underwood-and-rosenblum",
+    "notes": "General email omitted (obfuscated on contact page). No registry IDs checked.",
+    "profile": {
+      "address": "1630 Oakland Road, Suite A114, San Jose, CA 95131",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Jose, CA",
+      "legalName": "Underwood & Rosenblum, Inc.",
+      "orgType": "company",
+      "phone": "(408) 453-1222",
+      "samUei": null,
+      "summary": "A civil engineering and land surveying firm in San Jose, California. It provides boundary, topographic, utility and ALTA/NSPS land title surveys, construction staking and subdivision mapping. Its clients include school districts, municipalities and commercial clients.",
+      "website": "https://www.uandr.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Underwood & Rosenblum",
+        "url": "https://www.uandr.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Land Surveying - Underwood & Rosenblum",
+        "url": "https://www.uandr.com/land-surveying/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Underwood & Rosenblum - Civil Engineers & Land Surveyors",
+        "url": "https://www.uandr.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-underwood-and-rosenblum",
+    "notes": "The company's own pages show the exact name 'Underwood & Rosenblum, Inc.' in San Jose, CA, and list land surveying (topographic, boundary, utility, ALTA/NSPS, staking, subdivision mapping) for school districts, matching OUSD's site survey services contract. Address, phone, headquarters, website and the neutral summary are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ct3education.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ct3education.com/what-we-do-1/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ct3education.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/san-francisco-business/0477392-01-001",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001016",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "San Francisco business registration record 0477392 (via OpenGov) lists the DBA 'Center For Transformative Teac' (owner Eduservice Inc) at 1559 B Sloat Blvd, #326, San Francisco, CA 94132, the same address that ct3education.com publishes as CT3 Education's mailing address",
+      "A company profile (theorg.com) states CT3 stands for 'Center for Transformative Teacher Training', located in San Francisco, matching the agenda's San Francisco, CA",
+      "CT3 Education's website describes teacher professional development and classroom coaching, matching OUSD's 'Classroom & academic programs' contracts at school sites"
+    ],
+    "key": "v-001016",
+    "notes": "The ct3education.com site never spells out 'Center for Transformative Teacher Training'; the link rests on the SF business registry DBA at the identical address plus a third-party profile (theorg.com). The registry lists the owner as Eduservice Inc, which may be the legal entity, but it was not confirmed on a primary source so legalName is left null. The site's privacy policy says the Company is a non-profit, but no EIN or CA entity number was found, so orgType is left null.",
+    "profile": {
+      "address": "1559 B Sloat Blvd., #326, San Francisco, CA 94132",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@ct3education.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "1-800-561-3073",
+      "samUei": null,
+      "summary": "CT3 Education, also known as the Center for Transformative Teacher Training, provides professional development and coaching for teachers and school leaders. Its programs include classroom-management training, Real Time Teacher Coaching, in-classroom coaching with immediate feedback, and online courses. It is based in San Francisco, California.",
+      "website": "https://www.ct3education.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Teacher Professional Development & Training Programs",
+        "url": "https://www.ct3education.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "What We Do: Teacher Training - CT3",
+        "url": "https://www.ct3education.com/what-we-do-1/"
+      },
+      {
+        "supports": [
+          "email",
+          "phone",
+          "address"
+        ],
+        "title": "Contact CT3 Education",
+        "url": "https://www.ct3education.com/contact-us/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Center For Transformative Teac - Eduservice Inc - San Francisco business registration",
+        "url": "https://opengovus.com/san-francisco-business/0477392-01-001"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001016",
+    "notes": "The SF business registration shows the DBA 'Center For Transformative Teac' (owner Eduservice Inc) at the same address CT3 Education publishes on its site and contact page, and the teacher-coaching services fit OUSD's classroom and academic program contracts at school sites. Summary, website, phone, generic info@ email, address and headquarters are all confirmed on the cited pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

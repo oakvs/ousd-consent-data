@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://epicenternow.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nationalcharterschools.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nationalcharterschools.org/our-story/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/officeofcharterschools/for-charter-school-staff/compliance-center",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-epicenter",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Epicenter is a software platform for charter school authorizers, run by the National Charter Schools Institute in Mount Pleasant, Michigan, matching the agenda location 'Mt. Pleasant, MI'",
+      "OUSD's Office of Charter Schools page says OCS contracted with Epicenter, a software platform for charter authorizing, matching the agenda title 'Services Agreement 2022-2023 - Epicenter - Charter Schools Office' and the 'Technology' category",
+      "Epicenter's own About page and the Institute's pages identify Epicenter as the Institute's compliance and performance management platform for charter authorizers"
+    ],
+    "key": "n-epicenter",
+    "notes": "Phone, email and address are the National Charter Schools Institute's main contact details (the operating nonprofit); Epicenter also lists a separate support line and email on its own site. EIN not confirmed (ProPublica was rate-limited), so left null. The OUSD page confirms the Charter Schools Office's use of Epicenter, though it describes the 2023-24 school year.",
+    "profile": {
+      "address": "711 West Pickard Street, Suite M, Mount Pleasant, Michigan 48858",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@nationalcharterschools.org",
+      "headquarters": "Mount Pleasant, MI",
+      "legalName": "National Charter Schools Institute",
+      "orgType": "nonprofit",
+      "phone": "(989) 317-3510",
+      "samUei": null,
+      "summary": "Epicenter is a web-based software platform for charter school authorizers, schools and management organizations. It helps them manage documents, compliance, reporting and governance in one place. It is run by the National Charter Schools Institute, a nonprofit based in Mount Pleasant, Michigan.",
+      "website": "https://epicenternow.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About - Epicenter",
+        "url": "https://epicenternow.org/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - National Charter Schools Institute",
+        "url": "https://nationalcharterschools.org/contact/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Our Story - National Charter Schools Institute",
+        "url": "https://nationalcharterschools.org/our-story/"
+      },
+      {
+        "supports": [],
+        "title": "Compliance Center - Oakland Unified School District",
+        "url": "https://www.ousd.org/officeofcharterschools/for-charter-school-staff/compliance-center"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-epicenter",
+    "notes": "Epicenter is operated by the National Charter Schools Institute (Mount Pleasant, MI), matching the agenda location, and OUSD's Office of Charter Schools page confirms it contracts with Epicenter for charter compliance software. Summary, 501(c)(3) nonprofit status, and the Institute's phone, email and address were confirmed on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

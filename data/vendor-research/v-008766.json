@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.capitalbldg.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.capitalbldg.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008766",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: company's own website is titled 'Capital Building Maintenance', the name used in the agenda",
+      "Located in South San Francisco, CA (432 North Canal Street, Suite 16), matching the agenda's location",
+      "Provides commercial building maintenance and cleaning services, consistent with OUSD's operations-type services agreement under the Risk Management Department"
+    ],
+    "key": "v-008766",
+    "notes": "Legal name taken from the company website; third-party contractor directories list it as 'Capital Building Maintenance & Cleaning Services, Inc.'. No registry IDs were verified (CA Secretary of State not checked). No website page mentions OUSD.",
+    "profile": {
+      "address": "432 North Canal Street, Suite 16, South San Francisco, CA, 94080",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "office@capitalbldg.com",
+      "headquarters": "South San Francisco, CA",
+      "legalName": "Capital Building Maintenance",
+      "orgType": "company",
+      "phone": "650-588-9808",
+      "samUei": null,
+      "summary": "A company in South San Francisco that provides commercial building maintenance and cleaning services in the Bay Area. Its services include window washing, pressure washing, construction cleanup, floor maintenance, trash removal and painting.",
+      "website": "https://www.capitalbldg.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Home - Capital Building Maintenance",
+        "url": "https://www.capitalbldg.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact Us - Capital Building Maintenance",
+        "url": "https://www.capitalbldg.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008766",
+    "notes": "Name and South San Francisco location match the agenda, and the company's site lists janitorial services including K-12 cleaning, which fits an operations services agreement. The site gives only a trade name with no legal entity designation, so legalName is not confirmed; the summary, phone, email, address and website are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}

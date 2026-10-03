@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.mccampbell.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mccampbell.com/contact-us.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.govintel.ai/companies/ca/mccampbell-analytical-incorporated-2011888",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004985",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: McCampbell Analytical, Inc. is an environmental testing laboratory located at 1534 Willow Pass Road, Pittsburg, CA 94565, matching the agenda location 'Pittsburg, CA' (company website)",
+      "Its drinking-water and environmental testing services fit OUSD's Risk Management Department contracts funded from Property & Liability (company website)",
+      "The Oaklandside article on OUSD's lead testing reports says McCampbell Analytical conducted the district's water testing",
+      "A federal-contractor profile lists MCCAMPBELL ANALYTICAL INCORPORATED in Pittsburg, CA, established 1991, consistent with the company website"
+    ],
+    "key": "v-004985",
+    "notes": "UEI taken from a third-party federal-contractor profile (govintel.ai), not directly from SAM.gov, which that profile says shows registration expired March 2026. EIN and California entity number not found (not a nonprofit; Secretary of State search not fetched).",
+    "profile": {
+      "address": "1534 Willow Pass Road, Pittsburg, CA 94565",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "main@mccampbell.com",
+      "headquarters": "Pittsburg, CA",
+      "legalName": "McCampbell Analytical, Inc.",
+      "orgType": "company",
+      "phone": "925-252-9262",
+      "samUei": "L68MYFJ63E59",
+      "summary": "McCampbell Analytical is a full-service environmental and analytical testing laboratory in the San Francisco Bay Area. It tests water, soil, air and hazardous materials for contaminants such as metals and PFAS (a class of long-lasting chemicals). Its customers include environmental consultants, municipalities, industrial clients and homeowners.",
+      "website": "https://www.mccampbell.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "McCampbell Analytical, Inc. - Environmental Testing Laboratory in the San Francisco Bay Area",
+        "url": "https://www.mccampbell.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "McCampbell Analytical, Inc. - Contact McCampbell Analytical",
+        "url": "https://www.mccampbell.com/contact-us.php"
+      },
+      {
+        "supports": [
+          "samUei",
+          "orgType"
+        ],
+        "title": "MCCAMPBELL ANALYTICAL INCORPORATED - Federal Contracts, Awards & Government Contractor Profile",
+        "url": "https://www.govintel.ai/companies/ca/mccampbell-analytical-incorporated-2011888"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004985",
+    "notes": "The company website shows McCampbell Analytical, Inc. at 1534 Willow Pass Road, Pittsburg, CA, matching the agenda city, and its water-testing services fit the Risk Management agreements. The summary, contact fields and UEI (via govintel.ai, SAM status expired) are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

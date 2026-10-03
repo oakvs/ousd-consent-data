@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2850954",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/berkeley/vp-hauling-demolition",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-008454",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name 'Vp Hauling & Demolition' matches the agenda's 'VP Hauling and Demolition'; a California Secretary of State-derived record (bizprofile.net) shows an active general corporation, entity number 3262122, classified as tree service / demolition contractor",
+      "Located in Berkeley, CA (1700 Shattuck Ave Ste 19), matching the agenda's 'Berkeley, CA'; the FMCSA SAFER record and BBB listing give the same address and phone",
+      "Line of business (demolition, hauling of garbage, construction materials and farm supplies, tree service) is consistent with a vegetation fire management / weed abatement maintenance contract"
+    ],
+    "key": "v-008454",
+    "notes": "Company website (vphauling.com) and email could not be verified: the site has a broken TLS certificate and cannot be fetched, so both were omitted. Entity number comes from a third-party aggregator of California Secretary of State data; the official bizfile site was not checked directly. No direct page links this company to OUSD; identity rests on name, city and trade.",
+    "profile": {
+      "address": "1700 Shattuck Avenue Suite 19, Berkeley, CA 94709",
+      "caEntityNumber": "3262122",
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Vp Hauling & Demolition",
+      "orgType": "company",
+      "phone": "(510) 205-5840",
+      "samUei": null,
+      "summary": "A Berkeley, California company that provides demolition and hauling services. Its federal transportation registration lists hauling of garbage and refuse, construction materials, and agricultural supplies within California.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "SAFER Web - Company Snapshot VP HAULING & DEMOLITION",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2850954"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Vp Hauling & Demolition Berkeley, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/berkeley/vp-hauling-demolition"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008454",
+    "notes": "SAFER and the CA filing aggregator both show VP Hauling & Demolition at 1700 Shattuck Ave, Berkeley (active general corporation 3262122, classified tree service / demolition contractor, carrying garbage, construction materials and farm supplies), matching the agenda's name and Berkeley location and fitting a vegetation/weed abatement maintenance contract. The summary and business contact fields are supported and neutral; no source links the company directly to OUSD, but name, city and trade align.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

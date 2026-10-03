@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.edvance.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edvance.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edvance.edu/our-story",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wscuc.org/institutions/edvance-college/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009144",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'EDvance College' (edvance.edu); the agenda gives San Francisco, CA and the college is headquartered at 580 Market Street, San Francisco",
+      "The college trains early childhood educators, matching OUSD's 'Early Educator Teacher Develop' funding source and Talent/HR contract",
+      "EDvance College's Employer Partners page lists Oakland Unified School District (OUSD) among its current partners",
+      "WSCUC accreditation directory lists EDvance College as a non-profit institution at the same San Francisco address"
+    ],
+    "key": "v-009144",
+    "notes": "No EIN or CA entity number found; ProPublica returned no match and the college is recently independent. Legal name not stated on the site beyond 'EDvance College'. Phone omitted: only a WSCUC directory listing shows a number and the college site lists only a fax.",
+    "profile": {
+      "address": "580 Market Street, Ste 150, San Francisco, CA 94104",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@edvance.edu",
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "EDvance College is an independent nonprofit college in San Francisco for people who work in early childhood education. It offers a remote bachelor's degree in Early Childhood Studies, general education courses and a teacher permit certificate. Students are working educators, and the college partners with employers such as school districts. It is accredited by the WASC Senior College and University Commission.",
+      "website": "https://www.edvance.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "EDvance College",
+        "url": "https://www.edvance.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address"
+        ],
+        "title": "About",
+        "url": "https://www.edvance.edu/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Our Story",
+        "url": "https://www.edvance.edu/our-story"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters"
+        ],
+        "title": "EDvance College - WSCUC",
+        "url": "https://www.wscuc.org/institutions/edvance-college/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009144",
+    "notes": "EDvance College's own site and the WSCUC directory confirm a nonprofit, WSCUC-accredited early-childhood-educator college at 580 Market St, San Francisco, matching the agenda name, city and the early-educator funding source. Its Employer Partners page lists OUSD, and the summary, email, address and orgType are all supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

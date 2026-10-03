@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.govconinabox.com/explore/contractors/profile/stephens-construction-inc-hpq9eq",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/stephens-construction-inc-327463773/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/arnold/profile/plumber/stephens-construction-inc-1156-90027819",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://mymotherlode.com/directory-listings/listing/stephens-construction-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-stephens-construction",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'Stephens Construction, Inc.' with headquarters in Arnold, CA, the same city given in the OUSD agenda text (GovConInBox federal registration profile; HigherGov; BBB)",
+      "Public pages describe a mechanical contractor (plumbing, heating, air conditioning, boilers), matching OUSD's contract for a Kaiser Child Development Center boiler replacement",
+      "Public search results show the same Arnold, CA firm doing boiler replacement work for other California school districts, consistent with this scope of work"
+    ],
+    "key": "n-stephens-construction",
+    "notes": "No official website found for the Arnold firm. stephensconstruction.com belongs to an unrelated Houston company and stephensmechanical.com to an unrelated Fairfield/Downey firm, so both were excluded. Two directory sites show different SAM UEIs (HigherGov C6VRTQJTQ4B1 vs GovConInBox HPQ9EQEU3NP5), so the UEI was left null. No EIN or CA entity number could be verified (registries not fetchable).",
+    "profile": {
+      "address": "1725 War Hawk Way, Arnold, CA 95223",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Arnold, CA",
+      "legalName": "Stephens Construction, Inc.",
+      "orgType": "company",
+      "phone": "(209) 795-3154",
+      "samUei": null,
+      "summary": "A for-profit mechanical construction contractor based in Arnold, California. It does plumbing, heating and air conditioning, and boiler work, and has worked on public projects such as school boiler replacements and a federal dock replacement.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "STEPHENS CONSTRUCTION, INC. - Company Profile",
+        "url": "https://www.govconinabox.com/explore/contractors/profile/stephens-construction-inc-hpq9eq"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Stephens Construction",
+        "url": "https://www.highergov.com/awardee/stephens-construction-inc-327463773/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Stephens Construction Inc",
+        "url": "https://www.bbb.org/us/ca/arnold/profile/plumber/stephens-construction-inc-1156-90027819"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Stephens Construction Inc - myMotherLode.com",
+        "url": "https://mymotherlode.com/directory-listings/listing/stephens-construction-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-stephens-construction",
+    "notes": "Arnold, CA mechanical contractor (plumbing/HVAC/boilers, NAICS 238220) matches the agenda's name, city and boiler-replacement scope; address and phone confirmed on BBB and myMotherLode, legal name/location/federal dock award on GovConInBox, and the school boiler work is corroborated by an SFUSD boiler replacement contract with the same firm. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

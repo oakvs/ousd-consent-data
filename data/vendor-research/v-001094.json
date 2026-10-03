@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cityspan.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cityspan.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?GUID=FF25669C-C3C4-44DB-B67A-E4594DE4FF1C&ID=4976988&Options=&Search=",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001094",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Legistar file 21-1359 names 'Cityspan Technologies, Inc., Berkeley, CA' for a 2021-22 agreement to build a student attendance database for the Expanded Learning Office, matching the agenda name and city",
+      "cityspan.com describes software that tracks program enrollment and attendance, matching OUSD's Expanded Learning Attendance / Technology contracts",
+      "OUSD's own Expanded Learning compliance page tells program partners to use Cityspan reports for attendance",
+      "California Secretary of State branch record (via OpenCorporates) lists CITYSPAN TECHNOLOGIES, INC. with the same address as cityspan.com, confirming the website belongs to the legal entity"
+    ],
+    "key": "v-001094",
+    "notes": "OUSD agendas give Berkeley, CA (Cityspan's former address at 2054 University Ave); the current website and California registry list San Francisco, and the company is now part of ClearGov. The California branch record on OpenCorporates shows status 'Terminated' (forfeited 2016, revived 2017), so the entity number was not included. No EIN or SAM UEI found.",
+    "profile": {
+      "address": "2021 Fillmore St. #127, San Francisco, CA 94115",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "cityspan@cleargov.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Cityspan Technologies, Inc.",
+      "orgType": "company",
+      "phone": "510-665-1700",
+      "samUei": null,
+      "summary": "Cityspan is a software company that provides cloud-based data management systems for public agencies, school districts and nonprofits. Its tools help organizations track participants, program enrollment and attendance, grants and outcomes. The company is now part of ClearGov, a public sector software provider.",
+      "website": "https://www.cityspan.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Cityspan",
+        "url": "https://www.cityspan.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact Cityspan",
+        "url": "https://www.cityspan.com/contact"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Oakland Unified School District - File #: 21-1359",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?GUID=FF25669C-C3C4-44DB-B67A-E4594DE4FF1C&ID=4976988&Options=&Search="
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001094",
+    "notes": "OUSD file 21-1359 names Cityspan Technologies, Inc. (Berkeley, CA) for an attendance database, matching the cityspan.com attendance-tracking software; the site now lists San Francisco and ClearGov ownership, consistent with a relocation and merger. Summary, contact fields and headquarters are confirmed on cityspan.com/about and /contact and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

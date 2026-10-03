@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/475066819",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mindfullifeproject.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mindfullifeproject.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007985",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Mindful Life Project' in Richmond, CA, EIN 47-5066819 (ProPublica Nonprofit Explorer), matching the agenda's Richmond, CA",
+      "Official website describes mindfulness and social-emotional learning programs delivered in schools, matching OUSD's 'Student health, support & family services' and school-based contracts",
+      "Organization is headquartered in the Bay Area and serves Title I schools, consistent with contracts for Oakland elementary schools"
+    ],
+    "key": "v-007985",
+    "notes": "Third-party listings show an older address (1001 Canal Blvd, Richmond); the organization's own contact page shows 423 High St., used here. Website pages do not mention Oakland Unified explicitly.",
+    "profile": {
+      "address": "423 High St. Richmond, CA, 94801",
+      "caEntityNumber": null,
+      "ein": "47-5066819",
+      "email": "Info@mindfullifeproject.org",
+      "headquarters": "Richmond, CA",
+      "legalName": "Mindful Life Project",
+      "orgType": "nonprofit",
+      "phone": "510-517-6290",
+      "samUei": null,
+      "summary": "A nonprofit based in Richmond, California, that provides mindfulness and social-emotional learning programs in schools. It works mainly with elementary and middle schools that receive Title I funding. The programs support the mental and emotional wellness of students, teachers, staff, leaders and families.",
+      "website": "https://mindfullifeproject.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Mindful Life Project - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/475066819"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About - Mindful Life Project",
+        "url": "https://mindfullifeproject.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Mindful Life Project",
+        "url": "https://mindfullifeproject.org/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007985",
+    "notes": "Name and Richmond, CA location match the agenda; ProPublica confirms the 501(c)(3) and EIN 47-5066819, and the organization's about and contact pages confirm the school-based mindfulness/SEL work, phone, email and address. The summary is neutral and supported (TK-8 Title I schools); the sources do not mention Oakland, but the service type fits OUSD's school-based contracts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

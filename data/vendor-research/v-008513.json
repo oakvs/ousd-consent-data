@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941415317",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lighthouse-sf.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lighthouse-sf.org/program/lighthouse-little-learners/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008513",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Lighthouse For The Blind And Visually Impaired', San Francisco, CA, EIN 94-1415317 (ProPublica Nonprofit Explorer)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "The organization runs a program called 'LightHouse Little Learners', matching the agenda's 'LightHouse for the Blind, Little Learner Program'",
+      "Its services for blind and low-vision children and families are consistent with an OUSD Special Education Department contract"
+    ],
+    "key": "v-008513",
+    "notes": "California Secretary of State entity number and SAM UEI not looked up. The cited page does not mention OUSD specifically; identity rests on name, city and program-name match.",
+    "profile": {
+      "address": "1155 Market Street, 10th Floor, San Francisco, CA 94103",
+      "caEntityNumber": null,
+      "ein": "94-1415317",
+      "email": "info@lighthouse-sf.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Lighthouse For The Blind And Visually Impaired",
+      "orgType": "nonprofit",
+      "phone": "415-431-1481",
+      "samUei": null,
+      "summary": "A San Francisco nonprofit that provides services by and for people who are blind or have low vision. Its programs include access technology training, skills instruction, and youth and family programs across Northern California. Its Little Learners program offers home-based early intervention for children from birth to age three.",
+      "website": "https://lighthouse-sf.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Lighthouse For The Blind And Visually Impaired - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941415317"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - LightHouse for the Blind and Visually Impaired",
+        "url": "https://lighthouse-sf.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "LightHouse Little Learners - LightHouse for the Blind and Visually Impaired",
+        "url": "https://lighthouse-sf.org/program/lighthouse-little-learners/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008513",
+    "notes": "ProPublica lists the 501(c)(3) in San Francisco (EIN 94-1415317), and the agenda's 'Little Learner Program' matches the org's LightHouse Little Learners program, which serves Alameda County. The contact page and program page support the contact details and summary. The summary's 'by and for' differs slightly from the site's 'by and with' wording, which is minor.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/311779933",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergroundndc.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergroundndc.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002078",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Higher Ground Neighborhood Development Corporation', Oakland, CA (ProPublica Nonprofit Explorer, EIN 31-1779933), matching the agenda's Oakland, CA",
+      "Its own website describes after-school programming and school-based behavioral health services, matching OUSD's after-school master contract and 'Student health, support & family services' category",
+      "Its website says it partners with Oakland Unified School District on the Community School model, matching OUSD's community schools funding (CCSPP) and after-school (ASES) contracts"
+    ],
+    "key": "v-002078",
+    "notes": "Address omitted: GuideStar lists 1901 Harrison St, Oakland, CA 94612-3574 (from older filings), but it is not confirmed on the organization's own site. No CA entity number or SAM UEI looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "31-1779933",
+      "email": "higherground_ndc@yahoo.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Higher Ground Neighborhood Development Corporation",
+      "orgType": "nonprofit",
+      "phone": "510-230-5120",
+      "samUei": null,
+      "summary": "A nonprofit in Oakland, California that runs after-school programs for elementary-age children. It also offers career-to-college workforce programs, school-based behavioral health treatment, professional development, and service-learning experiences. It works with schools that use the community school model.",
+      "website": "https://www.highergroundndc.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Higher Ground Neighborhood Development Corporation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/311779933"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "Higher Ground Neighborhood Development Corp.",
+        "url": "https://www.highergroundndc.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Higher Ground NDC Contact",
+        "url": "https://www.highergroundndc.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002078",
+    "notes": "ProPublica and the organization's own site confirm an Oakland 501(c)(3) (EIN 31-1779933) running after-school, behavioral health and community-school programming and partnering with OUSD, matching the agenda's after-school and CCSPP contracts. Phone and generic org email appear on the contact page; summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

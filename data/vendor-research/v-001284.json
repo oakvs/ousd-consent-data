@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dprep.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dprepsafety.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001284",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: agenda 'D-PREP' / 'D-Prep'; the company's own site is dprep.com and calls itself DPrep Inc",
+      "Located in Folsom, CA (705 East Bidwell STE 2-357, Folsom CA 95630), matching the agenda location 'Folsom, CA'",
+      "Provides training and consulting on disaster preparedness, emergency response and threat assessment for K-12 school districts, consistent with OUSD contracting it through Risk Management and Student Services departments"
+    ],
+    "key": "v-001284",
+    "notes": "Agenda does not name an Oakland-specific link; no public page found mentioning OUSD. California Secretary of State entity number and EIN not found. The general email listed on dprep.com appears to be a named individual's address and was omitted.",
+    "profile": {
+      "address": "705 East Bidwell STE 2-357, Folsom CA 95630",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Folsom, CA",
+      "legalName": "DPrep Inc",
+      "orgType": "company",
+      "phone": "916-628-6770",
+      "samUei": null,
+      "summary": "DPrep is a training and consulting company. Since 1997 it has provided training in critical incident response, disaster preparedness and emergency response to law enforcement, K-12 school districts, colleges and universities, local governments and other organizations. Its safety division also offers training on threat assessment and behavioral intervention.",
+      "website": "https://www.dprep.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "DPrep Inc",
+        "url": "https://www.dprep.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "ABOUT - DPrep Safety",
+        "url": "https://www.dprepsafety.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001284",
+    "notes": "dprep.com and dprepsafety.com identify DPrep Inc at 705 East Bidwell, Folsom CA, matching the agenda's 'D-PREP, Folsom, CA'; its K-12 emergency-preparedness and threat-assessment training fits OUSD Risk Management and Student Services contracts. Name, address, phone, 1997 start date and client types are all confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

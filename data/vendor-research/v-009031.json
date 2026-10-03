@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942247074",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bananasbunch.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bananasbunch.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009031",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Bananas Incorporated', in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-2247074), matching the agenda's 'Bananas, Inc.' and 'Oakland, CA'",
+      "Organization's own website (bananasbunch.org) shows Oakland offices and describes child care referral and family support services, consistent with OUSD's 'Student health, support & family services' contract category for a Community Schools and Student Services Department"
+    ],
+    "key": "v-009031",
+    "notes": "The organization's own About page prints its Tax ID as '94-224707' (apparent typo, one digit short); ProPublica shows 94-2247074, which is used. No general email address confirmed (contact form only). OUSD funding source (Homeless Children & Youth II) not independently linked on the org's site.",
+    "profile": {
+      "address": "5232 Claremont Ave. Oakland, CA 94618",
+      "caEntityNumber": null,
+      "ein": "94-2247074",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Bananas Incorporated",
+      "orgType": "nonprofit",
+      "phone": "510-658-7353",
+      "samUei": null,
+      "summary": "BANANAS is a nonprofit based in Oakland, California. It helps families find and pay for child care, and offers parenting workshops, playgroups and professional development for child care providers. It serves families in Northern Alameda County.",
+      "website": "https://bananasbunch.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Bananas Incorporated - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942247074"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About BANANAS Child Care Resources and Referrals",
+        "url": "https://bananasbunch.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "BANANAS Child Care Referrals and Resources - Contact BANANAS",
+        "url": "https://bananasbunch.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009031",
+    "notes": "Bananas Incorporated is an Oakland 501(c)(3) child care resource and referral nonprofit (ProPublica EIN 94-2247074), matching the agenda name and city and plausibly a family-services contract. Summary, phone and address are supported by bananasbunch.org (the Northern Alameda County service area and subsidy help appear on its homepage); the address is one of three Oakland offices.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

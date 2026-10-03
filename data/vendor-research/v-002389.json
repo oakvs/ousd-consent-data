@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.kendallhunt.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kendallhunt.com/corporate/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002389",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches Kendall Hunt Publishing Company, which is based in Dubuque, Iowa, matching the agenda location 'Dubuque, IA' (company website and contact page show 4050 Westmark Drive, Dubuque, IA)",
+      "Company publishes PreK-12 curriculum and instructional materials (including OpenSciEd middle school science), matching OUSD's 'Classroom & academic programs' contracts presented by the Chief Academic Officer for the Academics and Instruction Department and Middle School Network"
+    ],
+    "key": "v-002389",
+    "notes": "Direct link between OUSD and Kendall Hunt products was not confirmed on a public page; identity rests on exact name, Dubuque IA location and PreK-12 curriculum publishing. Registry IDs not looked up (Iowa-based private company).",
+    "profile": {
+      "address": "4050 Westmark Drive, P.O. Box 1840, Dubuque, IA 52004-1840",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "corpinfo@kendallhunt.com",
+      "headquarters": "Dubuque, IA",
+      "legalName": "Kendall Hunt Publishing Company",
+      "orgType": "company",
+      "phone": "(800) 228-0810",
+      "samUei": null,
+      "summary": "Kendall Hunt is an educational publishing company based in Dubuque, Iowa. It publishes curriculum and instructional materials for PreK-12 schools, along with materials for higher education.",
+      "website": "https://www.kendallhunt.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Kendall Hunt Publishing Company",
+        "url": "https://www.kendallhunt.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact",
+        "url": "https://www.kendallhunt.com/corporate/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002389",
+    "notes": "Exact name and Dubuque, IA location match the agenda, and a PreK-12 curriculum publisher fits the Academics and Instruction and Middle School Network contracts. The cited home and contact pages confirm the legal name, location, phone, general email, address and the neutral summary. The candidate itself admits no public page links OUSD to Kendall Hunt, so identity rests on name, location and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

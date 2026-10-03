@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/201037643",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://movementstrategy.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://movementstrategy.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008441",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name closely matches a registered 501(c)(3) in Oakland, CA: 'Movement Strategy Center' (ProPublica Nonprofit Explorer, EIN 20-1037643); the agenda says only 'Movement Strategy' and gives Oakland, CA",
+      "A page on the organization's site (CTE TAY Hub, fiscally sponsored by Movement Strategy Center) describes a coalition that includes Oakland Unified School District and services for OUSD students and families, loosely consistent with OUSD's student-support contracts. This could not be confirmed by a direct fetch of the page."
+    ],
+    "key": "v-008441",
+    "notes": "Agenda name is 'Movement Strategy' (no 'Center'); the match rests on name similarity plus Oakland location, and no direct link between this nonprofit and the specific 2022-23 OUSD counseling/superintendent services agreements was found. Movement Strategy Center fiscally sponsors many projects, so the OUSD contract may relate to a sponsored project. Reviewer should verify against the actual agreement before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "20-1037643",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Movement Strategy Center",
+      "orgType": "nonprofit",
+      "phone": "+1 510 444-0640",
+      "samUei": null,
+      "summary": "Movement Strategy Center is an Oakland-based nonprofit founded in 2001. It describes itself as a movement support organization that offers fiscal sponsorship, philanthropic services and capacity building to social justice leaders and groups.",
+      "website": "https://movementstrategy.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Movement Strategy Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/201037643"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Movement Strategy Center",
+        "url": "https://movementstrategy.org/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact - Movement Strategy Center",
+        "url": "https://movementstrategy.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

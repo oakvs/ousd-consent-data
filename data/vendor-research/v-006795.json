@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://nitaac.nih.gov/gwacs/cio-cs/contract-holder/govconnection-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/govconnection-inc-10115438/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/Archives/edgar/data/1050377/000155837021003067/cnxn-20201231x10k.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-006795",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches federal contract holder 'GOVCONNECTION, INC.' located in Rockville, MD, matching the agenda's 'Rockville, MD' (NITAAC contract holder page)",
+      "PC Connection's SEC 10-K describes its GovConnection subsidiary serving federal, state and local government and educational institutions, consistent with a technology purchase by a school district",
+      "Same UEI and Rockville, MD location shown on both NITAAC and HigherGov records"
+    ],
+    "key": "v-006795",
+    "notes": "Company's own pages (govconnection.com) block automated fetching, so phone and email were omitted. Operates as Connection Public Sector Solutions.",
+    "profile": {
+      "address": "2275 Research Boulevard, Suite 360, Rockville, MD 20850",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Rockville, MD",
+      "legalName": "GOVCONNECTION, INC.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": "GLGWMH9BMP76",
+      "summary": "GovConnection, Inc. is a subsidiary of PC Connection, Inc. It sells computers, software and other information technology products and services to federal, state and local government agencies and educational institutions.",
+      "website": "https://www.govconnection.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "samUei"
+        ],
+        "title": "GOVCONNECTION, INC. - CIO-CS Contract Holder",
+        "url": "https://nitaac.nih.gov/gwacs/cio-cs/contract-holder/govconnection-inc"
+      },
+      {
+        "supports": [
+          "website",
+          "samUei",
+          "headquarters"
+        ],
+        "title": "Govconnection Profile",
+        "url": "https://www.highergov.com/awardee/govconnection-inc-10115438/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "PC Connection Inc Form 10-K FY2020",
+        "url": "https://www.sec.gov/Archives/edgar/data/1050377/000155837021003067/cnxn-20201231x10k.htm"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006795",
+    "notes": "GOVCONNECTION, INC. in Rockville, MD matches the agenda name and city; NITAAC and HigherGov confirm name, address, UEI, website and headquarters, and the PC Connection 10-K confirms the subsidiary relationship and its government and education customers (K-12 included), which fits a technology services agreement. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

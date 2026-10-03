@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.seedscrc.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943054165",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003855",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Seeds Community Resolution Center' (ProPublica Nonprofit Explorer, EIN 94-3054165)",
+      "Organization's own website lists a Berkeley, CA mailing address, matching the agenda's 'Berkeley, CA'",
+      "Website describes mediation, facilitation, training and restorative justice for schools, matching OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "v-003855",
+    "notes": "ProPublica lists the IRS address city as Oakland, while the organization's website gives a Berkeley PO Box (matching the agenda). The website's home page may show a different phone digit order than the About page; the About page number was used. No explicit OUSD mention found on the website.",
+    "profile": {
+      "address": "PO Box 5336, Berkeley, CA 94705",
+      "caEntityNumber": null,
+      "ein": "94-3054165",
+      "email": "info@seedscrc.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Seeds Community Resolution Center",
+      "orgType": "nonprofit",
+      "phone": "510-548-2377",
+      "samUei": null,
+      "summary": "A nonprofit community organization in the Bay Area that has offered mediation, facilitation, training and restorative justice services since 1983. It works with residents, organizations and schools to help people resolve conflicts and repair relationships. It also offers mediation certification training.",
+      "website": "https://www.seedscrc.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - SEEDS Community Resolution Center",
+        "url": "https://www.seedscrc.org/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Seeds Community Resolution Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943054165"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003855",
+    "notes": "The name matches exactly, the Berkeley PO Box matches the agenda city, and the services (mediation, restorative practices, school workshops) fit OUSD's student support category. The About page and ProPublica (EIN 94-3054165, 501(c)(3)) support the profile fields; the ProPublica Oakland address is the IRS record and does not conflict with the Berkeley mailing address. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

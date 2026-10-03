@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.amnhealthcare.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.amnhealthcare.com/about/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008221",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "The agenda name 'AMN Allied Services' matches the AMN Healthcare family of companies; search results list AMN Allied Services, LLC as a subsidiary whose member is AMN Healthcare Allied, Inc. (Florida registry listing and GovTrib could not be fetched, so this is not independently confirmed on a cited page)",
+      "AMN Healthcare's own site describes a Schools division placing speech-language pathologists, occupational and physical therapists, social workers, psychologists and behavior analysts, consistent with OUSD's special education nonpublic agency master contract",
+      "AMN Healthcare Allied has a San Diego, CA office (12400 High Bluff Dr), matching the San Diego location in the agenda text"
+    ],
+    "key": "v-008221",
+    "notes": "Profile describes the parent company AMN Healthcare, not the specific contracting entity. The OUSD vendor is 'AMN Allied Services' (San Diego), reportedly a subsidiary AMN Allied Services, LLC, but I could not confirm the exact legal entity, its CA entity number, or its relationship on a fetchable registry page (Sunbiz and GovTribe returned 403). The Dallas HQ address is the parent's, not necessarily the San Diego contracting entity's. Reviewer should verify on CA SOS bizfile before publishing.",
+    "profile": {
+      "address": "2999 Olympus Blvd, Suite 500, Dallas, TX 75019",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@amnhealthcare.com",
+      "headquarters": "Dallas, TX",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(866) 871-8519",
+      "samUei": null,
+      "summary": "AMN Healthcare is a healthcare staffing and workforce solutions company. It places nurses, allied health professionals and other clinicians in travel, temporary and permanent jobs. Its Schools division connects speech-language pathologists, therapists, social workers, psychologists and behavior analysts with schools.",
+      "website": "https://www.amnhealthcare.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About AMN Healthcare",
+        "url": "https://www.amnhealthcare.com/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "AMN Healthcare Locations",
+        "url": "https://www.amnhealthcare.com/about/locations/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

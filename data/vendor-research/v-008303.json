@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942517075",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.yep.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.yep.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008303",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'Youth Employment Partnership Inc' (ProPublica Nonprofit Explorer, EIN 94-2517075)",
+      "Located at 2300 International Boulevard, Oakland, CA 94601, the same address named in the OUSD agenda item titles ('Summer Learning Programs - 2300 International Boulevard')",
+      "Website describes job training, education and summer programs for youth ages 14-24, consistent with OUSD contracting them for after-school and summer programs"
+    ],
+    "key": "v-008303",
+    "notes": "No general email address or CA/SAM registry IDs found, left null. Website domain yep.org confirmed via search results and fetched pages.",
+    "profile": {
+      "address": "2300 International Boulevard, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "94-2517075",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Youth Employment Partnership Inc",
+      "orgType": "nonprofit",
+      "phone": "510-533-3447",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that provides job training, education support and paid work experience to young people ages 14 to 24. It runs summer and year-round youth employment programs.",
+      "website": "https://www.yep.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Youth Employment Partnership Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942517075"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "The Youth Employment Partnership - Oakland, CA",
+        "url": "https://www.yep.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact - The Youth Employment Partnership, Inc.",
+        "url": "https://www.yep.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008303",
+    "notes": "Youth Employment Partnership Inc is a 501(c)(3) in Oakland (EIN 94-2517075 per ProPublica) at 2300 International Boulevard, the same address named in the OUSD agenda titles, and its summer youth programs fit the Summer Learning Programs contract. Summary, phone, address, website, EIN and org type are all confirmed on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

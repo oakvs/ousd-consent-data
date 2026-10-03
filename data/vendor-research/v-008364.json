@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.baselandscape.com/firm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.baselandscape.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008364",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the firm's website is titled 'BASE Landscape Architecture'",
+      "Headquartered in San Francisco, CA, matching the agenda text",
+      "Website lists Oakland Unified School District among its school district clients",
+      "Firm designs school and play spaces, consistent with OUSD's 'School buildings & construction' category"
+    ],
+    "key": "v-008364",
+    "notes": "Phone, street address and registry IDs were not found on cited pages, so left null. Legal entity name (likely 'Base Landscape Architecture, Inc.') not confirmed from a registry.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "admin@baselandscape.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "BASE is a landscape architecture firm with offices in San Francisco and Portland, Oregon. It provides design documentation, master planning and bilingual community engagement for projects such as parks, school and play spaces, green roofs, pollinator gardens and stormwater management.",
+      "website": "https://www.baselandscape.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "email",
+          "headquarters"
+        ],
+        "title": "Firm | BASE Landscape Architecture",
+        "url": "https://www.baselandscape.com/firm"
+      },
+      {
+        "supports": [
+          "website",
+          "email"
+        ],
+        "title": "BASE Landscape Architecture",
+        "url": "https://www.baselandscape.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008364",
+    "notes": "The firm page confirms a San Francisco landscape architecture firm (also in Portland) that lists Oakland Unified School District as a school district client, which matches the agenda name, city and construction category. The summary, generic admin email, website and San Francisco headquarters are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

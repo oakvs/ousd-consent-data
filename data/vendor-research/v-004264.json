@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/205197607",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://managementcenter.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://managementcenter.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004264",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'The Management Center', Washington, DC, EIN 20-5197607 (ProPublica Nonprofit Explorer); agenda text also gives Washington, DC",
+      "Organization's own website describes management coaching and training for social justice and educational equity organizations, consistent with a staffing/management services agreement with OUSD's Office of the Chief of Systems and Services",
+      "Organization's contact page lists a Washington, DC mailing address, matching the agenda location"
+    ],
+    "key": "v-004264",
+    "notes": "No page found that links this organization to OUSD directly; identity rests on exact name, Washington DC location, and service fit. Contact page shows a form rather than a general email, so email is null.",
+    "profile": {
+      "address": "1930 18th St. NW Suite B2 #2308 Washington, DC 20009",
+      "caEntityNumber": null,
+      "ein": "20-5197607",
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "The Management Center",
+      "orgType": "nonprofit",
+      "phone": "202-559-7475",
+      "samUei": null,
+      "summary": "A nonprofit that helps social justice and educational equity organizations build and run their organizations well. It offers management coaching, training courses and resources for leaders and managers. It was founded in 2006 and works with organizations nationwide.",
+      "website": "https://www.managementcenter.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Management Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/205197607"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Us - The Management Center",
+        "url": "https://managementcenter.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - The Management Center",
+        "url": "https://managementcenter.org/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004264",
+    "notes": "Exact name and Washington, DC location match the agenda; ProPublica confirms EIN 20-5197607 and 501(c)(3) status, and the About and Contact pages support the summary, founding year, phone and address. Coaching and training for equity-focused organizations is a plausible fit for a services agreement with OUSD's Office of Systems and Services, though no source links the organization to OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

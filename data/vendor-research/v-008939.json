@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ktteaches.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ktteaches.com/clients",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008939",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Business site lists 'KWT Consulting, LLC' at 215 Trophy Ct, West Sacramento, CA 95605, matching the agenda's 'KWT Consulting, LLC' in West Sacramento, CA",
+      "Site offers coaching, training and consulting for school districts and educators, matching OUSD's 'Classroom & academic programs' services agreements (High School Network)",
+      "Site's testimonials page carries a testimonial from an Oakland Unified School District principal, and the phone has an Oakland-area (510) area code"
+    ],
+    "key": "v-008939",
+    "notes": "A California SOS record exists for 'KWT CONSULTING, LLC' (entity 202018910184, Sacramento address, registered via LegalZoom) but could not be tied to the West Sacramento address from a primary registry page, so no entity number is given. The site footer names the business 'Kevin W Taylor Consulting LLC' while the page title says 'KWT Consulting, LLC', so legalName is left null. A different site, kwtconsultingllc.com, belongs to an unrelated Texas counselor and was not used.",
+    "profile": {
+      "address": "215 Trophy Ct, West Sacramento, CA 95605",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "kwtconsulting510@gmail.com",
+      "headquarters": "West Sacramento, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 565-6979",
+      "samUei": null,
+      "summary": "KWT Consulting, LLC is a company that provides organizational coaching, leadership training and cultural proficiency consulting. It works with school districts, educators, businesses, municipalities and youth sports teams on workplace culture, inclusivity and organizational climate. Services include one-on-one coaching, group workshops and keynote speaking.",
+      "website": "https://www.ktteaches.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cultural Proficiency Consulting",
+        "url": "https://www.ktteaches.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Coaching & Consulting Testimonials",
+        "url": "https://www.ktteaches.com/clients"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008939",
+    "notes": "Identity matches (KWT Consulting, LLC, West Sacramento, with an OUSD principal testimonial), but the summary claims the company works with municipalities and youth sports teams, which neither cited page mentions; the summary needs to be rewritten from what the site actually states.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

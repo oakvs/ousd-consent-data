@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/842883326",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://allgoodlivingfoundation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://allgoodlivingfoundation.org/get-involved",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008546",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'All Good Living Foundation Inc', EIN 84-2883326, Alameda, CA (ProPublica Nonprofit Explorer)",
+      "Located in Alameda, CA, matching the agenda text",
+      "Website says it helps homeless children in the Bay Area and works with McKinney-Vento liaisons, matching OUSD's Homeless Children & Youth funding sources and 'Student health, support & family services' contracts"
+    ],
+    "key": "v-008546",
+    "notes": "Website does not list a phone number; phone left null. Website does not name OUSD; match rests on name, Alameda location, and homeless-youth mission matching the funding sources.",
+    "profile": {
+      "address": "2332 Alameda Ave, Alameda, CA 94501",
+      "caEntityNumber": null,
+      "ein": "84-2883326",
+      "email": "info@allgoodlivingfoundation.org",
+      "headquarters": "Alameda, CA",
+      "legalName": "All Good Living Foundation Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Alameda, California, that helps homeless and low-income children and families in the Bay Area. It runs free clothing and supply closets in Alameda County schools, food distribution and pantry programs, life skills classes, and a low-cost youth sports club.",
+      "website": "https://allgoodlivingfoundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "All Good Living Foundation Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/842883326"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "All Good Living Foundation",
+        "url": "https://allgoodlivingfoundation.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address",
+          "orgType",
+          "ein"
+        ],
+        "title": "Get Involved — All Good Living Foundation",
+        "url": "https://allgoodlivingfoundation.org/get-involved"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008546",
+    "notes": "ProPublica and the organization's site agree on name, Alameda, CA location, EIN 84-2883326 and 501(c)(3) status; the site confirms the address, info@ email and school-based programs with McKinney-Vento liaisons, which fits OUSD's homeless-youth funding. The summary is neutral and matches the listed programs.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

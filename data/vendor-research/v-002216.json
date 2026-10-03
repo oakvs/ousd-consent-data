@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/135660870",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rescue.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rescue.org/united-states/oakland-ca",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://tcf.org/content/commentary/oakland-international-high-school-lessons-for-engaging-and-supporting-newcomer-students/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002216",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the registered 501(c)(3) 'International Rescue Committee Inc', EIN 13-5660870 (ProPublica Nonprofit Explorer and rescue.org)",
+      "The IRC operates an Oakland, CA office (440 Grand Avenue, Suite 500), matching the agenda location",
+      "IRC's Oakland office runs youth and wellness programs and anti-trafficking work, matching OUSD's 'Student health, support & family services' and Human Trafficking Prevention funding",
+      "A public page describes the IRC as a long-standing program partner of Oakland International High School (OUSD), which appears in the agenda titles"
+    ],
+    "key": "v-002216",
+    "notes": "Phone and address are for the IRC Oakland office; the organization's headquarters is in New York, NY. No general email found other than program-specific inboxes, so email is null. CA entity number and SAM UEI not checked (registries not fetchable).",
+    "profile": {
+      "address": "440 Grand Avenue, Suite 500, Oakland, CA 94610",
+      "caEntityNumber": null,
+      "ein": "13-5660870",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "International Rescue Committee Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 452-8222",
+      "samUei": null,
+      "summary": "The International Rescue Committee (IRC) is a nonprofit humanitarian organization that responds to conflict and disaster around the world. It also works in the United States, including an Oakland office that helps refugees and other newcomers with resettlement, employment, legal help, health and wellness, and youth services.",
+      "website": "https://www.rescue.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "International Rescue Committee Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/135660870"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "ein"
+        ],
+        "title": "International Rescue Committee (IRC)",
+        "url": "https://www.rescue.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "IRC in Oakland, CA",
+        "url": "https://www.rescue.org/united-states/oakland-ca"
+      },
+      {
+        "supports": [],
+        "title": "Oakland International High School: Lessons for Engaging and Supporting Newcomer Students",
+        "url": "https://tcf.org/content/commentary/oakland-international-high-school-lessons-for-engaging-and-supporting-newcomer-students/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002216",
+    "notes": "IRC Oakland office (440 Grand Ave, Suite 500) matches the Oakland agenda location, and its youth, health and anti-trafficking services fit OUSD's student-support and Human Trafficking Prevention funding. Legal name, EIN 13-5660870, 501(c)(3) status, address, phone and the neutral summary are all confirmed by the ProPublica, rescue.org and Oakland office pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

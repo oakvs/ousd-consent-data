@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/262618507",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bayareaplan.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000629",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Bay Area Parent Leadership Action Network' (ProPublica Nonprofit Explorer, EIN 26-2618507)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes parent leadership and family engagement work in Bay Area public schools, consistent with OUSD's 'Student health, support & family services' category and contracts with the Office of Equity and Reach Academy Elementary"
+    ],
+    "key": "v-000629",
+    "notes": "Phone omitted: the site shows it only as a vanity number (510-444-PLAN). The homepage did not mention OUSD directly; identity rests on name, Oakland location, and mission fit.",
+    "profile": {
+      "address": "360 Grand Avenue, #397, Oakland, CA 94610",
+      "caEntityNumber": null,
+      "ein": "26-2618507",
+      "email": "info@bayareaplan.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Bay Area Parent Leadership Action Network",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland that develops the leadership of parents and families so they can help change their children's schools. It runs parent leadership programs, supports parent-led action at school sites, and builds a network of families across the nine Bay Area counties.",
+      "website": "https://www.bayareaplan.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Bay Area Parent Leadership Action Network - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/262618507"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Building the Power of Parents to Transform Schools",
+        "url": "https://www.bayareaplan.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000629",
+    "notes": "The exact agenda name matches an Oakland 501(c)(3) (EIN 26-2618507 on ProPublica), and its website shows parent leadership and family engagement work, which fits the family services and school-site contracts. The summary, address, general email, and nine-county scope are shown on the cited homepage; the site does not mention OUSD, but name, city and service fit are consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

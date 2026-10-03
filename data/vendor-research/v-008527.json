@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.compsych.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.compsych.com/informedconsent/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008527",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: ComPsych's own Informed Consent page names 'ComPsych Corporation'",
+      "Located in Chicago, IL, matching the agenda text (ComPsych Corporation, Chicago, IL 60601 per its own page)",
+      "Provides employee assistance and behavioral health programs, consistent with OUSD's Risk Management Department contracting it for health and support services"
+    ],
+    "key": "v-008527",
+    "notes": "Street address omitted: sources disagree (130 E. Randolph St, Chicago on the informed consent page; 455 N. Cityfront Plaza Dr in directory listings). General email not captured because the site obfuscates it. No registry IDs checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Chicago, IL",
+      "legalName": "ComPsych Corporation",
+      "orgType": "company",
+      "phone": "(800) 851-1714",
+      "samUei": null,
+      "summary": "ComPsych Corporation provides employee assistance programs, mental health and well-being services, and leave and absence management services to employers. It was founded in 1984 and sells its programs under the GuidanceResources and AbsenceResources names.",
+      "website": "https://www.compsych.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "About Us - ComPsych",
+        "url": "https://www.compsych.com/about-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "phone"
+        ],
+        "title": "Informed Consent - ComPsych",
+        "url": "https://www.compsych.com/informedconsent/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008527",
+    "notes": "ComPsych Corporation of Chicago, IL matches the agenda name and city, and EAP/behavioral health services fit a Risk Management services agreement. The about-us page supports the summary, 1984 founding, brand names and phone; the informed consent page shows the legal name, Chicago address and phone.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

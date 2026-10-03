@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237073438",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.scvanguard.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.scvanguard.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.scvanguard.org/vmapa_ousd_program/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008587",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Vanguard Music And Performing Arts' (ProPublica Nonprofit Explorer, EIN 23-7073438)",
+      "Based in Santa Clara, CA, matching the agenda text 'Santa Clara, CA'",
+      "Its own website announces a drumline program with Oakland Unified School District at Claremont Middle School starting January 2024, matching the 2023-2024 services agreement",
+      "Organization runs youth performing arts education programs, consistent with OUSD's 'After-school & summer programs' contract"
+    ],
+    "key": "v-008587",
+    "notes": "No main phone number found on the organization's own pages; left null. California SOS and SAM.gov were not checked.",
+    "profile": {
+      "address": "1795 Space Park Drive, Santa Clara, CA 95054",
+      "caEntityNumber": null,
+      "ein": "23-7073438",
+      "email": "info@scvanguard.org",
+      "headquarters": "Santa Clara, CA",
+      "legalName": "Vanguard Music And Performing Arts",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Vanguard Music and Performing Arts is a nonprofit performing arts education and youth development organization based in Santa Clara, California. It runs the Santa Clara Vanguard drum and bugle corps, the Vanguard Cadets, winter percussion and winter guard programs, and community music education programs.",
+      "website": "https://www.scvanguard.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Vanguard Music And Performing Arts - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237073438"
+      },
+      {
+        "supports": [
+          "website",
+          "email",
+          "address"
+        ],
+        "title": "Contact - Santa Clara Vanguard",
+        "url": "https://www.scvanguard.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Santa Clara Vanguard",
+        "url": "https://www.scvanguard.org/about/"
+      },
+      {
+        "supports": [],
+        "title": "Vanguard Music And Performing Arts Launches Innovative Education Program in Partnership with Oakland Unified School District",
+        "url": "https://www.scvanguard.org/vmapa_ousd_program/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008587",
+    "notes": "ProPublica confirms the 501(c)(3) in Santa Clara with the same EIN, and the organization's own page announces an OUSD drumline program at Claremont Middle School starting January 2024, matching the 2023-24 services agreement. Address, general info email, website and the neutral summary are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

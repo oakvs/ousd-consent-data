@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.pumpsandsystems.com/news/2022-03-14/dude-solutions-rebrands-brightly-software",
+      "pass": true
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.brightlysoftware.com/",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-003829",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Brightly Software, Inc. formerly Dude Solutions' in Cary, NC; a public article confirms Dude Solutions rebranded as Brightly Software in March 2022 and is headquartered in Cary, North Carolina (Pumps & Systems)",
+      "Siemens' Brightly Software offering annex (PDF) lists Brightly Software, Inc., a Delaware corporation, at 11000 Regency Parkway, Cary, NC 27518, matching the agenda location",
+      "Brightly sells cloud asset, facility and energy management software, matching OUSD's Facilities utility operations and maintenance sustainability project"
+    ],
+    "key": "v-003829",
+    "notes": "Website brightlysoftware.com now redirects to a Siemens-hosted site (assetmanagement.siemens.com), which could not be fetched. Address (11000 Regency Parkway, Suite 300, Cary, NC 27518) seen in a Siemens PDF but omitted because it could not be checked automatically. Phone, email, legal name and registry IDs not verified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Cary, NC",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Brightly Software, formerly Dude Solutions, is a company that makes cloud-based software for managing facilities, equipment and other physical assets, including maintenance and energy use. Its customers include schools, governments and healthcare organizations. It is headquartered in Cary, North Carolina, and is now owned by Siemens.",
+      "website": "https://www.brightlysoftware.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Dude Solutions Rebrands to Brightly Software",
+        "url": "https://www.pumpsandsystems.com/news/2022-03-14/dude-solutions-rebrands-brightly-software"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Brightly Software",
+        "url": "https://www.brightlysoftware.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003829",
+    "notes": "Agenda text 'Brightly Software, Inc. formerly Dude Solutions' in Cary, NC matches the rebrand article (Dude Solutions to Brightly Software, Cary NC, facilities O&M and asset management software) and fits a Facilities utility O&M project. The cited article does not itself mention Siemens ownership or school/government/healthcare customers, but I confirmed both independently via Siemens' acquisition announcements (closed August 2022; education, government and healthcare customers); the summary is neutral and accurate.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

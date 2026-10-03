@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/462981774",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.improveyourtomorrow.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.improveyourtomorrow.org/bay-area",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009136",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Improve Your Tomorrow' in Sacramento, CA (ProPublica Nonprofit Explorer, EIN 46-2981774), matching the agenda location 'Sacramento, CA'",
+      "Organization's Bay Area page lists Oakland Unified School District (Madison Park Academy Middle School) as a program site",
+      "Organization runs school-based mentoring and college-access programs, matching OUSD's 'Student health, support & family services' category and Community Schools and Student Services contract"
+    ],
+    "key": "v-009136",
+    "notes": "Phone and email not shown on the official site pages fetched, so left null. CA entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "1901 Royal Oaks Dr, Sacramento CA 95815",
+      "caEntityNumber": null,
+      "ein": "46-2981774",
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "Improve Your Tomorrow",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Improve Your Tomorrow is a nonprofit that works to increase the number of young men of color who attend and graduate from college. It runs in-school mentoring and college-preparation programs starting in middle school, plus support for members in college and a career mentor fellowship. It is based in Sacramento and serves students in California and several other states.",
+      "website": "https://www.improveyourtomorrow.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Improve Your Tomorrow - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/462981774"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "website",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "About - Improve Your Tomorrow",
+        "url": "https://www.improveyourtomorrow.org/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Bay Area - Improve Your Tomorrow",
+        "url": "https://www.improveyourtomorrow.org/bay-area"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009136",
+    "notes": "ProPublica confirms Improve Your Tomorrow, 501(c)(3), Sacramento, EIN 46-2981774; its About page confirms the mission, three programs (College Academy, College Completion, Mentor Fellowship), the Sacramento address and the multi-state footprint; its Bay Area page lists Oakland Unified (Madison Park Academy) as a site, matching the Sacramento agenda location and student-services contract. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

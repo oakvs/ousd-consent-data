@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://almaadvisorygroup.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://almaadvisorygroup.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://almaadvisorygroup.com/services/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005487",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Alma Advisory Group, LLC' in Chicago, IL; the firm's own About and Contact pages give Chicago, IL as its location",
+      "Firm's website describes executive search and talent management for K-12 school systems, matching OUSD's 'Staff & hiring' category for a Nutrition Services Department services agreement",
+      "A search result for an OUSD Senior Executive Director of Nutrition Services job listing also named Alma Advisory Group as the recruiting firm (page could not be fetched, so not cited)"
+    ],
+    "key": "v-005487",
+    "notes": "No registry (Illinois/California SOS, SAM.gov) record was checked; EIN, entity number and UEI left null. Phone and street address not shown on the firm's own pages (street address appeared only on third-party directories). Legal name left null because the 'LLC' form appears only in OUSD agenda text, not on a cited page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Info@AlmaAdvisoryGroup.com",
+      "headquarters": "Chicago, IL",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Alma Advisory Group is a consulting firm based in Chicago that focuses on talent and leadership development. Its services include executive search, superintendent search, leadership pipeline development, principal support, talent management, and coaching and training. It works with school districts and non-profit organizations.",
+      "website": "https://almaadvisorygroup.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "email",
+          "website"
+        ],
+        "title": "About - Alma Advisory Group",
+        "url": "https://almaadvisorygroup.com/about/"
+      },
+      {
+        "supports": [
+          "email",
+          "headquarters"
+        ],
+        "title": "Contact - Alma Advisory Group",
+        "url": "http://almaadvisorygroup.com/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Services - Alma Advisory Group",
+        "url": "https://almaadvisorygroup.com/services/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005487",
+    "notes": "Alma Advisory Group's own pages show Chicago, IL, executive search and talent management for school districts (matching a Nutrition Services staffing agreement), and the cited About, Contact and Services pages support the summary, email, website and headquarters. The 'non-profit organizations' client claim appears only as a sector option on the homepage contact form (not on a cited page), a minor weakly supported detail.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

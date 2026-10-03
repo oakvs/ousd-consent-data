@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://calendly.com/about",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ga/buford/profile/calendars/calendly-llc-0443-91848396",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000858",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Calendly, LLC' is a registered Georgia limited liability company with a Buford, GA address (BBB profile; Georgia Secretary of State search result)",
+      "Located in Buford, GA, matching the agenda text 'Buford, GA'",
+      "Calendly is a scheduling software company, matching OUSD's 'Technology' category and the 'Calendly Enterprise Software as a Service Agreement' title"
+    ],
+    "key": "v-000858",
+    "notes": "Address is the Georgia-registered address in Buford, GA (a mailbox-style address with PMB); the company's operating headquarters may be elsewhere (commonly reported as Atlanta), so headquarters left null. No general phone or email found on the company's own pages; the BBB phone number was not used. Georgia Secretary of State entity page could not be fetched (403), so no registry ID is given. No page found that links Calendly directly to OUSD; identity rests on exact name, Buford GA location and product type.",
+    "profile": {
+      "address": "115 E Main St Ste A1B PMB 123, Buford, GA 30518",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Calendly, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Calendly is a software company that makes an online scheduling and meeting management platform. People and organizations use it to let others book meetings, and it also handles meeting notes, follow-ups, contacts and payments.",
+      "website": "https://calendly.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Calendly",
+        "url": "https://calendly.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "orgType"
+        ],
+        "title": "Calendly, LLC - BBB profile",
+        "url": "https://www.bbb.org/us/ga/buford/profile/calendars/calendly-llc-0443-91848396"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000858",
+    "notes": "Calendly, LLC with the Buford, GA address (115 E Main St Ste A1B PMB 123) is confirmed on the BBB profile, and the about page confirms the scheduling/meeting-management product, which fits the Calendly Enterprise SaaS agreement. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.prnewswire.com/news-releases/n2y-wins-special-education-solution-of-the-year-designation-in-6th-annual-edtech-breakthrough-awards-program-302166212.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.everway.com/about/n2y/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.everway.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005213",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "n2y is based in Huron, Ohio, matching the agenda location 'Huron, OH' (PR Newswire press release dateline)",
+      "n2y makes special education curriculum (Unique Learning System), matching OUSD's 'Special education' contract and the Special Education Department sponsor",
+      "Everway's own page 'n2y Is Now Everway' states n2y joined with Texthelp under the new Everway name, and n2y.com now redirects to everway.com"
+    ],
+    "key": "v-005213",
+    "notes": "Vendor was renamed Everway in 2025 (n2y.com redirects to everway.com). Legal name, registry IDs and Huron street address were not confirmed on fetchable pages (state registry pages blocked), so left null. Phone is Everway's North America line.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Huron, OH",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "+1 800-697-6575",
+      "samUei": null,
+      "summary": "n2y (now part of Everway) is an education technology company based in Huron, Ohio. It makes special education curriculum and tools, including the Unique Learning System for students with moderate to severe disabilities, plus IEP (Individualized Education Program) development tools. In 2025 n2y joined with Texthelp and began operating under the Everway name.",
+      "website": "https://www.everway.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "n2y Wins Special Education Solution of the Year Designation in 6th Annual EdTech Breakthrough Awards Program",
+        "url": "https://www.prnewswire.com/news-releases/n2y-wins-special-education-solution-of-the-year-designation-in-6th-annual-edtech-breakthrough-awards-program-302166212.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "n2y Is Now Everway",
+        "url": "https://www.everway.com/about/n2y/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Everway",
+        "url": "https://www.everway.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005213",
+    "notes": "Organization matches (n2y, Huron OH, special education curriculum, now Everway). However the summary says n2y joined with Texthelp in 2025, while the cited PR Newswire release says the merger with Texthelp happened in March 2024 and the Everway page only says the rebrand began rolling out January 2025; the summary's date claim is not supported by the sources, so it should be redone.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://thrivingschoolpsych.lpages.co/terms-of-service/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thrivingschoolpsych.com/home/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thrivingschoolpsych.com/district-support-packages/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-thriving-school-psychologist-collective",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the organization's terms of service name the legal entity as 'The Thriving School Psychologist Collective' (thrivingschoolpsych.lpages.co)",
+      "Located in Lafayette, CA (954 Risa Rd. Suite A, Lafayette CA 94549), matching the agenda's 'Lafayette, CA'",
+      "Offers professional development and support for school psychologists and districts, consistent with a Special Education Department services agreement",
+      "Its district-support page and the sister Thriving Students Collective site are tied to the same founder and brand, with no conflicting organization of the same name found"
+    ],
+    "key": "n-thriving-school-psychologist-collective",
+    "notes": "Terms of service describe the entity as 'dba Rebecca Branstetter and associates'. Third-party business directories list a 'Thriving School Psychologist Inc.' (CA, status Converted Out) and a 'Thriving Students Collective Inc.' (2023) at the same address; the CA entity number was not confirmed from the Secretary of State, so it is left null. No EIN found. orgType 'company' is inferred from the corporate/dba structure. A support email shown on the terms page could not be verified by automated fetch, so it is omitted.",
+    "profile": {
+      "address": "954 Risa Rd. Suite A, Lafayette CA 94549",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Lafayette, CA",
+      "legalName": "The Thriving School Psychologist Collective",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Thriving School Psychologist Collective provides training, resources and community support for school psychologists. It offers online courses, professional development packages for school districts, and coaching and Q&A sessions. Its stated aim is to help school psychologists support student mental health and learning and avoid burnout.",
+      "website": "https://www.thrivingschoolpsych.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Terms of Service",
+        "url": "https://thrivingschoolpsych.lpages.co/terms-of-service/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Home",
+        "url": "https://www.thrivingschoolpsych.com/home/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "District Support Packages for School Psychologists",
+        "url": "https://www.thrivingschoolpsych.com/district-support-packages/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-thriving-school-psychologist-collective",
+    "notes": "Name, Lafayette CA address and school-psychologist services match the agenda item; the summary is supported by the home and district-support pages and is neutral. The terms page says 'Rebecca Branstetter and associates' does business as the Collective, so 'company' and the legal name are not shown by a source.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "orgType",
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lizatalusan.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.lizatalusan.com/courageous-coaching",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ma/brockton/profile/consultant/lt-coaching-and-consulting-llc-0021-554474",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009137",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "BBB lists 'LT Coaching and Consulting, LLC' in Brockton, MA, matching the agenda's name and location",
+      "The website lizatalusan.com says it is 'LT Coaching and Consulting, LLC' and offers consulting and workshops to schools, matching OUSD's classroom and academic program contracts",
+      "Weak link: no cited page ties the Brockton BBB listing directly to lizatalusan.com except the identical legal name and the same services (DEIJ consulting)"
+    ],
+    "key": "v-009137",
+    "notes": "One-person LLC; website is under the owner's personal name and the only listed email is a named individual's, and the BBB phone and address are likely personal, so contact details were deliberately omitted. The link between the Brockton BBB listing and the website rests on the identical name; not independently confirmed on a registry (MA Secretary of State not checked).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Brockton, MA",
+      "legalName": "LT Coaching and Consulting, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A small consulting and coaching business that works with schools and individuals on identity-conscious leadership and education. It offers workshops, dialogue groups, community conversations, strategic planning and equity audits.",
+      "website": "https://www.lizatalusan.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Liza Talusan, PhD",
+        "url": "https://www.lizatalusan.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "LT Professional Coaching — Liza Talusan, PhD",
+        "url": "http://www.lizatalusan.com/courageous-coaching"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "LT Coaching and Consulting, LLC",
+        "url": "https://www.bbb.org/us/ma/brockton/profile/consultant/lt-coaching-and-consulting-llc-0021-554474"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

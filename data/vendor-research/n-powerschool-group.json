@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.powerschool.com/company/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.powerschool.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=6193168&GUID=4C8EBDEA-5B7C-4F8D-99FA-F8540E2F1C3A",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-powerschool-group",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "PowerSchool's own Contact and About pages list headquarters at 150 Parkshore Dr., Folsom, CA 95630, matching the agenda location 'Folsom, CA'",
+      "PowerSchool makes K-12 education software including Schoology, matching the OUSD contract title 'Schoology Implementation' (Technology)",
+      "OUSD Board legislation file 23-0503 records a Services Agreement with PowerSchool Group LLC for Schoology implementation"
+    ],
+    "key": "n-powerschool-group",
+    "notes": "Registry IDs (CA entity number, UEI) not retrieved. Sales@ is a general sales inbox, the only general-purpose email listed.",
+    "profile": {
+      "address": "150 Parkshore Dr. Folsom, CA 95630",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Sales@PowerSchool.com",
+      "headquarters": "Folsom, CA",
+      "legalName": "PowerSchool Group LLC",
+      "orgType": "company",
+      "phone": "877-873-1550",
+      "samUei": null,
+      "summary": "PowerSchool is a company that makes software for K-12 schools. Its products cover student information systems, teaching and learning tools such as the Schoology learning management system, family engagement, human resources, finance, and data analytics. It serves school organizations and students around the world.",
+      "website": "https://www.powerschool.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "How to Contact PowerSchool",
+        "url": "https://www.powerschool.com/company/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About PowerSchool",
+        "url": "https://www.powerschool.com/about/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Oakland Unified School District - File #: 23-0503",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=6193168&GUID=4C8EBDEA-5B7C-4F8D-99FA-F8540E2F1C3A"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-powerschool-group",
+    "notes": "OUSD file 23-0503 names PowerSchool Group LLC, Folsom CA, for Schoology implementation, matching PowerSchool's HQ at 150 Parkshore Dr, Folsom and its Schoology product. Address, phone, general sales email and summary are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.crisisgo.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.crisisgo.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.crisisgo.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008217",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's own site identifies it as CrisisGo, Inc.",
+      "Headquartered in Mountain View, CA (800 W El Camino Real, Suite 180), matching the agenda's 'Mountain View, CA'",
+      "Sells school safety and crisis communication software to K-12 schools, matching OUSD's 'Software as a Service (SaaS) Agreement' for Technology and the Standard Student Data Privacy Agreement"
+    ],
+    "key": "v-008217",
+    "notes": "No registry IDs (CA SOS, SAM.gov) were checked or found. No page found explicitly linking CrisisGo to OUSD; identity rests on name, Mountain View location and product type.",
+    "profile": {
+      "address": "800 W El Camino Real, Suite 180, Mountain View, CA 94040",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@crisisgo.com",
+      "headquarters": "Mountain View, CA",
+      "legalName": "CrisisGo, Inc.",
+      "orgType": "company",
+      "phone": "(888) 525-1755",
+      "samUei": null,
+      "summary": "CrisisGo is a company that makes safety and crisis management software for K-12 schools and other organizations. Its platform includes emergency alerts, communication tools, emergency planning and drills, visitor management, and student and family reunification.",
+      "website": "https://www.crisisgo.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "CrisisGo",
+        "url": "https://www.crisisgo.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "CrisisGo Contact",
+        "url": "https://www.crisisgo.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Our Story",
+        "url": "https://www.crisisgo.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008217",
+    "notes": "CrisisGo, Inc. is a Mountain View, CA K-12 safety SaaS vendor, matching the agenda's name, city, and SaaS plus student data privacy agreement. The cited pages support the legal name, summary, phone, generic info@ email, address, and for-profit type; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

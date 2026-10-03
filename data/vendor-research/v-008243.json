@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237056816",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/23-7056816",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.tmbraille.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008243",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Transcribing Mariners' (ProPublica Nonprofit Explorer, EIN 23-7056816)",
+      "Located in Edmond, OK, matching the agenda text 'Edmond, OK' (ProPublica, GuideStar)",
+      "Mission is converting textbooks into braille for blind students in U.S. schools, consistent with OUSD special education services contracts"
+    ],
+    "key": "v-008243",
+    "notes": "Organization's own website (tmbraille.com) has an expired TLS certificate and could not be fetched, so phone and email are omitted (directory listings disagree on the phone number).",
+    "profile": {
+      "address": "7800 Prairie View Rd, Edmond, OK 73034",
+      "caEntityNumber": null,
+      "ein": "23-7056816",
+      "email": null,
+      "headquarters": "Edmond, OK",
+      "legalName": "Transcribing Mariners",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Transcribing Mariners is a nonprofit based in Edmond, Oklahoma. It converts textbooks and other literature into braille for blind students in schools across the United States.",
+      "website": "http://www.tmbraille.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Transcribing Mariners - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237056816"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "headquarters"
+        ],
+        "title": "Transcribing Mariners - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/23-7056816"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Transcribing Mariners",
+        "url": "http://www.tmbraille.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008243",
+    "notes": "ProPublica confirms Transcribing Mariners, Edmond OK, 501(c)(3), EIN 23-7056816; GuideStar confirms the address, the braille textbook transcription mission for blind students in U.S. schools, and the website tmbraille.com. The city matches the agenda and the services fit a special education contract; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
