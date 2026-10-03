@@ -3032,7 +3032,9 @@
         "headline": "Approves up to $652,465.95 for the Gateway to College high school with Peralta Community College District",
         "money": {
           "amountType": "not_to_exceed",
-          "byYear": {},
+          "byYear": {
+            "2021-22": 652465.95
+          },
           "direction": "expense",
           "evidence": "in an amount not to exceed $652,465.95",
           "newTotal": null,
@@ -3042,7 +3044,7 @@
         },
         "schools": [],
         "sourceIssueCandidate": "The text gives an amount but does not say whether the district pays Peralta or receives it; the listed funding source is a Peralta Community College District fund.",
-        "summary": "The district and Peralta Community College District sign a memorandum of understanding (a formal partnership agreement) to run the Gateway to College Alternative High School at Laney College. It covers July 1, 2021 to June 30, 2023. The text does not say which side pays, and the listed funding source is a Peralta fund.",
+        "summary": "The district and Peralta Community College District sign a memorandum of understanding (a formal partnership agreement) to run the Gateway to College Alternative High School at Laney College from July 1, 2021 to June 30, 2023. The district pays Peralta, which invoices twice a year based on student attendance. The $652,465.95 cap is the projected 2021-22 cost, based on about 82 students.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -3101,18 +3103,16 @@
       "pulled": null,
       "resourceSite": null,
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The text states an amount not to exceed $652,465.95 but does not say whether the District pays Peralta Community College District or receives the money."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
       "sourceIssue": "The text states an amount not to exceed $652,465.95 but does not say whether the District pays Peralta Community College District or receives the money.",
-      "sourceIssueBy": "verifier",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of a Memorandum of Understanding by and between the District and Peralta Community College District to operate Gateway to College Alternative High School at Laney College, for the period of July 1, 2021, through June 30, 2023, in an amount not to exceed $652,465.95.",
       "title": "Memorandum of Understanding - Peralta Community College District - Gateway to College - High School Network",
       "vendorKey": "v-003322",
@@ -3145,6 +3145,11 @@
           "pass": true
         },
         {
+          "detail": "revenue without a grant action type or money-in language",
+          "name": "direction_consistency",
+          "pass": false
+        },
+        {
           "detail": null,
           "name": "per_year_detection",
           "pass": true
@@ -3171,11 +3176,11 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves up to $30,000 with Alameda County Office of Education to launch an arts learning design team",
+        "headline": "Accepts up to $30,000 from Alameda County Office of Education to launch an arts learning design team",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
-          "direction": "expense",
+          "direction": "revenue",
           "evidence": "in an amount not to exceed $30,000.00",
           "newTotal": null,
           "priorTotal": null,
@@ -3184,7 +3189,7 @@
         },
         "schools": [],
         "sourceIssueCandidate": "The text gives an amount but does not say whether the district pays ACOE or receives it; the listed funding source is an Alameda County Office of Education fund.",
-        "summary": "The district and the Alameda County Office of Education sign a memorandum of understanding (a formal partnership agreement) to start an Arts Learning District Design Team to increase arts learning in the district. It runs from March 23, 2022 to June 30, 2022. The text does not say which side pays, and the listed funding source is a county office fund.",
+        "summary": "The district and the Alameda County Office of Education sign a memorandum of understanding (a formal partnership agreement) to start an Arts Learning District Design Team to increase arts learning in the district. The county office pays the district up to $30,000, and the district invoices it for costs incurred. It runs from March 23, 2022 to June 30, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -3241,18 +3246,16 @@
       "pulled": null,
       "resourceSite": null,
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The text states an amount not to exceed $30,000.00 but does not say whether the District pays the Alameda County Office of Education or receives the money."
-        ],
-        "correction": null,
+        "alerts": [],
+        "correction": "Corrected: the agreement shows the Alameda County Office of Education pays the district, so this is revenue to the district, not an expense.",
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
       "sourceIssue": "The text states an amount not to exceed $30,000.00 but does not say whether the District pays the Alameda County Office of Education or receives the money.",
-      "sourceIssueBy": "verifier",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of a Memorandum of Understanding by and between the Alameda County Office of Education (ACOE), Hayward, CA, and the District, for the purpose of enabling the Parties (ACOE and District) to launch the Arts Learning District Design Team strategy to increase/enhance arts learning in the District, as described in the Agreement, incorporated herein by reference as though fully set forth, for the period of March 23, 2022, through June 30, 2022, in an amount not to exceed $30,000.00.",
       "title": "Memorandum of Understanding - Alameda County Office of Education - Visual and Performing Arts Department",
       "vendorKey": "v-000318",
@@ -3784,11 +3787,11 @@
         },
         "schools": [],
         "sourceIssueCandidate": "Both this item and its companion item 22-0285 state the same quantity of 52,920 test kits with different amounts, so the two may overlap or one quantity may be misprinted.",
-        "summary": "The Board uses a sole source exemption (a legal exception to public bidding) to buy 52,920 antigen rapid COVID-19 test kits from Office Depot, LLC. The cost may not exceed $1,163,710.80 for the 2021-2022 school year. This is the first of two related items with the same vendor.",
+        "summary": "The Board uses a sole source exemption (a legal exception to public bidding) to buy 52,920 antigen rapid COVID-19 test kits from Office Depot, LLC at $21.99 per kit, under an agreement effective January 6, 2022. The cost may not exceed $1,163,710.80 for the 2021-2022 school year. This is the first of two separate orders from the same vendor; the second is for another 52,920 kits at a different price.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
-          "start": "2021-07-01"
+          "start": "2022-01-06"
         },
         "uncertain": [
           "category"
@@ -3843,14 +3846,12 @@
       "pulled": null,
       "resourceSite": "3212-901",
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: This item and companion item 22-0285 both state 52,920 test kits from Office Depot but give different amounts ($1,163,710.80 and $1,031,410.80), so it is unclear whether they cover separate purchases or overlap."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
       "sourceIssue": "This item and companion item 22-0285 both state 52,920 test kits from Office Depot but give different amounts ($1,163,710.80 and $1,031,410.80), so it is unclear whether they cover separate purchases or overlap.",
@@ -3928,7 +3929,7 @@
         },
         "schools": [],
         "sourceIssueCandidate": "Both this item and its companion item 22-0284 state the same quantity of 52,920 test kits with different amounts, so the two may overlap or one quantity may be misprinted.",
-        "summary": "The Board uses a sole source exemption (a legal exception to public bidding) to buy 52,920 antigen rapid COVID-19 test kits from Office Depot, LLC under an agreement effective January 10, 2022. The cost may not exceed $1,031,410.80 for the 2021-2022 school year. This is the second of two related items with the same vendor.",
+        "summary": "The Board uses a sole source exemption (a legal exception to public bidding) to buy 52,920 antigen rapid COVID-19 test kits from Office Depot, LLC at $19.49 per kit, under an agreement effective January 10, 2022. The cost may not exceed $1,031,410.80 for the 2021-2022 school year. This is the second of two separate orders from the same vendor; the first is for another 52,920 kits at a different price.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -3987,14 +3988,12 @@
       "pulled": null,
       "resourceSite": "3212-901",
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: This item and companion item 22-0284 both state 52,920 test kits from Office Depot but give different amounts ($1,031,410.80 and $1,163,710.80), so it is unclear whether they cover separate purchases or overlap."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
       "sourceIssue": "This item and companion item 22-0284 both state 52,920 test kits from Office Depot but give different amounts ($1,031,410.80 and $1,163,710.80), so it is unclear whether they cover separate purchases or overlap.",
@@ -8411,7 +8410,7 @@
       },
       "Classroom & academic programs": {
         "items": 28,
-        "spending": 784265.95
+        "spending": 754265.95
       },
       "Food, transportation & operations": {
         "items": 3,
@@ -8457,10 +8456,10 @@
       "yearly_cap": 1
     },
     "items": 58,
-    "revenueItems": 3,
-    "revenueTotal": 616061,
-    "spendingItems": 27,
-    "spendingTotal": 5436465.72,
+    "revenueItems": 4,
+    "revenueTotal": 646061,
+    "spendingItems": 26,
+    "spendingTotal": 5406465.72,
     "yearlyCapItems": 0,
     "yearlyCapsTotal": 0
   }

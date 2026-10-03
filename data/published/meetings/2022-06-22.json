@@ -395,18 +395,16 @@
       "pulled": null,
       "resourceSite": null,
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The text prints the Coverage II cost as $43,533.16, but 34,566 participants x $1.26 is $43,553.16, so the two printed line items total $53,981.48 rather than the stated $54,001.48 cap (the title also says Fiscal Year 2021-2022 while the text says 2022-2023)."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The text prints the Coverage II cost as $43,533.16, but 34,566 participants x $1.26 is $43,553.16, so the two printed line items total $53,981.48 rather than the stated $54,001.48 cap (the title also says Fiscal Year 2021-2022 while the text says 2022-2023).",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": "The text prints the Coverage II cost as $43,533.16, but 34,566 participants x $1.26 is $43,553.16 (as shown in the attached form), so the two line items total the stated $54,001.48; the title also says Fiscal Year 2021-2022 while the text and attachment say 2022-2023.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education, as Policyholder, of 2022-2023 School Year Coverage Request Form, and authorization of payment, Fiscal Year 2022-023, for Catastrophic Accident Insurance for Students and Volunteers, underwritten by ACE American Insurance Company, to Myers-Stevens & Toohey & Company, Inc., Mission Viejo, CA (Broker), as follows:\n\nClass I - Interscholastic Athletics\nCovers students while participating in school sponsored and directly supervised games and official practice sessions of interscholastic sports and supporting activities (band, cheerleaders, majorettes, student coaches, student trainers, and student managers) and while traveling directly and without interruption between school and the site of such activities, provided that such travel is arranged by and is at the direction of the school.\nCOST: 2536 participants x $4.12 = $10,448.32; and\n\nCoverage II - Student Activities\n\nCovers students while on premises when school is in session and while participating in school sponsored and directly supervised activities (except interscholastic athletics), and while traveling directly and without interruption between school and the site of such activities, provided that such travel is arranged by and is at the direction of the school, and while traveling directly and without interruption between home and school to attend regularly scheduled classes (includes one hour immediately before and after regularly scheduled classes).\nCOST: 34566 participants x $1.26 = $43,533.16,\nnot to exceed a cumulative cost of $54,001.48.",
       "title": "Catastrophic Accident Insurance for Students and Volunteers – Premium Payment - Fiscal Year 2021-2022 - Risk Management Department",
       "vendorKey": "n-myers-stevens-and-toohey-and",
@@ -5574,14 +5572,14 @@
           "pass": true
         },
         {
-          "detail": null,
+          "detail": "not in text: priorTotal=558000 (explained by source issue)",
           "name": "amounts_in_text",
           "pass": true
         },
         {
-          "detail": "prior 588000 + 198000 ≠ new 756000 (off by 30000.00)",
+          "detail": null,
           "name": "amendment_math",
-          "pass": false
+          "pass": true
         },
         {
           "detail": null,
@@ -5619,13 +5617,13 @@
           "direction": "expense",
           "evidence": "in an additional amount of $198,000.00",
           "newTotal": 756000,
-          "priorTotal": 588000,
+          "priorTotal": 558000,
           "thisAction": 198000,
           "thisActionRange": null
         },
         "schools": [],
         "sourceIssueCandidate": "The stated numbers do not add up: $588,000 plus the additional $198,000 is $786,000, but the text gives the new total as $756,000.",
-        "summary": "This third amendment adds $198,000 to Lowe Consulting Group's contract for Project Labor Agreement services, which focus on hiring local residents and union representation and on monitoring prevailing wages and local apprentices. The text says the not-to-exceed amount goes from $588,000 to $756,000, and the term is extended 365 days, from June 30, 2022 to June 30, 2023. All other terms stay the same.",
+        "summary": "This third amendment adds $198,000 to Lowe Consulting Group's contract for Project Labor Agreement services, which focus on hiring local residents and union representation and on monitoring prevailing wages and local apprentices. The attached amendment shows the not-to-exceed amount going from $558,000 to $756,000 (the agenda text says $588,000), and the term is extended 365 days, from June 30, 2022 to June 30, 2023. All other terms stay the same.",
         "term": {
           "addedStart": "2022-07-01",
           "end": "2023-06-30",
@@ -5673,7 +5671,12 @@
       "matterGuid": "FAA5DE33-798E-4014-B620-0D03208F40C8",
       "matterId": 55747,
       "matterType": "Agreement or Contract",
-      "notes": [],
+      "notes": [
+        {
+          "kind": "reading",
+          "text": "A second reading of the official text found a previous total of $588,000."
+        }
+      ],
       "outcome": {
         "action": "Adopted on the General Consent Report",
         "adopted": true,
@@ -5684,18 +5687,16 @@
       "pulled": null,
       "resourceSite": "9655 918",
       "review": {
-        "alerts": [
-          "Arithmetic in the official text is off by $30,000."
-        ],
-        "correction": null,
+        "alerts": [],
+        "correction": "The prior not-to-exceed amount was first shown as $588,000 as printed in the agenda text; the attached amendment shows $558,000, so it is corrected here. The $198,000 increase and $756,000 new total are unchanged.",
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The official text's numbers don't add up: $588,000 plus $198,000 is $786,000, but it states a new total of $756,000.",
-      "sourceIssueBy": "computed",
+      "sourceIssue": "The text gives the prior not-to-exceed amount as $588,000, but $588,000 plus the $198,000 increase is $786,000, not the stated $756,000; the attached amendment shows the prior amount was $558,000.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of Amendment No. 3,  Independent Consultant  Agreement for Professional Services by and between the District and Lowe Consulting Group, Inc., Oakland CA, for the latter to provide additional Project Labor Agreement services, focusing on hiring of local residents and ensuring union representation, assist the District with monitoring prevailing wages, and local resident apprentices for Compliance purposes, for the Facilities Planning & Management Project, in an additional amount of $198,000.00, increasing the not-to-exceed Agreement amount from $588,000.00 to $756,000.00, extending the term of the Agreement from June 27, 2019 through June 30, 2022 to June 30, 2023 (an additional 365 calendar days). All other terms and conditions of the Agreement remain in full force and effect.",
       "title": "Amendment No. 3, Independent Consultant Agreement for Professional Services - Lowe Consulting Group, Inc. - Facilities Planning & Management Project - Division of Facilities Planning and Management",
       "vendorKey": "v-006139",

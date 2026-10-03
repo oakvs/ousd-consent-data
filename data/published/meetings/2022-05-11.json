@@ -522,8 +522,8 @@
         "summary": "Eide Bailly, LLP will do the district's annual financial audit and separate audits of Measures B, J, Y, G and G1 for the fiscal year ending June 30, 2022. The text lists a $218,000 district audit plus five measure audits ranging from $9,100 to $62,800, with a stated total cap of $375,000. Measure N will use a different auditor.",
         "term": {
           "addedStart": null,
-          "end": "2022-06-30",
-          "start": "2021-07-01"
+          "end": "2023-06-30",
+          "start": "2022-05-12"
         },
         "uncertain": [
           "category"
@@ -536,7 +536,6 @@
       },
       "file": "22-1090",
       "flags": [
-        "after_work_began",
         "source_issue"
       ],
       "fundingSource": null,
@@ -614,18 +613,16 @@
       "pulled": null,
       "resourceSite": null,
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The six itemized audit amounts add up to more than the stated cumulative cap of $375,000.00."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The six itemized audit amounts add up to more than the stated cumulative cap of $375,000.00.",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": "The six itemized audit amounts add up to $398,300.00, which is $23,300.00 more than the stated cumulative cap of $375,000.00.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of Services Agreement 2021-2022 by and between the District and Edie Bailly, LLP, for the latter to perform the annual financial audit for the District and for Measures B, J, Y, G and G1 for the fiscal year ending June 30, 2022:\r\nFY 21-22 District Annual Audit - $218,000.00.\r\nFY 21-22 Measure G, Financial and Performance Audit - $9,100.00.\r\nFY 21-22 Measure G1, Financial and Performance Audit - $14,200.00.\r\nFY 21-22 Measure B, Financial and Performance Audit - $31,400.00.\r\nFY 21-22 Measure J, Financial and Performance Audit - $62,800.00.\r\nFY 21-22 Measure Y, Financial and Performance Audit - $62,800.00.\r\nfor a cumulative cost under the Agreement not to exceed $375,000.00.\r\n____\r\nNote: Measure N will be selecting a different auditor.\r\n.",
       "title": "Service Agreement 2021-2022 - Eide Bailly, LLP - Chief Business Officer",
       "vendorKey": "n-eide-bailly",
@@ -1441,7 +1438,7 @@
           "pass": true
         },
         {
-          "detail": null,
+          "detail": "not in text: byYear.2021-22=500000, byYear.2022-23=500000 (explained by source issue)",
           "name": "amounts_in_text",
           "pass": true
         },
@@ -1479,10 +1476,13 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Adds $1M to Leading Educators' contract to help meet literacy goals under a foundation grant",
+        "headline": "Adds $1M to Leading Educators' literacy contract, raising its total cap to $1.31M",
         "money": {
-          "amountType": "fixed",
-          "byYear": {},
+          "amountType": "not_to_exceed",
+          "byYear": {
+            "2021-22": 500000,
+            "2022-23": 500000
+          },
           "direction": "expense",
           "evidence": "in the additional amount of $1,000,000.00",
           "newTotal": 1306609,
@@ -1492,7 +1492,7 @@
         },
         "schools": [],
         "sourceIssueCandidate": "The increase is described against the 'year 1' amount ($306,609.00 to $1,306,609.00) while the term runs about three years, so the total contract value is not stated.",
-        "summary": "The district is adding $1,000,000 to its agreement with Leading Educators, Inc., raising the year 1 amount from $306,609 to $1,306,609. The group helps the district reach its revised English literacy goals under the Schusterman Family Foundation grant. The agreement period runs October 1, 2020 through September 29, 2023.",
+        "summary": "Leading Educators, Inc. of New Orleans helps the district reach its revised English language literacy goals and milestones under the Schusterman Family Foundation grant (2021-2023). This change adds $1,000,000, raising the agreement's not-to-exceed total for the whole term from $306,609 to $1,306,609. The attachment splits the added money $500,000 for 2021-22 and $500,000 for 2022-23, paid from the grant. The agreement period runs October 1, 2020 through September 29, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-09-29",
@@ -1604,18 +1604,16 @@
       "pulled": null,
       "resourceSite": null,
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The increase is stated against the Agreement's year 1 amount only, so the total contract value over the October 2020 to September 2023 term is not stated."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The increase is stated against the Agreement's year 1 amount only, so the total contract value over the October 2020 to September 2023 term is not stated.",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": "The text describes the $1,000,000 as raising the agreement's 'year 1' amount from $306,609.00 to $1,306,609.00, but the attached agreement and amendment show these are the not-to-exceed amounts for the whole October 2020 to September 2023 term.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of Amendment No. 1, Professional Services Agreement 2020-2021 between the District and Leading Educators, Inc., New Orleans, LA, for the latter to assist the District in obtaining its revised English Language  literacy Goals and Milestones delineated  in the Schusterman Grant (2021-2023), attached to Agreement and incorporated herein by reference as though fully set forth, via the Academics and Instructional Innovation Department, for the period October 1, 2020 through September 29, 2023, in the additional amount of $1,000,000.00, increasing the Agreement year 1 amount from $306,609.00 to $1,306,609.00.  All other terms and conditions of the Agreement remain in full force and effect.",
       "title": "Amendment No. 1, Professional Services Agreement 2020-2021 - Leading Educators, Inc. - Academics and Instruction Department",
       "vendorKey": "n-leading-educators",
@@ -19567,7 +19565,7 @@
     "decreaseTotal": 0,
     "enrichedItems": 126,
     "flagCounts": {
-      "after_work_began": 78,
+      "after_work_began": 77,
       "large_increase": 8,
       "multi_year": 9,
       "no_competitive_bid": 1,

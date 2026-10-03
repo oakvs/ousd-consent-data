@@ -29,7 +29,9 @@ import type {
 } from '@oakvs/consent-schema/schema'
 import { siteConfig } from '../config'
 
-import { getDataRoot, writeJson } from '../store'
+import { currentVendorKey } from '@oakvs/consent-schema/vendor-key'
+
+import { getDataRoot, readVendorAliases, writeJson } from '../store'
 
 export const RESEARCH_DIR = path.join(process.cwd(), '.cache', 'research')
 const PAGES_DIR = path.join(RESEARCH_DIR, 'pages')
@@ -75,13 +77,18 @@ function toInput(v: TVendorFile): TResearchInput {
 }
 
 /** Organizations only, largest approved totals first. */
-export async function exportResearch({ keys, top, skipExisting = true }: { keys?: string[]; top?: number; skipExisting?: boolean }): Promise<string[]> {
+export async function exportResearch({ keys, top, minApproved = 0, skipExisting = true }: { keys?: string[]; top?: number; minApproved?: number; skipExisting?: boolean }): Promise<string[]> {
   await mkdir(RESEARCH_DIR, { recursive: true })
   const index = JSON.parse(await readFile(path.join(publishedVendors(), 'index.json'), 'utf8')) as {
     vendors: { key: string; kind: string | null; approvedTotal: number }[]
   }
-  const existing = new Set(skipExisting ? (await readdir(recordsDir()).catch(() => [])).map(f => f.replace(/\.json$/, '')) : [])
-  let candidates = index.vendors.filter(v => v.kind !== 'individual' && !existing.has(v.key))
+  // Research is stored under the key a vendor had when it was researched; map it to today's key so a
+  // vendor whose key changed (a backfill supplied its OUSD number, or a merge) isn't researched again.
+  const aliases = await readVendorAliases()
+  const existing = new Set(skipExisting
+    ? (await readdir(recordsDir()).catch(() => [])).map(f => currentVendorKey(f.replace(/\.json$/, ''), aliases))
+    : [])
+  let candidates = index.vendors.filter(v => v.kind !== 'individual' && !existing.has(v.key) && v.approvedTotal >= minApproved)
   if (keys?.length) candidates = candidates.filter(v => keys.includes(v.key))
   candidates.sort((a, b) => b.approvedTotal - a.approvedTotal || a.key.localeCompare(b.key))
   const chosen = candidates.slice(0, top ?? candidates.length)

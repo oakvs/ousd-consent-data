@@ -33,7 +33,8 @@
  *   vendor-merge-check --batch B              Validate one merge-judge output (exit 1 on errors)
  *   vendor-merge-apply --model M              Write passing merge decisions to manual aliases and the decisions log
  *   vendor-history [--force]                  Fetch every Legistar record per vendor (cached; --force refetches)
- *   research-export [--top N] [--key K]       Write vendor research inputs (organizations only) to .cache/research
+ *   research-export [--top N] [--key K] [--min-approved USD]
+ *                                             Write vendor research inputs (organizations only) to .cache/research
  *   research-check --key K                    Validate one research output: schema + fetch every cited page
  *   research-import --model M [--date D]      Run checks and store research in data/vendor-research
  *   review-export                             Write independent-review inputs for high-confidence research
@@ -97,6 +98,7 @@ const { positionals, values } = parseArgs({
     chunk: { type: 'string' },
     model: { type: 'string' },
     top: { type: 'string' },
+    'min-approved': { type: 'string' },
   },
 })
 
@@ -402,7 +404,11 @@ async function main(): Promise<void> {
       break
     }
     case 'research-export': {
-      const keys = await exportResearch({ keys: values.key ? [values.key] : undefined, top: values.top ? Number(values.top) : undefined })
+      const keys = await exportResearch({
+        keys: values.key ? [values.key] : undefined,
+        top: values.top ? Number(values.top) : undefined,
+        minApproved: values['min-approved'] ? Number(values['min-approved']) : 0,
+      })
       console.log(`exported ${keys.length} vendor research input(s) → .cache/research/manifest.json`)
       break
     }

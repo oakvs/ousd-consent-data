@@ -4862,18 +4862,16 @@
       "pulled": null,
       "resourceSite": "6695-922",
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The text lists 2280 hours at $40 an hour, which equals $91,200, but the not-to-exceed amount is stated as $91,400."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The text lists 2280 hours at $40 an hour, which equals $91,200, but the not-to-exceed amount is stated as $91,400.",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": "The text lists 2280 hours at $40 an hour, which equals $91,200, but the not-to-exceed amount is stated as $91,400. The attached agreement also states $91,400 as the cap without explaining the $200 difference.",
+      "sourceIssueBy": "human",
       "text": "Ratification by the Board of Education of a Services Agreement 2021-2022 by and between the District and We Lead Ours, Oakland, CA, for the latter to provide 2280 hours or prevention and education @ $40 an hour to support teachers in the zoom classroom and the actual classroom with collaborating on activities that teach youth drug education, holistic health practices, how race, law, and politics influence rates of incarceration and exploitation of youth; provide Tobacco Use Prevention Education (TUPE) services, and other services as defined in Exhibit A, 1 A General Description of Services to Be Provided, in Agreement, incorporate herein by reference a though fully set forth, via Community Schools and Student Services Department, for the period of August 1, 2021 through June 30, 2022, in an amount not to exceed $91,400.00.",
       "title": "Services Agreement 2021-2022 - We Lead Ours - Community Schools and Student Services Department",
       "vendorKey": "v-004574",
@@ -5222,7 +5220,7 @@
         },
         "schools": [],
         "sourceIssueCandidate": "The text lists 548 hours at $40.00 per hour, which is $21,920, but the not-to-exceed amount is $21,600.",
-        "summary": "The district is paying an individual contractor for 548 hours at $40 an hour to support teachers in classroom lessons on drug education, holistic health, and how race, law and politics affect incarceration and exploitation of youth. It also covers Tobacco Use Prevention Education services. The service period is August 1, 2021 to June 30, 2022, and the board is approving it after the start date.",
+        "summary": "The district is paying an individual contractor for 540 hours at $40 an hour, which comes to the $21,600 cap, to support teachers in classroom lessons on drug education, holistic health, and how race, law and politics affect incarceration and exploitation of youth. It also covers Tobacco Use Prevention Education services. The service period is August 1, 2021 to June 30, 2022, and the board is approving it after the start date. The agenda text says 548 hours; the attached agreement says 540.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -5278,18 +5276,16 @@
       "pulled": null,
       "resourceSite": "$21,600.00",
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The text lists 548 hours at $40.00 per hour, which equals $21,920, but the not-to-exceed amount is stated as $21,600."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The text lists 548 hours at $40.00 per hour, which equals $21,920, but the not-to-exceed amount is stated as $21,600.",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": "The text lists 548 hours at $40.00 per hour, which equals $21,920, but the not-to-exceed amount is stated as $21,600. The attached agreement says 540 hours, which equals $21,600.",
+      "sourceIssueBy": "human",
       "text": "Ratification by the Board of Education of a Professional Services Agreement 2021-2022 between the District and Mary James, Oakland, CA, for the latter to work 548 hours at $40.00 per hour to support teachers in the zoom classroom and the actual classroom with collaborating on activities that teach youth drug education, holistic health practices, how race, law, and politics influence rates of incarceration and exploitation of youth; provide Tobacco Use Prevention Education (TUPE) services, and other services as defined in Exhibit A, 1 A General Description of Services to Be Provided, in Agreement, incorporate herein by reference a though fully set forth,  via Community Schools and Student Services Department, for the period of August 1, 2021 through June 30, 2022, in an amount not to exceed $21,600.00.",
       "title": "Services Agreement 2021-2022 - Mary James - Community Schools and Student Services Department",
       "vendorKey": "v-006733",
@@ -7572,14 +7568,14 @@
           "pass": true
         },
         {
-          "detail": null,
+          "detail": "not in text: newTotal=1995000 (explained by source issue)",
           "name": "amounts_in_text",
           "pass": true
         },
         {
-          "detail": "prior 495000 + 1500000 ≠ new 1955000 (off by 40000.00)",
+          "detail": null,
           "name": "amendment_math",
-          "pass": false
+          "pass": true
         },
         {
           "detail": null,
@@ -7616,14 +7612,14 @@
           "byYear": {},
           "direction": "expense",
           "evidence": "increasing the not to exceed amount by $1,500,000",
-          "newTotal": 1955000,
+          "newTotal": 1995000,
           "priorTotal": 495000,
           "thisAction": 1500000,
           "thisActionRange": null
         },
         "schools": [],
         "sourceIssueCandidate": "The numbers don't add up: $495,000 plus the stated $1,500,000 increase is $1,995,000, but the new total is stated as $1,955,000. The previous term dates are also worded confusingly.",
-        "summary": "Amendment No. 2 extends Robert Half International's agreement, which supplies people to do data entry on campuses for the district's COVID response, through September 1, 2022. It raises the contract limit by $1,500,000, from $495,000 to $1,955,000. All other terms stay the same.",
+        "summary": "Amendment No. 2 extends Robert Half International's agreement, which supplies people to do data entry on campuses for the district's COVID response, through September 1, 2022. It raises the contract limit by $1,500,000, from $495,000 to $1,995,000 according to the signed amendment; the agenda text misprints the new total as $1,955,000. All other terms stay the same.",
         "term": {
           "addedStart": null,
           "end": "2022-09-01",
@@ -7674,7 +7670,12 @@
       "matterGuid": "C6043C2B-D834-40FA-A384-44BB48EA67EB",
       "matterId": 53352,
       "matterType": "Agreement or Contract",
-      "notes": [],
+      "notes": [
+        {
+          "kind": "reading",
+          "text": "A second reading of the official text found a new total of $1,955,000."
+        }
+      ],
       "outcome": {
         "action": "Adopted on the General Consent Report",
         "adopted": true,
@@ -7685,18 +7686,16 @@
       "pulled": null,
       "resourceSite": null,
       "review": {
-        "alerts": [
-          "Arithmetic in the official text is off by $40,000."
-        ],
-        "correction": null,
+        "alerts": [],
+        "correction": "Corrected: the new total is $1,995,000, as stated in the attached amendment, not the $1,955,000 printed in the agenda text.",
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The official text's numbers don't add up: $495,000 plus $1,500,000 is $1,995,000, but it states a new total of $1,955,000.",
-      "sourceIssueBy": "computed",
+      "sourceIssue": "The official text's numbers don't add up: $495,000 plus $1,500,000 is $1,995,000, but it states a new total of $1,955,000. The attached amendment states $1,995,000.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of Amendment No. 2, Professional Services Agreement by and  between Robert Half International Inc. and the District, for the former to provide individuals to perform data entry on campus (District's COVID response), extending the term of the existing Agreement from August 31, 2020 to June 30, 2021 through September 1, 2022 and increasing the not to exceed amount by $1,500,000, from $495,000.00  to $1,955,000.00. All other terms and conditions of the Agreement remain in full force and effect.",
       "title": "Amendment 2, Professional Services Agreement - Robert Half International Inc. - General Counsel",
       "vendorKey": "v-003638",
@@ -8126,11 +8125,6 @@
           "pass": true
         },
         {
-          "detail": "prior 50551133.91 + 270031.69 ≠ new 51450180.66 (off by -629015.06)",
-          "name": "amendment_math",
-          "pass": false
-        },
-        {
           "detail": null,
           "name": "per_year_detection",
           "pass": true
@@ -8159,13 +8153,13 @@
           "direction": "expense",
           "evidence": "in an additional amount of $270,031.69",
           "newTotal": 51450180.66,
-          "priorTotal": 50551133.91,
+          "priorTotal": null,
           "thisAction": 270031.69,
           "thisActionRange": null
         },
         "schools": [],
         "sourceIssueCandidate": "The price increase from $50,551,133.91 to $51,450,180.66 is $899,046.75, but the additional amount ($270,031.69) plus the Change Order No. 5 total ($519,015.06) is $789,046.75, a $110,000 difference.",
-        "summary": "Amendment No. 3 to the lease-leaseback contract with Overaa/Tulum/Eclipse covers preconstruction services and interest on lease payments that was not included in the guaranteed maximum price. The text says the preconstruction work was help negotiating with vendors from the ended Phase I and value-engineering before the price was set. It also includes Change Order No. 5, and raises the contract price from $50,551,133.91 to $51,450,180.66.",
+        "summary": "Amendment No. 3 to the lease-leaseback contract with Overaa/Tulum/Eclipse covers $220,000 for extended preconstruction services and $50,031.69 of lease interest that was not included in the guaranteed maximum price, for a total increase of $270,031.69. The preconstruction work was help negotiating with vendors from the ended Phase I and value-engineering before the price was set. The attached amendment puts the contract price, including Change Orders 1-5 and this amendment, at $51,450,180.66; the starting total in the agenda text does not match the attachment.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -8182,7 +8176,6 @@
       },
       "file": "21-1602",
       "flags": [
-        "raises_existing_contract",
         "source_issue"
       ],
       "fundingSource": "Fund 21 Measure B",
@@ -8212,7 +8205,12 @@
       "matterGuid": "716D94AF-3D86-4E85-B25F-301F8E725476",
       "matterId": 52738,
       "matterType": "Agreement or Contract",
-      "notes": [],
+      "notes": [
+        {
+          "kind": "reading",
+          "text": "A second reading of the official text found a previous total of $50,551,133.91."
+        }
+      ],
       "outcome": {
         "action": "Adopted on the General Consent Report",
         "adopted": true,
@@ -8223,18 +8221,16 @@
       "pulled": null,
       "resourceSite": "9799 184",
       "review": {
-        "alerts": [
-          "Arithmetic in the official text is off by $629,015.06."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The official text's numbers don't add up: $50,551,133.91 plus $270,031.69 is $50,821,165.60, but it states a new total of $51,450,180.66.",
-      "sourceIssueBy": "computed",
+      "sourceIssue": "The official text's numbers don't add up: $50,551,133.91 plus $270,031.69 is $50,821,165.60, but it states a new total of $51,450,180.66. The attachment confirms the $270,031.69 increase and the $51,450,180.66 total but not the $50,551,133.91 starting figure.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of Amendment No. 3, Lease Leaseback by and between the District and Overaa/Tulum/Eclipse, Richmond, CA, for the latter to provide Preconstruction services performed by the General Contractor and for interest that is required for the Lease Payments but was not included in the GMP*, for the Foster the Center Project, in an additional amount of $270,031.69, and including total amount from Change Order No 5, $519,015.06, increasing contract price from $50,551,133.91 to $51,450,180.66, and authorizing the President and Secretary of the Board to sign the Amendment for same with said Contractor. All other terms and conditions of the Agreement remain in full force and effect.\r\n___\r\n\r\n*The Pre-Construction Services is not construction work. It is assistance with negotiating with all the impacted vendors from Phase I (which was ended by OUSD) and assisting with value-engineering before finalizing the GMP",
       "title": "Amendment No. 3, Lease Lease-Back- Overaa/Tulum/Eclipse, JV - Foster The Center Project - Division of Facilities Planning and Management",
       "vendorKey": "v-003224",
@@ -10145,7 +10141,7 @@
       "multi_year": 20,
       "no_competitive_bid": 1,
       "pulled_from_consent": 11,
-      "raises_existing_contract": 7,
+      "raises_existing_contract": 6,
       "source_issue": 7,
       "yearly_cap": 2
     },

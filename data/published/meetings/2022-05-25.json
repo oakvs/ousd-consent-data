@@ -1471,7 +1471,7 @@
           "pass": true
         },
         {
-          "detail": null,
+          "detail": "not in text: byYear.2021-22=500000, byYear.2022-23=500000 (explained by source issue)",
           "name": "amounts_in_text",
           "pass": true
         },
@@ -1509,10 +1509,13 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Adds $1M to Leading Educators' contract to help meet literacy goals under a foundation grant",
+        "headline": "Adds $1M to Leading Educators' literacy contract, raising its total cap to $1.31M",
         "money": {
-          "amountType": "fixed",
-          "byYear": {},
+          "amountType": "not_to_exceed",
+          "byYear": {
+            "2021-22": 500000,
+            "2022-23": 500000
+          },
           "direction": "expense",
           "evidence": "additional amount of $1,000,000.00",
           "newTotal": 1306609,
@@ -1522,7 +1525,7 @@
         },
         "schools": [],
         "sourceIssueCandidate": "The text says the $1,000,000 raises the 'year 1' amount, but the agreement runs through 2023, so it is unclear whether the $306,609 and $1,306,609 figures cover only year 1 or the whole agreement.",
-        "summary": "Leading Educators, Inc. of New Orleans helps the district reach its revised English language literacy goals and milestones under the Schusterman Family Foundation grant (2021-2023). This change adds $1,000,000, raising the agreement's year 1 amount from $306,609 to $1,306,609. The agreement period runs October 1, 2020 through September 29, 2023.",
+        "summary": "Leading Educators, Inc. of New Orleans helps the district reach its revised English language literacy goals and milestones under the Schusterman Family Foundation grant (2021-2023). This change adds $1,000,000, raising the agreement's not-to-exceed total for the whole term from $306,609 to $1,306,609. The attachment splits the added money $500,000 for 2021-22 and $500,000 for 2022-23, paid from the grant. The agreement period runs October 1, 2020 through September 29, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-09-29",
@@ -1638,18 +1641,16 @@
       },
       "resourceSite": null,
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The text says the $1,000,000 raises the Agreement's 'year 1' amount from $306,609.00 to $1,306,609.00, but the agreement runs through September 29, 2023 and no amount is stated for later years or for the whole term."
-        ],
+        "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The text says the $1,000,000 raises the Agreement's 'year 1' amount from $306,609.00 to $1,306,609.00, but the agreement runs through September 29, 2023 and no amount is stated for later years or for the whole term.",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": "The text describes the $1,000,000 as raising the agreement's 'year 1' amount from $306,609.00 to $1,306,609.00, but the attached agreement and amendment show these are the not-to-exceed amounts for the whole October 2020 to September 2023 term.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of Amendment No. 1, Professional Services Agreement 2020-2021 between the District and Leading Educators, Inc., New Orleans, LA, for the latter to assist the District in obtaining its revised English Language  literacy Goals and Milestones delineated  in the Schusterman Grant (2021-2023), attached to Agreement and incorporated herein by reference as though fully set forth, via the Academics and Instructional Innovation Department, for the period October 1, 2020 through September 29, 2023, in the additional amount of $1,000,000.00, increasing the Agreement year 1 amount from $306,609.00 to $1,306,609.00.  All other terms and conditions of the Agreement remain in full force and effect.",
       "title": "Amendment No. 1, Professional Services Agreement 2020-2021 - Leading Educators, Inc. - Academics and Instruction Department",
       "vendorKey": "n-leading-educators",

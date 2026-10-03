@@ -558,13 +558,33 @@
           "pass": true
         },
         {
+          "detail": "evidence not found verbatim: null",
+          "name": "evidence_substring",
+          "pass": false
+        },
+        {
           "detail": null,
           "name": "amounts_in_text",
           "pass": true
         },
         {
+          "detail": "revenue without a grant action type or money-in language",
+          "name": "direction_consistency",
+          "pass": false
+        },
+        {
+          "detail": null,
+          "name": "per_year_detection",
+          "pass": true
+        },
+        {
           "detail": null,
           "name": "term_dates",
+          "pass": true
+        },
+        {
+          "detail": null,
+          "name": "headline_amount",
           "pass": true
         },
         {
@@ -581,11 +601,11 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Amends Alameda County health agency contract for Safe Routes to School, not to exceed $333,791",
+        "headline": "Accepts up to $333,791 from Alameda County for Safe Routes to School, October 2018 through June 2021",
         "money": {
-          "amountType": "cumulative",
+          "amountType": "not_to_exceed",
           "byYear": {},
-          "direction": "expense",
+          "direction": "revenue",
           "evidence": null,
           "newTotal": 333791,
           "priorTotal": null,
@@ -594,7 +614,7 @@
         },
         "schools": [],
         "sourceIssueCandidate": "The text states only a $333,791.00 not-to-exceed amount for the amendment over a term that began in 2018; it does not say whether this is new money or the contract's overall total.",
-        "summary": "This amends a master contract with the County of Alameda's Health Care Services Agency that funds the Safe Routes to School program and its coordination for the district. The text gives a not-to-exceed amount of $333,791.00 for the contract period of October 1, 2018 through June 30, 2021, and does not say how much of that is new. All other terms stay the same.",
+        "summary": "This amends the district's master contract with the County of Alameda's Health Care Services Agency by adding a set of exhibits for the Active Oakland Safe Routes to School program. The County pays the district up to $333,791 for October 1, 2018 through June 30, 2021. The attached cover sheet marks this as an original procurement contract, so the $333,791 is the full amount for the period, not an increase. All other terms stay the same.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -648,7 +668,7 @@
         },
         {
           "kind": "reading",
-          "text": "The amount of this vote was corrected to $333,791 by two of three independent readings."
+          "text": "The direction was corrected to expense by two of three independent readings."
         }
       ],
       "outcome": {
@@ -661,18 +681,16 @@
       "pulled": null,
       "resourceSite": "9206-922",
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The text gives a single not-to-exceed amount of $333,791.00 for an amendment to a contract running from October 1, 2018, without saying whether this is added money or the contract's total."
-        ],
-        "correction": null,
+        "alerts": [],
+        "correction": "Corrected: the attached contract shows Alameda County pays the District up to $333,791 for this program, not the District paying the County. The amount is the full total for the contract period, not an increase.",
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
       "sourceIssue": "The text gives a single not-to-exceed amount of $333,791.00 for an amendment to a contract running from October 1, 2018, without saying whether this is added money or the contract's total.",
-      "sourceIssueBy": "verifier",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of Amendment, Community-Based Organization Master Contract [Cover Sheet] between the District and County of Alameda, on behalf of its Health Care Services Agency (ACHSA), incorporating and amending Exhibits A thru F, Master Contract 900322 (aka as Procurement Contract No. 16361), as specified, funding ACHSA Safe Routes to School Program and Coordination for the District, as described in the Master Contract, in an amount not to exceed $333,791.00, via the Community Schools and Student Services Department, for the period of October 1, 2018 through June 30, 2021. All other terms and conditions of the Master Contract remain in full force and effect.",
       "title": "Amendment, Community-Based Organization - Master Contract - County of Alameda - Health Care Services Agency - Community Schools and Student Services Department",
       "vendorKey": "v-000314",
@@ -17433,7 +17451,7 @@
       },
       "Student health, support & family services": {
         "items": 8,
-        "spending": 1569918
+        "spending": 1236127
       }
     },
     "decreaseTotal": 17905,
@@ -17448,10 +17466,10 @@
       "time_extension_only": 2
     },
     "items": 132,
-    "revenueItems": 3,
-    "revenueTotal": 5925906,
-    "spendingItems": 29,
-    "spendingTotal": 7110387.23,
+    "revenueItems": 4,
+    "revenueTotal": 6259697,
+    "spendingItems": 28,
+    "spendingTotal": 6776596.23,
     "yearlyCapItems": 0,
     "yearlyCapsTotal": 0
   }
