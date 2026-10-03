@@ -5,6 +5,7 @@ import type { TVendorResearchRecord } from '@oakvs/consent-schema/schema'
 
 import { generateAliases, nameSignature } from '../build/aliases'
 import { researchByCurrentKey } from '../build/vendors'
+import { toRfc3986 } from '../research/vendor-research'
 
 describe('rule 3: name variants', () => {
   it('merges names that match once filler words are dropped', () => {
@@ -54,5 +55,14 @@ describe('alias chains and moved records', () => {
     expect([...out.keys()].sort()).toEqual(['v-000624', 'v-005396'])
     expect(out.get('v-005396')!.publishable).toBe(true)
     expect(out.get('v-000624')!.key).toBe('v-000634')
+  })
+})
+
+describe('research import', () => {
+  it('percent-encodes characters the "uri" format rejects, and leaves valid URLs alone', () => {
+    expect(toRfc3986('https://ousd.legistar.com/LegislationDetail.aspx?ID=1&Options=ID|Text|&Search=kipp'))
+      .toBe('https://ousd.legistar.com/LegislationDetail.aspx?ID=1&Options=ID%7CText%7C&Search=kipp')
+    const ok = 'https://example.org/a-b_c.d~e/?q=1&r=%20#frag'
+    expect(toRfc3986(ok)).toBe(ok)
   })
 })

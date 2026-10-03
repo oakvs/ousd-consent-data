@@ -236,6 +236,23 @@ export async function checkResearchOutput(key: string): Promise<TResearchCheck[]
 
 // ─── Import ──────────────────────────────────────────────────────────────────
 
+/**
+ * Percent-encode characters RFC 3986 doesn't allow in a URL (Legistar links
+ * carry "Options=ID|Text|"). Browsers accept them, but the published JSON
+ * Schema's "uri" format doesn't.
+ */
+export const toRfc3986 = (url: string): string =>
+  url.replace(/[^A-Za-z0-9\-._~:/?#[\]@!$&'()*+,;=%]/g, ch => encodeURIComponent(ch))
+
+function withRfc3986Urls(research: TVendorResearch): TVendorResearch {
+  const profile = research.profile
+  return {
+    ...research,
+    sources: research.sources.map(s => ({ ...s, url: toRfc3986(s.url) })),
+    profile: profile ? { ...profile, website: profile.website ? toRfc3986(profile.website) : profile.website } : profile,
+  }
+}
+
 export async function importResearch(modelId: string, researchedAt: string): Promise<{ key: string; confidence: string; failed: number }[]> {
   await mkdir(recordsDir(), { recursive: true })
   const out: { key: string; confidence: string; failed: number }[] = []
@@ -243,19 +260,20 @@ export async function importResearch(modelId: string, researchedAt: string): Pro
     const key = f.replace(/\.output\.json$/, '')
     const parsed = VendorResearch.safeParse(JSON.parse(await readFile(path.join(RESEARCH_DIR, f), 'utf8')))
     if (!parsed.success) continue
-    const checks = await runResearchChecks(parsed.data)
+    const research = withRfc3986Urls(parsed.data)
+    const checks = await runResearchChecks(research)
     const record: TVendorResearchRecord = VendorResearchRecord.parse({
       key,
       researchedAt,
       modelId,
       promptVersion: RESEARCH_PROMPT_VERSION,
-      research: parsed.data,
+      research,
       review: null,
       checks: checks.map(({ severity: _s, ...c }) => c),
       publishable: false,
     })
     await writeJson(recordPath(key), record)
-    out.push({ key, confidence: parsed.data.confidence, failed: checks.filter(c => !c.pass).length })
+    out.push({ key, confidence: research.confidence, failed: checks.filter(c => !c.pass).length })
   }
   return out
 }

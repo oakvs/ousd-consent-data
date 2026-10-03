@@ -24,7 +24,8 @@ import { getDataRoot } from '../store'
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 const monthYear = (iso: string): string => `${MONTHS[Number(iso.slice(5, 7)) - 1]} ${iso.slice(0, 4)}`
 const n = (x: number): string => x.toLocaleString('en-US')
-const millions = (x: number): string => `$${(x / 1_000_000).toFixed(1)} million`
+const dollars = (x: number): string =>
+  x >= 1_000_000_000 ? `$${(x / 1_000_000_000).toFixed(2)} billion` : `$${(x / 1_000_000).toFixed(1)} million`
 
 const MODEL_LABELS: Record<string, string> = {
   'sonnet-agent': 'Claude Sonnet, run as Claude Code agents',
@@ -62,7 +63,7 @@ export function readmeSections({ index, meetings, vendors, enrichments, verifica
   const asOf = ms.map(m => m.updatedAt).sort().at(-1)!.slice(0, 10)
 
   const stats = `As of ${formatDate(asOf, 'long')}, it covers ${n(ms.length)} Board meetings, from ${formatDate(first.date, 'long')} to ${formatDate(last.date, 'long')}. `
-    + `That's ${n(sum('items'))} consent items authorizing ${millions(sum('spendingTotal'))} in spending, plus ${millions(sum('revenueTotal'))} in grants and other money coming in, `
+    + `That's ${n(sum('items'))} consent items authorizing ${dollars(sum('spendingTotal'))} in spending, plus ${dollars(sum('revenueTotal'))} in grants and other money coming in, `
     + `across ${n(vendors.vendors.length)} vendors and partners.`
 
   const counts: Record<string, number> = {}
