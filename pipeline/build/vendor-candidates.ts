@@ -10,6 +10,8 @@
  *   parentheses), including groups that span two OUSD vendor numbers
  * - names where one extends the other ("Bay Area Medical Academy" and
  *   "Bay Area Medical Academy (BAMA)")
+ * - names within two letters of each other ("Bertrand, Fox, Elliot…" and
+ *   "Bertrand, Fox, Elliott…")
  *
  * Pairs a judge has already decided (data/vendors/merge-decisions.json) are
  * left out. Output: .cache/vendor-merge/candidates.json, plus batch inputs.
@@ -73,6 +75,22 @@ async function evidence(key: string): Promise<TVendorEvidence> {
   }
 }
 
+/** Levenshtein distance, stopping early once it exceeds 2. */
+export function editDistance(a: string, b: string): number {
+  let prev = Array.from({ length: b.length + 1 }, (_, j) => j)
+  for (let i = 1; i <= a.length; i++) {
+    const row = [i]
+    let best = i
+    for (let j = 1; j <= b.length; j++) {
+      row[j] = Math.min(prev[j] + 1, row[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1))
+      best = Math.min(best, row[j])
+    }
+    if (best > 2) return best
+    prev = row
+  }
+  return prev[b.length]
+}
+
 /** Union-find over vendor keys. */
 function components(pairs: [string, string][]): string[][] {
   const parent = new Map<string, string>()
@@ -110,6 +128,16 @@ export async function findVendorCandidates(batchSize = 8): Promise<{ groups: num
     for (const b of orgs) {
       const tb = tokens.get(b.key)!
       if (a.key !== b.key && tb.length > ta.length && ta.every((t, i) => tb[i] === t)) pairs.push([a.key, b.key])
+    }
+  }
+  // Near-identical names: one or two typos ("Elliot" / "Elliott"), on names long enough that a
+  // two-letter difference can't turn one real name into another.
+  const sigs = orgs.map(v => ({ key: v.key, sig: tokens.get(v.key)!.join(' ') })).filter(x => x.sig.length >= 12)
+  for (let i = 0; i < sigs.length; i++) {
+    for (let j = i + 1; j < sigs.length; j++) {
+      const a = sigs[i].sig
+      const b = sigs[j].sig
+      if (a !== b && Math.abs(a.length - b.length) <= 2 && editDistance(a, b) <= 2) pairs.push([sigs[i].key, sigs[j].key])
     }
   }
   const groups = components(pairs).filter(g => g.length <= 6 && !decided.has(g.join('|')))

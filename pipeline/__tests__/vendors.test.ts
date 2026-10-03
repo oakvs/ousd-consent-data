@@ -66,3 +66,12 @@ describe('research import', () => {
     expect(toRfc3986(ok)).toBe(ok)
   })
 })
+
+describe('near-identical vendor names', () => {
+  it('measures typos with an early-exit edit distance', async () => {
+    const { editDistance } = await import('../build/vendor-candidates')
+    expect(editDistance('bertrand fox elliot osman wenzel', 'bertrand fox elliott osman wenzel')).toBe(1)
+    expect(editDistance('eide bailly llp', 'edie bailly llp')).toBe(2)
+    expect(editDistance('east bay glass', 'west bay cars')).toBeGreaterThan(2)
+  })
+})
