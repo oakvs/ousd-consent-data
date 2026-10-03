@@ -173,8 +173,11 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
       if (published) {
         const humanTouched = Boolean(override?.sourceIssue || override?.fields.money)
         const assessment = assess(published, checks, verification, { humanTouched })
-        if (Object.keys(assessment.corrected).length && !override?.fields.money) {
-          published = { ...published, money: { ...published.money, ...assessment.corrected } }
+        // A person's money fields win; the second reading still corrects the fields they left alone.
+        const humanMoney = override?.fields.money ?? {}
+        const corrected = Object.fromEntries(Object.entries(assessment.corrected).filter(([k]) => !(k in humanMoney)))
+        if (Object.keys(corrected).length) {
+          published = { ...published, money: { ...published.money, ...corrected } }
         }
         alerts = assessment.alerts
         notes = [...notes, ...assessment.notes]

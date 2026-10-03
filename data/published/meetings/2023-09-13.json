@@ -15032,14 +15032,14 @@
           "pass": true
         },
         {
-          "detail": null,
+          "detail": "not in text: newTotal=240081.08 (explained by source issue)",
           "name": "amounts_in_text",
           "pass": true
         },
         {
-          "detail": "prior 230081.95 + 9999.13 ≠ new 220581.08 (off by 19500.00)",
+          "detail": null,
           "name": "amendment_math",
-          "pass": false
+          "pass": true
         },
         {
           "detail": null,
@@ -15062,13 +15062,13 @@
         "actionType": "change_order",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Approves $9,999.13 change order for DecoTech camera repairs at Skyline High and Rudsdale",
+        "headline": "Adds $9,999.13 to DecoTech's camera contract at Skyline High and Rudsdale, raising it to $240,081.08",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "expense",
           "evidence": "in the amount of $9,999.13",
-          "newTotal": 220581.08,
+          "newTotal": 240081.08,
           "priorTotal": 230081.95,
           "thisAction": 9999.13,
           "thisActionRange": null
@@ -15078,7 +15078,7 @@
           "Rudsdale Sojourner Truth"
         ],
         "sourceIssueCandidate": "The new contract total is printed as \"$220.581.08\" (a misprint), and the $9,999.13 change order does not match the stated drop from $230,081.95 to that figure.",
-        "summary": "This change order has DecoTech Systems add 4 new cameras, repair 5 offline cameras and repair a damaged internet fiber cable for the Skyline High School and Rudsdale Sojourner Truth security project. The $9,999.13 is described as less a $19,500 allowance or contingency, and the contract total is stated as going down. It also extends the term by 159 days, to September 30, 2023, so part of the added time began before this vote.",
+        "summary": "This change order has DecoTech Systems add 4 new cameras, repair 5 offline cameras and repair a damaged internet fiber cable for the Skyline High School and Rudsdale Sojourner Truth security project. It adds $9,999.13, raising the contract price from $230,081.95 to $240,081.08 including allowances. The $220,581.08 in the official text is that price less the $19,500 contingency allowance, not a reduction. It also extends the term by 159 days, to September 30, 2023, so part of the added time began before this vote.",
         "term": {
           "addedStart": "2023-04-26",
           "end": "2023-09-30",
@@ -15096,6 +15096,7 @@
       "file": "23-1790",
       "flags": [
         "after_work_began",
+        "raises_existing_contract",
         "source_issue"
       ],
       "fundingSource": "Fund 21 Building Funds Measure Y",
@@ -15127,8 +15128,8 @@
       "matterType": "Agreement or Contract",
       "notes": [
         {
-          "kind": "misprint",
-          "text": "The official text prints this amount as \"$220.581.08\"; it is read here as $220,581.08."
+          "kind": "reading",
+          "text": "A second reading of the official text found a new total of $220,581.08."
         }
       ],
       "outcome": {
@@ -15141,18 +15142,16 @@
       "pulled": null,
       "resourceSite": "9655 918",
       "review": {
-        "alerts": [
-          "Arithmetic in the official text is off by $19,500.00."
-        ],
-        "correction": null,
+        "alerts": [],
+        "correction": "The new contract total was corrected from $220,581.08 (the price net of the $19,500 contingency allowance) to $240,081.08.",
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-03",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The official text's numbers don't add up: $230,081.95 plus $9,999.13 is $240,081.08, but it states a new total of $220,581.08.",
-      "sourceIssueBy": "computed",
+      "sourceIssue": "The official text says the agreement is reduced from $230,081.95 to $220.581.08, but the attached change order adds $9,999.13 for a price of $240,081.08; $220,581.08 is that price less the $19,500.00 contingency allowance.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of Change Order No. 2, Agreement Between Owner and Contractor by and between the District and DecoTech Systems, Walnut Creek, CA, for the latter to provide 4 new cameras, repair 5 existing offline cameras and repair an existing damaged internet fiber cable for the Skyline High School & Rudsdale Sojourner Truth Security Improvements Project, in the amount of $9,999.13, less any Allowance or Contingency [[$19,500.00], reducing the Agreement from $230,081.95 to $220.581.08 and extending the Agreement term from January 26, 2023, through April 25, 2023 to September 30, 2023 (an additional 159 days). All other terms and conditions of the Agreement remain in full force and effect.",
       "title": "Change Order No. 2, Agreement Between Owner and Contractor – DecoTech Systems – Skyline High School & Rudsdale Sojourner Truth Security Improvements Project - Division of Facilities Planning and Management",
       "vendorKey": "v-001325",
@@ -15407,7 +15406,7 @@
       "multi_year": 22,
       "no_competitive_bid": 1,
       "pulled_from_consent": 5,
-      "raises_existing_contract": 6,
+      "raises_existing_contract": 7,
       "source_issue": 2
     },
     "items": 110,

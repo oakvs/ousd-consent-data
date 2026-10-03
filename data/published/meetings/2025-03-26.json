@@ -5573,7 +5573,7 @@
     {
       "agendaNumber": "L.-42",
       "agendaSequence": 79,
-      "amountVerified": true,
+      "amountVerified": false,
       "attachments": [
         {
           "name": "25-0567 Amendment No. 1 - Grant Agreement - Kids First! - City of Oakland, Oakland Fund for Children and Youth (OFCY) - HS Linked Learning Office",
@@ -5587,13 +5587,18 @@
           "pass": true
         },
         {
-          "detail": null,
+          "detail": "evidence not found verbatim: null",
           "name": "evidence_substring",
+          "pass": false
+        },
+        {
+          "detail": "not in text: thisAction=450000, newTotal=675000 (explained by source issue)",
+          "name": "amounts_in_text",
           "pass": true
         },
         {
           "detail": null,
-          "name": "amounts_in_text",
+          "name": "amendment_math",
           "pass": true
         },
         {
@@ -5629,15 +5634,15 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Extends City of Oakland grant listed at $225,000 for summer internship stipends to June 2025",
+        "headline": "Adds $450,000 to a City of Oakland summer internship stipend grant, raising it to $675,000 and extending it to June 2025",
         "money": {
-          "amountType": "fixed",
+          "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "in the amount of $225,000.00",
-          "newTotal": null,
-          "priorTotal": null,
-          "thisAction": 225000,
+          "evidence": null,
+          "newTotal": 675000,
+          "priorTotal": 225000,
+          "thisAction": 450000,
           "thisActionRange": null
         },
         "schools": [
@@ -5658,7 +5663,7 @@
           "Madison Park Academy"
         ],
         "sourceIssueCandidate": "The text states an amount of $225,000.00 for an amendment that otherwise only describes a term extension, so it is unclear whether this is added grant money or the grant's existing total.",
-        "summary": "This amendment to a grant agreement with the City of Oakland, listed at $225,000, supports stipends for students in summer internships in the Linked Learning pathway program Exploring College, Career, and Community Options (ECCCO) at 15 schools. It extends the grant term from June 30, 2024 to June 30, 2025. The text does not say whether the $225,000 is new money or the existing grant amount. The funding source is the Oakland Fund for Children and Youth.",
+        "summary": "This amendment to a grant agreement with the City of Oakland adds funding for stipends for students in summer internships in the Linked Learning pathway program Exploring College, Career, and Community Options (ECCCO) at 15 schools, and extends the grant term to June 30, 2025. The attached amendment sets the grant at up to $225,000 for each of three fiscal years (2022-23, 2023-24 and 2024-25), so this vote adds $450,000 to the original $225,000, for a total of $675,000. The agenda text lists only $225,000. The funding source is the Oakland Fund for Children and Youth.",
         "term": {
           "addedStart": "2024-07-01",
           "end": "2025-06-30",
@@ -5706,7 +5711,12 @@
       "matterGuid": "BF44DC41-E3B8-4761-94EE-49610A7F4EC6",
       "matterId": 64903,
       "matterType": "Agreement or Contract",
-      "notes": [],
+      "notes": [
+        {
+          "kind": "reading",
+          "text": "A second reading of the official text found a previous total of none and a new total of none."
+        }
+      ],
       "outcome": {
         "action": "Adopted on the General Consent Report",
         "adopted": true,
@@ -5717,18 +5727,16 @@
       "pulled": null,
       "resourceSite": null,
       "review": {
-        "alerts": [
-          "Money in the official text is unclear: The text gives $225,000.00 for an amendment that otherwise describes a term extension, so it is unclear whether that is added money or the grant's existing amount."
-        ],
-        "correction": null,
+        "alerts": [],
+        "correction": "Corrected: the agenda lists $225,000, which is one year's award. The attached amendment adds $450,000 (for FY 2023-24 and FY 2024-25), raising the grant from $225,000 to $675,000.",
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "needs_review",
+        "reviewedAt": "2026-10-03",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The text gives $225,000.00 for an amendment that otherwise describes a term extension, so it is unclear whether that is added money or the grant's existing amount.",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": "The text gives $225,000 for the amendment, but the attached amendment sets the grant at up to $225,000 in each of three fiscal years: it adds $450,000 and raises the total from $225,000 to $675,000.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of the First Amendment to the Grant Agreement by and between the District and The City of Oakland, in the amount of $225,000.00, to provide support stipends for students in summer internships as part of the Link Learning Pathway Program, Exploring College, Career, and Community Options (ECCCO) at McClymonds, Castlemont, Fremont, Dewey, Rudsdale, Bunche, Sojourner Truth, Oakland High, Oakland Tech, Skyline, Coliseum College Prep Academy, MetWest, Life Academy, Oakland International High School, and Madison Park Academy, extending the term of the agreement from June 1, 2022 through June 30, 2024 to June 30, 2025, pursuant to the terms and conditions thereof, if any.",
       "title": "Amendment No. 1 - Grant Agreement - Kids First! - City of Oakland, Oakland Fund for Children and Youth (OFCY) - HS Linked Learning Office",
       "vendorKey": "n-city-of-oakland",
@@ -9216,7 +9224,7 @@
     },
     "items": 66,
     "revenueItems": 1,
-    "revenueTotal": 225000,
+    "revenueTotal": 450000,
     "spendingItems": 46,
     "spendingTotal": 1781327.83,
     "yearlyCapItems": 0,
