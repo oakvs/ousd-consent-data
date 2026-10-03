@@ -234,6 +234,11 @@ export const Override = z.object({
   sourceIssue: z.string().nullable().optional(),
   /** Set false when the official text itself misprints the amount (R.-248). */
   amountVerified: z.boolean().optional(),
+  /**
+   * File number of another item on the same agenda that this one repeats: the same action listed
+   * under two file numbers (2022-12-14, 22-2526 and 22-2527). The repeat is left out of all totals.
+   */
+  duplicateOf: z.string().nullable().optional(),
   reviewer: z.string().nullable(),
   reviewedAt: z.string().nullable(),
   /** Public correction note when this changes an already-published claim. */
@@ -382,6 +387,8 @@ export const PublishedItem = RawItem.extend({
   }),
   outcome: Outcome.nullable(),
   lineage: Lineage,
+  /** Id of the item this one repeats (the same action listed twice); left out of all totals. */
+  duplicateOf: z.string().optional(),
 })
 export type TPublishedItem = z.infer<typeof PublishedItem>
 

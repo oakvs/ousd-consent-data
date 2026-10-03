@@ -370,3 +370,27 @@ describe('golden set, 2026-06-24', async () => {
     })
   }
 })
+
+describe('duplicate listings', () => {
+  it('point at another item in the same meeting and are left out of meeting and vendor totals', async () => {
+    const dir = path.join(PUBLISHED, 'meetings')
+    const dupIds = new Set<string>()
+    for (const f of (await readdir(dir)).filter(n => !n.endsWith('.list.json'))) {
+      const m = MeetingFile.parse(JSON.parse(await readFile(path.join(dir, f), 'utf8')))
+      const ids = new Set(m.items.map(i => i.id))
+      const dups = m.items.filter(i => i.duplicateOf)
+      for (const d of dups) {
+        expect(ids.has(d.duplicateOf!), `${d.id} → ${d.duplicateOf}`).toBe(true)
+        expect(d.duplicateOf).not.toBe(d.id)
+        dupIds.add(d.id)
+      }
+      expect(m.totals.items).toBe(m.items.length - dups.length)
+    }
+    expect(dupIds.size).toBeGreaterThan(0)
+    const vendorDir = path.join(PUBLISHED, 'vendors')
+    for (const f of (await readdir(vendorDir)).filter(n => n !== 'index.json')) {
+      const v = VendorFile.parse(JSON.parse(await readFile(path.join(vendorDir, f), 'utf8')))
+      for (const a of v.appearances) if (dupIds.has(a.id)) expect(a.countsTowardTotals, a.id).toBe(false)
+    }
+  })
+})

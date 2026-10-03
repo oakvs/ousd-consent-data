@@ -226,11 +226,11 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
     }
   }).sort((a, b) => a.agendaSequence - b.agendaSequence)
 
-  // OUSD occasionally lists the same matter twice on one agenda (e.g. 2023-04-26, T.-18 and T.-20).
-  // Both listings are on the official agenda, so both stay; the repeat gets its own id and a note,
-  // and the matter is counted once in the totals.
+  // OUSD occasionally lists the same action twice: one file number twice on an agenda (2023-04-26,
+  // T.-18 and T.-20) or, confirmed by a person, two file numbers with the same attachments (override
+  // `duplicateOf`). Both listings are on the official agenda, so both stay; the repeat gets a note and
+  // `duplicateOf`, and the action is counted once in every total (meeting, vendor, README).
   const firstListing = new Map<string, TPublishedItem>()
-  const repeats = new Set<TPublishedItem>()
   for (const item of items) {
     const first = firstListing.get(item.file)
     if (!first) {
@@ -238,8 +238,16 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
       continue
     }
     item.id = `${key}:${item.file}:${item.agendaNumber}`
-    item.notes = [...item.notes, { kind: 'cosmetic', text: `Listed twice on this agenda, also as ${first.agendaNumber}. Counted once in the meeting's totals.` }]
-    repeats.add(item)
+    item.duplicateOf = first.id
+    item.notes = [...item.notes, { kind: 'cosmetic', text: `Listed twice on this agenda, also as ${first.agendaNumber}. Counted once in totals.` }]
+  }
+  for (const { item: rawItem, override } of merged) {
+    if (!override?.duplicateOf) continue
+    const original = firstListing.get(override.duplicateOf)
+    const item = firstListing.get(rawItem.file)
+    if (!original || !item || original === item) throw new Error(`${key} ${rawItem.file}: duplicateOf ${override.duplicateOf} isn't another item on this agenda`)
+    item.duplicateOf = original.id
+    item.notes = [...item.notes, { kind: 'cosmetic', text: `The same action as ${original.agendaNumber} (${original.file}), listed under a second file number. Counted once in totals.` }]
   }
 
   return {
@@ -264,7 +272,7 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
           : null)
         ?? laterDecisionNote(items, meetingDate),
     },
-    totals: computeTotals(items.filter(i => !repeats.has(i))),
+    totals: computeTotals(items.filter(i => !i.duplicateOf)),
     items,
   }
 }

@@ -128,7 +128,7 @@ export function buildVendors(
         fundingSource: item.fundingSource,
         outcome: item.outcome,
         flags: item.flags,
-        countsTowardTotals: latest.get(item.file) === m.meeting.key,
+        countsTowardTotals: !item.duplicateOf && latest.get(item.file) === m.meeting.key,
       })
       groups.set(key, group)
     }

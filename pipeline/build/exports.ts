@@ -71,6 +71,7 @@ export const ITEM_COLUMNS: TColumn<TItemRow>[] = [
   { name: 'review_status', type: 'string', description: 'auto_ok, needs_review, blocked, human_reviewed, or pending (no summary yet).', get: r => r.item.review.status },
   { name: 'model_id', type: 'string', description: 'Model that wrote the summary.', get: r => r.item.review.modelId },
   { name: 'prompt_version', type: 'string', description: 'Prompt version used for the summary.', get: r => r.item.review.promptVersion },
+  { name: 'duplicate_of', type: 'string', description: 'Item id this row repeats (the same action listed twice); repeats are left out of totals.', get: r => r.item.duplicateOf ?? null },
 ]
 
 export const MEETING_COLUMNS: TColumn<TMeetingFile>[] = [
