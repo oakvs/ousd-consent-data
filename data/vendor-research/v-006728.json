@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.withpavilion.com/suppliers/literacy-resources-heggerty-phonemic",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://thejunction.nhsa.org/organization/heggerty",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://heggerty.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006728",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: a business trading as 'Heggerty' (Heggerty Phonemic Awareness, legal name Literacy Resources, LLC) is listed at Oak Park, IL, matching the agenda location 'Oak Park, IL' (Pavilion government-contracts directory; National Head Start Association 'The Junction' listing)",
+      "Organization sells a phonemic awareness curriculum for elementary schools, matching OUSD's 'Classroom & academic programs' services agreement presented by the Chief Academic Officer (Academics and Instruction Department)",
+      "Two independent third-party listings (Pavilion and The Junction) give the same Oak Park, IL 60301 address and the heggerty.org website"
+    ],
+    "key": "v-006728",
+    "notes": "Heggerty's own site (heggerty.org) is a JavaScript app that returns no readable text to automated fetchers, so phone, email and registry IDs could not be verified from it and are left null. Legal name and address come from the Pavilion public-procurement directory; no EIN, California entity number or UEI was confirmed (company is Illinois-based and not a nonprofit).",
+    "profile": {
+      "address": "805 Lake Street, # 293, Oak Park, IL 60301",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oak Park, IL",
+      "legalName": "LITERACY RESOURCES, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Heggerty is the trade name of Literacy Resources, LLC, a company in Oak Park, Illinois that publishes a phonemic awareness curriculum for Pre-K through fifth grade. It sells lesson sequences, assessments and a subscription software platform (myHeggerty) with training materials for teachers and school districts.",
+      "website": "https://heggerty.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "LITERACY RESOURCES, LLC Government Contracts | Pavilion",
+        "url": "https://www.withpavilion.com/suppliers/literacy-resources-heggerty-phonemic"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "headquarters"
+        ],
+        "title": "Heggerty - Organization - Professional",
+        "url": "https://thejunction.nhsa.org/organization/heggerty"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Heggerty | Phonemic Awareness & Early Literacy Programs",
+        "url": "https://heggerty.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-006728",
+    "notes": "Heggerty, Oak Park IL matches the agenda name and city; address, website, Illinois HQ and the phonemic-awareness curriculum are confirmed by the NHSA Junction listing, heggerty.org metadata, and independent search results (Literacy Resources, LLC dba Heggerty, 805 Lake Street #293, Pre-K to 5th grade). The Pavilion page could not be fetched (HTTP 405) but the legal name was corroborated elsewhere; the summary's myHeggerty/assessments detail was not independently verified but is neutral and not contradicted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

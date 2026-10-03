@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941670490",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://unitycouncil.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://unitycouncil.org/about-us/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-unity-council",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) in Oakland, CA: 'Spanish-speaking Unity Council Of Alameda County Inc' (ProPublica, EIN 94-1670490), operating as The Unity Council",
+      "Located in the Fruitvale neighborhood of Oakland, CA, matching the agenda text",
+      "OUSD legislation file 22-2116 describes an MOU between OUSD's Oakland Adult and Career Education and The Unity Council, matching the agenda titles",
+      "Website describes employment services and career readiness training, consistent with an adult and career education partnership"
+    ],
+    "key": "n-unity-council",
+    "notes": "Legal name per ProPublica differs from the 'The Unity Council' name used publicly and in the agenda. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1900 Fruitvale Avenue, Suite 2A, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "94-1670490",
+      "email": "admin@unitycouncil.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Spanish-speaking Unity Council Of Alameda County Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 535-6900",
+      "samUei": null,
+      "summary": "The Unity Council is a nonprofit in Oakland's Fruitvale neighborhood. It runs programs in early childhood education, youth mentorship, employment services, housing assistance and senior services.",
+      "website": "https://unitycouncil.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Spanish-speaking Unity Council Of Alameda County Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941670490"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Who We Are - The Unity Council",
+        "url": "https://unitycouncil.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - The Unity Council",
+        "url": "https://unitycouncil.org/about-us/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-unity-council",
+    "notes": "ProPublica confirms Spanish-speaking Unity Council of Alameda County Inc (EIN 94-1670490, 501(c)(3), Oakland), and unitycouncil.org confirms the Fruitvale base, programs, phone, general admin email and address; this fits an Oakland adult and career education MOU and space lease. Minor wording issue: the site describes housing as affordable housing development and property management, so 'housing assistance' is slightly loose but not materially wrong.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

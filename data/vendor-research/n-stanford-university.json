@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156365",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stanford.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stanford.edu/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://gardnercenter.stanford.edu/project/oakland-unified-school-district-nations-first-full-service-community-school-district",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-stanford-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational organization: 'The Board Of Trustees Of The Leland Stanford Junior University' in Stanford, CA (ProPublica Nonprofit Explorer, EIN 94-1156365), matching the agenda's 'Stanford University, Stanford, CA'",
+      "Stanford's John W. Gardner Center page says it has collaborated with Oakland Unified School District since 2014 on community schools research, matching the agreement with OUSD's Community Schools and Student Services Department and a data sharing agreement"
+    ],
+    "key": "n-stanford-university",
+    "notes": null,
+    "profile": {
+      "address": "450 Jane Stanford Way Stanford, CA 94305–2004",
+      "caEntityNumber": null,
+      "ein": "94-1156365",
+      "email": null,
+      "headquarters": "Stanford, CA",
+      "legalName": "The Board Of Trustees Of The Leland Stanford Junior University",
+      "orgType": "nonprofit",
+      "phone": "(650) 723-2300",
+      "samUei": null,
+      "summary": "Stanford University is a research university in Stanford, California, founded in 1885. It offers undergraduate and graduate education through seven schools, including Business, Education, Engineering, Law, and Medicine, and carries out research and medical care.",
+      "website": "https://www.stanford.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Board Of Trustees Of The Leland Stanford Junior University - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156365"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Stanford",
+        "url": "https://www.stanford.edu/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact Stanford",
+        "url": "https://www.stanford.edu/contact/"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District: The nation's first full-service community school district",
+        "url": "https://gardnercenter.stanford.edu/project/oakland-unified-school-district-nations-first-full-service-community-school-district"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-stanford-university",
+    "notes": "Stanford University, Stanford CA matches the agenda name and city. ProPublica confirms the legal name, EIN 94-1156365 and 501(c)(3) status, and stanford.edu confirms the summary, phone and address. The Gardner Center page confirms its collaboration with OUSD on community schools, though it dates it from 2010, not 2014 as the candidate's identity signal says. That is an identity-signal detail, not a published profile field.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

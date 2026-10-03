@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.umassglobal.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/260152908",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.massachusetts.edu/umass-global-0",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-massachusetts",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The OUSD agenda text defines the counterparty as 'University of Massachusetts (University or UMG), a private, nonprofit affiliate of University of Massachusetts', i.e. UMass Global, not a Massachusetts campus",
+      "UMass Global (formerly Brandman University) is a California-based private nonprofit online university and part of the University of Massachusetts system (massachusetts.edu)",
+      "The agreement covers TK-12 teaching and pupil personnel services credential internships and fieldwork, matching a California university credential program serving California school districts"
+    ],
+    "key": "n-university-of-massachusetts",
+    "notes": "The agenda names only 'University of Massachusetts' with no city; identified as UMass Global from the agenda's own definition ('UMG', a private nonprofit affiliate). No general email found on the homepage, so email is null.",
+    "profile": {
+      "address": "65 Enterprise, Suite 150, Aliso Viejo, CA 92656",
+      "caEntityNumber": null,
+      "ein": "26-0152908",
+      "email": null,
+      "headquarters": "Aliso Viejo, CA",
+      "legalName": "University of Massachusetts Global",
+      "orgType": "nonprofit",
+      "phone": "(800) 746-0082",
+      "samUei": null,
+      "summary": "UMass Global is a private, nonprofit online university based in California and part of the University of Massachusetts system. It offers bachelor's, master's and doctoral degrees and certificates, mostly to working adults.",
+      "website": "https://www.umassglobal.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "UMass Global",
+        "url": "https://www.umassglobal.edu/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "University Of Massachusetts Global - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/260152908"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "UMass Global",
+        "url": "https://www.massachusetts.edu/umass-global-0"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-university-of-massachusetts",
+    "notes": "The agenda text defines the counterparty as UMG, a private nonprofit affiliate of the University of Massachusetts, and the credential-program MOU with the Talent department fits UMass Global in California. The cited sources (umassglobal.edu, ProPublica, massachusetts.edu) support the name, EIN, address, phone, nonprofit status and a neutral summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

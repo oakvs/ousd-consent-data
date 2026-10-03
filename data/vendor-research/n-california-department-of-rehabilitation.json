@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dor.ca.gov/Home/ContactUs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dor.ca.gov/Home/CpEducation",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-rehabilitation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names the 'State of California - Department of Rehabilitation' and the official site dor.ca.gov is that state agency",
+      "Funding source 'Transition Partnership Program' is a named DOR program with school districts (dor.ca.gov Education page)",
+      "Contract is for a Special Education Department standard agreement, matching DOR's services for students with disabilities"
+    ],
+    "key": "n-california-department-of-rehabilitation",
+    "notes": "State agency; no EIN/SOS entity number applicable. Email is the site's general webmaster address, the only general inbox on the Contact page.",
+    "profile": {
+      "address": "P.O. Box 944222 Sacramento, CA 94244-2220",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "WebMaster@dor.ca.gov",
+      "headquarters": "Sacramento, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "1-916-324-1313",
+      "samUei": null,
+      "summary": "The California Department of Rehabilitation is a state agency that helps people with disabilities find jobs and live independently. It runs field offices across California and oversees Independent Living Centers. Through Transition Partnership Programs, it works with school districts to help students with disabilities prepare for work.",
+      "website": "https://www.dor.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - CA Department of Rehabilitation",
+        "url": "https://www.dor.ca.gov/Home/ContactUs"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education - CA Department of Rehabilitation - DOR",
+        "url": "https://www.dor.ca.gov/Home/CpEducation"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-department-of-rehabilitation",
+    "notes": "The agenda names the State of California Department of Rehabilitation and its Transition Partnership Program funding, and dor.ca.gov is that agency. The Contact page confirms the phone, webmaster email, P.O. Box address, Sacramento location, field offices and Independent Living Centers, and the Education page confirms the TPP school-district partnerships.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

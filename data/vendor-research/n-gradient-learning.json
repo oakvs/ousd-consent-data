@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/352645251",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/35-2645251",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-gradient-learning",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Gradient Learning' (ProPublica Nonprofit Explorer, EIN 35-2645251), in California",
+      "GuideStar profile says the organization operates Summit Learning, matching the agenda title 'Summit Learning Program Agreement - Gradient Learning'",
+      "Educational program purchase matches OUSD's 'Classroom & academic programs' category",
+      "Caveat: registry address is in Walnut, CA, while the agenda text says Los Angeles, CA (both Southern California)"
+    ],
+    "key": "n-gradient-learning",
+    "notes": "Agenda gives Los Angeles, CA but registries show Walnut, CA; organization's own website was unreachable during research, so contact details could not be confirmed there.",
+    "profile": {
+      "address": "340 S Lemon Ave # 6119, Walnut, CA 91789",
+      "caEntityNumber": null,
+      "ein": "35-2645251",
+      "email": null,
+      "headquarters": "Walnut, CA",
+      "legalName": "Gradient Learning",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Gradient Learning is a nonprofit education organization that describes itself as an educator-led partner to communities, schools and educators. It operates Summit Learning, a program used by hundreds of schools across the United States.",
+      "website": "https://gradientlearning.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Gradient Learning - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/352645251"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "orgType"
+        ],
+        "title": "Gradient Learning - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/35-2645251"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": null
+}

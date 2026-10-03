@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.azusa.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cde.ca.gov/sdprofile/details.aspx?cds=19642790000000",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009580",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the California Department of Education district profile 'Azusa Unified' (Los Angeles County), the only Azusa Unified School District in California",
+      "The district's own website describes dual-language (Spanish and Mandarin) immersion programs, consistent with an MOU with OUSD's English Language Learner and Multilingual Achievement office"
+    ],
+    "key": "v-009580",
+    "notes": "Agenda gives no location; matched by name to the only Azusa Unified School District in California. Could not find the OUSD MOU document text itself to confirm directly. General communications email is listed on the site only for accessibility inquiries, so omitted.",
+    "profile": {
+      "address": "546 S Citrus Avenue, Azusa, CA 91702",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Azusa, CA",
+      "legalName": "Azusa Unified School District",
+      "orgType": "public_agency",
+      "phone": "(626) 967-6211",
+      "samUei": null,
+      "summary": "A public school district serving the city of Azusa, California, in Los Angeles County. It runs elementary, middle and high schools for students in kindergarten through grade 12, along with an adult education center.",
+      "website": "https://www.azusa.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Azusa Unified School District",
+        "url": "https://www.azusa.org"
+      },
+      {
+        "supports": [
+          "orgType",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "District Profile: Azusa Unified (CA Dept of Education)",
+        "url": "https://www.cde.ca.gov/sdprofile/details.aspx?cds=19642790000000"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-009580",
+    "notes": "The agenda names Azusa Unified School District for an MOU with OUSD's Multilingual Achievement office, and the district site and CDE profile confirm the name, address, phone, website, and school/adult-education details. The summary is neutral and supported (the site actually lists preschool through grade 12, so K-12 is not wrong).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

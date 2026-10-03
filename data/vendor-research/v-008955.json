@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942911417",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ecoliteracy.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ecoliteracy.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ecoliteracy.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008955",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Center For Ecoliteracy' (ProPublica Nonprofit Explorer, EIN 94-2911417, Berkeley, CA), matching the agenda name 'Center for EcoLiteracy'",
+      "Located in Berkeley, CA at 2150 Allston Way, matching the agenda location 'Berkeley, CA'",
+      "Website describes farm-to-school and school food programs and K-12 education work, matching OUSD's 'USDA Farm To School Program' funding and classroom and academic programs contract"
+    ],
+    "key": "v-008955",
+    "notes": "No general email address is shown on the organization's contact page, so email is null. California SOS entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2150 Allston Way, Suite 270, Berkeley, CA 94704-1377",
+      "caEntityNumber": null,
+      "ein": "94-2911417",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Center For Ecoliteracy",
+      "orgType": "nonprofit",
+      "phone": "(510) 845-4595",
+      "samUei": null,
+      "summary": "A nonprofit based in Berkeley, California that works to improve education about the sustainability of people and the planet. Its work covers classroom education, school food and farm-to-school programs, and policy advocacy for school meals. It has partnered with school districts across California.",
+      "website": "https://www.ecoliteracy.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Center For Ecoliteracy - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942911417"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - Center for Ecoliteracy",
+        "url": "https://www.ecoliteracy.org/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Center for Ecoliteracy",
+        "url": "https://www.ecoliteracy.org/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Center for Ecoliteracy",
+        "url": "https://www.ecoliteracy.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-008955",
+    "notes": "Berkeley nonprofit Center for Ecoliteracy matches the agenda name, city, and farm-to-school/education services; ProPublica confirms name, EIN 94-2911417, 501(c)(3) and Berkeley, and the contact and about pages confirm phone, address, website and the neutral summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

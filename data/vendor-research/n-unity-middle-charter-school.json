@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.unitymiddle.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.unitymiddle.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/75-3107384",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/753107384",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-unity-middle-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The OUSD agenda item (File 23-2604) describes the Prop 39 in-lieu agreement as covering the campus at 1180 70th Avenue; Oakland Unity Middle School's own Contact page gives its address as 1180 70th Avenue, Oakland, CA 94621",
+      "Agenda name 'Unity Middle Charter School' matches Oakland Unity Middle School, a free public charter middle school (grades 6-8) in East Oakland, which fits a charter-school facilities agreement handled by OUSD's Office of Charter Schools",
+      "GuideStar lists the 501(c)(3) nonprofit Unity Schools (EIN 75-3107384, Oakland, CA) as operating Oakland Unity Middle School (OUMS), and the school's website footer credits 'Oakland Unity Charter Schools'; ProPublica confirms Unity Schools under the same EIN"
+    ],
+    "key": "n-unity-middle-charter-school",
+    "notes": "The agenda counterparty is 'Unity Middle Charter School', matched to Oakland Unity Middle School via the shared 1180 70th Avenue campus address. The IRS-registered nonprofit is Unity Schools (the school website footer says 'Oakland Unity Charter Schools'). GuideStar's mailing address differs from the school site address. California Secretary of State entity number not checked.",
+    "profile": {
+      "address": "1180 70th Avenue, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "75-3107384",
+      "email": "Info@UnityMiddle.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Unity Schools",
+      "orgType": "nonprofit",
+      "phone": "510-564-4851",
+      "samUei": null,
+      "summary": "Oakland Unity Middle School is a free public charter middle school in East Oakland, California, serving students in grades 6 to 8. It is authorized by the Alameda County Office of Education and opened in 2015. The school is run by Unity Schools, a nonprofit that also operates Oakland Unity High School.",
+      "website": "https://www.unitymiddle.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Oakland Unity Middle School",
+        "url": "https://www.unitymiddle.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Oakland Unity Middle School - Small, Safe & Supportive",
+        "url": "https://www.unitymiddle.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "summary",
+          "headquarters"
+        ],
+        "title": "Unity Schools - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/75-3107384"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Unity Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/753107384"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-unity-middle-charter-school",
+    "notes": "The OUSD agenda item (Prop 39 in-lieu agreement for the 1180 70th Avenue campus) matches the Oakland Unity Middle School address on its Contact page, and GuideStar confirms Unity Schools (EIN 75-3107384) operates the school. Summary facts (grades 6-8, ACOE authorizer, opened 2015) are on the school site; the Unity High School link rests on site logos and GuideStar's secondary-school classification, which is thin but not contradicted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

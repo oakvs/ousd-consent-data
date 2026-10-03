@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/61708283",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sd.cde.ca.gov/SchoolDirectory/details?cdscode=01100170106906",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Bay_Area_Technology_School",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.baytechschool.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-bay-technology-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Bay Area Technology School' (ProPublica Nonprofit Explorer, EIN 06-1708283), which operates the public charter school known as BayTech / Bay Tech Charter School",
+      "Located in Oakland, CA, matching an OUSD Office of Charter Schools item about a Prop 39 facilities agreement (charter schools located in Oakland)",
+      "Search results from OUSD's own site show a BayTech Charter School Prop 39 facilities request for 2024-2025 at 8251 Fontaine St, Oakland, matching the agenda title 'In-Lieu of Prop 39 Facilities Use Agreement for 2024-2025 - Bay Tech Charter School'",
+      "California Department of Education directory lists 'Bay Area Technology' as a charter school in Oakland with website baytechschool.org"
+    ],
+    "key": "n-bay-technology-charter-school",
+    "notes": "The school's own website (baytechschool.org) blocks automated fetching, so contact details are taken from the California Department of Education school directory. The school also operates on an OUSD campus at 8251 Fontaine St, Oakland (per OUSD Prop 39 materials); the mailing address used here is the CDE-listed 1445 23rd Ave. California entity number and SAM UEI were not looked up.",
+    "profile": {
+      "address": "1445 23rd Ave. Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "06-1708283",
+      "email": "info@baytechschool.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Bay Area Technology School",
+      "orgType": "nonprofit",
+      "phone": "(510) 382-9932",
+      "samUei": null,
+      "summary": "Bay Area Technology School, known as BayTech, is a nonprofit that operates a public charter school in Oakland, California. The school serves students in grades 6 through 12 with a technology-focused, college preparatory program. It was founded in 2004.",
+      "website": "https://www.baytechschool.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Bay Area Technology School - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/61708283"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "Bay Area Technology - School Directory Details (CA Dept of Education)",
+        "url": "https://sd.cde.ca.gov/SchoolDirectory/details?cdscode=01100170106906"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Bay Area Technology School - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bay_Area_Technology_School"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "BayTech Charter School",
+        "url": "https://www.baytechschool.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-bay-technology-charter-school",
+    "notes": "The agenda item is an OUSD Prop 39 facilities agreement with Bay Tech Charter School, and the sources show Bay Area Technology School (BayTech) is a 501(c)(3) running an Oakland charter school, so it is the same organization. ProPublica and the CDE directory support the legal name, EIN, address, phone, email, website, grades 6-12 and 2004 founding. Wikipedia supports the technology-focused college-prep description. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

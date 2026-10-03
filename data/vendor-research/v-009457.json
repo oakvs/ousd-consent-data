@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://home.alsoenergy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://home.alsoenergy.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/co/boulder/profile/solar-energy-contractors/also-energyinc-1296-90132638",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009457",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches AlsoEnergy, Inc. (agenda: 'Also Energy, Inc.'); a Better Business Bureau profile lists 'Also Energy, Inc' in Boulder, CO, matching the agenda location, with the same toll-free phone (866) 303-5668 shown on the company's own site",
+      "Company is a solar energy monitoring and reporting business, matching OUSD's 'Solar Renewable Energy Certificates Project' agreement; search results describe it as an approved verifier for solar renewable energy certificate programs in several states",
+      "Company headquarters is now Broomfield, CO (near Boulder); the agenda's Boulder address matches the company's earlier Boulder location"
+    ],
+    "key": "v-009457",
+    "notes": "Company's current headquarters (Broomfield) differs from the Boulder address in the agenda; BBB and earlier records place it in Boulder. No direct page linking AlsoEnergy to OUSD was found; match rests on name, Colorado location, phone number and solar industry fit. Legal name 'AlsoEnergy, Inc.' per company site; agenda spells it 'Also Energy, Inc.'. AlsoEnergy is now part of Stem, Inc.",
+    "profile": {
+      "address": "105 Edgeview Dr. Suite 450, Broomfield, CO 80021, USA",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Broomfield, CO",
+      "legalName": "AlsoEnergy, Inc.",
+      "orgType": "company",
+      "phone": "+1 866 303 5668",
+      "samUei": null,
+      "summary": "AlsoEnergy provides monitoring and control software and hardware for solar and other clean energy systems. Its PowerTrack platform collects performance data from sites such as utility, commercial and residential solar installations, and supports reporting and portfolio management. It is headquartered in Colorado and also has offices in Europe and Asia.",
+      "website": "https://home.alsoenergy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "AlsoEnergy",
+        "url": "https://home.alsoenergy.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - AlsoEnergy",
+        "url": "https://home.alsoenergy.com/contact/"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Also Energy, Inc - BBB Profile",
+        "url": "https://www.bbb.org/us/co/boulder/profile/solar-energy-contractors/also-energyinc-1296-90132638"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-009457",
+    "notes": "AlsoEnergy, Inc. is a solar monitoring and reporting company; BBB lists 'Also Energy,Inc' in Boulder, CO with the same phone number as the company contact page, matching the agenda's Boulder location and a solar REC project. Summary, address, phone and headquarters are supported by the cited homepage and contact page (Broomfield HQ, offices in Berlin, Tokyo, India); no page directly links the company to OUSD, but the name, location and service fit are consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

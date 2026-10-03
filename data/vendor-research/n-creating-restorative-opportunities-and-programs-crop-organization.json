@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/263513635",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.croporganization.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.croporganization.org/our-story",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-creating-restorative-opportunities-and-programs-crop-organization",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Crop Organization' (ProPublica Nonprofit Explorer, EIN 26-3513635), based in Oakland, CA, matching the agenda location",
+      "CROP's own website expands the name as 'Creating Restorative Opportunities & Programs' and lists an Oakland address",
+      "Website describes career and workforce training for formerly incarcerated adults, consistent with an agreement with OUSD Adult and Career Education"
+    ],
+    "key": "n-creating-restorative-opportunities-and-programs-crop-organization",
+    "notes": "No page found mentioning OUSD directly; identity rests on name, Oakland location and program fit. Phone is shown on the site as 341-441-0159.",
+    "profile": {
+      "address": "1300 Clay Street, Suite 600, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "26-3513635",
+      "email": "info@croporg.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Crop Organization",
+      "orgType": "nonprofit",
+      "phone": "341-441-0159",
+      "samUei": null,
+      "summary": "CROP (Creating Restorative Opportunities & Programs) is an Oakland-based nonprofit focused on criminal justice reform and reentry support. It runs leadership development and substance abuse certification programs inside California prisons. Its Ready 4 Life program offers case management, housing assistance and workforce training to people returning from incarceration.",
+      "website": "https://www.croporganization.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Crop Organization - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/263513635"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "CROP Organization",
+        "url": "https://www.croporganization.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Our Story - CROP",
+        "url": "https://www.croporganization.org/our-story"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-creating-restorative-opportunities-and-programs-crop-organization",
+    "notes": "ProPublica confirms Crop Organization, Oakland CA, EIN 26-3513635, 501(c)(3); the organization's site expands the name exactly as in the agenda and shows the address, phone, generic info@ email, and the in-prison, certification and Ready 4 Life reentry programs (including case management and supportive housing) described in the neutral summary. No source mentions OUSD directly, but the name, city and workforce/reentry services fit an Adult and Career Education no-cost agreement.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://illustrativemathematics.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/463513958",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-illustrative-math",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Illustrative Mathematics', EIN 46-3513958 (ProPublica Nonprofit Explorer)",
+      "Located in Oro Valley, AZ, matching the agenda text 'Oro Valley, AZ' (ProPublica and organization's Contact page: PO Box 69822, Oro Valley AZ 85737)",
+      "Website describes K-12 math curriculum and professional learning, matching OUSD's 'Classroom & academic programs' / Academics and Instruction Department contract"
+    ],
+    "key": "n-illustrative-math",
+    "notes": "No general email found on fetched pages; left null.",
+    "profile": {
+      "address": "PO Box 69822, Oro Valley AZ 85737",
+      "caEntityNumber": null,
+      "ein": "46-3513958",
+      "email": null,
+      "headquarters": "Oro Valley, AZ",
+      "legalName": "Illustrative Mathematics",
+      "orgType": "nonprofit",
+      "phone": "855.741.6284",
+      "samUei": null,
+      "summary": "Illustrative Mathematics is a nonprofit that develops K-12 math curriculum and offers professional learning support to schools and teachers. Its materials cover grades from transitional kindergarten through 12th grade.",
+      "website": "https://illustrativemathematics.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Illustrative Mathematics K–12 Math",
+        "url": "https://illustrativemathematics.org/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Illustrative Mathematics - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/463513958"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-illustrative-math",
+    "notes": "Fetched both sources: the organization's contact page and ProPublica agree on name, Oro Valley AZ location (matching the agenda), 501(c)(3) status, EIN 46-3513958, PO Box address and phone. The K-12 math curriculum and professional learning summary is supported and neutral, and fits an Academics and Instruction no-cost agreement.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

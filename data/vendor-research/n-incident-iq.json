@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.incidentiq.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.incidentiq.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-incident-iq",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Incident IQ operates the website incidentiq.com, whose contact page lists the company as Incident IQ, LLC (agenda says 'Incident IQ, Inc.')",
+      "Headquartered in Atlanta, GA, matching the agenda location 'Atlanta, GA'",
+      "Sells K-12 school technology support (help desk, asset management) software, matching OUSD's Technology Services Department student data privacy agreement"
+    ],
+    "key": "n-incident-iq",
+    "notes": "Agenda names 'Incident IQ, Inc.'; the company's website lists the legal name as 'Incident IQ, LLC'. Registry IDs were not looked up.",
+    "profile": {
+      "address": "750 Glenwood Ave SE, Suite 320, Atlanta, GA 30316",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Atlanta, GA",
+      "legalName": "Incident IQ, LLC",
+      "orgType": "company",
+      "phone": "1 (877) 747-3073",
+      "samUei": null,
+      "summary": "A company that makes software for K-12 school districts. Its platform handles IT help desk tickets, device and asset tracking, facilities work orders, and HR service requests in one system.",
+      "website": "https://www.incidentiq.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us | Incident IQ",
+        "url": "https://www.incidentiq.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Incident IQ",
+        "url": "https://www.incidentiq.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-incident-iq",
+    "notes": "Incident IQ is an Atlanta, GA K-12 school operations software vendor, which fits a Technology Services student data privacy agreement; the contact page shows the legal name (LLC), phone and Atlanta address, and the about page supports the neutral summary (help desk, asset management, facilities work orders, HR requests).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

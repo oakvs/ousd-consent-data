@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.usfca.edu/education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156628",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-san-francisco-school-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational institution: 'University of San Francisco' (ProPublica Nonprofit Explorer, EIN 94-1156628, San Francisco, CA)",
+      "The School of Education is a division of the University of San Francisco and prepares educators and counselors, matching an OUSD Talent/Human Resources internship and practica partnership",
+      "The School of Education website lists an Oakland campus location and partnerships with Bay Area school districts"
+    ],
+    "key": "n-university-of-san-francisco-school-of-education",
+    "notes": "Agenda vendor is the School of Education, a unit of the University of San Francisco; registry details (legal name, EIN) are for the university as a whole. No general email found.",
+    "profile": {
+      "address": "2130 Fulton Street, San Francisco, CA 94117-1080",
+      "caEntityNumber": null,
+      "ein": "94-1156628",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "University of San Francisco",
+      "orgType": "nonprofit",
+      "phone": "415-422-5555",
+      "samUei": null,
+      "summary": "The School of Education is part of the University of San Francisco, a private nonprofit university. It prepares teachers and counselors through credential programs, master's degrees and doctoral programs, and partners with school districts across the Bay Area.",
+      "website": "https://www.usfca.edu/education"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "School of Education | University of San Francisco",
+        "url": "https://www.usfca.edu/education"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "University Of San Francisco - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156628"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-university-of-san-francisco-school-of-education",
+    "notes": "The School of Education is a unit of the University of San Francisco, which fits an OUSD Talent internship and practica MOU. The cited pages show the summary, website, phone, address and headquarters, and ProPublica shows the legal name, EIN, 501(c)(3) status and location. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

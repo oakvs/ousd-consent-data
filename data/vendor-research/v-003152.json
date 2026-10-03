@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941687847",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandzoo.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandzoo.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003152",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Registered nonprofit 'Conservation Society Of California' doing business as 'The Oakland Zoo', EIN 94-1687847, located in Oakland, CA (ProPublica Nonprofit Explorer), matching the agenda's 'Oakland Zoo, Oakland, CA'",
+      "Oakland Zoo website lists 9777 Golf Links Road, Oakland, CA 94605 and describes educational programs, matching OUSD's 'Classroom & academic programs' contracts and a School Programs section"
+    ],
+    "key": "v-003152",
+    "notes": "General email omitted because the site obfuscates it. Zoo's mailing address is also P.O. Box 5238, Oakland, CA 94605; physical address used.",
+    "profile": {
+      "address": "9777 Golf Links Road, Oakland, CA 94605",
+      "caEntityNumber": null,
+      "ein": "94-1687847",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Conservation Society Of California",
+      "orgType": "nonprofit",
+      "phone": "(510) 632-9525",
+      "samUei": null,
+      "summary": "The Oakland Zoo is a nonprofit zoo in Oakland, California, run by the Conservation Society of California. It cares for animals, offers educational programs, and supports wildlife conservation locally and around the world.",
+      "website": "https://www.oaklandzoo.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Conservation Society Of California (The Oakland Zoo) - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941687847"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address"
+        ],
+        "title": "About - Oakland Zoo",
+        "url": "https://www.oaklandzoo.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact Us - Oakland Zoo",
+        "url": "https://www.oaklandzoo.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-003152",
+    "notes": "ProPublica lists Conservation Society Of California (EIN 94-1687847, Oakland, CA) as doing business as The Oakland Zoo, and the zoo's own About and Contact pages confirm the address, phone, nonprofit status and school programs, which fit OUSD's classroom program agreements. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://opencorporates.com/companies/us_ca/0015273",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/940562680",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sutterhealth.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sutterhealth.org/find-location/facility/alta-bates-summit-medical-center-alta-bates-campus-1043246519",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-sutter-bay-hospitals-alta-bates-summit-medical-center",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California public benefit nonprofit corporation: 'SUTTER BAY HOSPITALS', entity number 0015273, Active (OpenCorporates, from California Secretary of State data)",
+      "Name matches a federally tax-exempt 501(c)(3) hospital nonprofit: 'Sutter Bay Hospitals', EIN 94-0562680, operating hospital facilities (ProPublica Nonprofit Explorer)",
+      "Sutter Health's own website lists Alta Bates Summit Medical Center as one of its hospitals, matching the agenda's 'Alta Bates Summit Medical Center' dba and the East Bay (Emeryville / Berkeley / Oakland) location",
+      "OUSD contracts with them for a Violence Prevention Program grant under 'Student health, support & family services', consistent with a nonprofit hospital's community benefit grants"
+    ],
+    "key": "n-sutter-bay-hospitals-alta-bates-summit-medical-center",
+    "notes": "Legal entity (Sutter Bay Hospitals) is the operator of Alta Bates Summit Medical Center per the agenda dba; the explicit entity-to-hospital link comes from the agenda text. Phone is the general line for the Alta Bates campus (Berkeley), not a dedicated line for the legal entity. Registered/headquarters address (Emeryville per a search snippet) was not confirmed on a fetched page, so address and headquarters are left null. ProPublica lists the IRS address as Sacramento, CA.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "0015273",
+      "ein": "94-0562680",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Sutter Bay Hospitals",
+      "orgType": "nonprofit",
+      "phone": "510-204-4444",
+      "samUei": null,
+      "summary": "Sutter Bay Hospitals is a California nonprofit corporation that operates hospitals in the San Francisco Bay Area as part of the Sutter Health system. Its hospitals include Alta Bates Summit Medical Center, which has campuses in Berkeley and Oakland and provides hospital care such as maternity, newborn intensive care, stroke care and specialty surgery.",
+      "website": "https://www.sutterhealth.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "SUTTER BAY HOSPITALS - OpenCorporates",
+        "url": "http://opencorporates.com/companies/us_ca/0015273"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "summary"
+        ],
+        "title": "Sutter Bay Hospitals - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/940562680"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "About Sutter Health",
+        "url": "https://www.sutterhealth.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "summary"
+        ],
+        "title": "Alta Bates Summit Medical Center | Alta Bates Campus",
+        "url": "https://www.sutterhealth.org/find-location/facility/alta-bates-summit-medical-center-alta-bates-campus-1043246519"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-sutter-bay-hospitals-alta-bates-summit-medical-center",
+    "notes": "Sutter Bay Hospitals is an active CA public benefit nonprofit (0015273) and 501(c)(3) (EIN 94-0562680), and Sutter Health lists Alta Bates Summit Medical Center as one of its hospitals; this fits the agenda's dba and a hospital community-benefit grant. The phone is the Alta Bates campus main line (confirmed on the cited page) and the services in the summary are supported; the Oakland campus detail is not on the cited page but is accurate and low-risk.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

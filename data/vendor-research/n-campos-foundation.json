@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/471348260",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://camposfoundation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://camposfoundation.org/campos-smartlabs/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-campos-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Campos EPC Foundation is a registered 501(c)(3) private foundation based in Denver, CO (ProPublica Nonprofit Explorer), matching the agenda's 'Denver, CO'",
+      "The foundation's own Campos SmartLabs page lists Urban Promise Academy in Oakland, CA as a SmartLab location, matching the OUSD grant title 'SmartLab - Urban Promise Academy'",
+      "Its mission is STEM education for students, matching OUSD's 'Classroom & academic programs' category and the Chief Academic Officer as presenting office"
+    ],
+    "key": "n-campos-foundation",
+    "notes": "The legal name per the IRS/ProPublica record is 'Campos Epc Foundation'; the organization operates as 'Campos Foundation'. Its SmartLabs page lists Urban Promise Academy (Oakland) as 'Coming Soon'.",
+    "profile": {
+      "address": "730 17th Street, STE 101, Denver CO 80202",
+      "caEntityNumber": null,
+      "ein": "47-1348260",
+      "email": "info@camposfoundation.org",
+      "headquarters": "Denver, CO",
+      "legalName": "Campos Epc Foundation",
+      "orgType": "nonprofit",
+      "phone": "1-855-226-7671",
+      "samUei": null,
+      "summary": "The Campos Foundation is a private foundation based in Denver, Colorado. Its stated mission is to elevate under-represented minority and female students through STEM (science, technology, engineering and math) education. It runs programs such as summer bridge programs, scholarships, internships and school-based SmartLabs.",
+      "website": "https://camposfoundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Campos Epc Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/471348260"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Campos Foundation",
+        "url": "https://camposfoundation.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Campos SmartLabs",
+        "url": "https://camposfoundation.org/campos-smartlabs/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-campos-foundation",
+    "notes": "Campos EPC Foundation (Denver, CO; ProPublica 501(c)(3) private foundation) runs Campos SmartLabs, and its SmartLabs page lists Urban Promise Academy in Oakland, matching the OUSD grant titles and Denver agenda location. All profile fields (name, EIN, address, phone, general email, mission summary) were confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

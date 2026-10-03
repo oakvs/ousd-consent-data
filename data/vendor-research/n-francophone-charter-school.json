@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://francophoneschool.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/464356231",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-francophone-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda item is an in-lieu Prop 39 facilities use agreement handled by OUSD's Office of Charter Schools; the school's own site describes a tuition-free public charter school in Oakland, CA (Coolidge Ave campuses), consistent with a charter school sited in OUSD",
+      "Name matches registered 501(c)(3) 'Francophone Charter School Of Oakland', EIN 46-4356231, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "The school's website states the same Tax ID 46-4356231 and legal name, confirming the registry record and website belong to the same organization"
+    ],
+    "key": "n-francophone-charter-school",
+    "notes": "Address given is the Lower Campus (TK-2) listed on the school's homepage; the Upper Campus (grades 3-8) is at 2365 Coolidge Ave, Oakland, CA 94601. CDE school directory page could not be fetched (bot wall).",
+    "profile": {
+      "address": "2430 Coolidge Ave, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "46-4356231",
+      "email": "contact@francophoneschool.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Francophone Charter School of Oakland",
+      "orgType": "nonprofit",
+      "phone": "510-746-0700",
+      "samUei": null,
+      "summary": "A tuition-free public charter school in Oakland, California, that runs a French dual-immersion program for students in transitional kindergarten through 8th grade. Students learn in both French and English. It is a registered 501(c)(3) nonprofit organization.",
+      "website": "https://francophoneschool.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName",
+          "ein"
+        ],
+        "title": "Francophone Charter School of Oakland",
+        "url": "https://francophoneschool.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Francophone Charter School Of Oakland - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/464356231"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-francophone-charter-school",
+    "notes": "The school's site and ProPublica both show Francophone Charter School of Oakland, EIN 46-4356231, a 501(c)(3) in Oakland with OUSD as authorizer, which fits an in-lieu Prop 39 facilities agreement via the Office of Charter Schools. All profile fields (address, phone, generic contact email, grades TK-8, French dual immersion) are confirmed and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

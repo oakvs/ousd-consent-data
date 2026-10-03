@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/61708283",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.baytechschool.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sd.cde.ca.gov/SchoolDirectory/details?cdscode=01100170106906",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-bay-area-technology-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Bay Area Technology School', Oakland, CA, EIN 06-1708283 (ProPublica Nonprofit Explorer)",
+      "Agenda item is an In-Lieu of Proposition 39 Facilities Use Agreement handled by OUSD's Office of Charter Schools; the school's website describes a tuition-free public charter school in Oakland, CA (94606), within OUSD boundaries",
+      "School's own site calls itself Bay Area Technology School (BayTech Charter School), a public charter school, consistent with 'Bay Area Technology Charter School' in the agenda",
+      "California Department of Education directory lists Bay Area Technology at 1445 23rd Ave., Oakland, CA 94606 with website www.baytechschool.org"
+    ],
+    "key": "n-bay-area-technology-charter-school",
+    "notes": "Agenda names it 'Bay Area Technology Charter School'; registry legal name is 'Bay Area Technology School'. CDE lists Alameda County Office of Education as authorizer, but the school is in Oakland so an OUSD Prop 39 facilities agreement is plausible. Phone omitted: school site shows 1-800-741-BATS (2287) and 510-369-5758, CDE shows (510) 382-9932 (conflicting). School website blocks automated fetching, so contact details are cited to the CDE directory. CA SOS entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1445 23rd Ave., Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "06-1708283",
+      "email": "info@baytechschool.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Bay Area Technology School",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Bay Area Technology School, also known as BayTech, is a tuition-free public charter school in Oakland, California, serving students in grades 6 through 12. It is run by a nonprofit organization and is accredited by the Western Association of Schools and Colleges (WASC).",
+      "website": "https://www.baytechschool.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Bay Area Technology School - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/61708283"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "BayTech Charter School",
+        "url": "https://www.baytechschool.org/"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Bay Area Technology - School Directory Details (CA Dept of Education)",
+        "url": "https://sd.cde.ca.gov/SchoolDirectory/details?cdscode=01100170106906"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-bay-area-technology-charter-school",
+    "notes": "ProPublica and the CDE directory confirm Bay Area Technology School (EIN 06-1708283, 501(c)(3)) is a 6-12 charter school at 1445 23rd Ave, Oakland, matching the agenda's Prop 39 in-lieu facilities item handled by OUSD's Office of Charter Schools. The school's site would not fetch, but a web search returned its tuition-free, WASC-accredited, grades 6-12 description; address, generic info@ email and website are confirmed by CDE.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

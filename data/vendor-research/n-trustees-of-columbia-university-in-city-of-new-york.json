@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/135598093",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Trustees_of_Columbia_University_in_the_City_of_New_York",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Columbia_University",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-trustees-of-columbia-university-in-city-of-new-york",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'The Trustees of Columbia University in the City of New York' matches the legal corporate name of Columbia University's governing board (Wikipedia) and a registered 501(c)(3) in New York, NY (ProPublica Nonprofit Explorer)",
+      "Agenda location 'New York' matches the registry location, New York, NY",
+      "OUSD agreement is a Memorandum of Understanding and Interagency Agreement with the Talent/Human Resources Department, consistent with OUSD's university partnership MOUs"
+    ],
+    "key": "n-trustees-of-columbia-university-in-city-of-new-york",
+    "notes": "ProPublica lists two EINs for this name: 13-5598093 (main filer, recent Form 990s) and 91-1859360 (older, 2002-2011 filings only). Used the main one. Columbia's own site (columbia.edu) blocks automated fetching, so phone, email and address were left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "13-5598093",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "Trustees of Columbia University in the City of New York",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Trustees of Columbia University in the City of New York is the governing board and legal corporation of Columbia University, a private Ivy League research university based in New York City. It is a tax-exempt 501(c)(3) organization that owns the university's property and real assets.",
+      "website": "https://www.columbia.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Trustees Of Columbia University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/135598093"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Trustees of Columbia University in the City of New York - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Trustees_of_Columbia_University_in_the_City_of_New_York"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Columbia University - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Columbia_University"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-trustees-of-columbia-university-in-city-of-new-york",
+    "notes": "The agenda's legal name, 'The Trustees of Columbia University in the City of New York', and its New York location match the cited ProPublica record (EIN 13-5598093, 501(c)(3), New York, NY) and Wikipedia. The summary and the ein, orgType, headquarters, website and legalName fields are all supported and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

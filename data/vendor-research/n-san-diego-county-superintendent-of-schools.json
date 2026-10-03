@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sdcoe.net/about-sdcoe/county-superintendent",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sdcoe.net/about-sdcoe/contact?const_page=113",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sdcoe.net",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-san-diego-county-superintendent-of-schools",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the 'San Diego County Superintendent of Schools'; sdcoe.net says the county superintendent of schools heads the San Diego County Office of Education (SDCOE), the county's public education agency",
+      "The agenda item is an Intern Partnership / Practica Programs K-12 MOU handled by OUSD Talent/Human Resources; SDCOE publicly runs a Teacher Intern Partnership credential program (listed on the Alameda County Office of Education site), matching a staffing/hiring contract"
+    ],
+    "key": "n-san-diego-county-superintendent-of-schools",
+    "notes": "Agenda vendor name is the county superintendent of schools, which is the head of the San Diego County Office of Education; the profile describes the Office. No location given in agenda text.",
+    "profile": {
+      "address": "6401 Linda Vista Road, San Diego, CA 92111",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "communications@sdcoe.net",
+      "headquarters": "San Diego, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "858-292-3500",
+      "samUei": null,
+      "summary": "The San Diego County Office of Education is the public education agency for San Diego County, California. It is led by the county superintendent of schools, who is appointed by the county board of education. The office provides educational leadership, runs programs and services for school districts and schools, reviews and approves district budgets, and operates its own schools.",
+      "website": "https://www.sdcoe.net"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "County Superintendent - San Diego County Office of Education",
+        "url": "https://www.sdcoe.net/about-sdcoe/county-superintendent"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - San Diego County Office of Education",
+        "url": "https://www.sdcoe.net/about-sdcoe/contact?const_page=113"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "San Diego County Office of Education",
+        "url": "https://www.sdcoe.net"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-san-diego-county-superintendent-of-schools",
+    "notes": "The county superintendent of schools heads the San Diego County Office of Education, and the SDCOE credential/intern programs fit an Intern Partnership MOU with OUSD Talent. The cited SDCOE pages confirm the summary (appointed by county board, budget approval, operates schools), phone, general email, address and website; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

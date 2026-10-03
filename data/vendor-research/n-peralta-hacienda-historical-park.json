@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943317442",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.peraltahacienda.org/pages/main.php?pageid=14&pagecategory=2",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.peraltahacienda.org/pages/main.php?pageid=74&pagecategory=3",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-peralta-hacienda-historical-park",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Friends Of Peralta Hacienda Historical Park' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3317442), matching the agenda's 'Peralta Hacienda Historical Park, Oakland, CA'",
+      "Official website peraltahacienda.org lists the park at 2465 34th Avenue, Oakland, CA 94601, matching the agenda location",
+      "Website describes school field trips and youth programs, consistent with a student internship/workplace training partnership with OUSD's Linked Learning office"
+    ],
+    "key": "n-peralta-hacienda-historical-park",
+    "notes": "No page found explicitly mentioning OUSD or the ECCCO internship; identity rests on registry name match, Oakland location and described youth/school programs.",
+    "profile": {
+      "address": "PO Box 7172, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "94-3317442",
+      "email": "info@peraltahacienda.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Friends Of Peralta Hacienda Historical Park",
+      "orgType": "nonprofit",
+      "phone": "(510) 532-9142",
+      "samUei": null,
+      "summary": "A nonprofit that runs Peralta Hacienda Historical Park in Oakland's Fruitvale neighborhood. It offers exhibits, events, school field trips and youth programs about the history of the Peralta family and the Ohlone people, and about environmental stewardship and local community history.",
+      "website": "https://www.peraltahacienda.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Friends Of Peralta Hacienda Historical Park - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943317442"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Peralta Hacienda Historical Park - Hours and Contact Information",
+        "url": "https://www.peraltahacienda.org/pages/main.php?pageid=14&pagecategory=2"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Peralta Hacienda - Our Mission, Our Vision",
+        "url": "https://www.peraltahacienda.org/pages/main.php?pageid=74&pagecategory=3"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-peralta-hacienda-historical-park",
+    "notes": "Friends of Peralta Hacienda Historical Park is the Oakland 501(c)(3) (EIN 94-3317442) that runs the park, which fits an Oakland workplace-training/student internship MOU; no direct OUSD mention on the site, but name, city and youth programs match. Contact fields, EIN, address and summary are supported by the cited pages and the site (Ohlone and Peralta history appear on the site, not the mission page); only the general info@ email is used.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

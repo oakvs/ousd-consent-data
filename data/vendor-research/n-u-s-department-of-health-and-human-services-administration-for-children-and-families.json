@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Administration_for_Children_and_Families",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandside.org/2025/09/03/oakland-unified-school-district-human-trafficking-amba-johnson/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://acf.gov",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-u-s-department-of-health-and-human-services-administration-for-children-and-families",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names the U.S. Department of Health and Human Services, Administration for Children and Families (ACF), which is a federal agency division of HHS (Wikipedia)",
+      "ACF's Office on Trafficking in Persons runs the Human Trafficking Youth Prevention Education (HTYPE) Demonstration Program, matching the OUSD grant and cooperative agreement titles",
+      "The Oaklandside reports OUSD receives $500,000 a year from the U.S. Department of Health and Human Services under the HTYPE program, one of eight districts funded"
+    ],
+    "key": "n-u-s-department-of-health-and-human-services-administration-for-children-and-families",
+    "notes": "Federal agency. acf.gov blocks automated fetching (403), so phone, email and address were left null rather than uncited. Summary sentence on HTYPE is supported by search results from acf.gov, not fetched directly.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, D.C.",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Administration for Children and Families is a division of the U.S. Department of Health and Human Services. It runs federal programs for children, youth and families, and provides national leadership to help families lead economically and socially productive lives. Its Office on Trafficking in Persons funds the Human Trafficking Youth Prevention Education demonstration program for school districts.",
+      "website": "https://acf.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Administration for Children and Families - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Administration_for_Children_and_Families"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Q&A: How Oakland schools educate youth about the dangers of human trafficking",
+        "url": "https://oaklandside.org/2025/09/03/oakland-unified-school-district-human-trafficking-amba-johnson/"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Administration for Children and Families",
+        "url": "https://acf.gov"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-u-s-department-of-health-and-human-services-administration-for-children-and-families",
+    "notes": "ACF is the federal HHS division that funds the HTYPE program under which OUSD receives its grant (Oaklandside; ACF/OTIP pages). Wikipedia supports the summary, orgType, website and Washington, D.C. headquarters; the neutral summary is supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

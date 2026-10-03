@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156266",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pacific.edu/about-pacific",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-pacific",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered tax-exempt educational organization: 'University Of The Pacific', Stockton, CA, EIN 94-1156266 (ProPublica Nonprofit Explorer)",
+      "The university's own site says its professional education programs for educators are run through Benerd College, which fits an MOU with OUSD's Talent/Human Resources department (a thematic, not documentary, match)",
+      "No public page found that names an OUSD agreement with the university, and the agenda gives no city"
+    ],
+    "key": "n-university-of-pacific",
+    "notes": "Confidence is medium because no public page confirms the OUSD agreement itself and the agenda text gives no location; the match rests on the distinctive name plus a thematic fit (educator preparation / Talent department). A reviewer should confirm against the board packet for the MOU. Contact details and legal name were not filled because the contact page could not be fetched and ProPublica's display name is not an exact legal-name match.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1156266",
+      "email": null,
+      "headquarters": "Stockton, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "University of the Pacific is a private university founded in 1851. It offers more than 160 academic programs through nine schools and colleges, with campuses in Stockton, Sacramento and San Francisco, California.",
+      "website": "https://www.pacific.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "University of the Pacific - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156266"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "About Pacific - University of the Pacific",
+        "url": "https://www.pacific.edu/about-pacific"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": null
+}

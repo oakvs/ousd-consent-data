@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cdfa.ca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdfa.ca.gov/Contact_Us.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://pressreleases.cdfa.ca.gov/Home/PressRelease/62094569",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://californiafarmtoschooleval.org/reports/january-2023-report/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-food-and-agriculture",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the California state agency 'California Department of Food and Agriculture' (cdfa.ca.gov), headquartered at 1220 N Street, Sacramento, matching the agenda location Sacramento, CA",
+      "CDFA administers the California Farm to School Incubator Grant Program, and the California Farm to School evaluation report lists Oakland Unified School District as a repeat grantee, matching OUSD's grant agreements with CDFA"
+    ],
+    "key": "n-california-department-of-food-and-agriculture",
+    "notes": "State agency; no EIN, SOS entity number or UEI sought. General email not listed on contact page (only Public Affairs inbox), so left null.",
+    "profile": {
+      "address": "1220 N Street, Sacramento, California, U.S.A. 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Food and Agriculture",
+      "orgType": "public_agency",
+      "phone": "916-654-0466",
+      "samUei": null,
+      "summary": "A California state agency that oversees animal health and food safety, plant health and pest prevention, measurement standards, inspection services and agricultural marketing. It supports farmers through grant programs and keeps agricultural statistics. It also runs the Farm to School Incubator Grant Program, which funds school food and garden projects.",
+      "website": "https://www.cdfa.ca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "California Department of Food and Agriculture",
+        "url": "https://www.cdfa.ca.gov/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "CDFA Contact Us",
+        "url": "https://www.cdfa.ca.gov/Contact_Us.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "CDFA Public Affairs - Farm to School press release",
+        "url": "https://pressreleases.cdfa.ca.gov/Home/PressRelease/62094569"
+      },
+      {
+        "supports": [],
+        "title": "January 2023 Report - CA Farm to School Evaluation",
+        "url": "https://californiafarmtoschooleval.org/reports/january-2023-report/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-department-of-food-and-agriculture",
+    "notes": "The agenda's Sacramento state agency matches CDFA, and the January 2023 Farm to School evaluation report lists Oakland Unified as a Farm to School Incubator Grant recipient. The summary, phone, address, website and org type are all confirmed on cdfa.ca.gov and the contact page, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

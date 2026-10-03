@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.usa.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/University_of_St._Augustine_for_Health_Sciences",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-st-augustine-for-health-sciences",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'University of St. Augustine for Health Sciences' on usa.edu, with a campus at 700 Windy Point Drive, San Marcos, CA, matching the agenda location 'San Marcos, CA'",
+      "OUSD Legistar record (enactment 25-0281, 3/12/2025) describes an MOU and Interagency Agreement with the University of St. Augustine for Health Sciences for a fieldwork learning experience for university students in health sciences, handled by Talent/Human Resources, matching the agenda item",
+      "Wikipedia independently describes a health sciences university based in San Marcos, California"
+    ],
+    "key": "n-university-of-st-augustine-for-health-sciences",
+    "notes": "Wikipedia lists it as a private for-profit university; the usa.edu site lists the St. Augustine, FL campus as its address in some places, so headquarters left null. Address given is the San Marcos campus (matches agenda). Registry IDs not looked up.",
+    "profile": {
+      "address": "700 Windy Point Drive San Marcos, CA 92069",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(800) 241-1027",
+      "samUei": null,
+      "summary": "A private university that trains health care professionals through classroom, clinical and distance education. It offers graduate and professional health sciences programs and has campuses in San Marcos, California, and in Florida and Texas.",
+      "website": "https://www.usa.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "About - University of St. Augustine for Health Sciences",
+        "url": "https://www.usa.edu/about/"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "University of St. Augustine for Health Sciences - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/University_of_St._Augustine_for_Health_Sciences"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-university-of-st-augustine-for-health-sciences",
+    "notes": "usa.edu/about confirms the exact name, San Marcos CA address at 700 Windy Point Drive, the (800) 241-1027 general line, the website and the campuses in CA, FL and TX; Wikipedia confirms a private for-profit university, and a health sciences university fits an MOU for student fieldwork placements handled by Talent/HR. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://ongb.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/465710681",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-natives-gives-back",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Oakland Natives Give Back Fund' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 46-5710681); agenda spells it 'Gives Back' but also 'Give Back' and uses the acronym ONGB, which is the organization's own abbreviation",
+      "Website ongb.org describes attendance, youth-development and educational-equity programs in Oakland, matching OUSD's 'Student health, support & family services' and attendance/data-sharing contracts",
+      "ONGB's own published pages describe a partnership with Oakland Unified School District on its Every Day Counts attendance challenge, and OUSD's Legistar lists an ONGB agreement"
+    ],
+    "key": "n-oakland-natives-gives-back",
+    "notes": "A separate registered entity, Oakland Natives Give Back Foundation (EIN 47-3566356), also exists; the Fund is the active one with youth-development/attendance programs. Agenda has no registry ID, so matching rests on name, location and program signals.",
+    "profile": {
+      "address": "426 17th street Oakland CA 94612",
+      "caEntityNumber": null,
+      "ein": "46-5710681",
+      "email": "info@ongb.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Natives Give Back Fund",
+      "orgType": "nonprofit",
+      "phone": "510-225-6420",
+      "samUei": null,
+      "summary": "Oakland Natives Give Back is an Oakland nonprofit founded in 2008 that works on educational equity and youth development. It runs attendance programs aimed at reducing chronic absenteeism, youth programs such as the Girls Equity Movement, and offers family support and professional development for educators.",
+      "website": "https://ongb.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Oakland Natives Give Back (ONGB)",
+        "url": "https://ongb.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oakland Natives Give Back Fund - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/465710681"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-oakland-natives-gives-back",
+    "notes": "ongb.org and ProPublica confirm an Oakland 501(c)(3) (Oakland Natives Give Back Fund, EIN 46-5710681) founded in 2008 running attendance, youth and educator programs, which fits OUSD's student support and attendance data-sharing agreements; contact details and summary match the cited pages (the ongb.org site does not name OUSD explicitly, but the profile does not claim that).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

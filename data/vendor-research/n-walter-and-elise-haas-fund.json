@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/946068564",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.haassr.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.haassr.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://haassr.org/grant/oakland-unified-school-district-13/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-walter-and-elise-haas-fund",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered private foundation 'Walter And Elise Haas Fund' in San Francisco, CA (ProPublica Nonprofit Explorer, EIN shown)",
+      "The Fund's own website lists an OUSD grant of $100,000 (Aug 2024 - Sep 2025) for the OUSD Alumni Highway to Work program, matching the agenda grant titles",
+      "Foundation is in the Bay Area and describes grantmaking in Oakland, consistent with a grant to OUSD"
+    ],
+    "key": "n-walter-and-elise-haas-fund",
+    "notes": "General email not listed on the site.",
+    "profile": {
+      "address": "One Lombard Street, Suite 305, San Francisco, CA 94111",
+      "caEntityNumber": null,
+      "ein": "94-6068564",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Walter And Elise Haas Fund",
+      "orgType": "nonprofit",
+      "phone": "(415) 398-4474",
+      "samUei": null,
+      "summary": "A family foundation based in San Francisco that gives grants to organizations and leaders in the Bay Area. Its grantmaking focuses on community and social well-being, including work in Oakland and San Francisco.",
+      "website": "https://haassr.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Walter And Elise Haas Fund - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/946068564"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Walter & Elise Haas Fund",
+        "url": "https://www.haassr.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "phone"
+        ],
+        "title": "Contact - Walter & Elise Haas Fund",
+        "url": "https://www.haassr.org/contact"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District - Walter & Elise Haas Fund",
+        "url": "https://haassr.org/grant/oakland-unified-school-district-13/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-walter-and-elise-haas-fund",
+    "notes": "The Fund's own grant page lists a $100,000 grant to OUSD for the Alumni Highway to Work program, matching the agenda titles. ProPublica confirms the name, EIN 94-6068564 and private-foundation status. The haassr.org home and contact pages confirm the address and phone. The summary is supported and neutral, and no email is claimed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

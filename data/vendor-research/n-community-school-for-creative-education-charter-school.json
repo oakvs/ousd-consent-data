@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/263964588",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://communityschoolforcreativeeducation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-community-school-for-creative-education-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Community School For Creative Education', Oakland, CA, EIN 26-3964588 (ProPublica Nonprofit Explorer)",
+      "The organization's own website describes a no-tuition charter school (nav lists 'Charter Renewal 21-26') at 2111 International Blvd, Oakland, CA, matching an OUSD Office of Charter Schools facilities agreement",
+      "Website says the school closed after 16 years of operation (opened 2011), so the 2024-2027 agreement in the agenda may relate to a school that has since closed"
+    ],
+    "key": "n-community-school-for-creative-education-charter-school",
+    "notes": "Website homepage announces the school has closed. Contact page lists only named staff and cell phone numbers, so no phone or email is given; main office line not published (fax only). No CA SOS or SAM entry checked.",
+    "profile": {
+      "address": "2111 International Blvd, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "26-3964588",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Community School For Creative Education",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that operated a tuition-free public charter school in Oakland, California. The school's website says it closed after 16 years of operation.",
+      "website": "https://communityschoolforcreativeeducation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Community School For Creative Education - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/263964588"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Community School for Creative Education - Home",
+        "url": "https://communityschoolforcreativeeducation.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-community-school-for-creative-education-charter-school",
+    "notes": "The name matches an Oakland 501(c)(3) (ProPublica, EIN 26-3964588), and the school's own site confirms the address, tuition-free charter status and closure after 16 years; this fits an OUSD Office of Charter Schools facilities agreement. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

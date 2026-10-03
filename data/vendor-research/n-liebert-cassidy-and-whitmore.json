@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lcwlegal.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lcwlegal.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-liebert-cassidy-and-whitmore",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the agenda text: the firm's own site is branded 'Liebert Cassidy Whitmore' and describes a San Francisco office, matching the agenda location 'San Francisco, CA'",
+      "Firm provides employment, labor relations and education law to California public agencies and educational institutions, matching OUSD's 'Legal, insurance & risk' contracts presented by the General Counsel",
+      "Firm is a long-established California public-sector law firm; a firm attorney bio notes prior experience as a staff attorney at Oakland Unified School District"
+    ],
+    "key": "n-liebert-cassidy-and-whitmore",
+    "notes": "California Secretary of State entity number not retrieved (bizfile is not fetchable). No general email found on the contact page. The agenda names the firm as a Professional Corporation; the website shows the trade name only. Headquarters set to San Francisco per the contact page's San Francisco office listing; the firm has five California offices.",
+    "profile": {
+      "address": "135 Main Street, 7th Floor, San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Liebert Cassidy Whitmore",
+      "orgType": "company",
+      "phone": "415.512.3000",
+      "samUei": null,
+      "summary": "Liebert Cassidy Whitmore is a California law firm that advises public agencies, educational institutions and nonprofits. Its work includes labor relations, employment law, education law, litigation, negotiations, workplace investigations and training. It has five offices in California, including San Francisco.",
+      "website": "https://www.lcwlegal.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Liebert Cassidy Whitmore",
+        "url": "https://www.lcwlegal.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - Liebert Cassidy Whitmore",
+        "url": "https://www.lcwlegal.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-liebert-cassidy-and-whitmore",
+    "notes": "The firm's site (lcwlegal.com) lists a San Francisco main office at 135 Main Street, 415.512.3000, which matches the agenda location, and it serves California public agencies and school districts, which fits OUSD's legal contracts. The summary's practice areas, training and five-office claims are all shown on the about and contact pages, and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://uaosoakland.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://uaosoakland.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942805371",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-united-administrators-of-oakland-schools",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered labor organization: 'United Administrators Of Oakland Schools' (ProPublica Nonprofit Explorer, EIN 94-2805371, Oakland, CA)",
+      "Its website says it is the bargaining representative for Oakland Unified School District administrators, matching the agenda's side letters, MOUs and tentative agreements between OUSD and UAOS",
+      "Located in Oakland, CA, consistent with an OUSD employee union; contracts are presented by OUSD's General Counsel under 'Staff & hiring'"
+    ],
+    "key": "n-united-administrators-of-oakland-schools",
+    "notes": "Tax-exempt labor organization (IRS 501(c)(5)), not a charity; orgType set to 'other'. No general email found on the contact page. Third-party directories list a different phone number (510-635-9222); the organization's own site number was used.",
+    "profile": {
+      "address": "8517 Earhart Drive, Suite 200, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "94-2805371",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "United Administrators Of Oakland Schools",
+      "orgType": "other",
+      "phone": "510-610-6743",
+      "samUei": null,
+      "summary": "A labor union (Local 83 of the American Federation of School Administrators) that represents administrators of the Oakland Unified School District, such as principals, assistant principals, directors, coordinators and business managers. It provides representation, guidance and collective bargaining for its members.",
+      "website": "https://uaosoakland.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - United Administrators of Oakland Schools",
+        "url": "https://uaosoakland.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - United Administrators of Oakland Schools",
+        "url": "https://uaosoakland.org/about-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein"
+        ],
+        "title": "United Administrators Of Oakland Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942805371"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-united-administrators-of-oakland-schools",
+    "notes": "The cited pages show UAOS is AFSA Local 83, the bargaining representative of OUSD administrators, with EIN 94-2805371 (501(c)(5), Oakland). This matches the side letters, MOUs and tentative agreements in the agenda. Phone, address, website, legal name and EIN are all confirmed, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

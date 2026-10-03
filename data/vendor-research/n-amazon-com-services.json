@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opengovwa.com/corporation/602201545",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://developer.amazon.com/support/legal/da",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aboutamazon.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-amazon-com-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: 'Amazon.Com Services LLC' is an active foreign LLC registered in Washington State (Seattle), per the Washington business registry record shown on OpenGovWA",
+      "Amazon's published Developer Services Agreement names 'Amazon.com Services LLC' as a contracting party, matching OUSD's 'Developer Services Agreement - Amazon.com Services LLC' (Technology)"
+    ],
+    "key": "n-amazon-com-services",
+    "notes": "Subsidiary of Amazon.com, Inc.; the agenda gives only the entity name and agreement type, no location. Address is the Washington registry address. No general public phone or email found for this specific entity, so left null.",
+    "profile": {
+      "address": "410 Terry Ave N, Seattle, WA 98109-5210",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Seattle, WA",
+      "legalName": "Amazon.Com Services LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Amazon.com Services LLC is a subsidiary of the Amazon group of companies and is one of the Amazon entities named in the Amazon Developer Services Agreement. Amazon operates online shopping, cloud computing (Amazon Web Services), streaming, consumer electronics and other services.",
+      "website": "https://www.aboutamazon.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Amazon.Com Services LLC - Washington business registration",
+        "url": "https://opengovwa.com/corporation/602201545"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Amazon Developer Services Agreement",
+        "url": "https://developer.amazon.com/support/legal/da"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Amazon",
+        "url": "https://www.aboutamazon.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-amazon-com-services",
+    "notes": "The exact entity name appears as a party in Amazon's Developer Services Agreement, which matches OUSD's item title, and the Washington registry confirms an active LLC at the stated Seattle address. The summary is neutral and consistent with the sources; the website is Amazon's corporate site rather than an entity-specific one.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

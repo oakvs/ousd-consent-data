@@ -1,0 +1,128 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943210351",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eastbayinnovations.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eastbayinnovations.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eastbayinnovations.org/ebi-and-ymca-team-up-to-create-the-early-childhood-education-program/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-innovations-through-peralta-community-college-district",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'East Bay Innovations Inc' in San Leandro, CA (ProPublica Nonprofit Explorer, EIN 94-3210351), matching the agenda location 'San Leandro, CA'",
+      "EBI's own website describes an Early Educator Apprentice Program with the YMCA of the East Bay that trains people with disabilities for early childhood education careers, matching the agenda item 'Memorandum of Understanding - East Bay Innovations (EBI) - Early Childhood Education'",
+      "The agenda abbreviates the vendor as 'EBI', which is the abbreviation the organization uses for itself on its website"
+    ],
+    "key": "n-east-bay-innovations-through-peralta-community-college-district",
+    "notes": "Agenda says 'through Peralta Community College District'; no page found confirming the Peralta link directly, but name, city and early childhood education topic all match. California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2450 Washington Avenue, Suite 240, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": "94-3210351",
+      "email": "info@eastbayinnovations.org",
+      "headquarters": "San Leandro, CA",
+      "legalName": "East Bay Innovations Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 618-1580",
+      "samUei": null,
+      "summary": "East Bay Innovations is a nonprofit based in San Leandro, California, that supports people with disabilities. Its services include supported living, independent living, employment services, community day supports and assistive technology. It also runs a supported employment program with the YMCA of the East Bay that prepares participants for careers in early childhood education.",
+      "website": "https://www.eastbayinnovations.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Bay Innovations Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943210351"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "East Bay Innovations",
+        "url": "https://www.eastbayinnovations.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - East Bay Innovations",
+        "url": "https://www.eastbayinnovations.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "EBI and YMCA Team Up to Create the Early Childhood Education Program",
+        "url": "https://www.eastbayinnovations.org/ebi-and-ymca-team-up-to-create-the-early-childhood-education-program/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-east-bay-innovations-through-peralta-community-college-district",
+    "notes": "ProPublica confirms East Bay Innovations Inc is a 501(c)(3) in San Leandro (EIN 94-3210351), and the EBI site confirms the contact details, services and the YMCA early childhood apprentice program; a search shows Berkeley City College (Peralta) partners on that program's ECE coursework, which fits the Peralta/Early Childhood Education MOU. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/205274459",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aspireeducation.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-aspire",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Aspire Education Project', Oakland, CA, EIN 20-5274459 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "OUSD's own published list of ECCCO (Exploring College, Career, and Community Options) Internship Host Organizations (OUSD Legistar PDF) names 'Aspire Education / Community Reading Buddies', matching the agenda item about the ECCCO Student Internship Program MOU",
+      "Organization runs Community Reading Buddies, which trains middle and high school students as youth mentors, consistent with a workplace training partner for student internships"
+    ],
+    "key": "n-aspire",
+    "notes": "Agenda says only 'Aspire'. Identified via OUSD's ECCCO host list (Legistar PDF, https://ousd.legistar.com/View.ashx?GUID=C420479F-E956-45D0-82F8-596E2414196E&ID=14282094&M=F) which names 'Aspire Education / Community Reading Buddies'. Not Aspire Public Schools (charter network); other n-aspire-* keys are separate vendors. CA entity number and UEI not looked up.",
+    "profile": {
+      "address": "101 Broadway, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "20-5274459",
+      "email": "info@aspireeducation.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Aspire Education Project",
+      "orgType": "nonprofit",
+      "phone": "(510) 658-7500",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland that provides tutoring and supplemental education programs for students across the Bay Area. Its Community Reading Buddies program trains teens to mentor younger students in reading. It also offers test preparation and partners with schools and nonprofits on custom programs.",
+      "website": "https://aspireeducation.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Aspire Education Project - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/205274459"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Aspire Education",
+        "url": "https://aspireeducation.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-aspire",
+    "notes": "Identity is solid: the OUSD ECCCO host list names 'Aspire Education / Community Reading Buddies', and ProPublica and the website match (Oakland, EIN 20-5274459). However, the summary claims the org 'offers test preparation' and trains 'teens', and the cited site mentions neither (it describes K-6 tutoring and 'Bay Area young adults' as mentors), so the summary is not supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

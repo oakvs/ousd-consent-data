@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cdc.gov/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdc.gov/about/organization/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdc.gov/other/about_cdcgov.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-u-s-department-of-health-and-human-services-centers-for-disease-control-and-prevention",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'U.S. Department of Health and Human Services, Centers for Disease Control and Prevention'; cdc.gov states CDC is one of the major operating components of the Department of Health and Human Services, matching the agenda's HHS/CDC naming",
+      "The agenda item is a grant award for OUSD's Community Schools and Student Services Department, consistent with a federal public health agency funding student health, support and family services",
+      "CDC is a unique, well-known federal agency; the agenda gives no city, and the agency's headquarters page lists Atlanta, GA, which is the national headquarters of the federal agency (grantor), not a local vendor"
+    ],
+    "key": "n-u-s-department-of-health-and-human-services-centers-for-disease-control-and-prevention",
+    "notes": "Federal grantor agency (grant award to OUSD), not a service vendor. No EIN, CA entity number or UEI listed since none was verified on a cited page.",
+    "profile": {
+      "address": "1600 Clifton Road, Atlanta, GA 30329",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Atlanta, GA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "800-232-4636",
+      "samUei": null,
+      "summary": "The Centers for Disease Control and Prevention (CDC) is a United States federal public health agency. It is one of the major operating components of the U.S. Department of Health and Human Services. CDC provides health data, health guidance and prevention information, and works to monitor and prevent disease.",
+      "website": "https://www.cdc.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "CDC Overview",
+        "url": "https://www.cdc.gov/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "CDC Organization",
+        "url": "https://www.cdc.gov/about/organization/index.html"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "phone"
+        ],
+        "title": "About CDC.gov",
+        "url": "https://www.cdc.gov/other/about_cdcgov.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-u-s-department-of-health-and-human-services-centers-for-disease-control-and-prevention",
+    "notes": "The agenda names HHS/CDC as the grantor of a grant award, and the profile describes the federal CDC. cdc.gov pages confirm the HHS operating-component relationship, the 1600 Clifton Road Atlanta address, the 800-232-4636 phone and the website; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/260200654",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://watersideworkshops.org/about/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://watersideworkshops.org/contact/",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-waterside-workshops",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Waterside Workshops' (ProPublica Nonprofit Explorer, EIN 26-0200654, Berkeley, CA)",
+      "Located in Berkeley, CA, matching the agenda text 'Berkeley, CA'",
+      "Website describes youth job-training internships and hands-on learning, matching the OUSD MOU for a workplace training partner in the ECCCO student internship program"
+    ],
+    "key": "n-waterside-workshops",
+    "notes": "No page found explicitly naming OUSD as a partner; identity rests on exact name, Berkeley location, and program match with the ECCCO internship MOU. No general email or CA entity number or SAM UEI found.",
+    "profile": {
+      "address": "84 Bolivar Drive, Berkeley, CA 94710",
+      "caEntityNumber": null,
+      "ein": "26-0200654",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Waterside Workshops",
+      "orgType": "nonprofit",
+      "phone": "(510) 644-2577",
+      "samUei": null,
+      "summary": "A nonprofit in Berkeley, California that engages youth and the community through hands-on learning in bicycle mechanics, wooden boatbuilding, and outdoor education. It runs Street Level Cycles, the Berkeley Boathouse, and Waterside Adventures, and offers job training internships to youth.",
+      "website": "https://watersideworkshops.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Waterside Workshops - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/260200654"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "About - Waterside Workshops",
+        "url": "https://watersideworkshops.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact - Waterside Workshops",
+        "url": "https://watersideworkshops.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-waterside-workshops",
+    "notes": "Exact name and Berkeley location match the agenda; the org's own site confirms paid youth job-training internships, fitting a workplace training partner MOU for the ECCCO internship program. The site does not name OUSD, but all profile fields (name, EIN, address, phone, programs, nonprofit status) are confirmed by the cited sources and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

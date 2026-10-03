@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://bayareawheelchairtransport.com/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://bayareawheelchairtransport.com/contact/",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"email\" failed to load",
+      "field": "email",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-bay-area-wheelchair-transport",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: the company's website calls it 'Bay Area Wheelchair Transport LLC (BAWT)', the same name as in the agenda",
+      "Website describes contracting with school districts for wheelchair-accessible special education transportation, matching OUSD's 'Agreement for Special Education Non-Public Transportation Services'",
+      "Contact page lists a service area of Oakland, San Leandro and Alameda, which includes Oakland",
+      "No registry (California Secretary of State, SAM.gov) match could be retrieved, so identity rests on the company's own website only"
+    ],
+    "key": "n-bay-area-wheelchair-transport",
+    "notes": "No public registry record found; the company's website has an invalid TLS certificate chain (browsers/fetchers may fail to verify it). Phone number is exactly as shown on the contact page. No street address published. Identity is based on the company's own website only, so confidence is medium.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@bayareawheelchairtransport.com",
+      "headquarters": null,
+      "legalName": "Bay Area Wheelchair Transport LLC",
+      "orgType": "company",
+      "phone": "341-400-7127",
+      "samUei": null,
+      "summary": "A company that provides wheelchair-accessible van transportation for students with special needs in Alameda County. It works under contract with school districts to take students, from preschool age to young adults, to school and home each day.",
+      "website": "https://bayareawheelchairtransport.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "email"
+        ],
+        "title": "Special Education Transportation Company | Alameda County - BAWT",
+        "url": "https://bayareawheelchairtransport.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact - BAWT",
+        "url": "https://bayareawheelchairtransport.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": null
+}

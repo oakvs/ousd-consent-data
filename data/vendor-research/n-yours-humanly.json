@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://yourshumanly.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://yourshumanly.org/our-role-impact/our-values/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/463429734",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-yours-humanly",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Yours Humanly', EIN 46-3429734 (ProPublica Nonprofit Explorer)",
+      "Based in Walnut Creek, CA, matching the agenda location",
+      "The organization's flagship education initiative is called 'Coloring Futures', matching the agenda grant title 'Yours Humanly Coloring Futures Initiative'",
+      "An education-focused nonprofit, consistent with OUSD's Academics and Instruction Department receiving the grant"
+    ],
+    "key": "n-yours-humanly",
+    "notes": "No page found that explicitly mentions OUSD or Oakland; identity rests on name, city, EIN registry match and the Coloring Futures initiative name.",
+    "profile": {
+      "address": "P.O. Box 5501, Walnut Creek, CA 94596",
+      "caEntityNumber": null,
+      "ein": "46-3429734",
+      "email": "info@yourshumanly.org",
+      "headquarters": "Walnut Creek, CA",
+      "legalName": "Yours Humanly",
+      "orgType": "nonprofit",
+      "phone": "+1 925.680.9700",
+      "samUei": null,
+      "summary": "Yours Humanly is a nonprofit focused on education for children in need. Through its Coloring Futures initiative it provides K-12 scholarships, literacy programs, technology and STEM education. Its Bridging Gaps initiative works on educational gaps.",
+      "website": "https://yourshumanly.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein",
+          "orgType"
+        ],
+        "title": "Contact Yours Humanly",
+        "url": "https://yourshumanly.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Our Values & Passion for Education",
+        "url": "https://yourshumanly.org/our-role-impact/our-values/"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Yours Humanly - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/463429734"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-yours-humanly",
+    "notes": "The Walnut Creek 501(c)(3) Yours Humanly (EIN 46-3429734) runs a 'Coloring Futures' K-12 scholarship initiative, matching the agenda grant title and city. Contact fields, EIN and summary are confirmed on the cited pages, and the summary is neutral; the Bridging Gaps clause is thin but not contradicted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

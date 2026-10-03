@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942254303",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ciis.edu/about-ciis",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-institute-of-integral-studies",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'California Institute Of Integral Studies' (ProPublica Nonprofit Explorer, EIN 94-2254303)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "CIIS is a university with degree programs, consistent with a Memorandum of Understanding with OUSD's Talent/Human Resources department (staff and hiring pipeline)"
+    ],
+    "key": "n-california-institute-of-integral-studies",
+    "notes": null,
+    "profile": {
+      "address": "1453 Mission St, San Francisco, CA 94103",
+      "caEntityNumber": null,
+      "ein": "94-2254303",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "California Institute Of Integral Studies",
+      "orgType": "nonprofit",
+      "phone": "415.575.6100",
+      "samUei": null,
+      "summary": "A private nonprofit university in San Francisco, founded in 1968. It offers graduate degree programs and professional certificates, along with some undergraduate programs.",
+      "website": "https://www.ciis.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "California Institute Of Integral Studies - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942254303"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About CIIS",
+        "url": "https://www.ciis.edu/about-ciis"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-institute-of-integral-studies",
+    "notes": "Name, San Francisco location and 501(c)(3) educational status (EIN 94-2254303) match the agenda item; the CIIS About page confirms 1968 founding, address, phone, and graduate and B.A. programs. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

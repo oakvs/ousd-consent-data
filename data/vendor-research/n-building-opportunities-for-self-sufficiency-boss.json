@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://self-sufficiency.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/510173390",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-building-opportunities-for-self-sufficiency-boss",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Building Opportunities For Self-Sufficiency' (ProPublica Nonprofit Explorer, EIN 51-0173390, Berkeley, CA)",
+      "Organization's own website uses the name 'Building Opportunities for Self-Sufficiency (BOSS)' and runs programs in Oakland and across Alameda County, matching the agenda's Oakland, CA location",
+      "Organization offers career training and GED classes (per public directory listings), consistent with an Oakland Adult & Career Education no-cost services agreement"
+    ],
+    "key": "n-building-opportunities-for-self-sufficiency-boss",
+    "notes": "No page found that explicitly mentions OUSD; identity rests on name, nonprofit registry and Oakland/Alameda County service area.",
+    "profile": {
+      "address": "1918 University Ave, Suite 2A, Berkeley, CA 94704",
+      "caEntityNumber": null,
+      "ein": "51-0173390",
+      "email": "info@self-sufficiency.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Building Opportunities For Self-Sufficiency",
+      "orgType": "nonprofit",
+      "phone": "(510) 649-1930",
+      "samUei": null,
+      "summary": "Building Opportunities for Self-Sufficiency (BOSS) is a nonprofit based in Berkeley, California. It works to address poverty, homelessness, incarceration and violence through housing programs, wellness and empowerment services, trauma recovery, career support and other community services in Alameda County.",
+      "website": "https://self-sufficiency.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Building Opportunities for Self-Sufficiency (BOSS)",
+        "url": "https://self-sufficiency.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Building Opportunities For Self-Sufficiency - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/510173390"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-building-opportunities-for-self-sufficiency-boss",
+    "notes": "The agenda names BOSS in Oakland; the organization's site and ProPublica (EIN 51-0173390, Berkeley, 501(c)(3)) show a nonprofit of that name serving Oakland and Alameda County with career support, which fits a no-cost services agreement with Oakland Adult & Career Education. No source mentions OUSD directly, but the identity is consistent. The summary, address, phone and email are all shown on the site; the contact details are generic business ones.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

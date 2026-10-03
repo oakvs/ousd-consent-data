@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.btcalameda.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/940272624",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-building-and-construction-trades-council-of-alameda-county",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Council's own website (btcalameda.org) names it 'Building and Construction Trades Council of Alameda County', a coalition of 28 affiliated construction unions, matching the agenda name",
+      "OUSD's own legislative record (ousd.legistar.com File 23-2433) describes a tentative agreement between the District and the Building and Construction Trades Council of Alameda County (BCTC) for District skilled trade workers, matching the agenda's collective bargaining agreement item",
+      "ProPublica Nonprofit Explorer lists a 501(c)(5) labor organization in Oakland, CA (Alameda County BCTC), EIN 94-0272624, consistent with the council being based in Alameda County"
+    ],
+    "key": "n-building-and-construction-trades-council-of-alameda-county",
+    "notes": "Labor union council (IRS 501(c)(5)); orgType set to 'other'. ProPublica lists the legal name under the AFL-CIO parent's name, so legal name is taken from the council's website. Phone and street address were not confirmed on a fetchable official page and are left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-0272624",
+      "email": "btca@btcalameda.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Building and Construction Trades Council of Alameda County",
+      "orgType": "other",
+      "phone": null,
+      "samUei": null,
+      "summary": "A labor council made up of 28 affiliated unions that represent workers in the construction trades in Alameda County, California. It runs labor-management apprenticeship programs and works with a nonprofit partner to train skilled construction workers.",
+      "website": "https://www.btcalameda.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "Building and Construction Trades Council of Alameda County",
+        "url": "https://www.btcalameda.org"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Alameda County BCTC - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/940272624"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-building-and-construction-trades-council-of-alameda-county",
+    "notes": "The council's own site confirms the name, the 28-affiliated-union coalition, the apprenticeship programs, the nonprofit partner (CTWI) and the btca@ business email. ProPublica confirms the EIN, a 501(c)(5) status and an Oakland location, which fits the collective bargaining agreement item in the OUSD record.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

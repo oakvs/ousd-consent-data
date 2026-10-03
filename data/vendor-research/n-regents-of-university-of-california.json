@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.universityofcalifornia.edu/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://regents.universityofcalifornia.edu/about/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://regents.universityofcalifornia.edu/contact/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucop.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'The Regents of the University of California', the constitutional governing board that is the legal contracting entity for University of California campuses (UC Regents page cites Article IX, Section 9 of the California Constitution)",
+      "Agenda locations Berkeley, CA and San Francisco, CA are the sites of UC Berkeley and UC San Francisco; the University of California system's 10 campuses and 6 academic health centers include these",
+      "Agenda contracts (Berkeley Psychology Internship Consortium, early childhood education, student internship programs, LEA Medi-Cal) are consistent with university departments and clinical training programs"
+    ],
+    "key": "n-regents-of-university-of-california",
+    "notes": "The Regents are the system-wide governing board and contracting entity; the specific OUSD agreements involve individual campuses/departments (UC Berkeley, UCSF), so the profile describes the UC system and its governing board generally. legalName, phone, EIN, entity number and UEI left null (no exact match on cited pages; public university, no CA SOS or nonprofit registry ID applicable).",
+    "profile": {
+      "address": "1111 Franklin Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "regentsoffice@ucop.edu",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The University of California is a public university system with 10 campuses, 6 academic health centers and 3 national laboratories, serving more than 300,000 students. It is overseen by the Board of Regents, a 26-member governing board with authority under the California Constitution. The system is led by a president whose office is in Oakland, California.",
+      "website": "https://www.universityofcalifornia.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About us | University of California",
+        "url": "https://www.universityofcalifornia.edu/about-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About the Regents | Regents of the University of California",
+        "url": "https://regents.universityofcalifornia.edu/about/index.html"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Contact | Regents of the University of California",
+        "url": "https://regents.universityofcalifornia.edu/contact/index.html"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "University of California Office of the President",
+        "url": "https://www.ucop.edu/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-regents-of-university-of-california",
+    "notes": "The Regents of the University of California is the legal contracting entity for UC campuses, and the Berkeley/SF locations and the psychology internship, early childhood and Medi-Cal items fit UC departments. The cited pages support the summary (10 campuses, 6 academic health centers, 3 labs, 300,000+ students, 26-member Board), the website, the general Regents office email and the 1111 Franklin St, Oakland address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

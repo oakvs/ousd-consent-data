@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.gb-eng.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.gb-eng.com/about_us/history",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.gb-eng.com/services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001960",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda title names 'Guttmann & Blaevoet Consulting Engineers'; the firm's own website (gb-eng.com) is for Guttmann & Blaevoet, a consulting engineering firm",
+      "Headquartered in San Francisco, CA, matching the agenda location 'San Francisco, CA'",
+      "Firm provides building engineering and commissioning services, matching OUSD's 'School buildings & construction' contract via the Facilities Planning and Management division",
+      "Search results from the ASHRAE job board profile list Oakland Unified School District among the firm's notable clients (page blocks automated fetching, so not cited)"
+    ],
+    "key": "v-001960",
+    "notes": "Phone omitted: the only number listed on the contact page sits under a named contact person. Legal name, CA entity number, SAM UEI not verified via registries. OUSD client link comes from an ASHRAE job board profile that blocks automated fetching; the firm's own site does not mention OUSD.",
+    "profile": {
+      "address": "1620 Montgomery Street, Suite 230, San Francisco, California, 94111",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Guttmann & Blaevoet is a consulting engineering firm founded in 1956. It provides engineering services for buildings, including integrated engineering design, building performance modeling and commissioning (testing that building systems work as designed). It has offices in San Francisco and Sacramento, California.",
+      "website": "https://www.gb-eng.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Guttmann & Blaevoet - Offices",
+        "url": "https://www.gb-eng.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Guttmann & Blaevoet - History",
+        "url": "https://www.gb-eng.com/about_us/history"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Guttmann & Blaevoet - Services",
+        "url": "https://www.gb-eng.com/services"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-001960",
+    "notes": "Guttmann & Blaevoet Consulting Engineers is a San Francisco building-engineering firm, matching the agenda name, city and facilities/construction contract. The cited pages confirm the 1956 founding, SF and Sacramento offices, the address, and the design/modeling/commissioning services. The firm's site does not mention OUSD, but the name, city and service fit are unambiguous.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

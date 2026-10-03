@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.act.org/content/act/en/products-and-services/the-act/act-examinee-terms.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://industryinsights.act.org/2024/05/act-completes-formation-partnership-nexus",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.act.org/content/act/en/products-and-services/the-act-educator/states-and-districts.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-american-college-testing-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda item is the 'ACT District Testing Program - Terms and Conditions'; ACT's own District Testing page and terms are issued by 'ACT Education Corp.' (act.org)",
+      "Agenda name 'American College Testing Education Corporation' matches ACT's historical name (American College Testing) plus the current corporate name 'ACT Education Corp.'",
+      "Item is for a high school testing program (Oakland Technical High School), consistent with ACT's K-12 district testing service and OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "n-american-college-testing-education",
+    "notes": "Agenda name differs slightly from the current legal name 'ACT Education Corp.' (successor to the former nonprofit ACT, Inc., formerly American College Testing; became a for-profit public benefit corporation in 2024, reportedly acquired by ETS in 2026). No state/EIN registry IDs verified, so left null. Phone/address not confirmed as main-line on a cited page, so omitted.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Iowa City, Iowa",
+      "legalName": "ACT Education Corp.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "ACT Education Corp. provides assessments, research and work-ready credentials for education and the workplace. It runs the ACT college and career readiness test, including a District Testing program that lets K-12 districts give the ACT to students at school. It is a Delaware public benefit corporation based in Iowa City, Iowa.",
+      "website": "https://www.act.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website"
+        ],
+        "title": "ACT Terms and Conditions for Examinees",
+        "url": "https://www.act.org/content/act/en/products-and-services/the-act/act-examinee-terms.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "ACT Completes Formation of Public Benefit Corporation and Partnership with Nexus Capital Management",
+        "url": "https://industryinsights.act.org/2024/05/act-completes-formation-partnership-nexus"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "ACT District Testing",
+        "url": "https://www.act.org/content/act/en/products-and-services/the-act-educator/states-and-districts.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-american-college-testing-education",
+    "notes": "The ACT District Testing page and examinee terms are issued by ACT Education Corp., which the agenda's 'American College Testing Education Corporation' matches, and an ACT district testing program fits a high school testing item. The ACT press release supports the Delaware public benefit corporation form, the Iowa City headquarters and the assessment description; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

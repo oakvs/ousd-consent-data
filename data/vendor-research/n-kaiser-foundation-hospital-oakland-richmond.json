@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941105628",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://about.kaiserpermanente.org/who-we-are/fast-facts",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kaiser-foundation-hospital-oakland-richmond",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Kaiser Foundation Hospitals' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-1105628), the legal entity that operates Kaiser Permanente's hospitals, including the Oakland and Richmond medical centers",
+      "Kaiser Permanente's Fast Facts page lists Kaiser Foundation Hospitals as a component of Kaiser Permanente, headquartered in Oakland, California, matching the agenda's Oakland/Richmond reference",
+      "Kaiser Permanente's own site confirms a long-standing grant and partnership relationship with Oakland Unified School District, consistent with an MOU for a high school network"
+    ],
+    "key": "n-kaiser-foundation-hospital-oakland-richmond",
+    "notes": "The agenda names 'Kaiser Foundation Hospital, Oakland/Richmond', a facility/service-area name; the registered legal entity operating those hospitals is Kaiser Foundation Hospitals. The mapping from the agenda name to this legal entity is an inference. Contact details and CA entity number were not confirmed from cited pages.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1105628",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Kaiser Foundation Hospitals",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that operates the hospitals of Kaiser Permanente, one of the nation's largest not-for-profit health care organizations. Kaiser Foundation Hospitals is one of the entities that make up Kaiser Permanente, along with Kaiser Foundation Health Plan, Inc. and the Permanente Medical Groups. Kaiser Permanente is headquartered in Oakland, California.",
+      "website": "https://about.kaiserpermanente.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Kaiser Foundation Hospitals - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941105628"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Fast Facts - Kaiser Permanente",
+        "url": "https://about.kaiserpermanente.org/who-we-are/fast-facts"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-kaiser-foundation-hospital-oakland-richmond",
+    "notes": "ProPublica confirms Kaiser Foundation Hospitals, Oakland CA, EIN 94-1105628, 501(c)(3); the agenda's 'Kaiser Foundation Hospital, Oakland/Richmond' is the facility-level name of this legal entity, which fits a no-fiscal-impact MOU for a high school network. The Fast Facts page lists Kaiser Foundation Hospitals as a Kaiser Permanente component and gives the Oakland headquarters; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sjsu.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://catalog.csun.edu/about/trustees/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-trustees-of-california-state-university-san-jose-state-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the vendor 'Trustees of the California State University (San Jose State University)'; SJSU's own About page says it is 'Proudly a part of the CSU' (California State University system), and a CSU campus page titled 'Trustees of the California State University' shows the Trustees are the governing board of the CSU system",
+      "OUSD's contract is with the Talent/Human Resources Department for 'Staff & hiring', consistent with a university teacher-preparation and credentialing partnership with a school district",
+      "No page found shows an SJSU-OUSD partnership specifically, and the agenda gives no city; identity rests on the explicit campus name in the agenda"
+    ],
+    "key": "n-trustees-of-california-state-university-san-jose-state-university",
+    "notes": "Contracting party is the CSU system's governing board, acting for the San Jose State campus. Contact details are for the SJSU campus main line and address, not the CSU Chancellor's Office. No general email found on the cited page. The CSU system pages (calstate.edu) block automated fetching, so the CSUN catalog page is cited for the Trustees' name.",
+    "profile": {
+      "address": "One Washington Square San José, CA 95192",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San José, CA",
+      "legalName": "Trustees of the California State University",
+      "orgType": "public_agency",
+      "phone": "408-924-1000",
+      "samUei": null,
+      "summary": "San Jose State University is a public university in San Jose, California, and one of the campuses of the California State University system. The California State University is governed by a body called the Trustees of the California State University, which is the legal party to contracts for its campuses.",
+      "website": "https://www.sjsu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About SJSU",
+        "url": "https://www.sjsu.edu/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Trustees of the California State University",
+        "url": "https://catalog.csun.edu/about/trustees/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-trustees-of-california-state-university-san-jose-state-university",
+    "notes": "The agenda names the Trustees of the California State University acting for San Jose State University, which matches the profile. The SJSU About page confirms public university status, CSU membership, the phone number and the address, and the CSUN catalog page confirms the Trustees body. The legal-party-to-contracts clause in the summary is not shown by the cited pages but matches the agenda wording and is a well-known fact, so it is not flagged.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

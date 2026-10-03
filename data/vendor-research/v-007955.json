@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/834105309",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://assistprograms.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/83-4105309",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007955",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Assist Academy', Sacramento, CA (ProPublica Nonprofit Explorer, EIN 83-4105309), matching the agenda's 'ASSIST Academy' and 'Sacramento, CA'",
+      "GuideStar lists the Sacramento nonprofit's website as assistprograms.org and address 3835 N Freeway Blvd Ste 250, Sacramento, which matches the Assist Programs site's corporate headquarters",
+      "Website describes after-school enrichment, sports-based games and Expanded Learning Opportunities Program (ELOP) services, matching OUSD's 'After-school & summer programs' / 'Expanded Learning Elementary Sports' / ELOP funding",
+      "The ASSIST Academy sports site (structuredsports.org) redirects to assistprograms.org"
+    ],
+    "key": "v-007955",
+    "notes": "The same Sacramento address and website are also used by a related for-profit entity, Assist Team LLC (a federal contractor listing on fedlinks.com), and the Assist Programs site does not state which legal entity operates it. The agenda name 'ASSIST Academy' matches the nonprofit's legal name, but a reviewer may want to confirm which entity holds the OUSD contract. No page found explicitly mentions OUSD. CA Secretary of State entity number and SAM UEI not verified for the nonprofit.",
+    "profile": {
+      "address": "3835 N Freeway Blvd., Suite 250, Sacramento, CA 95834",
+      "caEntityNumber": null,
+      "ein": "83-4105309",
+      "email": "info@assistprograms.org",
+      "headquarters": "Sacramento, CA",
+      "legalName": "Assist Academy",
+      "orgType": "nonprofit",
+      "phone": "916-692-5239",
+      "samUei": null,
+      "summary": "Assist Programs is a Sacramento-based provider of school-day, before-school and after-school programs for students in transitional kindergarten through 8th grade. Its programs focus on active play, sports-based games, character education, social-emotional learning, and arts and science enrichment. It recruits and trains staff to run these programs at school sites, including expanded learning programs.",
+      "website": "https://assistprograms.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Assist Academy - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/834105309"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Assist",
+        "url": "https://assistprograms.org/about/"
+      },
+      {
+        "supports": [
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Assist Academy - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/83-4105309"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-007955",
+    "notes": "ProPublica and GuideStar show 'Assist Academy', a Sacramento 501(c)(3) (EIN 83-4105309) at the same address and website as assistprograms.org, which offers before/after-school, ELOP and sports-based programs matching the agenda's Sacramento 'ASSIST Academy' expanded learning sports item. The About page does not name the legal entity or mention OUSD, so the entity link rests on name, address and website matches; the summary and contact fields are supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_Department_of_Toxic_Substances_Control",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-california-department-of-toxic-substances-control",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names the 'Equitable Community Revitalization Grant (ECRG)' from the California Department of Toxic Substances Control; DTSC's own materials describe ECRG as its grant program, open to independent school districts",
+      "Agenda location is California and DTSC is a California state agency (Wikipedia: headquartered in Sacramento, part of CalEPA)",
+      "Grant relates to cleanup of contaminated sites, matching the OUSD Facilities Planning and Management office and the 'School buildings & construction' category"
+    ],
+    "key": "n-california-department-of-toxic-substances-control",
+    "notes": "dtsc.ca.gov returns 403 to automated fetching, so contact details were not captured. Facts come from Wikipedia plus search-result descriptions of DTSC's ECRG program.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Toxic Substances Control",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The California Department of Toxic Substances Control (DTSC) is a California state agency within the California Environmental Protection Agency. It protects public health and the environment from hazardous waste by regulating how hazardous waste is handled and by cleaning up contaminated sites. It also runs grant programs such as the Equitable Community Revitalization Grant for cleanup in disadvantaged communities.",
+      "website": "https://dtsc.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "California Department of Toxic Substances Control - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_Department_of_Toxic_Substances_Control"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-department-of-toxic-substances-control",
+    "notes": "The agenda item is a grant agreement with the CA Department of Toxic Substances Control for its Equitable Community Revitalization Grant, and the profile describes that state agency. Wikipedia confirms the name, CalEPA parent, Sacramento headquarters, mission and dtsc.ca.gov. The ECRG sentence is not on the cited page, but DTSC's own ECRG guidelines (found via search) confirm it is a DTSC grant program open to school districts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

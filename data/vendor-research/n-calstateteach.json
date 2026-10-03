@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.calstateteach.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.calstateteach.net/program-administration",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-calstateteach",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD's agenda item title names it 'California State University Teach', and the CalStateTEACH website identifies the program as operated by California State University",
+      "The program is a teacher credential pathway, which fits the district's Talent/Human Resources department as the presenting office (staff and hiring)"
+    ],
+    "key": "n-calstateteach",
+    "notes": "Program of the California State University (public university system), not a separate legal entity; no registry IDs applicable. Phone and email omitted because the program lists regional-center contacts only (Fresno), not a single main line. Oakland/Alameda County not confirmed on fetched pages; identity rests on the agenda title naming California State University Teach and the teacher-credential function.",
+    "profile": {
+      "address": "401 Golden Shore, Long Beach, CA 90802",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Long Beach, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "CalStateTEACH is a teacher preparation program operated by the California State University system. It prepares candidates for a preliminary multiple subject (elementary) teaching credential, with flexible scheduling designed for working professionals and for communities that are not near a CSU campus.",
+      "website": "https://www.calstateteach.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "CalStateTEACH",
+        "url": "https://www.calstateteach.net/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Program Administration — CalStateTEACH",
+        "url": "https://www.calstateteach.net/program-administration"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-calstateteach",
+    "notes": "The OUSD agenda title names 'California State University Teach' in an MOU with Talent/HR, which fits the CSU-operated CalStateTEACH credential program. The cited pages confirm the summary, address, website and CSU operation. The program is a CSU program rather than a separate legal entity, and no Oakland connection appears on the pages, but the agenda title is itself a direct name match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

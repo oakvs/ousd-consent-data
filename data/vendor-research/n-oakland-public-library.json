@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://oaklandlibrary.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandlibrary.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-public-library",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Oakland Public Library is a City of Oakland department located in Oakland, CA, matching the agenda location",
+      "Library's own site describes a Main Library plus 16 neighborhood branches and AAMLO serving Oakland, consistent with a workplace-training partner hosting OUSD high school interns",
+      "Library's teen pages reference Oakland Unified School District (work permits, job fairs), showing an existing relationship with OUSD"
+    ],
+    "key": "n-oakland-public-library",
+    "notes": "Public agency (City of Oakland department), so no EIN, CA entity number or SAM UEI sought. No page found describing the specific ECCCO internship MOU.",
+    "profile": {
+      "address": "125 14th Street Oakland CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "eanswers@oaklandlibrary.org",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 238-3134",
+      "samUei": null,
+      "summary": "Oakland Public Library is a department of the City of Oakland that has served the city since 1878. It runs a Main Library, 16 neighborhood branches and the African American Museum and Library at Oakland (AAMLO). Its mission is to empower all people to explore, connect, and grow.",
+      "website": "https://oaklandlibrary.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Oakland Public Library",
+        "url": "https://oaklandlibrary.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact Us - Oakland Public Library",
+        "url": "https://oaklandlibrary.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-oakland-public-library",
+    "notes": "Oakland Public Library (City of Oakland department) is the obvious counterparty for a library workplace-training partner MOU in Oakland, CA. Summary, phone, email (generic eanswers), address and website were all confirmed on the cited about and contact pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

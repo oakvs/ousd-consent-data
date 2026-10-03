@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942990335",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://grantedai.com/org/san-francisco-jazz-organization-942990335",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-008641",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'San Francisco Jazz Organization' exactly matches the IRS-registered 501(c)(3) San Francisco Jazz Organization (ProPublica Nonprofit Explorer, EIN 94-2990335), the only search match",
+      "Registry lists the organization in San Francisco, CA, matching the agenda's location",
+      "Public profile describes music education and community programming in the Bay Area, matching OUSD's 'Classroom & academic programs' no-cost services agreement"
+    ],
+    "key": "v-008641",
+    "notes": "sfjazz.org returns 403 to automated fetching, so website and contact details could not be verified and were left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-2990335",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "San Francisco Jazz Organization",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit arts organization in San Francisco that presents jazz performances. It also runs music education programs, artist residencies and community programming serving the San Francisco Bay Area.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "San Francisco Jazz Organization - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942990335"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "San Francisco Jazz Organization",
+        "url": "https://grantedai.com/org/san-francisco-jazz-organization-942990335"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-008641",
+    "notes": "ProPublica confirms San Francisco Jazz Organization (EIN 94-2990335, San Francisco, CA, Arts/Music nonprofit) and the Granted AI page lists grants for music education for SFUSD and OUSD students, artist residencies and community programs, matching the agenda entry. The summary is neutral; the 'presents jazz performances' phrasing is an inference from the organization's name and music classification rather than an explicit source statement, but is low risk.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

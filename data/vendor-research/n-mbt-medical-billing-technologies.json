@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.mbt4schools.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mbt4schools.com/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mbt4schools.com/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-mbt-medical-billing-technologies",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Medical Billing Technologies, Inc.' on the company's own website matches the agenda name 'MBT Medical Billing Technologies, Inc.'",
+      "Company address is in Visalia, CA, matching the agenda location 'Visalia, CA'",
+      "Company provides Medi-Cal billing and student data services to California school districts, consistent with a Data Sharing Agreement with the Community Schools and Student Services Department"
+    ],
+    "key": "n-mbt-medical-billing-technologies",
+    "notes": "No page found that explicitly mentions OUSD; identity rests on exact name, Visalia location and matching line of business. General email on the contact page is obfuscated, so omitted. No registry IDs (CA SOS, SAM) were checked.",
+    "profile": {
+      "address": "125 S. Bridge St, Visalia, CA 93291",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Visalia, CA",
+      "legalName": "Medical Billing Technologies, Inc.",
+      "orgType": "company",
+      "phone": "(559) 627-6267",
+      "samUei": null,
+      "summary": "A California company, founded in 1994, that provides software and billing services to schools. Its products help school districts and county offices of education manage IEP, 504 and SST documentation, report to CALPADS (the state student data system), and bill Medi-Cal for health services given to students.",
+      "website": "https://www.mbt4schools.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Medical Billing Technologies - Home",
+        "url": "https://www.mbt4schools.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName"
+        ],
+        "title": "About - Medical Billing Technologies",
+        "url": "https://www.mbt4schools.com/about.html"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Medical Billing Technologies",
+        "url": "https://www.mbt4schools.com/contact.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-mbt-medical-billing-technologies",
+    "notes": "Cited pages confirm the legal name Medical Billing Technologies, Inc., founding in 1994, the Visalia address and phone, and the IEP/504/SST, CALPADS and Medi-Cal billing services; this fits a data sharing agreement with a student services department and the agenda location of Visalia, CA. The summary is neutral and no individuals' contact details are included. No page names OUSD, so identity rests on the exact name, location and line of business.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

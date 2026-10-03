@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/952798775",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Concordia_University_Irvine",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://catalog.cui.edu/schools/soe",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-concordia-university-irvine",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational institution: 'Concordia University Irvine' in Irvine, CA (ProPublica Nonprofit Explorer, EIN 95-2798775)",
+      "Located in Irvine, CA, matching the agenda text 'Irvine, CA'",
+      "The university runs teacher credential and induction programs for school districts, consistent with a Talent/Human Resources MOU for staff and hiring (CUI School of Education catalog)"
+    ],
+    "key": "n-concordia-university-irvine",
+    "notes": "The university's own site (cui.edu) returned HTTP 403 to automated fetching, so website, phone, email and address were left null rather than unverified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "95-2798775",
+      "email": null,
+      "headquarters": "Irvine, CA",
+      "legalName": "Concordia University Irvine",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private Lutheran university in Irvine, California, affiliated with the Lutheran Church-Missouri Synod. It offers undergraduate and graduate degrees, including teacher credential programs through its School of Education.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Concordia University Irvine - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/952798775"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Concordia University Irvine - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Concordia_University_Irvine"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "School - Education - Concordia University Irvine catalog",
+        "url": "https://catalog.cui.edu/schools/soe"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-concordia-university-irvine",
+    "notes": "Name and Irvine, CA location match the agenda; ProPublica confirms the 501(c)(3) EIN 95-2798775, and Wikipedia and the CUI catalog confirm the Lutheran (LCMS) affiliation, degree programs and teacher credential/induction programs, which fit a Talent/HR MOU. Summary is neutral and supported; null contact fields are fine.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

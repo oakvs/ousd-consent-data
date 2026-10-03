@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/454001645",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://community.warriors.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://community.warriors.com/foundation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-warriors-community-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Warriors Community Foundation' matches the former name of the registered 501(c)(3) Golden State Community Foundation, formerly Golden State Warriors Community Foundation, EIN 45-4001645 (ProPublica Nonprofit Explorer; former name per impala.digital)",
+      "Registered in San Francisco, CA, matching the agenda location 'San Francisco, CA'",
+      "The Warriors' foundation page (community.warriors.com/foundation) describes grants for elementary literacy and education in Alameda and San Francisco counties, consistent with OUSD grant agreements for 'Reading Warriors' and reading/math programs",
+      "The Warriors' community site hosts the Warriors Community Foundation (Generation Thrive community space), and the foundation page is titled Golden State Community Foundation, tying the old and new names together"
+    ],
+    "key": "n-warriors-community-foundation",
+    "notes": "Foundation was renamed from Warriors Community Foundation / Golden State Warriors Community Foundation to Golden State Community Foundation; former-name link comes from impala.digital and search listings, not the registry page itself. No public phone, email or mailing address found on the foundation's pages (contact page URL returned 404), so those are null. Foundation is invitation-only for grants.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "45-4001645",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Golden State Community Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit grantmaking foundation connected to the Golden State Warriors basketball team, previously called the Warriors Community Foundation. It supports education and youth development in the Bay Area, with a focus on educational equity in San Francisco and Alameda counties, and also funds health and wellness, economic development and civic engagement work.",
+      "website": "https://community.warriors.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Golden State Community Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/454001645"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Warriors Community Foundation",
+        "url": "https://community.warriors.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Golden State Community Foundation",
+        "url": "https://community.warriors.com/foundation/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-warriors-community-foundation",
+    "notes": "ProPublica shows Golden State Community Foundation as a San Francisco 501(c)(3), EIN 45-4001645, and a Benevity listing under the same EIN is titled Golden State Warriors Community Foundation, tying the old and new names together; the foundation's own pages confirm education and youth development grants in San Francisco and Alameda counties plus the health, economic development and civic engagement pillars. Summary is neutral and supported; contact fields are null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

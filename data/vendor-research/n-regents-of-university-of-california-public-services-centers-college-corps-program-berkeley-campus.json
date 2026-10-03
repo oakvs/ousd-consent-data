@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://publicservice.berkeley.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://publicservice.berkeley.edu/programs/collegecorps/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-public-services-centers-college-corps-program-berkeley-campus",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The Public Service Center's own About page says it is UC Berkeley's civic engagement hub, matching the agenda's 'Public Service Center ... Berkeley campus'",
+      "Located in Berkeley, CA, matching the agenda location 'Berkeley, CA'",
+      "The Public Service Center runs the College Corps program at UC Berkeley, matching the agenda's 'College Corps Program'",
+      "College Corps at Berkeley places students in community partners including K-12 education, consistent with a no-cost services agreement with OUSD's Community Schools and Student Services department"
+    ],
+    "key": "n-regents-of-university-of-california-public-services-centers-college-corps-program-berkeley-campus",
+    "notes": "Agenda vendor is the Regents of the University of California acting for a campus program, so contact details are for the Public Service Center, not the UC system. Legal name, EIN and registry IDs left null (not verified on a cited page).",
+    "profile": {
+      "address": "2465 Bancroft Way, Suite 218, Berkeley, CA 94720-4500",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "publicservice@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "510.642.3916",
+      "samUei": null,
+      "summary": "The Public Service Center is a University of California, Berkeley campus center that connects students, faculty and community partners for public service and civic engagement. It runs College Corps at Berkeley, an AmeriCorps program with California Volunteers in which undergraduates serve 450 hours a year with community partners in food justice, climate justice, K-12 education, and behavioral health and wellness.",
+      "website": "https://publicservice.berkeley.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Public Service Center - UC Berkeley",
+        "url": "https://publicservice.berkeley.edu/about/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "College Corps - Public Service Center - UC Berkeley",
+        "url": "https://publicservice.berkeley.edu/programs/collegecorps/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-regents-of-university-of-california-public-services-centers-college-corps-program-berkeley-campus",
+    "notes": "The cited UC Berkeley Public Service Center pages confirm the center, its College Corps program, and the phone, email and address, matching the agenda's Regents of the University of California / Public Service Center College Corps (Berkeley) entry. The summary is neutral and supported; the sector list omits housing, which does not make it inaccurate.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/10679337",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sff.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sff.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sff.org/oakland-launches-one-of-the-nations-first-district-wide-outdoor-nature-programs/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-san-francisco-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Registered 501(c)(3) 'San Francisco Foundation' in San Francisco, CA (ProPublica Nonprofit Explorer, EIN 01-0679337)",
+      "The foundation's own page says Oakland Goes Outdoors was seeded by the Robert and Kathryn Riddell Fund at the San Francisco Foundation in partnership with Oakland Unified School District, matching the agenda's Riddell Fund grants to the Middle School Network",
+      "Grant titles in the agenda name the San Francisco Foundation and the Riddell Fund, matching the foundation's donor-advised fund activity"
+    ],
+    "key": "n-san-francisco-foundation",
+    "notes": "Agenda also lists the 'Robert and Kathryn Riddell Fund', a fund held at the foundation, not a separate legal entity. General email omitted: the contact page only shows it in obfuscated form.",
+    "profile": {
+      "address": "One Embarcadero Center, Suite 1400, San Francisco, CA 94111",
+      "caEntityNumber": null,
+      "ein": "01-0679337",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "San Francisco Foundation",
+      "orgType": "nonprofit",
+      "phone": "(415) 733-8500",
+      "samUei": null,
+      "summary": "A community foundation founded in 1948 that serves the San Francisco Bay Area. It manages charitable funds, including donor-advised funds, and makes grants to organizations working on racial equity and economic inclusion, such as jobs, housing and civic participation.",
+      "website": "https://sff.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "San Francisco Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/10679337"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact Us - The San Francisco Foundation",
+        "url": "https://sff.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - The San Francisco Foundation",
+        "url": "https://sff.org/about/"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Launches One of the Nation's First District-Wide Outdoor Nature Programs - The San Francisco Foundation",
+        "url": "https://sff.org/oakland-launches-one-of-the-nations-first-district-wide-outdoor-nature-programs/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-san-francisco-foundation",
+    "notes": "The SFF's own page says Oakland Goes Outdoors was seeded by the Riddell Fund at the San Francisco Foundation in partnership with OUSD, matching the agenda's Riddell Fund grants. Legal name, EIN, address, phone, founding year, and the neutral summary are all confirmed by the cited ProPublica, contact, and about pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

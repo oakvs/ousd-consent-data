@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.academyart.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Academy_of_Art_University",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-academy-of-art-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: Academy of Art University is a single, well-known institution headquartered in San Francisco, California, matching the agenda's location of California (Wikipedia and the university's own site)",
+      "An OUSD school website (Oakland High School faculty page) says a teacher there earned a master's degree and California teaching credential from the Academy of Art University San Francisco, showing a link between the university and OUSD's teaching workforce, consistent with an MOU with OUSD's Talent/Human Resources department",
+      "The university offers art and design programs, consistent with a district partnership around staffing and hiring"
+    ],
+    "key": "n-academy-of-art-university",
+    "notes": "Registry IDs not found: it is a for-profit institution, so no EIN. The Academy of Art University Foundation (EIN 94-2463376) is a separate related nonprofit and was deliberately not used. Legal name and California entity number were not confirmed from the Secretary of State registry. The OUSD Oakland High School faculty page was used only as an identity signal, not as a source for profile fields.",
+    "profile": {
+      "address": "79 New Montgomery St. San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@academyart.edu",
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1 (800) 544-2787",
+      "samUei": null,
+      "summary": "A private, for-profit art and design university based in San Francisco, California, founded in 1929. It offers associate, bachelor's and graduate programs in fields such as animation, fashion, photography, fine art and interior design, with both on-campus and online classes.",
+      "website": "https://www.academyart.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Academy of Art University",
+        "url": "https://www.academyart.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Academy of Art University - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Academy_of_Art_University"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-academy-of-art-university",
+    "notes": "Academy of Art University is a single distinct institution in California, matching the agenda name and an MOU with OUSD Talent/HR. The cited sources support the summary (the founding year and for-profit status are on Wikipedia, and the programs and online/on-campus classes are on the university site), orgType, website, phone, general email, address and headquarters. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

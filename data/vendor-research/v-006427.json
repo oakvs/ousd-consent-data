@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dhti.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/352432876",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandinternational.ousd.org/about-us/student-support",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006427",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Diversity In Health Training Institute', EIN 35-2432876 (ProPublica Nonprofit Explorer)",
+      "Oakland International High School's own Student Support page lists Diversity in Health Training Institute among partner agencies providing on- and off-campus services to students and families, matching the OUSD agreement for that school",
+      "Website describes healthcare career training, mental health services and wellness programs for immigrants and refugees, matching OUSD's 'Student health, support & family services' category",
+      "Based in the East Bay (Alameda County); search listings show an earlier Oakland address, matching the agenda's Oakland, CA"
+    ],
+    "key": "v-006427",
+    "notes": "Agenda text gives Oakland, CA; the organization's current website and ProPublica list San Leandro, CA (search listings show an earlier Oakland address at 310 8th St), so the organization appears to have moved. Identity is confirmed by the Oakland International High School partner listing.",
+    "profile": {
+      "address": "101 Callan Ave., Suite 220, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": "35-2432876",
+      "email": "INFO@DHTI.ORG",
+      "headquarters": "San Leandro, CA",
+      "legalName": "Diversity In Health Training Institute",
+      "orgType": "nonprofit",
+      "phone": "510-838-1110",
+      "samUei": null,
+      "summary": "A nonprofit based in the San Francisco Bay Area that works with culturally diverse immigrant, refugee and low-income community members. It offers healthcare career training, mental health services and wellness programs.",
+      "website": "https://www.dhti.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Diversity in Health Training Institute",
+        "url": "https://www.dhti.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Diversity In Health Training Institute - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/352432876"
+      },
+      {
+        "supports": [],
+        "title": "Student Support - Oakland International High School",
+        "url": "https://oaklandinternational.ousd.org/about-us/student-support"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-006427",
+    "notes": "dhti.org and ProPublica confirm the name, EIN 35-2432876, 501(c)(3) status, San Leandro address and contact details, and Oakland International High School's student support page lists Diversity in Health Training Institute as a partner agency. The summary is neutral and supported, and the email is a generic info@ address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

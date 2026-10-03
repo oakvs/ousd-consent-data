@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156599",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stmarys-ca.edu/node/245205",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-saint-marys-college-of-california",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'St Marys College Of California', EIN 94-1156599, Moraga, CA (ProPublica Nonprofit Explorer)",
+      "Located in Moraga, CA, matching the agenda text 'Moraga, CA' (college website contact page and ProPublica)",
+      "College offers education programs and graduate/undergraduate degrees, consistent with an MOU with OUSD's Talent/Human Resources department (staff and hiring)"
+    ],
+    "key": "n-saint-marys-college-of-california",
+    "notes": "No general college email found (only department-specific addresses), so email is null. Registry legal name is as shown by ProPublica.",
+    "profile": {
+      "address": "1928 St. Marys Rd, Moraga, CA 94575",
+      "caEntityNumber": null,
+      "ein": "94-1156599",
+      "email": null,
+      "headquarters": "Moraga, CA",
+      "legalName": "St Marys College Of California",
+      "orgType": "nonprofit",
+      "phone": "925.631.4000",
+      "samUei": null,
+      "summary": "Saint Mary's College of California is a private, nonprofit Catholic college in Moraga, California. It follows the Lasallian tradition and offers undergraduate and graduate programs, including in education, business and the arts and sciences.",
+      "website": "https://www.stmarys-ca.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "St Marys College Of California - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156599"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.stmarys-ca.edu/node/245205"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-saint-marys-college-of-california",
+    "notes": "Name and Moraga, CA location match the agenda; ProPublica confirms the 501(c)(3) educational institution and EIN, and the college contact page confirms phone, address, Catholic/Lasallian description and programs. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

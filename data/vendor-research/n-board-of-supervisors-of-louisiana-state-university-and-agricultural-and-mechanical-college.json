@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lsu.edu/bos/index.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lsusystem.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lsu.edu/about/index.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-board-of-supervisors-of-louisiana-state-university-and-agricultural-and-mechanical-college",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names the 'Board of Supervisors of Louisiana State University and Agricultural and Mechanical College', the formal name of the governing board of LSU; lsu.edu says LSU is governed by the Board of Supervisors",
+      "Agenda gives Baton Rouge, LA; the LSU Board of Supervisors office is at 3810 W. Lakeshore Dr., Baton Rouge, LA 70808",
+      "Contract is an MOU/interagency agreement with OUSD Talent/Human Resources, consistent with a public university partnering on staffing or workforce pipeline (not independently confirmed on a public page)"
+    ],
+    "key": "n-board-of-supervisors-of-louisiana-state-university-and-agricultural-and-mechanical-college",
+    "notes": "Legal name left null because no fetched page showed the full formal name exactly. The nature of the OUSD agreement was not confirmed from public pages.",
+    "profile": {
+      "address": "104B University Administration Bldg. 3810 W. Lakeshore Dr. Baton Rouge, LA 70808",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "lsuboard@lsu.edu",
+      "headquarters": "Baton Rouge, LA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "225-578-2154",
+      "samUei": null,
+      "summary": "The LSU Board of Supervisors is the governing board of Louisiana State University and the LSU System, a public higher education system in Louisiana. The system's institutions educate students, conduct research and serve communities across the state.",
+      "website": "https://www.lsu.edu/bos/index.php"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "LSU Board of Supervisors",
+        "url": "https://www.lsu.edu/bos/index.php"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "LSU System",
+        "url": "https://lsusystem.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About LSU",
+        "url": "https://www.lsu.edu/about/index.php"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-board-of-supervisors-of-louisiana-state-university-and-agricultural-and-mechanical-college",
+    "notes": "The agenda uses the formal legal name of the LSU governing board, with Baton Rouge matching the board's own page; website, phone, generic board email and address were confirmed on lsu.edu/bos. The summary is neutral and consistent with lsusystem.edu and lsu.edu (state flagship, multi-institution system); the OUSD agreement purpose is unconfirmed but the profile makes no claim about it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

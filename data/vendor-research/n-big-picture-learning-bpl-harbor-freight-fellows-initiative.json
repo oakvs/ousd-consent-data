@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/50485883",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bigpicture.org/whoweare",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.harborfreightfellows.org/about-harbor-freight-fellows-initiative",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.harborfreightfellows.org/partners",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-big-picture-learning-bpl-harbor-freight-fellows-initiative",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Big Picture Learning (BPL) / Harbor Freight Fellows Initiative'; the Harbor Freight Fellows Initiative website describes the initiative as a partnership between Big Picture Learning and Harbor Freight Tools for Schools",
+      "ProPublica Nonprofit Explorer lists Big Picture Company Inc, a Providence, RI 501(c)(3) educational nonprofit (EIN 05-0485883); Big Picture Learning's own site describes an educational nonprofit founded in 1995 that began as one school in Providence, RI",
+      "Harbor Freight Fellows Initiative partner page lists MetWest HS and Skyline HS in Oakland, CA as school partners, matching the Oakland location and OUSD's Adult and Career Education services agreement"
+    ],
+    "key": "n-big-picture-learning-bpl-harbor-freight-fellows-initiative",
+    "notes": "Headquarters is Providence, RI (not Oakland); Oakland link is via Oakland school partners (MetWest HS, Skyline HS) of the Harbor Freight Fellows Initiative. The bigpicture.org contact page lists only web forms, so no phone, email or address given. Legal name on IRS/ProPublica is 'Big Picture Company Inc'; it operates as Big Picture Learning.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "05-0485883",
+      "email": null,
+      "headquarters": "Providence, RI",
+      "legalName": "Big Picture Company Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Big Picture Learning is an educational nonprofit, founded in 1995, that supports a network of schools focused on student-centered, real-world learning, including internships with mentors. Through the Harbor Freight Fellows Initiative, in partnership with Harbor Freight Tools for Schools, it arranges apprenticing experiences with tradesperson mentors for youth who plan to pursue the skilled trades.",
+      "website": "https://www.bigpicture.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Big Picture Company Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/50485883"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Who We Are - Big Picture Learning",
+        "url": "https://www.bigpicture.org/whoweare"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - Harbor Freight Fellows Initiative",
+        "url": "https://www.harborfreightfellows.org/about-harbor-freight-fellows-initiative"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Partners - Harbor Freight Fellows Initiative",
+        "url": "https://www.harborfreightfellows.org/partners"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-big-picture-learning-bpl-harbor-freight-fellows-initiative",
+    "notes": "Agenda names Big Picture Learning / Harbor Freight Fellows Initiative; the HFFI site confirms it is run by Big Picture Learning and lists Oakland partner schools (MetWest HS, Skyline HS). ProPublica confirms Big Picture Company Inc is a Providence RI 501(c)(3) with the stated EIN, and the summary is neutral and supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

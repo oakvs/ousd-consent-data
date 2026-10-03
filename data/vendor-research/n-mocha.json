@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.mocha.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943086749",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-mocha",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'MOCHA' is the brand name of the Museum of Children's Art, an Oakland arts-education nonprofit (mocha.org), registered with the IRS (ProPublica, EIN 94-3086749)",
+      "MOCHA's own pages state it partners with Oakland Unified School District (OUSD) on its Arts Connect program and brings teaching artists into schools, matching OUSD's 'Classroom & academic programs' category",
+      "MOCHA runs programs for Oakland high school students (e.g. Castlemont High students in its Community Futures School program), consistent with a Measure N high school item"
+    ],
+    "key": "n-mocha",
+    "notes": "Agenda gives only 'MOCHA' with no city. A specific link to Oakland Technical High School was not found on public pages; identity rests on the name and the documented OUSD partnership. CA Secretary of State entity number and SAM UEI not looked up (bizfile/SAM block automated fetching).",
+    "profile": {
+      "address": "1221 Broadway LL-49, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3086749",
+      "email": "programs@mocha.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Museum of Children's Art",
+      "orgType": "nonprofit",
+      "phone": "(510) 465-8770",
+      "samUei": null,
+      "summary": "MOCHA (Museum of Children's Art) is an Oakland nonprofit arts organization founded in 1988. It offers hands-on art classes, camps, exhibitions, and community programs for children, teens, and families, and sends teaching artists into schools and community sites around the East Bay.",
+      "website": "https://www.mocha.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - MOCHA, Museum of Children's Art",
+        "url": "https://www.mocha.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Museum of Childrens Arts - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943086749"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-mocha",
+    "notes": "MOCHA (Museum of Children's Art, Oakland) is a plausible match: mocha.org confirms the 1988 founding, school and teen programs, and contact details, ProPublica confirms the EIN, and search results show MOCHA has contracted with OUSD for arts programming, though no public page ties it to the Oakland Tech Measure N item specifically. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

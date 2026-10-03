@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.irisconnect.com/us/who-we-are/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.irisconnect.com/us/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009538",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: IRIS Connect US website (irisconnect.com/us)",
+      "Contact page lists 6405 218th St. SW, Suite 103, Mountlake Terrace, WA 98043, matching the agenda location Mountlake Terrace, WA",
+      "Website describes a teacher professional development platform (video coaching, reflection), matching OUSD's Title II Teacher Quality funded 'Classroom & academic programs' services agreement"
+    ],
+    "key": "v-009538",
+    "notes": "US entity's legal name and registry IDs not verified; no general email shown on contact page.",
+    "profile": {
+      "address": "6405 218th St. SW, Suite 103, Mountlake Terrace, WA 98043",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Mountlake Terrace, WA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "+1 206 201 1998",
+      "samUei": null,
+      "summary": "IRIS Connect is an education technology company that provides a professional development platform for teachers. Its UnityPD platform combines video recording of classroom lessons, instructional coaching, guided reflection and collaborative learning tools. It serves schools, school districts and teacher preparation programs in the United States and other countries.",
+      "website": "https://www.irisconnect.com/us/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - IRIS Connect USA",
+        "url": "https://www.irisconnect.com/us/who-we-are/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - IRIS Connect US",
+        "url": "https://www.irisconnect.com/us/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-009538",
+    "notes": "The contact page lists the US office at Mountlake Terrace, WA, matching the agenda, and the about page describes a video-based teacher PD platform that fits the Title II services agreement. The contact page labels that address as the US office, not a headquarters (the company also lists EU, UK and Australasia offices), so headquarters is unsupported; the phone, address and summary are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

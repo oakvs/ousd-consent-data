@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://mills.northeastern.edu/about/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/41679980",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-mills-northeastern-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Mills College at Northeastern University is a college of Northeastern University located at 5000 MacArthur Boulevard, Oakland, CA, matching the agenda location 'Oakland, CA' (mills.northeastern.edu contact page)",
+      "Northeastern University is a registered 501(c)(3) educational institution (ProPublica, EIN 04-1679980); Mills College merged into Northeastern, so the legal entity is Northeastern University",
+      "Northeastern's own news page reports a partnership between Northeastern's Oakland campus and Oakland Unified School District (Oakland Opportunity Scholarships) for OUSD high school students, consistent with a no-cost agreement with OUSD's High School Linked Learning Office"
+    ],
+    "key": "n-mills-northeastern-university",
+    "notes": "The legal entity is Northeastern University (Boston, MA); Mills College at Northeastern is its Oakland college. The address and phone shown are the Oakland campus contact details; headquarters is given as the Oakland campus rather than the Boston parent. The Oakland-OUSD partnership was confirmed at news.northeastern.edu/2025/08/27/oakland-high-school-students-full-scholarships/ (not cited for any field).",
+    "profile": {
+      "address": "5000 MacArthur Boulevard, Oakland, CA 94613",
+      "caEntityNumber": null,
+      "ein": "04-1679980",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Northeastern University",
+      "orgType": "nonprofit",
+      "phone": "510.430.2255",
+      "samUei": null,
+      "summary": "Mills College at Northeastern University is one of Northeastern University's colleges and schools, located on the Oakland campus. Northeastern University is a private nonprofit university based in Boston, Massachusetts. Mills College joined Northeastern in a merger and continues to operate on its Oakland, California campus.",
+      "website": "https://mills.northeastern.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Mills College - Northeastern University",
+        "url": "https://mills.northeastern.edu/about/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Northeastern University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/41679980"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-mills-northeastern-university",
+    "notes": "Mills College at Northeastern (5000 MacArthur Blvd, Oakland) is a college of Northeastern University, matching the agenda's Oakland location, and Northeastern's own news page confirms an OUSD partnership. Address, phone, website, EIN and 501(c)(3) status are confirmed by the cited sources; headquarters 'Oakland, CA' is dropped because the legal entity (per ProPublica) is based in Boston.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

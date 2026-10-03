@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Administration_for_Children_and_Families",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=90TV0060&arg_ProgOfficeCode=168",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://acf.gov/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-united-states-department-of-health-and-human-services-administration-for-children-and-families",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names the U.S. Department of Health and Human Services, Administration for Children and Families (ACF), a federal operating division of HHS (Wikipedia; TAGGS award record)",
+      "HHS TAGGS award record 90TV0060 lists Oakland Unified School District (1011 Union Street, Oakland) as grantee and ACF as awarding agency for the Safety Through Education and Prevention (STEP) human trafficking prevention program",
+      "OUSD's own Human Trafficking Prevention page says OUSD received a federal grant from 2020-28 and links to ACF's HTYPE Demonstration Program page, matching the agenda's grant title"
+    ],
+    "key": "n-united-states-department-of-health-and-human-services-administration-for-children-and-families",
+    "notes": "acf.gov blocks automated fetching (403), so phone, email and address were left null; the acf.gov website is the agency's own domain, also shown on Wikipedia.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, D.C.",
+      "legalName": "Administration for Children and Families",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Administration for Children and Families is a federal agency within the U.S. Department of Health and Human Services. It runs about 60 programs for children, youth and families, including welfare assistance, child support enforcement, adoption and foster care, child care, and child abuse prevention. It also funds grants to schools and community groups.",
+      "website": "https://acf.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Administration for Children and Families - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Administration_for_Children_and_Families"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Award Information - HHS TAGGS",
+        "url": "https://taggs.hhs.gov/Detail/AwardDetail?arg_AwardNum=90TV0060&arg_ProgOfficeCode=168"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "About ACF",
+        "url": "https://acf.gov/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-united-states-department-of-health-and-human-services-administration-for-children-and-families",
+    "notes": "The agenda names HHS ACF as the grantor of the HTYPE human trafficking prevention grant. The TAGGS record shows ACF as awarding agency and Oakland USD as grantee (award 90TV0060). Wikipedia confirms the federal-agency status, Washington D.C. headquarters, about 60 programs, the program areas listed and the acf.gov website. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

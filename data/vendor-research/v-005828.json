@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/61750500",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://everforwardclub.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://everforwardclub.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005828",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Ever Forward-siempre Adelante' (ProPublica Nonprofit Explorer, EIN 06-1750500, Oakland, CA), identical to the agenda name 'Ever Forward - Siempre Adelante'",
+      "Located in Oakland, CA (mailing address 1714 Franklin St, Oakland), matching the agenda's Oakland, CA",
+      "Website everforwardclub.org describes a youth mentoring and social-emotional learning organization for middle and high school students, consistent with OUSD's 'Student health, support & family services' category and an Oakland High School services agreement"
+    ],
+    "key": "v-005828",
+    "notes": "ProPublica notes the organization is not on the IRS's most recent list of tax-exempt organizations (last Form 990-EZ shown is FY2015), so current IRS status is unverified. The website does not explicitly mention OUSD. The site also lists an office at 1221 Pacific Ave, San Leandro, CA 94577; the mailing address is in Oakland. California Secretary of State entity number not found.",
+    "profile": {
+      "address": "1714 Franklin St. #100-337, Oakland, CA 94612-3409",
+      "caEntityNumber": null,
+      "ein": "06-1750500",
+      "email": "everforwardclub@gmail.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Ever Forward-siempre Adelante",
+      "orgType": "nonprofit",
+      "phone": "510.854.6794",
+      "samUei": null,
+      "summary": "Ever Forward Club is a youth mentoring organization in the Bay Area, founded in 2004. It works with middle and high school students through year-long mentoring clubs, peer mentoring, and a social-emotional leadership program. Its stated goals are to address dropout rates, youth violence and achievement gaps.",
+      "website": "https://everforwardclub.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Ever Forward-siempre Adelante - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/61750500"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "CONTACT — Ever Forward Club",
+        "url": "https://everforwardclub.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Ever Forward Club",
+        "url": "https://everforwardclub.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-005828",
+    "notes": "ProPublica lists 'Ever Forward-siempre Adelante' (EIN 06-1750500, Oakland, CA), matching the agenda name and city; the youth mentoring/social-emotional programs fit a student support services agreement at Oakland High School. Summary, contact details (generic org phone/email, mailing address), and founding year were confirmed on everforwardclub.org; IRS exempt status is stale (last 990-EZ FY2015), which the candidate already notes.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

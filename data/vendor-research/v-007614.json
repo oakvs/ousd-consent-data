@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943395450",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandballet.org/about/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007614",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Oakland Ballet Company', EIN 94-3395450, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes school-oriented education programs (Discover Dance student matinees and in-school assemblies), consistent with OUSD 'Classroom & academic programs' no-cost agreements with Oakland Academy of Knowledge"
+    ],
+    "key": "v-007614",
+    "notes": "Identity tied to OUSD mainly by name, city and school education programs; the website page fetched did not explicitly mention OUSD.",
+    "profile": {
+      "address": "2201 Broadway #LL17, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3395450",
+      "email": "info@oaklandballet.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Ballet Company",
+      "orgType": "nonprofit",
+      "phone": "(510) 647-6580",
+      "samUei": null,
+      "summary": "Oakland Ballet Company is a nonprofit performing arts organization serving Oakland and the East Bay. It presents professional dance performances and runs education programs, including student matinees, school assemblies, a summer academy and student scholarships.",
+      "website": "https://oaklandballet.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oakland Ballet Company - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943395450"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Oakland Ballet Company",
+        "url": "https://oaklandballet.org/about/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-007614",
+    "notes": "Oakland Ballet Company is an Oakland-based 501(c)(3) (EIN 94-3395450 per ProPublica) whose school assemblies and student programs fit no-cost classroom agreements with an Oakland school. The About page confirms the summary, phone, email and address, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

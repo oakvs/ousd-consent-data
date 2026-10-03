@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/951643334",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lmu.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lmu.edu/about/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://soe.lmu.edu/academics/intern-teaching/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-loyola-marymount-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational institution: 'Loyola Marymount University' in Los Angeles, CA (ProPublica Nonprofit Explorer, EIN shown)",
+      "LMU's School of Education intern teaching program states it supports intern teachers in the Bay Area of California, consistent with OUSD's 'Intern Partnership Program and Practica Program' MOUs handled by the Talent/Human Resources department",
+      "Agenda gives no location; the name is a unique, well-known university and no other organization with this exact name was found"
+    ],
+    "key": "n-loyola-marymount-university",
+    "notes": "Phone is the Westchester main campus line; the law school has a separate line. EIN and legal name from ProPublica; CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1 LMU Drive, Los Angeles, California 90045-2659",
+      "caEntityNumber": null,
+      "ein": "95-1643334",
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Loyola Marymount University",
+      "orgType": "nonprofit",
+      "phone": "310.338.2700",
+      "samUei": null,
+      "summary": "A private Catholic university in Los Angeles, California, rooted in the Jesuit and Marymount traditions. It offers undergraduate and graduate programs, including a School of Education that prepares teachers and other school professionals, and a law school.",
+      "website": "https://www.lmu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Loyola Marymount University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/951643334"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "About Loyola Marymount University",
+        "url": "https://www.lmu.edu/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact - Loyola Marymount University",
+        "url": "https://www.lmu.edu/about/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Intern Teaching Pathway - Loyola Marymount University",
+        "url": "https://soe.lmu.edu/academics/intern-teaching/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-loyola-marymount-university",
+    "notes": "LMU is a unique, well-known university whose School of Education intern teaching program explicitly serves the Bay Area, fitting OUSD's intern/practica MOUs with Talent/HR. Name, EIN, phone, address, and summary are confirmed by the fetched ProPublica, about, contact, and intern-teaching pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

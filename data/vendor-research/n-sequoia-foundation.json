@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://www.sequoiafoundation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/330100208",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.causeiq.com/organizations/sequoia-foundation,330100208/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/sequoia-foundation-10030729/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-sequoia-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Sequoia Foundation's own website describes environmental and public health research, education and community engagement, including air quality curriculum and Bay Area projects, matching OUSD's air quality monitoring and student internship agreements",
+      "Air Aware Oakland, the OUSD air monitoring network website, names Sequoia Foundation and Oakland Unified School District as partners (Oaklandside and Air Aware Oakland pages)",
+      "Federal contractor registry profile lists SEQUOIA FOUNDATION in Berkeley, CA, a tax-exempt nonprofit incorporated in California, matching the Berkeley, CA location in the agenda text",
+      "CauseIQ lists EIN 33-0100208 for Sequoia Foundation with website sequoiafoundation.org; ProPublica shows the same name and EIN as a 501(c)(3) in San Diego, CA"
+    ],
+    "key": "n-sequoia-foundation",
+    "notes": "The organization's website contact page lists a La Jolla, CA address and phone, while LinkedIn and a Berkeley coworking listing give 741 Addison St, Berkeley. Because the sources conflict, phone, address and headquarters were left null. The email on the website is obfuscated. IRS records list a San Diego PO box. Not matched to Sequoia Climate Foundation (Irvine) or other similarly named organizations.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "33-0100208",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Sequoia Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": "DYVAMZPL64T8",
+      "summary": "A California nonprofit that works with public agencies to protect human health and the environment. It provides specialists for public health research, education, policy development and community engagement. It has done environmental health research since 1983, including air quality projects and work with underserved communities.",
+      "website": "http://www.sequoiafoundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Sequoia Foundation - Home",
+        "url": "http://www.sequoiafoundation.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Sequoia Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/330100208"
+      },
+      {
+        "supports": [
+          "ein",
+          "website"
+        ],
+        "title": "Sequoia Foundation",
+        "url": "https://www.causeiq.com/organizations/sequoia-foundation,330100208/"
+      },
+      {
+        "supports": [
+          "samUei",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Sequoia Foundation Profile",
+        "url": "https://www.highergov.com/awardee/sequoia-foundation-10030729/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-sequoia-foundation",
+    "notes": "Sequoia Foundation (Berkeley/Oakland air monitoring and ECCCO agreements) is the nonprofit that co-runs Air Aware Oakland with OUSD; its own site supports the summary, HigherGov shows a Berkeley-based California nonprofit with UEI DYVAMZPL64T8, and ProPublica/CauseIQ match EIN 33-0100208 to the sequoiafoundation.org site. Contact fields were rightly left null given conflicting addresses.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://kippnorcal.org/school/kipp-bridge-upper/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/205010766",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=2744105&GUID=F2A2FA9D-5675-4ED8-BE63-C438E2ABE67D&Options=ID|Text|&Search=kipp",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kipp-bridge-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Legistar File #16-1442 (Board action 6/8/2016) approves an amended ground lease and joint use agreement between OUSD and KIPP Bridge Charter School for the Lafayette Elementary School campus, matching the agenda item",
+      "KIPP Bridge is a public charter school in West Oakland (1700 Market Street, Oakland, CA 94607) per its own KIPP Northern California page, in the same district as OUSD",
+      "KIPP Northern California's school page names KIPP Public Schools Northern California, a 501(c)(3), as the operator and lists EIN 20-5010766; ProPublica lists that EIN as KIPP Bay Area Schools, Oakland, CA"
+    ],
+    "key": "n-kipp-bridge-charter-school",
+    "notes": "The school is operated by the nonprofit KIPP Bay Area Schools (dba KIPP Public Schools Northern California), EIN 20-5010766; the EIN shown is that operator's. legalName left null because the exact contracting legal entity was not confirmed in a registry; CA Secretary of State entity number not found. Phone differs from a third-party listing ((510) 929-0437); the school's own page value was used.",
+    "profile": {
+      "address": "1700 Market Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "20-5010766",
+      "email": "info@kippbridge.org",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": "(510) 543-0078",
+      "samUei": null,
+      "summary": "KIPP Bridge is a public charter school in West Oakland, founded in 2002, that serves about 520 students in grades 5-8 and offers college-preparatory instruction along with support services such as mental health programming. It is part of KIPP Public Schools Northern California, a nonprofit network of charter schools in the Bay Area and Stockton.",
+      "website": "https://kippnorcal.org/school/kipp-bridge-upper/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "KIPP Bridge Upper",
+        "url": "https://kippnorcal.org/school/kipp-bridge-upper/"
+      },
+      {
+        "supports": [
+          "ein"
+        ],
+        "title": "KIPP Bay Area Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/205010766"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District - File #: 16-1442",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=2744105&GUID=F2A2FA9D-5675-4ED8-BE63-C438E2ABE67D&Options=ID|Text|&Search=kipp"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-kipp-bridge-charter-school",
+    "notes": "The OUSD Legistar file (16-1442) is a ground lease and joint use agreement with KIPP Bridge Charter School at the Lafayette campus, and the KIPP NorCal page gives KIPP Bridge's address as 1700 Market Street, Oakland. The page also supports the phone, email, grades 5-8, about 520 students, 2002 founding, mental health clinicians and the operator EIN 20-5010766, which ProPublica lists as KIPP Bay Area Schools in Oakland. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

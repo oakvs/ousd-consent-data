@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.urbanmontessori.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/274217597",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-urban-montessori-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Urban Montessori' in Oakland, CA that operates a school (ProPublica Nonprofit Explorer, EIN 27-4217597)",
+      "Official school website urbanmontessori.org lists 4551 Steele St, Oakland, CA 94619, matching the agenda's Oakland, CA location",
+      "Website describes a Montessori school continuing its work through Montessori classrooms at Brookfield Elementary, matching the OUSD agenda items on a program transition to Brookfield Elementary School and charter facilities agreements"
+    ],
+    "key": "n-urban-montessori-charter-school",
+    "notes": "Legal name per ProPublica is 'Urban Montessori'; the school operated as Urban Montessori Charter School. Website says the charter school has closed; the nonprofit remains active in IRS data.",
+    "profile": {
+      "address": "4551 Steele St, Oakland, CA 94619",
+      "caEntityNumber": null,
+      "ein": "27-4217597",
+      "email": "info@urbanmontessori.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Urban Montessori",
+      "orgType": "nonprofit",
+      "phone": "510-842-1181",
+      "samUei": null,
+      "summary": "A nonprofit that ran Urban Montessori Charter School, a public charter school in Oakland offering Montessori education. According to its website, the charter school closed after 12 years, and its work continues through the Public Montessori Institute of Oakland and Montessori classrooms at Brookfield Elementary.",
+      "website": "https://www.urbanmontessori.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Urban Montessori Charter School",
+        "url": "https://www.urbanmontessori.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Urban Montessori - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/274217597"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-urban-montessori-charter-school",
+    "notes": "The school website (4551 Steele St, Oakland) shows the charter school closed after twelve years, with Montessori classrooms continuing at Brookfield Elementary, which matches the OUSD agenda items. ProPublica confirms the 501(c)(3) 'Urban Montessori', EIN 27-4217597, in Oakland. All profile fields and the neutral summary are supported by the cited sources, and only organizational contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

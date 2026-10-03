@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.csulb.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_State_University,_Long_Beach",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-state-university-long-beach",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda name 'California State University Long Beach' exactly matches the single public university of that name (Cal State Long Beach, csulb.edu), a campus of the California State University system (Wikipedia)",
+      "Agenda describes a 'Memorandum of Understanding and Interagency Agreement' with the Talent/Human Resources Department, consistent with a public university partnering with the district on educator workforce matters"
+    ],
+    "key": "n-california-state-university-long-beach",
+    "notes": "No OUSD-specific partnership page was found to confirm the agreement; identity rests on an exact, unambiguous name match to a public university. Medium confidence because the second signal is circumstantial.",
+    "profile": {
+      "address": "1250 BELLFLOWER BOULEVARD LONG BEACH, CALIFORNIA 90840",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Long Beach, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "562.985.4111",
+      "samUei": null,
+      "summary": "California State University, Long Beach (Cal State Long Beach) is a public university in Long Beach, California, and one of the campuses of the California State University system. It enrolls over 41,000 students on a 322-acre campus.",
+      "website": "https://www.csulb.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About CSULB",
+        "url": "https://www.csulb.edu/about"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters"
+        ],
+        "title": "California State University, Long Beach - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_State_University,_Long_Beach"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": null
+}

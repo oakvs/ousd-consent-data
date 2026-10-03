@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.energy.ca.gov/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.energy.ca.gov/programs-and-topics/programs/california-schools-healthy-air-plumbing-and-efficiency-program",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-energy-commission",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'California Energy Commission' and the grant agreements are for the CalSHAPE program; the Energy Commission's own CalSHAPE page says the Commission administers CalSHAPE (California Schools Healthy Air, Plumbing, and Efficiency Program)",
+      "CalSHAPE funds HVAC (ventilation) and plumbing upgrades at public schools, matching OUSD's Facilities Planning and Management grant titles for Ventilation and Plumbing and the 'School buildings & construction' category",
+      "Eligible recipients are local educational agencies, which includes school districts such as OUSD"
+    ],
+    "key": "n-california-energy-commission",
+    "notes": "State agency. Phone and email not found on pages that could be fetched, so left null.",
+    "profile": {
+      "address": "715 P Street, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Energy Commission",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The California Energy Commission is the state's primary energy policy and planning agency. It was established in 1974 and works on reducing energy costs, cutting greenhouse gas emissions and keeping the energy supply reliable. It also administers grant programs such as CalSHAPE, which funds ventilation and plumbing upgrades in public schools.",
+      "website": "https://www.energy.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "About the California Energy Commission",
+        "url": "https://www.energy.ca.gov/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "California Schools Healthy Air, Plumbing, and Efficiency Program",
+        "url": "https://www.energy.ca.gov/programs-and-topics/programs/california-schools-healthy-air-plumbing-and-efficiency-program"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-energy-commission",
+    "notes": "The agenda names the California Energy Commission and CalSHAPE grants for ventilation and plumbing, and the Commission's own pages confirm it administers CalSHAPE for local educational agencies. The summary (1974 establishment, mission, primary energy policy agency, CalSHAPE grants) and the address 715 P Street, Sacramento are supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

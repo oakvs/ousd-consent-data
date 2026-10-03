@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Food_and_Nutrition_Service",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://fns-prod.azureedge.us/sites/default/files/resource-files/fy23-project-descriptions.pdf",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-united-states-department-of-agriculture-food-and-nutrition-service",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the U.S. Department of Agriculture's Food and Nutrition Service, a federal agency (Wikipedia: 'Food and Nutrition Service')",
+      "FNS-hosted FY 2023 Farm to School Grant List of Awardees lists 'Oakland Unified School District - $49,902, Turnkey – Agricultural Education', matching the agenda's 'FY23 Farm to School Turnkey Grant'",
+      "The Farm to School grant program is run by USDA FNS, matching the agenda's funding source"
+    ],
+    "key": "n-united-states-department-of-agriculture-food-and-nutrition-service",
+    "notes": "fns.usda.gov returns HTTP 403 to automated fetching, so the website field is not directly confirmed by a fetched page and phone, email and address were not collected. The website is the agency's well-known domain; reviewer may wish to confirm.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Alexandria, VA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Food and Nutrition Service is an agency of the United States Department of Agriculture. It runs the nation's domestic nutrition assistance programs, including the Supplemental Nutrition Assistance Program (SNAP), school meal programs and WIC. It also administers the Farm to School Grant Program, which funds school gardens, local food purchasing and food education.",
+      "website": "https://www.fns.usda.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Food and Nutrition Service - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Food_and_Nutrition_Service"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "July 2023 FY 2023 Farm to School Grant List of Awardees",
+        "url": "https://fns-prod.azureedge.us/sites/default/files/resource-files/fy23-project-descriptions.pdf"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-united-states-department-of-agriculture-food-and-nutrition-service",
+    "notes": "The FNS FY23 Farm to School awardee list shows Oakland Unified School District, Turnkey grant, $49,902, which matches the agenda item; the funder is USDA FNS. Wikipedia supports the agency description, programs, Alexandria VA headquarters and fns.usda.gov website.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

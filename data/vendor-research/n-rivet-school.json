@@ -1,0 +1,144 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/823461657",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/82-3461657",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rivetschool.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rivetschool.org/terms-of-use",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rivetschool.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-rivet-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Rivet School is based in Richmond, CA, matching the agenda location 'Richmond, CA'",
+      "GuideStar lists Bay Area Hybrid College Initiative (EIN 82-3461657) as also known as Rivet School, website rivetschool.org; the site's Terms of Use name 'Bay Area Hybrid College Initiative/ Rivet School'",
+      "ProPublica Nonprofit Explorer shows Bay Area Hybrid College Initiative as a 501(c)(3) in Richmond, CA, and rivetschool.org lists campuses in Richmond, Oakland, San Francisco and San Jose",
+      "The rivetschool.org homepage mentions OUSD as a partner, consistent with a No-Cost Services and Data Sharing Agreement with the High School Linked Learning Office"
+    ],
+    "key": "n-rivet-school",
+    "notes": "Rivet School is the operating name of Bay Area Hybrid College Initiative. California SOS entity number and SAM UEI were not looked up.",
+    "profile": {
+      "address": "1503 Macdonald Ave, Suite A, Richmond CA 94801",
+      "caEntityNumber": null,
+      "ein": "82-3461657",
+      "email": "info@rivetschool.org",
+      "headquarters": "Richmond, CA",
+      "legalName": "Bay Area Hybrid College Initiative",
+      "orgType": "nonprofit",
+      "phone": "(510) 727-5484",
+      "samUei": null,
+      "summary": "Rivet School is a nonprofit based in Richmond, California that helps working adults earn bachelor's degrees. It combines flexible online courses from partner universities, such as Southern New Hampshire University, with in-person coaching, financial aid guidance and career support. It operates in the San Francisco Bay Area.",
+      "website": "https://rivetschool.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Bay Area Hybrid College Initiative - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/823461657"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "website",
+          "summary"
+        ],
+        "title": "Bay Area Hybrid College Initiative - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/82-3461657"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Rivet School",
+        "url": "https://www.rivetschool.org/contact-us"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Terms of Use - Rivet School",
+        "url": "https://www.rivetschool.org/terms-of-use"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Rivet School",
+        "url": "https://www.rivetschool.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-rivet-school",
+    "notes": "ProPublica, GuideStar (AKA Rivet School), the Terms of Use and the contact page confirm Bay Area Hybrid College Initiative operates as Rivet School in Richmond, CA, matching the agenda location. The homepage lists OUSD as a partner. All profile fields are supported by the cited sources, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/43262046",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jumpstartkids.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jumpstartkids.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://workstudy.berkeley.edu/JobRequestForm.aspx?job_num=2378654199",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-jumpstart-for-young-children",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Jumpstart For Young Children Inc' (ProPublica Nonprofit Explorer, EIN 04-3262046, Boston, MA); it is the only nonprofit with this name",
+      "Jumpstart's website describes early-education programs for preschool children ages 3-5, matching OUSD's Early Childhood Development Department contract",
+      "Jumpstart runs a program in Berkeley and Oakland preschool classrooms (UC Berkeley work-study listing), and lists an Oakland office, matching the agenda location of Berkeley, CA"
+    ],
+    "key": "n-jumpstart-for-young-children",
+    "notes": "General email omitted because the page obscures it. No CA entity number or SAM UEI found.",
+    "profile": {
+      "address": "308 Congress Street, 6th Floor Boston, MA 02210",
+      "caEntityNumber": null,
+      "ein": "04-3262046",
+      "email": null,
+      "headquarters": "Boston, MA",
+      "legalName": "Jumpstart For Young Children Inc",
+      "orgType": "nonprofit",
+      "phone": "617.542.5867",
+      "samUei": null,
+      "summary": "A national nonprofit that supports early literacy and language development for children ages 3 to 5. It places trained college students and community volunteers in preschool classrooms to teach a research-based curriculum in small groups, helping children get ready for kindergarten.",
+      "website": "https://jumpstartkids.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Jumpstart For Young Children Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/43262046"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Jumpstart Kids",
+        "url": "https://jumpstartkids.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Reach Out to Jumpstart Kids | Contact Us and Find Our Offices",
+        "url": "https://jumpstartkids.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "UC Berkeley Work-Study Job Listing: Jumpstart Corps Member",
+        "url": "https://workstudy.berkeley.edu/JobRequestForm.aspx?job_num=2378654199"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-jumpstart-for-young-children",
+    "notes": "Name matches the Boston-based 501(c)(3) (EIN 04-3262046); its early-childhood classroom program, Oakland office and Berkeley/Oakland preschool corps listing fit an OUSD Early Childhood Development contract. The summary, phone, address and HQ are all confirmed on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

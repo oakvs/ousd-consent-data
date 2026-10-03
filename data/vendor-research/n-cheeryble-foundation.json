@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/954121906",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-cheeryble-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered tax-exempt organization: 'Cheeryble Foundation Inc' (ProPublica Nonprofit Explorer, EIN 95-4121906)",
+      "Located in Encino, CA, matching the agenda text 'Encino, CA'",
+      "Registered as a private foundation (Form 990-PF filer), consistent with a charitable donation to the district"
+    ],
+    "key": "n-cheeryble-foundation",
+    "notes": "Private grantmaking foundation with no website found. No public page found directly linking it to OUSD; identity rests on exact name plus Encino location. Contact details not found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "95-4121906",
+      "email": null,
+      "headquarters": "Encino, CA",
+      "legalName": "Cheeryble Foundation Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private foundation based in Encino, California. It is a tax-exempt charitable organization (501(c)(3)) that files Form 990-PF, the IRS return for private foundations, and gives charitable grants.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "Cheeryble Foundation Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/954121906"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-cheeryble-foundation",
+    "notes": "ProPublica Nonprofit Explorer confirms Cheeryble Foundation Inc, EIN 95-4121906, Encino CA, 501(c)(3) private foundation filing Form 990-PF with regular charitable disbursements. The exact, rare name and Encino location match the agenda donation item, and the neutral summary claims nothing beyond the source.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

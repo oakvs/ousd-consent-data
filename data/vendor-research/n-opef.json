@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandedfund.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/432014630",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lifeacademy.ousd.org/donate",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-opef",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OPEF is the standard abbreviation for the Oakland Public Education Fund, a registered 501(c)(3) nonprofit in Oakland, CA (ProPublica Nonprofit Explorer, EIN 43-2014630)",
+      "Life Academy's OUSD donation page says Life Academy accepts direct donations via The Oakland Public Education Fund, matching the agenda item about Life Academy",
+      "The organization's website says it is the fiscal sponsor of many OUSD schools and works with OUSD, matching a district contract for classroom and academic programs"
+    ],
+    "key": "n-opef",
+    "notes": "Agenda text gives only the abbreviation 'OPEF' with no location. Identified via the Life Academy link and OUSD fiscal-sponsor relationship. Address given is the mailing PO Box shown on the website footer. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "PO Box 71005, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "43-2014630",
+      "email": "info@oaklandedfund.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "The Oakland Public Education Fund",
+      "orgType": "nonprofit",
+      "phone": "510-221-6968",
+      "samUei": null,
+      "summary": "A nonprofit that leads the development of community resources in Oakland public schools. It raises money for schools, places volunteers in classrooms, and acts as a fiscal sponsor (holds and manages funds) for education projects, including many Oakland Unified School District schools.",
+      "website": "https://www.oaklandedfund.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "The Oakland Public Education Fund",
+        "url": "https://www.oaklandedfund.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Oakland Public Education Fund - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/432014630"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Donate - Life Academy - Oakland Unified School District",
+        "url": "https://lifeacademy.ousd.org/donate"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-opef",
+    "notes": "OPEF is the Oakland Public Education Fund, which the Life Academy OUSD page names as its donation intermediary and which describes itself as a fiscal sponsor for OUSD schools, fitting a Measure N Life Academy item. Summary, contact details (generic info@ email, phone, PO Box mailing address), EIN and Oakland location are all confirmed on the org website and ProPublica.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

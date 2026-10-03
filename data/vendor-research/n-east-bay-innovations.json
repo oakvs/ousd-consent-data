@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943210351",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eastbayinnovations.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/adult-and-career-education/classes/project-search",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-innovations",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: East Bay Innovations Inc, EIN 94-3210351, San Leandro, CA (ProPublica Nonprofit Explorer)",
+      "Headquartered in San Leandro, CA, matching a location given in the agenda text",
+      "OUSD's own Project SEARCH page (Adult and Career Education) says job coaching is delivered by East Bay Innovations, matching the agenda item titles about the Project SEARCH program",
+      "East Bay Innovations website lists Project SEARCH among its services"
+    ],
+    "key": "n-east-bay-innovations",
+    "notes": "Email not found on fetched pages. Contact page URL tried returned 404. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2450 Washington Avenue, Suite 240, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": "94-3210351",
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": "East Bay Innovations Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 618-1580",
+      "samUei": null,
+      "summary": "A nonprofit based in San Leandro, California, that supports adults with disabilities to live independently and work. Its services include supported and independent living, employment services, community day supports, and Project SEARCH, a year-long job training program for young adults with intellectual and developmental disabilities.",
+      "website": "https://www.eastbayinnovations.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Bay Innovations Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943210351"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "East Bay Innovations",
+        "url": "https://www.eastbayinnovations.org/"
+      },
+      {
+        "supports": [],
+        "title": "Project SEARCH - Oakland Unified School District",
+        "url": "https://www.ousd.org/adult-and-career-education/classes/project-search"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-east-bay-innovations",
+    "notes": "OUSD's Project SEARCH page names East Bay Innovations (San Leandro, matching the agenda location) as the job-coaching provider, and the ProPublica record (EIN 94-3210351, 501(c)(3)) and the organization's website support the legal name, address, phone and services. The summary is neutral and consistent with the sources (the OUSD page describes Project SEARCH as a year-long program for young adults with developmental disabilities).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

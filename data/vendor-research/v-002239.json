@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ixl.com/company/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ixl.com/company",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ixl.com/signin/oaklandpublic",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002239",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "IXL Learning's own contact page lists its address in San Mateo, CA, matching the agenda location 'San Mateo, CA'",
+      "IXL Learning sells K-12 personalized learning (math and language arts practice), matching OUSD's 'Classroom & academic programs' category",
+      "IXL hosts a dedicated sign-in page branded for Oakland Public Schools, showing it serves OUSD students"
+    ],
+    "key": "v-002239",
+    "notes": "Phone, CA entity number, EIN and UEI not found on cited pages; left null.",
+    "profile": {
+      "address": "777 Mariners Island Blvd., Suite 600, San Mateo, CA 94404",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@ixl.com",
+      "headquarters": "San Mateo, CA",
+      "legalName": "IXL Learning",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "IXL Learning is an education technology company based in San Mateo, California. It offers online K-12 personalized learning, including practice in math and language arts. Its other products include language learning, tutoring and educational resources for teachers and families.",
+      "website": "https://www.ixl.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address",
+          "headquarters",
+          "website",
+          "orgType"
+        ],
+        "title": "IXL Learning - Contact",
+        "url": "https://www.ixl.com/company/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "IXL Learning - Company",
+        "url": "https://www.ixl.com/company"
+      },
+      {
+        "supports": [],
+        "title": "IXL - Oakland Public Schools",
+        "url": "https://www.ixl.com/signin/oaklandpublic"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-002239",
+    "notes": "IXL Learning's contact page confirms the San Mateo address, general email and company name, matching the agenda location; the Oakland Public Schools sign-in page and product descriptions fit the classroom and academic programs category. The summary matches the company and sign-in pages and is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.berkeleyrep.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941679756",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000677",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Berkeley Repertory Theatre' (ProPublica Nonprofit Explorer, EIN 94-1679756), located in Berkeley, CA",
+      "Located in Berkeley, CA, matching the agenda text",
+      "Berkeley Rep's website describes a School of Theatre with classes, teen programs and educator workshops, consistent with OUSD's 'Classroom & academic programs' contracts"
+    ],
+    "key": "v-000677",
+    "notes": "Agenda text does not name Oakland International High School's relationship beyond the contract titles; no public page found mentioning OUSD specifically. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "999 Harrison St, Berkeley CA 94710",
+      "caEntityNumber": null,
+      "ein": "94-1679756",
+      "email": "info@berkeleyrep.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Berkeley Repertory Theatre",
+      "orgType": "nonprofit",
+      "phone": "510-647-2900",
+      "samUei": null,
+      "summary": "Berkeley Repertory Theatre is a nonprofit theatre company in Berkeley, California. It produces plays and has done so since 1968. It also runs a School of Theatre that offers classes, camps, teen programs and workshops for educators.",
+      "website": "https://www.berkeleyrep.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Berkeley Rep",
+        "url": "https://www.berkeleyrep.org/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Berkeley Repertory Theatre - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941679756"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-000677",
+    "notes": "Berkeley Rep (EIN 94-1679756, Berkeley CA) is a nonprofit theatre with a School of Theatre including educator programs, consistent with the OUSD arts/academic services agreements; summary, phone, email, EIN and orgType are confirmed by the cited pages. The cited About page lists 2025 Addison Street, not the candidate's 999 Harrison St, so address is unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
+}

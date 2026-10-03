@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://eastbayconsortium.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942908730",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eastbayconsortium.org/academic-programs/pre-collegiate-academy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-consortium-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered Oakland nonprofit: 'East Bay Consortium Of Educational Institutions' (ProPublica Nonprofit Explorer, EIN 94-2908730, Oakland, CA)",
+      "Its website says it runs college-access programs for Oakland students and, with Oakland Unified School District and Merritt College, started the Pre-Collegiate Academy in 1991, which fits a Measure N College and Career Readiness item",
+      "Weakness: the agenda text gives no city and nothing found links this organization specifically to Dewey Academy; the agenda name 'East Bay Consortium Education' is a shortened form"
+    ],
+    "key": "n-east-bay-consortium-education",
+    "notes": "Probable match but not confirmed to be the Measure N / Dewey Academy contractor; agenda gives no location. No main phone line found (only a named person's direct line, excluded). Nonprofit Explorer fetch was rate-limited once earlier but succeeded on the organization page.",
+    "profile": {
+      "address": "PO Box 31674, Oakland, CA 94604",
+      "caEntityNumber": null,
+      "ein": "94-2908730",
+      "email": "info@eastbayconsortium.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Consortium of Educational Institutions, Inc.",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that works to increase the number of students who finish high school and enroll in college. It is one of fifteen California Student Opportunity and Access Projects (Cal-SOAP) run through the California Student Aid Commission. It offers summer enrichment, tutoring, mentoring, and college and financial aid guidance for students, plus training for teachers.",
+      "website": "https://eastbayconsortium.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "website",
+          "email",
+          "address",
+          "orgType"
+        ],
+        "title": "About Us - East Bay Consortium",
+        "url": "https://eastbayconsortium.org/about-us/"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "East Bay Consortium Of Educational Institutions - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942908730"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Pre-Collegiate Academy - East Bay Consortium",
+        "url": "https://eastbayconsortium.org/academic-programs/pre-collegiate-academy/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": null
+}

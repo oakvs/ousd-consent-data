@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943338239",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.moadsf.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.moadsf.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.moadsf.org/education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008878",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'The Museum Of The African Diaspora', San Francisco, California (ProPublica Nonprofit Explorer, EIN 94-3338239)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "Website describes school programs, including MoAD in the Classroom for Bay Area 3rd and 4th grade classrooms, matching OUSD's 'Classroom & academic programs' no-cost services agreements for elementary schools"
+    ],
+    "key": "v-008878",
+    "notes": "The About page showed a different phone number than the Contact page; the Contact page number was used. General email omitted (only press and education inboxes found). No mention of OUSD on MoAD pages; match rests on name, location and school-program fit.",
+    "profile": {
+      "address": "685 Mission Street (at 3rd), San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": "94-3338239",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "The Museum Of The African Diaspora",
+      "orgType": "nonprofit",
+      "phone": "(415) 358-7200",
+      "samUei": null,
+      "summary": "The Museum of the African Diaspora (MoAD) is a nonprofit contemporary art museum in San Francisco. It presents exhibitions of artists of the African Diaspora and offers education programs, including school tours and a classroom program for Bay Area elementary students.",
+      "website": "https://www.moadsf.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Museum Of The African Diaspora - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943338239"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About - Museum of the African Diaspora",
+        "url": "https://www.moadsf.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Museum of the African Diaspora",
+        "url": "https://www.moadsf.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education - Museum of the African Diaspora",
+        "url": "https://www.moadsf.org/education/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-008878",
+    "notes": "Name, San Francisco location, EIN 94-3338239 (501(c)(3), ProPublica), address, and the school-program offerings (school tours, MoAD in the Classroom for Bay Area 3rd and 4th grade) are confirmed on the cited pages and fit OUSD's no-cost elementary classroom services agreements. The phone (415) 358-7200 is on the Contact page (listed for communications and press; the About page shows a different number), so it is supported but is not necessarily the main line. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/311640316",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/31-1640316",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-schwab-fund-for-charitable-giving",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists EIN 31-1640316 as 'Donor Advised Charitable Giving' with the alternative name 'Schwab Fund for Charitable Giving', matching the agenda name exactly",
+      "GuideStar lists the same EIN with the address 211 Main Street, San Francisco, CA, matching the agenda location of San Francisco, CA",
+      "The organization operates a donor-advised fund (a charitable giving account), consistent with OUSD recording a 'Donation' from it as a funding source"
+    ],
+    "key": "n-schwab-fund-for-charitable-giving",
+    "notes": "Official site (schwabcharitable.org) and its contact pages block automated fetching (HTTP 403), so website, phone and email were left null rather than cited unverified. ProPublica shows Lone Tree, CO as the current filing address; GuideStar and the agenda show San Francisco.",
+    "profile": {
+      "address": "211 Main Street, San Francisco, CA 94105-1905",
+      "caEntityNumber": null,
+      "ein": "31-1640316",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Donor Advised Charitable Giving, Inc.",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit public charity, known as Schwab Charitable (formerly the Schwab Fund for Charitable Giving), that runs donor-advised funds. Donors put money into accounts and recommend grants from them to other charities and schools. It describes its mission as increasing charitable giving in the United States.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "summary",
+          "orgType"
+        ],
+        "title": "Donor Advised Charitable Giving - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/311640316"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "ein",
+          "summary",
+          "orgType"
+        ],
+        "title": "Donor Advised Charitable Giving, Inc. - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/31-1640316"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-schwab-fund-for-charitable-giving",
+    "notes": "GuideStar shows Donor Advised Charitable Giving, Inc. (EIN 31-1640316, also known as Schwab Charitable) at 211 Main Street, San Francisco, matching the agenda's San Francisco location and a donation from a donor-advised fund; ProPublica confirms the EIN, 501(c)(3) status and donor-advised-fund operation. The 'formerly the Schwab Fund for Charitable Giving' wording and 'schools' are not shown verbatim in the cited pages, but the summary is neutral and otherwise supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

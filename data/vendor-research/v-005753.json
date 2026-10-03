@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.precitaeyes.org/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942614023",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005753",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Precita Eyes Muralists', San Francisco, CA, EIN 94-2614023 (ProPublica Nonprofit Explorer), matching the agenda's 'Precita Eyes' and 'San Francisco, CA'",
+      "Organization's own website describes youth and adult mural arts education programs, matching OUSD's 'Classroom & academic programs' category and contracts for arts services at MetWest and Oakland High Schools",
+      "Website states it works in partnership with San Francisco schools and organizations"
+    ],
+    "key": "v-005753",
+    "notes": "Agenda gives only 'Precita Eyes' and San Francisco; no explicit page links the organization to OUSD, identity rests on name, location and subject match. Email on the website is obfuscated, so left null.",
+    "profile": {
+      "address": "2981 24th St., San Francisco, CA 94110",
+      "caEntityNumber": null,
+      "ein": "94-2614023",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Precita Eyes Muralists",
+      "orgType": "nonprofit",
+      "phone": "415-285-2287",
+      "samUei": null,
+      "summary": "Precita Eyes Muralists is a community mural arts nonprofit in San Francisco. It offers youth and adult art education programs and mural tours, and it creates and restores community murals. It describes art as a tool for positive social change.",
+      "website": "https://www.precitaeyes.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Precita Eyes - PRECITA EYES MURALISTS",
+        "url": "https://www.precitaeyes.org/about.html"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Precita Eyes Muralists - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942614023"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-005753",
+    "notes": "Precita Eyes Muralists (SF) documents murals with students at Oakland High School on its own site, matching the agenda's name, SF location and arts-programs category. About page and ProPublica support the summary, contact fields, EIN and nonprofit status; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

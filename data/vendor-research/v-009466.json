@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.derivita.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.derivita.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.derivita.com/terms-of-service",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009466",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Derivita's own Terms of Service name the provider as 'Derivita, Inc.', matching the agenda name 'Derivita, Inc.'",
+      "Derivita's website lists its address in Salt Lake City, Utah, matching the agenda location 'Salt Lake City, UT'",
+      "Derivita sells a math instruction, practice and assessment platform for grades 6 through Calculus III, consistent with OUSD's 'Classroom & academic programs' category and a no-cost agreement with the Academics and Instruction Department"
+    ],
+    "key": "v-009466",
+    "notes": "No registry (SOS, SAM.gov) lookup done; registry IDs left null. Terms of Service describe Derivita, Inc. as a Delaware corporation. No public page found linking Derivita to OUSD; identity rests on name, city and product match.",
+    "profile": {
+      "address": "50 W Broadway Suite 333, Salt Lake City, Utah 84101",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@derivita.com",
+      "headquarters": "Salt Lake City, UT",
+      "legalName": "Derivita, Inc.",
+      "orgType": "company",
+      "phone": "(801) 851-5522",
+      "samUei": null,
+      "summary": "Derivita is a company that provides a math improvement system for school districts, serving grades 6 through Calculus III. Its platform combines instruction, practice, auto-graded assessments and data dashboards for teachers and district leaders, and works inside learning management systems such as Canvas, Google Classroom and Schoology.",
+      "website": "https://www.derivita.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Derivita | Secondary Math Improvement System for Districts",
+        "url": "https://www.derivita.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Derivita Contact",
+        "url": "https://www.derivita.com/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType"
+        ],
+        "title": "Derivita Terms of Service",
+        "url": "https://www.derivita.com/terms-of-service"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-009466",
+    "notes": "Derivita, Inc. (Delaware corporation per its Terms of Service) is based in Salt Lake City, UT, matching the agenda name and city, and its secondary math platform fits a no-cost Academics and Instruction agreement. Summary, contact details, address and LMS list were all confirmed on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

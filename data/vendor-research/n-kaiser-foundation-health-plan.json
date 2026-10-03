@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941340523",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://about.kaiserpermanente.org/who-we-are/fast-facts",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kaiser-foundation-health-plan",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Kaiser Foundation Health Plan Inc' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-1340523), matching the agenda's Oakland, CA location",
+      "Kaiser Permanente's Fast Facts page lists Kaiser Foundation Health Plan, Inc. as headquartered in Oakland, Calif.",
+      "OUSD contract is a Student Behavioral Health Incentive Program payment, a state Medi-Cal managed care plan program; funding source listed as Kaiser Foundation, and OUSD school wellness programs are described as funded through Kaiser Permanente"
+    ],
+    "key": "n-kaiser-foundation-health-plan",
+    "notes": "Only registry facts found on cited pages are included; contact details and CA entity number were not confirmed from cited pages.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1340523",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Kaiser Foundation Health Plan Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit health plan, part of Kaiser Permanente, that provides health coverage to members. Kaiser Permanente describes itself as one of the nation's largest not-for-profit health plans. The organization is headquartered in Oakland, California.",
+      "website": "https://about.kaiserpermanente.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Kaiser Foundation Health Plan Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941340523"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Fast Facts - Kaiser Permanente",
+        "url": "https://about.kaiserpermanente.org/who-we-are/fast-facts"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-kaiser-foundation-health-plan",
+    "notes": "ProPublica confirms Kaiser Foundation Health Plan Inc, Oakland CA, EIN 94-1340523, 501(c)(3), matching the agenda name and city; the Kaiser Permanente Fast Facts page supports the not-for-profit health plan description, the Oakland headquarters and the website. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

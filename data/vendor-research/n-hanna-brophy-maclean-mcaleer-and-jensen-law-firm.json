@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.hannabrophy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.hannabrophy.com/office-locations/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 500 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.hannabrophy.com/services/public-entity/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-hanna-brophy-maclean-mcaleer-and-jensen-law-firm",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm's own website names the entity 'Hanna, Brophy, MacLean, McAleer & Jensen, LLP', matching the agenda name",
+      "Firm lists an Oakland, CA office (555 12th Street), matching the agenda location Oakland, CA",
+      "Firm's public entity practice serves California school districts, consistent with OUSD General Counsel / Risk Management engagement for legal and risk services"
+    ],
+    "key": "n-hanna-brophy-maclean-mcaleer-and-jensen-law-firm",
+    "notes": "Headquarters city taken from the firm's Oakland office listing and search-result descriptions saying Oakland is its largest office; the firm's site lists many offices. Third-party directories gave Suite 1450 for the Oakland office; the firm's own site says 18th Floor, which is used here. No general email found.",
+    "profile": {
+      "address": "555 12th Street, 18th Floor, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Hanna, Brophy, MacLean, McAleer & Jensen, LLP",
+      "orgType": "company",
+      "phone": "510-839-1180",
+      "samUei": null,
+      "summary": "A California law firm that focuses on defending employers in workers' compensation cases. It has about 140 attorneys in offices across the state, including Oakland. It also has a practice group that represents public entities such as school districts and special districts.",
+      "website": "https://www.hannabrophy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Hanna Brophy",
+        "url": "https://www.hannabrophy.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Office Locations | Hanna Brophy",
+        "url": "https://www.hannabrophy.com/office-locations/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Public Entity Defense | Hanna Brophy",
+        "url": "https://www.hannabrophy.com/services/public-entity/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-hanna-brophy-maclean-mcaleer-and-jensen-law-firm",
+    "notes": "The firm's own site confirms the legal name, a workers' comp defense focus, nearly 140 attorneys, an Oakland office at 555 12th St 18th Floor with phone 510-839-1180, and a public entity group serving school districts; this fits OUSD Risk Management and General Counsel. No cited source says Oakland is the headquarters (it is one of 15 offices), so headquarters is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

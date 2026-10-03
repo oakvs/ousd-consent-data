@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/Archives/edgar/data/1428439/000162828026008114/roku-20251231.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.roku.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-roku",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name 'Roku' matches Roku, Inc., whose SEC Form 10-K lists its principal executive offices in San Jose, California, matching the agenda's 'San Jose, CA'",
+      "Agenda item is a 'Distribution Agreement' for 'Technology', consistent with Roku's business of distributing content apps (channels) on its TV streaming platform",
+      "Roku is the only widely known company of that name headquartered in San Jose; no conflicting candidates found"
+    ],
+    "key": "n-roku",
+    "notes": "Public company (Delaware corporation). Address is from the cover page of the most recent 10-K. Phone omitted: not verifiable as one string on a cited page. California entity number, EIN and UEI not looked up.",
+    "profile": {
+      "address": "1173 Coleman Avenue, San Jose, California 95110",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Jose, CA",
+      "legalName": "Roku, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Roku is a company that runs a TV streaming platform. It makes streaming players, Roku-branded televisions and other devices, and its Roku operating system lets viewers watch streaming apps (channels) from content partners. It earns money from advertising, from streaming services distribution and from device sales.",
+      "website": "https://www.roku.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Roku, Inc. Form 10-K for fiscal year 2025",
+        "url": "https://www.sec.gov/Archives/edgar/data/1428439/000162828026008114/roku-20251231.htm"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Roku",
+        "url": "https://www.roku.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-roku",
+    "notes": "The 10-K cover page shows Roku, Inc. at 1173 Coleman Avenue, San Jose, which matches the agenda's San Jose, CA. A 'Distribution Agreement' with Roku fits its channel distribution business. The summary matches the 10-K's description of its devices and platform segments and is neutral. The website is the official roku.com.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

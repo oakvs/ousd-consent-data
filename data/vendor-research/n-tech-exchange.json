@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.techexchange.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/922199377",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-tech-exchange",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Oakland, CA nonprofit named Tech Exchange (formerly Oakland Tech Exchange West / OTX), matching the agenda name and location (techexchange.org; ProPublica lists 'Oakland Tech Exchange', Oakland, CA, EIN 92-2199377)",
+      "Website describes digital skills training, youth technical internships and workforce development (Serve2STEM), matching an OUSD MOU for a student internship (ECCCO) program with the High School Linked Learning Office",
+      "OUSD's own Home Technology Access page names Tech Exchange as an Oakland partner for digital skills workshops"
+    ],
+    "key": "n-tech-exchange",
+    "notes": "ProPublica lists the legal name as 'Oakland Tech Exchange' (EIN 92-2199377, exemption issued 2023); the organization operates publicly as 'Tech Exchange'. Address is the mailing address shown on the website footer. OUSD's Home Technology Access page (https://www.ousd.org/familycentral/home-technology-access) names Tech Exchange as a partner, used only as an identity signal.",
+    "profile": {
+      "address": "1716 Telegraph Ave., Oakland CA, 94612",
+      "caEntityNumber": null,
+      "ein": "92-2199377",
+      "email": "Support@TechExchange.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Tech Exchange",
+      "orgType": "nonprofit",
+      "phone": "(510) 866-2260",
+      "samUei": null,
+      "summary": "Tech Exchange is an Oakland-based nonprofit that provides refurbished computers, digital skills training, affordable internet access and tech support to Bay Area families and schools. It also runs youth workforce and internship programs and offers e-waste and equipment-reuse services.",
+      "website": "https://www.techexchange.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Tech Exchange Oakland | Digital Equity and Sustainability",
+        "url": "https://www.techexchange.org"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Oakland Tech Exchange - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/922199377"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-tech-exchange",
+    "notes": "Tech Exchange (formerly Oakland Tech Exchange West / OTX) is an Oakland nonprofit running Serve2STEM youth internship and workforce programs, consistent with an OUSD ECCCO internship MOU in Oakland. The website footer shows the phone, Support@ email and 1716 Telegraph Ave address, and ProPublica shows Oakland Tech Exchange, EIN 92-2199377, 501(c)(3); the summary matches the site and is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

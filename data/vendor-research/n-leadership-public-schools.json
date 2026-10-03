@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/731643646",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leadps.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leadps.org/mission-history/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-leadership-public-schools",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Leadership Public Schools Inc', Oakland, CA, EIN 73-1643646 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA (99 Linden Street), matching the agenda text 'Oakland, CA'",
+      "Operates charter high schools including LPS Oakland R&D, consistent with a student-placement MOU with OUSD's Special Education Department"
+    ],
+    "key": "n-leadership-public-schools",
+    "notes": "Agenda names 'Leadership Public Schools'; the legal entity per ProPublica is 'Leadership Public Schools Inc'. California SOS entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "99 Linden Street Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "73-1643646",
+      "email": "info@leadps.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Leadership Public Schools Inc",
+      "orgType": "nonprofit",
+      "phone": "510.830.3780",
+      "samUei": null,
+      "summary": "Leadership Public Schools is a nonprofit network of three charter high schools in the Bay Area, located in Hayward, Oakland and Richmond. The schools aim to prepare students for college, career and community leadership.",
+      "website": "https://leadps.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Leadership Public Schools Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/731643646"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Leadership Public Schools",
+        "url": "https://leadps.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Mission & History - Leadership Public Schools",
+        "url": "https://leadps.org/mission-history/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-leadership-public-schools",
+    "notes": "ProPublica confirms Leadership Public Schools Inc is a 501(c)(3) in Oakland with the cited EIN, and the leadps.org contact and mission pages confirm the address, phone, general email and three-school Bay Area network. This fits a student-placement MOU with OUSD Special Education, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

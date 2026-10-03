@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/475223320",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://unbounded.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://unbounded.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-unbounded-learning",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'Unbounded Learning Inc' (ProPublica Nonprofit Explorer, EIN 47-5223320)",
+      "Registered in New York, NY, matching the agenda location 'New York, NY'",
+      "Website describes professional learning for K-12 educators and district leaders, matching OUSD's 'Classroom & academic programs' category and the Academics and Instruction Department MOU"
+    ],
+    "key": "n-unbounded-learning",
+    "notes": "Agenda name is 'UnboundEd Learning, Inc.'; the IRS-registered name is 'Unbounded Learning Inc'. No explicit public page found linking UnboundEd to OUSD; identity rests on name, New York location and subject match.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "47-5223320",
+      "email": "info@unbounded.org",
+      "headquarters": "New York, NY",
+      "legalName": "Unbounded Learning Inc",
+      "orgType": "nonprofit",
+      "phone": "844-814-5326",
+      "samUei": null,
+      "summary": "UnboundEd is a nonprofit that provides professional learning for teachers, school leaders and district leaders. It helps educators plan and teach instruction that is grade-level, engaging, affirming and meaningful. In 2022 it merged with Pivot Learning and CORE Learning.",
+      "website": "https://unbounded.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Unbounded Learning Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/475223320"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "UnboundEd About",
+        "url": "https://unbounded.org/about"
+      },
+      {
+        "supports": [
+          "email",
+          "phone"
+        ],
+        "title": "UnboundEd Contact",
+        "url": "https://unbounded.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-unbounded-learning",
+    "notes": "ProPublica confirms Unbounded Learning Inc (EIN 47-5223320, New York, NY, 501(c)(3)), matching the agenda's name and location; unbounded.org about/contact pages support the summary (including the 2022 merger), phone and general info email. No direct OUSD link is published, but the name, location and professional-learning services for an Academics MOU all fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

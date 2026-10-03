@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942502308",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-2502308",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-lifelong-medical-care",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Lifelong Medical Care', EIN 94-2502308, a community health center (ProPublica Nonprofit Explorer, GuideStar)",
+      "Service areas include Oakland, matching the agenda location Oakland, CA (GuideStar)",
+      "Operates a federally qualified community health center, consistent with OUSD's 'Student health, support & family services' category and a school-based health center MOU"
+    ],
+    "key": "n-lifelong-medical-care",
+    "notes": "Official site lifelongmedical.org blocks automated fetching (403). Sources disagree on phone and address (Berkeley PO box, San Leandro, Berkeley 6th St), so contact fields were left null. A search listing showed OUSD-area school-based health centers (Elmhurst United, West Oakland Middle) but the page could not be fetched.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-2502308",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "LifeLong Medical Care",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "LifeLong Medical Care is a nonprofit community health center. It provides health, dental, and social services to underserved people of all ages in Berkeley, Oakland, and nearby East Bay cities.",
+      "website": "http://www.lifelongmedical.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Lifelong Medical Care - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942502308"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "legalName",
+          "ein",
+          "headquarters"
+        ],
+        "title": "LifeLong Medical Care - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-2502308"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-lifelong-medical-care",
+    "notes": "ProPublica and GuideStar both show LifeLong Medical Care (EIN 94-2502308, Berkeley, 501(c)(3) community health center and FQHC) serving Oakland and running school-based health centers, which fits the OUSD school-based health center MOU. Summary, website, orgType, EIN and headquarters are supported and neutral; contact fields are null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

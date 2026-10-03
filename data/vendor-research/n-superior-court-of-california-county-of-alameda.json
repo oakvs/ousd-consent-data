@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.alameda.courts.ca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.alameda.courts.ca.gov/general-information/locations-contact-information",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-superior-court-of-california-county-of-alameda",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official court website is titled 'Superior Court of California, County of Alameda', an exact match to the agenda name; there is only one such court.",
+      "The court's Administration Building is at 1221 Oak Street, Oakland, CA, matching the agenda location of Oakland, CA.",
+      "The agenda item is a Workplace Training Partner MOU for a student internship program, consistent with a public agency hosting student interns at its Oakland courthouses."
+    ],
+    "key": "n-superior-court-of-california-county-of-alameda",
+    "notes": "Public court; no EIN, SOS entity number or SAM UEI expected. Administration Building address used as the mailing/headquarters address.",
+    "profile": {
+      "address": "1221 Oak Street, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Superior Court of California, County of Alameda",
+      "orgType": "public_agency",
+      "phone": "510-891-6000",
+      "samUei": null,
+      "summary": "The Superior Court of California, County of Alameda is the state trial court that serves Alameda County. It resolves disputes under the law and operates courthouses in Oakland and other cities in the county.",
+      "website": "https://www.alameda.courts.ca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Superior Court of California, County of Alameda",
+        "url": "https://www.alameda.courts.ca.gov/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Locations & Contact Information",
+        "url": "https://www.alameda.courts.ca.gov/general-information/locations-contact-information"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-superior-court-of-california-county-of-alameda",
+    "notes": "Official court site confirms the exact name, Oakland administration building at 1221 Oak Street, main phone 510-891-6000, and courthouses in Oakland and other county cities; this matches the agenda name and Oakland location for the ECCCO internship MOU. Summary is neutral and consistent with the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

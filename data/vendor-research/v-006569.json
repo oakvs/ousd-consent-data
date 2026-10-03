@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.winecountryzoo.org/who-we-are",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.winecountryzoo.org/history",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pressdemocrat.com/article/news/wine-country-zoological-santa-rosa-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006569",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The organization's own History page says it was 'Formerly known as Safari Encounters or Sonoma Sloth House', matching the agenda name 'Safari Encounters'",
+      "A Press Democrat article says the organization (formerly Safari Encounters) operated in Penngrove for four years before relocating, matching the agenda location 'Penngrove, CA'",
+      "Press Democrat reports it offers summer camps and school visits, consistent with OUSD contracting for classroom and academic programs"
+    ],
+    "key": "v-006569",
+    "notes": "Organization renamed from Safari Encounters to Wine Country Zoological; no matching registry entry found in ProPublica under either name, so legal name and EIN left null. Physical address is not public per the organization. Phone omitted because it was only found on a third-party listing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Info@WineCountryZoo.org",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Wine Country Zoological, formerly known as Safari Encounters, is a Sonoma County nonprofit zoological facility and animal rescue that houses more than 200 animals, from sloths to kangaroos to alligators. It offers children's therapy programs at no cost and educational programs that travel to schools and events.",
+      "website": "https://www.winecountryzoo.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "WHO WE ARE - Wine Country Zoological",
+        "url": "https://www.winecountryzoo.org/who-we-are"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "HISTORY - Wine Country Zoological",
+        "url": "https://www.winecountryzoo.org/history"
+      },
+      {
+        "supports": [
+          "orgType"
+        ],
+        "title": "Santa Rosa animal rescue looks forward to fresh start with new name, new home",
+        "url": "https://www.pressdemocrat.com/article/news/wine-country-zoological-santa-rosa-2/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-006569",
+    "notes": "The History page confirms the organization was formerly Safari Encounters, and the Press Democrat confirms it operated in Penngrove for four years and offers school visits, which fits a school services agreement. The summary, nonprofit status, website and generic info email are supported by the cited pages and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

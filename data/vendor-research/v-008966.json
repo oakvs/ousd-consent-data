@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/202676612",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.soulshoppe.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.soulshoppe.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008966",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Soul Shoppe Programs' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 20-2676612), matching the agenda's 'Soul Shoppe, Oakland, CA'",
+      "Website soulshoppe.org describes social-emotional learning workshops for schools, matching OUSD's 'Student health, support & family services' category",
+      "Mailing address on the organization's contact page is in Oakland, CA"
+    ],
+    "key": "v-008966",
+    "notes": "The contact page lists two phone numbers, (510) 338-3231 and (510) 338-3234; the first was used. Website pages did not explicitly mention OUSD.",
+    "profile": {
+      "address": "111 Fairmount Avenue, Suite 503, Oakland, CA 94611",
+      "caEntityNumber": null,
+      "ein": "20-2676612",
+      "email": "support@soulshoppe.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Soul Shoppe Programs",
+      "orgType": "nonprofit",
+      "phone": "(510) 338-3231",
+      "samUei": null,
+      "summary": "Soul Shoppe is a nonprofit that provides social-emotional learning programs for schools. Its interactive workshops teach students tools and language for managing emotions, mindfulness, communication and resolving conflicts. It offers both digital and on-site programs for individual students and whole school communities.",
+      "website": "https://www.soulshoppe.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Soul Shoppe Programs - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/202676612"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Soul Shoppe",
+        "url": "https://www.soulshoppe.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact Us - Soul Shoppe",
+        "url": "https://www.soulshoppe.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-008966",
+    "notes": "Soul Shoppe Programs is an Oakland 501(c)(3) (EIN 20-2676612) whose website describes SEL workshops for schools, matching the agenda's Oakland vendor providing student support services at an Oakland school. Legal name, EIN, address, phone, email and the neutral summary are all confirmed by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

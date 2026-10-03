@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941744108",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.laclinica.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.laclinica.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/health-wellness/health-access/school-based-health-center-services/partners-funding",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-la-clinica-de-la-raza",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'La Clinica De La Raza Inc', Oakland, CA, EIN 94-1744108 (ProPublica Nonprofit Explorer)",
+      "OUSD's own Partners & Funding page lists La Clínica de La Raza as operator of school-based health centers (Oakland Tech TechniClinic, Roosevelt Health Center, etc.), matching the agenda's School-Based Health Centers MOUs",
+      "Organization's website describes community health services and school-based health centers; located in Oakland, CA, matching the agenda text"
+    ],
+    "key": "n-la-clinica-de-la-raza",
+    "notes": "No general email or mailing address found on the cited pages; left null. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1744108",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "La Clinica De La Raza Inc",
+      "orgType": "nonprofit",
+      "phone": "510-535-4000",
+      "samUei": null,
+      "summary": "La Clínica de La Raza is a nonprofit community health center. It provides medical, dental, vision, behavioral health, pharmacy and other health services, including programs for adolescents, veterans and people with HIV/AIDS. It also runs school-based health centers at several Oakland public schools.",
+      "website": "https://www.laclinica.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "La Clinica De La Raza Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941744108"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Homepage - La Clinica",
+        "url": "https://www.laclinica.org/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us - La Clínica de La Raza",
+        "url": "https://www.laclinica.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Partners & Funding - Oakland Unified School District",
+        "url": "https://www.ousd.org/health-wellness/health-access/school-based-health-center-services/partners-funding"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-la-clinica-de-la-raza",
+    "notes": "OUSD's partners page lists La Clinica de La Raza as operator of school-based health centers, matching the agenda MOUs; ProPublica confirms the Oakland 501(c)(3) with the stated EIN. The homepage supports the services in the summary, the contact page lists 510-535-4000, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

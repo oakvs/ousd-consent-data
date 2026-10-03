@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/472507725",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.gcu.edu",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-grand-canyon-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational institution: 'Grand Canyon University', EIN 47-2507725, Phoenix, AZ (ProPublica Nonprofit Explorer)",
+      "Located in Phoenix, AZ, matching the agenda text 'Phoenix, AZ' (ProPublica and gcu.edu)",
+      "Website describes a university with degree programs, consistent with a Talent/Human Resources MOU for staff and hiring (teacher pipeline / education partnership)"
+    ],
+    "key": "n-grand-canyon-university",
+    "notes": "Arizona-based institution; no California entity or SAM UEI checked. Phone omitted because the only number found is an admissions line. Agenda text does not state what program the MOU covers; identity rests on name, city and registry match.",
+    "profile": {
+      "address": "3300 West Camelback Road, Phoenix, AZ 85017",
+      "caEntityNumber": null,
+      "ein": "47-2507725",
+      "email": null,
+      "headquarters": "Phoenix, AZ",
+      "legalName": "Grand Canyon University",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Grand Canyon University is a private, nonprofit Christian university in Phoenix, Arizona, founded in 1949. It offers on-campus, hybrid and online degree programs through multiple colleges and is accredited by the Higher Learning Commission.",
+      "website": "https://www.gcu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Grand Canyon University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/472507725"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Grand Canyon University",
+        "url": "https://www.gcu.edu"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-grand-canyon-university",
+    "notes": "Agenda names Grand Canyon University in Phoenix, AZ for a Talent/HR MOU; ProPublica confirms the 501(c)(3) with EIN 47-2507725 in Phoenix, and gcu.edu confirms the private nonprofit Christian university, 1949 founding, HLC accreditation, address and website. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

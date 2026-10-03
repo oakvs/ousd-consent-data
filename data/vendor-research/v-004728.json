@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941553479",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ya-nc.org/index.php/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004728",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Young Audiences Of Northern California' in San Francisco, CA (ProPublica Nonprofit Explorer, EIN 94-1553479), matching the agenda's San Francisco, CA location",
+      "Organization's own website describes arts programming (performances, workshops, residencies) in Bay Area PreK-12 schools, matching OUSD's 'Classroom & academic programs' category for a no-cost services agreement at an elementary school"
+    ],
+    "key": "v-004728",
+    "notes": "Third-party listings show suite 815 at the same 57 Post Street address; the organization's own site shows Suite 511, which is used here. The organization's about page does not mention OUSD, so identity rests on name, city and program match.",
+    "profile": {
+      "address": "57 Post Street Suite 511 San Francisco, CA 94104",
+      "caEntityNumber": null,
+      "ein": "94-1553479",
+      "email": "info@ya-nc.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Young Audiences Of Northern California",
+      "orgType": "nonprofit",
+      "phone": "(415) 974-5554",
+      "samUei": null,
+      "summary": "A nonprofit arts education organization based in San Francisco. It brings performances, hands-on workshops and longer artist residencies to PreK-12 students in schools, libraries and community centers across the nine-county San Francisco Bay Area.",
+      "website": "https://www.ya-nc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Young Audiences Of Northern California - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941553479"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Young Audiences of Northern California",
+        "url": "https://www.ya-nc.org/index.php/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-004728",
+    "notes": "Name and San Francisco location match the agenda exactly; ProPublica confirms the 501(c)(3) and EIN, and the organization's about page confirms the arts-education services, address, phone and generic email. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

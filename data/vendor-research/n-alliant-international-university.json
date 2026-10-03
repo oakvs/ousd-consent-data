@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.alliant.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Alliant_International_University",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alliant-international-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Alliant International University' (Wikipedia and alliant.edu)",
+      "Wikipedia lists a San Francisco campus, matching the 'San Francisco, CA' location in the agenda text",
+      "alliant.edu describes training teachers, psychologists, counselors and other school-related professionals, consistent with a Talent/Human Resources MOU with a school district",
+      "Not matched to the IRS-registered Alliant Educational Foundation (EIN 54-2110067); that is a separate entity, so no EIN is given"
+    ],
+    "key": "n-alliant-international-university",
+    "notes": "Alliant is a for-profit benefit corporation since 2015 (per Wikipedia and Higher Ed Dive); the nonprofit Alliant Educational Foundation (EIN 54-2110067, San Diego) is a separate entity and was deliberately not used for the EIN. CA Secretary of State and SAM.gov were not checked, so no entity number or UEI. Agenda names 'Alliant International University Incorporated'; the exact legal name was not confirmed in a registry. Registry confirmation of legal name is recommended.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Diego, CA",
+      "legalName": "Alliant International University",
+      "orgType": "company",
+      "phone": "(866) 825-5426",
+      "samUei": null,
+      "summary": "A private university based in San Diego, California, with campuses in California and Arizona and online programs. It offers graduate and undergraduate programs in psychology, education, business, forensics, and nursing and health sciences. Since 2015 it has operated as a for-profit benefit corporation.",
+      "website": "https://www.alliant.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Alliant International University",
+        "url": "https://www.alliant.edu/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Alliant International University - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Alliant_International_University"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-alliant-international-university",
+    "notes": "Name matches exactly, and Wikipedia confirms a San Francisco campus (agenda location) plus education/psychology programs consistent with a Talent/HR MOU. Summary, website, phone, headquarters and for-profit benefit corporation status (Feb 2015) are all confirmed by alliant.edu and Wikipedia, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

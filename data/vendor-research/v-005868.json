@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943162876",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hi4youth.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hi4youth.org/our-story-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hi4youth.org/past-programs/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005868",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Health Initiatives For Youth Inc', EIN 94-3162876, San Francisco, CA (ProPublica Nonprofit Explorer), matching the agenda's San Francisco, CA location",
+      "HIFY's own Past Programs page says it was lead agency for the 'Mack' afterschool program at McClymonds High School (an OUSD school), matching the OUSD McClymonds after-school MOUs",
+      "Website describes youth health and leadership programming, matching OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "v-005868",
+    "notes": null,
+    "profile": {
+      "address": "100 Bush St, Suite 210, San Francisco, CA, 94104",
+      "caEntityNumber": null,
+      "ein": "94-3162876",
+      "email": "info@hi4youth.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Health Initiatives For Youth Inc",
+      "orgType": "nonprofit",
+      "phone": "(415) 274-1970",
+      "samUei": null,
+      "summary": "A San Francisco nonprofit founded in 1992 that works to improve the health and well-being of under-served young people through youth leadership, education and advocacy. It runs health and leadership programs for teens, including after-school programs in schools.",
+      "website": "https://hi4youth.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Health Initiatives For Youth Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943162876"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website"
+        ],
+        "title": "Contact - HIFY",
+        "url": "https://hi4youth.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Our Story - HIFY",
+        "url": "https://hi4youth.org/our-story-2/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Past Programs - HIFY",
+        "url": "https://hi4youth.org/past-programs/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-005868",
+    "notes": "HIFY's own Past Programs page says it was lead agency for the Mack afterschool program at McClymonds High School, matching OUSD's McClymonds MOUs; ProPublica confirms the San Francisco 501(c)(3) and EIN, and the contact page confirms phone, email and address. The summary matches the Our Story mission and is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

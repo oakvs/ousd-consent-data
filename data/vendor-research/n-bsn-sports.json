@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bsnsports.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bsnsports.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/tx/farmers-branch/profile/sportswear-manufacturer/bsn-sports-llc-0875-28001646",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-bsn-sports",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'BSN Sports, LLC', a limited liability company listed with the Better Business Bureau in Farmers Branch, TX (exact legal name in agenda)",
+      "BSN Sports supplies uniforms, apparel and equipment to high school athletic programs, matching the agenda item about an athletic apparel agreement for OUSD high school sports teams (OAL)"
+    ],
+    "key": "n-bsn-sports",
+    "notes": "Agenda gives no location. Registry IDs (EIN, CA entity number, UEI) not verified, so left null. Address given is the mailing PO box from the company's contact page; street address 14460 Varsity Brands Way, Farmers Branch, TX 75244 is per BBB.",
+    "profile": {
+      "address": "PO Box 7726, Dallas, TX 75209",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Farmers Branch, TX",
+      "legalName": "BSN Sports, LLC",
+      "orgType": "company",
+      "phone": "1-800-856-3488",
+      "samUei": null,
+      "summary": "BSN Sports is a company that supplies uniforms, apparel, footwear and equipment to youth, high school, club and college athletic programs. It also offers team customization, team shops and fundraising services. It is a Varsity Brands company based in the Dallas, Texas area.",
+      "website": "https://www.bsnsports.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Us - BSN SPORTS",
+        "url": "https://www.bsnsports.com/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact Us - BSN SPORTS",
+        "url": "https://www.bsnsports.com/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "BSN Sports, LLC - BBB Business Profile",
+        "url": "https://www.bbb.org/us/tx/farmers-branch/profile/sportswear-manufacturer/bsn-sports-llc-0875-28001646"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-bsn-sports",
+    "notes": "BSN Sports, LLC is the exact legal name in the agenda and the athletic apparel/equipment business fits an Under Armour athletic agreement for OAL high school teams. The About, Contact and BBB pages support the summary, website, phone, address and headquarters, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

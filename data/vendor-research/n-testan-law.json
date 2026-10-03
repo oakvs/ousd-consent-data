@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.testanlaw.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-testan-law",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the law firm 'Testan Law' (testanlaw.com), a business and not an individual",
+      "The firm's website lists an Oakland, CA office, matching the agenda location 'Oakland, CA'",
+      "The firm's practice (defense of workers' compensation and general liability claims for self-insured employers) fits an OUSD contract with the General Counsel and Risk Management Department for 'Legal, insurance & risk'"
+    ],
+    "key": "n-testan-law",
+    "notes": "Contact details omitted: the firm's site lists inconsistent phone numbers and addresses across pages and third-party listings. No registry ID checked. No page directly links this firm to OUSD; identity rests on name, Oakland office and practice-area fit.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Testan Law is a law firm in California. Its main practice areas are defending workers' compensation and general liability claims, employment discrimination cases and related civil matters. It handles litigation for insurance carriers, third-party administrators and self-insured employers in state and federal court.",
+      "website": "https://www.testanlaw.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Testan Law",
+        "url": "https://www.testanlaw.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-testan-law",
+    "notes": "testanlaw.com shows an Oakland office and a workers' comp/general liability defense practice for self-insured employers, matching the Risk Management / General Counsel agenda item; no page directly names OUSD, but name, location and service fit are consistent. Summary and orgType are supported by the site and neutral; contact fields are null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/223128648",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildon.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildon.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ccpa.ousd.org/academics-programs/partner-programs-and-organizations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-buildon-organization",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Buildon Inc' (ProPublica Nonprofit Explorer, EIN 22-3128648, Stamford, CT)",
+      "buildOn's own website describes service-learning programs for students in under-resourced urban high schools, matching OUSD's 'Classroom & academic programs' / student internship MOU",
+      "An OUSD school page (Coliseum College Prep Academy) lists buildOn as a partner organization and links to buildon.org"
+    ],
+    "key": "n-buildon-organization",
+    "notes": "Headquarters is in Stamford, CT; the agenda gives Oakland, CA, consistent with buildOn running a Bay Area chapter, though buildon.org's own US pages list only Boston, Bridgeport, Bronx, Chicago and Detroit. Identity rests on the name match plus the OUSD school partner page. No main phone number found on the contact page.",
+    "profile": {
+      "address": "1111 Summer Street, Suite 602A, Stamford, CT 06905",
+      "caEntityNumber": null,
+      "ein": "22-3128648",
+      "email": "info@buildon.org",
+      "headquarters": "Stamford, CT",
+      "legalName": "Buildon Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "buildOn is a nonprofit that runs service-learning programs for students in under-resourced urban high schools in the United States, where students carry out community service projects. It also works with communities in low-income countries to build schools.",
+      "website": "https://www.buildon.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Buildon Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/223128648"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - buildOn",
+        "url": "https://www.buildon.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "buildOn",
+        "url": "https://www.buildon.org/"
+      },
+      {
+        "supports": [],
+        "title": "Partner Programs and Organizations - Coliseum College Prep Academy",
+        "url": "https://ccpa.ousd.org/academics-programs/partner-programs-and-organizations"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-buildon-organization",
+    "notes": "buildOn is a distinctively named 501(c)(3) (Buildon Inc, EIN 22-3128648, Stamford CT) running student service-learning programs, and an OUSD school page (CCPA) lists buildOn as a student-program partner linking to buildon.org, which fits an internship MOU. All profile fields (legal name, EIN, address, general email, website, summary) are confirmed by the cited sources; buildon.org lists no Oakland chapter, but the partner page ties it to OUSD.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

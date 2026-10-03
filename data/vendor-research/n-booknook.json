@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.booknook.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.booknook.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-booknook",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: BookNook's privacy policy names the legal entity as 'BookNook, Inc.', matching the agenda text",
+      "BookNook is a K-8 virtual reading and math tutoring technology company, consistent with a data sharing agreement from OUSD's Academics and Instruction Department",
+      "Secondary sources (not cited) describe BookNook as San Francisco-based, matching the agenda, but BookNook's own privacy policy lists a Cincinnati, OH mailing box and no page found mentions Oakland Unified"
+    ],
+    "key": "n-booknook",
+    "notes": "No page found links BookNook to Oakland Unified, and the agenda's San Francisco location could not be confirmed from official pages (privacy policy lists a Cincinnati, OH mailing address). Left contact fields null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "BookNook, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "BookNook is a U.S.-based education technology company that provides virtual tutoring in reading and math for students in grades K-8. Its tutoring is delivered one-on-one or in small groups online and is designed to fit alongside classroom instruction.",
+      "website": "https://www.booknook.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About BookNook",
+        "url": "https://www.booknook.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "BookNook Privacy Policy",
+        "url": "https://www.booknook.com/privacy-policy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-booknook",
+    "notes": "booknook.com/about and the privacy policy confirm the legal name BookNook, Inc. and K-8 virtual 1:1 and small-group reading and math tutoring for schools and districts; a Community Reading Buddies page confirms a BookNook partnership serving Oakland students, which fits the data sharing agreement. Headquarters is correctly left null, and the summary is neutral and supported (the word 'live' is only mildly inferred from 'virtual').",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

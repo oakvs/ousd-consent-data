@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ucla.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucla.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-on-behalf-of-its-los-angeles-campus",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'The Regents of the University of California, on behalf of its Los Angeles Campus'; the Regents are the legal contracting entity for the UC campuses, and the Los Angeles campus is UCLA",
+      "Located in Los Angeles, CA, matching the agenda location 'Los Angeles, CA'",
+      "UCLA is a public research university, consistent with a data sharing agreement for research with OUSD's Research, Assessment, and Data Department"
+    ],
+    "key": "n-regents-of-university-of-california-on-behalf-of-its-los-angeles-campus",
+    "notes": "Contracting entity is The Regents of the University of California (a public university system) acting for the UCLA campus; the agreement is with OUSD's research/data function, but the profile describes the campus as a whole. legalName, email and address left null (no exact match on cited pages). No registry IDs applicable to a public university.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(310) 825-4321",
+      "samUei": null,
+      "summary": "UCLA (the University of California, Los Angeles) is a public research university in the Westwood neighborhood of Los Angeles, California. It is one of the campuses of the University of California system and offers undergraduate and graduate education and research.",
+      "website": "https://www.ucla.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About UCLA",
+        "url": "https://www.ucla.edu/about"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact UCLA",
+        "url": "https://www.ucla.edu/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-regents-of-university-of-california-on-behalf-of-its-los-angeles-campus",
+    "notes": "The Regents of the University of California on behalf of its Los Angeles Campus is the legal entity for UCLA, and the agenda location and data-sharing purpose fit. The cited ucla.edu pages confirm the public research university description, Westwood location, website and the (310) 825-4321 campus phone; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

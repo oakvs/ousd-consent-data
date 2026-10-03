@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cde.ca.gov/ls/ex/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-education-expanded-learning-division",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the official California Department of Education Expanded Learning Division page on cde.ca.gov (the state agency's own domain)",
+      "The division administers after school and summer expanded learning programs, matching OUSD's 'After-school & summer programs' category and the grant application for a summer grant program",
+      "The agenda item is a grant application to this division, so the counterparty is a grantor state agency rather than a vendor"
+    ],
+    "key": "n-california-department-of-education-expanded-learning-division",
+    "notes": "State agency division (grantor), not a commercial vendor. The CDE contact page blocks automated fetching so no mailing address was captured.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "expandedlearning@cde.ca.gov",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "916-319-0923",
+      "samUei": null,
+      "summary": "The Expanded Learning Division is part of the California Department of Education, a state agency. It administers California's expanded learning programs, which offer year-round learning opportunities for students outside the regular school day. These include the Expanded Learning Opportunities Program, the After School Education and Safety Program, and the 21st Century Community Learning Centers.",
+      "website": "https://www.cde.ca.gov/ls/ex/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Expanded Learning Division Overview",
+        "url": "https://www.cde.ca.gov/ls/ex/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-department-of-education-expanded-learning-division",
+    "notes": "The cited cde.ca.gov/ls/ex page shows the Expanded Learning Division, the three programs named in the summary, and the listed phone and email. The agenda item is a grant application to this state division, so the profile describes the right organization, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

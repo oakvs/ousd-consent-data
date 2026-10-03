@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://tu.edu/about-us/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tu.edu/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tu.edu/about-us/accreditation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-touro-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches Touro University California, a graduate university at 1310 Club Drive, Vallejo, CA, matching the agenda location 'Vallejo, CA' (tu.edu contact page)",
+      "Its Graduate School of Education is authorized by the California Commission on Teacher Credentialing to recommend teacher credentials (tu.edu accreditation page), consistent with an MOU with OUSD's Talent/Human Resources Department under 'Staff & hiring'",
+      "No page found that names OUSD together with Touro, so the district relationship itself is not independently confirmed"
+    ],
+    "key": "n-touro-university",
+    "notes": "Registry IDs, legal entity name and nonprofit status not confirmed (ProPublica returned 429 and no entity page was found); left null. Touro University California is part of the Touro University system, so the contracting legal entity may differ from the campus name. OUSD relationship not independently confirmed.",
+    "profile": {
+      "address": "1310 Club Drive, Vallejo, CA 94592",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@tu.edu",
+      "headquarters": "Vallejo, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": "707-638-5200",
+      "samUei": null,
+      "summary": "Touro University California is a graduate and professional university on Mare Island in Vallejo, California. It offers programs in health sciences and public health, and its Graduate School of Education prepares teachers and school administrators and is authorized to recommend teaching credentials in California.",
+      "website": "https://tu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Touro University California",
+        "url": "https://tu.edu/about-us/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About | Touro University California",
+        "url": "https://tu.edu/about-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Touro University California",
+        "url": "https://tu.edu/about-us/accreditation/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-touro-university",
+    "notes": "Touro University California in Vallejo matches the agenda location, and an OUSD Legistar record shows a prior OUSD MOU with Touro University's education college for teacher credential and intern partnerships, which fits a Talent/HR MOU. Contact details, Mare Island location, programs and CTC credential authority were confirmed on the cited tu.edu pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

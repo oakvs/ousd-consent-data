@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943279613",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://collegetrack.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://collegetrack.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-college-track-oakland",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'College Track' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3279613), matching the agenda's 'College Track Oakland' and 'Oakland, CA'",
+      "College Track's website says it is headquartered in Oakland, CA and runs a program supporting students from high school through college graduation, consistent with a data sharing agreement with OUSD's High School Linked Learning Department",
+      "Oakland is listed as one of the communities where College Track operates its program"
+    ],
+    "key": "n-college-track-oakland",
+    "notes": "General email is obfuscated on the contact page, so omitted. The agenda's 'College Track Oakland' is a local site of the national College Track nonprofit; the registry entity is the national organization based in Oakland. A separate registered entity, 'San Francisco College Track Qalicb Inc', exists but is not the vendor.",
+    "profile": {
+      "address": "483 9th Street, Suite #200, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-3279613",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "College Track",
+      "orgType": "nonprofit",
+      "phone": "(510) 834-3295",
+      "samUei": null,
+      "summary": "College Track is a nonprofit that supports first-generation students from under-resourced communities through a program that runs from high school through college graduation. Its goal is to help students earn a bachelor's degree. It operates in several communities, including Oakland, and is headquartered in Oakland, California.",
+      "website": "https://collegetrack.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "College Track - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943279613"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Contact - College Track",
+        "url": "https://collegetrack.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About - College Track",
+        "url": "https://collegetrack.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-college-track-oakland",
+    "notes": "ProPublica shows College Track (EIN 94-3279613) as a 501(c)(3) in Oakland, and collegetrack.org confirms the HQ address, phone, mission, and an Oakland site; the agenda's 'College Track Oakland' is that organization's local site, which fits a no-cost student data sharing agreement. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

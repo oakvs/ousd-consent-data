@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.epa.gov/aboutepa/mailing-addresses-and-phone-numbers",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.epa.gov/aboutepa/our-mission-and-what-we-do",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.epa.gov/dwcapacity/wiin-grant-voluntary-school-and-child-care-lead-testing-and-reduction-grant-program",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-environmental-protection-agency",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Environmental Protection Agency' in Washington, D.C.; the U.S. Environmental Protection Agency's headquarters mailing address is 1200 Pennsylvania Avenue, N.W., Washington, DC (EPA mailing addresses page)",
+      "The agenda item is a grant application for water lead testing; EPA runs a Voluntary School and Child Care Lead Testing and Reduction Grant Program that funds lead testing in school drinking water (EPA program page)"
+    ],
+    "key": "n-environmental-protection-agency",
+    "notes": "Federal agency; no EIN, CA entity number or SAM UEI listed. The EPA school lead testing grant is allocated to states, so OUSD's application may be routed through a state agency; the vendor identity is still the U.S. EPA.",
+    "profile": {
+      "address": "1200 Pennsylvania Avenue, N.W., Washington, DC 20460",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "Environmental Protection Agency",
+      "orgType": "public_agency",
+      "phone": "(202) 564-4700",
+      "samUei": null,
+      "summary": "The U.S. Environmental Protection Agency is a federal government agency whose mission is to protect human health and the environment. It writes and enforces environmental regulations, funds state, nonprofit and educational programs through grants, and does environmental research. It also runs grant programs that support lead testing in drinking water at schools and child care facilities.",
+      "website": "https://www.epa.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Mailing Addresses and Phone Numbers | US EPA",
+        "url": "https://www.epa.gov/aboutepa/mailing-addresses-and-phone-numbers"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Our Mission and What We Do | US EPA",
+        "url": "https://www.epa.gov/aboutepa/our-mission-and-what-we-do"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "WIIN Grant: Voluntary School and Child Care Lead Testing and Reduction Grant Program | US EPA",
+        "url": "https://www.epa.gov/dwcapacity/wiin-grant-voluntary-school-and-child-care-lead-testing-and-reduction-grant-program"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-environmental-protection-agency",
+    "notes": "The agenda item is a grant application to the U.S. EPA (Washington, D.C.) for water lead testing, which matches EPA's school lead testing grant program. The EPA pages I fetched confirm the name, HQ address, phone (202) 564-4700, mission, grants and research activities, and the lead testing grant program. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

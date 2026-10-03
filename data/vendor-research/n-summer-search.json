@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680200138",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://summersearch.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://summersearch.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-summer-search",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Summer Search' based in Oakland, CA (ProPublica Nonprofit Explorer, EIN 68-0200138), matching the agenda location Oakland, CA",
+      "Website describes mentoring and experiential learning for high school students from under-resourced communities, matching an OUSD no-cost services agreement for Oakland High School (classroom and academic programs)",
+      "Organization's headquarters and Bay Area office are both at 2201 Broadway, Oakland, and it serves Bay Area partner schools"
+    ],
+    "key": "n-summer-search",
+    "notes": "Phone, email and address are the national headquarters entries on the contact page. The Bay Area office shares the same address (phone 415.362.0500, bayarea@summersearch.org). No CA entity number or SAM UEI looked up.",
+    "profile": {
+      "address": "2201 Broadway, Suite 100 Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "68-0200138",
+      "email": "info@summersearch.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Summer Search",
+      "orgType": "nonprofit",
+      "phone": "415.362.5225",
+      "samUei": null,
+      "summary": "A nonprofit that works with high school students from under-resourced communities. It pairs students with paid professional mentors and offers fully funded summer experiences, plus support for college and career planning. It operates in the Bay Area, Boston, New York City, Philadelphia and Seattle.",
+      "website": "https://summersearch.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Summer Search - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680200138"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Summer Search",
+        "url": "https://summersearch.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Summer Search",
+        "url": "https://summersearch.org/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-summer-search",
+    "notes": "Summer Search is a 501(c)(3) at 2201 Broadway, Oakland (EIN 68-0200138 on ProPublica and the org's site), matching the Oakland agenda entry for an Oakland High School no-cost agreement. Contact fields are confirmed; the summary says 'paid' professional mentors, which the cited site does not state (it says 'professional mentorship'), so the summary is listed as unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

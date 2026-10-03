@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ourown.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/832417177",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/83-2417177",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008131",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Our Own Non Profit Inc' (ProPublica Nonprofit Explorer, EIN 83-2417177), and the organization's own website names the legal entity 'Our Own Non Profit Inc.'",
+      "GuideStar lists Long Beach among its service areas, matching the agenda's 'Long Beach, CA'",
+      "Website describes wellness, mental health and education programming delivered in schools for TK-12 students, consistent with OUSD's 'Classroom & academic programs' category and a no-cost services agreement at a high school"
+    ],
+    "key": "v-008131",
+    "notes": "No page found that mentions Oakland or OUSD directly. Registered address is in Los Angeles (GuideStar), while the agenda says Long Beach; search results also list a Long Beach contact address, and Long Beach is a stated service area. Address omitted because of this discrepancy.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-2417177",
+      "email": "empower@ourown.com",
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Our Own Non Profit Inc.",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Our Own is a nonprofit that works on access to mental health, wellness, education and physical fitness for young people and underserved communities. It delivers wellness programming in schools and runs community programs in Southern California.",
+      "website": "https://www.ourown.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Our Own",
+        "url": "https://www.ourown.com"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType",
+          "legalName"
+        ],
+        "title": "Our Own Non Profit Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/832417177"
+      },
+      {
+        "supports": [
+          "summary",
+          "ein",
+          "website"
+        ],
+        "title": "Our Own Non Profit Inc - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/83-2417177"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-008131",
+    "notes": "The exact distinctive legal name (Our Own Non Profit Inc, EIN 83-2417177) matches the agenda vendor; Long Beach is a listed GuideStar service area and the school-based wellness programming fits a no-cost services agreement for a high school. No source mentions Oakland directly, but the summary, website, email, EIN, HQ and org type are all supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

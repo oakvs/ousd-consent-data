@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942960297",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.accfb.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.accfb.org/about-us/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-community-food-bank",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'The Alameda County Community Food Bank Inc', EIN 94-2960297, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Organization's own site (accfb.org) shows the same Tax ID 94-2960297 and an Oakland address, and describes hunger-relief and food programs consistent with a no-cost student and family support agreement"
+    ],
+    "key": "n-alameda-county-community-food-bank",
+    "notes": "No page found mentioning OUSD directly; identity rests on registry name/city match and the org's own site. Email omitted: the site shows inconsistent general addresses (info@accfb.com vs info@accfb.org). Phone shown on site as '1-510-635-FOOD (3663)'. Mailing address is PO Box 2599, Oakland, CA 94614.",
+    "profile": {
+      "address": "7900 Edgewater Drive, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "94-2960297",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "The Alameda County Community Food Bank Inc",
+      "orgType": "nonprofit",
+      "phone": "1-510-635-FOOD (3663)",
+      "samUei": null,
+      "summary": "A nonprofit food bank in Oakland that has operated since 1985. It works to end hunger in Alameda County by distributing healthy food through a network of more than 350 partner agencies, such as food pantries, meal programs and shelters.",
+      "website": "https://www.accfb.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Alameda County Community Food Bank Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942960297"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "ein"
+        ],
+        "title": "ABOUT US - Alameda County Community Food Bank",
+        "url": "https://www.accfb.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Alameda County Community Food Bank",
+        "url": "https://www.accfb.org/about-us/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-alameda-county-community-food-bank",
+    "notes": "Name and Oakland location match the 501(c)(3) in ProPublica, and accfb.org shows the same Tax ID, address and phone. The summary (since 1985, 350+ partner agencies, hunger relief) is supported by the About page, and it fits a no-cost services agreement with OUSD.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

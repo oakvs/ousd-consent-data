@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://millsinstitute.northeastern.edu/programs/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/41679980",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-mills-college-at-northeastern-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Mills College at Northeastern University is the Oakland, CA campus of Northeastern University (5000 MacArthur Blvd, Oakland), matching the agenda location 'Oakland, CA'",
+      "Northeastern University's Mills Institute runs the federally funded TRIO programs Upward Bound and Mills Educational Talent Search (METS), matching the agenda titles 'TRIO Programs (Mills at NU)'",
+      "The Mills Institute programs page describes Upward Bound's long-running work in Oakland Unified schools, matching a High School Linked Learning Office services agreement",
+      "Northeastern University is a registered 501(c)(3) educational institution (ProPublica Nonprofit Explorer, EIN shown)"
+    ],
+    "key": "n-mills-college-at-northeastern-university",
+    "notes": "The vendor name refers to a campus of Northeastern University (the legal entity is Northeastern University, Boston, MA, EIN 04-1679980). Contact details are for the Mills Institute on the Oakland campus, which runs the TRIO programs. Headquarters left null because the legal entity is headquartered in Boston while the vendor is the Oakland campus. No CA entity number or UEI checked.",
+    "profile": {
+      "address": "Mills Hall, Office 128, 5000 MacArthur Boulevard, Oakland, CA 94613-1301",
+      "caEntityNumber": null,
+      "ein": "04-1679980",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Northeastern University",
+      "orgType": "nonprofit",
+      "phone": "510.430.3232",
+      "samUei": null,
+      "summary": "Mills College at Northeastern University is the Oakland campus of Northeastern University, a private nonprofit university based in Boston. Its Mills Institute runs federally funded TRIO programs, including Upward Bound and Mills Educational Talent Search, which help first-generation and low-income students in Oakland prepare for and apply to college.",
+      "website": "https://millsinstitute.northeastern.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Programs - The Mills Institute - Northeastern University",
+        "url": "https://millsinstitute.northeastern.edu/programs/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "summary"
+        ],
+        "title": "Northeastern University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/41679980"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-mills-college-at-northeastern-university",
+    "notes": "The Mills Institute programs page confirms the Oakland campus address, phone, website, and the TRIO programs (METS and Upward Bound) for first-generation, low-income students, matching the agenda's TRIO Programs titles. ProPublica confirms Northeastern University (EIN 04-1679980, Boston, 501(c)(3)) as the legal entity. The page does not mention OUSD specifically, but the agenda names the same Oakland campus and TRIO programs.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

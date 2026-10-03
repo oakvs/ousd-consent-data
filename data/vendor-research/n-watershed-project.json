@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/911767292",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://thewatershedproject.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://thewatershedproject.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://thewatershedproject.org/planting-shade-and-water-at-lockwood-academy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-watershed-project",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'The Watershed Project' in Richmond, CA (ProPublica Nonprofit Explorer, EIN 91-1767292), matching the agenda location Richmond, CA",
+      "Organization's own page 'Planting Shade and Water at Lockwood Academy' describes a schoolyard greening project at Lockwood STEAM Academy in Oakland, with Oakland Unified School District inviting The Watershed Project to plan it, matching the agenda item naming Lockwood STEAM Academy",
+      "Website describes K-12 environmental education and urban watershed greening, matching OUSD's 'Partnerships & data sharing' and 'School buildings & construction' categories"
+    ],
+    "key": "n-watershed-project",
+    "notes": null,
+    "profile": {
+      "address": "1327 South 46th Street, Building 155, Richmond, CA 94804",
+      "caEntityNumber": null,
+      "ein": "91-1767292",
+      "email": "info@thewatershedproject.org",
+      "headquarters": "Richmond, CA",
+      "legalName": "The Watershed Project",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A Bay Area nonprofit that works to inspire communities to understand, appreciate and protect local watersheds. Its programs include K-12 environmental education and workforce development, urban watershed greening, community science, climate resilience projects, and public education through storytelling and art.",
+      "website": "https://thewatershedproject.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Watershed Project - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/911767292"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - The Watershed Project",
+        "url": "https://thewatershedproject.org/"
+      },
+      {
+        "supports": [
+          "email",
+          "address"
+        ],
+        "title": "Contact Us - The Watershed Project",
+        "url": "https://thewatershedproject.org/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "Planting Shade and Water at Lockwood Academy",
+        "url": "https://thewatershedproject.org/planting-shade-and-water-at-lockwood-academy/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-watershed-project",
+    "notes": "ProPublica confirms The Watershed Project, Richmond CA, EIN 91-1767292 (501(c)(3)); the organization's own site confirms the address, generic info@ email and the program list used in the summary, and its Lockwood Academy page describes a schoolyard greening project with OUSD at Lockwood STEAM Academy, matching the agenda items.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

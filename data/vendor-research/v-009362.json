@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.hubbleiq.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/orinda/hubbleiq-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009362",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California stock corporation 'Hubbleiq, Inc.' with a registered address in Orinda, CA, matching the agenda location (bizprofile.net, citing the California Secretary of State registry)",
+      "HubbleIQ's own website lists Oakland Unified School District as a customer",
+      "HubbleIQ sells AI-powered IT support software to schools, matching OUSD's 'Technology' services agreement with the Technology Services Department"
+    ],
+    "key": "v-009362",
+    "notes": "No public phone, general email or business address found on the company website. The registry address shown on the aggregator appears to be a residential-style address, so it was left out. California entity number comes from an aggregator that cites the Secretary of State registry; bizfileonline was not checked directly.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "5423950",
+      "ein": null,
+      "email": null,
+      "headquarters": "Orinda, CA",
+      "legalName": "Hubbleiq, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "HubbleIQ is a software company based in Orinda, California. It makes Fyxit AI, an artificial intelligence (AI) tech support tool that handles routine IT problems for schools and businesses and passes harder issues to human IT staff.",
+      "website": "https://www.hubbleiq.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "HubbleIQ",
+        "url": "https://www.hubbleiq.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Hubbleiq, Inc. Orinda, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/orinda/hubbleiq-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-009362",
+    "notes": "CA registry aggregator shows Hubbleiq, Inc. (entity 5423950, stock corporation) in Orinda, matching the agenda location, and the company website lists Oakland Unified School District as a customer of its AI IT-support product, matching the Technology Services agreement. Summary, website, legal name, entity number and headquarters are supported and neutral; no personal contacts included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

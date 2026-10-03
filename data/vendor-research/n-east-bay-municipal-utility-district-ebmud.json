@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ebmud.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ebmud.com/application/files/5717/5588/2235/Item_02_-_Follow-up_Workforce_Development_Program_Update.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-municipal-utility-district-ebmud",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: ebmud.com identifies the organization as East Bay Municipal Utility District, headquartered at 375 11th Street, Oakland, CA, matching the agenda's Oakland, CA",
+      "EBMUD runs a High School Summer Internship program, matching the agenda's Summer 2023 Internship Programs agreement with the High School Linked Learning Office",
+      "An EBMUD page states it is entering into agreements for its high school summer internship programs with Oakland Unified School District"
+    ],
+    "key": "n-east-bay-municipal-utility-district-ebmud",
+    "notes": "Public special district; no EIN, SOS entity number or UEI looked up. Main phone and address taken from the site footer on the About us page.",
+    "profile": {
+      "address": "375 11th Street Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Municipal Utility District",
+      "orgType": "public_agency",
+      "phone": "1-866-403-2683",
+      "samUei": null,
+      "summary": "East Bay Municipal Utility District (EBMUD) is a public water utility in the East Bay of California. It provides drinking water for about 1.5 million customers and also manages wastewater systems and related infrastructure. It also runs summer internship programs for high school students.",
+      "website": "https://www.ebmud.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "About us - East Bay Municipal Utility District",
+        "url": "https://www.ebmud.com/about-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Follow-up Workforce Development Program Update",
+        "url": "https://www.ebmud.com/application/files/5717/5588/2235/Item_02_-_Follow-up_Workforce_Development_Program_Update.pdf"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-east-bay-municipal-utility-district-ebmud",
+    "notes": "EBMUD is the Oakland-based public water utility named in the agenda; the About us page confirms identity, address, phone, website and about 1.5 million customers, and the cited workforce development PDF confirms the High School Summer Internship Program involving Oakland Unified schools. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

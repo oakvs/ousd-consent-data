@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/831373602",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eatlearnplay.org/home",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-under-armour-ua-eat-learn-play-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Eat Learn Play Foundation', EIN 83-1373602, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Foundation's website says it has remodeled six gymnasiums across Oakland Unified School District schools, matching the agenda's 'Donated Gymnasium Improvements' item",
+      "Under Armour's own site describes a partnership with the Eat. Learn. Play. Foundation to revitalize youth sports in Oakland, explaining the 'Under Armour (UA)' part of the agenda name"
+    ],
+    "key": "n-under-armour-ua-eat-learn-play-foundation",
+    "notes": "Agenda names the vendor with 'Under Armour (UA)' as a partner/donor prefix; the legal entity is the Eat Learn Play Foundation. The foundation's website shows no general phone, email or mailing address (only a media email at a PR agency), so those are left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-1373602",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Eat Learn Play Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, founded in 2019 by Stephen and Ayesha Curry. It works on children's wellbeing in Oakland through three areas: providing nutritious meals, supporting early literacy, and creating spaces for physical activity, including remodeled schoolyards and gymnasiums.",
+      "website": "https://www.eatlearnplay.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Eat Learn Play Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/831373602"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Eat.Learn.Play. Foundation",
+        "url": "https://www.eatlearnplay.org/home"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-under-armour-ua-eat-learn-play-foundation",
+    "notes": "The agenda name contains 'Eat.Learn.Play. Foundation' and the item is donated gymnasium improvements; ProPublica confirms the Oakland 501(c)(3) (EIN 83-1373602), and the foundation site confirms 2019 founding by Stephen and Ayesha Curry, the eat/learn/play pillars, and six remodeled gymnasiums in Oakland. The Under Armour partnership claim could not be independently verified, but the summary does not rely on it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

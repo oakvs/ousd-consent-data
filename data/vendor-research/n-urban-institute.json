@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/520880375",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.urban.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.urban.org/about/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-urban-institute",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Urban Institute' in Washington, DC (ProPublica Nonprofit Explorer, EIN 52-0880375), matching the agenda location 'Washington, DC'",
+      "Urban Institute's own published evaluation reports state it executed a data-sharing agreement with Oakland Unified School District for an evaluation of Oakland's Measure Z-funded school violence intervention strategy, matching OUSD's 'Urban Institute Evaluation' data sharing agreement",
+      "Urban Institute describes itself as doing research, data analysis and program evaluation, matching the 'Partnerships & data sharing' no-cost evaluation agreement"
+    ],
+    "key": "n-urban-institute",
+    "notes": null,
+    "profile": {
+      "address": "500 L'Enfant Plaza SW, Washington, DC 20024",
+      "caEntityNumber": null,
+      "ein": "52-0880375",
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "Urban Institute",
+      "orgType": "nonprofit",
+      "phone": "202-833-7200",
+      "samUei": null,
+      "summary": "The Urban Institute is a nonprofit research organization based in Washington, DC. It provides research, data analysis, program evaluation, data tools and modeling, and strategic advising on issues that affect the well-being of people and communities.",
+      "website": "https://www.urban.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Urban Institute - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/520880375"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About the Urban Institute",
+        "url": "https://www.urban.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Urban Institute",
+        "url": "https://www.urban.org/about/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-urban-institute",
+    "notes": "Urban Institute (Washington, DC; EIN 52-0880375, 501(c)(3) per ProPublica) matches the agenda location, and its published Measure Z evaluation reports state it executed a data-sharing agreement with OUSD. Summary, phone and address are supported by the About and Contact pages and are neutral business details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

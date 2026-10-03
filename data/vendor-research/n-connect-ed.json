@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/204781979",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://connectednational.org/learn/connect/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://connectednational.org/meet/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.influencewatch.org/non-profit/national-center-for-college-and-career-connected/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-connect-ed",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Connect Ed' matches the registered nonprofit 'Connected The National Center For College And Career' (ProPublica Nonprofit Explorer, EIN 20-4781979), which brands itself ConnectED",
+      "ConnectED's work is Linked Learning college-and-career pathways, matching the OUSD contracting office 'High School Linked Learning Office' under the College and Career Readiness Commission",
+      "Influence Watch records ConnectED grants to Oakland Unified School District in 2021 for algebra and mathematics curriculum projects",
+      "Based in Berkeley, CA, in the Oakland Unified area; no conflicting organization of the same name found"
+    ],
+    "key": "n-connect-ed",
+    "notes": "Agenda gives only 'Connect Ed' with no location. Identity rests on name, Linked Learning subject match, and documented grants to OUSD. Legal name copied from ProPublica; the organization also styles itself 'ConnectED: The National Center for College & Career' (formerly 'The California Center for College and Career'). California Secretary of State entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2120 University Avenue, Berkeley, CA",
+      "caEntityNumber": null,
+      "ein": "20-4781979",
+      "email": "info@connectednational.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Connected The National Center For College And Career",
+      "orgType": "nonprofit",
+      "phone": "(510)849-4945",
+      "samUei": null,
+      "summary": "ConnectED is a nonprofit education organization based in Berkeley, California. It works with school districts and community leaders to build college and career pathways using an approach called Linked Learning, which combines academic classes with real-world, career-themed learning. It also provides curriculum, tools and training for educators.",
+      "website": "http://www.connectednational.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Connected The National Center For College And Career - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/204781979"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - ConnectED",
+        "url": "https://connectednational.org/learn/connect/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - ConnectED",
+        "url": "https://connectednational.org/meet/about/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "National Center for College and Career (ConnectED) - Influence Watch",
+        "url": "https://www.influencewatch.org/non-profit/national-center-for-college-and-career-connected/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-connect-ed",
+    "notes": "ConnectED (Berkeley, 501(c)(3), EIN 20-4781979) is a Linked Learning organization, which fits the High School Linked Learning Office item, and Influence Watch records an OUSD grant relationship. The cited contact page lists 2150 Shattuck Ave, Suite 750, Berkeley, not the candidate's '2120 University Avenue', so address is unsupported; the other fields and the neutral summary are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942581686",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kidango.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kidango.org/locations/castlemont-center/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kidango",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Kidango Inc', Fremont, CA, EIN 94-2581686, classified Child Day Care (ProPublica Nonprofit Explorer)",
+      "Kidango's own website lists a Castlemont Center at 8601 MacArthur Boulevard, Building 300, Oakland, CA 94605, next to Castlemont High School, matching the agenda item about a lease for Buildings H & I at Castlemont High School",
+      "Kidango's services (early childhood education and family support) match the agenda title 'Early Childhood Education and Family Support Program'"
+    ],
+    "key": "n-kidango",
+    "notes": "Agenda gives no city. Identity confirmed via the Castlemont Center (Oakland, next to Castlemont High School). CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "44000 Old Warm Springs Blvd., Fremont, CA 94538",
+      "caEntityNumber": null,
+      "ein": "94-2581686",
+      "email": "hello@kidango.org",
+      "headquarters": "Fremont, CA",
+      "legalName": "Kidango Inc",
+      "orgType": "nonprofit",
+      "phone": "510-897-6900",
+      "samUei": null,
+      "summary": "Kidango is a nonprofit early childhood education organization serving the Bay Area. It runs more than 50 child care centers offering preschool, infant and toddler care, and family child care homes. It also provides early intervention, childhood mental health consultation, nutrition programs and family support services.",
+      "website": "https://www.kidango.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Kidango Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942581686"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Kidango",
+        "url": "https://www.kidango.org/"
+      },
+      {
+        "supports": [],
+        "title": "Castlemont Center | Kidango",
+        "url": "https://www.kidango.org/locations/castlemont-center/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-kidango",
+    "notes": "Kidango's own site lists a Castlemont Center at 8601 MacArthur Blvd, Oakland (the Castlemont High School campus address), matching the lease agenda item for Buildings H & I; ProPublica confirms the 501(c)(3) Kidango Inc, EIN 94-2581686, Fremont. Summary, phone, email, address and EIN are all supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

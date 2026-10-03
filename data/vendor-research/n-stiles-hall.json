@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156636",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://stileshall.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://stileshall.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-stiles-hall",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Stiles Hall' in Berkeley, CA (ProPublica Nonprofit Explorer, EIN 94-1156636), matching the agenda's 'Stiles Hall, Berkeley, CA'",
+      "The agency's executive director per ProPublica is the same person named in the agenda item title (a No Cost Services Agreement and Data Sharing Agreement), linking this nonprofit to the OUSD agreement",
+      "Website describes education-focused programs for students, consistent with OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "n-stiles-hall",
+    "notes": "Only a named staff member's email was listed on the contact page, so email left null. No CA SOS or SAM.gov lookup done.",
+    "profile": {
+      "address": "2400 C Bancroft Way, Berkeley, CA 94704",
+      "caEntityNumber": null,
+      "ein": "94-1156636",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Stiles Hall",
+      "orgType": "nonprofit",
+      "phone": "510-841-6010",
+      "samUei": null,
+      "summary": "Stiles Hall is a nonprofit in Berkeley, California, founded in 1884. It runs programs that support low-income Black and Brown students, including University of California, Berkeley students and community members, and says it works to create pathways to self-determination.",
+      "website": "https://stileshall.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Stiles Hall - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156636"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Stiles Hall",
+        "url": "https://stileshall.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Stiles Hall",
+        "url": "https://stileshall.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-stiles-hall",
+    "notes": "ProPublica lists Jonathan Nussur as Executive Director of Stiles Hall (Berkeley, EIN 94-1156636), the same name as in the OUSD agenda item title, and the Berkeley location matches. Founding year, mission, phone, and address are confirmed on stileshall.org and its contact page; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

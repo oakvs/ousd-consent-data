@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sfsu.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sfsu.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://gcoe.sfsu.edu/current-students/multiple-single-subject-intern-programs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-trustees-of-california-state-university-for-san-francisco-state-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Trustees of the California State University for San Francisco State University', and sfsu.edu describes San Francisco State University as part of the California State University (CSU) system",
+      "OUSD item is a Teacher Internship Program MOU run by Talent/Human Resources; SF State's College of Education page lists Oakland Unified School District as a school district with an internship partnership agreement"
+    ],
+    "key": "n-trustees-of-california-state-university-for-san-francisco-state-university",
+    "notes": "The agenda party is the CSU Board of Trustees acting for San Francisco State University, a public university. Registry IDs (EIN, CA entity number, UEI) not looked up; none needed for a public agency.",
+    "profile": {
+      "address": "1600 Holloway Avenue, San Francisco, CA 94132",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "service@sfsu.edu",
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(415) 338-1111",
+      "samUei": null,
+      "summary": "San Francisco State University is a public urban university in San Francisco and part of the California State University system. It grants bachelor's and master's degrees. Its College of Education runs teacher credential and internship programs for people already employed as teachers in partner school districts.",
+      "website": "https://www.sfsu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About SF State",
+        "url": "https://www.sfsu.edu/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact SF State",
+        "url": "https://www.sfsu.edu/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Multiple & Single Subject Intern Programs",
+        "url": "https://gcoe.sfsu.edu/current-students/multiple-single-subject-intern-programs"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-trustees-of-california-state-university-for-san-francisco-state-university",
+    "notes": "The agenda party is the CSU Trustees acting for San Francisco State University, and the SF State pages confirm it is a public CSU campus. The College of Education page lists Oakland Unified as an internship partner, which matches the Teacher Internship Program MOU. The summary, website, phone, address and general email are all shown on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

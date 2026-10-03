@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237135928",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nativehealth.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nativehealth.org/contact-us/locations-sites/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ufsa.ousd.org/families/native-american-health-clinic",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-native-american-health-center",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Native American Health Center Inc', Oakland, CA (ProPublica Nonprofit Explorer, EIN 23-7135928)",
+      "Located in Oakland, CA, matching the agenda text",
+      "OUSD's own United for Success Academy page describes a Native American Health Center school-based health center for Oakland Unified students, matching the agenda's 'School Based Health Center' MOU",
+      "Organization website lists School Based Health Centers as a service and describes medical, dental and behavioral health care, matching OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "n-native-american-health-center",
+    "notes": "Main Oakland site address and phone from the organization's locations page. The contact page also lists a San Francisco address (160 Capp St.), so the organization operates in more than one city; ProPublica lists Oakland. No general email found (only a jobs@ HR address, not used).",
+    "profile": {
+      "address": "2950 International Blvd., Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "23-7135928",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Native American Health Center Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 535-4400",
+      "samUei": null,
+      "summary": "A nonprofit community health center and Federally Qualified Health Center in the Bay Area that serves American Indians, Alaska Natives and the surrounding community. It offers medical, dental, behavioral health, community wellness and social services at sites in three counties, including school-based health centers.",
+      "website": "https://www.nativehealth.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Native American Health Center Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237135928"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Us - Native American Health Center",
+        "url": "https://www.nativehealth.org/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Locations - Native American Health Center",
+        "url": "https://www.nativehealth.org/contact-us/locations-sites/"
+      },
+      {
+        "supports": [],
+        "title": "Native American Health Clinic - United For Success",
+        "url": "https://ufsa.ousd.org/families/native-american-health-clinic"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-native-american-health-center",
+    "notes": "ProPublica, the organization's About and Locations pages, and OUSD's UFSA page confirm an Oakland 501(c)(3) FQHC that runs a school-based health center for OUSD students, matching the no-cost SBHC MOU. Summary, address, phone, EIN and website are all supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

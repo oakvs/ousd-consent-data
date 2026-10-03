@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://hcai.ca.gov/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hcai.ca.gov/about/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-health-care-access-and-information",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official name on hcai.ca.gov is exactly 'California Department of Health Care Access and Information', matching the agenda text (a unique state department name).",
+      "The agenda's funding source is 'State of California' and the grant agreement is with 'State of California, Department of Health Care Access and Information', consistent with a California state agency.",
+      "HCAI's own about page describes state health workforce, financing and data programs, consistent with a state health grant for student health and support services."
+    ],
+    "key": "n-california-department-of-health-care-access-and-information",
+    "notes": "State agency (formerly the Office of Statewide Health Planning and Development, OSHPD); no EIN or SOS entity number applicable.",
+    "profile": {
+      "address": "2020 West El Camino Avenue, Suite 800, Sacramento, CA 95833",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "SACReceptionist@hcai.ca.gov",
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Health Care Access and Information",
+      "orgType": "public_agency",
+      "phone": "(916) 440-8300",
+      "samUei": null,
+      "summary": "A California state department that works to expand access to quality, equitable and affordable health care for Californians. Its programs cover the construction and safety of hospitals and nursing facilities, loan insurance for nonprofit health facilities, growing the health care workforce, collecting health data, and health care affordability.",
+      "website": "https://hcai.ca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website"
+        ],
+        "title": "HCAI Overview",
+        "url": "https://hcai.ca.gov/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - HCAI",
+        "url": "https://hcai.ca.gov/about/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-department-of-health-care-access-and-information",
+    "notes": "The OUSD grant agreement is with the State of California's Department of Health Care Access and Information, and hcai.ca.gov/about confirms it is that state department. The summary, website, phone, role-based reception email and Sacramento address all match the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://face.edu/about/about-face/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://fremontunified.org/news/lifelong-learning-face/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.careerworks.org/2021/08/16/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-fremont-adult-and-continuing-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches Fremont Adult and Continuing Education (FACE), an adult school program of Fremont Unified School District, in Fremont, CA, matching the agenda location",
+      "CareerWork$ (BankWork$ sponsor) states BankWork$ in Oakland is a partnership among CareerWork$, Fremont Adult and Continuing Education and Oakland Adult and Continuing Education, matching the BankWork$ agreement titles in the agenda",
+      "FACE's own site describes adult education and job training, consistent with OUSD's Adult and Career Education Department as the contracting office"
+    ],
+    "key": "n-fremont-adult-and-continuing-education",
+    "notes": "Program of Fremont Unified School District (public agency), not a separate legal entity, so no EIN or entity number. Legal name left null. No general email found.",
+    "profile": {
+      "address": "4700 Calaveras Avenue, Fremont, California 94538",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fremont, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 793-6465",
+      "samUei": null,
+      "summary": "Fremont Adult and Continuing Education (FACE) is the adult school of the Fremont Unified School District in Fremont, California. It offers language learning, secondary education, college pathways, job training, technology and career skills, civics and citizenship, and lifelong learning classes for adults.",
+      "website": "https://face.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Welcome to FACE - FACE",
+        "url": "https://face.edu/about/about-face/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "summary",
+          "website"
+        ],
+        "title": "Lifelong Learning Opportunities at FUSD - Fremont Unified",
+        "url": "https://fremontunified.org/news/lifelong-learning-face/"
+      },
+      {
+        "supports": [],
+        "title": "Free Career Training Program BankWork$ Comes to Oakland",
+        "url": "https://www.careerworks.org/2021/08/16/oakland/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-fremont-adult-and-continuing-education",
+    "notes": "CareerWork$ release names Fremont Adult and Continuing Education (a Fremont Unified adult school at 4700 Calaveras Ave) as BankWork$ partner with Oakland Adult and Continuing Education, matching OUSD's BankWork$ no-cost agreements. Name, address, phone, website and org type are confirmed by the cited pages; the summary's offerings list is slightly broader than the cited pages (college pathways, technology are not shown) but the core description is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

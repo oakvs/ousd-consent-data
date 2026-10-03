@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/530196605",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.redcross.org/about-us/who-we-are.html",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.redcross.org/take-a-class",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-american-national-red-cross",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'American National Red Cross' (ProPublica Nonprofit Explorer, EIN 53-0196605), located in Washington, DC, matching the agenda location",
+      "redcross.org (the organization's own site) offers First Aid/CPR/AED classes and instructor training, matching OUSD's 'Licensed Training Provider Agreement' for Health Services training"
+    ],
+    "key": "n-american-national-red-cross",
+    "notes": "Phone, email and street address omitted: redcross.org contact pages blocked or not found; only a disaster-line number appeared on the homepage. Agenda lists Washington, DC; the Red Cross national headquarters is in Washington, DC.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "53-0196605",
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "American National Red Cross",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit humanitarian organization that works to prevent and relieve suffering in the United States and around the world. It provides disaster relief, supports blood donation, and offers training such as First Aid, CPR and AED classes. It relies on donors, volunteers and employees.",
+      "website": "https://www.redcross.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "American National Red Cross - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/530196605"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us | Our Mission | American Red Cross",
+        "url": "https://www.redcross.org/about-us/who-we-are.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Take a Class | American Red Cross",
+        "url": "https://www.redcross.org/take-a-class"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-american-national-red-cross",
+    "notes": "ProPublica confirms American National Red Cross, EIN 53-0196605, 501(c)(3), Washington DC, matching the agenda name and location; a first aid/CPR training provider agreement fits the Red Cross. redcross.org pages returned 403 to direct fetch, but the mission, disaster relief, blood and training content in the neutral summary was confirmed via redcross.org search results.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

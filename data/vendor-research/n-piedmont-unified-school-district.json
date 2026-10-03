@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.piedmont.k12.ca.us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-piedmont-unified-school-district",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: Piedmont Unified School District, a public school district in Piedmont, CA (district website)",
+      "Located in Piedmont, CA, matching the agenda's location 'Piedmont, CA'; Piedmont is an Alameda County city surrounded by Oakland",
+      "A school district is a plausible counterparty for a special education (SELPA) memorandum of understanding with OUSD; the agenda's 'Piedmont Avenue Unified School District' appears to be a typo for Piedmont Unified School District"
+    ],
+    "key": "n-piedmont-unified-school-district",
+    "notes": "Agenda text says 'Piedmont Avenue Unified School District' in the MOU title, apparently a typo; the funding source and vendor name both say Piedmont Unified School District. No general email found on the homepage.",
+    "profile": {
+      "address": "760 Magnolia Ave, Piedmont, CA 94611",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Piedmont, CA",
+      "legalName": "Piedmont Unified School District",
+      "orgType": "public_agency",
+      "phone": "510-594-2600",
+      "samUei": null,
+      "summary": "A public school district serving about 2,400 students in Piedmont, California. It runs three elementary schools, one middle school, two high schools (one traditional and one alternative), an adult school and a preschool program.",
+      "website": "https://www.piedmont.k12.ca.us/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Piedmont Unified School District",
+        "url": "https://www.piedmont.k12.ca.us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-piedmont-unified-school-district",
+    "notes": "The district homepage confirms the name, address (760 Magnolia Ave, Piedmont, CA 94611), phone, 2,450 students (summary says about 2,400) and the listed schools and programs. The agenda's 'Piedmont Avenue Unified School District' is plausibly a typo, since the funding source and vendor name both say Piedmont Unified and the city matches a SELPA MOU between districts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

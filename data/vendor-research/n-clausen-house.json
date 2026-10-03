@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941639361",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://clausenhouse.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://clausenhouse.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-clausen-house",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered Oakland, CA 501(c)(3) nonprofit: 'Clausen House Inc' (ProPublica Nonprofit Explorer, EIN 94-1639361), matching the agenda's Oakland, CA",
+      "Organization's own website says it serves adults with intellectual and developmental disabilities, matching the agenda's Adult Transition Services Partnership Project under Special Education",
+      "Organization's About page says it has partnered with the Oakland Unified School District Adult Education program since 1975"
+    ],
+    "key": "n-clausen-house",
+    "notes": "A web search snippet listed 88 Vernon St, Oakland as an address (older directory data); the organization's own Contact page shows 3223 Telegraph Ave, which is used. CA entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "3223 Telegraph Ave, Oakland, CA 94609",
+      "caEntityNumber": null,
+      "ein": "94-1639361",
+      "email": "info@clausenhouse.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Clausen House Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 839-0050",
+      "samUei": null,
+      "summary": "Clausen House is an Oakland nonprofit founded in 1967 that supports adults with intellectual and developmental disabilities. It runs group homes, independent and supported living, supported employment, adult education and social recreation programs in Oakland and the surrounding East Bay.",
+      "website": "https://clausenhouse.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Clausen House Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941639361"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "About Clausen House",
+        "url": "https://clausenhouse.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website"
+        ],
+        "title": "Contact Clausen House",
+        "url": "https://clausenhouse.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-clausen-house",
+    "notes": "Clausen House Inc is an Oakland 501(c)(3) serving adults with I/DD and partnering with OUSD Adult Education, which fits the Adult Transition Services grant under Special Education. The cited sources show the legal name, EIN, address, phone, general email, founding year and programs, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

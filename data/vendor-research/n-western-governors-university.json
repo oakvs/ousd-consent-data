@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.wgu.edu/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wgu.edu/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-western-governors-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: Western Governors University (WGU), a nonprofit online university headquartered in Salt Lake City, Utah (wgu.edu)",
+      "WGU runs teacher-education and California teacher-credential pathways, consistent with OUSD's 'Teacher Internship Program' MOU handled by Talent/Human Resources (Staff & hiring)",
+      "No page found that directly names WGU as an OUSD partner, so the match rests on the unique name and subject fit"
+    ],
+    "key": "n-western-governors-university",
+    "notes": "Two EINs appear in public listings (47-4365018 Corporation of Western Governors University; 84-1383926), so EIN left null. No direct public page linking WGU to OUSD's teacher internship program was found; confidence kept at medium.",
+    "profile": {
+      "address": "4001 S 700 East, #700, Salt Lake City, UT 84107",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Salt Lake City, UT",
+      "legalName": "Western Governors University",
+      "orgType": "nonprofit",
+      "phone": "1-866-225-5948",
+      "samUei": null,
+      "summary": "Western Governors University (WGU) is a nonprofit, online university founded in 1997. It offers bachelor's and master's degrees, certificates and teacher licensure programs in business, education, technology, and health and nursing. Its programs are competency-based, meaning students advance by showing what they have learned.",
+      "website": "https://www.wgu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "About WGU",
+        "url": "https://www.wgu.edu/about.html"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact WGU",
+        "url": "https://www.wgu.edu/contact.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": null
+}

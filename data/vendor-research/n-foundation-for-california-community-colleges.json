@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680412350",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://foundationccc.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://foundationccc.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://learnmore.cacollegeguidance.org/partner-districts/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-foundation-for-california-community-colleges",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Foundation For California Community Colleges', EIN 68-0412350, Sacramento, CA (ProPublica Nonprofit Explorer), matching the agenda's Sacramento, CA",
+      "Organization's own website lists 1102 Q Street, Suite 4800, Sacramento, CA 95811 and the same EIN",
+      "The California College Guidance Initiative (CCGI), named in the agenda titles, is housed within the Foundation for California Community Colleges, and the Foundation's site has a CCGI program page",
+      "CCGI's partner districts page lists Oakland Unified as a partner district, matching the OUSD data sharing agreements"
+    ],
+    "key": "n-foundation-for-california-community-colleges",
+    "notes": "No general email address found on the pages fetched. CCGI is housed within the Foundation (an initiative, not a separate legal entity per search results). CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1102 Q Street, Suite 4800, Sacramento, CA 95811",
+      "caEntityNumber": null,
+      "ein": "68-0412350",
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "Foundation For California Community Colleges",
+      "orgType": "nonprofit",
+      "phone": "866.325.3222",
+      "samUei": null,
+      "summary": "A nonprofit that serves as the official support organization for California's community college system. It runs more than 50 programs in areas such as student success, workforce development, equity, community impact and climate action. It also houses the California College Guidance Initiative, which runs the CaliforniaColleges.edu college and career planning platform.",
+      "website": "https://foundationccc.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Foundation For California Community Colleges - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680412350"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "ein",
+          "headquarters"
+        ],
+        "title": "About Us - Foundation for California Community Colleges",
+        "url": "https://foundationccc.org/about-us/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "Foundation for California Community Colleges",
+        "url": "https://foundationccc.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Partner Districts - CaliforniaColleges.edu",
+        "url": "https://learnmore.cacollegeguidance.org/partner-districts/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-foundation-for-california-community-colleges",
+    "notes": "The agenda names the Foundation for California Community Colleges (Sacramento) acting on behalf of CCGI. ProPublica, foundationccc.org and the CCGI partner-districts page (which lists Oakland Unified) confirm the legal name, EIN 68-0412350, phone, address and the 50+ programs. A search of foundationccc.org's CCGI page confirms CCGI is housed within the Foundation. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

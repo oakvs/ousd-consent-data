@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://shopoaklandnow.org/listing/showin-out-hair-gallery/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.laureldistrictassociation.org/showin-out-hair",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    }
+  ],
+  "key": "n-showin-out-hair-salon",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the agenda's 'Showin_Out Hair Salon' corresponds to 'Showin' Out Hair Gallery & Boutique', the only salon of that name found in Oakland (ShopOaklandNow, Laurel District Association)",
+      "Located in Oakland, CA (3717 MacArthur Boulevard, Laurel District), matching the agenda's 'Oakland, CA'",
+      "ShopOaklandNow says the salon hires high school students to work in its boutique and teaches them merchandising, sales and inventory, matching OUSD's workplace-training student internship MOU (ECCCO, High School Linked Learning Office)"
+    ],
+    "key": "n-showin-out-hair-salon",
+    "notes": "Small local business; no website found (Instagram @showinouthair only), no registry IDs found, legal entity name not confirmed. Operates as 'Showin' Out Hair Gallery & Boutique'. No page found explicitly naming OUSD; link to the internship MOU rests on name, city and the salon's stated practice of hiring high school students.",
+    "profile": {
+      "address": "3717 MacArthur Boulevard, Oakland, CA 94619",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 531-0600",
+      "samUei": null,
+      "summary": "A hair salon and boutique in Oakland's Laurel District, open since 1992. It offers haircuts, coloring, weaving, waxing and eyelash extensions, and its boutique sells handbags, jewelry, makeup and scarves. It also hires high school students to work in the boutique.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Showin' Out Hair Gallery & Boutique - ShopOaklandNow",
+        "url": "https://shopoaklandnow.org/listing/showin-out-hair-gallery/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Showin' Out Hair Gallery - Oakland",
+        "url": "https://www.laureldistrictassociation.org/showin-out-hair"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-showin-out-hair-salon",
+    "notes": "ShopOaklandNow confirms the Oakland salon (3717 MacArthur Blvd, open since 1992, services, boutique items, hires high school students) and the Laureldistrict page confirms address and phone. The 'Showin_Out' name is an apostrophe rendering, and the student-hiring practice fits an ECCCO workplace-training MOU, though no source names OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

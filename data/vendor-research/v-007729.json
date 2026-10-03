@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.radiclerootcollective.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.radiclerootcollective.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/202025810801",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007729",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: 'Radicle Root Collective LLC' is an active California LLC (entity 202025810801) with its head office and mailing address in Oakland, CA (OpenCorporates, mirroring the CA Secretary of State record), matching the agenda's vendor name and 'Oakland, CA'",
+      "The organization's own website names 'Radicle Root Collective LLC' with an Oakland, CA mailing address (PO Box 6582), matching the registry record",
+      "Website describes facilitation, coaching and consulting services to mission-driven organizations and government, consistent with a services agreement for a district department (no explicit OUSD mention found)"
+    ],
+    "key": "v-007729",
+    "notes": "No page found explicitly linking the vendor to OUSD; identity rests on exact name, LLC status and Oakland location. No phone number published. Entity number sourced from OpenCorporates (California registry mirror); the SOS site itself was not fetched.",
+    "profile": {
+      "address": "PO Box 6582, Oakland, CA 94603",
+      "caEntityNumber": "202025810801",
+      "ein": null,
+      "email": "connect@radiclerootcollective.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Radicle Root Collective LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Radicle Root Collective is a capacity-building firm based in Oakland, California. It provides facilitation, coaching and consulting services to mission-driven organizations, including nonprofits, businesses and government agencies. Its work focuses on organizational change grounded in equity and healing.",
+      "website": "https://www.radiclerootcollective.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "email",
+          "address"
+        ],
+        "title": "Radicle Root Collective",
+        "url": "https://www.radiclerootcollective.com/"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact — Radicle Root Collective",
+        "url": "https://www.radiclerootcollective.com/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Entity Details :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/202025810801"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-007729",
+    "notes": "Exact legal name and Oakland location match the agenda; the website and OpenCorporates (active CA LLC 202025810801, mailing PO Box 6582) support every profile field, and facilitation/coaching consulting fits a services agreement for a district department. No explicit OUSD link was found, but the exact-name and Oakland match is strong and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

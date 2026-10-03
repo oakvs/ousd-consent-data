@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/unit/california-childrens-services/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/contact-california-childrens-services/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://resources.finalsite.net/images/v1726758275/ousdorg/czznrmyldoaakpp9yrzk/001111NOTICETOBIDDERSCCS-Med.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-california-children-services-acccs",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Alameda County California Children Services (ACCCS)' in Alameda County, CA; Alameda County Public Health's California Children's Services (CCS) program is the county-run program of that name",
+      "The agenda item is a portable use agreement at 915 54th Street; an OUSD notice to bidders names the 'California Children Services Medical Therapy Unit at Santa Fe Site' at 915 54th Street, Oakland, CA 94608",
+      "County CCS page says clients get therapy at five Medical Therapy Units located in schools in Alameda County, matching the special education purpose in the agenda"
+    ],
+    "key": "n-alameda-county-california-children-services-acccs",
+    "notes": "County public health program, not a separate legal entity; no EIN/entity number applicable. No general email listed on the contact page (only an Enhanced Care Management inbox), so email left null.",
+    "profile": {
+      "address": "1000 San Leandro Blvd., Suite 300, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 208-5970",
+      "samUei": null,
+      "summary": "California Children's Services (CCS) is a state public health program for children and youth with certain diseases or health problems. In Alameda County it is run by the county's Public Health Department. Its Medical Therapy Program provides occupational and physical therapy at Medical Therapy Units located in schools around the county.",
+      "website": "https://health.alamedacountyca.gov/unit/california-childrens-services/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "California Children's Services",
+        "url": "https://health.alamedacountyca.gov/unit/california-childrens-services/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact California Children's Services",
+        "url": "https://health.alamedacountyca.gov/contact-california-childrens-services/"
+      },
+      {
+        "supports": [],
+        "title": "OUSD Notice to Bidders: CCS Medical Therapy Unit at Santa Fe Site",
+        "url": "https://resources.finalsite.net/images/v1726758275/ousdorg/czznrmyldoaakpp9yrzk/001111NOTICETOBIDDERSCCS-Med.pdf"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-alameda-county-california-children-services-acccs",
+    "notes": "Alameda County's CCS program (Public Health Dept.) matches the agenda name; the OUSD notice to bidders confirms a CCS Medical Therapy Unit at 915 54th Street. Summary, website, phone (510) 208-5970 and San Leandro address are shown on the cited county pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

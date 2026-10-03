@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/464106389",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://childrenspartnership.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://childrenspartnership.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://childrenspartnership.org/news/eight-california-high-schools-selected-for-new-pilot-program-to-support-youth-mental-health/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-childrens-partnership",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'The Children's Partnership', Los Angeles, EIN 46-4106389 (ProPublica Nonprofit Explorer)",
+      "Headquartered at 700 S Flower St, Los Angeles, CA, matching the agenda's 'Los Angeles, CA'",
+      "The organization's news page says Oakland Technical High School was selected for its Youth Peer-to-Peer Support Program funded by California's Children and Youth Behavioral Health Initiative with DHCS, matching the agenda's DHCS-funded subgrant for Oakland Technical High School"
+    ],
+    "key": "n-childrens-partnership",
+    "notes": "California Secretary of State entity number and SAM.gov UEI not looked up (registry pages not reliably fetchable).",
+    "profile": {
+      "address": "700 S Flower St., Suite 1000, Los Angeles, CA 90017",
+      "caEntityNumber": null,
+      "ein": "46-4106389",
+      "email": "frontdoor@childrenspartnership.org",
+      "headquarters": "Los Angeles, CA",
+      "legalName": "The Children's Partnership",
+      "orgType": "nonprofit",
+      "phone": "213-341-1222",
+      "samUei": null,
+      "summary": "A Los Angeles-based nonprofit that works on children's health and well-being through research, policy advocacy and community partnerships. Its focus areas include health coverage, mental health, nutrition, oral health, digital opportunity and support for children in immigrant families.",
+      "website": "https://childrenspartnership.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "The Children's Partnership - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/464106389"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "About - The Children's Partnership",
+        "url": "https://childrenspartnership.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - The Children's Partnership",
+        "url": "https://childrenspartnership.org/contact/"
+      },
+      {
+        "supports": [],
+        "title": "The Children's Partnership Announces Eight California High Schools Selected for New Pilot Program to Support Youth Mental Health",
+        "url": "https://childrenspartnership.org/news/eight-california-high-schools-selected-for-new-pilot-program-to-support-youth-mental-health/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-childrens-partnership",
+    "notes": "ProPublica, the About and Contact pages confirm a Los Angeles 501(c)(3) with the stated EIN, address, phone and general email, and the news page confirms Oakland Technical High School as a grantee of the DHCS-funded Children and Youth Behavioral Health Initiative pilot, matching the agenda. The summary is neutral and consistent with the listed focus areas.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

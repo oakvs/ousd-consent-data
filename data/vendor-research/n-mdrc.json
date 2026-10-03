@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237379473",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mdrc.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mdrc.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-mdrc",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'MDRC' (ProPublica Nonprofit Explorer, EIN 23-7379473, New York, NY)",
+      "OUSD contract is titled 'California Technical Education Advise Project' and MDRC runs a project called 'CTE Advise: Advising Tools in Secondary Education' (MDRC's Career and Technical Education projects)",
+      "MDRC has an Oakland, CA office (475 14th Street) and does education research; OUSD item is with the High School Linked Learning Department"
+    ],
+    "key": "n-mdrc",
+    "notes": "Headquarters is New York; MDRC also has an Oakland, CA office. No general email found on fetched pages.",
+    "profile": {
+      "address": "200 Vesey Street, 23rd Floor, New York, NY 10281-2103",
+      "caEntityNumber": null,
+      "ein": "23-7379473",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "MDRC",
+      "orgType": "nonprofit",
+      "phone": "212-532-3200",
+      "samUei": null,
+      "summary": "MDRC is a nonprofit education and social policy research organization. It designs new programs for people with low incomes, evaluates existing programs, and provides technical assistance to help make programs better.",
+      "website": "https://www.mdrc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "MDRC - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237379473"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "Contact Us - MDRC",
+        "url": "https://www.mdrc.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About MDRC",
+        "url": "https://www.mdrc.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-mdrc",
+    "notes": "MDRC is a distinctive name; the ProPublica record (EIN 23-7379473, New York 501(c)(3)), the contact page (phone, NY address, Oakland office) and the About page all support the fields. The research org's CTE Advise project fits the OUSD item title, and the summary is neutral and matches MDRC's own description.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943289283",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://krfoundation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://krfoundation.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collaborativeclassroom.org/blog/coaching-for-impact-partnership-rainin-foundation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kenneth-rainin-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered private grantmaking foundation in Oakland, CA: 'Kenneth Rainin Foundation', EIN 94-3289283 (ProPublica Nonprofit Explorer)",
+      "Foundation's own site says its education work focuses on early childhood literacy in Oakland public schools, matching OUSD's 'Structured Literacy Initiatives' grant agreements",
+      "A Collaborative Classroom page states the Kenneth Rainin Foundation has partnered since 2021 to build a coaching infrastructure in Oakland Unified School District"
+    ],
+    "key": "n-kenneth-rainin-foundation",
+    "notes": "Street address and general email were not confirmed on the official pages fetched, so they are left null. Search results suggested 155 Grand Ave, Ste 1000, Oakland, CA 94612 and communications@krfoundation.org but these were not verified on a fetched page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-3289283",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Kenneth Rainin Foundation",
+      "orgType": "nonprofit",
+      "phone": "510-625-5200",
+      "samUei": null,
+      "summary": "A private grantmaking foundation in Oakland, California. It gives grants in three areas: the arts, early childhood literacy, and research to cure chronic disease, including Inflammatory Bowel Disease. Its education work focuses on helping Oakland children read at or above grade level.",
+      "website": "https://krfoundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Kenneth Rainin Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943289283"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Kenneth Rainin Foundation",
+        "url": "https://krfoundation.org/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact - Kenneth Rainin Foundation",
+        "url": "https://krfoundation.org/contact/"
+      },
+      {
+        "supports": [],
+        "title": "Collaborative Classroom: coaching partnership with the Rainin Foundation in OUSD",
+        "url": "https://www.collaborativeclassroom.org/blog/coaching-for-impact-partnership-rainin-foundation/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-kenneth-rainin-foundation",
+    "notes": "The Oakland private foundation (EIN 94-3289283) funds early childhood literacy in Oakland, matching OUSD's Structured Literacy grant agreements, and a Collaborative Classroom page confirms its OUSD coaching partnership since 2021. Name, EIN, headquarters, phone and the neutral summary are all supported by the fetched sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

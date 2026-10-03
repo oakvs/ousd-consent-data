@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cpuc.ca.gov/about-cpuc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cpuc.ca.gov/about-cpuc/contacting-the-puc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cpuc.ca.gov/industries-and-topics/internet-and-phone/california-advanced-services-fund",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-public-utilities-commission",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names the 'California Public Utilities Commission' as grantor; cpuc.ca.gov is the official site of that California state agency, headquartered at 505 Van Ness Avenue, San Francisco",
+      "The CPUC's own CASF page says the California Advanced Services Fund and its Broadband Adoption Account are managed by the CPUC, matching the grant title and funding source 'California Public Utilities Commission/CASF Broadband' in the agenda",
+      "Search results from CPUC's published list of CASF Adoption Account projects show Oakland Unified School District and Oakland Adult and Career Education as grantees/applicants, matching the Oakland Adult and Career Education Department grant in the agenda"
+    ],
+    "key": "n-california-public-utilities-commission",
+    "notes": "Public agency; no EIN, CA SOS entity number or SAM UEI sought. Phone is the toll-free number as shown on the contact page.",
+    "profile": {
+      "address": "505 Van Ness Avenue, San Francisco, CA 94102",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "webmaster@cpuc.ca.gov",
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "800-848-5580",
+      "samUei": null,
+      "summary": "The California Public Utilities Commission is a California state agency. It works to ensure safe, reliable utility service at reasonable rates and to protect against fraud. It also manages the California Advanced Services Fund, which pays for broadband infrastructure and adoption projects.",
+      "website": "https://www.cpuc.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About the CPUC",
+        "url": "https://www.cpuc.ca.gov/about-cpuc"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contacting the CPUC",
+        "url": "https://www.cpuc.ca.gov/about-cpuc/contacting-the-puc"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "California Advanced Services Fund",
+        "url": "https://www.cpuc.ca.gov/industries-and-topics/internet-and-phone/california-advanced-services-fund"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-public-utilities-commission",
+    "notes": "The agenda names the CPUC as grantor of a CASF Broadband Adoption Account grant, and the cited CPUC pages confirm the agency, its mission, its San Francisco headquarters, its management of CASF, and the listed toll-free phone, webmaster email and address. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

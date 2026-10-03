@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943185291",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.diabloballet.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.diabloballet.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007621",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Diablo Ballet' in Walnut Creek, CA (ProPublica Nonprofit Explorer, EIN 94-3185291)",
+      "Located in Walnut Creek, CA, matching the agenda text",
+      "Organization's own site describes a professional dance company with educational programs for children, consistent with OUSD's 'Classroom & academic programs' services agreements"
+    ],
+    "key": "v-007621",
+    "notes": "No page found explicitly mentioning OUSD; identity rests on name, location and program type.",
+    "profile": {
+      "address": "490 N. Wiget Lane, Walnut Creek, CA 94598",
+      "caEntityNumber": null,
+      "ein": "94-3185291",
+      "email": "diablo@diabloballet.org",
+      "headquarters": "Walnut Creek, CA",
+      "legalName": "Diablo Ballet",
+      "orgType": "nonprofit",
+      "phone": "(925) 943-1775",
+      "samUei": null,
+      "summary": "Diablo Ballet is a professional dance company based in Walnut Creek, California, that presents ballet performances. It also runs Diablo Ballet School, which offers ballet classes for children and adults. Its stated mission is to enrich, inspire and educate through dance.",
+      "website": "https://www.diabloballet.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Diablo Ballet - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943185291"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "Diablo Ballet - Contact",
+        "url": "https://www.diabloballet.org/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Diablo Ballet - About",
+        "url": "https://www.diabloballet.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-007621",
+    "notes": "Diablo Ballet is a Walnut Creek 501(c)(3) (EIN 94-3185291) per ProPublica, matching the agenda city, and its own site confirms the address, phone, generic email, performances, and school for children and adults; the arts-education fit with OUSD's classroom program agreements is plausible though no page names OUSD. The 'Enrich. Inspire. Educate.' mission is stated on the school page, a minor stretch in the summary but not materially wrong.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

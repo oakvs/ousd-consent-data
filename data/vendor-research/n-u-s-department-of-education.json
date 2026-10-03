@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.usa.gov/agencies/u-s-department-of-education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-u-s-department-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'U.S. Department of Education' as the funder of grant awards (Title VI Indian Education Program, School Diversification Project), which are federal programs administered by this cabinet-level agency",
+      "USAGov's federal agency directory lists the U.S. Department of Education with website ed.gov, headquarters at 400 Maryland Ave., SW, Washington, DC 20202, and its main phone line",
+      "OUSD funding sources 'Indian Education' and 'Enrollment Stabilization Prog' match the Department's Indian Education and school diversification grant programs"
+    ],
+    "key": "n-u-s-department-of-education",
+    "notes": "ed.gov blocks automated fetching (HTTP 403), so contact details were taken from the USAGov federal agency directory. Federal agency: no EIN, state entity number or SAM UEI sought.",
+    "profile": {
+      "address": "400 Maryland Ave., SW Washington, DC 20202",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "1-800-USA-LEARN (1-800-872-5327)",
+      "samUei": null,
+      "summary": "The U.S. Department of Education is a cabinet-level agency of the federal government. It works to foster educational excellence and ensure equal access to educational opportunity. It administers federal education programs and grants, including funding that goes to school districts.",
+      "website": "https://www.ed.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "U.S. Department of Education | USAGov",
+        "url": "https://www.usa.gov/agencies/u-s-department-of-education"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-u-s-department-of-education",
+    "notes": "OUSD agenda items are grant awards from the U.S. Department of Education, a unique federal agency, so identity is not in doubt; website, phone, address, headquarters and orgType match the cited USAGov page. The summary's 'cabinet-level' and 'administers programs and grants including funding to school districts' claims are not on the cited page (only the mission sentence is), so the summary is flagged as unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

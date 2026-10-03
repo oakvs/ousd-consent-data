@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.seiu1021.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seiu1021.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/205893698",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seiu1021.org/oakland-unified-school-district",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-seiu-local-1021",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered labor union 'Service Employees International Union - 1021 Ohlone Chapter', Oakland, CA, EIN 20-5893698 (ProPublica Nonprofit Explorer)",
+      "SEIU 1021 website lists Oakland office at 100 Oak Street, Oakland, CA, matching the Oakland agenda context",
+      "SEIU 1021 has a page about its Oakland Unified School District chapter, about 1,000 classified staff, matching OUSD's side letter for 'Staff & hiring' handled by General Counsel"
+    ],
+    "key": "n-seiu-local-1021",
+    "notes": "Labor union (501(c)(5)), so orgType is 'other'. ProPublica lists the EIN under the chapter name 'Ohlone Chapter'. No general email or CA entity number found.",
+    "profile": {
+      "address": "100 Oak Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "20-5893698",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Service Employees International Union - 1021 Ohlone Chapter",
+      "orgType": "other",
+      "phone": "1-877-687-1021",
+      "samUei": null,
+      "summary": "SEIU 1021 is a labor union that represents workers in Northern California, including employees of local governments, nonprofit agencies, health care programs and schools. It negotiates contracts and provides union representation, benefits, training and advocacy for its members. It is part of the Service Employees International Union.",
+      "website": "https://www.seiu1021.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Contact Us - SEIU 1021",
+        "url": "https://www.seiu1021.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - SEIU 1021",
+        "url": "https://www.seiu1021.org/about-us"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Service Employees International Union - 1021 Ohlone Chapter - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/205893698"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District (OUSD) - SEIU 1021",
+        "url": "https://www.seiu1021.org/oakland-unified-school-district"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-seiu-local-1021",
+    "notes": "SEIU 1021 is the Oakland-based union with an OUSD classified-staff chapter, matching the side letter agreement. Address, EIN, legal name, phone (Member Resource Center line on the contact page), and the neutral summary are supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

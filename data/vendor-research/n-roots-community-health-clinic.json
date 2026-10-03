@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/26-2583954",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/262583954",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://rootscommunityhealth.org/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-roots-community-health-clinic",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered Oakland nonprofit: 'Roots Community Health Center' (GuideStar and ProPublica, EIN 26-2583954, Oakland, CA); the agenda's 'Roots Community Health Clinic' is a variant of the same name",
+      "OUSD's own news page says Roots Community Health is a primary tenant at the former Parker School campus (Parker Community Resource Center), matching the agenda's use agreements for a portion of former Parker School",
+      "Search results show Roots operating programs at the Parker Campus, 7929 Ney Ave, Oakland"
+    ],
+    "key": "n-roots-community-health-clinic",
+    "notes": "The organization's own website blocks automated fetching (HTTP 403 Cloudflare), so phone, email and street address were not captured. The website URL comes from search results; GuideStar lists an older domain, rootsclinic.org. Cal SOS entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "26-2583954",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Roots Community Health Center",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Roots Community Health Center is an Oakland-based nonprofit health center. It provides medical care, behavioral health services, health navigation, workforce development, housing support, outreach and advocacy, with a stated aim of helping people affected by systemic inequities and poverty. It operates fixed and mobile clinics.",
+      "website": "https://rootscommunityhealth.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Roots Community Health - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/26-2583954"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Roots Community Health Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/262583954"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Roots Community Health",
+        "url": "https://rootscommunityhealth.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-roots-community-health-clinic",
+    "notes": "GuideStar and ProPublica confirm Roots Community Health Center, EIN 26-2583954, Oakland 501(c)(3) health center, matching the agenda's Parker School use agreements (an Oakland health nonprofit as facility tenant); the 'fixed and mobile clinics' phrase and website URL could not be fetched (site returns 403) but are consistent with the listing and the identity is not in doubt.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

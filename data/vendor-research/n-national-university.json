@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237172306",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nu.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nu.edu/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-national-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'National University', San Diego, CA, EIN 23-7172306 (ProPublica Nonprofit Explorer)",
+      "National University describes itself as a large teacher-education institution and offers teaching credential programs with internship options, matching OUSD's 'Teacher Internship Program' MOU from the Talent/Human Resources Department",
+      "A search of OUSD's new-teacher support pages shows OUSD requires intern teachers to enroll in OUSD-approved credential partner programs, consistent with a university MOU"
+    ],
+    "key": "n-national-university",
+    "notes": "Agenda gives no location. OUSD's approved intern partner list is in a linked spreadsheet that was not read, so the OUSD link is inferred from the MOU title and National University's teacher-credential internship programs.",
+    "profile": {
+      "address": "9388 Lightwave Ave, San Diego, CA 92123",
+      "caEntityNumber": null,
+      "ein": "23-7172306",
+      "email": null,
+      "headquarters": "San Diego, CA",
+      "legalName": "National University",
+      "orgType": "nonprofit",
+      "phone": "1-800-NAT-UNIV (628-8648)",
+      "samUei": null,
+      "summary": "A private nonprofit university based in San Diego, California, founded in 1971. It offers online and in-person undergraduate and graduate degrees and certificates, including teacher credential programs, with a focus on working adults, military-connected students and veterans.",
+      "website": "https://www.nu.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237172306"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About National University",
+        "url": "https://www.nu.edu/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact National University",
+        "url": "https://www.nu.edu/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-national-university",
+    "notes": "ProPublica and nu.edu confirm the legal name, EIN, 501(c)(3) status, 1971 founding, San Diego address, phone and teacher-credential/internship programs. The link to OUSD is inferred from the MOU title (a university Teacher Internship Program) and was not confirmed against an OUSD partner list, but the name is distinctive and the services fit, so I found no real doubt.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

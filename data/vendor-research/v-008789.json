@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://fasdsocalnetwork.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://fasdsocalnetwork.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/463385695",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008789",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'FASD Network of Southern California', EIN 46-3385695 (ProPublica Nonprofit Explorer)",
+      "Registry and website both place the organization in Manhattan Beach, CA, matching the agenda text",
+      "Website describes FASD training and support resources for educators and caregivers, consistent with a special education services agreement"
+    ],
+    "key": "v-008789",
+    "notes": "No physical office; the organization lists a PO Box mailing address and no phone number. No explicit page found mentioning OUSD.",
+    "profile": {
+      "address": "PO Box 595, Manhattan Beach, CA 90267-0595",
+      "caEntityNumber": null,
+      "ein": "46-3385695",
+      "email": "connect@fasdsocalnetwork.org",
+      "headquarters": "Manhattan Beach, CA",
+      "legalName": "FASD Network of Southern California",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that provides information, connection and support resources about Fetal Alcohol Spectrum Disorder (FASD) to parents, caregivers, advocates, educators and treatment professionals. It runs training workshops, discussion groups and networking meetings across Southern California counties.",
+      "website": "https://fasdsocalnetwork.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "email",
+          "address",
+          "headquarters",
+          "ein",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Contact - FASD Network of Southern California",
+        "url": "https://fasdsocalnetwork.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "ein"
+        ],
+        "title": "About - FASD Network of Southern California",
+        "url": "https://fasdsocalnetwork.org/about/"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "FASD Network Of Southern California - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/463385695"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-008789",
+    "notes": "Name, Manhattan Beach CA location, EIN 46-3385695, PO Box address, email and 501(c)(3) status are confirmed on the organization's contact page and ProPublica, and FASD training and support fits a Special Education services agreement. The summary is neutral and consistent with the About page; no OUSD-specific page exists but the name and location match exactly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

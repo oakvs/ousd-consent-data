@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.musicallyminded.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.musicallyminded.com/contacts/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/208811559",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-musically-minded-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Musically Minded Academy, Oakland, CA, a California 501(c)(3) nonprofit (organization's own website), matching the agenda text and location",
+      "ProPublica Nonprofit Explorer lists Musically Minded Inc, EIN 20-8811559, a performing arts education nonprofit based in Oakland, CA",
+      "Website describes an 'Uplift Music' program supporting Oakland public school music programs and mentions OUSD students, consistent with OUSD's Linked Learning workplace-training MOU"
+    ],
+    "key": "n-musically-minded-academy",
+    "notes": "Email on the contact page is a named person's address, so omitted. Street address (5776 Broadway, Oakland 94618) appeared only on third-party listings, so omitted. Registry name is 'Musically Minded Inc'; CA SOS entity number not looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "20-8811559",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Musically Minded Inc",
+      "orgType": "nonprofit",
+      "phone": "510-601-5700",
+      "samUei": null,
+      "summary": "Musically Minded Academy is a nonprofit music school in Oakland, California. It offers private lessons and group ensembles in many instruments and voice for children, teens and adults. It also runs a program that supports music teachers and school music programs in Oakland public schools.",
+      "website": "https://www.musicallyminded.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Musically Minded Academy",
+        "url": "https://www.musicallyminded.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters"
+        ],
+        "title": "Musically Minded Contact",
+        "url": "https://www.musicallyminded.com/contacts/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Musically Minded Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/208811559"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-musically-minded-academy",
+    "notes": "The Oakland 501(c)(3) music school's own site and ProPublica (Musically Minded Inc, EIN 20-8811559, Oakland) match the agenda name and city, and its OUSD-related programs fit a workplace-training internship MOU. All non-null fields (summary, orgType, website, phone, headquarters, legalName, EIN) are supported by the cited sources; the named-person email was correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

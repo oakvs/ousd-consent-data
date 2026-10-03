@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/455240576",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.educationsuperhighway.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.educationsuperhighway.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007910",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Educationsuperhighway' in San Francisco, CA (ProPublica Nonprofit Explorer, EIN 45-5240576), matching the agenda's San Francisco, CA location",
+      "Organization's own website (educationsuperhighway.org) lists a San Francisco mailing address at 6 Presidio Terrace and describes K-12 school broadband and education work, consistent with a no-cost 2021-2022 services agreement with OUSD's Chief Systems and Services Officer"
+    ],
+    "key": "v-007910",
+    "notes": "Mission has shifted over time (broadband connectivity to literacy tutoring scholarships); summary reflects the current website. No explicit OUSD mention found on the site.",
+    "profile": {
+      "address": "6 Presidio Terrace, San Francisco, CA 94118",
+      "caEntityNumber": null,
+      "ein": "45-5240576",
+      "email": "info@educationsuperhighway.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "EducationSuperHighway",
+      "orgType": "nonprofit",
+      "phone": "415-275-1307",
+      "samUei": null,
+      "summary": "EducationSuperHighway is a nonprofit based in San Francisco. It worked to connect U.S. public school classrooms and low-income households to high-speed internet. It now runs a scholarship program that pays for reading tutoring for first graders who are reading below grade level.",
+      "website": "https://www.educationsuperhighway.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Educationsuperhighway - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/455240576"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - EducationSuperHighway",
+        "url": "https://www.educationsuperhighway.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About - EducationSuperHighway",
+        "url": "https://www.educationsuperhighway.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-007910",
+    "notes": "ProPublica confirms a San Francisco 501(c)(3) with EIN 45-5240576, and the organization's contact page confirms the phone, email and address. The about page supports the neutral summary (past school broadband work, current literacy tutoring scholarships). The match to the agenda's San Francisco location and a no-cost services agreement is plausible, though no site page names OUSD.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://capitallivescan.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://capitallivescan.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://capitallivescan.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008588",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Capital Live Scan', a fingerprinting business headquartered in Sacramento, CA, matching the agenda's 'Sacramento, CA'",
+      "Its website says it serves school districts, charter schools and colleges with fingerprinting for educators, staff, volunteers and coaches, consistent with a services agreement with OUSD's Community Schools and Student Services Department for staff and volunteers in expanded learning programs",
+      "Business directory listings (City of Sacramento business license, search results) show the same 5706 Broadway, Sacramento address and phone"
+    ],
+    "key": "v-008588",
+    "notes": "A third-party directory (OpenGov US, City of Sacramento business license) lists the business owner as Secure Screening Solutions, Inc.; legal name left null because the company's own site does not state its legal entity. No CA SOS entity number verified. No page found directly linking the company to OUSD.",
+    "profile": {
+      "address": "5706 Broadway, Sacramento, CA 95820",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "contactus@capitallivescan.com",
+      "headquarters": "Sacramento, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(916) 456-5260",
+      "samUei": null,
+      "summary": "Capital Live Scan is a company that provides Live Scan electronic fingerprinting for background checks, working with the California Department of Justice and the FBI. It offers walk-in fingerprinting at many locations around California and mobile fingerprinting at schools, offices and events. It serves individuals, schools, nonprofits, healthcare employers and government agencies.",
+      "website": "https://capitallivescan.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Capital Live Scan - Contact",
+        "url": "https://capitallivescan.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Capital Live Scan",
+        "url": "https://capitallivescan.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "About Capital Live Scan",
+        "url": "https://capitallivescan.com/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-008588",
+    "notes": "Capital Live Scan's own site confirms the Sacramento (5706 Broadway) fingerprinting business, and Live Scan for staff and volunteers fits a 2023-24 services agreement with OUSD's Community Schools and Student Services Department. Contact fields and the neutral summary match the cited pages; the legal name is correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

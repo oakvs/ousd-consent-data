@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/tiny-techs-club-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/tinytechsclub",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/elementary/camps/summer_camp_instructors",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-008604",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Exact name match: LinkedIn company page 'TINY TECHS CLUB, LLC' lists headquarters in Pleasanton, CA, matching the agenda location",
+      "Description of after-school robotics and animation enrichment programs for elementary and middle school students (City of San Ramon camp instructor page) matches OUSD's 'After-school & summer programs' category",
+      "Both the LinkedIn LLC page and the Tiny Techs Club LinkedIn page list the same website, tinytechsclub.com"
+    ],
+    "key": "v-008604",
+    "notes": "The website listed on LinkedIn (tinytechsclub.com) is omitted because it cannot be cited. The organization's own website (tinytechsclub.com) currently serves raw PHP source instead of pages, so About/Contact details could not be verified there. No registry (CA SOS, SAM.gov) record could be fetched. Contact details omitted: the only phone/address found were on blocked directory pages and a LinkedIn page gave a different address than a second LinkedIn page (Pleasanton vs San Ramon). The LinkedIn LLC page's HQ is Pleasanton, matching the agenda.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Pleasanton, CA",
+      "legalName": "TINY TECHS CLUB, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Tiny Techs Club is a company that provides enrichment programs in robotics and animation for elementary and middle school students. It creates and offers STEM (science, technology, engineering and math) curriculum in robotics and coding for young learners.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "TINY TECHS CLUB, LLC | LinkedIn",
+        "url": "https://www.linkedin.com/company/tiny-techs-club-llc"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Tiny Techs Club | LinkedIn",
+        "url": "https://www.linkedin.com/company/tinytechsclub"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Summer Camp Instructors - City of San Ramon",
+        "url": "https://sanramon.ca.gov/our_city/departments_and_divisions/parks_community_services/elementary/camps/summer_camp_instructors"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": null
+}

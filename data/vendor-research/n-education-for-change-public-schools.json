@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/202204424",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-education-for-change-public-schools",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Education For Change' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 20-2204424), and the organization's own website names itself 'Education for Change Public Schools'",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes six free public charter schools (TK-12) in Oakland, consistent with an OUSD Special Education Local Plan Area (SELPA) memorandum of understanding, which is an arrangement for charter schools"
+    ],
+    "key": "n-education-for-change-public-schools",
+    "notes": "IRS/ProPublica legal name is 'Education For Change'; the organization brands itself 'Education for Change Public Schools'. No general email address is published (contact form only). California SOS entity number and SAM UEI were not checked.",
+    "profile": {
+      "address": "333 Hegenberger Rd, Suite 705, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "20-2204424",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Education For Change",
+      "orgType": "nonprofit",
+      "phone": "510-568-7936",
+      "samUei": null,
+      "summary": "A nonprofit charter school network that operates six free public charter schools in Oakland, California, serving students from transitional kindergarten through 12th grade.",
+      "website": "https://www.efcps.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Education For Change - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/202204424"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Education for Change Public Schools",
+        "url": "https://www.efcps.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Education for Change Oakland Public Schools",
+        "url": "https://www.efcps.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-education-for-change-public-schools",
+    "notes": "Name, Oakland location, and a SELPA MOU for a charter network all fit Education For Change (EIN 20-2204424, 501(c)(3)). The ProPublica and efcps.org pages confirm the legal name, EIN, address, phone, six TK-12 schools in Oakland, and that they are free and public. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

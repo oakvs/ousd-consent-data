@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156646",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ndnu.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-notre-dame-de-namur-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Notre Dame De Namur University' in Belmont, CA (ProPublica Nonprofit Explorer, EIN 94-1156646)",
+      "Located in Belmont, CA, matching the agenda text",
+      "Official website describes a private university with a School of Education, consistent with a Talent/Human Resources MOU for staffing and hiring"
+    ],
+    "key": "n-notre-dame-de-namur-university",
+    "notes": "Contact details not captured from a page that could be verified. No registry ID beyond EIN checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1156646",
+      "email": null,
+      "headquarters": "Belmont, CA",
+      "legalName": "Notre Dame De Namur University",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private, coeducational university in Belmont, California, on the San Francisco Peninsula. It offers master's degrees and undergraduate degree completion programs and was established in 1851. It has a School of Education.",
+      "website": "https://www.ndnu.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Notre Dame De Namur University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156646"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About NDNU",
+        "url": "https://www.ndnu.edu/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-notre-dame-de-namur-university",
+    "notes": "ProPublica confirms the 501(c)(3) name, Belmont CA location and EIN 94-1156646, and the NDNU About page confirms private coeducational, 1851, Peninsula, and School of Education; a university with a School of Education fits a Talent/HR MOU. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

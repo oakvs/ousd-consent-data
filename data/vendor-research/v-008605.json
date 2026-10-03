@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://regents.universityofcalifornia.edu/about/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucla.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucla.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008605",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'The Regents of the University of California (Los Angeles campus)', the legal governing body of UCLA; the Regents' own page describes it as the constitutional governing body of the University of California",
+      "UCLA's website footer reads 'Regents of the University of California' and gives a Los Angeles 90095 address, matching the agenda's Los Angeles, CA location",
+      "OUSD's contract is with the campus Talent / Human Resources-related services, consistent with a public university providing services to a school district"
+    ],
+    "key": "v-008605",
+    "notes": "Agenda vendor is the Regents acting for the UCLA campus; the specific UCLA unit contracted was not identified, so only campus-wide contact details are given. Registry IDs not verified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Regents of the University of California",
+      "orgType": "public_agency",
+      "phone": "(310) 825-4321",
+      "samUei": null,
+      "summary": "The Regents of the University of California is the public board that governs the University of California system. Under the California Constitution it has full powers of organization and governance of the university. The Los Angeles campus (UCLA) is a public research university.",
+      "website": "https://www.ucla.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "About the Regents",
+        "url": "https://regents.universityofcalifornia.edu/about/index.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About UCLA",
+        "url": "https://www.ucla.edu/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact UCLA",
+        "url": "https://www.ucla.edu/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-008605",
+    "notes": "The agenda names The Regents of the University of California (Los Angeles campus) in Los Angeles, and the cited Regents and UCLA pages confirm the legal name, constitutional governance role, public research university status, main phone (310) 825-4321, website and Los Angeles location. The summary is neutral and supported, and only campus-wide business contact details are given.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

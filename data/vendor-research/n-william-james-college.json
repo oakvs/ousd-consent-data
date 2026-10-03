@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/42620216",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.williamjames.edu/about/contact-us.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.williamjames.edu",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-william-james-college",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'William James College Inc' in Newton, MA (ProPublica Nonprofit Explorer, EIN 04-2620216), matching the agenda's 'William James College, Newton, MA'",
+      "Official website lists its address as 1 Wells Avenue, Newton, MA, matching the agenda location",
+      "Website describes graduate programs training school and clinical psychologists and counselors, consistent with an OUSD talent/human resources agreement tied to special education staffing"
+    ],
+    "key": "n-william-james-college",
+    "notes": null,
+    "profile": {
+      "address": "1 Wells Avenue, Newton, MA 02459",
+      "caEntityNumber": null,
+      "ein": "04-2620216",
+      "email": "info@williamjames.edu",
+      "headquarters": "Newton, MA",
+      "legalName": "William James College Inc",
+      "orgType": "nonprofit",
+      "phone": "617-327-6777",
+      "samUei": null,
+      "summary": "William James College is a nonprofit college in Newton, Massachusetts. It trains professionals for careers in mental health, behavioral health and organizational leadership, with graduate and undergraduate programs in psychology, counseling and applied behavior analysis. Its approach combines classroom instruction with supervised field experience.",
+      "website": "https://www.williamjames.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "William James College Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/42620216"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "How to Contact William James College",
+        "url": "https://www.williamjames.edu/about/contact-us.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "William James College",
+        "url": "https://www.williamjames.edu"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-william-james-college",
+    "notes": "ProPublica confirms William James College Inc, a 501(c)(3) in Newton, MA (EIN 04-2620216), and the contact page confirms 1 Wells Avenue, phone and the general info@ email. The homepage supports the neutral summary; a school/clinical psychology training college fits an OUSD Talent/HR special education MOU.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

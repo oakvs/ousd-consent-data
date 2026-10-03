@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.berkeley.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.berkeley.edu/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-on-behalf-of-university-of-california-berkeley",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'Regents of the University of California, on behalf of University of California Berkeley'; the Regents are the legal contracting entity for the UC Berkeley campus, and the agenda title names University of California Berkeley",
+      "Located in Berkeley, CA, matching the agenda location 'Berkeley, CA'",
+      "UC Berkeley is a public research university with a campus human resources (People & Culture) office that provides talent acquisition services, consistent with the agenda's Talent/Human Resources MOU"
+    ],
+    "key": "n-regents-of-university-of-california-on-behalf-of-university-of-california-berkeley",
+    "notes": "Contracting entity is The Regents of the University of California (public university) acting for the Berkeley campus; the MOU is with the campus's Talent/Human Resources function, but the profile describes the campus as a whole. legalName, email and address left null (no exact match on cited pages). No registry IDs applicable to a public university.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "510-642-6000",
+      "samUei": null,
+      "summary": "The University of California, Berkeley is a public research university in Berkeley, California, founded in 1868. It is one of the campuses of the University of California system and offers undergraduate and graduate education and research across many academic departments and programs.",
+      "website": "https://www.berkeley.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About - University of California, Berkeley",
+        "url": "https://www.berkeley.edu/about/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact - University of California, Berkeley",
+        "url": "https://www.berkeley.edu/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-regents-of-university-of-california-on-behalf-of-university-of-california-berkeley",
+    "notes": "The agenda names the Regents on behalf of UC Berkeley (Berkeley, CA) for a Talent/HR MOU, which matches the profiled university. The cited pages confirm the 1868 founding, UC system membership, undergraduate and graduate programs and research, and the 510-642-6000 campus operator line. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.epa.gov/aboutepa/mailing-addresses-and-phone-numbers",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.epa.gov/aboutepa/our-mission-and-what-we-do",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.epa.gov/clean-heavy-duty-vehicles-program/clean-heavy-duty-vehicles-grant-program-awards",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-u-s-environmental-protection-agency",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'U.S. Environmental Protection Agency' as the grantor of the 2024 Clean Heavy-Duty Vehicles (CHDV) Grant; EPA's own CHDV awards page lists Oakland Unified School District (60 school buses, $15,178,465)",
+      "The CHDV Grant Program is run by the U.S. Environmental Protection Agency under the Inflation Reduction Act, matching the 'Food, transportation & operations' / Transportation and Logistics context",
+      "EPA's mailing addresses page gives the agency's headquarters address and main phone number in Washington, DC"
+    ],
+    "key": "n-u-s-environmental-protection-agency",
+    "notes": "Federal agency; no EIN, CA entity number or SAM UEI listed. Agenda gives no location.",
+    "profile": {
+      "address": "1200 Pennsylvania Avenue, N.W., Washington, DC 20460",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "Environmental Protection Agency",
+      "orgType": "public_agency",
+      "phone": "(202) 564-4700",
+      "samUei": null,
+      "summary": "The U.S. Environmental Protection Agency is a federal government agency whose mission is to protect human health and the environment. It writes and enforces environmental regulations, funds state, nonprofit and educational programs through grants, and does environmental research. Its grant programs include the Clean Heavy-Duty Vehicles Grant Program, which helps replace diesel vehicles such as school buses with zero-emission ones.",
+      "website": "https://www.epa.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Mailing Addresses and Phone Numbers | US EPA",
+        "url": "https://www.epa.gov/aboutepa/mailing-addresses-and-phone-numbers"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Our Mission and What We Do | US EPA",
+        "url": "https://www.epa.gov/aboutepa/our-mission-and-what-we-do"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Clean Heavy-Duty Vehicles Grant Program Awards | US EPA",
+        "url": "https://www.epa.gov/clean-heavy-duty-vehicles-program/clean-heavy-duty-vehicles-grant-program-awards"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-u-s-environmental-protection-agency",
+    "notes": "The agenda item is a 2024 Clean Heavy-Duty Vehicles grant from the U.S. EPA, and EPA's own awards page lists Oakland Unified (60 school buses, $15,178,465). The cited EPA pages support the legal name, HQ address, phone, website and the neutral mission and grants summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

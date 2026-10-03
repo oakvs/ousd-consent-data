@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/alameda-county-health/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-county-of-alameda-department-of-health",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agency headquarters is in San Leandro, CA, matching the agenda location 'San Leandro, CA'",
+      "OUSD's funding source is listed as 'Alameda County Health', which is the name of this agency (health.alamedacountyca.gov)",
+      "Agency site describes School-Based Behavioral Health Services and school health centers, matching OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "n-county-of-alameda-department-of-health",
+    "notes": "County agency; no EIN, state entity number or SAM UEI looked up. General contact email on the site is a public information office inbox (ACHealth-PIO@acgov.org), so it was omitted.",
+    "profile": {
+      "address": "1000 San Leandro Blvd., Suite 300, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 618-3452",
+      "samUei": null,
+      "summary": "Alameda County Health is the county government's health agency. Its departments provide public health, behavioral health (mental health and substance use services), and environmental health programs, along with housing and homelessness services. It also runs school-based programs, including school health centers and behavioral health services.",
+      "website": "https://health.alamedacountyca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "https://health.alamedacountyca.gov/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address",
+          "phone"
+        ],
+        "title": "Alameda County Health",
+        "url": "https://health.alamedacountyca.gov/department/alameda-county-health/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-county-of-alameda-department-of-health",
+    "notes": "Both cited pages show Alameda County Health at 1000 San Leandro Blvd., San Leandro, phone (510) 618-3452, with the departments and school-based programs (school health centers, school-based behavioral health) the summary describes; this matches the agenda's County of Alameda Department of Health, San Leandro, and the student health services contract. The summary is neutral and no individual contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

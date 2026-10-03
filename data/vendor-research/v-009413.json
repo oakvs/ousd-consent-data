@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.zeneducate.com/us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.zeneducate.com/us/schools",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.casbo.org/buyers-guide/zen-educate/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009413",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name 'Zen Educate Inc.' matches the agenda name exactly",
+      "Its own website lists a Saint Paul, MN mailing address, matching the agenda's 'St. Paul, MN'",
+      "Website describes special education staffing (paraprofessionals and special education aides), matching OUSD's 'Special education' services agreement",
+      "Listed as a California school-business-officials (CASBO) associate member offering K-12 staffing, and recruits substitute teachers in Oakland, CA"
+    ],
+    "key": "v-009413",
+    "notes": "Registry IDs not checked; legal name left null because registries were not confirmed. Website https://www.zeneducate.com is shown on the CASBO listing.",
+    "profile": {
+      "address": "2136 Ford Parkway #5208, Saint Paul, MN 55116",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello@zeneducate.com",
+      "headquarters": "Saint Paul, MN",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Zen Educate is a company that runs an online staffing platform connecting schools and districts with substitute teachers, teaching assistants and paraprofessionals. It offers short- and long-term placements, including special education aides.",
+      "website": "https://www.zeneducate.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Zen Educate",
+        "url": "https://www.zeneducate.com/us"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address"
+        ],
+        "title": "Substitute Teacher & School Staffing Solutions",
+        "url": "https://www.zeneducate.com/us/schools"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Zen Educate - California Association of School Business Officials",
+        "url": "https://www.casbo.org/buyers-guide/zen-educate/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "v-009413",
+    "notes": "Zen Educate Inc. at a Saint Paul, MN address matches the agenda name and city, and its special education aide/paraprofessional staffing fits the Special Education services agreement. Email, address, website and the neutral summary are confirmed on the cited pages (long-term assignments are mentioned there).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

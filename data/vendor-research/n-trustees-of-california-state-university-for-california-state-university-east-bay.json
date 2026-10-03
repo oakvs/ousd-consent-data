@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.csueastbay.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.csueastbay.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.csueastbay.edu/cssc/prospective-cred-student/multiple-subject.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-trustees-of-california-state-university-for-california-state-university-east-bay",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'The Trustees of the California State University for California State University East Bay'; the university's own site footer names 'Trustees of the California State University' as the legal entity",
+      "Agenda gives Hayward, CA; California State University, East Bay's main campus is at 25800 Carlos Bee Boulevard, Hayward, CA 94542",
+      "University runs teaching credential programs with field placements in local schools, matching an 'Intern Partnership Practica Programs K-12' agreement with OUSD Talent/Human Resources"
+    ],
+    "key": "n-trustees-of-california-state-university-for-california-state-university-east-bay",
+    "notes": "Contracting entity is the Trustees of the California State University, acting for the East Bay campus. Contact details are the campus main line and address. No general email found on the cited pages; registry IDs not sought for a public university.",
+    "profile": {
+      "address": "25800 Carlos Bee Boulevard, Hayward, CA 94542",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Hayward, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 885-3000",
+      "samUei": null,
+      "summary": "California State University, East Bay is a public university in the California State University system. It has a main campus in Hayward and a center in Concord, and offers bachelor's degrees, master's degrees and teaching credentials to students across the East Bay region.",
+      "website": "https://www.csueastbay.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Cal State East Bay",
+        "url": "https://www.csueastbay.edu/about/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "California State University, East Bay",
+        "url": "https://www.csueastbay.edu/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Multiple Subject Credential Program",
+        "url": "https://www.csueastbay.edu/cssc/prospective-cred-student/multiple-subject.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-trustees-of-california-state-university-for-california-state-university-east-bay",
+    "notes": "The agenda entity (Trustees of the CSU for CSU East Bay, Hayward) matches the university's site footer and Hayward campus. The About page confirms the address, phone, Concord center and degree and credential offerings, and the credential page confirms school field placements. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

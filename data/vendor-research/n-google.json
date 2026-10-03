@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://play.google/developer-distribution-agreement.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://about.google/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-google",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Google, Inc.' in Mountain View, CA; Google's Terms of Service and Play Developer Distribution Agreement name Google LLC with principal place of business at 1600 Amphitheatre Parkway, Mountain View, CA (Google, Inc. converted to Google LLC in 2017)",
+      "The agenda item is the 'Google Play Developer Distribution Agreement', whose published text names Google LLC as a contracting entity",
+      "Google's own site describes technology products and services, matching OUSD's 'Technology' category"
+    ],
+    "key": "n-google",
+    "notes": "Agenda says 'Google, Inc.'; the current legal entity is Google LLC (Delaware). Phone, email, registry IDs not confirmed from fetched pages, so left null.",
+    "profile": {
+      "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Mountain View, CA",
+      "legalName": "Google LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Google is a technology company that makes web search, email, mobile software, cloud computing, and other online products and services. It also runs the Google Play app store, where developers can distribute apps under the Google Play Developer Distribution Agreement.",
+      "website": "https://about.google/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Google Play Developer Distribution Agreement",
+        "url": "https://play.google/developer-distribution-agreement.html"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Google - About Google, Our Culture & Company News",
+        "url": "https://about.google/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-google",
+    "notes": "The agenda item is the Google Play Developer Distribution Agreement with 'Google, Inc.' in Mountain View. The agreement names Google LLC at 1600 Amphitheatre Parkway, Mountain View, CA 94043, which is the successor entity, so this is the same organization. The summary is neutral and consistent with the cited pages (Search, Workspace, Cloud, Google Play distribution), though the page text I fetched did not explicitly mention email or mobile software.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

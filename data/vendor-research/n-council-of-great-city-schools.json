@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cgcs.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/362481232",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cgcs.org/about-cgcs/member-districts",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-council-of-great-city-schools",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Council Of The Great City Schools', Washington, DC (ProPublica Nonprofit Explorer, EIN 36-2481232)",
+      "Located in Washington, D.C., matching the agenda text",
+      "CGCS website describes a coalition of large urban public school systems providing governance and leadership assistance, matching OUSD's 'Governance & board business' agreement",
+      "CGCS member districts page lists Oakland Unified School District as a member"
+    ],
+    "key": "n-council-of-great-city-schools",
+    "notes": null,
+    "profile": {
+      "address": "1331 Pennsylvania Avenue, NW, Ste 1100N, Washington, DC 20004",
+      "caEntityNumber": null,
+      "ein": "36-2481232",
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "Council Of The Great City Schools",
+      "orgType": "nonprofit",
+      "phone": "202-393-2427",
+      "samUei": null,
+      "summary": "A nonprofit coalition of large urban public school systems in the United States. It provides legislative advocacy, communications, research and technical assistance to help member districts improve student achievement, professional development, leadership and governance.",
+      "website": "https://www.cgcs.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "About CGCS - Council of the Great City Schools",
+        "url": "https://www.cgcs.org/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Council Of The Great City Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/362481232"
+      },
+      {
+        "supports": [],
+        "title": "Member Districts - Council of the Great City Schools",
+        "url": "https://www.cgcs.org/about-cgcs/member-districts"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-council-of-great-city-schools",
+    "notes": "CGCS is a Washington, DC coalition of large urban districts that lists Oakland USD as a member, matching the governance agreement; ProPublica confirms the 501(c)(3) and EIN 36-2481232. Address, phone, website and the neutral summary are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

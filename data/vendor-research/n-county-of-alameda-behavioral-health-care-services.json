@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/behavioral-health-department/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/contact-us-bh/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-county-of-alameda-behavioral-health-care-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Alameda County Behavioral Health (formerly Behavioral Health Care Services) is a department of the Alameda County Health Agency, matching the agenda's 'Alameda County Health Care Services Agency' contract title",
+      "Official county page lists 1000 San Leandro Blvd., Suite 300, San Leandro, CA 94577, matching the agenda location San Leandro, CA",
+      "The department page describes School Based Behavioral Health Services for students, consistent with a special education-related contract with a school district"
+    ],
+    "key": "n-county-of-alameda-behavioral-health-care-services",
+    "notes": "Agenda lists San Leandro, CA; the county Health Agency's San Leandro office (1000 San Leandro Blvd., Suite 300) is shown on county pages, while the Behavioral Health main office on the contact page is in Oakland. Public agency, so no EIN/CA entity number/UEI. Legal name left null (county department).",
+    "profile": {
+      "address": "2000 Embarcadero Cove, Suite 400, Oakland, California 94606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 567-8100",
+      "samUei": null,
+      "summary": "Alameda County Behavioral Health is the county department that provides mental health and substance use services for people with Medi-Cal and for people without insurance. Its services include programs for children and young adults, adults and older adults, crisis response, and substance use treatment and prevention. It also provides school-based behavioral health services.",
+      "website": "https://health.alamedacountyca.gov/department/behavioral-health-department/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Alameda County Behavioral Health Department",
+        "url": "https://health.alamedacountyca.gov/department/behavioral-health-department/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Behavioral Health",
+        "url": "https://health.alamedacountyca.gov/contact-us-bh/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-county-of-alameda-behavioral-health-care-services",
+    "notes": "The agenda vendor name is the Alameda County Behavioral Health Care Services department (now Alameda County Behavioral Health), and the cited county pages confirm the summary, school-based services, the Oakland main office address and phone (510) 567-8100. The San Leandro agenda location matches the Health Agency's San Leandro headquarters, and the profile's notes disclose that the main office is in Oakland.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

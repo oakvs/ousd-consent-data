@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://dcac.berkeley.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dcac.berkeley.edu/partnerships/school-partners",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-destination-college-advising-corps",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the UC Berkeley Destination College Advising Corps (DCAC) website, run by UC Berkeley's Center for Educational Partnerships",
+      "The DCAC school-partners page lists Castlemont High School (Oakland), matching the agenda item about Castlemont High School",
+      "DCAC places College Adviser Fellows in schools, matching OUSD's 'Classroom & academic programs' category and the Measures N and H College and Career Readiness context"
+    ],
+    "key": "n-destination-college-advising-corps",
+    "notes": "This is a program of UC Berkeley (The Regents of the University of California), not a separate nonprofit; no ProPublica listing exists under this name. Legal name, EIN, CA entity number and UEI left null for that reason. Other UC campuses/chapters use similar names, but the Castlemont High School listing ties the Berkeley chapter to Oakland.",
+    "profile": {
+      "address": "Destination College Advising Corps, University of California, Berkeley, 1 Hearst Field Annex, Building C50, Berkeley, CA 94720-1060",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "dcac@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "Destination College Advising Corps is a University of California, Berkeley program that places recent college graduates in high schools as full-time College Adviser Fellows. The advisers help low-income, first-generation and underrepresented students prepare for and apply to college. It operates under UC Berkeley's Center for Educational Partnerships.",
+      "website": "https://dcac.berkeley.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Destination College Advising Corps - UC Berkeley",
+        "url": "https://dcac.berkeley.edu/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "School Partners - Destination College Advising Corps",
+        "url": "https://dcac.berkeley.edu/partnerships/school-partners"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-destination-college-advising-corps",
+    "notes": "The UC Berkeley DCAC site lists Castlemont High School (Oakland) as a school partner, matching the agenda item. Summary, website, generic program email, address and orgType are all shown on the cited homepage, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

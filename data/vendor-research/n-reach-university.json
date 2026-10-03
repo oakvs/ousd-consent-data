@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/271274290",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://reach.edu/about-reach",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://reach.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-reach-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Reach University' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 27-1274290), matching the agenda's Oakland, CA",
+      "Reach's own blog names Oakland Unified School District as a Reach partner K-12 district for its teacher intern credential program, consistent with a Talent/Human Resources MOU for staff and hiring",
+      "WSCUC accreditation page lists Reach University at 1221 Preservation Park Way, Oakland, CA, the same address as Reach's own Contact page"
+    ],
+    "key": "n-reach-university",
+    "notes": "Phone and email omitted (no general phone on contact page; only department inboxes). OUSD partnership signal is from reach.edu blog 'announcement-a-no-to-low-cost-pathway-to-become-a-credentialed-teacher-in-alameda-county-californ'.",
+    "profile": {
+      "address": "1221 Preservation Park Way, Suite 100, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "27-1274290",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Reach University",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Reach University is a nonprofit, accredited university based in Oakland, California. It offers work-embedded 'Apprenticeship Degree' programs and teacher credential programs so that school staff can earn degrees and credentials while working in schools.",
+      "website": "https://reach.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Reach University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/271274290"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Our Reach",
+        "url": "https://reach.edu/about-reach"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Reach University",
+        "url": "https://reach.edu/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-reach-university",
+    "notes": "Reach University is an Oakland-based accredited 501(c)(3) (ProPublica EIN 27-1274290; reach.edu contact page address matches), and its blog names Oakland Unified as a partner district for its teacher credential program, consistent with a Talent/HR MOU. Summary, address, EIN, website and org type are all supported by the cited sources and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

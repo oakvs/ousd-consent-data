@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/250965219",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.air.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.air.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-american-institutes-for-research",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'American Institutes for Research (AIR)' in Arlington, VA; ProPublica Nonprofit Explorer lists 'American Institutes For Research In The Behavioral Sciences' in Arlington, VA (EIN 25-0965219), and AIR's contact page gives 1400 Crystal Drive, Arlington, VA",
+      "AIR describes itself as a nonprofit that conducts behavioral and social science research and technical assistance in education, matching an OUSD Research, Assessment, and Data Department data-sharing agreement",
+      "AIR has published research studies involving Oakland Unified School District (fiscal study of charter and district schools in Oakland)"
+    ],
+    "key": "n-american-institutes-for-research",
+    "notes": "Legal name per IRS/ProPublica differs from the trade name AIR. Fiscal-sponsor filings not checked; no CA or SAM IDs sought.",
+    "profile": {
+      "address": "1400 Crystal Drive, 10th Floor, Arlington, VA 22202-3289",
+      "caEntityNumber": null,
+      "ein": "25-0965219",
+      "email": null,
+      "headquarters": "Arlington, VA",
+      "legalName": "American Institutes For Research In The Behavioral Sciences",
+      "orgType": "nonprofit",
+      "phone": "(202) 403-5000",
+      "samUei": null,
+      "summary": "American Institutes for Research (AIR) is a nonprofit, nonpartisan organization founded in 1946. It conducts behavioral and social science research and provides technical assistance on education, workforce development, health and community services in the United States and abroad.",
+      "website": "https://www.air.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "American Institutes For Research In The Behavioral Sciences - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/250965219"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About AIR - American Institutes for Research",
+        "url": "https://www.air.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact AIR - American Institutes for Research",
+        "url": "https://www.air.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-american-institutes-for-research",
+    "notes": "Agenda names AIR in Arlington, VA, matching ProPublica (EIN 25-0965219, Arlington VA) and air.org's HQ address; a research data-sharing agreement fits AIR's work. Name, nonprofit status, 1946 founding, research focus, address and phone are confirmed by the cited pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

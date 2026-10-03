@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ucop.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.universityofcalifornia.edu/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://compass.ucop.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-california-office-of-president",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The University of California Office of the President (UCOP) is the systemwide administrative headquarters of the University of California, at 1111 Franklin Street, Oakland, CA (ucop.edu), matching the agenda name",
+      "The agenda item is for the Transcript Evaluation Service (TES), now called UC Compass, which UC Compass's own site says is run by UC's central administration (UCOP) and serves California school districts at little to no cost, matching the 'No-Cost' / 'No Fiscal Impact' agreement",
+      "The service evaluates high school transcripts for A-G (UC/CSU course) requirements, consistent with OUSD's 'Classroom & academic programs' category and the Chief Academic Officer as presenting office"
+    ],
+    "key": "n-university-of-california-office-of-president",
+    "notes": "Public university system administrative office; no CA SOS or nonprofit registry ID applies. Phone, email, legal name, EIN and UEI left null (no exact match on cited pages). The contracting entity on UC agreements is typically The Regents of the University of California.",
+    "profile": {
+      "address": "1111 Franklin Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The University of California Office of the President is the systemwide administrative headquarters of the University of California, a public university system with 10 campuses, 6 academic health centers and 3 national laboratories. The system serves more than 300,000 students. The Office of the President supports the system's president and also runs systemwide programs such as UC Compass (formerly the Transcript Evaluation Service), which provides A-G course completion data to California school districts.",
+      "website": "https://www.ucop.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "University of California Office of the President",
+        "url": "https://www.ucop.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About us | University of California",
+        "url": "https://www.universityofcalifornia.edu/about-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Compass",
+        "url": "https://compass.ucop.edu/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-university-of-california-office-of-president",
+    "notes": "UCOP at 1111 Franklin St, Oakland is the entity named in the agenda, and the TES agreement (now UC Compass, run by UC and offered at little to no cost) fits the No Fiscal Impact item. Summary figures (10 campuses, 6 health centers, 3 labs, 300,000+ students), address and website are confirmed by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

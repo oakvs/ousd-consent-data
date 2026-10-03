@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.brainpop.com/discover/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.brainpop.com/discover/terms-of-use",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ny/new-york/profile/home-schooling-materials/brainpop-llc-0121-133965",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-brainpop",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches 'BrainPOP LLC', a New York-based educational technology company (BBB profile, New York, NY)",
+      "BrainPOP's own privacy policy lists a BrainPOP ELL product line, matching the agenda's English Language Learner and Multilingual Achievement (ELLMA) Department contract",
+      "Educational classroom content matches OUSD's 'Classroom & academic programs' category",
+      "Agenda gives Mount Kisco, NY; the company's published headquarters is in New York City, NY (same state). A Mount Kisco address was not confirmed on any official or registry page"
+    ],
+    "key": "n-brainpop",
+    "notes": "Agenda location is Mount Kisco, NY, but official BrainPOP pages and BBB show 71 W 23rd St, New York, NY. A web search surfaced a Mount Kisco address for BrainPOP LLC (likely a billing/remit address) but it was not confirmed on a fetched page. Same company by name and product fit, but location not fully reconciled, so medium. No registry IDs found (not a nonprofit; SOS and SAM.gov not checked). Only legal@, privacy@ and security@ emails are published, so email left null.",
+    "profile": {
+      "address": "71 W 23rd Street, 17th Floor, New York, NY 10010",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "BrainPOP LLC",
+      "orgType": "company",
+      "phone": "866-542-7246",
+      "samUei": null,
+      "summary": "BrainPOP is an educational technology company that makes animated movies and interactive learning activities for schools and families. Its products include BrainPOP for grades 3 to 8 and up, BrainPOP Jr. for younger students, BrainPOP Science and BrainPOP ELL for English language learners.",
+      "website": "https://www.brainpop.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "headquarters",
+          "phone",
+          "address"
+        ],
+        "title": "BrainPOP Privacy Policy",
+        "url": "https://www.brainpop.com/discover/privacy-policy"
+      },
+      {
+        "supports": [
+          "website",
+          "legalName",
+          "orgType"
+        ],
+        "title": "BrainPOP Terms of Use",
+        "url": "https://www.brainpop.com/discover/terms-of-use"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "BrainPOP LLC - BBB profile",
+        "url": "https://www.bbb.org/us/ny/new-york/profile/home-schooling-materials/brainpop-llc-0121-133965"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": null
+}

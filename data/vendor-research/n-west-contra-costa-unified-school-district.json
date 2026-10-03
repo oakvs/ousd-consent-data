@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.wccusd.net/about-us/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wccusd.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wccusd.net/departments-and-areas/special-education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-west-contra-costa-unified-school-district",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "District's official site (wccusd.net) lists a Richmond, CA address, matching the agenda location 'Richmond, CA'",
+      "District's Special Education page describes its own SELPA (Special Education Local Plan Area) and a Transition Program for ages 18 to 22, matching the agenda's SELPA Young Adult Program MOU",
+      "Name matches exactly: West Contra Costa Unified School District"
+    ],
+    "key": "n-west-contra-costa-unified-school-district",
+    "notes": "Public school district; registry IDs (EIN, CA SOS, SAM) not applicable or not sought. Phone is the main switchboard per the Contact Us page.",
+    "profile": {
+      "address": "1108 Bissell Avenue, Richmond, CA 94801",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Richmond, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 231-1100",
+      "samUei": null,
+      "summary": "A public school district in western Contra Costa County, California, serving more than 29,000 students in 54 schools across five communities. It provides kindergarten through 12th grade education. It runs its own Special Education Local Plan Area (SELPA) and special education programs, including a transition program for young adults ages 18 to 22.",
+      "website": "https://www.wccusd.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - West Contra Costa Unified School District",
+        "url": "https://www.wccusd.net/about-us/contact-us"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Home - West Contra Costa Unified School District",
+        "url": "https://www.wccusd.net/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Special Education Home",
+        "url": "https://www.wccusd.net/departments-and-areas/special-education"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-west-contra-costa-unified-school-district",
+    "notes": "Name, Richmond CA location, SELPA and 18-22 transition program on the district's own pages match the MOU item. The contact page supports address, phone, and the 29,000 students / 54 schools / five communities figures; the home page lists a different enrollment count (24,000) and pre-K through 12, a minor discrepancy that does not make the summary wrong.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

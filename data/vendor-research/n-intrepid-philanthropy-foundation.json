@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/300527867",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lightawards.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lightawards.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-intrepid-philanthropy-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) private foundation: 'Intrepid Philanthropy Foundation', San Francisco, CA, EIN 30-0527867 (ProPublica Nonprofit Explorer)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "The foundation runs the LIGHT Awards program (lightawards.org), matching the OUSD funding source 'LIGHT Awards Program, Intrepid Philanthropy Foundation'",
+      "LIGHT Awards funds teacher-designed professional learning projects, matching OUSD's 'Classroom & academic programs' grants to school sites"
+    ],
+    "key": "n-intrepid-philanthropy-foundation",
+    "notes": "Phone, street address, CA entity number and SAM UEI not found. Email is the LIGHT Awards program inbox (a program of the foundation).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "30-0527867",
+      "email": "info@lightawards.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Intrepid Philanthropy Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private family foundation based in San Francisco that gives grants to support education in the Bay Area. It runs the LIGHT Awards program, which gives teams of California teachers multi-year grants to design their own professional learning projects.",
+      "website": "https://lightawards.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Intrepid Philanthropy Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/300527867"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "About - LIGHT Awards",
+        "url": "https://lightawards.org/about/"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Contact - LIGHT Awards",
+        "url": "https://lightawards.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-intrepid-philanthropy-foundation",
+    "notes": "Same organization: ProPublica shows Intrepid Philanthropy Foundation, San Francisco, EIN 30-0527867, and lightawards.org states LIGHT Awards is a program of it, matching the OUSD grant agreements. The summary says the grants are 'multi-year', which none of the cited pages (about, eligibility) support, and it says 'California teachers' where eligibility is limited to listed Northern California counties; other fields (legalName, ein, orgType, website, email, headquarters) are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

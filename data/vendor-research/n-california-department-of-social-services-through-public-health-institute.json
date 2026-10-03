@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cdss.ca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdss.ca.gov/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-social-services-through-public-health-institute",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the California Department of Social Services, a uniquely named state agency whose official site is cdss.ca.gov (Sacramento).",
+      "The Public Health Institute's Center for Immigrant and Refugee Health (CIRH) page on Afghan and Ukrainian refugee students lists CDSS and PHI as partners and a CDSS Office of Immigrant Youth speaker, matching the 'Afghan Refugee School Impact' award funded through the Public Health Institute.",
+      "CDSS administers refugee and immigrant youth programs, consistent with OUSD's 'Student health, support & family services' and English Language Learner and Multilingual Achievement Office contract."
+    ],
+    "key": "n-california-department-of-social-services-through-public-health-institute",
+    "notes": "OUSD's agenda lists CDSS as the source of the award, passed through the Public Health Institute (a separate nonprofit, not profiled here). The contact page's email (piar@dss.ca.gov) is the department's public information inbox. CDSS-PHI-ARSI link is corroborated only by the PHI/CIRH news page listing both as partners; the ACF allocation PDF could not be fetched.",
+    "profile": {
+      "address": "744 P Street, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "piar@dss.ca.gov",
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Social Services",
+      "orgType": "public_agency",
+      "phone": "(916) 651-8848",
+      "samUei": null,
+      "summary": "The California Department of Social Services is a California state agency that administers social service programs serving more than eight million Californians. These include cash assistance, CalFresh food benefits, In-Home Supportive Services, foster care and child welfare, and community care licensing.",
+      "website": "https://www.cdss.ca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "California Department of Social Services",
+        "url": "https://www.cdss.ca.gov/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact Us - California Department of Social Services",
+        "url": "https://www.cdss.ca.gov/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-03",
+  "review": {
+    "key": "n-california-department-of-social-services-through-public-health-institute",
+    "notes": "The agenda names the California Department of Social Services as the funder (passed through the Public Health Institute) for an Afghan Refugee School Impact award; the cited CDSS home and contact pages support the summary (more than eight million people served, CalFresh, IHSS, foster care, licensing, cash assistance), phone, general-inquiries email, address and headquarters. The pass-through link to PHI was not independently confirmed, but the profile correctly describes the agency the agenda names.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
