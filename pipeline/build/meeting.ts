@@ -197,7 +197,7 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
     // Blocked items publish official text only (§9, WF-4).
     if (status === 'blocked') published = null
 
-    const derived = deriveFlags({ meetingDate, text: item.text, history: item.history, enrichment: published, sourceIssue })
+    const derived = deriveFlags({ meetingDate, title: item.title, text: item.text, history: item.history, enrichment: published, sourceIssue })
     const pulled = reportAction ? null : describePulled(item.history, meetingDate, raw.eventId)
     const present = new Set<string>([...derived, ...(published?.flags ?? []), ...(pulled ? ['pulled_from_consent'] : [])])
     const flags = FLAG_ORDER.filter(f => present.has(f))

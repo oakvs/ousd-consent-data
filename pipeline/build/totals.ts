@@ -18,6 +18,8 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
     revenueTotal: 0,
     revenueItems: 0,
     decreaseTotal: 0,
+    paymentsRatifiedTotal: 0,
+    paymentsRatifiedItems: 0,
     flagCounts: {},
     byCategory: {},
   }
@@ -28,6 +30,13 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
     if (!e) continue
     totals.enrichedItems++
     if (!item.countsTowardTotals) continue
+    if (item.flags.includes('payment_ratification')) {
+      if (e.money.thisAction) {
+        totals.paymentsRatifiedTotal += e.money.thisAction
+        totals.paymentsRatifiedItems++
+      }
+      continue
+    }
     const { money } = e
 
     const spend = spendingAmount(money)
@@ -56,6 +65,7 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
   totals.yearlyCapsTotal = cents(totals.yearlyCapsTotal)
   totals.revenueTotal = cents(totals.revenueTotal)
   totals.decreaseTotal = cents(totals.decreaseTotal)
+  totals.paymentsRatifiedTotal = cents(totals.paymentsRatifiedTotal)
   for (const bucket of Object.values(totals.byCategory)) bucket.spending = cents(bucket.spending)
   return totals
 }

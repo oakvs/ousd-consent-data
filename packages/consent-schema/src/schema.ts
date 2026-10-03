@@ -63,6 +63,7 @@ export const DerivedFlag = z.enum([
   'yearly_cap',
   'no_total_stated',
   'pulled_from_consent',
+  'payment_ratification',
 ])
 export type TDerivedFlag = z.infer<typeof DerivedFlag>
 
@@ -413,6 +414,12 @@ export const Totals = z.object({
   revenueTotal: z.number(),
   revenueItems: z.number(),
   decreaseTotal: z.number(),
+  /**
+   * Payroll and accounts-payable warrants the Board ratifies after they're paid. Kept out of
+   * spendingTotal: the payments were made under contracts and salaries approved elsewhere.
+   */
+  paymentsRatifiedTotal: z.number(),
+  paymentsRatifiedItems: z.number(),
   flagCounts: z.record(z.string(), z.number()),
   byCategory: z.record(z.string(), z.object({ items: z.number(), spending: z.number() })),
 })

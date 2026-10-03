@@ -5,6 +5,7 @@ import type { TDerivedFlag, TEnrichment, THistoryEntry } from '@oakvs/consent-sc
 
 export type TDerivedFlagInput = {
   meetingDate: string
+  title?: string
   text: string
   history: THistoryEntry[]
   enrichment: TEnrichment | null
@@ -12,6 +13,9 @@ export type TDerivedFlagInput = {
 }
 
 const DELAY = /postpon|fail|continued/i
+
+/** "Accounts Payable Warrants - Fiscal Year …", "Payroll Warrants and Direct Deposits - …". */
+export const PAYMENT_RATIFICATION = /^\s*(accounts\s+payable|payroll)\s+warrants?\b/i
 const MULTI_YEAR_DAYS = 400 // a little over 13 months
 
 function daysBetween(start: string, end: string): number {
@@ -42,6 +46,7 @@ export function deriveFlags(input: TDerivedFlagInput): TDerivedFlag[] {
 
   if (previouslyDelayed(input.history, input.meetingDate)) flags.push('previously_delayed')
   if (input.sourceIssue) flags.push('source_issue')
+  if (input.title && PAYMENT_RATIFICATION.test(input.title)) flags.push('payment_ratification')
   if (!enrichment) return flags
 
   const { money, term } = enrichment

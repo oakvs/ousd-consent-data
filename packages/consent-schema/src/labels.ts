@@ -66,6 +66,11 @@ export const ACTION_LABELS: Record<TActionType, string> = {
 export type TFlagTone = 'warn' | 'crit' | 'info'
 
 export const FLAG_LABELS: Record<TFlag, { label: string; explain: string; tone: TFlagTone }> = {
+  payment_ratification: {
+    label: 'Ratifies payments already made',
+    explain: 'Payroll or vendor checks the district has already paid, under contracts and salaries approved elsewhere. Shown here but not counted as new spending.',
+    tone: 'info',
+  },
   pulled_from_consent: {
     label: 'Voted on separately',
     explain: 'Taken off the single consent-report vote: voted on separately, or withdrawn, referred, postponed or decided at a later meeting. From Legistar\u2019s official record.',
@@ -158,6 +163,7 @@ export const JARGON = Object.keys(JARGON_EXPANSIONS)
 /** Display and publish order for flags. */
 export const FLAG_ORDER: readonly TFlag[] = [
   'pulled_from_consent',
+  'payment_ratification',
   'after_work_began',
   'no_competitive_bid',
   'raises_existing_contract',

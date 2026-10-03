@@ -216,3 +216,29 @@ describe('stray spaces in printed amounts', () => {
     expect(amountInText(1234, 'grades 1, 234 and more')).toBe(false)
   })
 })
+
+describe('payment ratifications', () => {
+  const base = { meetingDate: '2024-01-24', text: 'Ratification by the Board of Education of…', history: [], sourceIssue: null }
+
+  it('flags payroll and accounts-payable warrant ratifications by title', () => {
+    const e = makeEnrichment({ money: { direction: 'expense', thisAction: 342_551_495.01 } })
+    for (const title of [
+      'Accounts Payable Warrants - Fiscal Year 2022-2023 - As of May 31, 2023',
+      'Payroll Warrants and Direct Deposits— Fiscal Year 2023-2024 - As of December 31, 2023',
+      'Payroll Warrants - Fiscal Year 2024-2025 - October 2024 - May 2025 - Chief Business Officer',
+    ]) expect(deriveFlags({ ...base, title, enrichment: e })).toContain('payment_ratification')
+    expect(deriveFlags({ ...base, title: 'Professional Services Contract - Payroll Consultant', enrichment: e })).not.toContain('payment_ratification')
+  })
+
+  it('keeps ratified payments out of spending and totals them separately', async () => {
+    const { computeTotals } = await import('../build/totals')
+    const item = (flags: string[], thisAction: number) => ({
+      flags, countsTowardTotals: true,
+      enrichment: makeEnrichment({ money: { direction: 'expense', amountType: 'fixed', thisAction } }),
+    }) as unknown as Parameters<typeof computeTotals>[0][number]
+    const t = computeTotals([item(['payment_ratification'], 300_000_000), item([], 50_000)])
+    expect(t.spendingTotal).toBe(50_000)
+    expect(t.paymentsRatifiedTotal).toBe(300_000_000)
+    expect(t.paymentsRatifiedItems).toBe(1)
+  })
+})
