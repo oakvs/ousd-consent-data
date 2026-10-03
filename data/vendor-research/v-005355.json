@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/330522594",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.avid.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ufsa.ousd.org/academics/avid",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005355",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Avid Center', San Diego, CA, EIN 33-0522594 (ProPublica Nonprofit Explorer)",
+      "Located in San Diego, CA, matching the agenda text",
+      "avid.org describes AVID (Advancement Via Individual Determination), a college-readiness program for K-12 schools, matching OUSD's 'Classroom & academic programs' and 'AVID Center' contract titles",
+      "OUSD's United for Success Academy page describes an AVID program at the school, matching the 'United for Success Academy' contract"
+    ],
+    "key": "v-005355",
+    "notes": "Phone is displayed on avid.org as 1-833-AVID-CARE; the same number is its tel: link 1-833-284-3227.",
+    "profile": {
+      "address": "5187 College Ave, Ste. 163, San Diego, CA 92115",
+      "caEntityNumber": null,
+      "ein": "33-0522594",
+      "email": "AVIDCare@avid.org",
+      "headquarters": "San Diego, CA",
+      "legalName": "Avid Center",
+      "orgType": "nonprofit",
+      "phone": "1-833-284-3227",
+      "samUei": null,
+      "summary": "AVID Center is a nonprofit based in San Diego that provides the AVID (Advancement Via Individual Determination) college and career readiness program to K-12 schools. It trains teachers and supplies curriculum and support to schools in the United States and abroad.",
+      "website": "https://www.avid.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Avid Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/330522594"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "AVID",
+        "url": "https://www.avid.org"
+      },
+      {
+        "supports": [],
+        "title": "AVID - United For Success - Oakland Unified School District",
+        "url": "https://ufsa.ousd.org/academics/avid"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-005355",
+    "notes": "ProPublica confirms Avid Center is a San Diego 501(c)(3) (EIN 33-0522594), matching the agenda city; avid.org shows the phone, generic AVIDCare email, College Ave address and US/international K-12 reach, and OUSD's UFSA page confirms the AVID program. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

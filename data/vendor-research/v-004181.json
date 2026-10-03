@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/474616102",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://talkingpts.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://talkingpts.org/case-study/oakland-unified-school-district-pilot-program/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004181",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Talkingpoints' (ProPublica Nonprofit Explorer, EIN 47-4616102), located in San Francisco, CA, matching the agenda's San Francisco, CA location",
+      "Website describes a family-school communication and translation platform, matching OUSD's Technology and Partnerships & data sharing contracts for a student data privacy agreement and software services",
+      "TalkingPoints' own case study describes an Oakland Unified School District pilot program in over 20 schools"
+    ],
+    "key": "v-004181",
+    "notes": "Agenda also lists Pleasant Hill, CA; ProPublica lists San Francisco. No phone, mailing address, CA entity number or UEI confirmed, so left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "47-4616102",
+      "email": "info@talkingpts.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Talkingpoints",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "TalkingPoints is a nonprofit education technology organization that builds family-school partnerships. Its platform lets teachers and families send two-way messages that are automatically translated into many languages, and it offers tools for family engagement and attendance.",
+      "website": "https://talkingpts.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Talkingpoints - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/474616102"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "orgType"
+        ],
+        "title": "About us - TalkingPoints",
+        "url": "https://talkingpts.org/about-us/"
+      },
+      {
+        "supports": [],
+        "title": "Translation Helps Oakland Unified Communicate in Over 50 Different Home Languages - TalkingPoints",
+        "url": "https://talkingpts.org/case-study/oakland-unified-school-district-pilot-program/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-004181",
+    "notes": "ProPublica confirms Talkingpoints (EIN 47-4616102, San Francisco, 501(c)(3)); the about page confirms the nonprofit status, platform description, EIN and info@ email, and the case study documents the OUSD pilot, matching the technology/data-sharing contracts. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/mountain-view/study-com-llc",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/mountain-view/profile/online-education/studycom-1216-1000006412",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-study-com",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered California entity 'Study.com, LLC' (California Secretary of State filing data via bizprofile.net, document number 200411010036)",
+      "Principal address in Mountain View, CA, matching the agenda's location 'Mountain View, CA' (bizprofile.net and Better Business Bureau profile both show 100 View St Suite 202, Mountain View, CA 94041)",
+      "Better Business Bureau profile describes Study.com as an online learning platform, consistent with a professional services contract for a Talent / Human Resources department (training and staff development content)"
+    ],
+    "key": "n-study-com",
+    "notes": "study.com blocks automated fetching (HTTP 403), so website, phone and email were not verified from the organization's own pages and are left null. The business-registry details come from a third-party aggregator of California Secretary of State data. The link to the HR/staff-related contract is inferred from the vendor being an online education provider; no page tying it to OUSD was found.",
+    "profile": {
+      "address": "100 View Street Suite 202, Mountain View, CA 94041",
+      "caEntityNumber": "200411010036",
+      "ein": null,
+      "email": null,
+      "headquarters": "Mountain View, CA",
+      "legalName": "Study.com, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Study.com, LLC is a company that runs an online learning platform. It offers video lessons and courses, including high school and college level subjects. It is based in Mountain View, California.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "Study.com, LLC Mountain View, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/mountain-view/study-com-llc"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Study.com - Better Business Bureau",
+        "url": "https://www.bbb.org/us/ca/mountain-view/profile/online-education/studycom-1216-1000006412"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-study-com",
+    "notes": "Registry and BBB pages confirm Study.com, LLC (CA 200411010036), 100 View St Suite 202, Mountain View, and describe it as an online learning platform, matching the agenda location. The summary's claims about video lessons and high school and college level courses appear in neither cited source (study.com itself returns 403), so the summary is not supported as written.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

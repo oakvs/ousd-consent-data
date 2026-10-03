@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.truce.media/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.truce.media/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_co/20191564168",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006653",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact legal-name match: 'Truce Media LCA' is a registered Colorado Limited Cooperative Association (OpenCorporates, entity 20191564168, Good Standing), matching the agenda name including the 'LCA' suffix",
+      "Located in Denver, CO (head office 621 Kalamath St, Denver), matching the agenda's location 'Denver, CO'",
+      "Its own website describes video and film production services, which is consistent with a professional services contract for a classroom/academic media program (weak signal; no public page found mentioning OUSD)"
+    ],
+    "key": "v-006653",
+    "notes": "Registered in Colorado (entity number 20191564168, per OpenCorporates), not California, so caEntityNumber is left null. No public page found that explicitly links Truce Media to OUSD; identity rests on the exact entity name including 'LCA' plus the Denver location. A search listing showed Suite 140 at the same street address, but the company's own contact page and the registry show Suite 62.",
+    "profile": {
+      "address": "621 Kalamath Street Suite 62, Denver, Colorado 80204",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Hi@truce.media",
+      "headquarters": "Denver, CO",
+      "legalName": "Truce Media LCA",
+      "orgType": "company",
+      "phone": "(833) 878-2362",
+      "samUei": null,
+      "summary": "Truce Media is a Denver-based, member-owned film and television production company. It describes its work as 'Fair Trade Filmmaking' and offers professional video production for corporate, nonprofit and individual clients, along with independent film production and distribution.",
+      "website": "https://www.truce.media/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Truce Media",
+        "url": "https://www.truce.media/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Truce Media",
+        "url": "https://www.truce.media/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Truce Media LCA :: Colorado (US) :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_co/20191564168"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006653",
+    "notes": "The agenda name 'Truce Media LCA' with Denver, CO matches the Colorado Limited Cooperative Association registered at 621 Kalamath St Ste 62 (OpenCorporates, Good Standing), and a video production company fits a High School Network professional services contract. The website and contact page confirm the summary, phone, generic business email and address; no page links it to OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://interactive.web.insurance.ca.gov/companyprofile/companyprofile?event=companyProfile&doFunction=getCompanyProfile&eid=3270",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?ID=7433431&GUID=6529207A-D8C4-43C8-96BC-9CF25F79DADF&Options=&Search=",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.chubb.com/content/dam/chubb-sites/chubb-com/us-en/global/global/documents/pdf/licensinginformation.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-ace-american-insurance",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches an insurer licensed in California: ACE American Insurance Company, NAIC 22667, status UNLIMITED-NORMAL (California Department of Insurance company profile)",
+      "OUSD's own board item for 2025-2026 names ACE American Insurance Company as underwriter of OUSD's catastrophic student accident insurance, matching the agenda's 'Catastrophic Accident Insurance for Students' premium payments (Legal, insurance & risk)",
+      "Chubb's company license information lists ACE American Insurance Company as a Pennsylvania-domiciled property and casualty insurer, consistent with the CA record"
+    ],
+    "key": "n-ace-american-insurance",
+    "notes": "Website left null: chubb.com is the parent group's site and does not itself describe this legal entity. The California Department of Insurance lists a California entity ID of 1325-0, which is an insurer license ID rather than a Secretary of State number, so caEntityNumber is null. The Chubb licensing PDF lists a different Philadelphia address (436 Walnut Street per search snippet); the CA DOI address is used.",
+    "profile": {
+      "address": "2000 ARCH ST., PHILADELPHIA, PA 19103",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Philadelphia, PA",
+      "legalName": "ACE American Insurance Company",
+      "orgType": "company",
+      "phone": "800-352-4462",
+      "samUei": null,
+      "summary": "An insurance company based in Philadelphia, Pennsylvania, that writes property and casualty insurance, including accident and health coverage. It is a member of the Chubb group of insurance companies and is licensed to sell insurance in California and many other states.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "ACE American Insurance Company - California Department of Insurance company profile",
+        "url": "https://interactive.web.insurance.ca.gov/companyprofile/companyprofile?event=companyProfile&doFunction=getCompanyProfile&eid=3270"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Oakland Unified School District - File #: 25-1640",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?ID=7433431&GUID=6529207A-D8C4-43C8-96BC-9CF25F79DADF&Options=&Search="
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Chubb Company License Information",
+        "url": "https://www.chubb.com/content/dam/chubb-sites/chubb-com/us-en/global/global/documents/pdf/licensinginformation.pdf"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-ace-american-insurance",
+    "notes": "OUSD's Legistar item 25-1640 names ACE American Insurance Company as underwriter of its catastrophic student accident coverage, matching the agenda; the CA Department of Insurance profile confirms the legal name, address, phone, Pennsylvania domicile and California license (disability and other lines), and Chubb's licensing PDF lists the entity (NAIC 22667) as a Chubb company with P&C authority in all 50 states. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

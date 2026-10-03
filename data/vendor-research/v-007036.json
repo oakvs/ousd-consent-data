@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/pomona/nordecks-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://nordecks.com/pages/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007036",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches California corporation 'Nordecks Inc' (entity 6077427) located in Pomona, CA, matching the agenda's 'Pomona, CA' (bizprofile.net)",
+      "Nordecks sells safety masks and classroom supplies online, consistent with a 2021 PPE (COVID-19) supplies purchase",
+      "CONTRADICTION: the California entity was filed January 29, 2024, but the OUSD award (Bid #21-107CSSO, ESSER II) dates from about 2021, so this may be a successor or unrelated entity"
+    ],
+    "key": "v-007036",
+    "notes": "Not publishable. The only matching entities (Nordecks Inc, CA #6077427, filed 2024-01-29; Nordecks LLC, #202460617523, filed 2024-01-22) were formed years after the 2021 OUSD bid, and no source ties the current business to the 2021 vendor or to OUSD. Name and city match only.",
+    "profile": {
+      "address": "285 E Holt Ave, Pomona, CA 91767",
+      "caEntityNumber": "6077427",
+      "ein": null,
+      "email": "support@nordecks.com",
+      "headquarters": "Pomona, CA",
+      "legalName": "Nordecks Inc",
+      "orgType": "company",
+      "phone": "(818) 312-9176",
+      "samUei": null,
+      "summary": "Nordecks is a California corporation based in Pomona that runs an online store selling safety masks, classroom supplies and related products.",
+      "website": "https://nordecks.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Nordecks Inc Pomona, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/pomona/nordecks-inc"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "Contact Us",
+        "url": "https://nordecks.com/pages/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

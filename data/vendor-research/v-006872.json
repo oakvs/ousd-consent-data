@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2970",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.goarmstrong.com/crownwms/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-006872",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered motor carrier: 'CROWN WORLDWIDE MOVING AND STORAGE LLC' (FMCSA SAFER, Union City, CA, active)",
+      "Bay Area commercial moving company that handles school and facility relocations, consistent with an on-site relocation project at an Oakland high school (LinkedIn/search summaries)",
+      "No source found that directly ties this company to OUSD, and the agenda lists Oakland, CA while public records list San Leandro and Union City, so the match is not fully confirmed"
+    ],
+    "key": "v-006872",
+    "notes": "Crown Worldwide Moving & Storage was rebranded as The Armstrong Company. FMCSA lists Union City, CA; other directories list San Leandro, CA; agenda says Oakland. No direct OUSD link found. Contact fields left null because of this ambiguity. Reviewer should confirm identity from the board item before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "CROWN WORLDWIDE MOVING AND STORAGE LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A moving and relocation company that provides residential, commercial, storage and logistics services. It operates in the San Francisco Bay Area, Sacramento and Los Angeles, among other markets, and now operates under the Armstrong Company name.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType"
+        ],
+        "title": "SAFER Web - Company Snapshot CROWN WORLDWIDE MOVING AND STORAGE LLC",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2970"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Crown is now the Armstrong Company",
+        "url": "https://www.goarmstrong.com/crownwms/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

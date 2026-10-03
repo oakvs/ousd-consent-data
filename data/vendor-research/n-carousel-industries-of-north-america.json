@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ri/exeter/profile/information-technology-services/carousel-industries-of-north-america-inc-0021-107122",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://nwn.ai/locations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-carousel-industries-of-north-america",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: BBB lists 'Carousel Industries of North America, Inc.' at 659 South County Trl, Exeter, RI, described as a technology integrator and managed services provider",
+      "Agenda location (Boston, MA) matches a Boston office at 111 Huntington Avenue listed on the company's current locations page (nwn.ai, successor brand NWN Carousel)",
+      "Business type (technology integrator and managed services) matches OUSD's 'Technology' category and an E-Rate Category 2 equipment procurement"
+    ],
+    "key": "n-carousel-industries-of-north-america",
+    "notes": "Carousel Industries was acquired by NWN Corporation and now operates as 'NWN Carousel'; nwncarousel.com redirects to nwn.ai. The website, phone and address come from NWN's locations page (headquarters listed as Exeter, RI), and the nwn.ai pages fetched do not themselves name Carousel. The acquisition (PE Hub, ChannelE2E) is the link between the two names. No registry IDs were found (SOS and SAM.gov were not checked directly).",
+    "profile": {
+      "address": "659 South County Trail Exeter, RI 02822",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Exeter, RI",
+      "legalName": "Carousel Industries of North America, Inc.",
+      "orgType": "company",
+      "phone": "800-401-0760",
+      "samUei": null,
+      "summary": "A technology integrator and managed services provider. It sells and supports communications, networking, cloud and related technology for businesses and public organizations across the United States. The company is based in Exeter, Rhode Island, and is now part of NWN Corporation.",
+      "website": "https://nwn.ai"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Carousel Industries of North America, Inc. - BBB Profile",
+        "url": "https://www.bbb.org/us/ri/exeter/profile/information-technology-services/carousel-industries-of-north-america-inc-0021-107122"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "NWN Office Locations",
+        "url": "https://nwn.ai/locations"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

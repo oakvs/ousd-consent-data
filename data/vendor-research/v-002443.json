@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ki.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ki.com/about/employee-ownership/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ki.com/customer-service/terms-conditions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/sam-entity/PAZHQEMYTSD8",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002443",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Krueger International, Inc.' in Green Bay, WI; KI's own Terms page names 'Krueger International, Inc (DBA KI)' at 1330 Bellevue Street, Green Bay, WI",
+      "Company manufactures furniture for education and other markets, matching OUSD's 'Award of Purchase Order Contract - Furniture' for the Foster the Center project",
+      "SAM.gov record (via OpenGovUS) shows KRUEGER INTERNATIONAL, INC., Green Bay WI, with building-construction and institutional furniture NAICS codes, matching OUSD's small construction and furniture contracts",
+      "No contradicting entity found; the Wisconsin location matches the agenda text exactly"
+    ],
+    "key": "v-002443",
+    "notes": "Agenda also spells the name 'Kruger International' (typo). No Oakland-specific mention found on public pages; identity rests on name, Green Bay location and furniture/construction line of business. EIN not applicable (for-profit); CA entity number not found (Wisconsin corporation). UEI taken from a third-party mirror of SAM.gov.",
+    "profile": {
+      "address": "1330 Bellevue Street, Green Bay, WI 54302",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@ki.com",
+      "headquarters": "Green Bay, WI",
+      "legalName": "Krueger International, Inc.",
+      "orgType": "company",
+      "phone": "800-424-2432",
+      "samUei": "PAZHQEMYTSD8",
+      "summary": "KI (Krueger International) is a furniture manufacturer based in Green Bay, Wisconsin. It makes seating, tables, desks, storage and other furniture for schools, colleges, healthcare, workplaces and government. The company is owned by its employees.",
+      "website": "https://www.ki.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Contact Us | KI",
+        "url": "https://www.ki.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Employee Ownership | KI",
+        "url": "https://www.ki.com/about/employee-ownership/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone"
+        ],
+        "title": "Terms & Conditions | KI",
+        "url": "https://www.ki.com/customer-service/terms-conditions/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "samUei",
+          "orgType"
+        ],
+        "title": "Krueger International Inc SAM entity",
+        "url": "https://opengovus.com/sam-entity/PAZHQEMYTSD8"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-002443",
+    "notes": "KI's Terms page names Krueger International, Inc (DBA KI) at 1330 Bellevue St, Green Bay, WI, matching the agenda name and location exactly; SAM.gov mirror confirms the legal name, UEI PAZHQEMYTSD8 and construction/institutional furniture NAICS codes that fit OUSD's furniture and small construction contracts. Contact fields, employee ownership and the neutral summary are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

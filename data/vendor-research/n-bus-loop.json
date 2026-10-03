@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.busloopusa.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sfstandard.com/2024/08/25/oakland-students-unsafe-buses-busloop/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-bus-loop",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Busloop (busloopusa.com) is a charter and school transportation company based in Oakland, CA, matching the agenda's 'Oakland, CA' and the 'Transportation Services Department' contract title (SF Standard; SchoolBuys vendor page)",
+      "SF Standard reports Busloop contracts with Oakland Unified School District to transport students to field trips and sporting events",
+      "Busloop's own website describes school routes, charters and shuttle services, matching OUSD's 'Food, transportation & operations' category"
+    ],
+    "key": "n-bus-loop",
+    "notes": "Registry details (California Secretary of State entity number, legal name, address) were not confirmed from a registry page, so left null. Third-party listings give conflicting addresses (Oakland and Ceres). The agenda name is 'Bus Loop LLC'; the company brands itself 'Busloop'. Identity rests on Oakland location, the OUSD contract reported by SF Standard, and matching services.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@busloopusa.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 209-6691",
+      "samUei": null,
+      "summary": "Busloop is a family-owned transportation company in the Bay Area. It runs charter buses, school routes and shuttle services for schools, businesses, organizations and communities in California.",
+      "website": "https://www.busloopusa.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Busloop",
+        "url": "https://www.busloopusa.com/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Oakland school kids rode buses run by company with shocking track record",
+        "url": "https://sfstandard.com/2024/08/25/oakland-students-unsafe-buses-busloop/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-bus-loop",
+    "notes": "The Busloop website supports the summary, org type, phone and generic info@ email. SF Standard confirms Busloop operates from an Oakland bus yard and contracts with OUSD for field trips and sporting events, which fits the agenda's Bus Loop LLC, Oakland, Transportation Services Department. Legal name, address and registry IDs are correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.revolutionfoods.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.revolutionfoods.com/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-revolution-foods",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's own website and privacy policy identify it as Revolution Foods (legal name 'Revolution Foods, PBC'); the agenda says 'Revolution Foods, Inc.'",
+      "Its website describes supplying school meals (K-12 schools and after-school programs), matching OUSD's Child Nutrition School Program funding and 'Nutrition Services Food Contract'",
+      "Better Business Bureau lists a Revolution Foods school-lunch business in Oakland, CA (8393 Capwell Dr), matching the agenda's 'Oakland, CA'"
+    ],
+    "key": "n-revolution-foods",
+    "notes": "Phone, email, address and headquarters left null on purpose. The company site's contact page shows no main phone, general email or street address. BBB lists 8393 Capwell Dr Ste 200, Oakland, CA 94621 with (510) 596-9024, but an April 2025 FDA warning letter lists Revolution Foods, PBC at 5743 Smithway St, Commerce, CA 90040 as its administrative address, so the current headquarters is unclear. Agenda says 'Inc.'; the company now uses 'PBC' (public benefit corporation since 2021). No CA Secretary of State, EIN or SAM.gov record was checked or found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Revolution Foods, PBC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Revolution Foods is a company that makes and delivers meals to K-12 schools, after-school programs and senior centers in California and Nevada. It was founded in 2006 and is a Public Benefit Corporation and Certified B Corporation.",
+      "website": "https://www.revolutionfoods.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Discover our story - Revolution Foods",
+        "url": "https://www.revolutionfoods.com/about/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Revolution Foods Privacy Policy",
+        "url": "https://www.revolutionfoods.com/privacy-policy/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-revolution-foods",
+    "notes": "Revolution Foods (Oakland-founded school meal vendor, now Revolution Foods, PBC) fits the Nutrition Services Food Contract; the about page confirms 2006 founding, B Corp and PBC status, K-12 and senior nutrition, and California/Nevada operations, the homepage confirms after-school programs, and the privacy policy confirms the PBC legal name. The agenda's Inc. versus PBC difference is explained by the 2021 conversion.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

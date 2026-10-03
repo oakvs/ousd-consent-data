@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://gardnercenter.stanford.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156365",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://gardnercenter.stanford.edu/project/oakland-unified-school-district-nations-first-full-service-community-school-district",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004054",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The Gardner Center website (gardnercenter.stanford.edu) is the John W. Gardner Center for Youth and Their Communities at Stanford University, located at 507 Lasuen Mall, Stanford, CA, matching the agenda location 'Stanford, CA'",
+      "Gardner Center project pages describe a long-term research partnership with Oakland Unified School District on community schools, matching OUSD's 'Community Schools and Student Services' contracts",
+      "Stanford University's legal entity is a registered nonprofit in ProPublica Nonprofit Explorer: The Board Of Trustees Of The Leland Stanford Junior University, Stanford, CA, EIN 94-1156365"
+    ],
+    "key": "v-004054",
+    "notes": "The vendor is a center within Stanford University, so the legal name and EIN are those of the university (the contracting legal entity). Website, contact details and summary are for the Gardner Center itself. orgType nonprofit reflects the university's 501(c)(3) status.",
+    "profile": {
+      "address": "507 Lasuen Mall, Stanford, CA 94305-3096",
+      "caEntityNumber": null,
+      "ein": "94-1156365",
+      "email": "gardnercenter@stanford.edu",
+      "headquarters": "Stanford, CA",
+      "legalName": "The Board Of Trustees Of The Leland Stanford Junior University",
+      "orgType": "nonprofit",
+      "phone": "(650) 723-3099",
+      "samUei": null,
+      "summary": "The John W. Gardner Center for Youth and Their Communities is a research center at Stanford University. It does community-engaged research, working in long-term partnerships with school districts and community organizations to study and improve policies and programs that affect young people.",
+      "website": "https://gardnercenter.stanford.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "John W. Gardner Center for Youth and Their Communities",
+        "url": "https://gardnercenter.stanford.edu/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "The Board Of Trustees Of The Leland Stanford Junior University - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156365"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District: The nation's first full-service community school district",
+        "url": "https://gardnercenter.stanford.edu/project/oakland-unified-school-district-nations-first-full-service-community-school-district"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-004054",
+    "notes": "The Gardner Center site confirms the center, address, phone, general email and research-partnership description, matching the agenda's Stanford, CA location. ProPublica confirms the Stanford University legal name, EIN 94-1156365 and 501(c)(3) status. The cited project page documents the Gardner Center's OUSD community schools partnership, which fits the contracted services. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

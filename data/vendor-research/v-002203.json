@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://network.procore.com/p/integral-group-oakland",
+      "pass": true
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.canadianconsultingengineer.com/integral-group-ross-baruzzini-introba/",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-002203",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Procore Network lists 'Integral Group' at 427 13th St, Oakland, CA, matching the agenda location Oakland, CA",
+      "Integral Group is a mechanical, electrical and plumbing engineering and sustainability consulting firm, consistent with OUSD facilities and new-construction consulting contracts",
+      "Integral Group merged with Ross & Baruzzini in 2022 to form Introba; integralgroup.com now redirects to introba.com, so the current public identity differs from the agenda name"
+    ],
+    "key": "v-002203",
+    "notes": "Official site (introba.com) and CA SOS blocked automated access, so no registry ID or legal entity name was verified. Agenda says 'Integral Group, Inc.'; the legal entity type and whether it is now part of Introba could not be confirmed. Oakland headquarters rests on a directory listing only. Not publishable without registry confirmation.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Integral Group was a building engineering and consulting firm based in Oakland, California, focused on sustainable design. In 2022 it combined with Ross & Baruzzini under the new brand Introba, which offers plumbing, mechanical, electrical and fire protection engineering and sustainability consulting.",
+      "website": "https://introba.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "headquarters"
+        ],
+        "title": "Integral Group - Procore Network",
+        "url": "https://network.procore.com/p/integral-group-oakland"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Integral Group + Ross & Baruzzini = Introba",
+        "url": "https://www.canadianconsultingengineer.com/integral-group-ross-baruzzini-introba/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

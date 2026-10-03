@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=138172",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/storer-transportation-service-10157564/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://storercoachways.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://storercoachways.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-storer-transportation-service",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "FMCSA SAFER snapshot (USDOT 138172): legal name 'STORER TRANSPORTATION SERVICE', DBA 'STORER COACHWAYS STORER SAN FRANCISCO', matching the agenda name and its San Francisco, CA location",
+      "Storer Coachways website describes student transportation and charter bus service, with San Francisco Bay Area and Oakland listed as service areas, matching OUSD's 'Transportation Services Department' services agreement",
+      "Federal registration (HigherGov, SAM.gov data) lists the same legal name 'STORER TRANSPORTATION SERVICE' as a for-profit corporation with UEI T34JSX3XENY9, and the phone number (209) 521-8250 is the same on the FMCSA record and the Storer Coachways website"
+    ],
+    "key": "n-storer-transportation-service",
+    "notes": "Agenda says San Francisco; the legal entity is based in Modesto and operates a San Francisco yard (300 Toland St) under the DBA Storer San Francisco, per the FMCSA DBA and imgcoach.com. Related entities (Storer Transit Systems, Storer Transportation School and Contract Service) exist; CA entity number not confirmed, so left null.",
+    "profile": {
+      "address": "3519 MCDONALD AVE MODESTO, CA 95358",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "web-site@storerbus.com",
+      "headquarters": "Modesto, CA",
+      "legalName": "STORER TRANSPORTATION SERVICE",
+      "orgType": "company",
+      "phone": "(209) 521-8250",
+      "samUei": "T34JSX3XENY9",
+      "summary": "A family-owned bus company, doing business as Storer Coachways, that has operated in Northern California since 1952. It provides student transportation, charter buses for groups, contract shuttle services and public transit service in the Central Valley and the San Francisco Bay Area.",
+      "website": "https://storercoachways.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "SAFER Web - Company Snapshot STORER TRANSPORTATION SERVICE",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=138172"
+      },
+      {
+        "supports": [
+          "samUei",
+          "orgType"
+        ],
+        "title": "Storer Transportation Service (T34JSX3XENY9)",
+        "url": "https://www.highergov.com/awardee/storer-transportation-service-10157564/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "summary",
+          "website"
+        ],
+        "title": "Storer Coachways Contact",
+        "url": "https://storercoachways.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "About Storer Coachways",
+        "url": "https://storercoachways.com/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-storer-transportation-service",
+    "notes": "FMCSA lists legal name Storer Transportation Service with DBA Storer Coachways / Storer San Francisco (matching the agenda name and SF location), and the company site confirms student transportation, 1952 founding, family ownership, Modesto HQ and Oakland/SF service areas. Phone, generic business email, address and UEI are all confirmed by the fetched sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

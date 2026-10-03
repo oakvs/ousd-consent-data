@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bfesf.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bfesf.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-bertrand-fox-elliot-osman-and-wenzel",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm name 'Bertrand, Fox, Elliot, Osman & Wenzel' on bfesf.com matches the agenda name exactly",
+      "Offices in San Francisco and Oakland, CA, matching the agenda locations 'Oakland and San Francisco, CA'",
+      "Firm is a public entity law firm representing school districts, matching OUSD's 'Legal, insurance & risk' contracts presented by the General Counsel"
+    ],
+    "key": "n-bertrand-fox-elliot-osman-and-wenzel",
+    "notes": "Headquarters city taken from the firm's San Francisco address listed first on its site; the firm also has an Oakland office (1300 Clay Street, Suite 58, Oakland, CA 94612, 510-466-6380). No general email found. Registry IDs not looked up. The website does not name Oakland Unified specifically.",
+    "profile": {
+      "address": "2749 Hyde Street, San Francisco, CA 94109",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Bertrand, Fox, Elliot, Osman & Wenzel",
+      "orgType": "company",
+      "phone": "415-353-0999",
+      "samUei": null,
+      "summary": "A law firm that represents public entities such as counties, cities, school districts, community college districts, water districts, and police and fire departments. Its work includes employment law, tort liability, civil rights and property damage matters. It has offices in San Francisco and Oakland, California.",
+      "website": "https://www.bfesf.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Bertrand, Fox, Elliot, Osman & Wenzel",
+        "url": "https://www.bfesf.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us Today",
+        "url": "https://www.bfesf.com/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-bertrand-fox-elliot-osman-and-wenzel",
+    "notes": "bfesf.com shows a public-entity law firm (school districts among clients) with San Francisco and Oakland offices, matching the agenda name, locations and General Counsel legal engagements; name, summary, phone, address and website are confirmed. The site never designates a headquarters, so that field is an inference and is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

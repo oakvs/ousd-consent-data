@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://rebatebyacs.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rebatebyacs.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/co/greenwood-village/profile/legal-services/arbitrage-compliance-specialists-inc-1296-90014523/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000477",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: 'Arbitrage Compliance Specialists, Inc.' on its own website (rebatebyacs.com) footer and contact page",
+      "Colorado-based, matching the agenda's Greenwood Village, CO: BBB lists the same company at 6041 S Syracuse Way, Greenwood Village, CO (established 1994); its current website lists a Centennial, CO address in the same Denver suburban area",
+      "Services (municipal bond arbitrage rebate and tax-exempt bond compliance for local governments) match OUSD's contract category (legal, insurance and risk) and the funding source (Fund 21 Measure J, a school facilities bond)"
+    ],
+    "key": "v-000477",
+    "notes": "Agenda says Greenwood Village, CO; the company's current website lists Centennial, CO (6065 S. Quebec St). BBB and directory listings still show an older Greenwood Village address (6041 S Syracuse Way), and a directory snippet says the office lease ended in January 2025. No registry IDs (Colorado SOS, SAM.gov) were checked, so those are null. No public page was found naming OUSD as a client.",
+    "profile": {
+      "address": "6065 S. Quebec Street, Suite 201, Centennial, CO 80111",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "arbitrage@rebatebyacs.com",
+      "headquarters": "Centennial, CO",
+      "legalName": "Arbitrage Compliance Specialists, Inc.",
+      "orgType": "company",
+      "phone": "800.672.9993",
+      "samUei": null,
+      "summary": "A Colorado firm that provides municipal bond compliance services, including arbitrage rebate calculations, yield restriction analysis and ongoing bond compliance, for state and local governments that issue tax-exempt bonds. Its work helps issuers follow federal tax rules for bond proceeds.",
+      "website": "https://rebatebyacs.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - Arbitrage Compliance Specialists",
+        "url": "https://rebatebyacs.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website"
+        ],
+        "title": "Arbitrage Compliance Specialists",
+        "url": "https://rebatebyacs.com/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Arbitrage Compliance Specialists, Inc. - BBB",
+        "url": "https://www.bbb.org/us/co/greenwood-village/profile/legal-services/arbitrage-compliance-specialists-inc-1296-90014523/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-000477",
+    "notes": "Exact legal name match, Colorado-based in the Denver suburbs (BBB shows the Greenwood Village address from the agenda; the site shows the newer Centennial address). Bond arbitrage rebate services fit a Measure J facilities bond contract. The summary, phone, generic business email and address are all supported by the fetched sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

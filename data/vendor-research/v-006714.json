@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.carnegielearning.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.carnegielearning.com/company/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006714",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name on the company's own site is exactly 'Carnegie Learning, Inc.', matching the agenda name",
+      "Headquartered in Pittsburgh, PA, matching the agenda's 'Pittsburg, PA' (agenda spelling is missing the 'h')",
+      "Sells K-12 math and other curriculum, matching OUSD's 'Classroom & academic programs' contract under the Chief Academic Officer / Academics and Instruction Department"
+    ],
+    "key": "v-006714",
+    "notes": "Only the company's own site was used; no registry (SOS, SAM.gov) IDs were verified. Agenda spells the city 'Pittsburg'. Did not find a page explicitly linking Carnegie Learning to OUSD; identity rests on name, city and subject-matter match.",
+    "profile": {
+      "address": "Koppers Bldg. 436 Seventh Ave, Suite 200 Pittsburgh, PA 15219",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Pittsburgh, PA",
+      "legalName": "Carnegie Learning, Inc.",
+      "orgType": "company",
+      "phone": "888.851.7094",
+      "samUei": null,
+      "summary": "A for-profit education technology company based in Pittsburgh, Pennsylvania. It develops K-12 curriculum, software, and professional learning for schools, including math, literacy, and world languages.",
+      "website": "https://www.carnegielearning.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us | Carnegie Learning",
+        "url": "https://www.carnegielearning.com/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Company | Carnegie Learning",
+        "url": "https://www.carnegielearning.com/company/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006714",
+    "notes": "Fetched both cited pages: legal name Carnegie Learning, Inc., Pittsburgh PA HQ address, main phone 888.851.7094, and K-12 math/literacy/world languages offerings are all shown, and the company is for-profit. Agenda name, Pittsburgh(g) location and the academic services agreement fit; no direct OUSD link was found, but name, city and subject match are strong and no conflicting same-name organization appeared.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

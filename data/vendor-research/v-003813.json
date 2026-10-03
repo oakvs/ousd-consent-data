@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.schoolhealth.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.schoolhealth.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003813",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: School Health Corporation (agenda names 'School Health Corporation' / 'School Health, Inc.'); company website lists legal name School Health Corporation",
+      "Located in Rolling Meadows, IL (5600 Apollo Drive), matching the agenda location",
+      "Company sells special education resources and supplies to school special education departments, matching OUSD's Special Education Department contracts"
+    ],
+    "key": "v-003813",
+    "notes": "No registry IDs (EIN, CA entity number, SAM UEI) looked up; left null. Agenda also uses the name 'School Health, Inc.'; treated as the same company.",
+    "profile": {
+      "address": "5600 Apollo Drive, Rolling Meadows, IL 60008",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "CustomerService@schoolhealth.com",
+      "headquarters": "Rolling Meadows, IL",
+      "legalName": "School Health Corporation",
+      "orgType": "company",
+      "phone": "866-323-5465",
+      "samUei": null,
+      "summary": "School Health is a national company that sells health supplies and related services to school professionals, from pre-school through college. Its products include first aid and diagnostic supplies, sports medicine items, special education resources, physical education equipment and emergency preparedness items. It has operated since 1957.",
+      "website": "https://www.schoolhealth.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website",
+          "headquarters"
+        ],
+        "title": "School Health - About Us",
+        "url": "https://www.schoolhealth.com/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - School Health",
+        "url": "https://www.schoolhealth.com/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-003813",
+    "notes": "School Health Corporation, 5600 Apollo Drive, Rolling Meadows, IL matches the agenda name and location, and sells special education resources, which fits the Special Education Department MOU. About-us and contact pages confirm legal name, 1957 founding, pre-school through college customers, product categories, phone, generic customer-service email and address; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/275083595",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/27-5083595",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://biggreen.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Big_Green_(non-profit_company)",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006893",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'Big Green' (formerly The Kitchen Community), EIN 27-5083595 (ProPublica Nonprofit Explorer, GuideStar)",
+      "GuideStar lists a Broomfield, CO address (11001 W 120th Ave Ste 400) for the organization, matching the agenda's 'Broomfield, CO'; Wikipedia also describes it as based in Broomfield, Colorado",
+      "Big Green's core program is 'Learning Gardens' in schools (ColoradoGives, Wikipedia), matching the agenda title 'Professional Services Agreement - Big Green - Learning Gardens'"
+    ],
+    "key": "v-006893",
+    "notes": "Registered address is in Denver; GuideStar lists a Broomfield payment address and Wikipedia describes Broomfield as headquarters, consistent with the agenda. No Oakland-specific page found confirming the OUSD relationship; identity rests on name, Colorado location and the Learning Gardens program. Phone/email/address omitted: the organization's own contact page shows none, and the only phone found (ColoradoGives) was not verified on an official page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "27-5083595",
+      "email": null,
+      "headquarters": "Denver, CO",
+      "legalName": "Big Green",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Big Green is a nonprofit organization, founded in 2011 as The Kitchen Community, that builds Learning Gardens, which are outdoor classrooms with raised garden beds, in schools. It also funds community food-growing groups across the United States. Its stated mission is that growing food changes lives.",
+      "website": "https://biggreen.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Big Green - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/275083595"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "website",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Big Green - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/27-5083595"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Big Green",
+        "url": "https://biggreen.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Big Green (non-profit company)",
+        "url": "https://en.wikipedia.org/wiki/Big_Green_(non-profit_company)"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006893",
+    "notes": "Big Green (EIN 27-5083595, formerly The Kitchen Community) is a school-garden nonprofit that Wikipedia places in Broomfield, CO. That matches the agenda's name, Broomfield location and Learning Gardens title. The summary, EIN, website and Denver headquarters (per GuideStar) are supported by the cited sources. The candidate's claim that GuideStar lists a Broomfield address was not confirmed, since the page I fetched shows Denver, but no profile field depends on it. No Oakland-specific page was found.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

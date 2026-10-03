@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://motionrecruitment.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://motionrecruitment.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007579",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Motion Recruitment Partners LLC' appears on the company's own website (motionrecruitment.com/about), exactly matching the agenda name",
+      "The company lists a San Francisco, CA office (601 Montgomery St.), matching the agenda location",
+      "The company is an IT staffing and recruiting firm, consistent with OUSD's 'Staff & hiring' fee agreement"
+    ],
+    "key": "v-007579",
+    "notes": "Headquarters, address and phone are those the contact page lists for headquarters (Atlanta). The company's San Francisco office is at 601 Montgomery St. Suite 460, San Francisco, CA 94111, (415) 904-8000. No general email found. Registry IDs not checked.",
+    "profile": {
+      "address": "3560 Lenox Road Suite 1275 Atlanta, GA 30326",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Atlanta, GA",
+      "legalName": "Motion Recruitment Partners LLC",
+      "orgType": "company",
+      "phone": "(470) 582-9700",
+      "samUei": null,
+      "summary": "A staffing and consulting firm that places information technology workers with employers. It offers contract staffing, direct-hire placement, executive search and IT consulting services. It has more than 20 offices across North America.",
+      "website": "https://motionrecruitment.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Motion Recruitment",
+        "url": "https://motionrecruitment.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Contact Motion Recruitment",
+        "url": "https://motionrecruitment.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007579",
+    "notes": "The about page shows the exact legal name Motion Recruitment Partners LLC, and the contact page lists a San Francisco office plus an Atlanta headquarters with the stated address and phone. The services and the 22 listed offices support the neutral summary, and IT staffing fits the OUSD fee agreement for staff and hiring.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

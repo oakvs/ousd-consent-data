@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.assetworks.com/fleet/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://recoupsoftware.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-assetworks",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: AssetWorks, a software and services company; OUSD's agenda lists it in Pittsburgh, PA, and AssetWorks has a Pittsburgh office (400 Holiday Drive, Suite 200) shown on its fixed-asset brand site (recoupsoftware.com contact page)",
+      "OUSD's agenda item 21-2491 describes an onsite inventory verification of machinery and equipment fixed assets, which matches AssetWorks' fixed asset management and inventory work for government agencies and K-12 school districts",
+      "AssetWorks' fixed-asset product pages state it serves K-12 school districts, consistent with a school district customer"
+    ],
+    "key": "n-assetworks",
+    "notes": "OUSD agenda gives Pittsburgh, PA; AssetWorks' headquarters is Berwyn, PA, with a Pittsburgh office that handles fixed asset services. No registry (SAM.gov, CA SOS) lookup was done, so legal entity name and IDs are left null. Phone and email were left out because the only ones found are an Austin, TX sales line and a sales inbox. The OUSD contract was for fixed-asset inventory verification (agenda item 21-2491).",
+    "profile": {
+      "address": "1001 Old Cassatt Road, Suite 204, Berwyn, Pennsylvania 19312",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berwyn, PA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "AssetWorks is a software company that makes fleet management, fuel management and enterprise asset management products for government agencies, public works, higher education and private fleets. Its related Recoup brand offers tools for tracking active and surplus assets and inventory, including for K-12 school districts.",
+      "website": "https://www.assetworks.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Fleet and Fuel Management",
+        "url": "https://www.assetworks.com/fleet/about-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Contact Us - Recoup",
+        "url": "https://recoupsoftware.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-assetworks",
+    "notes": "Organization looks right: the Recoup contact page shows a Pittsburgh office under AssetWorks, Inc., and OUSD item 21-2491 is a fixed-asset inventory verification, which fits Recoup. But the summary says AssetWorks serves higher education, and neither cited page says that. The About page lists only public and private sectors, utilities, and city government, and it does not mention Recoup, K-12, or fixed assets. The summary should be redone to say only what the pages state.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

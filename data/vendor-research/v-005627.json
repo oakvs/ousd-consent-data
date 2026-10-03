@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/831200004",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thrivecollective.org/portfolio/urbanlife-youth-family-center/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-005627",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Urbanlife Mentors' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 83-1200004), matching the agenda's Oakland, CA location",
+      "Thrive Collective's page on URBANLIFE Mentors describes Oakland youth mentoring with education supports and after-school programs, matching OUSD's 'Student health, support & family services' and 'Classroom & academic programs' contracts at an elementary school"
+    ],
+    "key": "v-005627",
+    "notes": "The organization's own website (urbanlifementors.org, listed in third-party directories) did not resolve when fetched, so website and contact details are omitted. No source found explicitly mentioning OUSD or Parker Elementary.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-1200004",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Urbanlife Mentors",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit youth mentoring organization in Oakland, California. It supports young people through mentoring, leadership development, community and family engagement, education supports and artistic expression, and runs a youth and family center in West Oakland for after-school and summer programs.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Urbanlife Mentors - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/831200004"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "UrbanLife Youth & Family Center - Thrive Collective",
+        "url": "https://www.thrivecollective.org/portfolio/urbanlife-youth-family-center/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-005627",
+    "notes": "ProPublica confirms a 501(c)(3) 'Urbanlife Mentors' in Oakland, CA (EIN 83-1200004, youth development), and the Thrive Collective page confirms the Oakland youth mentoring programs described in the summary; this fits OUSD's elementary-school mentoring and support contracts. The summary is neutral and supported (it omits the faith-formation element, which is not a false claim); no source names OUSD directly, and ProPublica notes the org is not on the current IRS exempt list, but the identity match is strong.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

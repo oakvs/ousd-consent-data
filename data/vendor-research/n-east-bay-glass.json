@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://eastbayglass.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eastbayglass.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildzoom.com/contractor/east-bay-glass-co-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-glass",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'East Bay Glass Co Inc' is a corporation licensed as a glazing contractor (CA license 410785, BuildZoom) and 'East Bay Glass Company' appears on BBB, matching the agenda name 'East Bay Glass Company'",
+      "Located at 601 50th Ave, Oakland, CA, matching the agenda location 'Oakland, CA'",
+      "Company's website describes commercial window installation and glazing, matching OUSD's 'Three Year District-wide Glazing Routine Repair & Maintenance Project' contract and its glazing license",
+      "Company website, BuildZoom and BBB all list the same address and phone number"
+    ],
+    "key": "n-east-bay-glass",
+    "notes": "No direct public page linking this company to OUSD was found; identity rests on name, Oakland location and glazing trade. Legal name taken from the CA contractor license record as shown on BuildZoom (third-party); no CA Secretary of State entity number was checked.",
+    "profile": {
+      "address": "601 50th Ave, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@eastbayglass.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Glass Co Inc",
+      "orgType": "company",
+      "phone": "(510) 834-2535",
+      "samUei": null,
+      "summary": "A glass company based in Oakland, California that provides commercial window installation and glazing services in the Bay Area. Its work includes office, retail and industrial buildings, and it holds a California contractor license for glazing.",
+      "website": "https://eastbayglass.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Eastbay Glass: Bay Area Commercial Window Installation",
+        "url": "https://eastbayglass.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Eastbay Glass",
+        "url": "https://eastbayglass.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType"
+        ],
+        "title": "East Bay Glass Co",
+        "url": "https://www.buildzoom.com/contractor/east-bay-glass-co-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-east-bay-glass",
+    "notes": "An Oakland glazing contractor (CA license 410785, Glazing/General Building, active) at 601 50th Ave fits the agenda's 'East Bay Glass Company, Oakland' glazing maintenance agreement; the website, contact page and BuildZoom confirm the name, address, phone, email, services and license. No direct OUSD link was found, but the name, location and trade all match and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

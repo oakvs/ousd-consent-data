@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/810928854",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ireeinc.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://coloradohub.org/organization/iree-institute-for-racial-equity-and-excellence/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.causeiq.com/organizations/institute-for-racial-equity-and-excellence,810928854/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007681",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match to a registered 501(c)(3): 'Institute For Racial Equity And Excellence', EIN 81-0928854 (ProPublica Nonprofit Explorer)",
+      "Colorado Hub lists the organization at 2821 South Parker Road Suite 1115, Aurora, Colorado, matching the agenda text 'Aurora, CO'",
+      "Organization's website describes equity-focused training and support work in education and early childhood, and Cause IQ describes language justice and dual language learner support, consistent with a services agreement for OUSD's English Language Learner and Multilingual Achievement office"
+    ],
+    "key": "v-007681",
+    "notes": "Address left null: Cause IQ (IRS data) lists 10208 Dunsford Dr, Lone Tree, CO (likely a mailing/personal address) while Colorado Hub lists an Aurora office; ProPublica shows Lone Tree. Agenda says Aurora, CO. Email omitted because the website lists only personal-looking addresses. No Oakland-specific mention of OUSD found on fetched pages; identity rests on exact name, Aurora location and subject-area fit.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "81-0928854",
+      "email": null,
+      "headquarters": "Aurora, CO",
+      "legalName": "Institute For Racial Equity And Excellence",
+      "orgType": "nonprofit",
+      "phone": "(303) 403-2677",
+      "samUei": null,
+      "summary": "A Colorado nonprofit that works on racial equity and social justice, with a focus on early childhood. It offers training, licensing support and workforce resources for early childhood programs and the agencies and universities that partner with them. It also describes support for dual language learners.",
+      "website": "https://ireeinc.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Institute For Racial Equity And Excellence - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/810928854"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "IREE: Institute for Racial Equality & Excellence",
+        "url": "https://www.ireeinc.com"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "phone"
+        ],
+        "title": "IREE: Institute For Racial Equity and Excellence - Colorado Hub",
+        "url": "https://coloradohub.org/organization/iree-institute-for-racial-equity-and-excellence/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Institute For Racial Equity And Excellence - Cause IQ",
+        "url": "https://www.causeiq.com/organizations/institute-for-racial-equity-and-excellence,810928854/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007681",
+    "notes": "Exact name match to a 501(c)(3) (ProPublica, EIN 81-0928854) with an Aurora, CO office per Colorado Hub, matching the agenda; its early childhood, equity training and dual language learner work fits an ELL and Multilingual Achievement office services agreement. Summary, website, phone, EIN, legal name and headquarters are supported by the cited pages; email and address were correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

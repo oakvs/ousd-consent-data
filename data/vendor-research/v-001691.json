@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.firstalarm.com/our-company/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.firstalarm.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.firstalarm.com/our-company/our-history/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001691",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: the Santa Cruz County tourism listing is titled 'First Alarm Security & Patrol' and links to firstalarm.com",
+      "Company has a San Jose office (2362 Qume Drive, Suite B, San Jose, CA 95131), matching the agenda location 'San Jose, CA'",
+      "Company provides security services, consistent with a Police Services Department security contract (but its own site does not mention guard/patrol services or OUSD/schools)"
+    ],
+    "key": "v-001691",
+    "notes": "Legal name 'First Alarm Security & Patrol, Inc.' appears on third-party directories (D&B, Privco) but not on the company's own pages, and CA Secretary of State entity number could not be retrieved. The company's website does not mention guard or patrol services or schools, so the match to the OUSD Police Services contract rests on name and San Jose location only. Medium confidence.",
+    "profile": {
+      "address": "1111 Estates Drive, Aptos, CA 95003",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Aptos, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-800-684-1111",
+      "samUei": null,
+      "summary": "A security company based in Aptos, California, that provides alarm systems, central monitoring, access control, video surveillance, and fire and life safety systems for homes and businesses. It has offices in several Northern California cities, including San Jose.",
+      "website": "https://www.firstalarm.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "phone"
+        ],
+        "title": "Locations - First Alarm",
+        "url": "https://www.firstalarm.com/our-company/locations/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "orgType"
+        ],
+        "title": "First Alarm",
+        "url": "https://www.firstalarm.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Our History - First Alarm",
+        "url": "https://www.firstalarm.com/our-company/our-history/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

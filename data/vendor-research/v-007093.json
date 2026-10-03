@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473878444",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.teach.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007093",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered San Francisco nonprofit: 'Teach-org Inc', operating as TEACH.org (ProPublica Nonprofit Explorer, EIN 47-3878444, San Francisco, CA), matching the agenda's 'TEACH, San Francisco, CA'",
+      "The agenda says the contract licenses a customized 'Teach Navigator' web system for people pursuing teaching careers; TEACH.org's regional sites show 'TEACH Navigator' as part of its teacher-recruitment platform",
+      "TEACH.org's mission (helping people explore and enter the teaching profession) matches OUSD's Talent Department contract for a teaching-careers system"
+    ],
+    "key": "v-007093",
+    "notes": "Phone, email and street address are not published on the TEACH.org pages checked (contact is by web form), so they are null. The link between the agenda's 'Teach Navigator' system and TEACH.org rests on the 'TEACH Navigator' name appearing on TEACH.org regional sites (e.g. dallasftworth.teach.org/get-help), plus the name, San Francisco location and teacher-recruitment mission. The OUSD agreement itself is not mentioned on TEACH.org pages. California Secretary of State entity number and SAM UEI were not looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "47-3878444",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Teach-org Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "TEACH is a nonprofit that helps people explore the teaching profession. It works with state education agencies, educator preparation programs and school districts to run teacher recruitment systems that include websites and personalized support for people considering teaching careers.",
+      "website": "https://www.teach.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Teach-org Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473878444"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About TEACH.org",
+        "url": "https://www.teach.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007093",
+    "notes": "Agenda item 21-0952 licenses a customized 'Teach Navigator' system from TEACH of San Francisco, CA; ProPublica shows Teach-org Inc as a San Francisco 501(c)(3) (EIN 47-3878444), and teach.org's about page confirms the nonprofit mission, 2015 founding and partners (SEAs, educator prep programs, districts), while a TEACH.org regional site shows a 'TEACH Navigator' tool. Name, city, mission and product fit; the OUSD agreement itself is not named on TEACH.org, so the link is strong but circumstantial, and the summary stays neutral and within what the sources show.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

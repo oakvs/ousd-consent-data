@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.rayselectric.co/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rayselectric.co/blank-1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003531",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The company's own About page says it operates as Ray's Electric and was incorporated as 'Gruendl Incorporated', matching the agenda's 'Gruendle Inc., dba Ray's Electric Company' (agenda spells it with a trailing 'e')",
+      "Located in Oakland, CA (411 Pendleton Way), matching the agenda location",
+      "Describes itself as an electrical and general engineering construction contractor, matching OUSD's 'School buildings & construction' contracts for portable classroom and energy projects",
+      "Third-party directories list 'Gruendl Inc dba Rays Electric' in Oakland, CA as an electrical contractor"
+    ],
+    "key": "v-003531",
+    "notes": "Agenda spells the legal name 'Gruendle Inc.'; the company's own site spells it 'Gruendl Incorporated', so the agenda is probably a typo. No registry ID (CA SOS, SAM.gov) was checked or found; the website had no general email. The company site does not mention OUSD or schools, so identity rests on name/dba, Oakland location and trade match.",
+    "profile": {
+      "address": "411 Pendleton Way, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Gruendl Incorporated",
+      "orgType": "company",
+      "phone": "(510) 577-7700",
+      "samUei": null,
+      "summary": "Ray's Electric is an electrical and general engineering contractor based in Oakland, California. It does public works construction such as roadway work, underground utilities, traffic signals and street lighting. The company was founded in 1961 and is employee-owned.",
+      "website": "https://www.rayselectric.co"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Electrical Contractor - Ray's Electric",
+        "url": "https://www.rayselectric.co/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About - Ray's Electric",
+        "url": "https://www.rayselectric.co/blank-1"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-003531",
+    "notes": "The company site names Gruendl Incorporated as the entity operating as Ray's Electric in Oakland, CA, which matches the agenda's 'Gruendle Inc., dba Ray's Electric Company' (the extra 'e' looks like a typo). Address, phone, 1961 founding, ESOP ownership and public-works services are shown on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

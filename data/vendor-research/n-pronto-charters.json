@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://prontoos.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ipronto.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-pronto-charters",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD's own 2021-22 Services Agreement attachment (22-0564) names the vendor as 'Pronto Charters', 'Accelar, Inc. DBA ProntoCharters.com' and 'Accelar, Inc. DBA YoPronto.com', with address 111 N Market St #300, San Jose, signed by the company president",
+      "Pronto OS page states the legal entity is Accelar, Inc. (doing business as Pronto Corporation), lists ProntoCharters.com and YoPronto.com among its web properties, and gives the same address, 111 N. Market St, Suite 300, San Jose, CA 95113",
+      "iPronto website lists Oakland Unified School District among its school partners, and the company provides group bus and charter transportation, matching the OUSD contract for athletic-event and field-trip bus transportation",
+      "The agenda text says 'Pronto Charters, Oakland, CA', but the contract itself gives a San Jose address, so the vendor is based in San Jose and 'Oakland' in the agenda appears to refer to where the services are provided or to be an error"
+    ],
+    "key": "n-pronto-charters",
+    "notes": "Agenda text gives 'Pronto Charters, Oakland, CA' but OUSD's contract attachment (https://legistar.granicus.com/ousd/attachments/102595.pdf) lists the vendor address as 111 N Market St #300, San Jose, signed by the president, as Accelar, Inc. DBA ProntoCharters.com / YoPronto.com. Some third-party listings show other addresses (San Mateo, San Leandro); the address used here is the one on the company's own site and in the OUSD contract. No registry IDs (EIN, CA entity number, UEI) were confirmed.",
+    "profile": {
+      "address": "111 N. Market St, Suite 300, San Jose, CA 95113",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "CS@iPronto.com",
+      "headquarters": "San Jose, CA",
+      "legalName": "Accelar, Inc.",
+      "orgType": "company",
+      "phone": "650.249.7415",
+      "samUei": null,
+      "summary": "Pronto Corporation, whose legal entity is Accelar, Inc., runs an online group transportation management system. Customers can book, manage, track and pay for group transportation such as charter buses and shuttles through its network of affiliated operators. It operates under several brand names, including ProntoCharters.com and YoPronto.com.",
+      "website": "https://www.ipronto.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Pronto OS - About Us",
+        "url": "https://prontoos.com/about-us"
+      },
+      {
+        "supports": [
+          "website",
+          "email",
+          "phone"
+        ],
+        "title": "Group & Student Transportation - iPronto",
+        "url": "https://www.ipronto.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-pronto-charters",
+    "notes": "The OUSD 2021-22 services agreement (attachment 102595) names Pronto Charters as Accelar, Inc. DBA ProntoCharters.com / YoPronto.com at 111 N Market St #300, San Jose, for OAL athletic and field-trip bus transportation. Prontoos.com and ipronto.com confirm the legal name, address, phone, generic email and a neutral service description; the agenda's 'Oakland, CA' is the service location, not the vendor's address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

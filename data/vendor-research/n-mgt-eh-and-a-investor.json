@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.city-data.com/business-entities/CA/MGT-EH-A-INVESTOR-LLC-202035710329-CA.html",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.einnews.com/pr_news/541443554/mgt-consulting-is-now-partnered-with-eric-hall-associates-of-california-to-positively-impact-school-districts/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-mgt-eh-and-a-investor",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches an active California business registration: 'MGT EH&A INVESTOR, LLC', entity number 202035710329, registered December 9, 2020 as a foreign (Florida) LLC (city-data.com mirror of California Secretary of State records)",
+      "MGT Consulting Group announced a combination with Eric Hall & Associates (EH&A), a Carlsbad, CA school-district consulting firm, in May 2021, which fits the 'MGT EH&A' name and the agenda's Carlsbad, CA location",
+      "OUSD agenda text describes the work as building evaluation tools for school merger or closure sites, which matches EH&A's school-district facilities planning services",
+      "Weakness: the registry lists the LLC's address as Tampa, FL, not Carlsbad, and no source directly states that this LLC is the contracting arm of MGT/EH&A"
+    ],
+    "key": "n-mgt-eh-and-a-investor",
+    "notes": "This is a holding or contracting LLC, not an operating brand. The link to MGT Consulting Group / EH&A is inferred from the name, timing and Carlsbad location; no page directly confirms it. Registry address is Tampa, FL. Website and contact details deliberately omitted because they belong to the related operating firms, not necessarily this LLC. Needs human review before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "202035710329",
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "MGT EH&A INVESTOR, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A limited liability company registered in California as a foreign LLC organized in Florida, with an active status. Its name refers to MGT Consulting Group and Eric Hall & Associates (EH&A), two public-sector and school-district consulting firms that combined in 2021.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "summary"
+        ],
+        "title": "202035710329 - MGT EH&A INVESTOR, LLC",
+        "url": "https://www.city-data.com/business-entities/CA/MGT-EH-A-INVESTOR-LLC-202035710329-CA.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "MGT Consulting is Now Partnered with Eric Hall & Associates of California to Positively Impact School Districts",
+        "url": "https://www.einnews.com/pr_news/541443554/mgt-consulting-is-now-partnered-with-eric-hall-associates-of-california-to-positively-impact-school-districts/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

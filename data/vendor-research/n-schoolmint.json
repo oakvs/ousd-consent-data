@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.opportunitylouisiana.gov/news/gov-edwards-schoolmint-announce-corporate-headquarters-move-from-silicon-valley-to-louisiana",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://schoolmint.com/our-story/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-schoolmint",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Louisiana Economic Development announcement names 'SchoolMint Inc.' as a K-12 software company that moved its headquarters from San Francisco, CA to Lafayette, Louisiana, matching the agenda's two locations (San Francisco, CA and 'Lafayette, IA', which appears to be a typo for Lafayette, LA)",
+      "The same page describes SchoolMint's products as application and lottery management and registration/re-enrollment, matching OUSD's 'School Finder Software' contract with the Student Enrollment Office"
+    ],
+    "key": "n-schoolmint",
+    "notes": "SchoolMint's own site blocks automated fetching (Cloudflare), so phone, email, address and registry IDs were not confirmed from an official or registry page and are left null. The headquarters comes from a July 2020 state announcement and may be out of date. The agenda's 'Lafayette, IA' is most likely Lafayette, Louisiana.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Lafayette, LA",
+      "legalName": "SchoolMint Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "SchoolMint is a software company that serves K-12 schools and school districts. Its products help schools manage enrollment, including applications, lotteries and registration or re-enrollment, and track student behavior. The company is headquartered in Lafayette, Louisiana, after moving from San Francisco in 2020.",
+      "website": "https://schoolmint.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Gov. Edwards, SchoolMint Announce Corporate Headquarters Move From Silicon Valley To Louisiana - LED",
+        "url": "https://www.opportunitylouisiana.gov/news/gov-edwards-schoolmint-announce-corporate-headquarters-move-from-silicon-valley-to-louisiana"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Explore Our Story in Education Management | SchoolMint",
+        "url": "https://schoolmint.com/our-story/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-schoolmint",
+    "notes": "The Louisiana Economic Development page confirms SchoolMint Inc. as a K-12 enrollment software company (SchoolFinder, application and lottery management) that moved its headquarters from San Francisco to Lafayette, Louisiana in 2020. That matches the agenda's School Finder Software contract and both listed locations ('Lafayette, IA' is a likely typo for LA). The summary is neutral and supported, and the website's own title confirms the schoolmint.com domain.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

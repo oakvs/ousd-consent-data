@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.geosyntec.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.geosyntec.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://geosyntec.com/office-location/santa-barbara-california",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-geosyntec-consultants",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'Geosyntec Consultants' (Geosyntec's own website, which uses this name)",
+      "Geosyntec's website lists a Santa Barbara, CA office, matching the agenda location 'Santa Barbara, CA'",
+      "Geosyntec describes itself as an environmental and civil infrastructure engineering firm, consistent with OUSD contracting for school buildings and construction-related consulting through the General Counsel's office"
+    ],
+    "key": "n-geosyntec-consultants",
+    "notes": "Address is the Santa Barbara office (matches agenda location), not the corporate headquarters. No registry IDs were checked/found. No page confirmed a direct OUSD relationship; identity rests on name, Santa Barbara location and service type.",
+    "profile": {
+      "address": "118 E Carrillo St, Santa Barbara, CA 93101",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "866-676-1101",
+      "samUei": null,
+      "summary": "Geosyntec Consultants is a consulting and engineering firm that works with private and public sector clients on problems involving the environment, natural resources, energy and civil infrastructure. It was established in 1983 and has more than 140 offices in several countries.",
+      "website": "https://www.geosyntec.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Geosyntec",
+        "url": "https://www.geosyntec.com/about"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Geosyntec",
+        "url": "https://www.geosyntec.com/contact"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Santa Barbara, California office",
+        "url": "https://geosyntec.com/office-location/santa-barbara-california"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-geosyntec-consultants",
+    "notes": "Geosyntec Consultants, Inc. matches by name, has a Santa Barbara office at the listed address (matching the agenda location), and is an environmental/civil engineering firm that fits a General Counsel professional services agreement for buildings and construction. Summary (1983, 140+ offices), website, phone 866-676-1101 and address were all confirmed on the cited pages and are neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

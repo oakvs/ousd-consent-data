@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://crescendoedgroup.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://crescendoedgroup.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/crescendo-education-group-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001234",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Crescendo Education Group, LLC' exactly matches the agenda name (California entity filing listing)",
+      "Based in Oakland, CA (360 Grand Ave, Suite 71, Oakland, CA 94610), matching the agenda location",
+      "Provides professional development and coaching for teachers on grading practices, consistent with a Title II (teacher quality) funded academic services agreement"
+    ],
+    "key": "v-001234",
+    "notes": "Entity number comes from a third-party mirror of California Secretary of State data (bizprofile.net), not bizfileonline directly. No public phone number found. OUSD is not named on the vendor's client page; identity rests on exact name, Oakland location and service type.",
+    "profile": {
+      "address": "360 Grand Ave, Suite 71, Oakland, CA 94610",
+      "caEntityNumber": "201610610489",
+      "ein": null,
+      "email": "info@crescendoedgroup.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Crescendo Education Group, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Crescendo Education Group is a company based in Oakland, California. Since 2014 it has provided professional development, coaching, workshops and online courses to schools and districts to help educators use more equitable grading and assessment practices.",
+      "website": "https://crescendoedgroup.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Crescendo Education Group",
+        "url": "https://crescendoedgroup.org/"
+      },
+      {
+        "supports": [
+          "email",
+          "address"
+        ],
+        "title": "Contact - Crescendo Education Group",
+        "url": "https://crescendoedgroup.org/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Crescendo Education Group, LLC Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/crescendo-education-group-llc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-001234",
+    "notes": "Exact legal name match (CA LLC 201610610489, active), Oakland-based, and its teacher PD/coaching on grading fits a Title II teacher-quality services agreement. Summary, website, generic info@ email and address are shown on the cited pages; the 2014 start date is the vendor's own claim, and the LLC was formed in 2016 per the filing mirror, which does not conflict with it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

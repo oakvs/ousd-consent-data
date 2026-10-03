@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.globalpointofcare.abbott/us/en/about/locations.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.globalpointofcare.abbott/us/en/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007287",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Abbott's own Locations page lists Abbott Rapid Dx North America at 30 South Keller Road, Orlando, Florida, matching the agenda's Orlando, FL",
+      "Abbott Rapid Diagnostics sells rapid point-of-care infectious disease tests, matching the agenda item for COVID-19 tests"
+    ],
+    "key": "v-007287",
+    "notes": "Legal name and registry IDs not verified on a cited page. Orlando address is the Abbott Rapid Dx North America site listed by Abbott; parent company is Abbott Laboratories.",
+    "profile": {
+      "address": "30 South Keller Road, Suite 100, Orlando, Florida 32810",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Orlando, FL",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(321) 441-7200",
+      "samUei": null,
+      "summary": "Abbott Rapid Dx North America is part of Abbott's diagnostics business. It makes rapid point-of-care tests, which give results at the place where a patient is seen. Its products cover infectious disease, cardiometabolic health, and toxicology testing.",
+      "website": "https://www.globalpointofcare.abbott/us/en.html"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Locations - Abbott Rapid Diagnostics",
+        "url": "https://www.globalpointofcare.abbott/us/en/about/locations.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About - Abbott Rapid Diagnostics",
+        "url": "https://www.globalpointofcare.abbott/us/en/about.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007287",
+    "notes": "Abbott's Locations page lists Abbott Rapid Dx North America at 30 South Keller Road, Suite 100, Orlando, FL 32810, (321) 441-7200, matching the agenda name and city, and the COVID-19 test purchase fits a rapid diagnostics maker. The About page supports the point-of-care, infectious disease, cardiometabolic and toxicology summary, which is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

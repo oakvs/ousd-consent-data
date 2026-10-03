@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943234908",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-3234908",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-002970",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Mustard Seed Neighborhood Development Corporation', EIN 94-3234908, Oakland, CA (ProPublica Nonprofit Explorer, GuideStar)",
+      "Located in Oakland, CA, matching the agenda text",
+      "GuideStar mission (reading materials, educational technology) is consistent with OUSD's contracts for classroom and academic programs (literacy professional development at Lincoln Elementary, per the 2019 OUSD Board memo)"
+    ],
+    "key": "v-002970",
+    "notes": "The organization's own website (mustardseedbooks.org) has an expired TLS certificate, so it was not cited. GuideStar and ProPublica note it may not appear on the current IRS exempt-organization list (possibly inactive or merged); GuideStar lists 493 43rd St while a search snippet of the organization's site showed 42nd St, so address was left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-3234908",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Mustard Seed Neighborhood Development Corporation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit in Oakland, California, also known as Mustard Seed Books. It designs and distributes low-cost reading materials and supports educational technology and urban farming programs.",
+      "website": "https://www.mustardseedbooks.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Mustard Seed Neighborhood Development Corporation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943234908"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "website",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Mustard Seed Neighborhood Development Corporation - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-3234908"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-002970",
+    "notes": "ProPublica and GuideStar confirm the Oakland 501(c)(3) (EIN 94-3234908, aka Mustard Seed Books) with the mission quoted in the summary; an OUSD Legistar memo shows this entity providing literacy professional development at Lincoln Elementary, matching the agenda. The summary is neutral and supported; the IRS exempt-list caveat is noted but does not change identity.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

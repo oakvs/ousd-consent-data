@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.occurnow.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/200960930",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005729",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OCCUR is a registered 501(c)(3) nonprofit headquartered in Oakland, CA (ProPublica, EIN 20-0960930), matching the agenda location 'Oakland, CA'",
+      "OCCUR's website describes technology and digital skills training (David E. Glover Emerging Technology Center), consistent with a contract to train Sojourner Truth teachers in career technology education skills",
+      "Agenda text describes OCCUR as an Oakland organization; the Sojourner Truth school is in East Oakland, where OCCUR's website says it serves residents"
+    ],
+    "key": "v-005729",
+    "notes": "Two EINs appear in directories: 20-0960930 (current, IRS-listed, ProPublica) and 94-1752096 (older 1954-era entity, last 990 for FY2004, not in current IRS list). Used the current one. OCCUR's own pages do not mention OUSD; the link to the OUSD contract rests on location and subject match (tech training for teachers). California entity number not verified.",
+    "profile": {
+      "address": "360 14th Street, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "20-0960930",
+      "email": "info@occurnow.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "OCCUR",
+      "orgType": "nonprofit",
+      "phone": "(510) 839-2440",
+      "samUei": null,
+      "summary": "OCCUR is a Black-led nonprofit in Oakland, founded in 1954, that works to build economic power in historically excluded communities. It runs the David E. Glover Emerging Technology Center and offers free programs in small business development, technology and digital skills training, and nonprofit capacity-building.",
+      "website": "https://www.occurnow.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "OCCUR",
+        "url": "https://www.occurnow.org"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Occur - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/200960930"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-005729",
+    "notes": "OCCUR is a distinctive Oakland-based 501(c)(3) (ProPublica EIN 20-0960930, ruling 2004); the homepage confirms the Black-led description, programs, phone, email and address, and occurnow.org/about confirms the 1954 founding. The link to OUSD's Sojourner Truth contract rests on name and location, since OCCUR's pages never mention OUSD, so the match is probable but not directly confirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

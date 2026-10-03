@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://generalroof.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://generalroof.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/roofing-contractors/general-roofing-company-inc-1116-10885",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005524",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a roofing contractor 'General Roofing Company' (BBB lists 'General Roofing Company, Inc.') located in Oakland, CA, matching the agenda location",
+      "Company provides commercial and industrial roofing, consistent with OUSD's 'School buildings & construction' roofing agreement",
+      "No page found that explicitly ties this company to OUSD or the Foster ELC project, so identity is not directly confirmed"
+    ],
+    "key": "v-005524",
+    "notes": "No page found linking this company to OUSD or the Foster ELC project; match rests on name, Oakland location and commercial roofing. CA SOS and SAM.gov not checked, so no entity number or UEI.",
+    "profile": {
+      "address": "3309 Elmwood Ave, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "contact@generalroof.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "General Roofing Company, Inc.",
+      "orgType": "company",
+      "phone": "(510) 536-3356",
+      "samUei": null,
+      "summary": "A roofing contractor based in Oakland, California, founded in 1924. It provides residential, commercial and industrial roofing services in the Bay Area, including roof replacement, repair and maintenance, gutters and skylights.",
+      "website": "https://generalroof.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Oakland Roofing Company Since 1924",
+        "url": "https://generalroof.com/"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "General Roofing Co.",
+        "url": "https://generalroof.com/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "orgType"
+        ],
+        "title": "General Roofing Company, Inc.",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/roofing-contractors/general-roofing-company-inc-1116-10885"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ajpeducationalservices.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.city-data.com/business-entities/La-Palma-CA-A.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ajp-educational-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'AJP EDUCATIONAL SERVICES, LLC' is listed as an active business entity in La Palma, CA (city-data.com), matching the agenda's 'AJP Educational Services, La Palma, CA'",
+      "Its own website describes school psychologist services (evaluations, counseling, consultation) for California schools, consistent with OUSD's special education nonpublic agency master contract"
+    ],
+    "key": "n-ajp-educational-services",
+    "notes": "Website lists no phone, email or address, and the CA Secretary of State registry could not be checked, so those fields are null. The legal name 'AJP EDUCATIONAL SERVICES, LLC' comes from city-data.com (a registry aggregator); the La Palma address shown there looks like a home-based business address, so it was not published. Website does not mention Oakland or OUSD; location link is via the aggregator listing only. Not the nonprofit 'AJP Educational Foundation Inc' (ProPublica EIN 27-1365284), which is a different organization.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "La Palma, CA",
+      "legalName": "AJP Educational Services, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A small California limited liability company that provides school psychologist services to schools. Its services include psychoeducational evaluations, individual and group counseling, behavior management, crisis intervention, and consultation with parents and school staff.",
+      "website": "https://www.ajpeducationalservices.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "AJP Educational Services",
+        "url": "https://www.ajpeducationalservices.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Active business entities in La Palma, CA",
+        "url": "https://www.city-data.com/business-entities/La-Palma-CA-A.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-ajp-educational-services",
+    "notes": "The company website lists school psychologist services (evaluations, counseling, behavior management, crisis intervention, consultation) in California since 2018, and city-data.com lists AJP EDUCATIONAL SERVICES, LLC in La Palma. A separate search result (ZoomInfo) ties the LLC to the same website and a La Palma headquarters, and describes it as a nonpublic agency with 1-10 employees. That fits OUSD's nonpublic agency special education contract with an agenda location of La Palma, CA. The word 'small' in the summary is not on the cited pages but is consistent with that listing.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

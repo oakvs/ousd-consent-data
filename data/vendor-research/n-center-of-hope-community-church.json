@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237426174",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/23-7426174",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cohccministries.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cohccministries.org/services.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cohccministries.org/breems.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-center-of-hope-community-church",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered tax-exempt church: 'Center Of Hope Community Church', Oakland, CA, EIN 23-7426174 (ProPublica Nonprofit Explorer)",
+      "GuideStar lists the same legal name and EIN at 8411 Macarthur Blvd, Oakland, CA 94605, matching the agenda's Oakland, CA location",
+      "The church website cohccministries.org (COHCC) describes an Oakland ministry led by Rev. Brondon Reems with Oakland community programs and youth training programs",
+      "A church with its own facilities is a plausible lessor to the district's Oakland Adult and Career Education department (lease agreement in the agenda)"
+    ],
+    "key": "n-center-of-hope-community-church",
+    "notes": "No phone or email found on the church's own pages; directory listings show a phone but were not cited. The OUSD lease itself was not verified against the church's address.",
+    "profile": {
+      "address": "8411 Macarthur Blvd, Oakland, CA 94605",
+      "caEntityNumber": null,
+      "ein": "23-7426174",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Center Of Hope Community Church",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A Christian church in Oakland, California, that holds Sunday worship, Bible classes and prayer meetings in person and online. Its pastor leads community outreach, including youth training programs and ministry to people in need.",
+      "website": "https://cohccministries.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Center Of Hope Community Church - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237426174"
+      },
+      {
+        "supports": [
+          "address",
+          "legalName",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Center of Hope Community Church - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/23-7426174"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "COHCC/Home",
+        "url": "https://cohccministries.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "COHCC/Services",
+        "url": "https://cohccministries.org/services.htm"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "COHCC/Brondon Reems",
+        "url": "https://cohccministries.org/breems.htm"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-center-of-hope-community-church",
+    "notes": "ProPublica and GuideStar confirm a church named Center of Hope Community Church, EIN 23-7426174, at 8411 MacArthur Blvd, Oakland, matching the agenda's Oakland location and a facility lease. The summary matches the church website's services and pastor pages (the site itself does not state an address, so its link to this EIN rests on the name and the Oakland-area pastor).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

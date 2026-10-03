@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.calm.com/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.calm.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Calm_(company)",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007443",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'Calm.com, Inc.' appears exactly on Calm's own privacy page and matches the agenda name 'Calm.com, Inc.'",
+      "Headquartered in San Francisco, CA (Wikipedia), matching the agenda location 'San Francisco, CA'",
+      "Calm's About page describes workplace wellness features, consistent with a 2021-2022 services agreement with OUSD's Talent / Human Resources Department"
+    ],
+    "key": "v-007443",
+    "notes": "No CA SOS entity number, phone or US mailing address verified. Contact email is the general support inbox listed in the privacy policy.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@calm.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Calm.com, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Calm is a mental health and wellness company that makes a meditation and sleep app. The app offers guided meditations, sleep stories, music and mindful movement. Calm also offers workplace wellness features for employers.",
+      "website": "https://www.calm.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "email"
+        ],
+        "title": "Calm Privacy Policy",
+        "url": "https://www.calm.com/privacy"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Calm",
+        "url": "https://www.calm.com/about"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Calm (company) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Calm_(company)"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007443",
+    "notes": "Legal name Calm.com, Inc. and San Francisco HQ match the agenda; the privacy, about and Wikipedia pages support the legal name, general support email, summary (meditation/sleep app, workplace offerings via Calm Business), website, HQ and for-profit type. Employee wellness services fit a Talent/HR agreement; the email is a general support inbox, not a named individual.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

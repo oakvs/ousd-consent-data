@@ -1,0 +1,141 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942780274",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.newdoor.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://newdoor.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.newdoor.org/what-we-do/education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.oaklandchamber.com/list/member/new-door-ventures-san-francisco-415-920-9200-57792",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005644",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'New Door Ventures' (ProPublica Nonprofit Explorer, EIN 94-2780274, San Francisco, CA), matching the agenda's San Francisco, CA location",
+      "Website describes a GED/HiSET education program for youth, matching OUSD's 'Classroom & academic programs' contracts for continuation schools (Dewey Academy, Ralph J. Bunche Academy)",
+      "Oakland Chamber of Commerce member listing describes the nonprofit as serving youth in San Francisco and the East Bay, with the same San Francisco address and phone as its own website"
+    ],
+    "key": "v-005644",
+    "notes": "The agenda does not name Oakland; no cited page explicitly mentions Dewey or Bunche Academy, so the link to those OUSD schools rests on the education program and the East Bay service area. California Secretary of State entity number and SAM UEI were not looked up.",
+    "profile": {
+      "address": "3221 20th St. San Francisco, CA 94110",
+      "caEntityNumber": null,
+      "ein": "94-2780274",
+      "email": "intake@newdoor.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "New Door Ventures",
+      "orgType": "nonprofit",
+      "phone": "(415) 920-9200",
+      "samUei": null,
+      "summary": "A San Francisco nonprofit that helps young people who are not well connected to work or school. It runs a six-month paid internship program with employer partners, career services, and an education program that prepares youth for the GED or HiSET high school equivalency tests.",
+      "website": "https://www.newdoor.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "New Door Ventures - Nonprofit Explorer (ProPublica)",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942780274"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website"
+        ],
+        "title": "Contact - New Door Ventures",
+        "url": "https://www.newdoor.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "website"
+        ],
+        "title": "New Door Ventures",
+        "url": "https://newdoor.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education Program - New Door Ventures",
+        "url": "https://www.newdoor.org/what-we-do/education/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "phone",
+          "website"
+        ],
+        "title": "New Door Ventures - Oakland Chamber of Commerce",
+        "url": "https://business.oaklandchamber.com/list/member/new-door-ventures-san-francisco-415-920-9200-57792"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-005644",
+    "notes": "Exact name and San Francisco location match the agenda; the GED/HiSET education program fits OUSD's academic-program contracts for Dewey and Bunche. ProPublica, the contact page, the home page, the education page and the Oakland Chamber listing support every profile field, and the summary is neutral, though no source names OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

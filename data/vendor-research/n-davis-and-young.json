@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.dby-law.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dby-law.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dby-law.com/practice-areas/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dby-law.com/our-attorneys/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-davis-and-young",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD agenda text names the vendor 'Davis and Young Law Firm (now Davis, Bengtson & Young, APLC)'; the firm's own website is titled and branded 'Davis, Bengtson & Young, APLC'",
+      "Located in San Jose, CA, matching the agenda location; website lists 1960 The Alameda, Ste 210, San Jose, CA 95126",
+      "Firm's attorneys page lists 'Defense of School Districts' and representing public entities including school districts, matching OUSD's General Counsel / legal contracts"
+    ],
+    "key": "n-davis-and-young",
+    "notes": "Agenda also uses the earlier name 'Davis and Young Law Firm'. No general email address found (site uses a contact form), and no CA Secretary of State entity number was verified.",
+    "profile": {
+      "address": "1960 The Alameda, Ste 210, San Jose, CA 95126",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Jose, CA",
+      "legalName": "Davis, Bengtson & Young, APLC",
+      "orgType": "company",
+      "phone": "(669) 245-4200",
+      "samUei": null,
+      "summary": "A civil litigation law firm based in San Jose, California. It handles employment law, personal injury, mediation, and advice and counsel work. Its attorneys also represent public entities, including school districts, county offices of education and cities.",
+      "website": "https://www.dby-law.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Davis, Bengtson & Young",
+        "url": "https://www.dby-law.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Davis, Bengtson & Young Contact Information",
+        "url": "https://www.dby-law.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Davis, Bengtson & Young Practice Areas",
+        "url": "https://www.dby-law.com/practice-areas/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Our Attorneys - Davis, Bengtson & Young",
+        "url": "https://www.dby-law.com/our-attorneys/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-davis-and-young",
+    "notes": "OUSD's own agenda text says the firm is now Davis, Bengtson & Young, APLC; the firm's site is in San Jose (matching the agenda), was founded by Davis and Young, and lists school-district defense. Name, address, phone, practice areas and public-entity work were all confirmed on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

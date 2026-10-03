@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.leadps.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/731643646",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-lps-oakland-r-and-d",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'LPS Oakland R&D' matches the Oakland R&D campus of Leadership Public Schools, listed on leadps.org as 'LPS Oakland R&D'",
+      "California Department of Education directory lists 'LPS Oakland R & D Campus', a public charter high school in Oakland, CA at 8601 MacArthur Blvd. with website www.leadps.org, matching OUSD's Proposition 39 facilities use agreement via the Office of Charter Schools",
+      "Leadership Public Schools Inc is a registered 501(c)(3) nonprofit in Oakland, CA (ProPublica Nonprofit Explorer), which operates the charter schools"
+    ],
+    "key": "n-lps-oakland-r-and-d",
+    "notes": "The agenda vendor 'LPS Oakland R&D' is a campus (charter school) of Leadership Public Schools; the profile describes the operating nonprofit, Leadership Public Schools Inc. The campus is authorized by the Alameda County Office of Education per the CDE directory (https://sd.cde.ca.gov/schooldirectory/details?cdscode=01100170126748). The campus phone is (510) 633-0750; the network main line is used here. Reviewer may want to confirm the contracting legal entity is Leadership Public Schools Inc. Entity number and UEI not looked up.",
+    "profile": {
+      "address": "99 Linden Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "73-1643646",
+      "email": "info@leadps.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Leadership Public Schools Inc",
+      "orgType": "nonprofit",
+      "phone": "510 830 3780",
+      "samUei": null,
+      "summary": "Leadership Public Schools is a nonprofit that operates a network of three charter high schools in the Bay Area, in Hayward, Oakland and Richmond. Its schools focus on preparing students for college, career and life. LPS Oakland R&D is its Oakland campus.",
+      "website": "https://www.leadps.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Leadership Public Schools",
+        "url": "https://www.leadps.org"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Leadership Public Schools Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/731643646"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-lps-oakland-r-and-d",
+    "notes": "leadps.org lists LPS Oakland R&D as one of its three campuses and shows the stated HQ address, phone and email; ProPublica confirms Leadership Public Schools Inc, EIN 73-1643646, a 501(c)(3) in Oakland. The CDE directory confirms the Oakland charter campus. The summary is neutral and supported, and the contact details are the network's business details, not the campus's.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

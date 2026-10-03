@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://goalbook.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://goalbook.com/terms/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-enome-goalbook",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "goalbook.com footer and Terms of Use name the legal entity as 'Enome, Inc.', matching the agenda's 'Enome, Inc. dba Goalbook'",
+      "Goalbook Toolkit is a special education (IEP) planning product, matching OUSD's Special Education Department sole-source contract",
+      "Other California districts' agenda items name 'Enome, Inc. (Goalbook)' for the same Goalbook Toolkit membership"
+    ],
+    "key": "n-enome-goalbook",
+    "notes": "Third-party district documents list a P.O. Box in San Mateo, CA and older goalbookapp.com addresses, but no official Goalbook page cited here shows a phone or mailing address, so those fields are left null. No registry (CA Secretary of State, SAM.gov) page was checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@goalbook.com",
+      "headquarters": null,
+      "legalName": "Enome, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Goalbook is a company that makes Goalbook Toolkit, an online platform that helps special education teachers write Individualized Education Programs (IEPs) and plan specially designed instruction. It works with school districts across the United States.",
+      "website": "https://goalbook.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "legalName"
+        ],
+        "title": "Goalbook",
+        "url": "https://goalbook.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email"
+        ],
+        "title": "Goalbook Terms of Use",
+        "url": "https://goalbook.com/terms/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-enome-goalbook",
+    "notes": "goalbook.com footer and Terms of Use name Enome, Inc. as the entity behind Goalbook, matching the agenda's 'Enome, Inc. dba Goalbook' and the special education contract; the summary, website, legalName and support@goalbook.com email (a generic business address) are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

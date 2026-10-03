@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://avaenergy.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://avaenergy.org/about-ava/our-story/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://avaenergy.org/about-ava/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://avaenergy.org/about-ava/careers/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stocktonca.gov/government/city_manager/ava_community_engergy.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-community-energy-authority",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Ava Community Energy's homepage names its legal name as 'East Bay Community Energy Authority'; a City of Stockton page confirms Ava is the former East Bay Community Energy and that the city joined the 'East Bay Community Energy Authority', matching the agenda name",
+      "Its careers page says the team works from an office in Oakland, matching the agenda location (Oakland, CA)",
+      "Oakland is a member city of its service area (Alameda County), and an 'Electricity Service Agreement' is the kind of contract an electricity provider signs with a school district's facilities division",
+      "Its Our Story page says it was formerly called East Bay Community Energy and is a public agency (Joint Powers Authority), consistent with a government energy supplier"
+    ],
+    "key": "n-east-bay-community-energy-authority",
+    "notes": "Vendor was renamed from East Bay Community Energy to Ava Community Energy in Oct 2023; the agenda uses the legal name. No street address found on fetched pages. Not a 501(c)(3) so no EIN; CA entity number and SAM UEI not verified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "customer-support@AvaEnergy.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Community Energy Authority",
+      "orgType": "public_agency",
+      "phone": "833-699-3223",
+      "samUei": null,
+      "summary": "Ava Community Energy, formerly East Bay Community Energy, is a not-for-profit public agency that acts as the default electricity generation provider for Alameda County and San Joaquin County in California. It is a Community Choice Aggregator organized as a Joint Powers Authority, and it also runs programs such as electric vehicle charging and rebates.",
+      "website": "https://avaenergy.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Ava Community Energy",
+        "url": "https://avaenergy.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "What Is Ava Community Energy? Our Story",
+        "url": "https://avaenergy.org/about-ava/our-story/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact Us | Ava Community Energy",
+        "url": "https://avaenergy.org/about-ava/contact-us/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Careers | Ava Community Energy",
+        "url": "https://avaenergy.org/about-ava/careers/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Ava Community Energy | City of Stockton",
+        "url": "https://www.stocktonca.gov/government/city_manager/ava_community_engergy.php"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-east-bay-community-energy-authority",
+    "notes": "Ava Community Energy is the renamed East Bay Community Energy (Alameda County CCA/JPA, Oakland office), which fits an Electricity Service Agreement with OUSD facilities. The summary, orgType, website, phone, email and headquarters are supported by the cited pages, but the cited sources show the current legal name as Ava Community Energy (Authority), not the former name, so legalName is not confirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}

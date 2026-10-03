@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/43259160",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.citizenschools.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.citizenschools.org/news/category/California",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001075",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Citizen Schools Inc' (ProPublica Nonprofit Explorer, EIN 04-3259160, Boston, MA), the only exact-name match",
+      "Citizen Schools' California page lists Oakland sites Westlake Middle School and Greenleaf Elementary School, matching the OUSD MOU titles",
+      "Citizen Schools' California page lists a Redwood City site (McKinley Institute of Technology), matching the agenda location Redwood City, CA",
+      "Organization runs after-school and expanded-learning programs for middle school students, matching OUSD's after-school program contracts"
+    ],
+    "key": "v-001075",
+    "notes": "The agenda lists Redwood City, CA, which is the organization's California regional office (not the legal headquarters). Contact details shown are the national headquarters in Boston; no California-specific contact was confirmed on the organization's site. No CA Secretary of State or SAM.gov record was checked.",
+    "profile": {
+      "address": "1 Beacon Street, Boston, MA 02108",
+      "caEntityNumber": null,
+      "ein": "04-3259160",
+      "email": "info@citizenschools.org",
+      "headquarters": "Boston, MA",
+      "legalName": "Citizen Schools Inc",
+      "orgType": "nonprofit",
+      "phone": "617-695-2300",
+      "samUei": null,
+      "summary": "Citizen Schools is a national education nonprofit founded in 1995. It supports students through hands-on learning projects and career mentors, often led by volunteers from different professions, in schools and extended-learning programs. It operates in several regions, including the California Bay Area.",
+      "website": "https://www.citizenschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Citizen Schools Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/43259160"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Citizen Schools",
+        "url": "https://www.citizenschools.org/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "California - Latest News - Citizen Schools",
+        "url": "https://www.citizenschools.org/news/category/California"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-001075",
+    "notes": "Citizen Schools' California news page names Greenleaf Elementary, Westlake Middle and Redwood City's McKinley Institute of Technology, matching the OUSD MOU titles and the agenda location. The About page confirms the 1995 founding, mentor-led learning, and the Boston address, phone and email. ProPublica confirms the EIN, 501(c)(3) status and Boston location. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

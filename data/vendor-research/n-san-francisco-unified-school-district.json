@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sfusd.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sfusd.edu/about-sfusd",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-san-francisco-unified-school-district",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'San Francisco Unified School District' (sfusd.edu), the public school district named in the agenda",
+      "Located in San Francisco, CA (555 Franklin Street), matching the agenda location 'San Francisco, CA'",
+      "SFUSD's site lists special education support among its services, matching OUSD's 'Special education' student-placement MOU with another school district"
+    ],
+    "key": "n-san-francisco-unified-school-district",
+    "notes": "Public agency (school district); no EIN or business registry numbers applicable. No general inbox found, so email left null.",
+    "profile": {
+      "address": "555 Franklin Street, San Francisco, CA 94102",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "San Francisco Unified School District",
+      "orgType": "public_agency",
+      "phone": "415-241-6000",
+      "samUei": null,
+      "summary": "A public school district that runs the public schools in San Francisco, about 120 schools serving more than 50,000 students from early education through high school. It also administers the San Francisco County Office of Education. Its programs include special education, English learner support and student wellness services.",
+      "website": "https://www.sfusd.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "summary",
+          "orgType",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "San Francisco Unified School District",
+        "url": "https://www.sfusd.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About SFUSD",
+        "url": "https://www.sfusd.edu/about-sfusd"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-san-francisco-unified-school-district",
+    "notes": "The agenda item is an MOU between OUSD and San Francisco Unified School District for student placement in special education, which matches SFUSD in San Francisco, CA. The cited sfusd.edu pages support the phone, address, school and student counts, county office of education role and programs, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

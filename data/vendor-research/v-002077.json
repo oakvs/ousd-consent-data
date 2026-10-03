@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/364319738",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.communityrejuvenationproject.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.communityrejuvenationproject.org/education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.communityrejuvenationproject.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002077",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Charity Navigator and Cause IQ list 'Higher Gliffs Inc.' under EIN 36-4319738, the same EIN shown by ProPublica for Community Rejuvenation Project Inc and by the CRP website footer (Federal Tax ID 364319738)",
+      "CRP's Contact page lists an Oakland chapter at 2721 60th Ave, Oakland, CA, matching the agenda location Oakland, CA",
+      "CRP's Education page describes semester-long classes at Fremont High School (Oakland, CA), matching OUSD's 'Higher Gliffs - Fremont High School' contracts for classroom programs",
+      "OUSD Legistar file 15-1975 shows Higher Gliffs, Oakland, CA, teaching a mural arts class for OUSD students, consistent with CRP's mural-education work"
+    ],
+    "key": "v-002077",
+    "notes": "ProPublica/IRS lists a Chicago, IL address for this EIN; the organization's own Contact page lists both Oakland (2721 60th Ave) and Chicago chapters. Oakland chosen as headquarters because the agenda says Oakland and the Oakland chapter is where the Higher Gliffs name is used (Charity Navigator, Cause IQ, OUSD Legistar). 'Higher Gliffs' appears to be a name used by the same organization; the link rests on the shared EIN on third-party listings. Address is copied as the Contact page prints it. CA Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "2721 60th Ave, Oakland, Ca, 94605",
+      "caEntityNumber": null,
+      "ein": "36-4319738",
+      "email": "communityrejuvenationproject@gmail.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Community Rejuvenation Project Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 269-7840",
+      "samUei": null,
+      "summary": "A nonprofit that makes public murals and runs art education programs, including workshops, mural tours and multi-week classes in schools. It has an Oakland chapter and a Chicago chapter.",
+      "website": "https://www.communityrejuvenationproject.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Community Rejuvenation Project Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/364319738"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - Community Rejuvenation Project",
+        "url": "https://www.communityrejuvenationproject.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Services 2 - Community Rejuvenation Project",
+        "url": "https://www.communityrejuvenationproject.org/education"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - Community Rejuvenation Project",
+        "url": "https://www.communityrejuvenationproject.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-002077",
+    "notes": "Shared EIN 36-4319738 links Higher Gliffs Inc (Oakland, CA 94605, dba Community Rejuvenation Project) to CRP; CRP's own Contact page confirms the EIN, Oakland chapter address, phone and generic org email, and its Education page names Fremont High School classes, matching OUSD's contracts. Summary is neutral and supported; the Chicago IRS address is a second chapter and Oakland headquarters is consistent with the agenda and the Oakland-based Higher Gliffs listings.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

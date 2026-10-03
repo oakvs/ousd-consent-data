@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://psychedservices.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.psychedservices.com/contact",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/burlingame/profile/not-elsewhere-classified/psyched-services-licensed-educational-psychology-and-behavioral-services-pc-1116-893581",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/washington-corporation/604586225",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-psyched-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Psyched Services' (agenda) vs 'Psyched Services-Licensed Educational Psychology and Behavioral Services, P.C.' (BBB profile)",
+      "Located in Burlingame, CA, matching the agenda text",
+      "Official website says it is a California Department of Education-approved Non-Public Agency (NPA), matching OUSD's 'Nonpublic, Nonsectarian School, Agency Services Master Contract' for special education"
+    ],
+    "key": "n-psyched-services",
+    "notes": "Registry numbers omitted: the only registry record found is a Washington State (foreign professional corporation) entry via a third-party aggregator; no California SOS entity number, EIN or UEI was confirmed. The agenda name 'N-Psyched Services' is likely a data-entry variant of 'Psyched Services'.",
+    "profile": {
+      "address": "533 Airport Blvd Ste 400, Burlingame, CA 94010",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "office@psychedservices.com",
+      "headquarters": "Burlingame, CA",
+      "legalName": "Psyched Services-Licensed Educational Psychology and Behavioral Services, P.C.",
+      "orgType": "company",
+      "phone": "(650) 427-0110",
+      "samUei": null,
+      "summary": "A private practice in Burlingame, California that provides psychological and behavioral assessments, consultation and training for children, caregivers and educators. It is a California Department of Education-approved Non-Public Agency that serves schools with special education evaluations and related services.",
+      "website": "https://psychedservices.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About - Psyched Services",
+        "url": "https://psychedservices.com/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact - Psyched Services",
+        "url": "https://www.psychedservices.com/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "phone"
+        ],
+        "title": "Psyched Services-Licensed Educational Psychology and Behavioral Services, P.C. (BBB)",
+        "url": "https://www.bbb.org/us/ca/burlingame/profile/not-elsewhere-classified/psyched-services-licensed-educational-psychology-and-behavioral-services-pc-1116-893581"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Psyched Services-Licensed Educational Psychology and Behavioral Services, P.C. - Burlingame, CA",
+        "url": "https://opengovus.com/washington-corporation/604586225"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-psyched-services",
+    "notes": "Psyched Services in Burlingame, CA is a CDE-approved Non-Public Agency offering educational psychology and behavioral services, matching the OUSD NPA master contract for special education. Name, address, phone and the general office email are confirmed by the cited pages (BBB, About, Contact) and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

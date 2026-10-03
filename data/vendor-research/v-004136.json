@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/SunPower",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.energysage.com/solar/sunpower-is-bankrupt-what-now/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://solarbuildermag.com/news/sunpower-install-3-6-mw-solar-16-schools-one-california-district/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-004136",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches SunPower Corporation, a solar installer that designed and built 3.6 MW of solar systems at 16 Oakland Unified schools (Solar Builder magazine), matching OUSD's solar array and operations and maintenance agreements",
+      "Wikipedia lists SunPower Corporation's headquarters as Richmond, California, matching the agenda location Richmond, CA",
+      "Weak point: the original SunPower Corporation filed for Chapter 11 in August 2024 and the sunpower.com website and brand now belong to a different legal entity (SunPower Inc., formerly Complete Solaria), so no website or contact details are given"
+    ],
+    "key": "v-004136",
+    "notes": "The original SunPower Corporation went bankrupt in 2024; the current sunpower.com is a different legal entity (SunPower Inc., formerly Complete Solaria). It is unclear which entity now holds OUSD's operations and maintenance agreement, so website and contact fields were deliberately left null. Richmond HQ is supported by Wikipedia's infobox and several business directories; no registry (CA SOS, SAM.gov) page was fetched.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Richmond, CA",
+      "legalName": "SunPower Corporation",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "SunPower Corporation was a solar energy company that designed, built and serviced solar power systems, mainly for homes and businesses. It filed for Chapter 11 bankruptcy in August 2024 and sold some of its assets to Complete Solaria, which later renamed itself SunPower Inc. The current SunPower Inc. is a separate legal entity from the original corporation.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "SunPower - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/SunPower"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SunPower is Bankrupt. What Now?",
+        "url": "https://www.energysage.com/solar/sunpower-is-bankrupt-what-now/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SunPower to Install 3.6 MW of Solar at 16 Schools in One California District",
+        "url": "https://solarbuildermag.com/news/sunpower-install-3-6-mw-solar-16-schools-one-california-district/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

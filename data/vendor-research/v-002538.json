@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/management-consultant/legacy-leaders-llc-1116-893312",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
+  "key": "v-002538",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "BBB lists 'Legacy Leaders, LLC', a management consulting business at 395 Staten Ave, Oakland, CA, matching the agenda's name and Oakland location",
+      "Only one source found; no website, registry (CA SOS, SAM.gov) record or public page linking this business to OUSD was found, so the match is unconfirmed"
+    ],
+    "key": "v-002538",
+    "notes": "Only a BBB listing found. legacyleaderllc.com is a different company (Legacy Leadership Strategies, Memphis TN) and was rejected. Could not confirm this is the business OUSD contracts with, or that it is not a one-person sole-proprietor business. Needs manual verification.",
+    "profile": {
+      "address": "395 Staten Ave, Oakland, CA 94610-3431",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Legacy Leaders, LLC",
+      "orgType": "company",
+      "phone": "(510) 544-9137",
+      "samUei": null,
+      "summary": "A small management consulting business based in Oakland, California, with one employee according to Better Business Bureau records.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Legacy Leaders, LLC - BBB Business Profile",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/management-consultant/legacy-leaders-llc-1116-893312"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

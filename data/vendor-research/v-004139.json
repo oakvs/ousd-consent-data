@@ -1,0 +1,77 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/510666163",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://us.commitchange.com/ca/oakland/super-stars-literacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-004139",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Super Stars Literacy Inc', EIN 51-0666163, Oakland, CA (ProPublica Nonprofit Explorer), matching the agenda's 'Super Stars Literacy, Inc.' and 'Oakland, CA'",
+      "Organization provides early literacy programs for K-2 students at Oakland elementary schools, matching OUSD's 'Classroom & academic programs' contracts at Markham and Garfield Elementary"
+    ],
+    "key": "v-004139",
+    "notes": "Organization appears inactive or wound down: ProPublica shows revenue collapsing in FY2021 and the EIN is not on the IRS's most recent exempt-organization list. The domain superstarsliteracy.org now redirects to an unrelated site, so website, phone, email and address were deliberately left null (the only contact details found were on third-party pages and may be stale; the email was a named person's).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "51-0666163",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Super Stars Literacy Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Super Stars Literacy is a nonprofit that provides early reading help to kindergarten through 2nd grade students in Oakland elementary schools. Its programs include daily after-school literacy instruction led by AmeriCorps members, reading support during the school day, and family reading events.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Super Stars Literacy Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/510666163"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Super Stars Literacy - Oakland, CA",
+        "url": "https://us.commitchange.com/ca/oakland/super-stars-literacy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-004139",
+    "notes": "ProPublica confirms Super Stars Literacy Inc, EIN 51-0666163, Oakland CA, 501(c)(3); the CommitChange page supports the K-2, AmeriCorps and family-event summary, and OUSD's items are from 2020 when the org was still active. The organization appears wound down after FY2021, which the candidate flagged in its notes.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

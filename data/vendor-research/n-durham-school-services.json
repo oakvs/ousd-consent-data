@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.durhamschoolservices.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.durhamschoolservices.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-durham-school-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the agenda text 'Durham School Services'; its own website describes it as a student transportation (school bus) company, matching OUSD's 'Services Agreement ... Transportation Services Department' contract title",
+      "A Durham School Services office is listed in Oakland, CA (850 92nd Ave, per the Better Business Bureau profile), matching the agenda location 'Oakland, CA'",
+      "Company website says it provides home-to-school, special education and charter transportation, consistent with a district transportation services agreement"
+    ],
+    "key": "n-durham-school-services",
+    "notes": "Contact details are the national headquarters (Warrenville, IL), not the Oakland depot. A Better Business Bureau page (bbb.org/us/ca/oakland/profile/transportation/durham-school-services-1116-55051) lists an Oakland office at 850 92nd Ave, (510) 562-0803; it was used only for identity, not cited. Legal entity name and registry IDs (CA SOS, SAM UEI) not verified, so left null.",
+    "profile": {
+      "address": "27755 Diehl Rd., Suite 100 Warrenville, IL 60555",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@durhamschoolservices.com",
+      "headquarters": "Warrenville, IL",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "800.950.0485",
+      "samUei": null,
+      "summary": "Durham School Services is a company that provides student transportation to school districts across the United States. Its services include home-to-school bus routes, special education transportation and charter bus trips for field trips and events. It is part of Summit School Services.",
+      "website": "https://www.durhamschoolservices.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "School Transportation Services - Durham School Services",
+        "url": "https://www.durhamschoolservices.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - Durham School Services",
+        "url": "https://www.durhamschoolservices.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-durham-school-services",
+    "notes": "Durham School Services is a school-bus transportation company, matching the OUSD Transportation Services Department agreement title; its site confirms the summary, phone, email, Warrenville IL headquarters and Summit School Services affiliation. Contact details are national headquarters, not the Oakland depot, which the candidate's notes already state.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

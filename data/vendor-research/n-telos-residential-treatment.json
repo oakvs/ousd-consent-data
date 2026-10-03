@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://telos.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opennpi.com/provider/1528223195",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://members.natsap.org/program-school-directory/Details/telos-3497567",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-telos-residential-treatment",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "National Provider Identifier registry record for 'Telos Residential Treatment LLC' at 870 W Center St, Orem, UT 84057, matching the agenda's 'Orem, UT'",
+      "telos.org lists the same address (870 W Center St, Orem, UT 84057) and the same phone number (801.426.8800) as the NPI record",
+      "Telos runs residential treatment and a school (Telos Academy) for teens with learning and behavioral needs, consistent with a Nonpublic School/Agency special education master contract"
+    ],
+    "key": "n-telos-residential-treatment",
+    "notes": "Legal name comes from the federal NPI registry (via opennpi.com); telos.org footer does not show the LLC name, but address and phone match. Utah business registry not checked (no EIN or state entity number found). The company operates two Orem campuses; the north campus main line and address are used here. No general email is published.",
+    "profile": {
+      "address": "870 W Center St, Orem, UT 84057",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Orem, UT",
+      "legalName": "Telos Residential Treatment LLC",
+      "orgType": "company",
+      "phone": "801.426.8800",
+      "samUei": null,
+      "summary": "Telos is a private, for-profit residential treatment program in Orem, Utah, for teens and young adults. It offers residential care, partial hospitalization and intensive outpatient programs for depression, anxiety, behavioral challenges and learning differences. Its Telos Academy provides accredited high school classes alongside clinical treatment.",
+      "website": "https://telos.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Telos: Teen Residential Treatment & Therapeutic Boarding School",
+        "url": "https://telos.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Telos Residential Treatment LLC - NPI 1528223195",
+        "url": "https://opennpi.com/provider/1528223195"
+      },
+      {
+        "supports": [
+          "orgType",
+          "website"
+        ],
+        "title": "Telos - National Association of Therapeutic Schools and Programs",
+        "url": "https://members.natsap.org/program-school-directory/Details/telos-3497567"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-telos-residential-treatment",
+    "notes": "The NPI record gives the exact legal name 'Telos Residential Treatment LLC' at 870 W Center St, Orem, UT, and the phone number matches telos.org. NATSAP lists Telos in Orem as for-profit and telos.org confirms the services and Cognia-accredited school. All of this fits an Orem, UT nonpublic school/agency special education contract. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

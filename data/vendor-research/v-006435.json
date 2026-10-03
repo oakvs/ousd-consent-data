@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/521055738",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dresherensemble.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dresherensemble.org/about-pde/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dresherensemble.org/about-pde/donate/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006435",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the Paul Dresher Ensemble, a San Francisco arts organization, matching the agenda's 'Paul Dresher Ensemble' and 'San Francisco, CA'",
+      "Official website community-programs page says it continues to work with Oakland Unified School District teachers",
+      "Website describes music and arts education programming, consistent with OUSD's 'Classroom & academic programs' contracts",
+      "Donate page names the legal entity 'Musical Traditions, Inc., DBA Paul Dresher Ensemble' with EIN 52-1055738, which matches the ProPublica nonprofit record for EIN 52-1055738 (listed there as New Performance Traditions)"
+    ],
+    "key": "v-006435",
+    "notes": "Legal name is ambiguous: the donate page says 'Musical Traditions, Inc., DBA Paul Dresher Ensemble', while ProPublica lists EIN 52-1055738 as 'New Performance Traditions' (apparently a renamed entity). Same EIN on both. No page found mentioning Elmhurst United Middle School specifically; OUSD link is the site's mention of working with an Oakland Unified teacher. California SOS entity number not checked.",
+    "profile": {
+      "address": "1446 Market Street, San Francisco, CA 94102",
+      "caEntityNumber": null,
+      "ein": "52-1055738",
+      "email": "info@dresherensemble.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "New Performance Traditions",
+      "orgType": "nonprofit",
+      "phone": "(415) 558-9540",
+      "samUei": null,
+      "summary": "The Paul Dresher Ensemble is a San Francisco-based nonprofit arts organization that creates and tours new opera and music theater works and performs contemporary chamber music. Its nonprofit arm, New Performance Traditions, runs an artist residency program and offers rehearsal and studio space to artists.",
+      "website": "https://dresherensemble.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "New Performance Traditions - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/521055738"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Paul Dresher Ensemble",
+        "url": "https://dresherensemble.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Paul Dresher Ensemble - Contact Us",
+        "url": "https://dresherensemble.org/about-pde/contact-us/"
+      },
+      {
+        "supports": [
+          "email",
+          "ein",
+          "orgType"
+        ],
+        "title": "Make a Donation to Support Paul Dresher Ensemble",
+        "url": "https://www.dresherensemble.org/about-pde/donate/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006435",
+    "notes": "Paul Dresher Ensemble in San Francisco matches the agenda name and city; its site mentions continued work with OUSD teachers, and the donate page ties the EIN 52-1055738 to ProPublica's New Performance Traditions record. Summary, phone, address and generic info@ email are supported; no page names Elmhurst specifically and the legal-name wording (Musical Traditions DBA vs New Performance Traditions) is slightly ambiguous but EIN-consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

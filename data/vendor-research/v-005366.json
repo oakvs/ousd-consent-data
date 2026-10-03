@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://www.jamesmmarshall.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/el-cajon/james-marshall-consulting-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-005366",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a California general corporation 'James Marshall Consulting, Inc.', entity number 2602642, active (corporate.ai, bizprofile.net); listed as an educational consulting business",
+      "Consultant's website describes program implementation and evaluation consulting for schools and districts, which loosely fits OUSD's 'Community Schools and Student Services' contract",
+      "Agenda gives La Mesa, CA; registry principal address is in El Cajon, CA 91941 (a La Mesa ZIP code), and a directory search lists a La Mesa address, so the location is only roughly consistent",
+      "No page found that mentions Oakland, OUSD or Healthy Oakland Teens in connection with this company"
+    ],
+    "key": "v-005366",
+    "notes": "Medium confidence only: name and business type match, but no source ties this corporation to OUSD, and the registry city (El Cajon) differs from the agenda city (La Mesa). Appears to be a single-owner corporation tied to an SDSU professor of the same name; the website (jamesmarshallconsulting.com) redirects to jamesmmarshall.com. Website, phone, and address left null because the site shows no phone or address and the redirect makes the URL uncertain. Registry data seen only via third-party aggregators; the Secretary of State site was not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "2602642",
+      "ein": null,
+      "email": "info@jamesmarshallconsulting.com",
+      "headquarters": null,
+      "legalName": "James Marshall Consulting, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California corporation that provides consulting on putting learning programs and initiatives into practice and on evaluating them. Its work is aimed at schools, school districts, nonprofits and government organizations.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "email",
+          "orgType"
+        ],
+        "title": "James M. Marshall",
+        "url": "http://www.jamesmmarshall.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber"
+        ],
+        "title": "James Marshall Consulting, Inc. El Cajon, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/el-cajon/james-marshall-consulting-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

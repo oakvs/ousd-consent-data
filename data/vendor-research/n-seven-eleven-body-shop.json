@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/auto-body-repair-and-painting/seven-eleven-body-shop-1116-26720",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    }
+  ],
+  "key": "n-seven-eleven-body-shop",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Seven Eleven Body Shop' (BBB profile) and it is the only business of that name found in Oakland, CA",
+      "Located in Oakland, CA (645 E 11th St), matching the agenda text 'Oakland, CA'",
+      "BBB says it repairs and paints cars, trucks, heavy equipment, box vans and tractors, consistent with a services agreement for the district's Warehouse Distribution Department vehicles"
+    ],
+    "key": "n-seven-eleven-body-shop",
+    "notes": "The shop's own website (711bodyshop.com) could not be fetched (connection refused), so no website or email is listed and no registry (CA SOS, SAM) entry was checked. No public page found mentions OUSD directly.",
+    "profile": {
+      "address": "645 E 11th St, Oakland, CA 94606-3638",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 835-2572",
+      "samUei": null,
+      "summary": "An auto body repair and paint shop in Oakland, California, founded in 1979. According to the Better Business Bureau, it repairs and paints cars, trucks, heavy equipment, box vans and tractors.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Seven Eleven Body Shop - BBB Business Profile",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/auto-body-repair-and-painting/seven-eleven-body-shop-1116-26720"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-seven-eleven-body-shop",
+    "notes": "The BBB profile confirms the exact name, Oakland address, phone, 1979 founding, and repair/paint of cars, trucks, heavy equipment and box vans, which fits a services agreement for the Warehouse Distribution Department. The summary is neutral and supported; no named individuals or opinion are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

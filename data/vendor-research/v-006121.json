@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/everlast-development-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildzoom.com/contractor/everlast-development-inc",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/construction/everlast-development-1116-976814",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-006121",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches California-registered corporation 'Everlast Development Inc.' (entity 3789445), located in Oakland, CA, matching the agenda location",
+      "Registered as a General Contractor; California contractor license 1016782 lists General Building and Landscaping classifications, consistent with OUSD's school-buildings vegetation fire management contracts"
+    ],
+    "key": "v-006121",
+    "notes": "No official website found. Contact details come from third-party directories (bizprofile.net mirrors California SOS data; BuildZoom and BBB list the phone). Older directory listings show 1734 13th St, Oakland, CA 94607; the Secretary of State address changed to 659 S Elmhurst Ave in Oct 2024. A general email seen in one search snippet was not verified on a fetched page and was omitted.",
+    "profile": {
+      "address": "659 S Elmhurst Ave A, Oakland, CA 94603",
+      "caEntityNumber": "3789445",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Everlast Development Inc.",
+      "orgType": "company",
+      "phone": "(510) 506-1606",
+      "samUei": null,
+      "summary": "A general contractor based in Oakland, California, licensed in the General Building and Landscaping classifications. It offers construction services for residential and commercial properties.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Everlast Development Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/everlast-development-inc"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Everlast Development",
+        "url": "https://www.buildzoom.com/contractor/everlast-development-inc"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters"
+        ],
+        "title": "Everlast Development",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/construction/everlast-development-1116-976814"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006121",
+    "notes": "Oakland-based general contractor (CA entity 3789445, license 1016782 General Building/Landscaping) matches the agenda name, city, and vegetation fire management construction work. Fetched sources support the legal name, entity number, address, phone, and the neutral summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

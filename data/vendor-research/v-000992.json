@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://www.cbmanagementgroup.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.cbmanagementgroup.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.cbmanagementgroup.com/it-infrastructure",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000992",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'CB Management Group, Inc.' (company website)",
+      "Located in Oakland, CA (211 10th Street, Suite 328), matching the agenda text",
+      "Website lists Oakland Unified School District as a client and describes district-wide technology infrastructure and network upgrade work, matching OUSD's 'Technology' contract with the Technology Services Department"
+    ],
+    "key": "v-000992",
+    "notes": "Registry IDs (CA SOS entity number, UEI) not retrieved. Only contact email on site is a named person's address, so omitted.",
+    "profile": {
+      "address": "211 10th Street, Suite 328 Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "CB Management Group, Inc.",
+      "orgType": "company",
+      "phone": "(510) 484-6769",
+      "samUei": null,
+      "summary": "A design and construction management firm based in Oakland, California, founded in 2016. It works in education, healthcare, specialty retail, IT infrastructure and hospitality. For school districts it provides design, construction and contract management for projects such as technology infrastructure and network upgrades.",
+      "website": "http://www.cbmanagementgroup.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "headquarters",
+          "address",
+          "website"
+        ],
+        "title": "About — CB Management Group, Inc.",
+        "url": "http://www.cbmanagementgroup.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact — CB Management Group, Inc.",
+        "url": "http://www.cbmanagementgroup.com/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "IT Infrastructure — CB Management Group, Inc.",
+        "url": "http://www.cbmanagementgroup.com/it-infrastructure"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-000992",
+    "notes": "Company site confirms exact name, Oakland address, 2016 founding, sectors, and a district-wide OUSD technology infrastructure project, matching the Technology Services contract. Summary is neutral and supported; the named-person email was correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

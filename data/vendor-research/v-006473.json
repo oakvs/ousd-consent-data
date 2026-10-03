@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/834594261",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://makered.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006473",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Maker Ed' is the public brand of The Maker Education Initiative, a registered 501(c)(3) nonprofit (ProPublica, EIN shown); makered.org uses the legal name and EIN",
+      "Maker Ed's own blog describes partnering with OUSD after school agencies (BACR, EBAYC, Safe Passages), matching OUSD's 'After-school & summer programs' contracts and Expanded Learning work",
+      "Maker Ed's own blog says it moved its office to a building in West Berkeley (2018), matching the agenda's Berkeley, CA"
+    ],
+    "key": "v-006473",
+    "notes": "Registry (IRS/ProPublica, GuideStar) lists the filing address as Sebastopol, CA (principal officer's address); the agenda and Maker Ed's own 2018 blog post place its office in Berkeley. No general phone, email or mailing address was found on makered.org, so contact fields and headquarters are left null. EIN 83-4594261 was exempt as of Dec 2019; earlier agenda items (2020-21) are consistent with this entity. California SOS and SAM.gov not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-4594261",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Maker Education Initiative",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that provides training, support and resources to individuals, institutions and communities who are bringing maker education, or hands-on learning through making, into their learning environments. It offers workshops, builds networks of educators and shares free online resources.",
+      "website": "https://makered.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Maker Education Initiative - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/834594261"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About - Maker Ed",
+        "url": "https://makered.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006473",
+    "notes": "Maker Ed is the public brand of The Maker Education Initiative (501(c)(3), EIN 83-4594261 per ProPublica and makered.org); an education nonprofit fits OUSD's after-school Kids Code contracts and the Berkeley agenda location. Legal name, EIN, org type, website and the neutral summary are supported by the cited pages; the Sebastopol filing address is correctly left out.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

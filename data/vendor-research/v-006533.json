@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/delaware-business/2018600276",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/procaretherapy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-006533",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Delaware business license record (OpenGovUS) lists legal name NEW DIRECTION SOLUTIONS, LLC with trade name PROCARE THERAPY, matching the agenda's 'New Direction Solutions dba Procare Therapy'",
+      "Same record gives 5550 Peachtree Pkwy, Peachtree Corners, GA, matching the agenda location 'Peachtree Corners, GA'; LinkedIn also lists ProCare Therapy headquarters at 5550 Peachtree Parkway, Peachtree Corners, GA",
+      "LinkedIn describes ProCare Therapy as a school-based therapy staffing company (speech, occupational, physical therapy, school psychology, nursing), consistent with OUSD's special education nonpublic agency contract for COVID support personnel"
+    ],
+    "key": "v-006533",
+    "notes": "The company's own site (procaretherapy.com) blocks automated fetching (403), so website, summary and headquarters rest on LinkedIn and the address on a Delaware business license listing. Phone and email were seen only in search snippets and could not be verified on a fetchable page, so they are left null. The Delaware license is only a registry-style listing; the entity is not confirmed on the California SOS or SAM.gov.",
+    "profile": {
+      "address": "5550 Peachtree Pkwy Ste 500, Peachtree Corners, GA 30092-2555",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Peachtree Corners, GA",
+      "legalName": "NEW DIRECTION SOLUTIONS, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "ProCare Therapy is a staffing and recruiting company that places school-based therapy and related professionals with schools across the United States. Its areas include speech language pathology, occupational therapy, physical therapy, school psychology, school nursing and sign language interpreting.",
+      "website": "http://www.procaretherapy.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Procare Therapy - New Direction Solutions, LLC - Delaware Business License",
+        "url": "https://opengovus.com/delaware-business/2018600276"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "ProCare Therapy | LinkedIn",
+        "url": "https://www.linkedin.com/company/procaretherapy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006533",
+    "notes": "The Delaware license listing shows New Direction Solutions, LLC with trade name Procare Therapy at Peachtree Corners, GA, matching the agenda's dba and city. LinkedIn confirms the school-based therapy staffing description, website and headquarters, which fit OUSD's nonpublic agency COVID support personnel contract.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

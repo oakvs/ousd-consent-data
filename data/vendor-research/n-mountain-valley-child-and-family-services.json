@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942742653",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mountainvalleyfamilyservices.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-mountain-valley-child-and-family-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Nevada City, CA: 'Mountain Valley Child And Family Services Inc' (ProPublica Nonprofit Explorer, EIN 94-2742653), matching the agenda's 'Nevada City, CA'",
+      "Official website lists a Nevada City, CA mailing address and a Sacramento residential program, matching both locations in the agenda text",
+      "Website describes residential treatment, mental health services and an accredited school program for youth, consistent with OUSD's Non-Public, Nonsectarian School/Agency special education master contracts"
+    ],
+    "key": "n-mountain-valley-child-and-family-services",
+    "notes": "CA Secretary of State entity number and SAM UEI not looked up. Generic referrals inbox on the website was left out. Website says 'Mountain Valley Child & Family Services, Inc.'; ProPublica legal name used for legalName.",
+    "profile": {
+      "address": "24077 State Highway 49, Nevada City, CA 95959",
+      "caEntityNumber": null,
+      "ein": "94-2742653",
+      "email": null,
+      "headquarters": "Nevada City, CA",
+      "legalName": "Mountain Valley Child And Family Services Inc",
+      "orgType": "nonprofit",
+      "phone": "530.265.9057",
+      "samUei": null,
+      "summary": "A nonprofit that provides residential treatment programs and mental health services for youth ages 12 to 18 who have emotional, behavioral and educational challenges. It also runs an accredited school program. It operates in several Northern California locations, including Sacramento, Concord and Brentwood.",
+      "website": "https://mountainvalleyfamilyservices.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Mountain Valley Child And Family Services Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942742653"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Residential Treatment Programs for Youth - Mountain Valley Child & Family Services, Inc.",
+        "url": "https://mountainvalleyfamilyservices.net/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-mountain-valley-child-and-family-services",
+    "notes": "ProPublica confirms the 501(c)(3) name, EIN 94-2742653 and Nevada City, CA; the website confirms the Nevada City headquarters address, phone, Sacramento residential program, ages 12-18, WASC-accredited school, and Concord/Brentwood programs, consistent with OUSD's nonpublic school/agency special education contracts. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

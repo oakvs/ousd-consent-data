@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/30547067",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.internationalsnetwork.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.internationalsnetwork.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Oakland_International_High_School",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007439",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Internationals Network For Public Schools Inc', EIN 03-0547067, Long Island City, New York (ProPublica Nonprofit Explorer), matching the agenda's New York, NY",
+      "Organization supports schools for immigrant and refugee multilingual learners, matching OUSD's English Language Learner and Multilingual Achievement Department contract and Title III funding",
+      "Oakland International High School, an OUSD school, is a member of the Internationals Network for Public Schools (Wikipedia)"
+    ],
+    "key": "v-007439",
+    "notes": "Phone omitted: the website footer shows an unusual 601-689-4677 number that could not be corroborated. California entity number and SAM UEI not looked up (organization is based in New York).",
+    "profile": {
+      "address": "2946 Northern Blvd, 4th Floor Long Island City, NY 11101",
+      "caEntityNumber": null,
+      "ein": "03-0547067",
+      "email": "info@internationalsnetwork.org",
+      "headquarters": "Long Island City, NY",
+      "legalName": "Internationals Network For Public Schools Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit organization that works to improve education for immigrant and refugee students who are learning English. It helps start new schools and programs, trains and coaches educators, and runs a national network of schools that share teaching practices.",
+      "website": "https://www.internationalsnetwork.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Internationals Network For Public Schools Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/30547067"
+      },
+      {
+        "supports": [
+          "website",
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "Internationals Network",
+        "url": "https://www.internationalsnetwork.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - Internationals Network",
+        "url": "https://www.internationalsnetwork.org/about/"
+      },
+      {
+        "supports": [],
+        "title": "Oakland International High School - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Oakland_International_High_School"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007439",
+    "notes": "ProPublica confirms the 501(c)(3) with the exact name, EIN 03-0547067 and Long Island City, NY; the organization's site confirms the email, address, and a summary matching its role in school development, educator training, and a national network with a Bay Area hub, which fits OUSD's English Language Learner and Multilingual Achievement contract. The summary is neutral and supported; phone is correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

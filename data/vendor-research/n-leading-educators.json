@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/451447048",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leadingeducators.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leadingeducators.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leadingeducators.org/partnership/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-leading-educators",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Leading Educators Inc' (ProPublica Nonprofit Explorer, EIN 45-1447048)",
+      "Leading Educators' own Oakland partnership page describes its work with Oakland Unified School District on literacy curriculum implementation, starting 2021-2022; its blog also says the OUSD partnership began in 2019",
+      "Website describes professional learning and instructional support for school systems, matching OUSD's 'Classroom & academic programs' contracts with the Academics and Instructional Innovation Department"
+    ],
+    "key": "n-leading-educators",
+    "notes": "Website states the organization is fully remote; Chicago is the headquarters per ProPublica. No verifiable phone, general email or street address could be confirmed on fetched pages, so they are null. Agenda location of New Orleans was not matched to a listed office; identity rests on the name/registry match, the OUSD partnership page and the matching service type. Several subpages returned 404 (e.g. /about/).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "45-1447048",
+      "email": null,
+      "headquarters": "Chicago, IL",
+      "legalName": "Leading Educators Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Leading Educators is a nonprofit that partners with school systems to improve teaching and learning. It provides professional learning and system strategy support in literacy, mathematics, science and artificial intelligence, and helps design new learning models for students.",
+      "website": "https://leadingeducators.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Leading Educators Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/451447048"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Us - Leading Educators",
+        "url": "https://leadingeducators.org/about-us/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Contact Us - Leading Educators",
+        "url": "https://leadingeducators.org/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "Oakland: Expanding Access to Literacy - Leading Educators",
+        "url": "https://leadingeducators.org/partnership/oakland/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-leading-educators",
+    "notes": "The organization's own Oakland page shows Leading Educators working with OUSD on curriculum professional learning, and its contact page uses a 504 (New Orleans) phone number, which fits the agenda's New Orleans location. ProPublica and the About page support the legal name, EIN, 501(c)(3) status and the neutral summary, and the contact page supports Chicago as headquarters.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

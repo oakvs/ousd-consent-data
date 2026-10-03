@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943310845",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Coaching_Corps",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://positivecoach.org/mission-history/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-007647",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Coaching Corps' located in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-3310845), matching the agenda location Oakland, CA",
+      "Organization partners with after-school programs to provide trained youth sports coaches, matching OUSD's 'After-school & summer programs' contract category",
+      "Positive Coaching Alliance's own history page confirms Coaching Corps existed as a separate organization and merged into PCA in 2022, after the 2021-2022 services agreement"
+    ],
+    "key": "v-007647",
+    "notes": "Coaching Corps merged into Positive Coaching Alliance (effective about April 2022); coachingcorps.org now redirects to positivecoach.org. Website, phone, email and address left null because the Coaching Corps site no longer exists as such and no pre-merger official contact page could be verified. The 2021-22 agreement predates the merger. Reviewer may want to decide how to present the successor organization.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-3310845",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Coaching Corps",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Coaching Corps was an Oakland, California nonprofit that recruited and trained volunteer coaches to lead sports in after-school programs for youth in under-resourced communities. In 2022 it merged with Positive Coaching Alliance, a national nonprofit that works to make youth sports positive and accessible for all kids.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Coaching Corps - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943310845"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Coaching Corps - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Coaching_Corps"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Mission & History - Positive Coaching Alliance",
+        "url": "https://positivecoach.org/mission-history/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007647",
+    "notes": "ProPublica confirms Coaching Corps, Oakland CA, EIN 94-3310845, 501(c)(3) youth development, with filings through FY ending March 2022. Wikipedia supports the volunteer-coach mission and the PCA page confirms the 2022 merger, so the summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

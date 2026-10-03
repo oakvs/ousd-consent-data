@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://lucidpartnerships.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.city-data.com/business-entities/CA/LUCID-PARTNERSHIPS-INC-C4137581-CA.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-lucid-partnerships",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'LUCID PARTNERSHIPS, INC.' (California entity C4137581, active) matches the agenda name exactly (city-data.com mirror of California Secretary of State records)",
+      "Registered address is in Alameda, CA, matching the agenda location 'Alameda, CA'",
+      "Company website describes education equity and school-district consulting, and its founder's background is school district finance, consistent with an OUSD 'Professional Services Contract ... Fiscal Services'"
+    ],
+    "key": "n-lucid-partnerships",
+    "notes": "Entity number and address come from a third-party mirror of California Secretary of State data, not bizfile directly. The company website shows no public phone, email or mailing address (contact form only), so those are null. The site does not mention OUSD.",
+    "profile": {
+      "address": "2601 BLANDING AVENUE, STE 508, ALAMEDA CA 94501",
+      "caEntityNumber": "C4137581",
+      "ein": null,
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": "Lucid Partnerships, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A small consulting company based in Alameda, California, that works with school districts and community groups on educational equity. Its services include executive coaching and workshops, community listening and communication campaigns, and strategic planning and equity-based resource management.",
+      "website": "https://lucidpartnerships.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Lucid Partnerships",
+        "url": "https://lucidpartnerships.com/"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "C4137581 - LUCID PARTNERSHIPS, INC.",
+        "url": "https://www.city-data.com/business-entities/CA/LUCID-PARTNERSHIPS-INC-C4137581-CA.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-lucid-partnerships",
+    "notes": "Exact legal name and Alameda address match the agenda; the CA SOS mirror shows an active stock corporation, and the company site describes equity consulting for school districts, led by a former district CFO, which fits a Fiscal Services contract. The summary's services match the site; the word 'small' is not directly sourced but is minor.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

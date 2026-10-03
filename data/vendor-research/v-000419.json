@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://investor.cdw.com/news/news-details/2021/CDW-Announces-Acquisition-of-Amplified-IT-a-Leading-Provider-of-Google-Services-Solutions-and-Software-for-Education-Customers/default.aspx",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.city-data.com/business-entities/VA/AMPLIFIED-IT-LLC-S3415967-VA.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-000419",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered Virginia limited liability company: 'AMPLIFIED IT, LLC', Norfolk, VA (city-data.com mirror of Virginia business registry)",
+      "Located in Norfolk, VA, matching the agenda text location 'Norfolk, VA' (CDW press release and registry listing)",
+      "Company is a Google education technology services partner for K-12 schools, consistent with OUSD's 'Technology' contract with a Technology Services Department service agreement"
+    ],
+    "key": "v-000419",
+    "notes": "Amplified IT was acquired by CDW in March 2021; amplifiedit.com now redirects to cdw.com, so no standalone website or contact details were cited. Virginia SCC entity ID S3415967 (no California entity number field applies). No EIN or SAM UEI found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Norfolk, VA",
+      "legalName": "AMPLIFIED IT, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Amplified IT is an education-focused technology consultancy based in Norfolk, Virginia. It provides consulting, services and software to K-12 schools and higher education, with a focus on Google Cloud and Google Workspace for Education. CDW, a technology company, acquired it in 2021.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "CDW Announces Acquisition of Amplified IT, a Leading Provider of Google Services, Solutions, and Software for Education Customers",
+        "url": "https://investor.cdw.com/news/news-details/2021/CDW-Announces-Acquisition-of-Amplified-IT-a-Leading-Provider-of-Google-Services-Solutions-and-Software-for-Education-Customers/default.aspx"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters"
+        ],
+        "title": "S3415967 - AMPLIFIED IT, LLC",
+        "url": "https://www.city-data.com/business-entities/VA/AMPLIFIED-IT-LLC-S3415967-VA.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-000419",
+    "notes": "Virginia registry shows AMPLIFIED IT, LLC at 812 Granby St, Norfolk VA, matching the agenda location, and the CDW release confirms a Norfolk-based Google education services partner acquired March 2021, which fits a technology services agreement. Minor caveat: the release names Google Cloud but not Google Workspace for Education explicitly; it is treated as within Google Cloud services.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

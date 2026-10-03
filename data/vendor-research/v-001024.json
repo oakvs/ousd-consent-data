@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943146233",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://chabotspace.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://chabotspace.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001024",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'Chabot Space & Science Center Foundation' (ProPublica Nonprofit Explorer, EIN 94-3146233)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes exhibits, planetarium shows and educational programs, matching OUSD's after-school, summer and classroom program contracts (summer field trips)",
+      "Website offers School Group Visits for schools in the area"
+    ],
+    "key": "v-001024",
+    "notes": "General email address was obfuscated on the contact page, so it was left null. The legal name is the registered nonprofit name on ProPublica; the agenda uses the operating name.",
+    "profile": {
+      "address": "10000 Skyline Blvd., Oakland, CA 94619",
+      "caEntityNumber": null,
+      "ein": "94-3146233",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Chabot Space & Science Center Foundation",
+      "orgType": "nonprofit",
+      "phone": "(510) 336-7300",
+      "samUei": null,
+      "summary": "A nonprofit science center in Oakland, California, that offers exhibits, hands-on activities, planetarium shows and educational programs for learners of all ages. It also operates an observatory with three large telescopes that is open to the public.",
+      "website": "https://chabotspace.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Chabot Space & Science Center Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943146233"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About - Chabot Space & Science Center",
+        "url": "https://chabotspace.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Chabot Space & Science Center",
+        "url": "https://chabotspace.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-001024",
+    "notes": "Chabot Space & Science Center in Oakland (10000 Skyline Blvd) matches the agenda name, city and the school-group/field-trip and education services OUSD buys; ProPublica lists Chabot Space & Science Center Foundation, EIN 94-3146233, Oakland, 501(c)(3). The about and contact pages support the summary, website, phone and address, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

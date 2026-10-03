@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://iseeed.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://iseeed.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edweek.org/technology/can-ed-tech-power-a-social-justice-approach-to-disruption/2016/04",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002159",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Organization's own website (iseeed.org) names it 'Institute for Sustainable Economic Educational and Environmental Design' (ISEEED), matching the agenda name",
+      "Located in Oakland, CA (1330 Broadway, Suite 300 per its Contact page), matching the agenda location",
+      "Education Week article describes I-SEEED as a nonprofit that partners with Oakland Unified School District, including at Castlemont High School",
+      "Website describes education and youth/community programs, consistent with OUSD's 'Student health, support & family services' and Office of Equity contracts"
+    ],
+    "key": "v-002159",
+    "notes": "EIN, phone and legal name not confirmed on an authoritative page; ProPublica search returned no match and a third-party aggregator listing was inconsistent, so those were left null. Other directories list an older address (1625 Clay Street, Oakland).",
+    "profile": {
+      "address": "1330 Broadway, Suite 300, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@iseeed.org",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "I-SEEED (Institute for Sustainable Economic Educational and Environmental Design) is a nonprofit based in Oakland, California. It describes its work as using technology, education and design to help communities, schools, health care providers and governments solve local social problems. It has worked with Oakland schools on youth research projects.",
+      "website": "https://iseeed.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "I-SEEED home page",
+        "url": "https://iseeed.org/"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - I-SEEED",
+        "url": "https://iseeed.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Can Ed Tech Power a Social-Justice Approach to 'Disruption?'",
+        "url": "https://www.edweek.org/technology/can-ed-tech-power-a-social-justice-approach-to-disruption/2016/04"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-002159",
+    "notes": "iseeed.org gives the full name matching the agenda, is a self-described nonprofit, and lists 1330 Broadway Suite 300, Oakland and info@iseeed.org; EdWeek confirms a nonprofit that partnered with OUSD (Castlemont High) on youth research. The summary's wording is slightly loose (the site lists community-generated data and big data, and names hospitals and health care providers rather than schools as clients), but nothing in it is contradicted by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

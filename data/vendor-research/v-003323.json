@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943317442",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.peraltahacienda.org/pages/main.php?pageid=14",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.peraltahacienda.org/pages/main.php?pageid=17&pagecategory=3",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003323",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Friends Of Peralta Hacienda Historical Park', Oakland, CA, EIN 94-3317442 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes school field trips and afterschool and summer youth programs, consistent with OUSD's 'Classroom & academic programs' contract category"
+    ],
+    "key": "v-003323",
+    "notes": "No explicit OUSD mention found on the website; identity rests on exact name, Oakland location and matching youth/school programming. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "PO Box 7172, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "94-3317442",
+      "email": "info@peraltahacienda.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Friends Of Peralta Hacienda Historical Park",
+      "orgType": "nonprofit",
+      "phone": "(510) 532-9142",
+      "samUei": null,
+      "summary": "A nonprofit that operates Peralta Hacienda Historical Park in Oakland, California. It offers tours, school field trips, afterschool and summer programs, and community events about the history of Rancho San Antonio and the Antonio Peralta House.",
+      "website": "https://www.peraltahacienda.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Friends Of Peralta Hacienda Historical Park - Nonprofit Explorer (ProPublica)",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943317442"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website"
+        ],
+        "title": "Contact Information - Peralta Hacienda Historical Park",
+        "url": "https://www.peraltahacienda.org/pages/main.php?pageid=14"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Peralta Hacienda",
+        "url": "https://www.peraltahacienda.org/pages/main.php?pageid=17&pagecategory=3"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-003323",
+    "notes": "Exact name match to the Oakland 501(c)(3) (EIN 94-3317442 on ProPublica); its own site confirms the contact details (generic info@ email only) and youth/school programming that fits OUSD's learning hub contract. The site does not mention OUSD, but the exact name, city and service fit are enough.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ideabuilderlabs.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ideabuilderlabs.com/services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/View.ashx?M=F&ID=8196764&GUID=C2D07B12-B413-447C-8197-32B56DBA2B71",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002166",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the OUSD memo (File 20-0498) names 'Idea Builder Labs LLC of alameda, ca' and the company's own site is 'Idea Builder Labs'",
+      "Located in Alameda, CA per the OUSD memo and the Peralta Community College District scope-of-work document titled 'Idea Builder Labs College of Alameda FabLab' (Alameda-based, matching the agenda text)",
+      "Services match: the OUSD contract is for FabLab setup, equipment, training and curriculum advice at Castlemont High School; the company's website says it designs and manages FabLabs and Makerspaces, including equipment selection, training and curriculum development",
+      "The OUSD memo says the contractor serves as liaison between the Laney College FabLab and the Castlemont FabLab; the company's website lists Laney College as a partner"
+    ],
+    "key": "v-002166",
+    "notes": "No phone, email or street address found on the company's own pages (contact page returns 404); directory listings (Manta, Houzz) block fetching or are not authoritative, so those fields are left null. California Secretary of State and SAM.gov records were not checked or found, so legal name and entity number are null. Headquarters city comes from OUSD's own memo.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Idea Builder Labs is a design and management firm that helps schools, colleges, businesses and communities plan, equip and run FabLabs and makerspaces. Its services include project planning, equipment selection, space layout, staff training and curriculum development. The company was founded by Danny Beesley and has worked on FabLabs since 2012.",
+      "website": "https://www.ideabuilderlabs.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Idea Builder Labs - About Us",
+        "url": "https://www.ideabuilderlabs.com/about-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Idea Builder Labs - Services",
+        "url": "https://www.ideabuilderlabs.com/services"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "OUSD Memo, Professional Service Contract, Idea Builder Labs LLC (File 20-0498)",
+        "url": "https://ousd.legistar.com/View.ashx?M=F&ID=8196764&GUID=C2D07B12-B413-447C-8197-32B56DBA2B71"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-002166",
+    "notes": "The OUSD memo (File 20-0498) names Idea Builder Labs LLC of Alameda, CA for FabLab support at Castlemont High with a Laney College FabLab liaison role, and the company site describes FabLab/makerspace design, equipment, training and curriculum services, 2012 start, founder Danny Beesley, and Laney College as a client. The summary is neutral and supported; headquarters Alameda comes from the OUSD memo (the site itself says Oakland/East Bay).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

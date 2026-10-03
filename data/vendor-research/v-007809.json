@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://hesonline.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://hesonline.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007809",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Health Enhancement Systems' (HES), the company's own site names it as its legal/business name",
+      "Located in Midland, MI (2501 Washington Street, Midland, MI 48642), matching the agenda's 'Midland, MI'",
+      "Website says HES serves school systems, colleges and government, and runs workplace wellness programs, consistent with OUSD's health and wellness contract category and Kaiser health & wellness funding (weak, indirect signal)"
+    ],
+    "key": "v-007809",
+    "notes": "No registry IDs checked (Michigan company; no CA/SAM lookup done). Identity rests on exact name plus exact city; no page found explicitly linking HES to OUSD.",
+    "profile": {
+      "address": "2501 Washington Street Midland, MI 48642",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@hesonline.com",
+      "headquarters": "Midland, MI",
+      "legalName": "Health Enhancement Systems",
+      "orgType": "company",
+      "phone": "800.326.2317",
+      "samUei": null,
+      "summary": "Health Enhancement Systems (HES) is a company in Midland, Michigan that designs and runs workplace wellness challenges. Its programs cover physical activity, nutrition, mental health and financial wellness. It works with corporations, school systems, colleges, government agencies, nonprofits and health plans.",
+      "website": "https://hesonline.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - Health Enhancement Systems",
+        "url": "https://hesonline.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Workplace Wellness Challenges for Better Employee Health | HES",
+        "url": "https://hesonline.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007809",
+    "notes": "Exact name and exact city (Midland, MI) match the agenda; HES's contact page and homepage confirm address, phone, generic info@ email, workplace wellness challenges and client types including school systems, which fits a Kaiser-funded wellness services agreement. Summary is neutral and supported; no explicit page links HES to OUSD, but the name-plus-city match is specific.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

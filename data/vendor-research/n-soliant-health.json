@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.soliant.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.soliant.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.soliant.com/staffing-services/education-recruitment-agency/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-soliant-health",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Exact name match: 'Soliant Health, LLC' is the contracting party in a Placentia-Yorba Linda Unified School District Nonpublic, Nonsectarian School/Agency Services Master Contract (2023-2024), the same contract type OUSD lists for this vendor",
+      "soliant.com describes Soliant Health as a staffing agency that places special education teachers, speech-language pathologists, school psychologists and therapists in schools, matching OUSD's 'Special education' purpose",
+      "NOT matched: the agenda gives Orange, CA, but the contract and the company's contact page show headquarters in Peachtree Corners, GA; no California office was found, so the location signal is unconfirmed"
+    ],
+    "key": "n-soliant-health",
+    "notes": "Agenda location (Orange, CA) conflicts with the headquarters found (Peachtree Corners, GA). The NPA master contract with Placentia-Yorba Linda USD lists Soliant Health, LLC at the Georgia address, so the Georgia entity is probably the same one, but it could not be confirmed that the OUSD vendor is not a separate California-based entity. No registry (SOS, SAM, GA) entries were verified; legal name and registry IDs left null.",
+    "profile": {
+      "address": "5550 Peachtree Parkway, Suite 500, Peachtree Corners, GA 30092",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Peachtree Corners, GA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "800.849.5502",
+      "samUei": null,
+      "summary": "Soliant Health is a staffing company that places school and healthcare professionals, such as special education teachers, speech-language pathologists, school psychologists, therapists and nurses, in schools and healthcare settings across the United States. It offers on-site, remote and teletherapy placements. The company says it has operated since 1992.",
+      "website": "https://www.soliant.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Soliant Health: Find Education & Healthcare Jobs",
+        "url": "https://www.soliant.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Soliant Health",
+        "url": "https://www.soliant.com/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education Staffing Agency - Soliant Health",
+        "url": "https://www.soliant.com/staffing-services/education-recruitment-agency/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

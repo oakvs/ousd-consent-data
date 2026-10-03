@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.heafeycommercial.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.heafeycommercial.com/bio",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006756",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Heafey Commercial' is an independent commercial real estate firm based in Oakland, CA, matching the agenda's Oakland/Piedmont locations",
+      "Firm's bio page lists a client entry 'Oakland Unified School District: Consulting and Tenant Representative'",
+      "Firm provides tenant rep, landlord rep and project management services, matching OUSD's 'Asset Management and Real Property Services' consultant agreements with Facilities Planning and Management"
+    ],
+    "key": "v-006756",
+    "notes": "Registry IDs (CA entity number) not looked up; legal name 'Heafey Commercial, Inc.' per agenda text only. Website lists only a named principal's email, so email omitted. Phone copied as shown on the home page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510 207 0196",
+      "samUei": null,
+      "summary": "Heafey Commercial is an independent commercial real estate firm based in Oakland, California. It provides tenant representation, landlord representation and project management services, including office, industrial and retail leasing, investment sales and multi-family mixed-use entitlements across the East Bay.",
+      "website": "https://www.heafeycommercial.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Heafey Commercial",
+        "url": "https://www.heafeycommercial.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Bio — Heafey Commercial",
+        "url": "https://www.heafeycommercial.com/bio"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006756",
+    "notes": "heafeycommercial.com is an Oakland CRE firm (tenant/landlord rep, project management) whose bio lists OUSD as a consulting and tenant-representation client, matching the Asset Management and Real Property Services agreements and the Oakland/Piedmont locations. Summary, website, phone (business line) and headquarters are all shown on the cited pages; the summary is neutral and the named principal's email was correctly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

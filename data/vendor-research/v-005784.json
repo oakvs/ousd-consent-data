@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lingk.io/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prweb.com/releases/2023/6/prweb19401355.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005784",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's website footer reads 'Lingk Inc.', matching 'Lingk, Inc.' in the agenda",
+      "Located in Danville, California, matching the agenda's 'Danville, CA' (PRWeb press release by Lingk)",
+      "Lingk is a data integration/technology company, matching OUSD's 'Technology' category for this contract",
+      "Lingk's website lists a K-12 student information system (Aeries) integration service, consistent with a district Community Schools and Student Services data contract"
+    ],
+    "key": "v-005784",
+    "notes": "Registry IDs (CA SOS, SAM.gov) and a general contact phone/email were not found on fetchable pages, so they are left null. Lingk's OUSD case-study page appeared in search results but returned 404 on fetch.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Danville, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Lingk is a technology company that provides data integration software and consulting services. It helps schools, colleges and other organizations connect their data systems, such as student information systems and Salesforce, so information can be shared and managed in one place.",
+      "website": "https://www.lingk.io"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Lingk",
+        "url": "https://www.lingk.io/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "summary"
+        ],
+        "title": "Lingk Announces Industry First AI-Driven Education Data Modeling Solution",
+        "url": "https://www.prweb.com/releases/2023/6/prweb19401355.htm"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-005784",
+    "notes": "Lingk Inc. footer and the 2023 PRWeb dateline (Danville, Calif.) match the agenda's 'Lingk, Inc.' / Danville, CA, and a data-integration company fits a Technology subscription agreement. The summary is neutral and supported by the homepage (education institutions, Ellucian, Salesforce connectors); the homepage does not explicitly name K-12 or Aeries, so the candidate's identity signal about Aeries was not confirmed, but the profile does not depend on it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

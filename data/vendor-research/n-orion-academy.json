@@ -1,0 +1,128 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.orionacademy.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.orionacademy.org/contact-3/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943315141",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Orion_Academy_(California)",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-orion-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Orion Academy' (ProPublica Nonprofit Explorer, EIN 94-3315141, Concord, CA, operates a school)",
+      "Wikipedia states the school was located in Moraga, CA until 2022, matching the agenda's 'Moraga, CA' location",
+      "School is a state-approved nonpublic school for students with autism and other disabilities, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services Master Contract' for Special Education"
+    ],
+    "key": "n-orion-academy",
+    "notes": "The school relocated from Moraga to Concord in 2022; the agenda text (2019-21) lists Moraga. CA Secretary of State entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "1868 Clayton Road, Concord, CA 94520",
+      "caEntityNumber": null,
+      "ein": "94-3315141",
+      "email": "information@orionacademy.org",
+      "headquarters": "Concord, CA",
+      "legalName": "Orion Academy",
+      "orgType": "nonprofit",
+      "phone": "925-377-0789",
+      "samUei": null,
+      "summary": "Orion Academy is a private, nonprofit high school for students in grades 9-12 whose learning is affected by autism spectrum disorder and executive functioning challenges. It offers a college preparatory special education program that also teaches language and social skills and independent living skills. It is approved as a nonpublic school by the State of California and moved from Moraga to Concord in 2022.",
+      "website": "https://www.orionacademy.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Orion Academy",
+        "url": "https://www.orionacademy.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us – Orion Academy",
+        "url": "https://www.orionacademy.org/contact-3/"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Orion Academy - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943315141"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Orion Academy (California)",
+        "url": "https://en.wikipedia.org/wiki/Orion_Academy_(California)"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-orion-academy",
+    "notes": "Orion Academy (formerly Moraga, now Concord) is a state-approved nonpublic school for students with autism, matching OUSD's nonpublic school special education master contracts and the Moraga location. All profile fields (contact, EIN, nonprofit status, grades 9-12, 2022 move) are supported by the cited sources and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

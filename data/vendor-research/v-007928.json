@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.infinitycomm.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/bakersfield/infinity-communications-consulting-inc-2",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/bakersfield/profile/communication-consultant/infinity-communications-consulting-inc-1126-71252365",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007928",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "California Secretary of State filing data (bizprofile.net) lists 'Infinity Communications & Consulting, Inc.', a General Corporation, active, at 4909 Calloway Drive, Suite 102, Bakersfield, CA, matching the agenda name and the Bakersfield, CA location",
+      "BBB lists 'Infinity Communications & Consulting, Inc.' in Bakersfield as a technology and E-rate consultant with phone (661) 716-1840 and fax (661) 716-1841, which are the same phone and fax numbers shown on infinitycomm.com (Infinity Communications & Compliance)",
+      "infinitycomm.com describes E-Rate, technology design and project administration services for schools, matching OUSD's 'Technology' contract category with the Technology Services Department"
+    ],
+    "key": "v-007928",
+    "notes": "The legal name in California filing data is 'Consulting, Inc.' while the website uses 'Compliance'. No page found explicitly states a rename; the link rests on the shared phone and fax numbers, same city, and same line of business. The website lists a P.O. box; the street address in filings is 4909 Calloway Dr, Suite 102, Bakersfield, CA 93312. The opengovco.com entity number 20201900732 is a Colorado foreign-entity record, not used. Registry data via third-party aggregator, not bizfileonline directly.",
+    "profile": {
+      "address": "P.O. Box 999, Bakersfield, California 93302",
+      "caEntityNumber": "2474557",
+      "ein": null,
+      "email": "info@infinitycomm.com",
+      "headquarters": "Bakersfield, CA",
+      "legalName": "Infinity Communications & Consulting, Inc.",
+      "orgType": "company",
+      "phone": "(661) 716-1840",
+      "samUei": null,
+      "summary": "A Bakersfield, California firm that helps schools and libraries with technology planning and E-Rate funding, a federal program that subsidizes telecommunications and internet access. Its services include technology design, project administration and architectural support for low-voltage systems. The company now presents itself as Infinity Communications & Compliance.",
+      "website": "https://www.infinitycomm.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "summary",
+          "orgType"
+        ],
+        "title": "Infinity Communications & Compliance - Contact Us",
+        "url": "https://www.infinitycomm.com/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Infinity Communications & Consulting, Inc. Bakersfield, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/bakersfield/infinity-communications-consulting-inc-2"
+      },
+      {
+        "supports": [
+          "phone",
+          "summary"
+        ],
+        "title": "Infinity Communications & Consulting, Inc.",
+        "url": "https://www.bbb.org/us/ca/bakersfield/profile/communication-consultant/infinity-communications-consulting-inc-1126-71252365"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007928",
+    "notes": "Identity is well supported (CA SOS entity 2474557 and BBB list Infinity Communications & Consulting, Inc. at 4909 Calloway Dr, Bakersfield, sharing phone/fax with infinitycomm.com, whose footer links an 'Infinity Communications & Consulting Inc.' profile). However, the summary says the firm serves 'schools and libraries' and none of the fetched pages (contact, home, E-Rate) mention libraries, only schools, so the summary is not fully supported and must be regenerated.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

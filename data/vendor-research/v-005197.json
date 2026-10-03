@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.officedepot.com/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/Archives/edgar/data/800240/000114036125039484/ny20056444x2_defm14a.htm",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-005197",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Office Depot, LLC' of Boca Raton, FL; the official Office Depot website states its copyright holder is 'Office Depot, LLC'",
+      "SEC proxy filing lists Office Depot, LLC as an operating company of The ODP Corporation, headquartered at 6600 North Military Trail, Boca Raton, Florida, matching the agenda location",
+      "Office Depot sells office supplies, matching OUSD's 'Office Supplies, Related Products and Services' piggyback contract through OMNIA Partners"
+    ],
+    "key": "v-005197",
+    "notes": "Address is the principal executive office of parent The ODP Corporation (SEC filing); it is the Boca Raton headquarters where Office Depot, LLC is based. Phone is the customer service line shown on officedepot.com, not the corporate main line. No EIN, CA entity number or SAM UEI cited.",
+    "profile": {
+      "address": "6600 North Military Trail, Boca Raton, Florida 33496",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Boca Raton, FL",
+      "legalName": "Office Depot, LLC",
+      "orgType": "company",
+      "phone": "1-800-463-3768",
+      "samUei": null,
+      "summary": "Office Depot is a retailer and business-to-business supplier of office supplies and related products and services, sold through its retail stores, online store and dedicated sales teams. Office Depot, LLC is an operating company of The ODP Corporation, which is based in Boca Raton, Florida.",
+      "website": "https://www.officedepot.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "summary",
+          "orgType"
+        ],
+        "title": "Office Depot OfficeMax | Official Online Store",
+        "url": "https://www.officedepot.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "ODP Corp - Form DEFM14A",
+        "url": "https://www.sec.gov/Archives/edgar/data/800240/000114036125039484/ny20056444x2_defm14a.htm"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-005197",
+    "notes": "officedepot.com footer names Office Depot, LLC as copyright holder and lists 1-800-463-3768; the SEC filing lists Office Depot, LLC as an operating company of ODP Corp at 6600 North Military Trail, Boca Raton, matching the agenda location and the OMNIA office-supplies piggyback contract. Summary is neutral and supported; the address is the parent's principal office, which the candidate notes disclose.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.overallandassociatessecurity.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007800",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: 'Overall and Associates Security Inc.' on the company's own website, which offers private security guard and patrol services, consistent with a security services agreement",
+      "Third-party directory (GuardsZone) lists 'Overall and Associates Security' in Galt, CA, the same city as the agenda text, with business license 14244, matching the PPO #14244 shown on the company's own website"
+    ],
+    "key": "v-007800",
+    "notes": "Could not confirm the Galt, CA location on the company's own site or any registry (CA Secretary of State and SAM.gov were not reachable/searchable). Directory listings disagree on address and phone (Galt 1220 vs 1228 Wilder Way; Bay Area and 209 phone numbers), and the company's own contact page lists different phone numbers, so phone, address and headquarters were left null. Neither the site nor any fetched page mentions Oakland or OUSD. No registry IDs found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "overallandassociates@gmail.com",
+      "headquarters": null,
+      "legalName": "Overall and Associates Security Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private security company that provides on-site security guards, mobile patrol, executive protection, event security, and access control and visitor management services.",
+      "website": "https://www.overallandassociatessecurity.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "legalName"
+        ],
+        "title": "Overall and Associates Security Inc",
+        "url": "https://www.overallandassociatessecurity.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://tramutola.com/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edweek.org/leadership/the-billion-dollar-man/1996/05",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"email\" failed to load",
+      "field": "email",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-006252",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Tramutola's own website (tramutola.com) shows an Oakland, California address, matching the agenda's 'Tramutola, LLC, Oakland, CA'",
+      "Website describes political strategy and community-support work for clients including school districts and tax elections (ballot measures for schools), matching OUSD's contract for strategic consulting on feasibility and planning of a General Obligation Bond",
+      "Education Week article reports Tramutola planned and ran an Oakland school bond measure (1994 vote), showing prior work for Oakland schools",
+      "No contradicting signals; the firm is a small Oakland-based consultancy and no similarly named organization elsewhere was found"
+    ],
+    "key": "v-006252",
+    "notes": "Legal name 'Tramutola, LLC' comes from the agenda; some directories list 'Tramutola Company, LLC'. CA Secretary of State record not retrieved, so legal name and entity number are left null. Agenda item (2019-09-25, 19-1686) is a $105,000 bond feasibility consulting agreement.",
+    "profile": {
+      "address": "193 Ridgeway Avenue Oakland, California 94611",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@tramutola.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-658-7003",
+      "samUei": null,
+      "summary": "Tramutola is a small political strategy and consulting firm based in Oakland, California. It advises school districts, cities, candidates, and healthcare and development projects on tax elections, ballot measures, and community outreach, including grassroots organizing. It also offers training in community organizing.",
+      "website": "https://tramutola.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "TRAMUTOLA",
+        "url": "https://tramutola.com/"
+      },
+      {
+        "supports": [],
+        "title": "The Billion Dollar Man",
+        "url": "https://www.edweek.org/leadership/the-billion-dollar-man/1996/05"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006252",
+    "notes": "tramutola.com confirms an Oakland, CA political strategy firm (small by design) serving school districts, cities, candidates, healthcare and development clients on tax elections and ballot measures, with the cited address, phone, generic info@ email and organizing training; EdWeek confirms its prior Oakland school bond work, which fits OUSD's bond feasibility contract. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

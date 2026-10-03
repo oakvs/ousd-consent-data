@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/770602311",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.educationpioneers.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://educationpioneers.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001526",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Education Pioneers Inc', EIN 77-0602311, Boston, MA (ProPublica Nonprofit Explorer); it is the only exact-name match",
+      "Website describes fellowship programs placing professionals in education organizations, matching OUSD's 'Staff & hiring' contract and 'Fellowship' agreement title",
+      "Education Pioneers' own homepage features a testimonial from the former Oakland Unified School District superintendent about its fellows' capacity support"
+    ],
+    "key": "v-001526",
+    "notes": "Agenda gives no location. Email omitted because the contact page obscures it. Agreement is a 2020 COVID Response Fellowship; the current Boston address may differ from the one in use in 2020.",
+    "profile": {
+      "address": "68 Harrison Ave, Suite 605 PMB 14991, Boston, MA 02111-1929",
+      "caEntityNumber": null,
+      "ein": "77-0602311",
+      "email": null,
+      "headquarters": "Boston, MA",
+      "legalName": "Education Pioneers Inc",
+      "orgType": "nonprofit",
+      "phone": "(857) 277-7951",
+      "samUei": null,
+      "summary": "Education Pioneers is a nonprofit that runs fellowship programs to develop leaders for public education. Its Summer Fellowship and Impact Fellowship place skilled professionals with school districts and other education organizations that need extra capacity.",
+      "website": "https://www.educationpioneers.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Education Pioneers Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/770602311"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Education Pioneers",
+        "url": "https://www.educationpioneers.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Education Pioneers",
+        "url": "https://educationpioneers.org/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-001526",
+    "notes": "Education Pioneers Inc (EIN 77-0602311, 501(c)(3)) runs fellowships placing professionals in education organizations, matching the OUSD 'Staff & hiring' fellowship agreement, and its homepage carries a testimonial from OUSD's former superintendent. ProPublica, the homepage and the contact page support the legal name, EIN, org type, HQ, phone and address; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

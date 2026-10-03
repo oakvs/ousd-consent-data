@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.law.georgetown.edu/cics/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.law.georgetown.edu/cics/able/about-able/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kqed.org/news/11826192/after-abolishing-school-police-oakland-wants-to-reimagine-safety-in-education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006488",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "KQED reports the OUSD school board hired 'Georgetown Law's Innovative Policing Project' to develop recommendations after eliminating its school police, matching the General Counsel professional services contract",
+      "Georgetown Law's About page says the Center for Innovations in Community Safety was 'formerly known as the Innovative Policing Program', so the named project is the program now run as CICS",
+      "Located at Georgetown Law in Washington, DC, matching the agenda location",
+      "Policing and community-safety work matches the district's contract topic (school safety planning)"
+    ],
+    "key": "v-006488",
+    "notes": "This is a program of Georgetown University Law Center, not a separate legal entity, so legal name and registry IDs are left null. The contact details are those of its successor, the Center for Innovations in Community Safety.",
+    "profile": {
+      "address": "600 New Jersey Avenue, NW, Washington, DC 20001",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "CICS@georgetown.edu",
+      "headquarters": "Washington, DC",
+      "legalName": null,
+      "orgType": "other",
+      "phone": "202.662.9000",
+      "samUei": null,
+      "summary": "The Center for Innovations in Community Safety is a program of Georgetown University Law Center in Washington, DC, formerly called the Innovative Policing Program. It works to reduce overreliance on policing and runs programs such as Active Bystandership for Law Enforcement (ABLE), the Police for Tomorrow Fellowship, and technical assistance for alternative first responder programs.",
+      "website": "https://www.law.georgetown.edu/cics/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Center for Innovations in Community Safety (CICS)",
+        "url": "https://www.law.georgetown.edu/cics/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - ABLE",
+        "url": "https://www.law.georgetown.edu/cics/able/about-able/"
+      },
+      {
+        "supports": [],
+        "title": "After Abolishing School Police, Oakland Wants to Reimagine Safety in Education",
+        "url": "https://www.kqed.org/news/11826192/after-abolishing-school-police-oakland-wants-to-reimagine-safety-in-education"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006488",
+    "notes": "KQED confirms OUSD hired Georgetown Law's Innovative Policing Project for post-school-police safety recommendations, and the ABLE page states CICS was formerly the Innovative Policing Program, so the profile describes the same Georgetown Law program (Washington DC). Summary, address, email, website and phone (Georgetown Law main line) are supported by the CICS page; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

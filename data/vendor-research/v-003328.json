@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://performancefact.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://performancefact.com/clients/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003328",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Performance Fact, Inc. is headquartered in Oakland, California, matching the agenda location 'Oakland, CA'",
+      "Performance Fact's own client page lists Oakland Unified School District (Oakland, CA) as a client, with OUSD network superintendents and an executive director giving testimonials",
+      "Website describes strategic planning and school-improvement services for school districts, matching OUSD's 'Classroom & academic programs' contracts presented by the Chief Academic Officer and funded by School Improvement Grants"
+    ],
+    "key": "v-003328",
+    "notes": "Registry IDs (CA SOS entity number, UEI) not looked up. Identity confirmed via company website and its client page listing OUSD.",
+    "profile": {
+      "address": "333 Hegenberger Road Suite 204, Oakland, California 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "contact@performancefact.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Performance Fact, Inc.",
+      "orgType": "company",
+      "phone": "510.568.7944",
+      "samUei": null,
+      "summary": "A company in Oakland, California that provides professional services to school districts. Its work includes strategic planning, leadership development, school transformation and data-driven decision-making.",
+      "website": "https://performancefact.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Performance Fact",
+        "url": "https://performancefact.com/"
+      },
+      {
+        "supports": [],
+        "title": "Clients - Performance Fact",
+        "url": "https://performancefact.com/clients/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-003328",
+    "notes": "Performance Fact, Inc. is based in Oakland (333 Hegenberger Rd), matching the agenda location, and its site lists OUSD as a long-standing client; services (strategic planning, school transformation, leading with data) fit academic-program contracts. Name, address, phone, generic contact email and neutral summary all verified on the homepage.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

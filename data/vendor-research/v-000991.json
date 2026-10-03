@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942677202",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cceb.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cceb.org/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cceb.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000991",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Catholic Charities Of The East Bay', Oakland, CA, EIN 94-2677202 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA (headquarters 433 Jefferson Street), matching the agenda text",
+      "Website describes mental health, family support and youth services, matching OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "v-000991",
+    "notes": "ProPublica lists the entity as 'Catholic Charities Of The Diocese Of Oakland' with legal name 'Catholic Charities Of The East Bay'. No page found that explicitly mentions OUSD. The cceb.org locations page showed injected spam text when fetched, though the address and contact details matched the home page.",
+    "profile": {
+      "address": "433 Jefferson Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-2677202",
+      "email": "info@cceb.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Catholic Charities Of The East Bay",
+      "orgType": "nonprofit",
+      "phone": "(510) 768-3100",
+      "samUei": null,
+      "summary": "A nonprofit that serves Alameda and Contra Costa counties in California. Its programs include housing services, mental health and wellness services, and immigration legal services. Its stated mission is to support children, youth, families and seniors from crisis to stability to well-being.",
+      "website": "https://www.cceb.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Catholic Charities Of The Diocese Of Oakland - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942677202"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "summary",
+          "orgType"
+        ],
+        "title": "Catholic Charities East Bay",
+        "url": "https://www.cceb.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "email",
+          "headquarters"
+        ],
+        "title": "Locations - Catholic Charities East Bay",
+        "url": "https://www.cceb.org/locations/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - Catholic Charities East Bay",
+        "url": "https://www.cceb.org/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-000991",
+    "notes": "ProPublica (EIN 94-2677202, Oakland, 'Catholic Charities Of The Diocese Of Oakland' aka 'Catholic Charities Of The East Bay') and cceb.org confirm the name, 501(c)(3) status, Oakland location, programs, mission, phone, email and the 433 Jefferson Street Oakland office. The cceb.org locations page did contain unrelated injected spam, but the contact details match the home page and about page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.luster.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.luster.com/laura-luster",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006138",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the company's website is branded 'Luster National, Inc.' and the agenda names 'Luster National, Inc.'",
+      "Services match: the website lists program, project and construction management, matching OUSD's 'School buildings & construction' / Facilities Planning and Management consulting contract",
+      "A Luster National page (Dr. Laura Luster's profile) lists Oakland Unified School District among past clients",
+      "Luster National has an Oakland, CA office (1901 Harrison Street), matching the agenda location of Oakland, CA"
+    ],
+    "key": "v-006138",
+    "notes": "Agenda says Oakland, CA; the firm's website gives its headquarters as Mill Valley, CA and a search result indicates an Oakland office at 1901 Harrison Street (not cited). 2019-20 OUSD records show a related but separately named firm, L. Luster & Associates, Inc. (founder Dr. Laura Luster); the corporate relationship was not verified. No registry IDs found.",
+    "profile": {
+      "address": "38 Miller Ave, Suite 14, Mill Valley, CA 94941",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "inquiries@luster.com",
+      "headquarters": "Mill Valley, CA",
+      "legalName": "Luster National, Inc.",
+      "orgType": "company",
+      "phone": "(415) 381-5031",
+      "samUei": null,
+      "summary": "A consulting firm that provides program management, project management and construction management services for public agencies and private organizations. Its work includes infrastructure projects such as transit, airports and disaster recovery. It also offers strategic and environmental consulting.",
+      "website": "https://www.luster.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Luster National",
+        "url": "https://www.luster.com"
+      },
+      {
+        "supports": [],
+        "title": "Dr. Laura Luster - Luster National",
+        "url": "https://www.luster.com/laura-luster"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006138",
+    "notes": "The exact name Luster National, Inc. and its program/construction management services fit OUSD's Facilities Planning and Management consulting agreement. The founder's page lists OUSD as a past client, and the cited homepage supports the legal name, services, phone, email, Mill Valley address and headquarters. The Oakland office was not independently confirmed (the site only says 9 offices), but the identity rests on the name, services and OUSD client link.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

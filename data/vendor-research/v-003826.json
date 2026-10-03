@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/wi/greenville/profile/school-furniture/school-specialty-llc-0694-31001024",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/school-specialty",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-003826",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda gives Greenville, WI; School Specialty, LLC's headquarters is W6316 Design Dr, Greenville, WI (BBB and LinkedIn)",
+      "Name matches: School Specialty sells supplemental learning resources and has a children's publishing line, consistent with a Special Education Department purchase of materials",
+      "Caveat: 'Children's Publishing' appears to be a division/imprint name, not a separately registered entity; no registry (SOS, SAM) page could be fetched to confirm the legal entity"
+    ],
+    "key": "v-003826",
+    "notes": "Official schoolspecialty.com blocks automated fetching (403), so contact details come from BBB and LinkedIn. Agenda name 'School Specialty Children's Publishing' is likely a division of School Specialty, LLC; reviewer should confirm.",
+    "profile": {
+      "address": "W6316 Design Dr, Greenville, WI 54942-8404",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Greenville, WI",
+      "legalName": "School Specialty, LLC",
+      "orgType": "company",
+      "phone": "(888) 388-3224",
+      "samUei": null,
+      "summary": "A company that supplies PreK-12 schools in the U.S. and Canada with classroom supplies, furniture, educational technology, science curriculum and supplemental learning resources. It designs, manufactures and distributes its own and name-brand products.",
+      "website": "http://www.schoolspecialty.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "School Specialty, LLC - BBB",
+        "url": "https://www.bbb.org/us/wi/greenville/profile/school-furniture/school-specialty-llc-0694-31001024"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "School Specialty - LinkedIn",
+        "url": "https://www.linkedin.com/company/school-specialty"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

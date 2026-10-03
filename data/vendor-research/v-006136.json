@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.spra.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.spra.com/our-story/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.spra.com/project-category/education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006136",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm's own Contact page lists the exact name 'Social Policy Research Associates' at 1950 Franklin St., Suite 1805, Oakland, CA 94612, matching the agenda location Oakland, CA",
+      "Its Education, Learning & Youth Development page says it has an extensive portfolio of program evaluations focused on after-school services and K-12 school improvement, matching OUSD's after-school and 21st Century Community Learning Centers contracts"
+    ],
+    "key": "v-006136",
+    "notes": "Not found in ProPublica Nonprofit Explorer, so treated as a for-profit firm (orgType 'company' is inferred from that and its self-description as a firm; no registry page confirms it). No registry IDs were verified. Some spra.com pages block automated fetchers.",
+    "profile": {
+      "address": "1950 Franklin St., Suite 1805, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello@spra.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 763-1499",
+      "samUei": null,
+      "summary": "Social Policy Research Associates (SPR) is a research, evaluation and technical assistance firm based in Oakland, California. It works with public agencies, foundations and community organizations to evaluate programs and help them improve, in areas such as education, youth development, workforce, housing and human services.",
+      "website": "https://www.spra.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Social Policy Research Associates",
+        "url": "https://www.spra.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Our Story - Social Policy Research Associates",
+        "url": "https://www.spra.com/our-story/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education, Learning & Youth Development - Social Policy Research Associates",
+        "url": "https://www.spra.com/project-category/education/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006136",
+    "notes": "SPR is an Oakland research and evaluation firm (1950 Franklin St) whose spra.com pages describe after-school program evaluation and an Oakland Fund for Children and Youth evaluation, which fits OUSD's after-school and 21st CCLC contracts. Address, phone and email match the Contact page as returned by search; spra.com blocks direct fetches (Cloudflare 403), so the summary and the 'company' type are confirmed from search excerpts of the site and a D&B listing for 'Social Policy Research Associates, Inc.'.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

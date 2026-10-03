@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://daylightfoods.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://daylightfoods.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001312",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Daylight Foods, Inc. is headquartered in Union City, CA, matching the agenda location 'Union City, CA' (daylightfoods.com)",
+      "Website describes a food service distributor of fresh produce and ingredients, matching OUSD's 'Fresh Produce' bid/contract for the Nutrition Services Department",
+      "Website lists a 'School Programs' offering, consistent with Child Nutrition School Program funding"
+    ],
+    "key": "v-001312",
+    "notes": "Registry IDs (CA SOS entity number, SAM UEI) not looked up; legal name left null because the site does not show 'Daylight Foods, Inc.' verified on a cited page. Company was reportedly acquired by GrubMarket in 2022 (not cited).",
+    "profile": {
+      "address": "30200 Whipple Road, Union City, CA 94587",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "csr@daylightfoods.com",
+      "headquarters": "Union City, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 931-4207",
+      "samUei": null,
+      "summary": "Daylight Foods is a food service distributor in Northern California that supplies fresh produce and other ingredients to foodservice customers. It runs its own processing plant and a fleet of temperature-controlled delivery vehicles from a facility in Union City. Its website also lists school programs among its services.",
+      "website": "https://daylightfoods.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Quality Foods, Sourced from Farm to Table - Daylight Foods",
+        "url": "https://daylightfoods.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About - Daylight Foods",
+        "url": "https://daylightfoods.com/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-001312",
+    "notes": "Daylight Foods' site shows a Union City, CA produce distributor (30200 Whipple Road) matching the agenda location and the Fresh Produce bid for Nutrition Services. Summary, contact fields and headquarters are all confirmed on the cited pages, the summary is neutral, and the email is a generic business address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

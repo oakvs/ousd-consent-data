@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.premiumroofingandwaterproofing.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.premiumroofingandwaterproofing.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/roofing-contractors/premium-roofing-waterproofing-inc-1116-938219",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007111",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: agenda says 'Premium Roofing & Waterproofing, Inc.'; BBB lists 'Premium Roofing & Waterproofing Inc' and the company website is titled 'Premium Roofing & Waterproofing'",
+      "Located at 919 52nd Avenue, Oakland, CA 94601, matching the agenda's Oakland, CA",
+      "Company installs and repairs commercial and residential roofs, matching OUSD's 'School buildings & construction' roof replacement contract"
+    ],
+    "key": "v-007111",
+    "notes": "Phone omitted: the company website lists (510) 750-2179 but BBB lists (510) 774-7083. No website mention of OUSD found (a search summary mentioned OUSD recognition, not verified). Not to be confused with 'Premier Roofing and Water Proofing, Inc.', a different Oakland company. No email, EIN, CA entity number or UEI found.",
+    "profile": {
+      "address": "919 52nd Avenue, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Premium Roofing & Waterproofing Inc",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A roofing contractor based in Oakland, California. It installs and repairs residential and commercial roofs, including flat and sloped roofs, shingles, tile and metal roofs, and provides waterproofing and leak repair services.",
+      "website": "https://www.premiumroofingandwaterproofing.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Premium Roofing & Waterproofing",
+        "url": "https://www.premiumroofingandwaterproofing.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Premium Roofing & Waterproofing - Contact",
+        "url": "https://www.premiumroofingandwaterproofing.com/contact-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Premium Roofing & Waterproofing Inc - BBB",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/roofing-contractors/premium-roofing-waterproofing-inc-1116-938219"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007111",
+    "notes": "An Oakland roofing and waterproofing contractor at 919 52nd Ave matches the agenda name (the title's 'Premium Roof Waterproofing' is a minor variant), the Oakland location, and the roof replacement contract. The website and BBB listing support the summary, address and legal name; phone was correctly omitted because the two sources conflict.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

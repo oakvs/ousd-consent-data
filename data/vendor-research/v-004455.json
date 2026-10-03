@@ -1,0 +1,87 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.urbandesignce.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.urbandesignce.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004455",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Urban Design Consulting Engineers' (UDCE) civil engineering firm, same name as in the agenda",
+      "Has an Oakland, CA office, matching the agenda location",
+      "Firm's website lists Oakland Unified School District among its agency clients",
+      "Firm does civil/site engineering including school projects, matching OUSD's 'School buildings & construction' facilities contract"
+    ],
+    "key": "v-004455",
+    "notes": "Oakland office contact details used (matches agenda location); firm also has an SF office at 1 Bluxome Street, Suite 403. CA Secretary of State entity number and legal name not confirmed (bizfile not fetchable). General email not found (about page shows info@urbndesignce.com, which looks like a typo, so omitted). Madison Park project not explicitly confirmed on the firm's site.",
+    "profile": {
+      "address": "428 Alice Street, Suite 132 Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-868-1085",
+      "samUei": null,
+      "summary": "A civil engineering consulting firm that designs site development, utility (joint trench) and stormwater management projects for urban areas in the San Francisco Bay Area. Its work includes affordable housing, cultural centers and schools.",
+      "website": "https://www.urbandesignce.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Urban Design Consulting Engineers",
+        "url": "https://www.urbandesignce.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "About UDCE",
+        "url": "https://www.urbandesignce.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-004455",
+    "notes": "UDCE's site shows an Oakland office at 428 Alice St (510-868-1085), lists Oakland Unified School District among its agency clients, and describes civil/site engineering including educational facilities, which fits the Madison Park facilities contract. Website, phone, address, orgType and the neutral summary are supported; no personal emails are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

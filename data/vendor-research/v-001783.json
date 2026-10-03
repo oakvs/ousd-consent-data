@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://galileo-camps.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://galileo-camps.com/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://galileo-camps.com/wp-content/uploads/2024/10/Privacy-Notice-for-California-Residents.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001783",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Galileo Learning, LLC is named as the operator of galileo-camps.com in the company's own California privacy notice",
+      "Oakland, CA headquarters (company privacy notice lists 1021 3rd Street, Oakland), matching the agenda's Oakland, CA",
+      "Website describes summer camps and expanded learning (after-school) programs for K-10 students, matching OUSD's 'After-school & summer programs' contracts",
+      "Operates summer camp sites at Oakland public elementary school campuses"
+    ],
+    "key": "v-001783",
+    "notes": "Email and street address omitted: the site obfuscates its email from automated readers, and sources give differing postal addresses (Oakland 1021 3rd Street in the California privacy notice PDF; a San Francisco PMB on the privacy policy page). The contact page lists support@galileocamps.com. CA Secretary of State entity number not verified (registry blocks automated access; aggregators conflict), so omitted. Legal name 'Galileo Learning, LLC' (as in agenda and the California privacy notice PDF) left null because no fetchable cited page shows it.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-800-854-3684",
+      "samUei": null,
+      "summary": "Galileo Learning runs summer camps and expanded learning programs for kids in kindergarten through 10th grade. The programs focus on hands-on STEAM (science, technology, engineering, arts and math) projects and outdoor play. The company began in the San Francisco Bay Area in 2002 and now runs programs at more than 60 locations in several states.",
+      "website": "https://galileo-camps.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Us Galileo Camps",
+        "url": "https://galileo-camps.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Privacy Policy Galileo Camps",
+        "url": "https://galileo-camps.com/privacy-policy/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Privacy Notice for California Residents",
+        "url": "https://galileo-camps.com/wp-content/uploads/2024/10/Privacy-Notice-for-California-Residents.pdf"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-001783",
+    "notes": "The California privacy notice names Galileo Learning, LLC with a postal address at 1021 3rd Street, Oakland, matching the agenda's Oakland location, and the site describes summer and expanded-learning camps with Oakland school sites. The summary, website, phone and headquarters are all shown in the cited sources and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

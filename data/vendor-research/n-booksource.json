@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://home.mackin.com/mackin-announces-acquisition-of-booksource-a-national-book-provider-for-classroom-libraries/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.booksource.com/content/aboutus.aspx",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-booksource",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Booksource' / 'The Booksource, Inc.', a trade book distributor to K-12 classroom libraries, matching OUSD's 'Supplementary Classroom Libraries' supplies agreement",
+      "Located in St. Louis, Missouri, matching the St. Louis, MO location in the agenda text (Mackin acquisition announcement and Booksource site)",
+      "Booksource's own site describes supplying books for classroom libraries to K-12 schools and districts, matching the 'Classroom & academic programs' category"
+    ],
+    "key": "n-booksource",
+    "notes": "Booksource was acquired by Mackin in October 2024 and its website now describes the business as MackinClassroom (formerly Booksource), with a Hazelwood, MO address that differs from the St. Louis headquarters in the agenda era; the address, email and legal entity name were left null for that reason. No registry IDs were found. Reviewer may wish to confirm the phone is still the main line.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "St. Louis, Missouri",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "800.444.0435",
+      "samUei": null,
+      "summary": "Booksource is a book distributor that supplies print and digital books and curriculum materials for K-12 classroom libraries to schools and districts across the United States. It was founded in 1974 and based in St. Louis, Missouri. It was acquired by the school book supplier Mackin in 2024.",
+      "website": "https://www.booksource.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Mackin Acquires Booksource",
+        "url": "https://home.mackin.com/mackin-announces-acquisition-of-booksource-a-national-book-provider-for-classroom-libraries/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone"
+        ],
+        "title": "About Us - Booksource",
+        "url": "https://www.booksource.com/content/aboutus.aspx"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-booksource",
+    "notes": "Booksource (St. Louis, MO, classroom-library books) is the right organization, but the summary states 'founded in 1974', which is only inferred from Mackin's '50-year-old company' and contradicts the Booksource About Us page ('Established in 1983'); 'print and digital' and 'across the United States' are also not stated by the Mackin source. Summary should be rewritten without the founding year before publishing.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

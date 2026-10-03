@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2693021",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://corinthiantransportation.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://corinthiantransportation.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-corinthian-international-parking-transportation-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: federal motor carrier record (FMCSA SAFER) lists 'CORINTHIAN INTERNATIONAL PARKING SERVICES INC' dba 'CORINTHIAN GROUND TRANSPORTATION', USDOT 2693021",
+      "The same USDOT number (2693021) appears on corinthiantransportation.com (the site corinthianparking.com redirects to), tying the legal entity to the website",
+      "Business listing (BBB) shows Corinthian International Parking Services at 19925 Stevens Creek Blvd, Cupertino, CA, matching the agenda's Cupertino, CA; the company now lists a Campbell, CA address",
+      "Website describes transportation and parking/valet services, including school events and student transportation certification, matching OUSD's 'Transportation Services Department' services agreement"
+    ],
+    "key": "n-corinthian-international-parking-transportation-services",
+    "notes": "Agenda lists Cupertino, CA; BBB listing shows a Cupertino office (19925 Stevens Creek Blvd #126) but the current FMCSA record and website show headquarters in Campbell, CA, so the company appears to have moved or has multiple offices. The agenda name 'Corinthian International Parking Transportation Services' is a variant of the registered name. No CA Secretary of State, EIN or SAM data was found; those fields are null.",
+    "profile": {
+      "address": "2990 S WINCHESTER BLVD, CAMPBELL, CA 95008",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Info@corinthiantransportation.com",
+      "headquarters": "Campbell, CA",
+      "legalName": "CORINTHIAN INTERNATIONAL PARKING SERVICES INC",
+      "orgType": "company",
+      "phone": "(408) 377-5466",
+      "samUei": null,
+      "summary": "A Silicon Valley company, operating since 1989, that provides ground transportation and parking services. Its services include corporate and event shuttles, charter and group transportation, airport car service, and valet and parking garage management.",
+      "website": "https://corinthiantransportation.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "FMCSA SAFER Company Snapshot - Corinthian International Parking Services Inc",
+        "url": "https://safer.fmcsa.dot.gov/query.asp?searchtype=ANY&query_type=queryCarrierSnapshot&query_param=USDOT&query_string=2693021"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "Contact - Corinthian Transportation",
+        "url": "https://corinthiantransportation.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Corinthian Transportation, Parking & Valet",
+        "url": "https://corinthiantransportation.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-corinthian-international-parking-transportation-services",
+    "notes": "FMCSA SAFER (USDOT 2693021) and corinthiantransportation.com confirm the legal name, Campbell address, phone, generic info email, and services (including SPAB-certified student transportation, fitting a Transportation Services agreement); the BBB lists the same company in Cupertino, matching the agenda. The agenda name is a close variant of the registered name.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

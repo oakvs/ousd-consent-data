@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://qyk.us/contact-us/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://qyk.us/about-us/",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"email\" failed to load",
+      "field": "email",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-007526",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Company's own site (qyk.us) is for 'QYK Brands', matching the agenda name 'QYK Brands, LLC'",
+      "Contact page gives a Garden Grove, CA address (12101 Western Ave), matching the agenda location 'Garden Grove, CA'",
+      "About page says the company moved into healthcare and cleaning products during COVID-19 and makes cleaning and hygiene wipes, consistent with OUSD's COVID-19 personal protective equipment purchase"
+    ],
+    "key": "v-007526",
+    "notes": "No registry (CA SOS, SAM.gov) match was retrieved, so legal name and registry IDs are null. The qyk.us site served an expired TLS certificate at research time; content was read with certificate checks disabled. Site does not itself mention Oakland Unified or PPE sales, so identity rests on name, city and product-line match.",
+    "profile": {
+      "address": "12101 Western Ave, Garden Grove CA 92841",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@qyk.us",
+      "headquarters": "Garden Grove, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(833)795-7664",
+      "samUei": null,
+      "summary": "QYK Brands is a manufacturer based in Southern California that was founded in 2017. It makes wet wipes and cleaning and hygiene products and also supplies wet wipe raw materials.",
+      "website": "https://qyk.us/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "QYK Brands - Contact Us",
+        "url": "https://qyk.us/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "QYK Brands - About Us",
+        "url": "https://qyk.us/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/fl/orlando/sparknight-llc-2",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.energystar.gov/buildings/certified_buildings_and_plants/b_1545608",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-sparknight",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ENERGY STAR building record for Trans Pacific Centre, 1000 Broadway, Oakland, CA 94607 lists the owner as Sparknight, LLC, matching the OUSD lease amendments for 1000 Broadway (Central Administrative Offices)",
+      "Florida Department of State record shows an active Florida limited liability company named Sparknight, LLC, matching the agenda's location of Florida",
+      "Exact legal name 'Sparknight, LLC' matches the agenda text"
+    ],
+    "key": "n-sparknight",
+    "notes": "Florida entity document number L09000087916 (Sunbiz); manager listed as World Gateway Investments. The link between the Florida LLC and the Oakland building owner rests on the identical name, the agenda's Florida location, and the ENERGY STAR owner listing; the Sunbiz page itself blocks automated fetching so a third-party mirror of the Florida filing is cited. No website or public phone found.",
+    "profile": {
+      "address": "5760 S. Semoran Blvd., Orlando, FL 32822",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Orlando, FL",
+      "legalName": "Sparknight, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Sparknight, LLC is a Florida limited liability company based in Orlando. It is listed as the owner of the Trans Pacific Centre office building at 1000 Broadway in Oakland, California, where it leases office space.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Sparknight, LLC Orlando, FL - filing information",
+        "url": "https://www.bizprofile.net/fl/orlando/sparknight-llc-2"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "TRANS PACIFIC CENTRE",
+        "url": "https://www.energystar.gov/buildings/certified_buildings_and_plants/b_1545608"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-sparknight",
+    "notes": "ENERGY STAR lists Sparknight, LLC as owner of 1000 Broadway (the building in OUSD's lease amendments), and the active Florida LLC with an Orlando address matches the agenda's Florida location; a search also reports the Orlando-based Sparknight acquired the building in 2010. Legal name, org type, address and headquarters are shown by the filing mirror, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
