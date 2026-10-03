@@ -111,7 +111,10 @@ function meetingTitle(entry: TRegistryEntry | null): string {
  * pulled from the June 24, 2026 consent report and decided June 29.
  */
 export function laterDecisionNote(items: TPublishedItem[], meetingDate: string): string | null {
-  const later = items.filter(i => i.outcome && i.outcome.date > meetingDate)
+  // An item adopted at this meeting and repealed later (23-2283) wasn't pulled.
+  const adoptedHere = (i: TPublishedItem): boolean =>
+    i.history.some(h => h.date === meetingDate && ADOPTED.test(h.action) && !NOT_ADOPTED.test(h.action))
+  const later = items.filter(i => i.outcome && i.outcome.date > meetingDate && !adoptedHere(i))
   if (later.length === 0) return null
   const dates = [...new Set(later.map(i => i.outcome!.date))].sort().map(d => formatDate(d, 'long'))
   if (later.length > items.length / 2) {

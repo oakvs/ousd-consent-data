@@ -7012,37 +7012,17 @@
         },
         {
           "detail": null,
-          "name": "evidence_substring",
-          "pass": true
-        },
-        {
-          "detail": null,
           "name": "amounts_in_text",
           "pass": true
         },
         {
           "detail": null,
-          "name": "amendment_math",
-          "pass": true
-        },
-        {
-          "detail": "revenue without a grant action type or money-in language",
           "name": "direction_consistency",
-          "pass": false
-        },
-        {
-          "detail": null,
-          "name": "per_year_detection",
           "pass": true
         },
         {
           "detail": null,
           "name": "term_dates",
-          "pass": true
-        },
-        {
-          "detail": null,
-          "name": "headline_amount",
           "pass": true
         },
         {
@@ -7058,15 +7038,15 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Adds $225,000 to a City of Oakland grant for summer internship stipends at 15 high schools",
+        "headline": "Re-approves the 2025-26 year of a City of Oakland internship stipend grant, already accepted in December 2025; no new money",
         "money": {
-          "amountType": "fixed",
+          "amountType": "not_to_exceed",
           "byYear": {},
-          "direction": "revenue",
-          "evidence": "in the amount of $225,000.00",
+          "direction": "no_cost",
+          "evidence": null,
           "newTotal": 900000,
-          "priorTotal": 675000,
-          "thisAction": 225000,
+          "priorTotal": 900000,
+          "thisAction": null,
           "thisActionRange": null
         },
         "schools": [
@@ -7087,7 +7067,7 @@
           "Madison Park Academy"
         ],
         "sourceIssueCandidate": "The prior grant cap is printed as \"$675,00.00\", which appears to be a misprint of $675,000.00. The new end date (September 30, 2025) is before the March 25, 2026 meeting date.",
-        "summary": "This amendment adds $225,000 to a grant from the City of Oakland (through the Oakland Fund for Children and Youth), raising the cap from $675,000 to $900,000. The money pays stipends for students in summer internships in the Exploring College, Career, and Community Options (ECCCO) program at 15 high schools. It also extends the end date from June 30, 2024 to September 30, 2025.",
+        "summary": "This is the City of Oakland's amendment for the 2025-26 year of an Oakland Fund for Children and Youth grant that pays stipends for students in summer internships in the Linked Learning program Exploring College, Career, and Community Options (ECCCO). It sets $225,000 a year for 2022-23 through 2025-26, a total of $900,000, with the term ending September 30, 2025. The Board had already accepted the 2025-26 $225,000 on December 10, 2025 (25-2573), so this vote adds no new money; it was approved after the term ended.",
         "term": {
           "addedStart": "2024-07-01",
           "end": "2025-09-30",
@@ -7106,6 +7086,7 @@
       "file": "26-0512",
       "flags": [
         "after_work_began",
+        "source_issue",
         "multi_year"
       ],
       "fundingSource": "Oakland Fund for Children and Youth",
@@ -7138,7 +7119,7 @@
       "notes": [
         {
           "kind": "reading",
-          "text": "An amount in the official text appears misprinted; two independent readings agree on $675,000."
+          "text": "A second reading of the official text found a previous total of $675,000."
         },
         {
           "kind": "cosmetic",
@@ -7156,15 +7137,15 @@
       "resourceSite": null,
       "review": {
         "alerts": [],
-        "correction": null,
+        "correction": "Corrected: this was counted as adding $225,000. The same 2025-26 award was already accepted on December 10, 2025 (25-2573), so it is counted once, there.",
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v2.md",
-        "reviewedAt": null,
-        "status": "auto_ok",
+        "reviewedAt": "2026-10-03",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": null,
-      "sourceIssueBy": null,
+      "sourceIssue": "The 2025-26 $225,000 was already accepted in 25-2573 (December 10, 2025). The text also prints the prior total as \"$675,00.00\", gives the prior end date as June 30, 2024, and calls this the First Amendment while the attached document calls itself the Second Amendment.",
+      "sourceIssueBy": "human",
       "text": "Approval by the Board of Education of the First Amendment, Grant Agreement by and between the District and The City of Oakland, to provide support stipends for students in summer internships as part of the Link Learning Pathway Program, Exploring College, Career, and Community Options (ECCCO) Program at McClymonds, Castlemont, Fremont, Dewey, Rudsdale, Bunche, Sojourner Truth, Oakland High, Oakland Technical, Skyline, Coliseum College Preparatory Academy, MetWest, Life Academy, Oakland International High School, and Madison Park Academy, in the amount of $225,000.00, increasing the Grant not to exceed amount from $675,00.00 to $900,000.00 and extending the term of the Agreement from July 1, 2022 through June 30, 2024 to September 30, 2025. All other terms and conditions of the Agreement remain in full force and effect.",
       "title": "First Amendment, Grant Agreement - Kids First! - City of Oakland (OFCY) - High School Linked Learning Office",
       "vendorKey": "n-city-of-oakland-oakland-fund-for-children-and-youth",
@@ -10713,12 +10694,12 @@
       "no_total_stated": 1,
       "pulled_from_consent": 2,
       "raises_existing_contract": 6,
-      "source_issue": 2,
+      "source_issue": 3,
       "yearly_cap": 1
     },
     "items": 77,
-    "revenueItems": 14,
-    "revenueTotal": 3495513.1,
+    "revenueItems": 13,
+    "revenueTotal": 3270513.1,
     "spendingItems": 51,
     "spendingTotal": 66041768.47,
     "yearlyCapItems": 0,

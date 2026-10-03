@@ -6,7 +6,7 @@ The data backs the [Consent Report Tracker on the Oakland vs. the World blog](ht
 
 The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
-<!-- generated:stats -->As of October 2, 2026, it covers 92 Board meetings, from August 10, 2022 to September 23, 2026. That's 7,598 consent items authorizing $3.86 billion in spending, plus $469.9 million in grants and other money coming in, across 1,548 vendors and partners.<!-- /generated:stats -->
+<!-- generated:stats -->As of October 2, 2026, it covers 92 Board meetings, from August 10, 2022 to September 23, 2026. That's 7,598 consent items authorizing $3.86 billion in spending, plus $469.4 million in grants and other money coming in, across 1,548 vendors and partners.<!-- /generated:stats -->
 
 ## Why this exists
 
@@ -125,7 +125,7 @@ Flags point out how something was done. They don't say anything about anyone's m
 | Time extension only | Moves the end date without adding money | AI, from the text |
 | Emergency | The text describes emergency work or contracting | AI, from the text |
 
-Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 7,553 items are `auto_ok`, 53 are `human_reviewed` and 1 is `needs_review`.<!-- /generated:review -->
+Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 7,551 items are `auto_ok` and 56 are `human_reviewed`.<!-- /generated:review -->
 
 ## Known limitations
 

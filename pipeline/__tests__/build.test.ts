@@ -121,6 +121,15 @@ describe('merge and outcomes', () => {
     expect(laterDecisionNote([item('a', { outcome: same })], '2026-06-24')).toBeNull()
   })
 
+  it("doesn't call an item pulled when it was adopted here and repealed later", () => {
+    const repealed = { action: 'Repealed', date: '2024-04-10', meetingEventId: null, adopted: false }
+    const history = [
+      h({ date: '2023-10-25', action: 'Adopted on the General Consent Report', consent: true }),
+      h({ date: '2024-04-10', action: 'Repealed' }),
+    ]
+    expect(laterDecisionNote([item('a', { outcome: repealed, history })], '2023-10-25')).toBeNull()
+  })
+
   it('parses amendment numbers', () => {
     expect(parseAmendmentNo('Amendment No. 3, Services Agreement')).toBe(3)
     expect(parseAmendmentNo('Services Agreement', 'Approval of Amendment No.1, …')).toBe(1)
