@@ -8626,7 +8626,7 @@
     {
       "agendaNumber": "P.-64",
       "agendaSequence": 112,
-      "amountVerified": true,
+      "amountVerified": false,
       "attachments": [
         {
           "name": "19-2130 Grant Award - California Department of Education - Youth Engagement to Address Tobacco Related Health Disparities Grant - Tobacco Use Prevention Education (TUPE) Program - Community Schools and Student Services Department",
@@ -8640,7 +8640,12 @@
           "pass": true
         },
         {
-          "detail": null,
+          "detail": "evidence not found verbatim: null",
+          "name": "evidence_substring",
+          "pass": false
+        },
+        {
+          "detail": "not in text: thisAction=250000 (explained by source issue)",
           "name": "amounts_in_text",
           "pass": true
         },
@@ -8651,8 +8656,18 @@
         },
         {
           "detail": null,
+          "name": "per_year_detection",
+          "pass": true
+        },
+        {
+          "detail": null,
           "name": "term_dates",
           "pass": true
+        },
+        {
+          "detail": "headline lacks the amount",
+          "name": "headline_amount",
+          "pass": false
         },
         {
           "detail": null,
@@ -8676,16 +8691,16 @@
           "evidence": null,
           "newTotal": null,
           "priorTotal": null,
-          "thisAction": null,
+          "thisAction": 250000,
           "thisActionRange": null
         },
         "schools": [],
         "sourceIssueCandidate": "The grant amount is printed as \"$250,00.00\", which is a misprint; it could mean $250,000.00 or $25,000.00, so the intended figure should be confirmed against the grant award.",
-        "summary": "The district accepts a Youth Engagement to Address Tobacco Related Health Disparities grant from the California Department of Education for its Tobacco Use Prevention Education program. The grant period is July 1, 2018 through June 30, 2020. The amount is printed as \"$250,00.00\", which appears to be a typo.",
+        "summary": "The district accepts a Youth Engagement to Address Tobacco Related Health Disparities grant of $250,000 from the California Department of Education for its Tobacco Use Prevention Education program, serving 11 middle and high school sites. The attached grant award covers July 1, 2019 through June 30, 2020. The agenda text misprints the amount as \"$250,00.00\" and gives a 2018 start date.",
         "term": {
           "addedStart": null,
           "end": "2020-06-30",
-          "start": "2018-07-01"
+          "start": "2019-07-01"
         },
         "uncertain": [
           "money"
@@ -8744,12 +8759,12 @@
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "auto_ok",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
-      "sourceIssue": "The grant amount is printed as \"$250,00.00\", a misprint that could mean $250,000.00 or $25,000.00, so the intended figure is unclear.",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": "The grant amount is printed as \"$250,00.00\" and the period as starting July 1, 2018; the attached grant award shows $250,000.00 for July 1, 2019 through June 30, 2020.",
+      "sourceIssueBy": "human",
       "text": "Acceptance by the Board of Education of a California Youth Engagement to Address Tobacco Related Health Disparities Grant Award from the California Department of Education, (CDE Grant No. 19-25444-61259-00) for the Tobacco Use Prevention Program (TUPE), in the amount of $250,00.00, for the period of July 1, 2018 through June 30, 2020, pursuant to the terms and conditions thereof.",
       "title": "Grant Award - California Department of Education - Youth Engagement to Address Tobacco Related Health Disparities Grant - Tobacco Use Prevention Education (TUPE) Program - Community Schools and Student Services Department",
       "vendorKey": "n-california-department-of-education",
@@ -9274,8 +9289,8 @@
     "items": 67,
     "paymentsRatifiedItems": 0,
     "paymentsRatifiedTotal": 0,
-    "revenueItems": 3,
-    "revenueTotal": 1332352.66,
+    "revenueItems": 4,
+    "revenueTotal": 1582352.66,
     "spendingItems": 53,
     "spendingTotal": 1933099.19,
     "yearlyCapItems": 0,

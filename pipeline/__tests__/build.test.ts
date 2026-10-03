@@ -361,7 +361,9 @@ describe('golden set, 2026-06-24', async () => {
     expect(meeting.totals.spendingItems).toBe(102)
     expect(Math.round(meeting.totals.spendingTotal / 1e5) / 10).toBe(135.2)
     expect(meeting.totals.yearlyCapItems).toBe(23)
-    expect(meeting.totals.flagCounts).toMatchObject({ no_competitive_bid: 16, previously_delayed: 56, source_issue: 12 })
+    // source_issue: 12 in §18.5, plus R.-237 (26-1467, Segal), confirmed in the 2026-10-04 attachment check:
+    // the text keeps "$201,000.00 per year" and "$603,000.00 for term" while doubling the term to six years.
+    expect(meeting.totals.flagCounts).toMatchObject({ no_competitive_bid: 16, previously_delayed: 56, source_issue: 13 })
   })
 
   for (const f of fixtures) {

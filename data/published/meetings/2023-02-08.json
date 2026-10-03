@@ -4989,14 +4989,29 @@
           "pass": true
         },
         {
-          "detail": null,
+          "detail": "evidence not found verbatim: null",
+          "name": "evidence_substring",
+          "pass": false
+        },
+        {
+          "detail": "not in text: thisAction=150000",
           "name": "amounts_in_text",
-          "pass": true
+          "pass": false
         },
         {
           "detail": "revenue without a grant action type or money-in language",
           "name": "direction_consistency",
           "pass": false
+        },
+        {
+          "detail": null,
+          "name": "per_year_detection",
+          "pass": true
+        },
+        {
+          "detail": null,
+          "name": "headline_amount",
+          "pass": true
         },
         {
           "detail": null,
@@ -5013,22 +5028,22 @@
           "multi_year",
           "time_extension_only"
         ],
-        "headline": "Extends the City of Oakland's lease of a modular library building at Piedmont Elementary",
+        "headline": "Extends the City of Oakland's lease of a modular library building at Piedmont Elementary; rent of up to $150,000",
         "money": {
-          "amountType": null,
+          "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "revenue",
           "evidence": null,
           "newTotal": null,
           "priorTotal": null,
-          "thisAction": null,
+          "thisAction": 150000,
           "thisActionRange": null
         },
         "schools": [
           "Piedmont Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The board is approving a first amendment to a joint-use lease that lets the City of Oakland use an existing modular building at Piedmont Elementary School as a public library. The City pays the district $2,500 a month. The lease is extended until the earlier of the completion of the library construction project or five years. All other terms stay the same.",
+        "summary": "The board is approving a first amendment to a joint-use lease that lets the City of Oakland use an existing modular building at Piedmont Elementary School as a public library. The City pays the district $2,500 a month. The lease is extended until the earlier of the completion of the library construction project or five years, so rent could total up to $150,000 (the figure in the board memo). All other terms stay the same.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -5091,8 +5106,8 @@
         "correction": null,
         "modelId": "sonnet-agent",
         "promptVersion": "enrich.v3.md",
-        "reviewedAt": null,
-        "status": "auto_ok",
+        "reviewedAt": "2026-10-04",
+        "status": "human_reviewed",
         "verifiedBy": "sonnet-agent"
       },
       "sourceIssue": null,
@@ -6300,8 +6315,8 @@
     "items": 43,
     "paymentsRatifiedItems": 0,
     "paymentsRatifiedTotal": 0,
-    "revenueItems": 9,
-    "revenueTotal": 1179528,
+    "revenueItems": 10,
+    "revenueTotal": 1329528,
     "spendingItems": 26,
     "spendingTotal": 1089026.68,
     "yearlyCapItems": 0,
