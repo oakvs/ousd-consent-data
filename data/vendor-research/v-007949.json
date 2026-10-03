@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.building-maps.com/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.building-maps.com/contact/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buzzfile.com/business/Building-Maps-616-866-9696",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"email\" failed to load",
+      "field": "email",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-007949",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD agenda names the vendor as 'West Michigan Warehouse Outfitters, Inc., dba Building Maps' in Rockford, MI; Building Maps is based in Rockford, MI 49341 (its contact page gives a Rockford, MI mailing address)",
+      "A business directory listing (Buzzfile) states that West Michigan Warehouse Outfitters also operates as Building Maps, with the same phone number (616) 866-9696 and website building-maps.com shown on Building Maps' own contact page",
+      "Building Maps' website describes designing fire evacuation maps for schools, matching OUSD's contract for evacuation signage at school sites"
+    ],
+    "key": "v-007949",
+    "notes": "The link between the legal name and the Building Maps website rests on a business directory (Buzzfile) plus the agenda's own dba statement and matching phone, city and service. No Michigan LARA or SAM.gov registry record was checked, so no entity number or UEI is given. Buzzfile gives a street address of 6541 13 Mile Rd NE, Rockford, MI 49341; the P.O. box from the company's contact page is used here.",
+    "profile": {
+      "address": "P.O. BOX 480 ROCKFORD, MI 49341",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "sales@building-maps.com",
+      "headquarters": "Rockford, MI",
+      "legalName": "West Michigan Warehouse Outfitters",
+      "orgType": "company",
+      "phone": "(616) 866-9696",
+      "samUei": null,
+      "summary": "Building Maps is a company in Rockford, Michigan that designs emergency and safety maps for buildings. Its products include fire evacuation maps, security maps, campus maps and severe weather maps. It serves schools, manufacturers, healthcare centers, offices and apartment complexes.",
+      "website": "https://www.building-maps.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Safety & Emergency Mapping Services | Building Maps",
+        "url": "https://www.building-maps.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Building Maps | Fire Safety & Map Experts",
+        "url": "https://www.building-maps.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters"
+        ],
+        "title": "West Michigan Warehouse Outfitters Company Profile - Sales, Contacts, Competitors",
+        "url": "https://www.buzzfile.com/business/Building-Maps-616-866-9696"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007949",
+    "notes": "Buzzfile lists West Michigan Warehouse Outfitters Inc. with dba Building Maps, Rockford MI, phone (616) 866-9696 and building-maps.com, matching the agenda's dba and city; Building Maps makes evacuation maps for schools, fitting the evacuation signage contract. Summary, phone, email, P.O. box address and website are all confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

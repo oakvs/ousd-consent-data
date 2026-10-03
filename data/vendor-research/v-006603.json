@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/Archives/edgar/data/1283699/000119312515053993/d875683ds8.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/T-Mobile_US",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandedfund.org/2020/08/17/oaklandundivided/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    }
+  ],
+  "key": "v-006603",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda gives Bellevue, WA; T-Mobile US, Inc. (parent of T-Mobile USA, Inc.) lists its principal executive offices at 12920 SE 38th Street, Bellevue, Washington 98006 (SEC filing)",
+      "A public page by the Oakland Public Education Fund says T-Mobile Hotspots were distributed to Oakland Unified students in the #OaklandUndivided campaign, matching the agenda funding source 9024 - OaklandUndivided",
+      "Wireless carrier matches OUSD's 'Technology' contracts for E-Rate Emergency Connectivity Fund (connectivity) funding"
+    ],
+    "key": "v-006603",
+    "notes": "Agenda contracting entity is T-Mobile USA, Inc. (also written T-Mobile, Inc.), a subsidiary of the publicly traded parent T-Mobile US, Inc. Legal name left null to avoid conflating parent and subsidiary. Address and phone are the parent's principal executive offices as shown in an SEC filing. T-Mobile's own site (t-mobile.com, investor.t-mobile.com) blocks automated fetching, so website was not cited and is null. Piggyback agreement vendor; OUSD may be using a public-agency master contract.",
+    "profile": {
+      "address": "12920 SE 38th Street, Bellevue, Washington 98006",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Bellevue, WA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(425) 378-4000",
+      "samUei": null,
+      "summary": "T-Mobile is a wireless carrier based in Bellevue, Washington. Its parent company, T-Mobile US, Inc., is publicly traded and majority owned by Deutsche Telekom. It provides mobile phone and internet service to consumers and businesses in the United States.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "T-Mobile US, Inc. Form S-8",
+        "url": "https://www.sec.gov/Archives/edgar/data/1283699/000119312515053993/d875683ds8.htm"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "T-Mobile US - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/T-Mobile_US"
+      },
+      {
+        "supports": [],
+        "title": "#OaklandUndivided Begins Distributing Laptops and Wireless Hotspots to Oakland Families",
+        "url": "https://www.oaklandedfund.org/2020/08/17/oaklandundivided/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006603",
+    "notes": "Agenda names T-Mobile USA, Inc. / T-Mobile, Inc. in Bellevue, WA; the SEC filing confirms the T-Mobile US, Inc. parent's Bellevue address and phone, Wikipedia supports the summary, and the Oakland Public Education Fund page confirms T-Mobile hotspots for OUSD students via #OaklandUndivided. The address and phone are the parent's headquarters, consistent with the Bellevue location in the agenda.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

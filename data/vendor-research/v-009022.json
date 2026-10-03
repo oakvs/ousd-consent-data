@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.amwinsys.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.amwinsys.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://network.procore.com/p/american-window-and-door-systems-inc-napa",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009022",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda names 'American Window and Door Systems, Inc.' in Napa, CA; amwinsys.com's company 'American Window Systems, Inc.' is a Napa-area window and door contractor (Napa and American Canyon addresses)",
+      "Procore Network lists 'American Window & Door Systems Inc.' at 1729 Action Ave, Napa, CA with phone (707) 258-0880, the same phone shown on amwinsys.com, suggesting the same business trades under both names",
+      "The company installs windows and doors (including commercial work), consistent with OUSD's Skyline High School window replacement contract"
+    ],
+    "key": "v-009022",
+    "notes": "Agenda name ('American Window and Door Systems, Inc.') differs from the legal name found on the company's website ('American Window Systems, Inc.'). Linking them rests on matching city and phone via a Procore listing; no California Secretary of State or CSLB record was fetched to confirm a dba or the exact entity name, and no page mentions OUSD or school work. Address omitted because sources conflict (1729 Action Ave, Napa vs 110 Dodd Ct, American Canyon). Reviewer should verify the name relationship (CSLB license 1066478 appears to be the company's license, per search results only).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@amwinsys.com",
+      "headquarters": "Napa, CA",
+      "legalName": "American Window Systems, Inc.",
+      "orgType": "company",
+      "phone": "(707) 258-0880",
+      "samUei": null,
+      "summary": "A family-owned contractor in the Napa area that sells and installs replacement windows and doors for homes and businesses. It serves Napa Valley and nearby Northern California counties.",
+      "website": "https://www.amwinsys.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "Contact American Window Systems",
+        "url": "https://www.amwinsys.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us",
+        "url": "https://www.amwinsys.com/about-us/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "American Window & Door Systems Inc.",
+        "url": "https://network.procore.com/p/american-window-and-door-systems-inc-napa"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

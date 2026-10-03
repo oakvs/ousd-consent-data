@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://digitalscepter.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/murrieta/digital-scepter-corporation",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-digital-scepter",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda gives Murrieta, CA; digitalscepter.com lists its address as 29970 Technology Drive, Suite 122B, Murrieta, California 92563",
+      "Agenda lists the purchase as Technology (Technology Services Department); the company sells network security and Palo Alto Networks services, matching a technology purchase",
+      "Company website says its customers include school districts",
+      "California filing record (bizprofile.net, mirroring Secretary of State data) shows an active corporation named Digital Scepter Corporation at the same Murrieta address"
+    ],
+    "key": "n-digital-scepter",
+    "notes": "The agenda names 'Digital Scepter, Inc.' but the California filing shows 'Digital Scepter Corporation'; same city and address, so treated as the same entity. The entity number comes from a third-party mirror of Secretary of State data, not bizfileonline directly. No general email address found on the site.",
+    "profile": {
+      "address": "29970 Technology Drive, Suite 122B, Murrieta, California 92563",
+      "caEntityNumber": "2981527",
+      "ein": null,
+      "email": null,
+      "headquarters": "Murrieta, CA",
+      "legalName": "Digital Scepter Corporation",
+      "orgType": "company",
+      "phone": "(888) 299-3718",
+      "samUei": null,
+      "summary": "A company in Murrieta, California that provides network and cybersecurity services. It helps organizations design, set up, audit and support network security systems, with a focus on Palo Alto Networks equipment. Its customers include school districts, colleges and businesses.",
+      "website": "https://digitalscepter.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Digital Scepter",
+        "url": "https://digitalscepter.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Digital Scepter Corporation Murrieta, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/murrieta/digital-scepter-corporation"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-digital-scepter",
+    "notes": "Murrieta, CA location and network security/technology services match the agenda's Digital Scepter, Inc. (Technology Services lease); the site confirms address, phone, Palo Alto Networks focus and school-district customers, and the CA filing (Digital Scepter Corporation, entity 2981527, active, same address) confirms legal name and entity number. The Inc. vs Corporation difference is minor and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

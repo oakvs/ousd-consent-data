@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.informedk12.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.informedk12.com/terms-of-use",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.informedk12.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001568",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The company's own Privacy Policy names the legal entity 'Emics, Inc. DBA Informed K12', exactly matching the agenda's 'Emics, Inc. dba InformedK12'",
+      "The Terms of Use name the contracting entity as 'Emics, Inc.' operating the 'Informed K12' service",
+      "Informed K12 sells workflow automation software to school districts, matching OUSD's 'Technology' contracts through the Technology Services Department",
+      "Headquarters address is in Oakland, CA, the same city as OUSD"
+    ],
+    "key": "v-001568",
+    "notes": "No public phone number found on the company's pages. EIN, California entity number and SAM UEI not verified (registries not checked or not fetchable), so left null. Email is the general hello@ inbox listed in the Terms of Use; the Privacy Policy lists a separate privacy@ address, which was not used.",
+    "profile": {
+      "address": "555 12th St., Suite 1670, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hello@InformedK12.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Emics, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Emics, Inc. does business as Informed K12, a company that makes workflow automation software for K-12 school districts. Its platform helps district offices move paper-based work in areas such as finance, human resources, payroll and student services into digital workflows.",
+      "website": "https://www.informedk12.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "InformedK12",
+        "url": "https://www.informedk12.com"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "orgType"
+        ],
+        "title": "Terms of Use",
+        "url": "https://www.informedk12.com/terms-of-use"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Privacy Policy",
+        "url": "https://www.informedk12.com/privacy-policy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001568",
+    "notes": "The Privacy Policy names 'Emics, Inc. DBA Informed K12' and the Terms name Emics, Inc. as operator, matching the agenda's 'Emics, Inc. dba InformedK12'. The K-12 workflow-automation software fits OUSD's Technology Services purchase. The Oakland address, hello@ email, website and neutral summary are each supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

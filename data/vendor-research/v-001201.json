@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cordobacorp.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cordobacorp.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cordobacorp.com/an-award-winning-year-for-cordoba-corporations-education-and-facilities-sector/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/los-angeles/cordoba-corp",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001201",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Cordoba Corporation is a construction and program management firm, matching OUSD's 'School buildings & construction' contracts for construction management under Measure J and Measure Y bond funds",
+      "Cordoba's own site lists a San Francisco office, matching the agenda's 'San Francisco, CA'",
+      "Cordoba's own news page says it provided construction management services for the Fremont High School Transformation Project at Oakland Unified School District"
+    ],
+    "key": "v-001201",
+    "notes": "California entity number comes from a third-party mirror of Secretary of State data (bizprofile.net), which lists the registered name as 'Cordoba Corp.' (General Corporation, active, incorporated 1979); bizfileonline was not checked directly, so a reviewer may want to confirm it there. Contact details are for headquarters in Los Angeles; the San Francisco office listed on the website has no phone number shown. No general email address is published on the pages checked.",
+    "profile": {
+      "address": "1401 N Broadway, Los Angeles, CA 90012",
+      "caEntityNumber": "0946970",
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Cordoba Corp.",
+      "orgType": "company",
+      "phone": "(213) 895-0224",
+      "samUei": null,
+      "summary": "Cordoba Corporation is a California firm that provides construction management, program management, project controls and planning services. It works on public infrastructure and facilities projects in areas such as transportation, water, energy and education. The company was founded in 1983 and has offices across California and in Seattle.",
+      "website": "https://www.cordobacorp.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us - Cordoba Corp.",
+        "url": "https://www.cordobacorp.com/about-us/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cordoba",
+        "url": "https://www.cordobacorp.com/"
+      },
+      {
+        "supports": [],
+        "title": "An Award-Winning Year for Cordoba Corporation's Education and Facilities Sector!",
+        "url": "https://www.cordobacorp.com/an-award-winning-year-for-cordoba-corporations-education-and-facilities-sector/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber"
+        ],
+        "title": "Cordoba Corp. Los Angeles, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/los-angeles/cordoba-corp"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001201",
+    "notes": "Cordoba Corp. (LA headquarters, San Francisco office listed on its site) is a construction/program management firm, and its own news page names the Fremont High School project for Oakland Unified, matching the agenda's construction management agreements. Summary, address, phone, website, legal name and CA entity number 0946970 (via bizprofile mirror of Secretary of State data) all check out against the cited pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

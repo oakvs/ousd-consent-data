@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943251867",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.playworks.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.playworks.org/about/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003388",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Registered nonprofit 'Playworks Education Energized' (ProPublica Nonprofit Explorer, EIN 94-3251867), based in Oakland, CA, matching the agenda location 'Oakland, CA'",
+      "Playworks' own site describes onsite coaching and recess/play programming for schools, matching OUSD's school-site Services Agreements for student support and classroom programs",
+      "Playworks' contact page lists its headquarters address in Oakland, CA 94612"
+    ],
+    "key": "v-003388",
+    "notes": "Agenda name 'Playworks' is the common name of Playworks Education Energized. Page-text extraction used for contact details; verify formatting via research-check.",
+    "profile": {
+      "address": "1440 Broadway STE 200 PMB 161 Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3251867",
+      "email": "info@playworks.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Playworks Education Energized",
+      "orgType": "nonprofit",
+      "phone": "510.893.4180",
+      "samUei": null,
+      "summary": "Playworks is a national nonprofit that helps schools and youth programs create safe, inclusive play environments. It offers staff training, onsite coaching, online learning and resources for recess and games. Its stated mission is to improve children's health and well-being by increasing opportunities for physical activity and safe, meaningful play.",
+      "website": "https://www.playworks.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Playworks Education Energized - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943251867"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Playworks",
+        "url": "https://www.playworks.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Playworks",
+        "url": "https://www.playworks.org/about/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003388",
+    "notes": "Playworks Education Energized (EIN 94-3251867, Oakland, CA 501(c)(3)) is the national nonprofit running onsite school coaching and play programming, which fits OUSD's per-school Services Agreements and the Oakland location. Legal name, EIN, mission/services, address, phone and the generic info@ email were all confirmed on the cited ProPublica, About and Contact pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

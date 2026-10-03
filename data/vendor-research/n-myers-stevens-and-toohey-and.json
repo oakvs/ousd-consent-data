@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://myers-stevens.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://myers-stevens.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-myers-stevens-and-toohey-and",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name on its own website matches the agenda name: Myers-Stevens & Toohey & Co., Inc.",
+      "Located in Mission Viejo, CA, matching the agenda text",
+      "Website describes designing and administering student accident and sickness insurance programs for schools, matching OUSD's contracts for student and volunteer accident insurance premiums (Legal, insurance & risk)"
+    ],
+    "key": "n-myers-stevens-and-toohey-and",
+    "notes": "Entity number, EIN and UEI not found; registries not checked directly. No general email listed on the company's contact page.",
+    "profile": {
+      "address": "26101 Marguerite Pkwy, Mission Viejo, CA 92692",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Mission Viejo, CA",
+      "legalName": "Myers-Stevens & Toohey & Co., Inc.",
+      "orgType": "company",
+      "phone": "(949) 348-0656",
+      "samUei": null,
+      "summary": "An insurance company based in Mission Viejo, California, founded in 1970. It designs and administers student accident and sickness insurance plans for public and private schools, community colleges and other educational institutions, including catastrophic injury coverage.",
+      "website": "https://myers-stevens.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Myers Stevens & Toohey & Co.",
+        "url": "https://myers-stevens.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Myers Stevens & Toohey & Co. Contact Information",
+        "url": "https://myers-stevens.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-myers-stevens-and-toohey-and",
+    "notes": "Same organization (name, Mission Viejo location and student accident insurance services all match the agenda). However the summary calls it 'an insurance company', while its own site describes it as a licensed broker/administrator (insurance MGA/TPA) and explicitly not an insurer, so the summary mischaracterizes it; it should be redone as a broker/administrator.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

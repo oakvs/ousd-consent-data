@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://diligencesecuritygroup.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://diligencesecuritygroup.com/about-us-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008464",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: 'Diligence Security Group' (diligencesecuritygroup.com)",
+      "Website describes armed and unarmed security guard services, matching the agenda's 'Security Services for OUSD Properties at 900 & 955 High Street'",
+      "Conflict: the agenda gives Stockton, CA, but the company's website lists offices only in Los Angeles, Oakland and Sacramento; no Stockton office found",
+      "No page found mentioning Oakland Unified / OUSD, and no registry (CA Secretary of State, SAM.gov) entry was confirmed"
+    ],
+    "key": "v-008464",
+    "notes": "Agenda location is Stockton, CA but the company with this exact name is based in Oakland with offices in Los Angeles and Sacramento. Could be the same firm working outside its office area, or a different entity (for example one with a Stockton mailing address). Needs a human check against the CA Secretary of State record or the OUSD contract before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(844) 877-9975",
+      "samUei": null,
+      "summary": "Diligence Security Group is a California security company that provides armed and unarmed security guards, patrols and security technology such as camera systems and access control.",
+      "website": "https://diligencesecuritygroup.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us",
+        "url": "https://diligencesecuritygroup.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us",
+        "url": "https://diligencesecuritygroup.com/about-us-2/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

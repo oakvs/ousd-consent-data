@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/231390618",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.devereux.org/site/SPageServer/?pagename=georgia_our_programs_school_education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.devereux.org/site/PageServer?pagename=ga_contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.devereux.org/georgia",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-devereux-georgia-ackerman-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Devereux Georgia's official pages list Devereux Ackerman Academy, a K-12 school at 1291 Stanley Road, Kennesaw, GA 30152, matching the agenda's 'Kennesaw, Georgia'",
+      "OUSD contracts them under a Nonpublic, Nonsectarian School master contract for Special Education; Devereux Ackerman Academy is a nonpublic therapeutic school serving K-12 students in a residential treatment setting",
+      "Devereux Georgia is a center of Devereux Advanced Behavioral Health, a nonprofit registered as Devereux Foundation (ProPublica, EIN 23-1390618)"
+    ],
+    "key": "n-devereux-georgia-ackerman-academy",
+    "notes": "Profile describes the Devereux Georgia / Ackerman Academy site; legal name and EIN are those of the parent nonprofit Devereux Foundation (Villanova, PA). Email is the school's general inbox. No CA entity number or UEI checked.",
+    "profile": {
+      "address": "1291 Stanley Road, Kennesaw, GA 30152",
+      "caEntityNumber": null,
+      "ein": "23-1390618",
+      "email": "AckermanAcademy@devereux.org",
+      "headquarters": "Kennesaw, GA",
+      "legalName": "Devereux Foundation",
+      "orgType": "nonprofit",
+      "phone": "(770) 427-0147",
+      "samUei": null,
+      "summary": "Devereux Advanced Behavioral Health is a national nonprofit that provides behavioral health, special education and related services to children and adults. Its Georgia center in Kennesaw offers residential treatment, specialty foster care and a fully accredited K-12 school, Devereux Ackerman Academy.",
+      "website": "https://www.devereux.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Devereux Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/231390618"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "School and Education - Devereux Advanced Behavioral Health Georgia",
+        "url": "https://www.devereux.org/site/SPageServer/?pagename=georgia_our_programs_school_education"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Contact Devereux Georgia - Devereux Advanced Behavioral Health Georgia",
+        "url": "http://www.devereux.org/site/PageServer?pagename=ga_contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Devereux Georgia",
+        "url": "https://www.devereux.org/georgia"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-devereux-georgia-ackerman-academy",
+    "notes": "Devereux Ackerman Academy at 1291 Stanley Road, Kennesaw GA is a nonpublic K-12 special education school, matching the agenda's name, location and Special Education purchase; the Devereux Foundation (EIN 23-1390618, Villanova PA) is its parent nonprofit. Headquarters 'Kennesaw, GA' is the site location, not the organization's headquarters (ProPublica shows Villanova, PA), so it is unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

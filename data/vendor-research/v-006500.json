@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sonic.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sonic.com/schools-and-libraries",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Sonic_(ISP)",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006500",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda gives 'Sonic' in Santa Rosa, CA; Sonic (sonic.com, formerly Sonic.net) is an internet service provider headquartered in Santa Rosa, CA (Wikipedia; Sonic's own bid document says 'Sonic is headquartered in Santa Rosa, CA')",
+      "Sonic's 2021 bid response to Santa Rosa City Schools lists Oakland Unified School District as a client, with 10Gbps wide-area network (WAN) services to 96 sites and dark fiber WAN services to 4 sites, matching OUSD's 'Dark Fiber Lease Agreement' and 'Wide-Area Network' agreements",
+      "Sonic's website has an E-Rate schools and libraries page offering managed dark fiber WAN, matching OUSD's Category 1 E-Rate WAN contracts with Sonic"
+    ],
+    "key": "v-006500",
+    "notes": "Legal entity left null: public sources show related names (Sonic.net, LLC per Wikipedia; Sonic Telecom, LLC per FCC and directory listings) and I could not confirm the contracting entity in a registry. Registry IDs (CA SOS, SAM.gov UEI) not retrieved. Street address (2260 Apollo Way, Santa Rosa) appears in directory listings but was not confirmed on an official page I could fetch, so omitted. sonic.com lists erate@sonic.net only as an E-Rate-specific contact, so no general email was used.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Santa Rosa, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(888) 766-4233",
+      "samUei": null,
+      "summary": "Sonic is an internet service provider based in Santa Rosa, California. It offers fiber-optic internet, phone and TV service to homes and businesses. It also sells managed dark fiber and lit fiber wide-area network services to schools and libraries through the federal E-Rate program.",
+      "website": "https://www.sonic.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "orgType"
+        ],
+        "title": "About Sonic",
+        "url": "https://www.sonic.com/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "E-Rate Program - Service Provider - Sonic Internet",
+        "url": "https://www.sonic.com/schools-and-libraries"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Sonic (ISP)",
+        "url": "https://en.wikipedia.org/wiki/Sonic_(ISP)"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006500",
+    "notes": "Sonic of Santa Rosa, CA is an ISP selling managed dark fiber and lit fiber WAN services to schools via E-Rate (sonic.com/schools-and-libraries), matching OUSD's dark fiber, WAN and E-Rate Category 1 agreements. Summary, website, phone, headquarters and orgType are supported by the cited sites; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

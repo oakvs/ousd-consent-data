@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://heytutor.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://heytutor.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://heytutor.com/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/woodland-hills/profile/tutoring/heytutor-1216-1292790",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007914",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: heytutor.com privacy policy and About page name the company 'HeyTutor, Inc.', matching the agenda's 'HeyTutor, Inc.'",
+      "Located in Woodland Hills, CA (BBB profile: 21700 Oxnard St #1540, Woodland Hills, CA), matching the agenda text location",
+      "Services match OUSD's Special Education contracts: heytutor.com offers paraprofessional support for students with IEPs, and a 2021 press release says HeyTutor provides special education instructors to a California school district"
+    ],
+    "key": "v-007914",
+    "notes": "Registry IDs (CA Secretary of State, SAM.gov) were not looked up. Phone is the District Partnerships Team line listed on the contact page; BBB lists a different main number. No general email is published, so email is left null (privacy@heytutor.com is for privacy requests only). Address comes from the BBB profile, not the company site.",
+    "profile": {
+      "address": "21700 Oxnard St #1540, Woodland Hills, CA 91367-3644",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Woodland Hills, CA",
+      "legalName": "HeyTutor, Inc.",
+      "orgType": "company",
+      "phone": "(818) 867-3110",
+      "samUei": null,
+      "summary": "HeyTutor is a company that provides tutoring to K-12 school districts. It offers in-person math and English language arts tutoring, multilingual tutoring for English learners, and paraprofessional support for students with Individualized Education Programs (IEPs).",
+      "website": "https://heytutor.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Expert In-Person High-Dosage Tutoring for K-12 School Districts",
+        "url": "https://heytutor.com/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us - HeyTutor",
+        "url": "https://heytutor.com/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "HeyTutor Privacy Policy",
+        "url": "https://heytutor.com/privacy-policy/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "HeyTutor - BBB Profile",
+        "url": "https://www.bbb.org/us/ca/woodland-hills/profile/tutoring/heytutor-1216-1292790"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007914",
+    "notes": "Name HeyTutor, Inc. (privacy policy), Woodland Hills CA address (BBB) and special-education/IEP paraprofessional services all match the agenda records. Summary, website, phone (District Partnerships line) and address are each shown by a cited source and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

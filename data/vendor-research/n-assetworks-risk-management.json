@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.gosolutions.com/terms-and-conditions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.volarisgroup.com/press-room/volaris-group-through-its-assetworks-risk-management-business-has-acquired-the-assets-of-csa-consulting/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://centurisk.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-assetworks-risk-management",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Go Solutions terms page names the legal entity exactly as 'AssetWorks Risk Management Inc., dba Go Solutions' (matches the agenda name)",
+      "Its listed primary office is in Pittsburgh, PA, matching the agenda location",
+      "The company's Centurisk site describes property risk management software, matching OUSD's Risk Management Department as the contracting office"
+    ],
+    "key": "n-assetworks-risk-management",
+    "notes": "Website left null: the company operates under several brand sites (gosolutions.com, centurisk.com) and the old assetworks.com/risk page redirects, so no single official site was confirmed. Link between the OUSD risk contract and the Centurisk property risk product is inferred from the contracting office, not confirmed. No registry ID (EIN, CA entity number, UEI) was found on a fetched registry page.",
+    "profile": {
+      "address": "400 Holiday Drive, Suite 200, Pittsburgh, PA 15220",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Pittsburgh, PA",
+      "legalName": "AssetWorks Risk Management Inc.",
+      "orgType": "company",
+      "phone": "800-260-2544",
+      "samUei": null,
+      "summary": "A company that sells software and services to organizations, including a property risk management software product and special education software and services for K-12 school districts. It does business as Go Solutions. It is owned by Volaris Group, part of Constellation Software.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "Terms and Conditions - Go Solutions",
+        "url": "https://www.gosolutions.com/terms-and-conditions/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Volaris Group, through its AssetWorks Risk Management business, has acquired the assets of CSA Consulting",
+        "url": "https://www.volarisgroup.com/press-room/volaris-group-through-its-assetworks-risk-management-business-has-acquired-the-assets-of-csa-consulting/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Centurisk",
+        "url": "http://centurisk.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-assetworks-risk-management",
+    "notes": "The Go Solutions terms page names the legal entity 'AssetWorks Risk Management Inc. dba Go Solutions' at 400 Holiday Drive, Pittsburgh, PA, with phone 800-260-2544, matching the agenda name and city. The Volaris page confirms the Volaris Group / Constellation Software ownership and the K-12 special education business. The property risk software claim rests on the Centurisk site's 'AssetWorks Risk Solutions' footer link and is a mild inference, though consistent with the Risk Management Department contract.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

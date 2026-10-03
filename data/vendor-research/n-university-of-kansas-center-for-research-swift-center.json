@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/480680117",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://swiftschools.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://swiftschools.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-kansas-center-for-research-swift-center",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'University Of Kansas Center For Research Inc', EIN 48-0680117, Lawrence, KS (ProPublica Nonprofit Explorer), matching the agenda's name and 'Lawrence, KS'",
+      "SWIFT Education Center is based at the Life Span Institute, University of Kansas, in Lawrence, KS, matching the '(SWIFT Center)' in the agenda text",
+      "SWIFT describes itself as a national technical assistance center that builds capacity in states, districts and schools, and its site lists California district partnerships, consistent with OUSD's 'Classroom & academic programs' contract"
+    ],
+    "key": "n-university-of-kansas-center-for-research-swift-center",
+    "notes": "Contact details are for the SWIFT Education Center program, which is housed at the University of Kansas Life Span Institute; the legal contracting entity is University of Kansas Center for Research, Inc. No phone listed on the SWIFT contact page. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "SWIFT Education Center, Life Span Institute, University of Kansas, Joseph R. Pearson Hall, 1122 W Campus Road, Room 601, Lawrence, KS 66045",
+      "caEntityNumber": null,
+      "ein": "48-0680117",
+      "email": "SWIFT@ku.edu",
+      "headquarters": "Lawrence, KS",
+      "legalName": "University Of Kansas Center For Research Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit research organization connected to the University of Kansas in Lawrence, Kansas. Its SWIFT Education Center is a national technical assistance center that helps states, school districts, schools and communities build systems of academic, behavioral, social and emotional support for students.",
+      "website": "https://swiftschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "University Of Kansas Center For Research Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/480680117"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact Us - SWIFT",
+        "url": "https://swiftschools.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Who We Are - SWIFT",
+        "url": "https://swiftschools.org/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-university-of-kansas-center-for-research-swift-center",
+    "notes": "ProPublica confirms the 501(c)(3) University Of Kansas Center For Research Inc (EIN 48-0680117, Lawrence, KS), matching the agenda name and city. The SWIFT site confirms the KU Life Span Institute location, the generic program email and address, and a self-description matching the neutral summary, and it lists California district work that fits an academic-programs contract.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

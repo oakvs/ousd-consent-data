@@ -1,0 +1,135 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473525937",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://middletree.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://middletree.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://middletree.org/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://middletree.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008564",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational nonprofit 'Middle Tree', EIN 47-3525937, Claremont, CA (ProPublica Nonprofit Explorer)",
+      "Middle Tree's website lists a Sacramento center at 2335 American River Dr #110, matching the agenda's 'Sacramento, CA'",
+      "Website offers dyslexia tutoring and academic support, loosely consistent with a special education services agreement",
+      "No public page found that mentions Oakland Unified or RFP #24-147, so the link to this specific contract is not independently confirmed"
+    ],
+    "key": "v-008564",
+    "notes": "ProPublica lists Claremont, CA as the filing city while the agenda says Sacramento; Middle Tree does operate a Sacramento center, but no source ties this organization to OUSD or RFP #24-147. Confidence kept at medium for that reason. California SOS entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "250 W. 1st St #252, Claremont, CA 91711",
+      "caEntityNumber": null,
+      "ein": "47-3525937",
+      "email": "info@middletree.org",
+      "headquarters": "Claremont, CA",
+      "legalName": "Middle Tree",
+      "orgType": "nonprofit",
+      "phone": "866-212-0210",
+      "samUei": null,
+      "summary": "Middle Tree is a nonprofit learning community that offers tutoring in core subjects such as math, reading and writing, dyslexia support, homework help, and afterschool and summer enrichment programs. It works with school districts in California and runs centers in Claremont, Whittier and Sacramento.",
+      "website": "https://middletree.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Middle Tree - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473525937"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Middle Tree - Middle Tree",
+        "url": "https://middletree.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact Us - Middle Tree",
+        "url": "https://middletree.org/contact-us/"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "email",
+          "summary"
+        ],
+        "title": "Locations - Middle Tree",
+        "url": "https://middletree.org/locations/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Home - Middle Tree",
+        "url": "https://middletree.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

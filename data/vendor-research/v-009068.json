@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.svpinc.com/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.svpinc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009068",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the agenda names 'Silicon Valley Paving, Inc.' and the company's own contact page lists 'Silicon Valley Paving inc'",
+      "Located in San Jose, CA, matching the agenda text (contact page address: 1050 Commercial Street Suite 101, San Jose, CA 95112)",
+      "Company is an asphalt and concrete paving contractor with a California contractor license, matching OUSD's 'School buildings & construction' contract for an asphalt replacement project"
+    ],
+    "key": "v-009068",
+    "notes": "No general email address was published (only named staff emails, which are excluded). Federal motor carrier registry (FMCSA SAFER) lists a second San Jose address (1255 Yard Court, 95133) for the same name, likely an equipment yard; the Commercial Street address from the company's own contact page is used. No state registry (CA Secretary of State, SAM.gov) was checked, so no registry IDs are given.",
+    "profile": {
+      "address": "1050 Commercial Street Suite 101, San Jose, CA 95112",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Jose, CA",
+      "legalName": "Silicon Valley Paving inc",
+      "orgType": "company",
+      "phone": "(408) 286-9101",
+      "samUei": null,
+      "summary": "A licensed, insured and bonded paving contractor based in San Jose, California. It provides asphalt repair, sealcoating and striping, and concrete repair and paving for residential, commercial and retail customers in Northern California.",
+      "website": "https://www.svpinc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Silicon Valley Paving inc : Contact",
+        "url": "https://www.svpinc.com/contact.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Silicon Valley Paving Inc.",
+        "url": "https://www.svpinc.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009068",
+    "notes": "Exact name, San Jose location, and asphalt paving services match OUSD's asphalt replacement agreement. The company's own homepage and contact page support the summary, address, phone, website and license/insured/bonded claims; no named-individual contacts are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

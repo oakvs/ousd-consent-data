@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://s24.q4cdn.com/538403808/files/doc_news/Hazelrigg-Claims-Management-Services-Merges-with-TRISTAR-Insurance-Group-Inc-2021.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.tristargroup.net",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-hazelrigg-claims-management-service-a-tristar",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: TRISTAR press release (3/4/2021) says Hazelrigg Claims Management Services (HCMS) merged with TRISTAR Insurance Group, Inc., matching the agenda's 'a TriStar Company'",
+      "Press release says HCMS operated from Chino Hills and Oakland, CA, matching the agenda location (Chino Hills, CA)",
+      "HCMS handles workers' compensation and liability claims for public and private clients, matching OUSD's workers' compensation claims contract for its Risk Management Department"
+    ],
+    "key": "n-hazelrigg-claims-management-service-a-tristar",
+    "notes": "Website is the parent company TRISTAR's site (agenda says 'a TriStar Company'); the former Hazelrigg site hazelriggclaims.com was not verified. Phone and address omitted: third-party directories disagree on suite number (160 vs 250) and TRISTAR's contact page lists no Chino Hills office details. No registry IDs found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Chino Hills, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Hazelrigg Claims Management Services is a third-party claims administrator, which means it handles insurance claims for other organizations. It was established in 2013 and manages workers' compensation and liability claims for public and private clients in California. In 2021 it merged with TRISTAR Insurance Group, Inc., a national claims administrator based in Long Beach, California.",
+      "website": "https://www.tristargroup.net"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Hazelrigg Claims Management Services Merges with TRISTAR Insurance Group, Inc.",
+        "url": "https://s24.q4cdn.com/538403808/files/doc_news/Hazelrigg-Claims-Management-Services-Merges-with-TRISTAR-Insurance-Group-Inc-2021.pdf"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "TRISTAR",
+        "url": "https://www.tristargroup.net"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-hazelrigg-claims-management-service-a-tristar",
+    "notes": "The press release (read in full) confirms HCMS merged into TRISTAR in 2021, was established in 2013, handles workers' compensation and liability claims for public and private clients, and operates from Chino Hills and Oakland, which fits OUSD's workers' compensation claims contract and the agenda's Chino Hills location. The summary is supported and neutral. The release lists Chino Hills as one of two offices and never calls it headquarters, so that field is unsupported; the website is the parent TRISTAR site, which tristargroup.net confirms as TRISTAR Insurance Group's.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

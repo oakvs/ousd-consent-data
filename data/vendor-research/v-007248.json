@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.viatron.com/scanning",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.viatron.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007248",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: ViaTRON SYSTEMS, Inc. (agenda: Viatron Systems, Inc.)",
+      "Headquartered in Gardena, CA, matching the agenda location 'Gardena, CA'",
+      "Company provides document scanning and digitization, matching the agenda's 'Central Office 1000 Broadway Digitalization Project' and 'Cole Administration Center Project' contracts"
+    ],
+    "key": "v-007248",
+    "notes": "No registry (CA Secretary of State, SAM.gov) entry was checked, so no entity number or UEI. Company pages do not mention OUSD; identity rests on name, Gardena location and matching service type. Phone shown is the page's 'Corporate Headquarters' line; sales line is (310) 756-0607.",
+    "profile": {
+      "address": "18233 Hoover Street, Gardena, Los Angeles County, CA 90248",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "sales@viatron.com",
+      "headquarters": "Gardena, CA",
+      "legalName": "ViaTRON SYSTEMS, Inc.",
+      "orgType": "company",
+      "phone": "(310) 756-0610",
+      "samUei": null,
+      "summary": "ViaTRON Systems is a company founded in 1990 that converts paper, microfilm, microfiche and large-format drawings into digital files. It also provides document management software and related maintenance and training services.",
+      "website": "https://www.viatron.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName",
+          "website"
+        ],
+        "title": "Contact ViaTRON - Document Scanning Services — ViaTRON SYSTEMS, Inc.",
+        "url": "https://www.viatron.com/scanning"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "ViaTRON SYSTEMS, Inc.",
+        "url": "https://www.viatron.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007248",
+    "notes": "Exact name match, Gardena CA location matches the agenda, and ViaTRON's document scanning/digitization business fits the 1000 Broadway Digitalization and Cole Administration Center contracts. Cited pages confirm the summary (founded 1990, paper/microfilm/microfiche conversion, ECM software, maintenance, training) and the business contact fields (generic sales@ email, corporate phone, Hoover Street address); the company pages do not mention OUSD, so identity rests on name, location and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

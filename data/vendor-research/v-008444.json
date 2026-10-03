@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.km106.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cslb.ca.gov/937674",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.dir.ca.gov/databases/doshacru/acruDetails.asp?regno=1019",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008444",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's own website and the CSLB license record both give 'KM 106 Construction Inc.' (CSLB: 'KM 106 CONSTRUCTION INC', a corporation, license current and active)",
+      "Located in San Francisco, CA (1400 Egbert Avenue), matching the agenda's 'San Francisco, CA'",
+      "Company website lists asphalt work among its services, matching OUSD's asphalt removal/replacement school site contracts",
+      "Company website lists 'Oakland Unified School District Elementary Schools - Multiple Locations' as a completed project"
+    ],
+    "key": "v-008444",
+    "notes": "Phone differs between sources: the company website and Cal/OSHA show (415) 714-7283; the CSLB record shows (510) 512-6799. The website number was used. California Secretary of State entity number, EIN and SAM.gov UEI were not confirmed from a primary registry page, so they are left null. A third-party aggregator lists a UEI, but it was not used.",
+    "profile": {
+      "address": "1400 Egbert Ave San Francisco, CA 94124",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "admin@km106.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": "KM 106 Construction Inc.",
+      "orgType": "company",
+      "phone": "(415) 714-7283",
+      "samUei": null,
+      "summary": "A San Francisco company that provides environmental and specialty contracting services. Its work includes abatement and remediation (asbestos, lead, mold), demolition, asphalt work, concrete, excavation, and emergency response.",
+      "website": "https://www.km106.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "KM 106 Construction Inc.",
+        "url": "https://www.km106.com/"
+      },
+      {
+        "supports": [
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Contractor's License Detail for License # 937674 - CSLB",
+        "url": "https://www.cslb.ca.gov/937674"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters"
+        ],
+        "title": "Cal/OSHA - Asbestos Registrants' Detail Information",
+        "url": "https://www.dir.ca.gov/databases/doshacru/acruDetails.asp?regno=1019"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008444",
+    "notes": "Company website, CSLB and Cal/OSHA records all show KM 106 Construction Inc. at 1400 Egbert Ave, San Francisco, matching the agenda name and city; the website lists asphalt services and an OUSD elementary schools project. All profile fields are supported and the summary is neutral; the phone discrepancy with CSLB is disclosed and the website/Cal/OSHA number was used.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

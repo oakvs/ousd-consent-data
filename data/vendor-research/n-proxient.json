@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://proxient.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-proxient",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Legistar file 23-1367 names 'Proxient, Inc.' as the vendor for a web-based budget development system integrated with the Escape platform (software license, July 1, 2023 to June 30, 2025), matching the agenda's 'Proxient Software' service agreement",
+      "proxient.com, run by 'Proxient, Inc.', sells Budget Developer, a K-12 budget database, matching OUSD's technology contract for budget software",
+      "OUSD's Budget Development Tool login page (bdt.ousd.org) says 'Powered By Proxient Technologies'"
+    ],
+    "key": "n-proxient",
+    "notes": "Contact details are not published on the static proxient.com page; registry IDs not verified (CA SOS and SAM.gov not fetched). Search snippets suggest Benicia, CA but this was not confirmed on a fetched page, so headquarters is null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Proxient, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A software company that has served K-12 school organizations since 2002. It offers a finance and human resources platform for school districts, including Budget Developer for building budgets, Timetracker for tracking hours and leave, and Budget Explorer for comparing multi-year financial scenarios.",
+      "website": "https://proxient.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Proxient, Inc. Website",
+        "url": "https://proxient.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-proxient",
+    "notes": "proxient.com is Proxient, Inc. and its footer, product list (Budget Developer, Timetracker, Budget Explorer) and finance/HR description for school districts match the summary. OUSD's own bdt.ousd.org budget tool login page says 'Powered By Proxient Technologies', which fits the budget software service agreement.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

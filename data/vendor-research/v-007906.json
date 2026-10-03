@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-2297155",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://livelafamilia.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942297155",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007906",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "GuideStar lists 'The Alliance for Community Wellness Dba La Familia' (EIN 94-2297155), matching the agenda name 'Alliance for Community Wellness dba La Familia'",
+      "Registered address is in Hayward, CA, matching the agenda location (ProPublica Nonprofit Explorer also lists EIN 94-2297155 in Hayward, CA)",
+      "La Familia's website (livelafamilia.org) describes a nonprofit providing mental health and community support services in Alameda County, consistent with OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "v-007906",
+    "notes": "ProPublica lists the IRS legal name as 'La Familia Counseling Service' (also known as The Alliance for Community Wellness); GuideStar uses the current name. No general email or main business phone was found on a fetchable page (only a community support line, (833) 317-4673, which was not used); the site's contact page returned 404 to the fetcher. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "24301 Southland Dr Ste 300, Hayward, CA 94545-1546",
+      "caEntityNumber": null,
+      "ein": "94-2297155",
+      "email": null,
+      "headquarters": "Hayward, CA",
+      "legalName": "The Alliance for Community Wellness",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit, doing business as La Familia, that provides mental health counseling, substance use recovery, housing help, community health and jobs programs. It also supports people with developmental disabilities. It serves communities in Alameda, Contra Costa and Stanislaus counties in California.",
+      "website": "https://livelafamilia.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "website",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "The Alliance for Community Wellness Dba La Familia - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-2297155"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "La Familia - Bay Area Community Services",
+        "url": "https://livelafamilia.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "The Alliance For Community Wellness - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942297155"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007906",
+    "notes": "GuideStar and ProPublica both show EIN 94-2297155 for The Alliance for Community Wellness dba La Familia (aka La Familia Counseling Service) at 24301 Southland Dr, Hayward, matching the agenda name and city; the La Familia site supports the neutral summary (services and the three counties served) and the services fit OUSD's student health and family services category.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

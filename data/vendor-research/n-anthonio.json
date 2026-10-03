@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.anthonioinc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.anthonioinc.com/services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.anthonioinc.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-anthonio",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website anthonioinc.com lists ANTHONIO, Inc. at 333 Hegenberger Road, Suite 206, Oakland, California, matching the agenda location Oakland, CA",
+      "Website says the firm has performed construction inspection for Oakland USD since 2003, matching OUSD's Inspector of Record Services contracts",
+      "Website describes construction management and construction inspection services, matching OUSD's 'School buildings & construction' category and Facilities Planning and Management office"
+    ],
+    "key": "n-anthonio",
+    "notes": "Registry IDs (CA Secretary of State entity number, SAM UEI) not located; legal name left null because no registry page was cited. Contact details copied as shown on the company site.",
+    "profile": {
+      "address": "333 Hegenberger Road, Suite 206, Oakland, California",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@aoa-inc.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510.567.3797",
+      "samUei": null,
+      "summary": "ANTHONIO, Inc. is a company in Oakland, California that provides project and construction management services. Its services include cost estimating, scheduling, construction inspection, change order and claims handling, and safety and quality control monitoring. It reports working on school and other public facility projects since 2001.",
+      "website": "https://www.anthonioinc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "ANTHONIO, INC - Home",
+        "url": "https://www.anthonioinc.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Services",
+        "url": "https://www.anthonioinc.com/services"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us",
+        "url": "https://www.anthonioinc.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-anthonio",
+    "notes": "Exact name match, Oakland location, and construction management/inspection services with school-project experience fit OUSD's Inspector of Record contracts; all profile fields and the neutral summary are confirmed on the cited anthonioinc.com pages. The candidate's identity signal about serving OUSD since 2003 was not found on the site, but no profile field depends on it.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

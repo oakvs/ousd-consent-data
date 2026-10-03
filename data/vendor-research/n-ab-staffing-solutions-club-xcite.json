@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.clubxcite.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.abstaffing.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.abstaffing.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ab-staffing-solutions-club-xcite",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "AB Staffing Solutions' own contact page gives its address as Gilbert, AZ, matching the agenda location 'Gilbert, AZ'",
+      "Club Xcite's About Us page states 'We are owned by AB Staffing Solutions', matching the agenda's 'AB Staffing Solutions dba Club Xcite'",
+      "Club Xcite's website describes itself as a California-based Non-Public Agency (NPA) supplying school staffing, matching OUSD's 'Nonpublic, Nonsectarian School, Agency Master Contract' for Special Education"
+    ],
+    "key": "n-ab-staffing-solutions-club-xcite",
+    "notes": "Phone and address are AB Staffing Solutions' (the contracting legal entity, Gilbert AZ). Club Xcite's own site lists San Diego and Sacramento offices and phone 858-779-9674. Website given is the Club Xcite brand site. Legal name, registry IDs and general email not confirmed from a registry or non-obfuscated page, so left null.",
+    "profile": {
+      "address": "3451 S. Mercy Road Suite #102, Gilbert, AZ 85297",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Gilbert, AZ",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "480.345.6668",
+      "samUei": null,
+      "summary": "AB Staffing Solutions is a staffing company based in Gilbert, Arizona, that places nurses, allied health workers and other professionals at facilities across the country. Its brand Club Xcite is a California-based Non-Public Agency that provides educational staffing to PreK-12 schools, including paraprofessionals, behavior support staff and related services personnel.",
+      "website": "https://www.clubxcite.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About Us - Club Xcite",
+        "url": "https://www.clubxcite.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - AB Staffing Solutions",
+        "url": "https://www.abstaffing.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "AB Staffing Solutions",
+        "url": "https://www.abstaffing.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-ab-staffing-solutions-club-xcite",
+    "notes": "Club Xcite's About page states it is owned by AB Staffing Solutions and is a California-based NPA providing paraprofessionals, behavior support and related services; AB Staffing's contact page confirms the Gilbert, AZ address and 480.345.6668 phone, matching the agenda location and the special education NPA contract. Summary and contact fields are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

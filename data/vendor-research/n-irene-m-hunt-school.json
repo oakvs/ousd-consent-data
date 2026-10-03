@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156301",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sidebysideyouth.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sidebysideyouth.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sidebysideyouth.org/irene-m-hunt-school/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-irene-m-hunt-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Irene M. Hunt School is a nonpublic day school (K-12) in San Anselmo, CA, matching the agenda location 'San Anselmo, CA' (school page on sidebysideyouth.org)",
+      "The school's own page describes a nonpublic special education program, matching OUSD's 'Nonpublic, Nonsectarian School' special education master contract",
+      "The school is operated by the nonprofit Side by Side (formerly Sunny Hills Services), registered with the IRS under EIN 94-1156301 in San Anselmo, CA (ProPublica)"
+    ],
+    "key": "n-irene-m-hunt-school",
+    "notes": "Irene M. Hunt School is the special education program of the nonprofit Side by Side (formerly Sunny Hills Services, renamed 2018); the legal contracting entity is likely Side By Side (EIN 94-1156301). Street address omitted because the contact page does not show one. No CA Secretary of State or SAM.gov lookup done.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1156301",
+      "email": "contactus@sidebysideyouth.org",
+      "headquarters": "San Anselmo, CA",
+      "legalName": "Side By Side",
+      "orgType": "nonprofit",
+      "phone": "415-457-3200",
+      "samUei": null,
+      "summary": "Side by Side is a nonprofit that supports young people ages 5 to 26 affected by trauma and adversity in the Bay Area, with behavioral and mental health services, school-based early intervention, transitional housing for foster youth, and special education. Its Irene M. Hunt School in San Anselmo is a nonpublic day school for students in kindergarten through 12th grade who need individualized education and therapeutic support.",
+      "website": "https://www.sidebysideyouth.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Side By Side - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156301"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Side by Side",
+        "url": "https://www.sidebysideyouth.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact - Side by Side",
+        "url": "https://www.sidebysideyouth.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Irene M. Hunt School - Side by Side",
+        "url": "https://www.sidebysideyouth.org/irene-m-hunt-school/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-irene-m-hunt-school",
+    "notes": "The school's own page shows Irene M. Hunt School is a K-12 nonpublic day school in Marin County run by the nonprofit Side by Side (San Anselmo, EIN 94-1156301 per ProPublica), which fits the agenda's San Anselmo location and the nonpublic school special education contract. Name, EIN, headquarters, org type, website, general phone and general email, and the neutral summary are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

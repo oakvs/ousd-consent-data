@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://alpineacademy.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://alpineacademy.org/why-were-unique/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://youthvillage.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/870301014",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alpine-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: Alpine Academy, a Utah residential treatment school (alpineacademy.org), certified as a non-public school, matching OUSD's 'Nonpublic, Nonsectarian School/Agency' special education master contracts",
+      "Located in Utah, matching the agenda's Salt Lake City, UT; its operator Utah Youth Village is headquartered in Salt Lake City, UT",
+      "Alpine Academy's own site states it was created in 2001 as a program of Utah Youth Village, a nonprofit, and Utah Youth Village's site lists Alpine Academy as one of its programs",
+      "Academics are taught by dual-endorsed special education teachers for students with emotional disturbances, consistent with the special education contract purpose"
+    ],
+    "key": "n-alpine-academy",
+    "notes": "Alpine Academy is a program of Utah Youth Village; the registered legal entity and EIN are Utah Youth Village's (ProPublica lists it in Holladay, UT; its site gives 5800 South Highland Drive, Salt Lake City, UT 84121, phone (801) 272-9980). Phone and address shown are Alpine Academy's own (Mountain View Campus, Erda; a second campus is at 1492 Meadowbrook Dr., Tooele, UT 84074). No general email found. California and SAM.gov registry entries were not checked.",
+    "profile": {
+      "address": "1280 Whispering Horse Drive, Erda, UT 84074",
+      "caEntityNumber": null,
+      "ein": "87-0301014",
+      "email": null,
+      "headquarters": "Erda, UT",
+      "legalName": "Utah Youth Village",
+      "orgType": "nonprofit",
+      "phone": "(435) 228-0100",
+      "samUei": null,
+      "summary": "Alpine Academy is a residential treatment school for teens ages 12 to 18 in Utah. It has separate campuses for males and females and combines therapy, residential care and classroom academics. It is a program of Utah Youth Village, a nonprofit founded in 1969.",
+      "website": "https://alpineacademy.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Residential Treatment Facility for Teens",
+        "url": "https://alpineacademy.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Therapeutic Boarding Schools Utah",
+        "url": "https://alpineacademy.org/why-were-unique/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Utah Youth Village",
+        "url": "https://youthvillage.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Utah Youth Village - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/870301014"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-alpine-academy",
+    "notes": "Alpine Academy (Utah, Salt Lake area, special-education nonpublic school) is stated on its own site as a program of Utah Youth Village (nonprofit, founded 1969), and ProPublica confirms the EIN and legal name; phone, address, ages and campuses are supported. The headquarters value 'Erda, UT' is the campus location, not the legal entity's headquarters (Utah Youth Village is in Salt Lake City/Holladay), so it is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

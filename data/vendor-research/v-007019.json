@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.elite-enviro.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://elite-enviro.net/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007019",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the firm's own website is titled 'Elite Environmental Consulting', matching the agenda name 'Elite Environmental Consulting'",
+      "Corporate office is in Vallejo, CA (301 Georgia Street, Vallejo, CA 94590), matching the agenda location 'Vallejo, CA'",
+      "Firm does asbestos, lead-based paint and mold inspection and testing for properties including educational and government properties, consistent with a services agreement with OUSD's Risk Management Department (Property & Liability funding)"
+    ],
+    "key": "v-007019",
+    "notes": "Legal entity name and registry IDs not found (California Secretary of State not checked directly). The website does not mention schools or OUSD by name; the match rests on name, Vallejo location and service type. The home page lists a mailing address with Suite 390; the search result snippet showed Ste 375 on a third-party directory, which was not used.",
+    "profile": {
+      "address": "301 Georgia Street, Ste 390, Vallejo, CA 94590",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@elite-enviro.net",
+      "headquarters": "Vallejo, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(707) 654-9001",
+      "samUei": null,
+      "summary": "Elite Environmental Consulting is an industrial hygiene firm. It inspects and tests properties for hazards such as asbestos, lead-based paint, mold, bacteria and heavy metals. It also investigates indoor air quality and advises on regulatory compliance for commercial, residential, industrial, educational and government properties.",
+      "website": "https://www.elite-enviro.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "headquarters"
+        ],
+        "title": "Elite Environmental Consulting - Home",
+        "url": "https://www.elite-enviro.net/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Elite Environmental Consulting - Locations",
+        "url": "https://elite-enviro.net/locations/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007019",
+    "notes": "The cited home and locations pages show Elite Environmental Consulting, headquartered at 301 Georgia St, Ste 390, Vallejo, offering asbestos, lead, mold and indoor air quality testing, which fits a Risk Management services agreement and the Vallejo location in the agenda. The summary, address, phone and generic info@ email are all confirmed on the cited pages. The sites do not mention OUSD or schools by name, so the match rests on name, location and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

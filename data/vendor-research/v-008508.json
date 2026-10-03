@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://web.teachtown.com/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://web.teachtown.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://web.teachtown.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://teachtown.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008508",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "TeachTown's privacy notice says 'Jigsaw Learning, LLC, dba TeachTown', matching the agenda name 'Jigsaw Learning, LLC, DBA TeachTown'",
+      "The same privacy notice gives 2 Constitution Way, Woburn, MA 01801, matching the agenda location 'Woburn, MA'",
+      "TeachTown's website describes curriculum and tools for students with disabilities, matching OUSD's 'Special education' contract category (Special Education Department)"
+    ],
+    "key": "v-008508",
+    "notes": "The TeachTown contact page lists a mailing address of 841 Woburn St., Wilmington, MA 01887 and names TeachTown Inc.; the privacy notice and a third-party page list 2 Constitution Way, Woburn, MA, which matches the agenda, so that address is used. No registry IDs were verified.",
+    "profile": {
+      "address": "2 Constitution Way, Woburn, MA 01801",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@teachtown.com",
+      "headquarters": "Woburn, MA",
+      "legalName": "Jigsaw Learning, LLC",
+      "orgType": "company",
+      "phone": "(800) 283-0165",
+      "samUei": null,
+      "summary": "TeachTown is an education technology company that makes curriculum and teaching tools for students with disabilities, including students with autism spectrum disorder and intellectual disabilities. Its products include early childhood and K-12 special education curricula and related programs for building academic, language, social and behavior skills.",
+      "website": "https://teachtown.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "TeachTown Privacy Notice",
+        "url": "https://web.teachtown.com/privacy-policy/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "TeachTown Contact",
+        "url": "https://web.teachtown.com/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About TeachTown",
+        "url": "https://web.teachtown.com/about/"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "TeachTown",
+        "url": "https://teachtown.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008508",
+    "notes": "The privacy notice names 'Jigsaw Learning, LLC, dba TeachTown' with a Woburn, MA mailing address, matching the agenda, and TeachTown's special education curriculum fits the Special Education Department contract. The summary, phone, email and address are supported; headquarters is not stated by any source (the contact page lists a Wilmington, MA mailing address), so it is flagged.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/043519203",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://newleaders.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://newleaders.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003058",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational nonprofit 'New Leaders' in New York, NY (ProPublica Nonprofit Explorer, EIN 04-3519203), matching the agenda's 'New Leaders, Inc.' and 'New York, NY'",
+      "Website describes principal coaching, district leadership consulting and school leader development, matching OUSD's 'Classroom & academic programs' contracts presented by the Chief Academic Officer for elementary school networks and continuous school improvement",
+      "National office is in New York, NY, matching the agenda location"
+    ],
+    "key": "v-003058",
+    "notes": "ProPublica lists the legal name as 'New Leaders'; the agenda uses 'New Leaders, Inc.'. No Oakland office found; the agenda's Oakland location likely refers to the OUSD side. Searches indicated a 2023-24 OUSD contract for network superintendent and principal coaching, but the one OUSD page I tried to fetch could not be read, so it is not cited.",
+    "profile": {
+      "address": "121 W. 36th Street #308, New York, NY 10018",
+      "caEntityNumber": null,
+      "ein": "04-3519203",
+      "email": "marketing@newleaders.org",
+      "headquarters": "New York, NY",
+      "legalName": "New Leaders",
+      "orgType": "nonprofit",
+      "phone": "(646) 792-1070",
+      "samUei": null,
+      "summary": "New Leaders is a nonprofit that trains and supports school leaders. Its programs include a fellowship for aspiring principals, principal coaching, and consulting for school districts. The organization says it works to develop leaders who remove barriers to success for underserved students.",
+      "website": "https://newleaders.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "New Leaders - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/043519203"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "email"
+        ],
+        "title": "New Leaders",
+        "url": "https://newleaders.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - New Leaders",
+        "url": "https://newleaders.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003058",
+    "notes": "New Leaders (New York, NY; EIN 04-3519203; 501(c)(3)) matches the agenda's New Leaders, Inc. in New York and its principal coaching and school improvement services. The cited ProPublica, home and contact pages support the legal name, EIN, org type, address, phone, general email and a neutral summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

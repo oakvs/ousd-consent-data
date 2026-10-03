@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ggbuildersinc.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ggbuildersinc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001772",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name 'G&G Builders, Inc.' matches the agenda name 'G & G Builders, Inc.'",
+      "Headquartered at 4542 Contractors Place, Livermore, CA, matching the agenda location 'Livermore, CA'",
+      "Company website says it builds playground and park structures, matching OUSD's play matting, play structure and school site improvement contracts (School buildings & construction)"
+    ],
+    "key": "v-001772",
+    "notes": "Registry IDs (CA Secretary of State, SAM.gov) not looked up. Website does not mention OUSD directly; identity rests on name, Livermore location and playground/park construction work.",
+    "profile": {
+      "address": "4542 Contractors Place, Livermore, CA 94551",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Livermore, CA",
+      "legalName": "G&G Builders, Inc.",
+      "orgType": "company",
+      "phone": "925-846-9023",
+      "samUei": null,
+      "summary": "A commercial general contractor based in Livermore, California, serving the San Francisco Bay Area. It does turn-key commercial construction, including tenant improvements, prefabricated structures, and playground and park construction.",
+      "website": "https://www.ggbuildersinc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact — G&G Builders, Inc.",
+        "url": "https://www.ggbuildersinc.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "G&G Builders, Inc.",
+        "url": "https://www.ggbuildersinc.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001772",
+    "notes": "The website confirms G&G Builders, Inc. at 4542 Contractors Place, Livermore, CA 94551 (phone 925-846-9023) as a Bay Area commercial contractor doing playground and park construction, which matches the agenda's Livermore location and OUSD's play-matting and site-improvement contracts. The site does not mention OUSD, and I found no independent corroboration of the OUSD work, so identity rests on name, location and trade; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.willdan.com/newsdetail?NewsID=Willdan-Selected-for-46M-Energy-Savings-Contract-for-Nations-5th-Largest-School-District",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/facilities-planning-management/about/facilities-department/sustainability/energy-efficiency",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-willdan-energy-solutions",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "OUSD's own Energy Efficiency page says the District is partnering with 'Willdan Energy Solutions' on a district-wide energy efficiency audit, matching the agenda's Investment Grade Audit item (ousd.org)",
+      "Willdan (willdan.com) describes energy efficiency work for K-12 school districts, consistent with OUSD's facilities contract",
+      "NOT confirmed: no registry page (California Secretary of State, SAM.gov) was reachable to confirm that Willdan Energy Solutions is the legal entity behind willdan.com, or to confirm an Oakland location; OUSD calls it a 'local consulting company'"
+    ],
+    "key": "n-willdan-energy-solutions",
+    "notes": "Parent/subsidiary relationship between 'Willdan Energy Solutions' and Willdan Group, Inc. (Anaheim, CA) not confirmed on a fetched page, and Oakland location not confirmed, so left at medium and contact/registry fields null. Willdan's contact and offices pages returned 404 or were unreachable; no CA SOS or SAM.gov record was checked. Needs a reviewer to confirm entity before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Willdan is a nationwide provider of professional, technical and consulting services to utilities, government agencies and private industry. Its services include electric grid solutions, energy efficiency and sustainability, energy policy planning, engineering and planning, and municipal financial consulting.",
+      "website": "https://www.willdan.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Willdan Selected for $46 Million Energy Savings Contract for Nation's 5th Largest School District",
+        "url": "https://www.willdan.com/newsdetail?NewsID=Willdan-Selected-for-46M-Energy-Savings-Contract-for-Nations-5th-Largest-School-District"
+      },
+      {
+        "supports": [],
+        "title": "Energy Efficiency - Oakland Unified School District",
+        "url": "https://www.ousd.org/facilities-planning-management/about/facilities-department/sustainability/energy-efficiency"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

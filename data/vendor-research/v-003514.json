@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.rfmacdonald.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rfmacdonald.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.govconinabox.com/explore/contractors/profile/PQPGNN93NMB3",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003514",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: R.F. MacDonald Co. (company website), federal contractor record lists R.F. MACDONALD CO., LLC",
+      "Headquartered in Hayward, CA (25920 Eden Landing Rd), matching the agenda's 'Hayward, CA'",
+      "Company sells and services boilers and pumps for commercial and industrial buildings, matching OUSD's boiler replacement construction contracts (Burbank Preschool, Oakland Tech, Castlemont)"
+    ],
+    "key": "v-003514",
+    "notes": "UEI taken from a third-party federal contractor directory, not SAM.gov directly. Federal record names the entity R.F. MACDONALD CO., LLC; the website uses 'R.F. MacDonald Co.'. No registry (CA SOS) entry checked. Company site does not mention OUSD.",
+    "profile": {
+      "address": "25920 Eden Landing Rd, Hayward, CA 94545",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@rfmacdonald.com",
+      "headquarters": "Hayward, CA",
+      "legalName": "R.F. MacDonald Co.",
+      "orgType": "company",
+      "phone": "510-784-0110",
+      "samUei": "PQPGNN93NMB3",
+      "summary": "A company that has been in business since 1956. It sells and services boilers, pumps and related accessories for commercial and industrial buildings in California and Nevada, with offices across both states.",
+      "website": "https://www.rfmacdonald.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - R.F. MacDonald Co.",
+        "url": "https://www.rfmacdonald.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "R.F. MacDonald Co. - Your boiler and pump solutions team",
+        "url": "https://www.rfmacdonald.com/"
+      },
+      {
+        "supports": [
+          "samUei"
+        ],
+        "title": "R.F. MACDONALD CO., LLC - GovCon in a Box",
+        "url": "https://www.govconinabox.com/explore/contractors/profile/PQPGNN93NMB3"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003514",
+    "notes": "Company site and federal directory confirm R.F. MacDonald Co. (LLC) is headquartered at 25920 Eden Landing Rd, Hayward, CA, sells/services/installs boilers (fits OUSD boiler replacement contracts), founded 1956, CA and NV offices; phone, generic email, address and UEI all verified. Summary is neutral and supported; legalName omits the LLC suffix shown in the federal record but matches the company's own usage.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

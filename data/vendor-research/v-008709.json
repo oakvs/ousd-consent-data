@@ -1,0 +1,69 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bettertogetheraudiology.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008709",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact distinctive name match: 'Better Together Audiology' matches the agenda vendor name",
+      "Website states the practice is based in Oakland, California, matching the agenda location 'Oakland, CA'",
+      "Website describes educational audiology consulting for students with hearing differences (IEP assessments, hearing assistive technology), matching OUSD's 'Special education' contracts with the Special Education Department"
+    ],
+    "key": "v-008709",
+    "notes": "No registry record (CA Secretary of State, SAM.gov) was confirmed, so legal name, entity type and IDs are null; orgType 'company' is inferred from a private consulting practice and is not registry-confirmed. A search snippet showed info@ and (510) 224-4575, but the fetched homepage lists only Hello@BetterTogetherAudiology.com and no phone, so only the verified email is used. Site does not mention OUSD.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Hello@BetterTogetherAudiology.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Better Together Audiology is an Oakland, California practice that provides educational audiology consulting. It supports students who are deaf or hard of hearing, along with their families and school staff, through hearing-related assessments, recommendations and troubleshooting for hearing assistive technology, and training. Services are offered in person and remotely across California.",
+      "website": "https://www.bettertogetheraudiology.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "headquarters"
+        ],
+        "title": "Better Together Audiology - Educational Audiology Consulting",
+        "url": "https://www.bettertogetheraudiology.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008709",
+    "notes": "The distinctive name, Oakland location and educational audiology services for students with hearing differences (IEP assessments) match OUSD's Special Education Department services agreement; the summary, website, email and headquarters are shown on the homepage. orgType 'company' is an inference: the site names no legal entity type and no registry record was found.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "orgType"
+    ],
+    "verdict": "confirmed"
+  }
+}

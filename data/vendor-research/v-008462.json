@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.andysroofing.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.andysroofing.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008462",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's contact page is titled \"Andy's Roofing Company, Inc.\", the same name the agenda uses",
+      "Located in San Leandro, CA, matching the agenda text",
+      "Website describes commercial roof installation and maintenance for public agencies in the Oakland and East Bay area, matching OUSD's 'School buildings & construction' roof replacement contract",
+      "Holds a California contractor license (CSLB #521860, B and C-39 roofing) and is a registered DIR public works contractor, consistent with a public school roofing project"
+    ],
+    "key": "v-008462",
+    "notes": "No general email listed on the site (contact form only). Legal name, CA entity number and SAM UEI not verified from a registry, so left null.",
+    "profile": {
+      "address": "2161 Adams Avenue, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "510-777-1100",
+      "samUei": null,
+      "summary": "A family-owned commercial roofing contractor based in San Leandro, California. It installs, repairs and maintains roofs for commercial building owners, property managers and public agencies in the Oakland and East Bay area.",
+      "website": "https://www.andysroofing.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Commercial Roof Installation & Maintenance - Andy's Roofing Company",
+        "url": "https://www.andysroofing.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Andy's Roofing Company, Inc.",
+        "url": "https://www.andysroofing.com/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008462",
+    "notes": "Company name, San Leandro location, public-works roofing services, phone and address all match the cited pages and fit the Skyline High cafeteria roof contract. The 'family-owned' wording is not on the two cited pages but is stated on the company's own About page (andysroofing.com/about).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

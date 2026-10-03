@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/854065590",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fishtanklearning.org/terms/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fishtanklearning.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fishtanklearning.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007912",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Fishtank Learning Inc', EIN 85-4065590, Jamaica Plain (Boston), MA (ProPublica Nonprofit Explorer)",
+      "Located in Boston, MA (Jamaica Plain and Brighton are Boston neighborhoods), matching the agenda's 'Boston, MA' and 'Brighton, MA'; the site's terms list 1660 Soldiers Field Road, Brighton, MA 02135",
+      "Website describes K-12 English Language Arts and math curriculum, matching OUSD's 'ELA Curriculum' and 'Classroom & academic programs' contracts",
+      "Legal entity name on its Terms page is 'Fishtank Learning, Inc.', matching the agenda text"
+    ],
+    "key": "v-007912",
+    "notes": "No phone number found. General email is hidden by Cloudflare obfuscation on the site, so it was left null. Headquarters 'Boston, MA' reflects Jamaica Plain, a Boston neighborhood.",
+    "profile": {
+      "address": "769 Centre Street, Suite 208, Jamaica Plain, MA 02130",
+      "caEntityNumber": null,
+      "ein": "85-4065590",
+      "email": null,
+      "headquarters": "Boston, MA",
+      "legalName": "Fishtank Learning, Inc.",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Fishtank Learning is a nonprofit that creates K-12 curriculum materials in English Language Arts and math. It offers free unit and lesson plans for teachers, plus a paid subscription called Fishtank Plus for schools and a student platform. It was founded in 2020 after spinning out from Match Education.",
+      "website": "https://www.fishtanklearning.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Fishtank Learning Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/854065590"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address"
+        ],
+        "title": "Terms of Service - Fishtank Learning",
+        "url": "https://www.fishtanklearning.org/terms/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About - Fishtank Learning",
+        "url": "https://www.fishtanklearning.org/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Fishtank Learning",
+        "url": "https://www.fishtanklearning.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007912",
+    "notes": "Legal name 'Fishtank Learning, Inc.' and Boston-area (Jamaica Plain/Brighton) addresses match the agenda, and the ELA curriculum offering fits the OUSD services agreement. ProPublica, Terms, About and home pages support EIN, nonprofit status, address, and the neutral summary (free units, Fishtank Plus, student platform, 2020 Match Education spin-out).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

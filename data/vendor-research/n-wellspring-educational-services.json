@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/462683948",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wellspringeducation.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wellspringeducation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-wellspring-educational-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Wellspring Educational Services Inc', Walnut Creek, CA (ProPublica Nonprofit Explorer, EIN 46-2683948), matching the agenda's Walnut Creek, CA location",
+      "Organization's own website says it is certified by California as both a Nonpublic Agency and Nonpublic School serving children with autism and other developmental disabilities, matching the OUSD 'Nonpublic, Nonsectarian School, Agency Master Contract' for special education"
+    ],
+    "key": "n-wellspring-educational-services",
+    "notes": "Phone, email and street address were not visible on the organization's own pages as fetched, so they are left null (third-party listings give a Sunnyvale Ave, Walnut Creek address, but they were not used). No CA SOS or SAM.gov lookup was done.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "46-2683948",
+      "email": null,
+      "headquarters": "Walnut Creek, CA",
+      "legalName": "Wellspring Educational Services Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit organization in Walnut Creek, California that runs relationship-based educational programs for children with autism and other developmental disabilities. Programs include classroom instruction, music therapy, after-school and peer groups, a summer camp, and parent education courses. It is certified by California as a nonpublic school and a nonpublic agency.",
+      "website": "https://www.wellspringeducation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Wellspring Educational Services Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/462683948"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About - Wellspring Educational Services",
+        "url": "https://www.wellspringeducation.org/about-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Wellspring Educational Services",
+        "url": "https://www.wellspringeducation.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-wellspring-educational-services",
+    "notes": "The organization's own site lists Tax ID 46-2683948, which matches the ProPublica 501(c)(3) record in Walnut Creek, CA (the agenda's city). The site also shows CDE certification as a nonpublic school and agency serving children with autism, which fits a special-education NPS/NPA master contract. The summary matches the site's program list and is neutral. The site mentions Lafayette in places, but that is adjacent to Walnut Creek and the EIN match is conclusive.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://leonealberts.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leonealberts.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leonealberts.com/our-clients/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-leone-alberts-and-duus-law-firm",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm name 'Leone Alberts & Duus' matches the agenda name exactly, and it is a law firm serving public agencies, matching OUSD's 'Legal, insurance & risk' contracts presented by the General Counsel",
+      "The firm's own client page lists 'Oakland Unified School District' among its clients",
+      "Firm is in Contra Costa County (Concord; search results also show a Walnut Creek office), consistent with the agenda's Walnut Creek, CA"
+    ],
+    "key": "n-leone-alberts-and-duus-law-firm",
+    "notes": "Agenda lists Walnut Creek, CA; the firm's current website lists its address as Concord, CA (the Walnut Creek office, 2175 N California Blvd, appears only in third-party search results, so it is not used). Not checked against CA Secretary of State, so legal name and entity number are left null.",
+    "profile": {
+      "address": "1390 Willow Pass Rd., Suite 700, Concord, CA 94520",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@leonealberts.com",
+      "headquarters": "Concord, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(925) 974-8600",
+      "samUei": null,
+      "summary": "Leone Alberts & Duus is a California law firm that represents cities, public school districts, community college districts and other public agencies. It handles litigation such as employment and civil rights cases. It also advises public clients as general counsel on governance, legal compliance and public records.",
+      "website": "https://leonealberts.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Leone Alberts & Duus",
+        "url": "https://leonealberts.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Leone Alberts & Duus - Contact",
+        "url": "https://leonealberts.com/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Leone Alberts & Duus - Our Clients",
+        "url": "https://leonealberts.com/our-clients/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-leone-alberts-and-duus-law-firm",
+    "notes": "The firm's own clients page lists Oakland Unified School District, and the name and legal-services scope match the General Counsel agenda items. The summary, website, phone, general email and Concord address are all shown on the cited pages; the agenda's Walnut Creek location differs from the current Concord address, but the profile discloses this and does not use the Walnut Creek address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

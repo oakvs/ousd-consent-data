@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://skarc.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://skarc.com/expertise/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/shah-kawasaki-architects-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-shah-kawasaki-architects",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California general corporation, 'Shah Kawasaki Architects, Inc.' (entity number 2074839), with principal address in Oakland, CA, matching the agenda location",
+      "Firm website (skarc.com) lists 570 10th Street, Suite 201, Oakland, CA 94607, the same address as the corporate filing",
+      "Firm website says it is working with Oakland Unified School District on the Living Schoolyards initiative, matching the agreement for Cal Fire grant planning of the Living Schoolyard project",
+      "Firm is an architecture practice serving public-sector clients including school districts, matching OUSD's 'School buildings & construction' category"
+    ],
+    "key": "n-shah-kawasaki-architects",
+    "notes": "Entity number and legal name come from a third-party mirror of California Secretary of State data (bizprofile.net), not bizfileonline directly. The contact page names the firm 'Shah Kawasaki - Architects'. The founding year (1999) is from the same mirror's filing date and is consistent with the firm's own statement of 40+ fire stations since 1999.",
+    "profile": {
+      "address": "570 10th Street, Suite 201, Oakland, CA 94607",
+      "caEntityNumber": "2074839",
+      "ein": null,
+      "email": "architect@skarc.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Shah Kawasaki Architects, Inc.",
+      "orgType": "company",
+      "phone": "(510) 663-6090",
+      "samUei": null,
+      "summary": "An architecture firm based in Oakland, California, founded in 1999. It designs buildings and spaces for public-sector clients such as fire departments, school districts, cities, police departments and parks and recreation departments.",
+      "website": "https://skarc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Shah Kawasaki",
+        "url": "https://skarc.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - Shah Kawasaki",
+        "url": "https://skarc.com/expertise/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Shah Kawasaki Architects, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/shah-kawasaki-architects-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-shah-kawasaki-architects",
+    "notes": "Firm website and CA filing mirror agree on name, Oakland address (570 10th St, Suite 201), and entity number 2074839 (incorporated 1999); the site describes OUSD Living Schoolyards and Cole Administration Center work, matching the Cal Fire planning agreement. Summary and contact fields are supported and neutral; email is a generic business address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

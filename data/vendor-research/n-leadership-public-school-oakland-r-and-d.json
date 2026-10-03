@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/731643646",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leadps.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://leadps.org/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-leadership-public-school-oakland-r-and-d",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Leadership Public Schools' own site lists 'LPS Oakland R&D' as one of its three campuses, matching the agenda name 'Leadership Public School Oakland R&D' (leadps.org)",
+      "Registered Oakland, CA nonprofit 'Leadership Public Schools Inc', EIN 73-1643646, 501(c)(3) that operates a school (ProPublica Nonprofit Explorer)",
+      "The campus is a public charter high school at 8601 MacArthur Blvd, Oakland, consistent with an OUSD Measure N/H (high school college and career readiness) MOU and a 'Classroom & academic programs' contract"
+    ],
+    "key": "n-leadership-public-school-oakland-r-and-d",
+    "notes": "The agenda names the Oakland R&D campus; the contracting entity is presumably its operator, Leadership Public Schools Inc (same network, same EIN), whose phone/email/address are the network's main contact details, not the campus's (campus phone on its page is different). No explicit OUSD or Measure N mention was found on the organization's pages. California SOS entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "99 Linden Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "73-1643646",
+      "email": "info@leadps.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Leadership Public Schools Inc",
+      "orgType": "nonprofit",
+      "phone": "510-830-3780",
+      "samUei": null,
+      "summary": "Leadership Public Schools is a nonprofit that runs a network of three charter high schools in the Bay Area, in Hayward, Oakland and Richmond. The Oakland R&D campus is a free public charter high school that prepares students for college, career and community leadership.",
+      "website": "https://leadps.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Leadership Public Schools Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/731643646"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Leadership Public Schools",
+        "url": "https://leadps.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "LPS Oakland R&D",
+        "url": "https://leadps.org/oakland/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-leadership-public-school-oakland-r-and-d",
+    "notes": "leadps.org lists LPS Oakland R&D as one of its three charter high schools and ProPublica shows Leadership Public Schools Inc (EIN 73-1643646, Oakland, 501(c)(3), operates a school), so the operator is the same organization OUSD's Measure N/H school-program MOU would involve. The summary and the network-level contact fields (phone, email, 99 Linden St address) match the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

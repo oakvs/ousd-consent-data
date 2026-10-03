@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.finalsite.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.finalsite.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008162",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Finalsite's privacy policy names 'Active Internet Technologies LLC dba Finalsite', matching the agenda's 'Active Internet Technologies dba Finalsite'",
+      "Headquartered in Glastonbury, CT, matching the location in the agenda text",
+      "Finalsite sells website, communications and enrollment software to school districts, matching OUSD's 'Technology' contract category and the Technology Services Department purchase agreement"
+    ],
+    "key": "v-008162",
+    "notes": "The Finalsite identity is solid, but this OUSD vendor record also bundles 'Peralta Community College District' (a separate public agency with a no-cost services agreement). The profile describes only Finalsite and does not apply to the Peralta items; a reviewer should consider splitting the Peralta contracts into their own vendor before publishing. No registry IDs were looked up.",
+    "profile": {
+      "address": "655 Winding Brook Drive, Glastonbury, CT 06033",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Glastonbury, CT",
+      "legalName": "Active Internet Technologies LLC",
+      "orgType": "company",
+      "phone": "1-800-592-2469",
+      "samUei": null,
+      "summary": "Finalsite is a company that provides software for schools, including website management, mobile apps, mass communications and enrollment management tools. It serves public school districts, independent schools, charter schools and international schools.",
+      "website": "https://www.finalsite.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Finalsite",
+        "url": "https://www.finalsite.com/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone"
+        ],
+        "title": "Finalsite Privacy Policy",
+        "url": "https://www.finalsite.com/privacy-policy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

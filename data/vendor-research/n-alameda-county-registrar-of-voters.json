@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://acvote.alamedacountyca.gov/index",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-registrar-of-voters",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Office is located in Oakland, CA (1225 Fallon Street), matching the agenda text 'Oakland, CA'",
+      "The Registrar of Voters is the Alameda County office that administers elections, matching OUSD's payment for Measure H November 8, 2022 General Election costs",
+      "Official Alameda County website (alamedacountyca.gov domain) describes the office as the county's elections administrator"
+    ],
+    "key": "n-alameda-county-registrar-of-voters",
+    "notes": "Public county agency; no EIN, CA entity number or UEI applicable. No general email address is listed on the office site (contact form only).",
+    "profile": {
+      "address": "1225 Fallon Street, Rm. G-1, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Alameda County Registrar of Voters",
+      "orgType": "public_agency",
+      "phone": "(510) 272-6973",
+      "samUei": null,
+      "summary": "The Alameda County Registrar of Voters is the county government office that runs elections and voter registration for Alameda County, California. It is part of Alameda County government.",
+      "website": "https://acvote.alamedacountyca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Alameda County Registrar of Voters",
+        "url": "http://acvote.alamedacountyca.gov/index"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-alameda-county-registrar-of-voters",
+    "notes": "The cited official county page shows the Alameda County Registrar of Voters at 1225 Fallon Street, Oakland, tel (510) 272-6973, administering elections and voter registration, which fits OUSD paying election costs for Measure H in November 2022. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://members.marinbuilders.com/list/member/kbi-painting-inc-512",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-kbi-painting",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'KBI Painting, Inc.' listed by Marin Builders Association (Marin Builders Association member page)",
+      "Located in Petaluma, CA, matching the agenda text 'Petaluma, CA'",
+      "Listed in the 'Painting & Decorating' category with a California contractor license (CSLB# 944475 C33), matching OUSD's exterior painting project for Acorn Woodland Elementary School"
+    ],
+    "key": "n-kbi-painting",
+    "notes": "The company's own website (kbipaint.com, listed on the Marin Builders page) returned HTTP 403 to automated fetching, so details come from the Marin Builders Association member listing only. The listing shows a second phone number, (707) 777-5413. No email, EIN, CA entity number or SAM UEI was confirmed.",
+    "profile": {
+      "address": "P.O. Box 750397, Petaluma, CA 94975",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Petaluma, CA",
+      "legalName": "KBI Painting, Inc.",
+      "orgType": "company",
+      "phone": "(707) 795-4955",
+      "samUei": null,
+      "summary": "A painting and decorating contractor based in Petaluma, California. It is a licensed California contractor in the painting and decorating category.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "KBI Painting, Inc. - Marin Builders Association",
+        "url": "https://members.marinbuilders.com/list/member/kbi-painting-inc-512"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-kbi-painting",
+    "notes": "The cited Marin Builders Association page shows the exact name KBI Painting, Inc., a Petaluma, CA address, a painting and decorating category and CSLB# 944475 C33, which fits an exterior painting contract and the agenda location. The summary, phone, address and headquarters are supported and neutral, and no individual contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

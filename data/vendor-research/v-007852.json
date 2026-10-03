@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/bonami-baking-company-inc-633746-09072022",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bakerybonami.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007852",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: FDA page lists 'The Bonami Baking Company, Inc.' at 380 E 10th St, Pittsburg, CA 94565, matching the agenda location 'Pittsburg, CA'",
+      "FDA page describes it as a maker of ready-to-eat bakery products (bagels, buns, croissants, muffins), matching OUSD's 'Fresh Bakery Items' contract with Nutrition Services",
+      "Company website bakerybonami.com is titled 'The Bonami Baking Company' and describes a bakery taking orders for baked goods"
+    ],
+    "key": "v-007852",
+    "notes": "Phone, email, CA entity number not confirmed on fetchable pages (contact page on company site returned 404; Yelp/directory listings not cited). Search snippets suggest a (925) number and a hotmail address but these were not verified on a cited page, so omitted.",
+    "profile": {
+      "address": "380 E 10th St, Pittsburg, CA 94565",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Pittsburg, CA",
+      "legalName": "The Bonami Baking Company, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A bakery in Pittsburg, California that makes ready-to-eat baked goods such as bagels, hamburger buns, croissants, muffins and pizza sheets.",
+      "website": "https://bakerybonami.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "The Bonami Baking Company, Inc. - 633746 - 09/07/2022",
+        "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/bonami-baking-company-inc-633746-09072022"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "The Bonami Baking Company",
+        "url": "https://bakerybonami.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007852",
+    "notes": "The FDA warning letter names The Bonami Baking Company, Inc. at 380 E 10th St, Pittsburg, CA and lists bagels, buns, croissants, muffins and pizza sheets, which fits the Pittsburg, CA agenda location and the Fresh Bakery Items contracts. The website shows only a generic template page with no location or contact details tying it to this Pittsburg company, so the website field is not confirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "website"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.frontlineeducation.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.frontlineeducation.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.frontlineeducation.com/escape",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000319",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Frontline's own website names its legal entity as 'Frontline Technologies Group LLC', matching the agenda vendor name exactly",
+      "OUSD's agenda titles for this vendor also name Escape Technology, Inc. (school business software via Alameda County Office of Education); Frontline's Escape page says 'Escape Technology, now part of Frontline Education' and describes HR, finance and payroll software built for California county offices of education, districts and schools",
+      "Services described (K-12 school business and administration software) match OUSD's 'Technology' and software licensing contracts"
+    ],
+    "key": "v-000319",
+    "notes": "Phone, email, EIN, California entity number and SAM UEI not found on cited pages, so left null. Frontline is a for-profit company (reportedly owned by Roper Technologies; not verified on a cited page). The agenda gives no city.",
+    "profile": {
+      "address": "550 E Swedesford Road, Suite 360, Wayne, PA 19087",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Wayne, PA",
+      "legalName": "Frontline Technologies Group LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Frontline Education is a company that makes software for K-12 school districts. Its products cover human resources, student management, business operations such as finance and payroll, and data analytics. Its Escape Technology product line serves California county offices of education, districts and schools.",
+      "website": "https://www.frontlineeducation.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Frontline Education",
+        "url": "https://www.frontlineeducation.com/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Contact Us | Frontline Education",
+        "url": "https://www.frontlineeducation.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Escape Technology, now part of Frontline Education",
+        "url": "https://www.frontlineeducation.com/escape"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000319",
+    "notes": "Frontline's site footer names Frontline Technologies Group LLC, matching the agenda vendor, and the home, contact and Escape pages support the summary, website, address and headquarters (Wayne, PA). The software/ERP services fit OUSD's technology licensing and the Escape Technology agenda items; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cordobacorp.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cordobacorp.com/construction-management-services-for-bond-program-projects-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-cordoba",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own website (cordobacorp.com) has a page titled 'Oakland Unified School District' describing construction management work for OUSD, including solar installations and McClymonds High School",
+      "Cordoba Corporation is a construction management and program management firm, matching OUSD's 'School buildings & construction' contracts and 'Construction Management Agreement' titles",
+      "Company lists a San Francisco office (Clocktower Building), matching the 'San Francisco, CA' location in the agenda text"
+    ],
+    "key": "n-cordoba",
+    "notes": "Registry IDs and legal name not confirmed (no registry page fetched). Headquarters is Los Angeles; the San Francisco office has no street address on the site. No general email found.",
+    "profile": {
+      "address": "1401 N Broadway, Los Angeles, CA 90012",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(213) 895-0224",
+      "samUei": null,
+      "summary": "Cordoba Corporation is a California firm that provides program management, construction management and planning services. It works on transportation, water, energy, education and public facilities projects. It was founded in 1983 and has offices across California and other western states.",
+      "website": "https://www.cordobacorp.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Cordoba Corp.",
+        "url": "https://www.cordobacorp.com/about-us/"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District - Cordoba Corporation",
+        "url": "https://www.cordobacorp.com/construction-management-services-for-bond-program-projects-2/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-cordoba",
+    "notes": "Cordoba Corporation's own site has an Oakland Unified School District page describing construction management work (solar, McClymonds High) and lists a San Francisco office, matching the agenda's Construction Management Agreements. The About page supports the 1983 founding, Los Angeles HQ address and phone, and multi-state coverage; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

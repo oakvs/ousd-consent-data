@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.eidebailly.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.eidebailly.com/locations/fargo",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-edie-bailly",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Edie Bailly, LLP' and the contract title reads 'Eide Bailey, LLP - Business Services'; both are misspellings of the accounting firm Eide Bailly LLP (an LLP, matching the agenda's entity form)",
+      "OUSD Board records (ousd.legistar.com) and a Fiscal Crisis and Management Assistance Team (FCMAT) exhibit show Eide Bailly, LLP performing district financial, bond and systems audits for Oakland Unified, matching the Chief Financial Officer / Business Services presenting office",
+      "Eide Bailly's own website describes an accounting and advisory firm serving government clients and has California offices, consistent with a financial services agreement"
+    ],
+    "key": "n-edie-bailly",
+    "notes": "Agenda gives no location and the name is misspelled (Edie Bailly / Eide Bailey). The contact details are for the Fargo, ND main office, not a California office. No registry IDs were verified; none are listed.",
+    "profile": {
+      "address": "4310 17th Ave. S., Fargo, ND 58103-3339",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fargo, ND",
+      "legalName": "Eide Bailly LLP",
+      "orgType": "company",
+      "phone": "701.239.8500",
+      "samUei": null,
+      "summary": "Eide Bailly is a national accounting and advisory firm. It provides tax, accounting, technology consulting, data analytics and business advisory services to mid-sized and growing organizations, including government and nonprofit clients.",
+      "website": "https://www.eidebailly.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website"
+        ],
+        "title": "About Us | Eide Bailly",
+        "url": "https://www.eidebailly.com/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Fargo Office | Eide Bailly",
+        "url": "https://www.eidebailly.com/locations/fargo"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-edie-bailly",
+    "notes": "The agenda spellings (Edie Bailly / Eide Bailey, LLP) match the national accounting firm Eide Bailly LLP, and an audit/financial services agreement under the CFO fits what that firm does. The cited About and Fargo pages support the summary, legal name, website, address and phone, but neither states that Fargo is the headquarters.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

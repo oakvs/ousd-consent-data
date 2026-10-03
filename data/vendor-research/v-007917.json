@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://elevationhealthgroup.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://elevationhealthgroup.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/elevation-health-llc-12628815/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007917",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'Elevation Health LLC' is a New York, NY limited liability company registered in federal contracting (UEI Z841L9F9WMN9), matching the agenda's 'Elevation Health LLC, New York, NY' (HigherGov, federal registration data)",
+      "Business matches the purchase: registered under NAICS 621511 (Medical Laboratories) for in vitro diagnostic test kits, and its website offers COVID-19 antigen home test kits and school health services, matching OUSD's award for 40,000 COVID-19 antigen rapid self-test kits",
+      "Headquartered at 12 W 21st St, New York, NY, matching the agenda's New York location"
+    ],
+    "key": "v-007917",
+    "notes": "No Oakland or OUSD mention found on the company's pages; identity rests on exact name, New York location, and test-kit business matching the RFP. No general email published on the site. EIN and California entity number not found.",
+    "profile": {
+      "address": "12 W 21st St, 8th floor, New York, NY 10010",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "Elevation Health LLC",
+      "orgType": "company",
+      "phone": "+1 212.537.9414",
+      "samUei": "Z841L9F9WMN9",
+      "summary": "Elevation Health is a New York-based company that provides health services and supplies to schools, workplaces, nonprofits and other community groups. Its work includes healthcare staffing, supply management, health software, and COVID-19 testing, including at-home antigen test kits.",
+      "website": "https://elevationhealthgroup.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Elevation Health: Everybody's Health is Connected",
+        "url": "https://elevationhealthgroup.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Elevation Health Contact",
+        "url": "https://elevationhealthgroup.com/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "samUei",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Elevation Health (Z841L9F9WMN9)",
+        "url": "https://www.highergov.com/awardee/elevation-health-llc-12628815/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007917",
+    "notes": "Exact name, New York location, and SAM registration (NAICS 621511, 423450 medical supply wholesale, 561320 staffing) fit a COVID test kit award, so the organization matches. The summary's claim of COVID-19 testing and antigen test kits is not stated on any cited page (the site only says at-home diagnostics), so the summary is dropped; address, phone, website, UEI and type are confirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

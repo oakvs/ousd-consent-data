@@ -1,0 +1,82 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lozanosmith.com/contact.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lozanosmith.com/about.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-lozano-smith",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Firm name 'Lozano Smith' matches the agenda name; its official site lists a Walnut Creek, CA office, matching the agenda location 'Walnut Creek, CA'",
+      "Firm is an education and public agency law firm with practice areas in charter schools, facilities and construction, and governance, matching OUSD's Legal, Charter Schools Office and Facilities contracts"
+    ],
+    "key": "n-lozano-smith",
+    "notes": "Did not locate the firm's California Secretary of State entity record or a general email address. Walnut Creek is one of nine offices; the firm's headquarters was not stated on its site, so headquarters is null. The Lozano Smith Foundation (Fresno, nonprofit) is a separate entity and was not used.",
+    "profile": {
+      "address": "2001 North Main St. Suite 500, Walnut Creek, CA 94596",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "925.953.1620",
+      "samUei": null,
+      "summary": "Lozano Smith is a California law firm that represents public agencies, including K-12 school districts, community colleges, cities, counties and special districts. Its practice areas include charter schools, facilities and construction, labor and employment, special education, student matters and governance. It has offices in nine California cities.",
+      "website": "https://www.lozanosmith.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "Statewide Locations",
+        "url": "https://www.lozanosmith.com/contact.php"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Lozano Smith",
+        "url": "https://www.lozanosmith.com/about.php"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-lozano-smith",
+    "notes": "The firm's contact page lists a Walnut Creek office at 2001 North Main St. Suite 500 with phone 925.953.1620, matching the agenda location, and its about page supports the client base, practice areas and nine offices; the summary is neutral. The Fresno-based Lozano Smith Foundation was correctly excluded.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

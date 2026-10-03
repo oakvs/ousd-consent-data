@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cumming-group.com/en/privacy-policy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/2976512",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cumming-group.com/en/locations/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cumming-group.com/en/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001259",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD legislation file 23-1739 names 'Cumming Management Group, Inc.' (Oakland, CA) for construction management services on the Facilities Planning and Management Project",
+      "Cumming Group's own website lists an Oakland office (1111 Broadway, Suite 300) and a Sunnyvale office, matching the agenda's two locations (Oakland, CA and Sunnyvale, CA)",
+      "Cumming Group describes project management and cost consulting for construction, including K-12 education, matching OUSD's 'School buildings & construction' contracts",
+      "OpenCorporates lists 'CUMMING MANAGEMENT GROUP, INC.' as an active California stock corporation, number 2976512, with the same Westport, CT address as Cumming Group's privacy policy"
+    ],
+    "key": "v-001259",
+    "notes": "Legal name per OpenCorporates and OUSD is 'Cumming Management Group, Inc.'; the privacy policy calls the entity 'The Cumming Management Group, Inc.' California entity number comes from OpenCorporates (a secondary source), not the Secretary of State site, which could not be queried; reviewer may wish to confirm at bizfileonline.sos.ca.gov. Phone, address and headquarters are the corporate (Westport, CT) details from the privacy policy; the Oakland office is 1111 Broadway, Suite 300, Oakland, CA 94607. No general (non-privacy) inbox found, so email is null. No EIN/SAM UEI found.",
+    "profile": {
+      "address": "276 Post Road West, Westport, CT 06680",
+      "caEntityNumber": "2976512",
+      "ein": null,
+      "email": null,
+      "headquarters": "Westport, CT",
+      "legalName": "Cumming Management Group, Inc.",
+      "orgType": "company",
+      "phone": "203-635-9540",
+      "samUei": null,
+      "summary": "Cumming Group is a private company that provides project management and cost consulting services for construction and capital projects. It works in sectors such as education, healthcare, hospitality and advanced technology, and has offices in many locations, including Oakland and Sunnyvale, California.",
+      "website": "https://cumming-group.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cumming Group Privacy Policy",
+        "url": "https://cumming-group.com/en/privacy-policy/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "CUMMING MANAGEMENT GROUP, INC. - OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/2976512"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Oakland - Cumming Group",
+        "url": "https://cumming-group.com/en/locations/oakland/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Contact - Cumming Group",
+        "url": "https://cumming-group.com/en/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001259",
+    "notes": "Cumming Management Group, Inc. is an active California stock corporation (OpenCorporates 2976512) whose Cumming Group brand has an Oakland office and K-12 construction/project management work, matching OUSD's construction management agreements. Legal name, website, phone, Westport CT address and CA entity number were confirmed in the cited pages; the summary is neutral, though the word 'private' is not stated verbatim in the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

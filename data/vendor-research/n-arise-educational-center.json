@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/842400469",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ariseeducationalcenter.com/aboutus",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-arise-educational-center",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Arise Educational Center' in San Francisco, CA (ProPublica Nonprofit Explorer, EIN shown)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "Website describes a non-public school for at-risk children needing psycho-educational support, matching OUSD's 'Nonpublic, Nonsectarian School-Agency Services Master Contract' for Special Education"
+    ],
+    "key": "n-arise-educational-center",
+    "notes": "Registry lookups for California Secretary of State and SAM.gov were not done, so those fields are null.",
+    "profile": {
+      "address": "1760 Cesar Chavez St., Ste. RS, San Francisco, CA 94124-1136",
+      "caEntityNumber": null,
+      "ein": "84-2400469",
+      "email": "info@ariseeducationalcenter.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Arise Educational Center",
+      "orgType": "nonprofit",
+      "phone": "415-641-1878",
+      "samUei": null,
+      "summary": "A nonprofit non-public school that serves at-risk children who need psycho-educational support. It offers individualized academics in small classes, therapeutic counseling, vocational training, and hands-on learning through arts and outdoor activities. It has campuses in San Francisco and Sonoma.",
+      "website": "https://www.ariseeducationalcenter.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Arise Educational Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/842400469"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - ARISE EDUCATIONAL CENTER",
+        "url": "https://www.ariseeducationalcenter.com/aboutus"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-arise-educational-center",
+    "notes": "ProPublica shows a 501(c)(3) Arise Educational Center in San Francisco (EIN 84-2400469, K-12 education), and its own site describes a non-public school for at-risk children with a San Francisco campus, matching OUSD's nonpublic school-agency special education contract. Summary, contact details, and address are all shown on the cited About Us page and are neutral business contacts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

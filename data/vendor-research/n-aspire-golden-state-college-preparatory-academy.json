@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943311088",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aspirepublicschools.org/contact-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aspirepublicschools.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.greatschools.org/california/oakland/24802-Aspire-Golden-State-College-Preparatory-Academy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-aspire-golden-state-college-preparatory-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Aspire Golden State College Preparatory Academy is a public charter school for grades 6-12 in Oakland, CA, within the Oakland Unified School District (GreatSchools), matching the agenda's Measures N and H college and career readiness funding.",
+      "Aspire Public Schools' own site has a post describing the school (GSP) taking part in charter renewal hearings with Oakland Unified School District, and lists a Bay Area office at 1009 66th Avenue, Oakland, the school's street address.",
+      "ProPublica Nonprofit Explorer lists Aspire Public Schools, Oakland, CA, as a 501(c)(3) that operates K-12 schools (EIN 94-3311088); its website and headquarters are in Oakland."
+    ],
+    "key": "n-aspire-golden-state-college-preparatory-academy",
+    "notes": "The agenda vendor is a charter school; the profile describes its operator, Aspire Public Schools, the nonprofit that holds the EIN (reviewer should confirm the school is not a separate legal entity). Email omitted: Aspire's home page shows communications@aspirepublicschools.org while its contact page shows info@aspirepublicschools.org. CA Secretary of State number and SAM UEI not checked. The school's charter renewal was denied by OUSD and the county and was being appealed to the State Board (EdSource, 2026).",
+    "profile": {
+      "address": "1001 22nd Avenue, Suite 100, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "94-3311088",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Aspire Public Schools",
+      "orgType": "nonprofit",
+      "phone": "(510) 434-5000",
+      "samUei": null,
+      "summary": "Aspire Golden State College Preparatory Academy is a public charter school in Oakland, California, serving students in grades 6 through 12. It is part of Aspire Public Schools, a nonprofit that operates public charter schools in California and focuses on preparing students for college.",
+      "website": "https://aspirepublicschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Aspire Public Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943311088"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "Contact - Aspire Public Schools",
+        "url": "https://aspirepublicschools.org/contact-2/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Aspire Public Schools",
+        "url": "https://aspirepublicschools.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Aspire Golden State College Preparatory Academy - Oakland, California",
+        "url": "https://www.greatschools.org/california/oakland/24802-Aspire-Golden-State-College-Preparatory-Academy/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-aspire-golden-state-college-preparatory-academy",
+    "notes": "GreatSchools lists Aspire Golden State College Preparatory Academy as an Oakland Unified-area charter (grades 6-12) operated by Aspire Public Schools, and the Aspire site names the school as one of its Bay Area schools. ProPublica confirms the 501(c)(3), EIN 94-3311088, Oakland, and the Aspire contact page confirms the main office address, phone and website; the summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

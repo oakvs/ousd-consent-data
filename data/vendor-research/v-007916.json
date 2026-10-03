@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://accuratescreens.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/covid-testing/accurate-cs-services-inc-1116-928018",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.oaklandchamber.com/list/member/accurate-c-s-services-inc-56168",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007916",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: 'Accurate C&S Services, Inc.' is listed on the Better Business Bureau and the Oakland Chamber of Commerce with this legal name",
+      "Located in Oakland, CA (8105 Edgewater Dr., Suite 225), matching the agenda's Oakland, CA",
+      "Oakland Chamber of Commerce listing names COVID-19 Testing and COVID-19 PPE among its services, and the BBB lists it in the COVID testing category, matching OUSD's purchase of COVID-19 antigen rapid self-test kits"
+    ],
+    "key": "v-007916",
+    "notes": "Company operates under the trade name 'Accurate Screens'. No registry IDs (SOS, SAM) were verified, so left null. Other directories list different phone numbers ((510) 777-0904, (510) 394-3985); the website's main line is used. Some directories suggest the COVID-test-kit line of business may have wound down; the company's website still lists the Oakland address.",
+    "profile": {
+      "address": "8105 Edgewater Dr., Suite 225, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@accuratescreens.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Accurate C&S Services, Inc.",
+      "orgType": "company",
+      "phone": "(877) 773-0773",
+      "samUei": null,
+      "summary": "A company in Oakland, California that provides background screening, drug and alcohol testing, occupational health screening and DNA paternity testing for employers. It also offered COVID-19 testing and personal protective equipment during the pandemic.",
+      "website": "https://accuratescreens.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Accurate Screens",
+        "url": "https://accuratescreens.com/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Accurate C&S Services, Inc. - BBB",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/covid-testing/accurate-cs-services-inc-1116-928018"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Accurate C&S Services Inc. - Oakland Chamber of Commerce",
+        "url": "https://business.oaklandchamber.com/list/member/accurate-c-s-services-inc-56168"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007916",
+    "notes": "Exact legal name and Oakland address match across the company website, BBB (COVID testing category) and Oakland Chamber listing, which also names COVID-19 testing and PPE; this fits OUSD's purchase of COVID antigen self-test kits. Summary, contact details and address are supported by the cited sources (website email decoded to info@accuratescreens.com).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://tlc4kids.org/about/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tlc4kids.org/journey-academy/admissions/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680008634",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-journey-academy-tlc-child-and-family-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Journey Academy, TLC Child & Family Services' in Sebastopol, CA; TLC's own site lists Journey Academy as its program and gives 1800 Hwy 116 N, Sebastopol, CA 95472",
+      "ProPublica Nonprofit Explorer lists a registered 501(c)(3) 'TLC Child & Family Services' in Sebastopol, CA (EIN 68-0008634)",
+      "Journey Academy serves grades 9-12 students with IEPs (a nonpublic school for special education), matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services Master Contract' with the Special Education Department"
+    ],
+    "key": "n-journey-academy-tlc-child-and-family-services",
+    "notes": "Journey Academy is a program of TLC Child & Family Services. No CA Secretary of State or SAM.gov lookup done, so those IDs are null.",
+    "profile": {
+      "address": "1800 Hwy 116 N, Sebastopol, CA 95472",
+      "caEntityNumber": null,
+      "ein": "68-0008634",
+      "email": "info@tlc4kids.org",
+      "headquarters": "Sebastopol, CA",
+      "legalName": "TLC Child & Family Services",
+      "orgType": "nonprofit",
+      "phone": "(707) 823-7300",
+      "samUei": null,
+      "summary": "A nonprofit based in Sebastopol, California, that provides treatment and family-focused care to youth and families in Sonoma County and beyond. Its services include foster care and adoption support, young adult housing programs, and Journey Academy, a residential school program for high school students with individualized education programs (IEPs).",
+      "website": "https://tlc4kids.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Contact Us - TLC Child & Family Services",
+        "url": "https://tlc4kids.org/about/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Admissions and Referrals - TLC Child & Family Services",
+        "url": "https://tlc4kids.org/journey-academy/admissions/"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "TLC Child & Family Services - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680008634"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-journey-academy-tlc-child-and-family-services",
+    "notes": "TLC's contact page shows Journey Academy as its NPS program at 1800 Hwy 116 N, Sebastopol, matching the agenda name, city and the nonpublic school master contract; ProPublica confirms the 501(c)(3), EIN 68-0008634. All profile fields and the neutral summary are supported by the cited sources, and only business contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://marconbuilders.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://marconbuilders.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://marconbuilders.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002112",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company's own About page gives its legal name as 'Mar Con Builders, Inc.', matching the agenda text",
+      "Headquartered at 8108A Capwell Drive, Oakland, CA, matching the agenda location 'Oakland, CA'",
+      "Website describes commercial construction including educational facilities, matching OUSD's 'School buildings & construction' contracts",
+      "Website homepage carries a testimonial attributed to an Oakland Unified School District project manager"
+    ],
+    "key": "v-002112",
+    "notes": "California Secretary of State entity number and SAM UEI not found; EIN not applicable/not found. The only email listed on the Contact page is accounting@marconcompany.com, which is not a general inbox, so email was left null. CSLB license #829636 is shown on the homepage.",
+    "profile": {
+      "address": "8108A Capwell Drive, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Mar Con Builders, Inc.",
+      "orgType": "company",
+      "phone": "(510) 639-1914",
+      "samUei": null,
+      "summary": "Mar Con Builders is a commercial general contractor based in Oakland, California. It does ground-up construction, tenant improvements, pre-construction and design-build work for education, healthcare, municipal, commercial and public works clients in the San Francisco Bay Area and Sacramento.",
+      "website": "https://marconbuilders.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Mar Con Builders",
+        "url": "https://marconbuilders.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - Mar Con Builders",
+        "url": "https://marconbuilders.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Mar Con Builders",
+        "url": "https://marconbuilders.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002112",
+    "notes": "Company site shows legal name Mar Con Builders, Inc. at 8108A Capwell Drive, Oakland, matching the agenda, with education-sector construction work and an OUSD project manager testimonial. Summary, phone, address and website are all supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

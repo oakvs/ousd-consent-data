@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.kkjlservices.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.kkjlservices.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/k-k-jl-services-inc-12772300/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009048",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company website kkjlservices.com names its legal name as K&K JL Services, Inc., matching the agenda name exactly",
+      "Company has a California branch office in Fairfield, CA, matching the agenda location; HigherGov also lists it as Fairfield, CA-based",
+      "Website states it holds California contractor license CSLB# 1079152 as a General Building Contractor, consistent with OUSD contracting it for restroom renovation construction projects"
+    ],
+    "key": "v-009048",
+    "notes": "Website phone number appears to be a placeholder and its only email is a named person's, so both omitted. Website lists a Concord corporate office and a Fairfield branch; headquarters left null. UEI comes from HigherGov (a federal-data aggregator), not SAM.gov directly. Legal name should be checked against the About page by validator; a similarly named K&K JL Services LLC also exists in Fairfield (BBB, CSLB listing 1070847), so entity type differs from the Inc. on the agenda.",
+    "profile": {
+      "address": "2300 S Watney Way, Unit I, Fairfield CA 94533",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "K&K JL Services, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": "HUZDPEDBRNC7",
+      "summary": "A for-profit company that provides grounds maintenance, facility management and general construction services. It holds California contractor licenses for general building, electrical and landscaping work, and also serves federal, state and local government clients.",
+      "website": "https://www.kkjlservices.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Contact - K&K General Contractors",
+        "url": "https://www.kkjlservices.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "legalName"
+        ],
+        "title": "About - K&K General Contractors",
+        "url": "https://www.kkjlservices.com/about/"
+      },
+      {
+        "supports": [
+          "samUei",
+          "orgType"
+        ],
+        "title": "K&K Jl Services Profile",
+        "url": "https://www.highergov.com/awardee/k-k-jl-services-inc-12772300/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009048",
+    "notes": "K&K JL Services, Inc. (Fairfield branch at 2300 S Watney Way; CSLB 1079152 General Building, per prolicensecheck 'Inc dba K&K Construction') matches the agenda name, city and restroom-renovation construction work; the separate LLC (CSLB 1070847, 416 Atlantic Ave) is a different entity and was not used. Summary, address, website, legal name and UEI are supported by the cited pages (license classes B/C-10/C-27 appear on the site's home page); phone and email were rightly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

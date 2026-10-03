@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ensembletherapyservices.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ensembletherapyservices.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://opencorporates.com/companies/us_ca/3438210",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-easy-speech-pathology-ensemble-therapy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Easy Speech Pathology dba Ensemble Therapy' in Palm Desert, CA; the organization's own site states its legal name is 'Easy Speech Pathology, Inc. d/b/a Ensemble Therapy, a California Professional Corporation'",
+      "California corporation 'EASY SPEECH PATHOLOGY, INC.' is registered at 75100 Mediterranean Ave., Palm Desert, CA 92211 (OpenCorporates), the same address listed as a clinic on the Ensemble Therapy contact page, matching the Palm Desert location in the agenda",
+      "Ensemble Therapy's website offers speech, occupational and physical therapy and mental health services and has a 'Schools' section, consistent with OUSD's special education nonpublic agency contract"
+    ],
+    "key": "n-easy-speech-pathology-ensemble-therapy",
+    "notes": "Legal name per registry is EASY SPEECH PATHOLOGY, INC. (OpenCorporates mirrors California Secretary of State; SOS entity number shown as C3438210 in some formats). Palm Desert address is one of two clinic locations; no single HQ address is stated on the site, but the registry address and agenda city are Palm Desert. Not independently confirmed against bizfileonline directly. No explicit OUSD mention found on the pages fetched.",
+    "profile": {
+      "address": "75100 Mediterranean Ave Palm Desert, CA 92211",
+      "caEntityNumber": "3438210",
+      "ein": null,
+      "email": "info@ensembletherapyservices.com",
+      "headquarters": "Palm Desert, CA",
+      "legalName": "Easy Speech Pathology, Inc.",
+      "orgType": "company",
+      "phone": "760-837-0033",
+      "samUei": null,
+      "summary": "A California professional corporation doing business as Ensemble Therapy. It provides speech therapy, occupational therapy, physical therapy and mental health services for people of all ages, in person and online. It operates clinics in Palm Desert and Colton, California.",
+      "website": "https://www.ensembletherapyservices.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Ensemble Therapy Services",
+        "url": "https://www.ensembletherapyservices.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Ensemble Therapy Contact",
+        "url": "https://www.ensembletherapyservices.com/contact-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "EASY SPEECH PATHOLOGY, INC. - OpenCorporates",
+        "url": "http://opencorporates.com/companies/us_ca/3438210"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-easy-speech-pathology-ensemble-therapy",
+    "notes": "The organization's site states its legal name is Easy Speech Pathology, Inc. d/b/a Ensemble Therapy, matching the agenda dba exactly. The Palm Desert address matches the agenda city and the CA registry record, and the services and Schools section fit a nonpublic agency contract. The summary, phone, email, address and entity number are all supported and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

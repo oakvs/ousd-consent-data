@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://skyline.ousd.org/about-us/our-school",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sd.cde.ca.gov/schooldirectory/details?cdscode=01612590137943",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/our-schools/school-directory/schools/~board/school-directory/post/skyline-high-school",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-skyline-high-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda item is a Measures N and H Commission carryover plan/budget for Skyline High School, which is a school within OUSD itself, not an outside vendor",
+      "California Department of Education School Directory lists Skyline High (public high school, grades 9-12) in Oakland Unified at 12250 Skyline Blvd., Oakland, CA",
+      "The school's own website (skyline.ousd.org) and the OUSD school directory both list Skyline High School at 12250 Skyline Boulevard, Oakland, CA, in Oakland Unified School District"
+    ],
+    "key": "n-skyline-high-school",
+    "notes": "This is an OUSD school site, not an external vendor. The OUSD school directory page lists a different phone number, (510) 879-5570, than the school site and the CDE directory, (510) 879-2306; the latter, shown on two pages, is used. No general email was verified on a fetched page, so email is null.",
+    "profile": {
+      "address": "12250 Skyline Boulevard, Oakland, CA 94619",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 879-2306",
+      "samUei": null,
+      "summary": "Skyline High School is a public high school in the Oakland Unified School District, serving students in grades 9 to 12 in the Oakland hills. It offers college and career pathway programs along with its regular academic classes. It is a school site of the district, not a separate business or nonprofit.",
+      "website": "https://skyline.ousd.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "More About Skyline - Skyline High School",
+        "url": "https://skyline.ousd.org/about-us/our-school"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Skyline High - School Directory Details (CA Dept of Education)",
+        "url": "https://sd.cde.ca.gov/schooldirectory/details?cdscode=01612590137943"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Skyline High School",
+        "url": "https://www.ousd.org/our-schools/school-directory/schools/~board/school-directory/post/skyline-high-school"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-skyline-high-school",
+    "notes": "The agenda item is a Measures N and H carryover budget for Skyline High School, an OUSD school site; the school site, CDE directory and OUSD directory all confirm the address, grades 9-12, public status and the (510) 879-2306 phone (the OUSD directory lists a different number, which the candidate disclosed). The summary is neutral and supported, and no personal contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

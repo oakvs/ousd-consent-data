@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ahcstaff.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/fl/boca-raton/profile/healthcare-staffing/accountable-healthcare-staffing-0633-90422502",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-accountable-healthcare-staffing",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches 'Accountable Healthcare Staffing, Inc.', whose own website (ahcstaff.com) lists a dedicated Schools division staffing special education professionals, matching OUSD's Special Education contract",
+      "BBB profile lists Accountable Healthcare Staffing in Boca Raton, FL, matching the agenda location"
+    ],
+    "key": "n-accountable-healthcare-staffing",
+    "notes": "No registry (FL Sunbiz, CA SOS, SAM.gov) could be fetched, so legal entity and IDs are unconfirmed. The company's website lists its corporate headquarters in North Richland Hills, TX, while the agenda and BBB give Boca Raton, FL (999 W Yamato Rd, Suite 210); address and headquarters left null because of this conflict. Likely the same company (HQ may have moved) but not verified against a registry.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@AccountableHealthcare.com",
+      "headquarters": null,
+      "legalName": "Accountable Healthcare Staffing, Inc.",
+      "orgType": "company",
+      "phone": "888.740.4341",
+      "samUei": null,
+      "summary": "A healthcare staffing company that places health professionals, nurses and therapists with hospitals, clinics and other healthcare settings nationwide. It also has a Schools division that places special education teachers, therapists and other school-based professionals with school districts on contract or direct-hire terms.",
+      "website": "https://www.ahcstaff.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Accountable Healthcare Staffing, Inc.",
+        "url": "https://www.ahcstaff.com/"
+      },
+      {
+        "supports": [],
+        "title": "Accountable Healthcare Staffing - BBB Profile",
+        "url": "https://www.bbb.org/us/fl/boca-raton/profile/healthcare-staffing/accountable-healthcare-staffing-0633-90422502"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

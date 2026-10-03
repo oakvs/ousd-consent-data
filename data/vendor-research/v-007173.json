@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://6dpmcm.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://6dpmcm.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007173",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name match: 6D PMCM's site gives its legal name as 'Sixth Dimension PMCM, Inc.'; OpenCorporates lists 'SIXTH DIMENSION LLC' (CA 201407710045) with status 'Converted Out', which suggests a conversion to the Inc., but no registry page confirming the conversion was found",
+      "Industry match: the firm provides construction and program management for school and civic clients, matching OUSD's 'School buildings & construction' Construction Management Agreement",
+      "Location mismatch: the agenda says Oakland, CA, and a web search result places an older office at 1504 Franklin Street, Oakland, but the current company contact page lists no Oakland office (headquarters Pleasanton, CA)"
+    ],
+    "key": "v-007173",
+    "notes": "Not publishable without review. The OUSD agenda names 'Sixth Dimension, LLC' of Oakland. The California registry record (via OpenCorporates) shows that LLC as 'Converted Out' with a Sacramento address, and the company now operates as 'Sixth Dimension PMCM, Inc.' with headquarters in Pleasanton and no Oakland office on its contact page. The two are very likely the same business, but the successor link was not confirmed on the Secretary of State site, so the LLC entity number was deliberately omitted. A reviewer should verify the conversion at bizfileonline.sos.ca.gov before publishing.",
+    "profile": {
+      "address": "6700 Koll Center Parkway, Suite 119, Pleasanton, CA 94566",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@6DPMCM.com",
+      "headquarters": "Pleasanton, CA",
+      "legalName": "Sixth Dimension PMCM, Inc.",
+      "orgType": "company",
+      "phone": "888-674-4660",
+      "samUei": null,
+      "summary": "A California firm that provides program management, project management and construction management services. Its clients are public and private organizations in education, civic, justice and healthcare. It was founded in 2014.",
+      "website": "https://6dpmcm.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "About - 6D PMCM, Inc.",
+        "url": "https://6dpmcm.com/about/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - 6D PMCM, Inc.",
+        "url": "https://6dpmcm.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

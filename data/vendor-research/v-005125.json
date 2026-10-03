@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://drinkflowater.com/our-company/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://drinkflowater.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-005125",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda gives Denver, CO; FloWater's own contact page lists its headquarters in Denver, CO",
+      "FloWater sells and installs water refill stations, matching OUSD's 'School buildings & construction' purchase agreement for district-wide sites",
+      "FloWater's own Our Company page says it installed refill stations in Oakland Unified School District schools"
+    ],
+    "key": "v-005125",
+    "notes": "Phone not found on cited pages. Registry IDs not looked up. Bluewater parent relationship taken from the company page; company page also says it is now part of Bluewater Group.",
+    "profile": {
+      "address": "6200 N Washington St Unit 10, Denver, CO 80216",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Support@drinkflowater.com",
+      "headquarters": "Denver, CO",
+      "legalName": "FloWater, Inc",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "FloWater makes and installs water refill stations that filter and purify tap water. Its stations are used in businesses, schools, fitness centers, hotels and homes. The company is based in Denver, Colorado and has been part of the Swedish company Bluewater Group since 2022.",
+      "website": "https://drinkflowater.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Our Company - FloWater",
+        "url": "https://drinkflowater.com/our-company/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - FloWater",
+        "url": "https://drinkflowater.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-005125",
+    "notes": "Same organization: FloWater, Denver CO, and its Our Company page says it installed refill stations in Oakland Unified School District. Legal name, address, email, HQ and website are confirmed on the contact page, but the summary calls Bluewater Group 'Swedish', which neither cited page says (the company page only says it joined forces with Bluewater in 2022; bluewatergroup.com is Stockholm-based but does not mention FloWater), so the summary is not fully supported by its cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

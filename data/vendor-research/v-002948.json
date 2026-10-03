@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://mountainvalleyfamilyservices.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://mountainvalleyfamilyservices.net/school/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942742653",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002948",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Mountain Valley School' in Nevada City, CA; Mountain Valley Child & Family Services, Inc. is headquartered at 24077 State Highway 49, Nevada City, CA 95959 and runs its residential schools under the Mountain Valley name",
+      "Organization's website says it operates accredited Non-Public Special Education Schools, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services' special education master contract",
+      "Registered 501(c)(3) nonprofit in Nevada City, CA on ProPublica Nonprofit Explorer (EIN 94-2742653)"
+    ],
+    "key": "v-002948",
+    "notes": "No page found mentioning Oakland Unified directly; match rests on name, Nevada City location and nonpublic special-education school services. California Secretary of State entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "24077 State Highway 49, Nevada City, CA 95959",
+      "caEntityNumber": null,
+      "ein": "94-2742653",
+      "email": "referrals@mv.email",
+      "headquarters": "Nevada City, CA",
+      "legalName": "Mountain Valley Child & Family Services, Inc.",
+      "orgType": "nonprofit",
+      "phone": "530.265.9057",
+      "samUei": null,
+      "summary": "A California nonprofit, operating since 1968, that provides residential treatment programs, mental health services and therapeutic behavioral services for youth ages 12 to 18. It also runs accredited Non-Public Special Education Schools for students in grades 5 to 12.",
+      "website": "https://mountainvalleyfamilyservices.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Mountain Valley Child & Family Services, Inc.",
+        "url": "https://mountainvalleyfamilyservices.net/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "legalName"
+        ],
+        "title": "MVCFS Residential Schools for At-Risk Youth - Mountain Valley Child & Family Services, Inc.",
+        "url": "https://mountainvalleyfamilyservices.net/school/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Mountain Valley Child And Family Services Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942742653"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002948",
+    "notes": "The cited pages show Mountain Valley Child & Family Services, Inc. in Nevada City, CA runs a CDE-certified Non-Public Special Education School (grades 5-12), matching the agenda's Nevada City location and the nonpublic school special education master contract. The summary, contacts (generic referrals mailbox) and EIN 94-2742653 (501(c)(3), Nevada City) are all supported; no page mentions OUSD directly, but name, location and service type align.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

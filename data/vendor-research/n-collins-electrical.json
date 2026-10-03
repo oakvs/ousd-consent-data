@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.collinselectric.com/company/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collinselectric.com/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collinselectric.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-collins-electrical",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's own website names it 'Collins Electrical Company, Inc.', the same name the agenda uses",
+      "Headquartered in Stockton, CA (3412 Metro Dr.), matching the 'Stockton, CA' location in the agenda text",
+      "Company describes itself as an electrical contractor serving 'commercial, industrial, and institutional markets' in California, consistent with an OUSD school-building electrical/alarm construction contract",
+      "Holds California contractor license #115427 and lists security detection and alarm work among its specialties, consistent with the Westlake Middle School intrusion alarm project"
+    ],
+    "key": "n-collins-electrical",
+    "notes": "Agenda text says 'Collins Electrical Company, Inc.' and the title says 'Collins Electric Company, Inc.'; both refer to the same Stockton firm. No general email address, registry IDs (CA SOS number, UEI) were verified, so those are null. No page found that directly ties the firm to the OUSD Westlake project; identity rests on name, location and trade.",
+    "profile": {
+      "address": "3412 Metro Dr., Stockton, CA 95215",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Stockton, CA",
+      "legalName": "Collins Electrical Company, Inc.",
+      "orgType": "company",
+      "phone": "209-466-3691",
+      "samUei": null,
+      "summary": "Collins Electrical Company, Inc. is an electrical construction and engineering contractor founded in 1924. It does design-build and preconstruction electrical work, solar and electric-vehicle charger installation, and emergency electrical maintenance for commercial, industrial and institutional customers across California. It is a union (IBEW) contractor with offices in Stockton, West Sacramento, Livermore, Modesto, Fresno and Marina.",
+      "website": "https://www.collinselectric.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "About Collins Electrical Company, Inc. - Collins Electrical",
+        "url": "https://www.collinselectric.com/company/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Locations - Collins Electrical",
+        "url": "https://www.collinselectric.com/locations/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Commercial Electrical and Solar Contractor serving California - Collins Electrical",
+        "url": "https://www.collinselectric.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-collins-electrical",
+    "notes": "The cited pages confirm every profile field: legal name, 1924 founding, services, IBEW status, six offices, and the Stockton HQ address and phone. The name, Stockton location and electrical trade match the OUSD record. The security/alarm specialty claim in the identity signals is not shown on the site, but the license, trade and location are enough to identify the firm, and the profile does not rely on that claim.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

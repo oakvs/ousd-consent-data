@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opengovny.com/corporation/3917375",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nyscoss.org/Site/content/Partners/Partners/Silver/Listing-SmartStart-Education.aspx",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://smartstarteducation.com/services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009116",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered entity: 'Smartstart Education, LLC' (New York DOS foreign LLC record, 59 Elm Street, Suite 225, New Haven, CT 06510), matching the agenda's 'SmartStart Education, LLC' in New Haven, CT",
+      "A New York State Council of School Superintendents partner listing gives the same New Haven, CT address and the website smartstarteducation.com, tying the website to the registered entity",
+      "Website describes K-12 staffing and tutoring for schools nationwide, consistent with a special education services agreement for a school district"
+    ],
+    "key": "v-009116",
+    "notes": "The company's own site pages fetched did not show a phone, email or street address, so those fields are left null. Third-party directories give differing suite numbers for the New Haven address (Suite 225 in the NY record, Ste 330A elsewhere), so no street address is given. The NYSCOSS listing's phone is tied to a named staff contact, so it was not used. The site does not mention special education or OUSD specifically.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "New Haven, CT",
+      "legalName": "Smartstart Education, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "SmartStart Education is a company based in New Haven, Connecticut that provides staffing and tutoring services to K-12 schools across the United States. It places substitute teachers, long-term staff and other school support personnel, and it runs in-person, high-dosage tutoring programs.",
+      "website": "https://smartstarteducation.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "New York State Corporation Entity",
+        "url": "https://opengovny.com/corporation/3917375"
+      },
+      {
+        "supports": [
+          "website",
+          "headquarters",
+          "summary"
+        ],
+        "title": "SmartStart Education, LLC",
+        "url": "https://www.nyscoss.org/Site/content/Partners/Partners/Silver/Listing-SmartStart-Education.aspx"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Our Educational Services | SmartStart Education",
+        "url": "https://smartstarteducation.com/services"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009116",
+    "notes": "The NY DOS record and the NYSCOSS listing both show SmartStart Education, LLC at 59 Elm Street, New Haven, CT, matching the agenda's name and city, and the company's staffing and tutoring services fit a special education services agreement. The summary matches the company's services pages, which describe nationwide K-12 staffing and in-class, face-to-face tutoring, and its tone is neutral. No named-individual contact details were used.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/843993176",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fluentseeds.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fluentseeds.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.collaborativeclassroom.org/blog/coaching-for-impact-partnership-rainin-foundation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007481",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists a registered 501(c)(3) in Stillwater, MN (Cares For Learning, EIN 84-3993176), matching the agenda's 'Stillwater, MN'; the search listing names it 'Cares For Learning - Fluentseeds'",
+      "fluentseeds.org's SEEDS of Learning history page lists CARES for Learning and FluentSeeds as past homes of the program, linking the registered nonprofit to the FluentSeeds name",
+      "A Collaborative Classroom page says the Kenneth Rainin Foundation partnered with Collaborative Classroom (and formerly FluentSeeds) to build a coaching infrastructure in Oakland Unified School District; Rainin Foundation is also listed among OUSD's funding sources for these contracts",
+      "FluentSeeds offers literacy training and coaching for educators, matching OUSD's 'Classroom & academic programs' contracts"
+    ],
+    "key": "v-007481",
+    "notes": "FluentSeeds merged into Collaborative Classroom in January 2024, so the website now carries merger banners and no standalone contact details; phone, email and address left null. Registered legal name per ProPublica is 'Cares For Learning'; FluentSeeds appears to be its operating name. Agenda lists no California entity.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "84-3993176",
+      "email": null,
+      "headquarters": "Stillwater, MN",
+      "legalName": "Cares For Learning",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "FluentSeeds was a nonprofit based in Stillwater, Minnesota, that ran SEEDS of Learning, a training and coaching program for educators who work with young children. The program focuses on oral language, early reading and social skills for children ages 3 to 5. In January 2024, FluentSeeds merged into Collaborative Classroom, another education nonprofit.",
+      "website": "https://www.fluentseeds.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Cares For Learning - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/843993176"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "SEEDS of Learning (FluentSeeds)",
+        "url": "https://www.fluentseeds.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - SEEDS of Learning",
+        "url": "https://www.fluentseeds.org/about-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "How Oakland Unified School District's Coaching Infrastructure Drives Reading Tutoring Success - Collaborative Classroom",
+        "url": "https://www.collaborativeclassroom.org/blog/coaching-for-impact-partnership-rainin-foundation/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007481",
+    "notes": "ProPublica lists Cares For Learning (EIN 84-3993176, Stillwater, MN) with Fluentseeds as an alternate name, matching the agenda city; fluentseeds.org confirms the SEEDS of Learning educator training for ages 3-5, the CARES for Learning lineage and the January 2024 merger into Collaborative Classroom, and the Collaborative Classroom page ties FluentSeeds and the Rainin Foundation to OUSD literacy tutoring. The summary is neutral and no contact fields are populated.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

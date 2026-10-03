@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.comtelsys.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.beaconcom.com/comtel",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://scvneca.com/contractors/comtel-systems-technology-inc/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001165",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: Comtel Systems Technology, Inc. (company website comtelsys.com and Santa Clara Valley NECA contractor listing)",
+      "Sunnyvale, CA location matches the agenda: Beacon Communications and SCV NECA pages list 1292 Hammerwood Avenue, Sunnyvale, CA 94089",
+      "Business matches OUSD's school-building work: the company installs communications, security and sound systems and serves K-12 schools"
+    ],
+    "key": "v-001165",
+    "notes": "Address and headquarters left null: the Beacon and SCV NECA pages list 1292 Hammerwood Avenue, Sunnyvale, CA 94089 (matching the agenda), but comtelsys.com now shows 7133 Koll Center Pkwy, Suite 100, Pleasanton, CA 94566. Not resolved which is current. Registry IDs (CA SOS, SAM UEI) not found on fetchable pages.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@comtelsys.com",
+      "headquarters": null,
+      "legalName": "Comtel Systems Technology, Inc.",
+      "orgType": "company",
+      "phone": "(408) 543-5600",
+      "samUei": null,
+      "summary": "A systems integrator based in the San Francisco Bay Area that designs, installs and maintains communications and security systems, such as nurse call, access control, video surveillance, structured cabling and school intercom and bell systems. It serves healthcare, education and commercial customers. It has operated since 1982 and was acquired by Beacon Communications, Inc. in April 2022.",
+      "website": "https://www.comtelsys.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "Comtel Systems Technology",
+        "url": "https://www.comtelsys.com"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Comtel Systems Technology | Beacon Communications",
+        "url": "https://www.beaconcom.com/comtel"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName"
+        ],
+        "title": "Comtel Systems Technology Inc.",
+        "url": "https://scvneca.com/contractors/comtel-systems-technology-inc/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001165",
+    "notes": "Exact legal name and Sunnyvale, CA location match the agenda, and the services (including K-12 intercom/bell systems) fit OUSD facilities work. Summary, 1982 start, April 2022 Beacon acquisition, phone, email and website are all confirmed on the cited pages; address was correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

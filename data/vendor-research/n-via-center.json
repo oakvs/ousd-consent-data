@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.viacenterschool.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943048152",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-via-center",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Via Center' in Berkeley, CA (ProPublica Nonprofit Explorer, EIN 94-3048152), matching the agenda location 'Berkeley, CA'",
+      "Organization's own website describes a non-public, non-profit school serving students who struggle in traditional public schools and serving many school districts, matching OUSD's 'Nonpublic, Nonsectarian School/Agency' special education master contracts",
+      "Located in Alameda County, matching the agenda text 'Alameda, CA' / 'Berkeley, CA'"
+    ],
+    "key": "n-via-center",
+    "notes": "Website viacenter.org returned 403 to automated fetch; the cited site is viacenterschool.com. No general email found. CA Secretary of State entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2126 6th St. Berkeley, CA 94710",
+      "caEntityNumber": null,
+      "ein": "94-3048152",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Via Center",
+      "orgType": "nonprofit",
+      "phone": "(510) 848-1616",
+      "samUei": null,
+      "summary": "Via Center is a non-public, non-profit school in Berkeley, California for students ages 5 to 22 who have struggled in traditional public schools. It uses a range of educational and behavioral methods and works with outside specialists. It serves students from many different school districts.",
+      "website": "https://www.viacenterschool.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Via Center non-public, non-profit school in Berkeley California",
+        "url": "https://www.viacenterschool.com/"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Via Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943048152"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-via-center",
+    "notes": "Via Center is a Berkeley non-public, non-profit school (2126 6th St.) serving many districts, matching OUSD's nonpublic school master contracts for special education and the agenda's Berkeley location; the website supports the summary, phone and address, and ProPublica confirms the 501(c)(3) status and EIN 94-3048152. The summary is neutral and the profile contains only business contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

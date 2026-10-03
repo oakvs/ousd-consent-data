@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/Archives/edgar/data/1402057/000119312511056194/dex211.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdwg.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdwg.com/content/cdwg/en/locations.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/CDW",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000998",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: 'CDW Government LLC' appears on CDW's own GSA contract pricelist, and the CDW-G brand is used on cdwg.com ('CDW Government & Public Sector IT Solutions and Contracts'), matching the agenda's 'CDW Government, LLC (CDW-G)'",
+      "Located in Vernon Hills, IL, matching the agenda text; the GSA pricelist gives a Vernon Hills, IL address and CDW's Vernon Hills, IL headquarters is confirmed on Wikipedia and the cdwg.com locations page",
+      "cdwg.com describes IT products and services for government and education customers, matching OUSD's 'Technology' contracts and the 'Piggyback Agreement' purchasing of technology products"
+    ],
+    "key": "v-000998",
+    "notes": "Phone, email and mailing address left null: the only address found for CDW Government LLC on an official document is an older GSA pricelist (230 N. Milwaukee Ave.), while the current cdwg.com locations page lists 200 N Milwaukee Ave. for the Vernon Hills distribution center, and the main phone could not be tied unambiguously to the headquarters. Registry IDs (SAM UEI, Illinois/California entity numbers) could not be fetched from registries in this run. The agenda's repeated 'Piggyback Agreement' wording indicates OUSD buys through another agency's contract.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Vernon Hills, IL",
+      "legalName": "CDW Government LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "CDW Government LLC, which uses the name CDW-G, sells information technology products and services such as computers, networking equipment and software to government agencies and public education customers. It is part of the CDW family of companies, which is based in Vernon Hills, Illinois.",
+      "website": "https://www.cdwg.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "List of Subsidiaries (Exhibit 21.1, CDW Corporation)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1402057/000119312511056194/dex211.htm"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "CDW Government & Public Sector IT Solutions and Contracts",
+        "url": "https://www.cdwg.com/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "North America Office Locations | CDWG",
+        "url": "https://www.cdwg.com/content/cdwg/en/locations.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "CDW - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/CDW"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000998",
+    "notes": "CDW Government LLC (an Illinois LLC per CDW Corp's SEC subsidiary list) trades as CDW-G on cdwg.com, serves government and education customers, and is based in Vernon Hills, IL, matching the agenda's name, city and technology purchases via piggyback agreements. Summary is neutral and supported; contact fields are appropriately null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://fencesupply.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fencesupply.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/livermore/chain-link-fence-supply",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001026",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches California corporation 'Chain Link Fence & Supply, Inc.' (entity 1958079, active) located in Livermore, CA, matching the agenda location",
+      "Company's own About page lists Oakland Unified School District among its clients",
+      "Company installs and repairs chain link fencing for commercial and public works projects, matching OUSD's fencing maintenance and sport court safety contracts"
+    ],
+    "key": "v-001026",
+    "notes": "Entity number taken from bizprofile.net, a third-party mirror of California Secretary of State filings; not verified directly on bizfileonline.sos.ca.gov. Company's own site does not show the ', Inc.' suffix.",
+    "profile": {
+      "address": "7650 Hawthorne Ave., Suite 2, Livermore, CA 94550",
+      "caEntityNumber": "1958079",
+      "ein": null,
+      "email": "info@fencesupply.com",
+      "headquarters": "Livermore, CA",
+      "legalName": "Chain Link Fence & Supply, Inc.",
+      "orgType": "company",
+      "phone": "(925) 606-8167",
+      "samUei": null,
+      "summary": "A family-owned fencing contractor in Livermore, California, operating since 1996. It installs and repairs chain link and ornamental fences and gates for commercial, industrial and public works projects, and supplies fencing materials, across the Bay Area.",
+      "website": "https://www.fencesupply.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Chain Link Fence & Supply",
+        "url": "https://fencesupply.com"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Chain Link Fence & Supply",
+        "url": "https://www.fencesupply.com/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Chain Link Fence & Supply, Inc. Livermore, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/livermore/chain-link-fence-supply"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001026",
+    "notes": "Company site, About page and the CA filing mirror agree on name, Livermore address, 1996 founding, entity 1958079 and fencing services; the About page lists Oakland Unified School District as a client, matching OUSD's fencing and sport court contracts. The summary is neutral and supported (sources say Northern California rather than Bay Area, a minor paraphrase).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

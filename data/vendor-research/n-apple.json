@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.apple.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.apple.com/legal/internet-services/terms/site.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.apple.com/education/k12/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://opencorporates.com/companies/us_ca/0806592",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-apple",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'Apple Inc.', the legal name shown on Apple's own legal page, as in the agenda text 'Apple, Inc.'",
+      "Agenda text lists Cupertino, CA, which is the address of Apple's headquarters (One Apple Park Way, Cupertino) on Apple's contact and legal pages and on the California registry record",
+      "Agenda items are the Apple Developer Agreement for Apple TV and a purchase order for Fremont High School new construction, filed under technology, which fits Apple's devices, software and developer program",
+      "Apple's K-12 education page describes devices and services sold to schools, matching a school-district technology purchase"
+    ],
+    "key": "n-apple",
+    "notes": "California entity number taken from OpenCorporates, which mirrors the California Secretary of State record (shown there as 0806592; the state record may display it as C0806592). Not verified directly on bizfileonline.sos.ca.gov. No general public email is listed on Apple's contact page. EIN and SAM UEI not looked up (EIN is a nonprofit field; UEI not confirmed). Agenda also lists Austin, TX, where Apple has a large campus; the Cupertino headquarters is used.",
+    "profile": {
+      "address": "One Apple Park Way, Cupertino, CA 95014",
+      "caEntityNumber": "0806592",
+      "ein": null,
+      "email": null,
+      "headquarters": "Cupertino, CA",
+      "legalName": "Apple Inc.",
+      "orgType": "company",
+      "phone": "1-800-MY-APPLE (1-800-692-7753)",
+      "samUei": null,
+      "summary": "Apple Inc. is a for-profit technology company that designs and sells consumer electronics, computers and digital services. Its products include the iPhone, iPad, Mac and Apple Watch, along with software and subscription services. It also sells devices and school-management tools to K-12 schools.",
+      "website": "https://www.apple.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Apple",
+        "url": "https://www.apple.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Apple Legal - Website Terms of Use",
+        "url": "https://www.apple.com/legal/internet-services/terms/site.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Apple Education - K-12",
+        "url": "https://www.apple.com/education/k12/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "APPLE INC. :: California (US) :: OpenCorporates",
+        "url": "http://opencorporates.com/companies/us_ca/0806592"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-apple",
+    "notes": "Apple Inc. matches the agenda name and Cupertino location; the Developer Agreement for Apple TV and a technology purchase fit Apple. Address, phone, legal name, and CA entity 0806592 (OpenCorporates, active, same address) are confirmed on the cited pages, and the K-12 page supports the school-tools claim; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sysco.com/contact/our-locations/san-francisco",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.govcb.com/government-vendors/profile-SAM00000000001549730-sysco-san-francisco-Fremont-CA.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-00660",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Sysco Food Services, Fremont, CA'; Sysco's official locations page lists Sysco San Francisco, a Sysco operating company, at 5900 Stewart Avenue, Fremont, CA 94538",
+      "Sysco San Francisco is a wholesale food distributor, matching OUSD's Nutrition Services contract for pre-prepared meals and sandwich products",
+      "Federal vendor directory profile (SAM-sourced) lists SYSCO SAN FRANCISCO, INC. at the same Fremont address"
+    ],
+    "key": "v-00660",
+    "notes": "Agenda says 'Sysco Food Services'; matched to Sysco San Francisco by Fremont location. Legal name taken from a third-party directory, not the CA Secretary of State. No OUSD mention found on the cited pages.",
+    "profile": {
+      "address": "5900 Stewart Avenue, Fremont, CA 94538",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fremont, CA",
+      "legalName": "SYSCO SAN FRANCISCO, INC.",
+      "orgType": "company",
+      "phone": "(510) 226-3000",
+      "samUei": null,
+      "summary": "Sysco San Francisco is the Bay Area operating company of Sysco, a large food distributor. It supplies food and related products to restaurants, schools and other institutions from a distribution center in Fremont, California.",
+      "website": "https://www.sysco.com/contact/our-locations/san-francisco"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Sysco San Francisco - Food Distributor & Restaurant Supplies",
+        "url": "https://www.sysco.com/contact/our-locations/san-francisco"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "SYSCO SAN FRANCISCO, INC. - Government Vendor Profile",
+        "url": "https://www.govcb.com/government-vendors/profile-SAM00000000001549730-sysco-san-francisco-Fremont-CA.htm"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-00660",
+    "notes": "Sysco's San Francisco location page (fetched directly) shows 5900 Stewart Avenue, Fremont, CA 94538, (510) 226-3000, and says it distributes to customers including restaurants and educational facilities; the SAM-sourced directory page confirms the legal name SYSCO SAN FRANCISCO, INC. at the same address. This is the Fremont Sysco operating company, which fits OUSD's pre-prepared meals contract, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

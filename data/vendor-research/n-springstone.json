@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://thespringstoneschool.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/481293818",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-springstone",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Located in Lafayette, CA, matching the agenda text 'Lafayette, CA'",
+      "The Springstone School describes itself as a California Department of Education-certified Nonpublic School (NPS) serving students with learning disabilities and executive functioning challenges, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services Master Contract' for Special Education",
+      "Registered nonprofit 'Springstone School' in Lafayette, CA (ProPublica Nonprofit Explorer, EIN 48-1293818)"
+    ],
+    "key": "n-springstone",
+    "notes": "The agenda says only 'Springstone'; matched on Lafayette, CA location, nonpublic school status and special education services. The CDE school directory page could not be fetched (bot protection). No Oakland Unified mention was found on the school's home page.",
+    "profile": {
+      "address": "1035 Carol Lane, Lafayette, CA 94549",
+      "caEntityNumber": null,
+      "ein": "48-1293818",
+      "email": "info@thespringstoneschool.org",
+      "headquarters": "Lafayette, CA",
+      "legalName": "Springstone School",
+      "orgType": "nonprofit",
+      "phone": "(925) 962-9660",
+      "samUei": null,
+      "summary": "A nonprofit, independent middle school and community high school in Lafayette, California, for students in grades 6-12. It serves neurodiverse students, including students with learning disabilities and executive functioning challenges, in small classes. The school is accredited by the Western Association of Schools and Colleges and offers social skills, occupational therapy and mindfulness along with academic classes.",
+      "website": "https://thespringstoneschool.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - The Springstone School",
+        "url": "https://thespringstoneschool.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Springstone School - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/481293818"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-springstone",
+    "notes": "The Springstone School in Lafayette, CA is a CDE-certified nonpublic school (grades 6-12, WASC accredited, 501(c)(3)), which fits the Lafayette location and the NPS special education master contract. Contact details, EIN and summary match the home page and ProPublica; the school accepts district IEP referrals, though no OUSD mention was found.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

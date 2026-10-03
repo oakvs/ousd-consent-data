@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://spgtherapy.com/clinic-services/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://spgtherapy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://spgtherapy.com/school-based/services/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004031",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Board legislation file 22-2317 names the contract as between the District and 'Speech Pathology Group, Walnut Creek, CA', matching the agenda location (OUSD Legistar)",
+      "The organization's own site (spgtherapy.com) identifies its legal name as 'The Speech Pathology Group' and offers school-based speech, occupational, physical and behavior therapy and school psychology, matching OUSD's special education and student services contracts",
+      "SPG's own events page lists a partner training with Oakland Unified School District (December 7, 2022), confirming a working relationship with OUSD"
+    ],
+    "key": "v-004031",
+    "notes": "Agenda gives Walnut Creek, CA (older SPG listings show 2021 Ygnacio Valley Rd, Walnut Creek); SPG's current website lists its headquarters as Concord, CA. Same organization per name, services and OUSD links, but the address has apparently moved. No registry IDs (EIN, CA entity number, SAM UEI) were verified, so they are left null. A separate nonprofit, 'Speech Pathology Group: Children's Services International', exists and is NOT this vendor.",
+    "profile": {
+      "address": "1320 Willow Pass Rd, Suite 700 | Concord, CA 94520",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@spgtherapy.com",
+      "headquarters": "Concord, CA",
+      "legalName": "The Speech Pathology Group",
+      "orgType": "company",
+      "phone": "925-945-1474",
+      "samUei": null,
+      "summary": "SPG Therapy & Education (The Speech Pathology Group) is a company that provides speech therapy, occupational therapy, physical therapy, behavior services and school psychology. It offers school-based and clinic-based services in California and several other states.",
+      "website": "https://spgtherapy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "SPG - Contact Us",
+        "url": "https://spgtherapy.com/clinic-services/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "SPG",
+        "url": "https://spgtherapy.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "SPG - School-Based Services",
+        "url": "https://spgtherapy.com/school-based/services/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004031",
+    "notes": "spgtherapy.com shows legal name 'The Speech Pathology Group', a Concord HQ, a Walnut Creek clinic (matching the agenda city), and school-based speech, OT, PT, behavior and school psychology services that fit OUSD's special education and student services contracts. All profile fields (contact details, orgType, summary and its multi-state claim) are confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

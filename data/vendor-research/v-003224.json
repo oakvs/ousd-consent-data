@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.overaa.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.overaa.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003224",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Overaa Construction's own website lists headquarters at 200 Parr Boulevard, Richmond, CA 94801, matching the agenda location 'Richmond, CA'",
+      "OUSD agenda titles name 'C. Overaa & Company' for the same Roosevelt Middle School Modernization lease-leaseback contract; the company site's footer gives 'C. Overaa & Co.' as the operating entity",
+      "Overaa's own project page and OUSD's Roosevelt Middle School project page both describe the Roosevelt Middle School modernization in Oakland, matching OUSD's 'School buildings & construction' category",
+      "Overaa's site describes general contracting and lease-leaseback services for school districts, matching the type of contract OUSD awarded"
+    ],
+    "key": "v-003224",
+    "notes": "Legal name 'C. Overaa & Co.' taken from the company website footer and OUSD agenda titles ('C. Overaa & Company'); not verified against the California Secretary of State registry, whose search is not fetchable. CA entity number, EIN and UEI not found. Company holds contractor license #106793 per its website. Foster The Center contracts were with an Overaa/Tulum/Eclipse joint venture; this profile covers Overaa only.",
+    "profile": {
+      "address": "200 Parr Boulevard, Richmond, CA 94801",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "webuild@overaa.com",
+      "headquarters": "Richmond, CA",
+      "legalName": "C. Overaa & Co.",
+      "orgType": "company",
+      "phone": "510-234-0926",
+      "samUei": null,
+      "summary": "Overaa Construction is a general contractor based in Richmond, California. It provides preconstruction services, general contracting and collaborative delivery, including lease-leaseback contracts, on projects such as schools, healthcare buildings, water infrastructure and commercial buildings across Northern California.",
+      "website": "https://www.overaa.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - Overaa Construction",
+        "url": "https://www.overaa.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "About - Overaa Construction",
+        "url": "https://www.overaa.com/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003224",
+    "notes": "Overaa's contact and about pages confirm legal name C. Overaa & Co., the Richmond CA headquarters, phone, generic email and address; its Roosevelt Middle School page names OUSD as owner with lease-leaseback delivery, matching the agenda items. The summary is neutral and its services and sectors match the About page; 'Northern California' and lease-leaseback come from the project pages and office locations rather than the cited About page, but are consistent with them.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

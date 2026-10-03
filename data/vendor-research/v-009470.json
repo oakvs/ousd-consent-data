@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://kaboom.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://kaboom.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/521970904",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009470",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Kaboom Inc', EIN 52-1970904, Bethesda, MD (ProPublica Nonprofit Explorer)",
+      "Headquarters in Bethesda, MD matches the location given in the agenda text",
+      "Kaboom's own site describes building playspaces for kids, matching OUSD's 'Playspace Partner' agreements and school construction category",
+      "A public press release names KABOOM! and Oakland Unified School District as partners on the playground at Global Family Elementary, the school named in an OUSD agreement title"
+    ],
+    "key": "v-009470",
+    "notes": "Legal name per ProPublica is 'Kaboom Inc'; 'KABOOM!' used as shown on the organization's own site. No general email found. OUSD link confirmed via Eat.Learn.Play. Foundation press release (https://www.eatlearnplay.org/news/global-family-elementary), not cited as a source.",
+    "profile": {
+      "address": "7200 Wisconsin Avenue Suite 400 Bethesda, MD 20814",
+      "caEntityNumber": null,
+      "ein": "52-1970904",
+      "email": null,
+      "headquarters": "Bethesda, MD",
+      "legalName": "KABOOM!",
+      "orgType": "nonprofit",
+      "phone": "(202) 659-0215",
+      "samUei": null,
+      "summary": "KABOOM! is a national nonprofit that works to end playspace inequity. It works with communities to design and build playspaces with kids, with a focus on communities of color that have less access to places to play.",
+      "website": "https://kaboom.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "headquarters"
+        ],
+        "title": "About KABOOM!",
+        "url": "https://kaboom.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact KABOOM!",
+        "url": "https://kaboom.org/contact"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Kaboom Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/521970904"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009470",
+    "notes": "KABOOM!, Inc. of Bethesda, MD matches the agenda name and location; the Eat. Learn. Play. press release names KABOOM! and OUSD together on the Global Family Elementary playground, matching the Playspace agreements. Summary, phone, address, EIN, and nonprofit status are all confirmed on the cited kaboom.org and ProPublica pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

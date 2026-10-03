@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://richchicks.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://richchicks.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://richchicks.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.highergov.com/awardee/rich-chicks-llc-10000751/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.govconinabox.com/explore/contractors/profile/NQJRL18JWAB7",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008507",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: 'Rich Chicks LLC' (company website and SAM-derived GovConInBox/HigherGov profiles) vs. 'Rich Chicks, LLC' in the agenda",
+      "Company website says it serves K-12 schools and takes part in USDA school food programs, matching OUSD's RFP for specialty proteins for the K-12 meal program (Nutrition Services)",
+      "GovConInBox (SAM-derived) lists physical address 4276 N Tracy Blvd, Tracy, CA, matching the agenda's 'Tracy, CA'",
+      "Conflict: HigherGov lists headquarters as Gardena, CA, and the website phone has a 424 (Los Angeles area) area code, while GovConInBox lists Tracy and a 209 phone"
+    ],
+    "key": "v-008507",
+    "notes": "Headquarters and address left null because sources conflict: HigherGov (SAM data) says Gardena, CA; GovConInBox says 4276 N Tracy Blvd, Tracy, CA (phone 209-879-4104). The company website lists no address and a 424 area-code phone. Tracy may be the plant and Gardena the corporate office, but this is not confirmed. California Secretary of State entity number not found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "sales@richchicks.com",
+      "headquarters": null,
+      "legalName": "Rich Chicks LLC",
+      "orgType": "company",
+      "phone": "(424) 266-9303",
+      "samUei": "NQJRL18JWAB7",
+      "summary": "A for-profit company that makes chicken products for food service, using small-batch preparation of skinless chicken breast meat. It sells to healthcare, K-12 school and military customers. It takes part in USDA food programs for schools.",
+      "website": "https://richchicks.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "legalName"
+        ],
+        "title": "Contact Us - Rich Chicks LLC",
+        "url": "https://richchicks.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Rich Chicks LLC",
+        "url": "https://richchicks.com/about"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Rich Chicks LLC",
+        "url": "https://richchicks.com"
+      },
+      {
+        "supports": [
+          "samUei",
+          "orgType"
+        ],
+        "title": "Rich Chicks (NQJRL18JWAB7)",
+        "url": "https://www.highergov.com/awardee/rich-chicks-llc-10000751/"
+      },
+      {
+        "supports": [
+          "samUei"
+        ],
+        "title": "RICH CHICKS LLC",
+        "url": "https://www.govconinabox.com/explore/contractors/profile/NQJRL18JWAB7"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": null
+}

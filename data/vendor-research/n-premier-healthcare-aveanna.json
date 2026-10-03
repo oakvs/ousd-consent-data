@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.aveanna.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aveanna.com/our-story.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aveanna.com/private-duty/educational-services.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prnewswire.com/news-releases/aveanna-healthcare-to-acquire-premier-healthcare-services-llc-300646428.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-premier-healthcare-aveanna",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Premier Healthcare dba Aveanna' in Atlanta, GA; Aveanna Healthcare, LLC is headquartered in Atlanta, GA (aveanna.com contact page)",
+      "Aveanna Healthcare acquired Premier Healthcare Services, LLC in 2018 (PR Newswire), explaining the 'Premier Healthcare dba Aveanna' name",
+      "Aveanna's Education Services page describes nursing, therapy and behavior services for schools and students with special needs, matching OUSD's Special Education contract; it also references California services"
+    ],
+    "key": "n-premier-healthcare-aveanna",
+    "notes": "The contracting entity is probably Premier Healthcare Services, LLC (acquired by Aveanna in 2018), doing business as Aveanna. The profile describes the Aveanna brand and parent, Aveanna Healthcare, LLC, and its Atlanta headquarters contact details. No general email is published; no registry IDs were verified.",
+    "profile": {
+      "address": "400 Interstate North Parkway, SE, Suite 1600, Atlanta, GA 30339",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Atlanta, GA",
+      "legalName": "Aveanna Healthcare, LLC",
+      "orgType": "company",
+      "phone": "(770) 441-1580",
+      "samUei": null,
+      "summary": "Aveanna Healthcare is a national home healthcare company based in Atlanta, Georgia. It provides private duty nursing, personal care, pediatric therapy, home health and hospice care. Its Education Services division provides nursing, therapy and behavior support for students in schools.",
+      "website": "https://www.aveanna.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Aveanna Healthcare Contact Us",
+        "url": "https://www.aveanna.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Aveanna Healthcare Our Story",
+        "url": "https://www.aveanna.com/our-story.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Aveanna Educational Services",
+        "url": "https://www.aveanna.com/private-duty/educational-services.html"
+      },
+      {
+        "supports": [],
+        "title": "Aveanna Healthcare to Acquire Premier Healthcare Services, LLC",
+        "url": "https://www.prnewswire.com/news-releases/aveanna-healthcare-to-acquire-premier-healthcare-services-llc-300646428.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-premier-healthcare-aveanna",
+    "notes": "Agenda's 'Premier Healthcare dba Aveanna' in Atlanta, GA matches Aveanna Healthcare (Atlanta HQ), which acquired Premier Healthcare Services, LLC in 2018 and runs school nursing/therapy/behavior services fitting a special education contract. Summary, phone, address, headquarters and website are supported by the cited pages; legalName names the parent LLC, but the contracting entity may be Premier Healthcare Services, LLC, so it is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}

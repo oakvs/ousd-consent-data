@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.crisisprevention.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.crisisprevention.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-crisis-prevention-institute-cpi",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the organization's own site is for 'Crisis Prevention Institute (CPI)', the same name given in the OUSD agenda text",
+      "Headquarters at 10850 W. Park Place, Suite 250, Milwaukee, WI 53224, matching the agenda's location 'Milwaukee, WI'",
+      "Website describes de-escalation and crisis prevention training for education and human services staff, consistent with a Special Education Department training purchase funded through Risk Management"
+    ],
+    "key": "n-crisis-prevention-institute-cpi",
+    "notes": "Organization type (for-profit company vs nonprofit) is not stated on the pages fetched; 'company' is inferred from the 'Inc.' name and no nonprofit registry match was found. No registry IDs were located, so EIN, CA entity number and UEI are null.",
+    "profile": {
+      "address": "10850 W. Park Place | Suite 250, Milwaukee, WI 53224 USA",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@crisisprevention.com",
+      "headquarters": "Milwaukee, WI",
+      "legalName": "Crisis Prevention Institute Inc.",
+      "orgType": "company",
+      "phone": "877.877.5390",
+      "samUei": null,
+      "summary": "Crisis Prevention Institute (CPI) provides training in de-escalation and crisis prevention, along with dementia care training. It teaches professionals in fields such as education, health care, behavioral health and human services to recognize, prevent and respond to crises, using a train-the-trainer model.",
+      "website": "https://www.crisisprevention.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "legalName",
+          "headquarters",
+          "website"
+        ],
+        "title": "About Us - Crisis Prevention Institute",
+        "url": "https://www.crisisprevention.com/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact Us - Crisis Prevention Institute",
+        "url": "https://www.crisisprevention.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-crisis-prevention-institute-cpi",
+    "notes": "Name, Milwaukee HQ, and de-escalation training for education match the agenda's Special Education sole-source item; summary, legalName, website, phone, email and address are confirmed on the cited About and Contact pages. orgType 'company' is only inferred (the pages do not state for-profit vs nonprofit), so it is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "orgType"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ahsstaffing.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ahsstaffing.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ahsstaffing.com/specialties/school-4512",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ahsstaffing.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ahs-staffing",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's website is for 'AHS Staffing', the name used in the agenda",
+      "Headquartered in Edmond, Oklahoma, matching the agenda location 'Edmond, OK'",
+      "Its school-based division (PediaStaff) places speech, occupational and physical therapists, which fits a special education agency master contract"
+    ],
+    "key": "n-ahs-staffing",
+    "notes": "No registry (Oklahoma Secretary of State, SAM.gov) was checked, so legal entity form and IDs are not given. Third-party directories list it as 'AHS Staffing, LLC'. No public page found that explicitly mentions OUSD; identity rests on exact name, Edmond OK location, and school therapy staffing services.",
+    "profile": {
+      "address": "3009 Astoria Ct, Edmond, OK 73034",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "marketing@ahsstaffing.com",
+      "headquarters": "Edmond, OK",
+      "legalName": "AHS Staffing",
+      "orgType": "company",
+      "phone": "(877) 309-3546",
+      "samUei": null,
+      "summary": "AHS Staffing is a healthcare staffing agency founded in 2010 and based in Edmond, Oklahoma. It places traveling nurses, dialysis staff and allied health professionals in temporary assignments. Through its PediaStaff division it also places school and pediatric therapists, such as speech-language pathologists and occupational and physical therapists.",
+      "website": "https://www.ahsstaffing.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact Us - AHS Staffing",
+        "url": "https://www.ahsstaffing.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us - AHS Staffing",
+        "url": "https://www.ahsstaffing.com/about-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "AHS Staffing - School-based therapy jobs",
+        "url": "https://www.ahsstaffing.com/specialties/school-4512"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "AHS Staffing",
+        "url": "https://www.ahsstaffing.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-ahs-staffing",
+    "notes": "The agenda name 'AHS Staffing' and location 'Edmond, OK' match the company's own pages (3009 Astoria Ct, Edmond, OK; founded 2010), and its PediaStaff school and pediatric therapy division fits a special education agency master contract. Contact fields and summary are confirmed on the cited pages; the email is a generic business address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

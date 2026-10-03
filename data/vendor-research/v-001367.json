@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/231390618",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.devereux.org/georgia",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.devereux.org/site/SPageServer/?pagename=georgia_our_programs_school_education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001367",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Devereux Advanced Behavioral Health Georgia - Ackerman Academy' in Kennesaw, GA; devereux.org lists Devereux Advanced Behavioral Health Georgia and Ackerman Academy at 1291 Stanley Road, Kennesaw, GA 30152",
+      "Ackerman Academy is a K-12 school serving students in a psychiatric residential treatment program, consistent with OUSD's nonpublic school special education contract",
+      "Devereux Georgia is part of the Devereux nonprofit (ProPublica lists the Devereux Foundation, EIN 23-1390618, Villanova, PA)"
+    ],
+    "key": "v-001367",
+    "notes": "Profile combines the Georgia campus contact details (phone, address, headquarters = Kennesaw campus) with the parent nonprofit's legal name and EIN (Devereux Foundation, Villanova, PA). The Georgia program is part of the national Devereux organization, which may file under a related legal entity; a reviewer may want to confirm. Ackerman Academy has its own email/phone on devereux.org but these were omitted to keep to the main line.",
+    "profile": {
+      "address": "1291 Stanley Road, Kennesaw, GA 30152",
+      "caEntityNumber": null,
+      "ein": "23-1390618",
+      "email": null,
+      "headquarters": "Kennesaw, GA",
+      "legalName": "Devereux Foundation",
+      "orgType": "nonprofit",
+      "phone": "(770) 427-0147",
+      "samUei": null,
+      "summary": "Devereux is a nonprofit behavioral health organization that provides treatment and support for children, young adults and adults with emotional, behavioral and developmental challenges. The Georgia campus in Kennesaw offers residential treatment, specialty foster care and an on-site K-12 school, Ackerman Academy.",
+      "website": "https://www.devereux.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Devereux Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/231390618"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Devereux Georgia",
+        "url": "https://www.devereux.org/georgia"
+      },
+      {
+        "supports": [
+          "summary",
+          "address"
+        ],
+        "title": "School and Education - Devereux Advanced Behavioral Health Georgia",
+        "url": "https://www.devereux.org/site/SPageServer/?pagename=georgia_our_programs_school_education"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-001367",
+    "notes": "The Kennesaw, GA campus and Ackerman Academy (K-12, psychiatric residential treatment) at 1291 Stanley Road match the agenda and the special education nonpublic school contract. Summary, website, phone, address and orgType are supported. The Foundation's headquarters is Villanova, PA, not Kennesaw, and no source shows the Georgia campus contracts under the Devereux Foundation's legal name or EIN, so those three fields are dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters",
+      "legalName",
+      "ein"
+    ],
+    "verdict": "confirmed"
+  }
+}

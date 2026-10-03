@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://lca-architects.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildzoom.com/contractor/loving-campos-associates-architects-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002515",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD Legistar file 25-0844 names 'Loving Campos Associates Architects Inc. dba LCA Architects, Inc.' for turf field replacement design at OUSD school sites, with Oakland, CA given as location",
+      "lca-architects.com is the website of an architecture and planning firm named LCA Architects with an Oakland office (1970 Broadway, Suite 800) and education projects, matching OUSD's school building and construction contracts",
+      "The City of Oakland Legistar file 26-0337 names the firm 'Loving Campos Associates (LCA) Architects', linking the legal name to the LCA brand",
+      "A BuildZoom profile for 'Loving Campos Associates Architects Inc' in Walnut Creek, CA 94596 lists phone (925) 944-1626, the same Walnut Creek phone shown on lca-architects.com"
+    ],
+    "key": "v-002515",
+    "notes": "No California Secretary of State, EIN or SAM.gov record could be fetched, so registry IDs are null. Legal name comes from a third-party profile and OUSD agenda text ('Loving Campos Associates Architects Inc. dba LCA Architects, Inc.'); the firm's own site does not state the legal name. Headquarters is Walnut Creek per the firm's site; it also has an Oakland office at 1970 Broadway, Suite 800, Oakland, CA 94612, (510) 272-1060.",
+    "profile": {
+      "address": "590 Ygnacio Valley Road, Suite 310, Walnut Creek, CA 94596",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "marketing@lca-architects.com",
+      "headquarters": "Walnut Creek, CA",
+      "legalName": "Loving Campos Associates Architects Inc",
+      "orgType": "company",
+      "phone": "(925) 944-1626",
+      "samUei": null,
+      "summary": "LCA Architects is an architecture and planning firm in the San Francisco Bay Area that has operated for over 40 years. It provides design services for affordable housing, residential, education, public safety, commercial, hospitality and industrial projects. It has offices in Walnut Creek and Oakland, California.",
+      "website": "https://lca-architects.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "LCA Architects",
+        "url": "https://lca-architects.com/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Loving Campos Associates Architects",
+        "url": "https://www.buildzoom.com/contractor/loving-campos-associates-architects-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002515",
+    "notes": "lca-architects.com shows an Oakland office, education work and a Walnut Creek phone that matches the BuildZoom listing for Loving Campos Associates Architects Inc, consistent with the agenda's dba LCA Architects, Inc. and OUSD's architectural contracts. Summary, contact fields (generic marketing@ email only) and legal name are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

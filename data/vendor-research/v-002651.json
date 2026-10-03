@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/462478873",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lovelearnsuccess.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lovelearnsuccess.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/vallejo/love-learn-success",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002651",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Love Learn Success' in Vallejo, CA (ProPublica Nonprofit Explorer, EIN 46-2478873), matching the Vallejo, CA location in the agenda text",
+      "Organization's own website says it provides after-school programming for California schools, matching OUSD's 'After-school & summer programs' contracts",
+      "Organization's own website lists Oakland Unified School District as a partner district"
+    ],
+    "key": "v-002651",
+    "notes": "Address and email omitted: the official contact page shows only a phone and a form. California entity number comes from a third-party mirror of Secretary of State data (bizprofile.net), not bizfileonline directly.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "3549562",
+      "ein": "46-2478873",
+      "email": null,
+      "headquarters": "Vallejo, CA",
+      "legalName": "Love Learn Success",
+      "orgType": "nonprofit",
+      "phone": "(800) 819-3110",
+      "samUei": null,
+      "summary": "A nonprofit based in Vallejo, California that provides after-school programming in partnership with California schools and school districts. It describes its programs as academically enriched after-school experiences for students.",
+      "website": "https://lovelearnsuccess.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Love Learn Success - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/462478873"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Love. Learn. Success.",
+        "url": "https://lovelearnsuccess.org/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us - Love.Learn.Success",
+        "url": "https://lovelearnsuccess.org/contact-us/"
+      },
+      {
+        "supports": [
+          "caEntityNumber"
+        ],
+        "title": "Love. Learn. Success. Vallejo, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/vallejo/love-learn-success"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-002651",
+    "notes": "Love Learn Success is a Vallejo, CA 501(c)(3) (EIN 46-2478873, CA entity 3549562) whose website describes after-school programming and lists Oakland Unified as a partner district, matching the agenda's name, Vallejo location, and after-school contracts. All non-null fields and the neutral summary are supported by the cited sources; the CA entity number comes from a third-party mirror but matches.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

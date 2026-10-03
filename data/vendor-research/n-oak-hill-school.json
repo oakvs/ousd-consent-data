@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943359599",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.theoakhillschool.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.theoakhillschool.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oak-hill-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Located in San Anselmo, CA, matching the agenda text 'San Anselmo, CA' (school website contact page and ProPublica)",
+      "School website says it is a non-public, special education school approved by the California Department of Education, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services Master Contract' for Special Education",
+      "Registered 501(c)(3) educational nonprofit 'Oak Hill School Of California' in San Anselmo, CA (ProPublica Nonprofit Explorer, EIN 94-3359599)",
+      "School accepts students funded through public school districts, consistent with district-placed special education contracts"
+    ],
+    "key": "n-oak-hill-school",
+    "notes": "Website domain theoakhillschool.org; email domain myoakhill.org is shown on the school's own contact page. No Oakland-specific mention found on the school's site; match rests on location, nonpublic-school status and registry.",
+    "profile": {
+      "address": "300 Sunny Hills Drive #6, San Anselmo, CA 94960",
+      "caEntityNumber": null,
+      "ein": "94-3359599",
+      "email": "info@myoakhill.org",
+      "headquarters": "San Anselmo, CA",
+      "legalName": "Oak Hill School Of California",
+      "orgType": "nonprofit",
+      "phone": "(415) 457-7601",
+      "samUei": null,
+      "summary": "Oak Hill School is a nonprofit, non-public special education school in Marin County, California. It serves students ages 6-22 with autism and other developmental differences. It is approved by the California Department of Education and enrolls students placed by public school districts as well as private-tuition students.",
+      "website": "https://www.theoakhillschool.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oak Hill School Of California - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943359599"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - Oak Hill School",
+        "url": "https://www.theoakhillschool.org/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Oak Hill School",
+        "url": "https://www.theoakhillschool.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-oak-hill-school",
+    "notes": "Oak Hill School in San Anselmo, CA matches the agenda name and city, is a CDE-approved non-public special education school (fits the Nonpublic School master contract), and ProPublica lists Oak Hill School Of California as a 501(c)(3) school operator there. Contact fields, ages, funding and nonprofit status are all confirmed by the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

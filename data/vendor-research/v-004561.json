@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandrecycles.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wm.com/us/en/location/ca/alameda-county",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sanleandro.org/BusinessDirectoryII.aspx?BID=66",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004561",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Oakland Recycles (City of Oakland service site) names 'Waste Management of Alameda County, Inc. (WMAC)' as the operator of Oakland's trash, compost and bulky services, an exact match to the agenda name",
+      "Located in Oakland, CA (172 98th Avenue, Oakland, CA 94603 per San Leandro business directory and FMCSA carrier record), matching the agenda location",
+      "Provides trash, garbage and recycling services, consistent with OUSD's 'Food, transportation & operations' and Buildings and Grounds Department general services agreements"
+    ],
+    "key": "v-004561",
+    "notes": "Phone is the commercial line listed by Oakland Recycles; residential line is 510-613-8710. No Secretary of State entity number or SAM UEI found, so those are null. The summary's statement that it is part of WM is based on the WM-branded website and email domain; the parent relationship is not separately sourced beyond that.",
+    "profile": {
+      "address": "172 98th Avenue, Oakland, CA 94603",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "csnorthbay@wm.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Waste Management of Alameda County, Inc.",
+      "orgType": "company",
+      "phone": "510-613-8700",
+      "samUei": null,
+      "summary": "A company that provides trash, garbage, recycling and compost collection services to homes and businesses in Alameda County, California, including Oakland. It is part of WM, a national waste and recycling services company. It also offers dumpster rentals.",
+      "website": "https://www.wm.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "summary",
+          "orgType"
+        ],
+        "title": "Contact - Oakland Recycles",
+        "url": "https://www.oaklandrecycles.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Trash, Garbage and Recycling Services in Alameda County, California",
+        "url": "https://www.wm.com/us/en/location/ca/alameda-county"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters"
+        ],
+        "title": "Resource Directory - Waste Management of Alameda County (WM)",
+        "url": "https://www.sanleandro.org/BusinessDirectoryII.aspx?BID=66"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-004561",
+    "notes": "Oakland Recycles gives the exact legal name 'Waste Management of Alameda County, Inc.' with the commercial phone, email and trash/compost services, and the San Leandro directory lists the Oakland address, matching the agenda's name, city and a general services agreement for waste service. The 'headquarters' field is not shown by any source (the address is a local facility), so it is dropped; the summary is neutral and supported by the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.blueprintschools.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.blueprintschools.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/274199289",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blueprintschools.org/about-california",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000725",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'Blueprint Schools Network Inc' in Needham, MA, EIN 27-4199289 (ProPublica Nonprofit Explorer), matching the agenda's 'Needham, MA'",
+      "Organization's own California page states it is in its tenth year of partnership with the Oakland Unified School District",
+      "Website describes in-school math tutoring (Blueprint Math Fellows) and school improvement work, matching OUSD's 'Classroom & academic programs' and middle school contracts"
+    ],
+    "key": "v-000725",
+    "notes": "California entity number and SAM UEI not looked up. Oakland partnership confirmed on the organization's California page.",
+    "profile": {
+      "address": "PO Box 920440, Needham, MA 02492",
+      "caEntityNumber": null,
+      "ein": "27-4199289",
+      "email": "info@blueprintschools.org",
+      "headquarters": "Needham, MA",
+      "legalName": "Blueprint Schools Network, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(617) 243-9620",
+      "samUei": null,
+      "summary": "A nonprofit education organization based in Needham, Massachusetts. It runs the Blueprint Math Fellows Program, which provides daily small-group math tutoring during the school day. It also partners with school districts and schools to plan, carry out and monitor school improvement work.",
+      "website": "https://www.blueprintschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Blueprint Schools Network, Inc.",
+        "url": "https://www.blueprintschools.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Blueprint Schools Network Contact",
+        "url": "https://www.blueprintschools.org/contact"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Blueprint Schools Network Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/274199289"
+      },
+      {
+        "supports": [],
+        "title": "California - BLUEPRINT SCHOOLS NETWORK, INC.",
+        "url": "https://blueprintschools.org/about-california"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000725",
+    "notes": "The about, contact and ProPublica pages confirm Blueprint Schools Network, Inc., a 501(c)(3) in Needham, MA, which matches the agenda location. Its California page states a tenth year of partnership with OUSD, and the middle school tutoring contracts fit that. The summary and contact fields are supported and neutral, and only general business contacts are used.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ridezum.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ridezum.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ridezum.com/privacy-policy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-zum-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Zum's own website and privacy policy name the company 'Zum Services, Inc.', the same name as in the OUSD agenda",
+      "Located in Redwood City, CA (275 Shoreline Dr Suite 200), matching the agenda's location",
+      "Zum provides school transportation, matching OUSD's special education transportation contracts",
+      "OUSD's own newsroom and Zum's website both describe Zum's electric school bus partnership with Oakland Unified"
+    ],
+    "key": "n-zum-services",
+    "notes": "Email is hidden by obfuscation on Zum's pages, so left null. EIN and California entity number not confirmed from a primary registry (third-party aggregator pages conflicted, showing a Florida filing), so left null. Agenda also names 'Zum Services, LLC' and 'Zum LLC' for the same contracts; likely affiliated or variant names for the same company.",
+    "profile": {
+      "address": "275 Shoreline Dr Suite 200, Redwood City, CA 94065",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Redwood City, CA",
+      "legalName": "Zum Services, Inc.",
+      "orgType": "company",
+      "phone": "1-855-743-3986",
+      "samUei": null,
+      "summary": "Zum is a company that provides student transportation for K-12 school districts. It combines professional drivers, school buses (including electric buses) and its own routing and tracking software. It says it serves schools in 19 states.",
+      "website": "https://www.ridezum.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Zum",
+        "url": "https://www.ridezum.com/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us | Zum",
+        "url": "https://www.ridezum.com/contact-us"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Privacy Policy | Zum",
+        "url": "https://www.ridezum.com/privacy-policy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-zum-services",
+    "notes": "Zum's site and privacy policy name Zum Services, Inc. at 275 Shoreline Dr, Redwood City (matching the agenda), and the site highlights its Oakland Unified electric fleet partnership; summary (drivers, routing software, electric buses, 19 states), phone and address are all confirmed on the cited pages and the summary is neutral. The LLC/LLC variants in other agenda titles are plausibly the same company, which is already flagged in the candidate's notes.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

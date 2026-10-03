@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://individualgroup.com/company/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://individualgroup.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006804",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's own site calls itself 'Individual FoodService', and the agenda names 'Individual FoodService' / 'Individual Foodservice, Inc.'",
+      "Located in Bell, California, matching the agenda location 'Bell, CA'",
+      "Company distributes food, paper, packaging, janitorial and smallwares products and lists schools among its customers, matching OUSD's 'Food Services Supply' / food service supplies contracts with the Nutrition Services Department"
+    ],
+    "key": "v-006804",
+    "notes": "The company's newer site (individualfoodservice.com) blocks automated fetching, so the older individualgroup.com pages (copyright 2010-2019) were cited; the contact details match what search results show for the newer site. A LinkedIn listing describes it as part of BradyPLUS, so ownership may have changed. Legal name 'Individual Foodservice, Inc.' appears in OUSD agenda text only; no California SOS entity number or SAM UEI could be verified, so those are null.",
+    "profile": {
+      "address": "5496 Lindbergh Lane, Bell, CA 90201",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@indfood.com",
+      "headquarters": "Bell, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "323-981-2800",
+      "samUei": null,
+      "summary": "Individual FoodService is a family-owned distributor based in Bell, California. It supplies food, paper, plastic, packaging, janitorial and smallwares products to customers such as restaurants, healthcare facilities, schools, universities and government institutions. It has operated since 1926.",
+      "website": "https://individualgroup.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "Welcome to Individual Foodservice: Who We Are",
+        "url": "https://individualgroup.com/company/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Welcome to Individual Foodservice: Contact",
+        "url": "https://individualgroup.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-006804",
+    "notes": "The organization matches (Individual FoodService, Bell CA, food service supplies for Nutrition Services), but the summary's present-tense 'family-owned distributor' claim comes from dated 2010-2019 pages and is contradicted by later reporting (Los Angeles Business Journal and trade press: Kelso & Co portfolio company, merged with Brady Industries, now part of BradyPLUS); the summary also says 'universities', which the cited page does not state (it says educational institutions).",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

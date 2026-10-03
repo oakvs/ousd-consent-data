@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943370410",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lighthousecharter.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lighthousecharter.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.causeiq.com/organizations/lighthouse-community-charter-public-schools,943370410/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-lighthouse-community-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Cause IQ lists 'Lighthouse Community Charter School' as a former name of Lighthouse Community Public Schools (EIN 94-3370410), matching the agenda name",
+      "ProPublica Nonprofit Explorer shows Lighthouse Community Public Schools, a 501(c)(3) in Oakland, CA, classed as a K-12 school",
+      "The organization's own website says it runs public charter schools in Oakland (TK-12), matching OUSD's Measures N and H college and career readiness / classroom program MOU",
+      "The organization's website references OUSD board charter renewal hearings, showing a relationship with Oakland Unified"
+    ],
+    "key": "n-lighthouse-community-charter-school",
+    "notes": "Agenda name 'Lighthouse Community Charter School' is a former name of the legal entity Lighthouse Community Public Schools; the entity also operates the Lodestar schools, so the MOU could involve either school's campuses. Main phone omitted because the listed number is a single campus line. California Secretary of State entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "433 Hegenberger Road, Suite 222, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "94-3370410",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Lighthouse Community Public Schools",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Lighthouse Community Public Schools is a nonprofit that runs public charter schools in Oakland, California, for students from transitional kindergarten through 12th grade. Its schools are Lighthouse and Lodestar, each with an elementary and a middle/high school campus. It also offers expanded learning programs, summer school, and college and career preparation.",
+      "website": "https://lighthousecharter.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Lighthouse Community Public Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943370410"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType",
+          "legalName"
+        ],
+        "title": "Lighthouse Community Public Schools",
+        "url": "https://lighthousecharter.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "website"
+        ],
+        "title": "Contact Us - Lighthouse Community Public Schools",
+        "url": "https://lighthousecharter.org/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Lighthouse Community Public Schools",
+        "url": "https://www.causeiq.com/organizations/lighthouse-community-charter-public-schools,943370410/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-lighthouse-community-charter-school",
+    "notes": "Cause IQ lists Lighthouse Community Charter School as a former name of Lighthouse Community Public Schools (EIN 94-3370410), an Oakland 501(c)(3) charter operator that fits a Measures N and H MOU. The ProPublica, website and contact pages support the legal name, EIN, address, orgType, headquarters and the neutral summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

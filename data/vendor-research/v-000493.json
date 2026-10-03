@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://arntzbuilders.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://arntzbuilders.com/?page_id=8",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://arntzbuilders.com/?p=4081",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000493",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Arntz Builders, Inc. is a public works general contractor at 431 Payran Street, Petaluma, CA, matching the agenda location 'Petaluma, CA' (company website)",
+      "Arntz Builders' own project page 'Central Administrative Center at Cole Campus' lists 'Client: Oakland Unified School District', matching the Cole Campus Central Administration Center agreements in the agenda",
+      "Company describes commercial public works construction, matching OUSD's 'School buildings & construction' contracts"
+    ],
+    "key": "v-000493",
+    "notes": "The only email on the contact page is a bid inbox (bid@arntzbuilders.com); no general info@ address was found. CA Secretary of State entity number, EIN and SAM UEI were not confirmed from a primary registry and are left null.",
+    "profile": {
+      "address": "431 Payran Street, Petaluma, CA 94952",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "bid@arntzbuilders.com",
+      "headquarters": "Petaluma, CA",
+      "legalName": "Arntz Builders, Inc.",
+      "orgType": "company",
+      "phone": "707-835-2900",
+      "samUei": null,
+      "summary": "A general contractor based in Petaluma, California, that builds commercial and public works projects in Northern California. It does both new construction and renovation work.",
+      "website": "https://arntzbuilders.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Arntz Builders, Inc.",
+        "url": "https://arntzbuilders.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Arntz Builders, Inc. Contact",
+        "url": "https://arntzbuilders.com/?page_id=8"
+      },
+      {
+        "supports": [],
+        "title": "Central Administrative Center at Cole Campus",
+        "url": "https://arntzbuilders.com/?p=4081"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000493",
+    "notes": "Arntz Builders, Inc. of Petaluma matches the agenda name and city, and its own project page lists Oakland Unified School District as client for the Cole Campus Central Administrative Center, which matches the agenda items. Name, address, phone, bid@ email, and the neutral summary are all shown on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

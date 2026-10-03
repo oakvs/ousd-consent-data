@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://guerraco.com/about_us.cgi",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://guerraco.com/contact_us.cgi",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://web.agc-ca.org/54133-Engineering-Services/Guerra-Construction-Group-15335",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009088",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Guerra Construction Group' (company website and AGC of California member directory)",
+      "Located in Santa Clara, CA, matching the city given in the agenda text",
+      "Company provides construction and site work (concrete, underground pipe, ADA accessibility, parking lots) for public agencies, matching OUSD's 'School buildings & construction' contract for a portable relocation project"
+    ],
+    "key": "v-009088",
+    "notes": "No California Secretary of State or SAM.gov record was checked, so legal name, entity number and UEI are left null. No page found mentions OUSD directly; identity rests on exact name, city and trade match.",
+    "profile": {
+      "address": "984 Memorex Drive, Santa Clara, CA 95050",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Santa Clara, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(408) 279-2027",
+      "samUei": null,
+      "summary": "Guerra Construction Group is a construction and engineering firm serving the San Francisco Bay Area. It does land planning, concrete rehabilitation, underground pipe work, ADA accessibility and parking lot design, and construction consulting for public agencies, homeowners, contractors and developers.",
+      "website": "http://www.guerraco.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Guerra Construction Group - About us",
+        "url": "https://guerraco.com/about_us.cgi"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Guerra Construction Group - Contact Us",
+        "url": "https://guerraco.com/contact_us.cgi"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Guerra Construction Group",
+        "url": "https://web.agc-ca.org/54133-Engineering-Services/Guerra-Construction-Group-15335"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-009088",
+    "notes": "Company site and AGC directory show Guerra Construction Group, 984 Memorex Dr, Santa Clara, a licensed contractor doing site work, matching the agenda name, city and a portable relocation project. Summary, address, phone and website are supported by the cited pages and are neutral; no individuals' contact details were included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

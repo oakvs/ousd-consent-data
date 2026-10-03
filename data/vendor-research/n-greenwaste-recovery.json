@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.greenwaste.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.greenwaste.com/terms-of-service/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.greenwaste.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-greenwaste-recovery",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name 'GreenWaste Recovery, LLC' appears exactly on the company's Terms of Service page, matching the agenda name",
+      "Based in San Jose, CA (610 E. Gish Road and 2540 N First St), matching the agenda location 'San Jose, CA'",
+      "Company collects and processes solid waste and recyclables, matching the agenda contract title 'Solid Waste Handling & Recycling Services'"
+    ],
+    "key": "n-greenwaste-recovery",
+    "notes": "Company pages list two San Jose addresses (2540 N First St on the Contact page; 610 E. Gish Rd on Terms of Service and elsewhere) and slightly different phone numbers. Contact page values used. No page found explicitly linking GreenWaste to OUSD, so identity rests on name, city and service type. No registry IDs found.",
+    "profile": {
+      "address": "2540 N First St, Suite 300, San Jose, CA 95131",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "customerservice@greenwaste.com",
+      "headquarters": "San Jose, CA",
+      "legalName": "GreenWaste Recovery, LLC",
+      "orgType": "company",
+      "phone": "408-283-4800",
+      "samUei": null,
+      "summary": "A privately owned waste and recycling company based in San Jose, California. It collects and processes residential and commercial trash, recyclable materials, organic materials such as food scraps and yard trimmings, and construction and demolition debris.",
+      "website": "https://www.greenwaste.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - GreenWaste",
+        "url": "https://www.greenwaste.com/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Terms of Service - GreenWaste Recovery",
+        "url": "https://www.greenwaste.com/terms-of-service/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - GreenWaste",
+        "url": "https://www.greenwaste.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-greenwaste-recovery",
+    "notes": "Identity is plausible (exact legal name GreenWaste Recovery, LLC, San Jose, solid waste and recycling services), and contact fields match the Contact page, but the summary says 'privately owned' and neither the About page nor the home page states ownership, so the summary is not supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

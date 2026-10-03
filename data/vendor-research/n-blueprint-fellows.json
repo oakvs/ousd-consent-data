@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://blueprintschools.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blueprintschools.org/what-we-do",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blueprintschools.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/274199289",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-blueprint-fellows",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Blueprint Fellows' in Needham, MA; the Blueprint Math Fellows Program is run by Blueprint Schools Network, a registered 501(c)(3) in Needham, MA (ProPublica, EIN 27-4199289)",
+      "Website describes in-school small-group math tutoring, matching OUSD's 'High School Algebra Tutoring' and 'Classroom & academic programs' contract",
+      "Oakland Public Education Fund page says the Blueprint Math Fellows Program provides tutoring in Oakland middle schools (OUSD), and Blueprint's own site lists Oakland-area partnerships"
+    ],
+    "key": "n-blueprint-fellows",
+    "notes": "Agenda says 'Blueprint Fellows'; matched to Blueprint Schools Network (Blueprint Math Fellows Program). Mailing address is a PO box. California entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": "PO Box 920440, Needham, MA 02492",
+      "caEntityNumber": null,
+      "ein": "27-4199289",
+      "email": "info@blueprintschools.org",
+      "headquarters": "Needham, MA",
+      "legalName": "Blueprint Schools Network, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(617) 243-9620",
+      "samUei": null,
+      "summary": "Blueprint Schools Network is a nonprofit that works with school districts to improve student achievement. Its main program, Blueprint Math Fellows, places trained tutors in schools to teach math to small groups of students during the school day. It also helps districts plan and carry out school improvement efforts.",
+      "website": "https://blueprintschools.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Blueprint Schools Network",
+        "url": "https://blueprintschools.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "What We Do - Blueprint Schools Network, Inc.",
+        "url": "https://blueprintschools.org/what-we-do"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - Blueprint Schools Network",
+        "url": "https://blueprintschools.org/contact"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Blueprint Schools Network Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/274199289"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-blueprint-fellows",
+    "notes": "Blueprint Schools Network, Inc. (Needham, MA, 501(c)(3), EIN 27-4199289) runs the Math Fellows in-school small-group tutoring program and lists California partnerships, matching the agenda's Needham, MA location and the high school algebra tutoring contract. Summary, orgType, EIN and general business contact details are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

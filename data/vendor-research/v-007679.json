@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.zymbolic.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.zymbolic.org/clients",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/zymbolic-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007679",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Zymbolic LLC, an active California LLC based in Oakland, CA (bizprofile.net filing summary), matching the agenda's 'Oakland, CA'",
+      "zymbolic.org describes social and emotional learning programs and professional development for educators, matching OUSD's 'Student health, support & family services' and 'Classroom & academic programs' categories",
+      "zymbolic.org/clients lists Oakland Unified School District and its Office of Equity, matching the 'Office of Equity' agreement titles",
+      "Home page photo caption mentions a Zymbolic facilitator at Oakland Unified"
+    ],
+    "key": "v-007679",
+    "notes": "Entity number and legal name come from a third-party aggregator of CA Secretary of State data, not the SOS site itself. Email is obfuscated on the site, and the principal address appears to be residential, so both were omitted. A search snippet showed a different phone (510-566-5047) from a third-party directory; the site's own number was used.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "202021110916",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Zymbolic LLC",
+      "orgType": "company",
+      "phone": "(510) 463-4553",
+      "samUei": null,
+      "summary": "Zymbolic is a company that provides social and emotional learning programs to schools and community organizations in California. Its work includes classroom workshops, restorative justice community circles, student internships and tutoring, and professional development for educators.",
+      "website": "https://www.zymbolic.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Zymbolic - Social Emotional Learning",
+        "url": "https://www.zymbolic.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "CLIENTS - ZYMBOLIC",
+        "url": "https://www.zymbolic.org/clients"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters",
+          "caEntityNumber"
+        ],
+        "title": "Zymbolic LLC Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/zymbolic-llc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-007679",
+    "notes": "Identity is solid (Zymbolic LLC, Oakland, active CA LLC 202021110916; clients page lists OUSD Office of Equity and Oakland Tech), but the summary claims 'restorative justice community circles' and work 'in California' that none of the cited pages state (the home page only mentions classroom workshops, internships, tutoring, college support, and a classroom circle caption at Oakland Unified). The summary should be rewritten to match the sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

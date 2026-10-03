@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942346815",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bacr.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bacr.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000634",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Bay Area Community Resources' (ProPublica Nonprofit Explorer, EIN 94-2346815)",
+      "Its website describes expanded learning (after-school) programs, matching OUSD's 'After-school & summer programs' contracts",
+      "Its Expanded Learning page lists Oakland among the communities where it partners with schools",
+      "An OUSD school page (Hoover Elementary) says its after-school program is run in partnership with Bay Area Community Resources"
+    ],
+    "key": "v-000634",
+    "notes": "Agenda text gives San Rafael, CA; BACR previously listed an office at 171 Carlos Drive, San Rafael, but its website now shows El Cerrito as headquarters. No main phone or general email is listed on the organization's pages, so those are null. California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "11175 San Pablo Ave, El Cerrito, CA 94530",
+      "caEntityNumber": null,
+      "ein": "94-2346815",
+      "email": null,
+      "headquarters": "El Cerrito, CA",
+      "legalName": "Bay Area Community Resources",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that provides community services across the greater San Francisco Bay Area. Its work includes after-school and summer expanded learning programs, behavioral and mental health services, national service (AmeriCorps) programs, and youth workforce and re-entry programs.",
+      "website": "https://www.bacr.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Bay Area Community Resources - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942346815"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "Bay Area Community Resources",
+        "url": "https://www.bacr.org/"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Contact Us - Bay Area Community Resources",
+        "url": "https://www.bacr.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-000634",
+    "notes": "Bay Area Community Resources is a 501(c)(3) (EIN 94-2346815, ProPublica) whose site lists expanded learning, behavioral health, AmeriCorps and workforce/re-entry programs and an El Cerrito HQ at 11175 San Pablo Ave, matching the profile; it is the same org as OUSD's after-school contractor (the San Rafael location in the agenda is a legacy office). The summary is neutral; the word 'summer' comes from OUSD records rather than the home page, which is a minor point.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

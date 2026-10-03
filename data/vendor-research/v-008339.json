@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://pioneer-healthcare.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://pioneer-healthcare.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008339",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Pioneer Healthcare Services' (company website and footer)",
+      "Headquartered in San Diego, CA, matching the agenda text 'San Diego, CA'",
+      "Website describes placing speech-language pathologists, occupational and physical therapists and other clinicians in school districts, consistent with a Special Education Department nonpublic agency services master contract"
+    ],
+    "key": "v-008339",
+    "notes": "No registry IDs found (CA SOS and SAM.gov not checked directly). The contact page lists two San Diego addresses (10089 Willow Creek Rd #200, 92131 and 6215 Ferris Square STE 120, 92121); the site footer and third-party listings use Ferris Square, so that is used. No page found that links the company to OUSD directly; match rests on exact name, city and special-education related services staffing.",
+    "profile": {
+      "address": "6215 Ferris Square STE 120, San Diego, CA 92121",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "jobs@pioneer-healthcare.com",
+      "headquarters": "San Diego, CA",
+      "legalName": "Pioneer Healthcare Services",
+      "orgType": "company",
+      "phone": "(800) 683-1209",
+      "samUei": null,
+      "summary": "A San Diego-based staffing company founded in 2012 that places healthcare and education professionals, such as speech-language pathologists, occupational therapists and physical therapists, in schools, hospitals and other healthcare settings across the United States.",
+      "website": "https://pioneer-healthcare.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Healthcare & Education Staffing | Pioneer Healthcare Services",
+        "url": "https://pioneer-healthcare.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Pioneer Healthcare",
+        "url": "https://pioneer-healthcare.com/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008339",
+    "notes": "The company site shows the exact name Pioneer Healthcare Services, San Diego headquarters, a 2012 founding and school-based SLP/OT/PT placement, which fits a nonpublic agency special education master contract. The contact page lists two San Diego addresses and the footer address used here is one of them; the summary and contact fields are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

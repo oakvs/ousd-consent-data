@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://kahua.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://kahua.com/company/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://kahua.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.gsaelibrary.gsa.gov/ElibMain/home.do/contractorInfo.do?contractNumber=47QTCA19D00CF&contractorName=KAHUA,+INC.&executeQuery=YES",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kahua",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Kahua, Inc. appears in GSA eLibrary as KAHUA, INC. at 10000 Avalon Blvd, Alpharetta, GA, matching the agenda's 'Kahua, Inc.' and 'Alpharetta, GA'",
+      "Kahua's website describes construction and capital program project management software, matching the agenda item 'Construction Program and Project Management Software'",
+      "Kahua holds a federal GSA contract, consistent with it selling through a state/federal multiple award schedule (CMAS) to public agencies"
+    ],
+    "key": "n-kahua",
+    "notes": "UEI is taken from the GSA eLibrary contractor page, not SAM.gov directly. No California Secretary of State entity number was looked up. Kahua is a Georgia-based company, so the CA entity number is left null.",
+    "profile": {
+      "address": "10000 Avalon Boulevard, Suite 600, Alpharetta, GA 30009",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "connect@kahua.com",
+      "headquarters": "Alpharetta, GA",
+      "legalName": "Kahua, Inc.",
+      "orgType": "company",
+      "phone": "770.641.9994",
+      "samUei": "TF53E5YMKZA5",
+      "summary": "Kahua is a software company that sells a cloud platform for managing construction projects and capital building programs. Owners and project teams use it to track costs, risks, documents and collaboration from planning through construction and handover. The company was founded in 2009 and is based in Alpharetta, Georgia.",
+      "website": "https://kahua.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Kahua - Construction Project Management Software",
+        "url": "https://kahua.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "address",
+          "phone"
+        ],
+        "title": "About Kahua",
+        "url": "https://kahua.com/company/about/"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "phone"
+        ],
+        "title": "Contact Kahua",
+        "url": "https://kahua.com/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "samUei",
+          "website",
+          "phone"
+        ],
+        "title": "GSA eLibrary Contractor Information - KAHUA, INC.",
+        "url": "https://www.gsaelibrary.gsa.gov/ElibMain/home.do/contractorInfo.do?contractNumber=47QTCA19D00CF&contractorName=KAHUA,+INC.&executeQuery=YES"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "n-kahua",
+    "notes": "Kahua, Inc. of Alpharetta, GA matches the agenda name, city and the construction program management software purchase; the GSA eLibrary page confirms name, address, phone, website and UEI. Website, about and contact pages confirm the summary, 2009 founding, address, phone and the business sales email.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

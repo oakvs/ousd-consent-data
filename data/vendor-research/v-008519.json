@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://thebayspeechandplay.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/the-bay-speech-and",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008519",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: 'The Bay Speech and Play' is the practice name on its own website and a California professional corporation 'The Bay Speech And Play, A Speech Therapy Corporation' appears in filing records",
+      "Located in Oakland, CA (6536 Telegraph Avenue), matching the agenda text 'Oakland, CA'",
+      "Provides pediatric speech and language therapy, consistent with OUSD's Special Education Department services and nonpublic agency master contract"
+    ],
+    "key": "v-008519",
+    "notes": "Entity number and legal name come from a third-party aggregator of California Secretary of State filings (bizprofile.net), not the Secretary of State site itself; a reviewer may wish to confirm on bizfileonline.sos.ca.gov. The practice website does not mention OUSD. Filing principal address (66 Franklin Street Ste 300, Oakland) differs from the clinic address on the website; the website address is used. Practice is a professional corporation (company), not a nonprofit, so no EIN was sought.",
+    "profile": {
+      "address": "6536 Telegraph Avenue Ste. C101/102, Oakland, CA, USA",
+      "caEntityNumber": "5723076",
+      "ein": null,
+      "email": "info@bayspeechplay.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "The Bay Speech And Play, A Speech Therapy Corporation",
+      "orgType": "company",
+      "phone": "(707) 641-4759",
+      "samUei": null,
+      "summary": "The Bay Speech and Play is a pediatric speech therapy practice in Oakland, California. It provides speech and language therapy for children, including help with language delays, speech sound disorders, stuttering, social communication and autism. Services are offered in person and by teletherapy.",
+      "website": "https://thebayspeechandplay.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "The Bay Speech and Play - Speech Therapy, Speech Assessments",
+        "url": "https://thebayspeechandplay.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "The Bay Speech And Play, A Speech Therapy Corporation Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/the-bay-speech-and"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-008519",
+    "notes": "Exact name match, Oakland location and pediatric speech therapy fit the Special Education nonpublic agency contract; the practice website supports the summary and contact fields, and the bizprofile filing (formed May 2023, matching the 2023-24 first agreement) supports the legal name and entity number 5723076. The summary is neutral and contains only business contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

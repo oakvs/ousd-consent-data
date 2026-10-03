@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://network.procore.com/p/rook-electric-oakland",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildzoom.com/contractor/rook-electric",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://resources.finalsite.net/images/v1778527017/ousdorg/dcpqclyhocxataaeikts/2026_May_MEPS_SubContractors-Sheet1.pdf",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "v-003677",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD's own 2025-2026 Certified Sub/MEP Contractors List (Measure J Bond Program) lists 'Rook Electric', license C-10 (electrical), 8055 Collins Drive, Suite #205, Oakland CA 94621, matching the agenda's Oakland location",
+      "Procore business directory lists Rook Electric as an electrical and communications specialty contractor at 8055 Collins Drive, Suite 205, Oakland, CA",
+      "BuildZoom lists Rook Electric as an electrical contractor with the same phone number (510) 250-3811 as OUSD's list",
+      "Agenda contracts are for security cameras, door entry systems and surveillance upgrades at school sites by the Facilities division, consistent with a C-10 electrical/communications contractor"
+    ],
+    "key": "v-003677",
+    "notes": "No company website, CA Secretary of State record or SAM.gov record was confirmed, so those fields are null. rookelectric.com showed only 'Closed' and was not cited. The general email on OUSD's list (leo@rookelectric.com) looks like an individual's address, so it was omitted. BuildZoom shows a Sacramento P.O. Box mailing address and an inactive contractor license status (as of June 2026), which conflicts with the Oakland street address; the license status should be checked with the California Contractors State License Board before relying on it.",
+    "profile": {
+      "address": "8055 Collins Drive, Suite 205, Oakland, CA",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Rook Electric",
+      "orgType": "company",
+      "phone": "(510) 250-3811",
+      "samUei": null,
+      "summary": "Rook Electric is an electrical contractor based in Oakland, California. It does electrical and communications work, including electrical service upgrades and commercial electrical projects. It holds a California C-10 electrical contractor license classification.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Rook Electric - Oakland, CA (Procore Network)",
+        "url": "https://network.procore.com/p/rook-electric-oakland"
+      },
+      {
+        "supports": [
+          "phone",
+          "summary"
+        ],
+        "title": "Rook Electric (BuildZoom)",
+        "url": "https://www.buildzoom.com/contractor/rook-electric"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Oakland Unified School District - Certified Sub/MEP Contractors List 2025-2026",
+        "url": "https://resources.finalsite.net/images/v1778527017/ousdorg/dcpqclyhocxataaeikts/2026_May_MEPS_SubContractors-Sheet1.pdf"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-02",
+  "review": {
+    "key": "v-003677",
+    "notes": "Identity is confirmed: OUSD's own 2025-2026 Certified Sub/MEP Contractors List shows Rook Electric, C-10, 8055 Collins Drive Suite 205, Oakland, (510) 250-3811, matching Procore and the BuildZoom phone. However, the summary says the company 'holds' a C-10 license while BuildZoom (cited) shows all three electrical licenses inactive as of 06-06-2026, and the claim of 'electrical service upgrades and commercial electrical projects' appears in no cited source (Procore says only Electrical, Communications; BuildZoom says Electrical Work), so the summary is not supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}
