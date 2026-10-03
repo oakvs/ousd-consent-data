@@ -44,7 +44,11 @@ export type TVerifyChunk = { chunk: string; meetingKey: string; items: TVerifyIn
 const inputPath = (chunk: string): string => path.join(VERIFY_DIR, `${chunk}.input.json`)
 const outputPath = (chunk: string): string => path.join(VERIFY_DIR, `${chunk}.output.json`)
 
-export async function tasksForMeeting(key: string): Promise<TVerifyInputItem[]> {
+/**
+ * Second-reading tasks for one meeting. `alsoRead` adds a money reading for named items
+ * (`meetingKey:file`) that haven't had one, e.g. from a data sweep.
+ */
+export async function tasksForMeeting(key: string, alsoRead: ReadonlySet<string> = new Set()): Promise<TVerifyInputItem[]> {
   const [raw, enrichments, overrides, verifications] = await Promise.all([
     readRaw(key), readEnrichments(key), readOverrides(key), readVerifications(key),
   ])
@@ -76,7 +80,7 @@ export async function tasksForMeeting(key: string): Promise<TVerifyInputItem[]> 
     const { checks } = runChecks({ text: item.text, enrichment, sourceIssue: null })
     const failed = new Set(checks.filter(c => !c.pass).map(c => c.name))
     const tasks: TVerifyTask[] = []
-    if (highValue.has(item.file) || failed.has('amounts_in_text') || [...MONEY_SOFT_CHECKS].some(n => failed.has(n))) {
+    if (highValue.has(item.file) || failed.has('amounts_in_text') || [...MONEY_SOFT_CHECKS].some(n => failed.has(n)) || alsoRead.has(`${key}:${item.file}`)) {
       tasks.push('money')
     }
     if (enrichment.sourceIssueCandidate && !override?.sourceIssue) {
@@ -100,11 +104,11 @@ export async function tasksForMeeting(key: string): Promise<TVerifyInputItem[]> 
   return out
 }
 
-export async function exportVerifyChunks(keys: string[] | null, size: number): Promise<{ chunk: string; items: number }[]> {
+export async function exportVerifyChunks(keys: string[] | null, size: number, alsoRead: ReadonlySet<string> = new Set()): Promise<{ chunk: string; items: number }[]> {
   await mkdir(VERIFY_DIR, { recursive: true })
   const manifest: { chunk: string; items: number }[] = []
   for (const key of keys ?? await listRawKeys()) {
-    const all = await tasksForMeeting(key)
+    const all = await tasksForMeeting(key, alsoRead)
     const groups = [
       ['v', all.filter(i => !i.followUp)],
       ['t', all.filter(i => i.followUp === 'tiebreak')],

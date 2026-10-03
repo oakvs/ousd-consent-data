@@ -25,7 +25,8 @@
  *   enrich-export [--key K] [--size 30]       Write agent input chunks for unenriched items (.cache/enrich)
  *   enrich-check --chunk ID                   Validate one agent output chunk (exit 1 on errors)
  *   enrich-import [--key K] --model M         Merge validated chunk outputs into data/enrichments
- *   verify-export [--key K] [--size 30]       Write second-reading chunks (.cache/verify)
+ *   verify-export [--key K] [--size 30] [--also F]
+ *                                             Write second-reading chunks (.cache/verify); F lists extra item ids to read
  *   verify-check --chunk ID                   Validate one second-reading output chunk (exit 1 on errors)
  *   verify-import [--key K] --model M         Merge second readings into data/verifications
  *   vendor-aliases                            Regenerate vendor aliases (leading-zero typos, number-less names, name variants)
@@ -42,6 +43,7 @@
  *   review-import                             Store reviews; mark profiles publishable
  *   upcoming                                  Detect the next Board meeting from future-dated items → published/upcoming.json
  */
+import { readFile } from 'node:fs/promises'
 import os from 'node:os'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
@@ -99,6 +101,7 @@ const { positionals, values } = parseArgs({
     model: { type: 'string' },
     top: { type: 'string' },
     'min-approved': { type: 'string' },
+    also: { type: 'string' },
   },
 })
 
@@ -445,7 +448,8 @@ async function main(): Promise<void> {
       break
     }
     case 'verify-export': {
-      const manifest = await exportVerifyChunks(values.key ? [values.key] : null, Number(values.size ?? 30))
+      const alsoRead = new Set<string>(values.also ? (JSON.parse(await readFile(values.also, 'utf8')) as string[]) : [])
+      const manifest = await exportVerifyChunks(values.key ? [values.key] : null, Number(values.size ?? 30), alsoRead)
       console.log(`exported ${manifest.length} chunk(s), ${manifest.reduce((n, m) => n + m.items, 0)} item(s) → .cache/verify/manifest.json`)
       break
     }
