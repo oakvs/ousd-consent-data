@@ -27,7 +27,7 @@ export type TRunChanges = {
   pendingSummaries: number
 }
 
-const plural = (n: number, word: string): string => `${n} ${word}${n === 1 ? '' : 's'}`
+const plural = (n: number, word: string, many = `${word}s`): string => `${n} ${n === 1 ? word : many}`
 
 function revisionParts(diff: TItemDiff): string[] {
   const parts: string[] = []
@@ -87,7 +87,15 @@ export type TLlmMeetingChange = {
   flagged: number
 }
 
-export type TVendorResearchChange = {
+export type TVendorChanges = {
+  /** Duplicates the judge merged: the vendors folded in, the one they joined, and why. */
+  merged: { into: string; from: string[]; reason: string }[]
+  keptSeparate: number
+  mergeGroupsLeft: number
+  historiesUpdated: number
+  /** History files for vendor keys that no longer exist (merged away). */
+  historiesRemoved: number
+  historiesLeft: number
   researched: number
   /** Profiles that passed the review and now show on vendor pages. */
   published: number
@@ -100,8 +108,8 @@ export type TVendorResearchChange = {
 
 export type TLlmChanges = {
   meetings: TLlmMeetingChange[]
-  /** Null when vendor research didn't run. */
-  vendors?: TVendorResearchChange | null
+  /** Null when no vendor step ran. */
+  vendors?: TVendorChanges | null
   costUsd: number
   monthSpendUsd: number
   capUsd: number
@@ -125,19 +133,28 @@ export function llmCommitMessage(c: TLlmChanges): { subject: string; body: strin
     m.gaveUp ? `${m.key}: ${plural(m.gaveUp, 'item')} still failing after 3 days — needs a human` : null,
   ]).filter((l): l is string => l != null)
   const v = c.vendors
-  const vendorLine = v && (v.researched || v.reviewed)
-    ? `vendors: ${v.researched} researched, ${plural(v.published, 'profile')} published`
-    : null
+  const vendorParts = v
+    ? [
+      v.merged.length ? `${plural(v.merged.reduce((n, m) => n + m.from.length, 0), 'duplicate')} merged` : null,
+      v.researched || v.reviewed ? `${v.researched} researched, ${plural(v.published, 'profile')} published` : null,
+      v.historiesUpdated ? `${plural(v.historiesUpdated, 'Legistar history', 'Legistar histories')} updated` : null,
+    ].filter((l): l is string => l != null)
+    : []
+  const vendorLine = vendorParts.length ? `vendors: ${vendorParts.join(', ')}` : null
   const vendorProblems = v
     ? [
-      v.failed ? `vendors: ${plural(v.failed, 'vendor')} failed research or review (retried tomorrow)` : null,
-      v.gaveUp ? `vendors: ${plural(v.gaveUp, 'vendor')} still failing after 3 days — needs a human` : null,
+      ...v.merged.map(m => `vendors: merged ${m.from.join(', ')} into ${m.into} — ${m.reason}`),
+      v.historiesRemoved ? `vendors: ${plural(v.historiesRemoved, 'history file')} for merged-away vendors removed` : null,
+      v.failed ? `vendors: ${plural(v.failed, 'vendor')} or merge group(s) failed (retried tomorrow)` : null,
+      v.gaveUp ? `vendors: ${plural(v.gaveUp, 'vendor')} or merge group(s) still failing after 3 days — needs a human` : null,
+      v.mergeGroupsLeft ? `vendors: ${v.mergeGroupsLeft} possible duplicate group(s) still to judge (next runs)` : null,
+      v.historiesLeft ? `vendors: ${v.historiesLeft} Legistar histories still to update (next runs)` : null,
       v.remaining ? `vendors: ${v.remaining} still to research (next runs)` : null,
     ].filter((l): l is string => l != null)
     : []
   const subject = lines.length
     ? lines.join('; ')
-    : vendorLine ? `Vendor profiles: ${vendorLine.slice('vendors: '.length)}` : problems.length ? `llm: ${problems[0]}` : 'llm: bookkeeping'
+    : vendorLine ? `Vendors: ${vendorLine.slice('vendors: '.length)}` : problems.length ? `llm: ${problems[0]}` : vendorProblems.length ? vendorProblems[0] : 'llm: bookkeeping'
   const body = [
     ...lines,
     ...(vendorLine ? [vendorLine] : []),

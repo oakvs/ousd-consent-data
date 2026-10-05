@@ -50,8 +50,8 @@ export const writeLlmState = (state: TLlmState): Promise<void> => writeJson(stat
 
 export const failureKey = (stage: 'enrich' | 'verify', meetingKey: string, file: string): string => `${stage}:${meetingKey}:${file}`
 
-/** `${stage}:${vendorKey}`, for vendor research and its review. */
-export const vendorFailureKey = (stage: 'research' | 'review', vendorKey: string): string => `${stage}:${vendorKey}`
+/** `${stage}:${vendorKey}`, for vendor research, its review, and merge groups (keys joined with `|`). */
+export const vendorFailureKey = (stage: 'research' | 'review' | 'merge', vendorKey: string): string => `${stage}:${vendorKey}`
 
 export type TRetryDecision = 'try' | 'wait' | 'gave_up'
 

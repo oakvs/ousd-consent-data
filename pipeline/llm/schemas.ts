@@ -102,3 +102,11 @@ export const ReviewReply = z.object({
   notes: z.string().nullable(),
 })
 export type TReviewReply = z.infer<typeof ReviewReply>
+
+/** Duplicate-vendor judge reply: one group's decision. */
+export const MergeReply = z.object({
+  into: z.string().nullable(),
+  merge: z.array(z.string()),
+  reason: z.string(),
+})
+export type TMergeReply = z.infer<typeof MergeReply>

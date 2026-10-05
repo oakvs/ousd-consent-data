@@ -34,6 +34,8 @@
  *   vendor-merge-check --batch B              Validate one merge-judge output (exit 1 on errors)
  *   vendor-merge-apply --model M              Write passing merge decisions to manual aliases and the decisions log
  *   vendor-history [--force]                  Fetch every Legistar record per vendor (cached; --force refetches)
+ *   vendor-history --update [--limit N]       Only vendors whose history is missing or behind, live (as in `run`)
+ *   vendor-merge [--limit N]                  Judge possible duplicate vendors through the Claude API (as in `run`), then rebuild; no git
  *   research-export [--top N] [--key K] [--min-approved USD]
  *                                             Write vendor research inputs (organizations only) to .cache/research
  *   research-check --key K                    Validate one research output: schema + fetch every cited page
@@ -97,6 +99,7 @@ const { positionals, values } = parseArgs({
     repo: { type: 'string' },
     summary: { type: 'string' },
     force: { type: 'boolean', default: false },
+    update: { type: 'boolean', default: false },
     size: { type: 'string' },
     chunk: { type: 'string' },
     model: { type: 'string' },
@@ -403,6 +406,13 @@ async function main(): Promise<void> {
       break
     }
     case 'vendor-history': {
+      if (values.update) {
+        const { updateVendorHistories } = await import('./legistar/vendor-history')
+        const u = await updateVendorHistories({ limit: values.limit ? Number(values.limit) : undefined })
+        console.log(`vendor history: ${u.updated.length} updated, ${u.removed.length} removed, ${u.remaining} still behind`)
+        if (u.updated.length || u.removed.length) await buildAll()
+        break
+      }
       const r = await fetchVendorHistories({ fresh: values.force })
       console.log(`vendor history: ${r.vendors} vendor(s), ${r.matters} Legistar record(s) → data/legistar/vendors`)
       break
@@ -442,6 +452,16 @@ async function main(): Promise<void> {
       for (const p of problems) console.log(`ERROR ${p}`)
       console.log(problems.length ? `FAIL: ${problems.length} error(s)` : 'PASS')
       process.exitCode = problems.length ? 1 : 0
+      break
+    }
+    case 'vendor-merge': {
+      const [{ mergePhase }, { oaklandToday }] = await Promise.all([import('./llm/merge'), import('@oakvs/consent-schema/format')])
+      const r = await mergePhase({ today: oaklandToday(), limit: values.limit ? Number(values.limit) : undefined })
+      for (const m of r.merged) console.log(`merged ${m.from.join(', ')} → ${m.into}: ${m.reason}`)
+      for (const f of r.failed) console.log(`${f.key}: FAILED ${f.error}`)
+      if (r.reason) console.log(r.reason)
+      console.log(`${r.kept} group(s) kept separate, ${r.remaining} still to judge · cost $${(r.usage?.costUsd ?? 0).toFixed(2)}`)
+      if (r.merged.length) await buildAll()
       break
     }
     case 'research': {

@@ -107,8 +107,8 @@ describe('vendor research in consent run', () => {
     expect(big.review).toMatchObject({ key: 'v-big', verdict: 'confirmed' })
     expect((await readLlmState()).spend['2026-10']).toBeCloseTo(0.6)
 
-    const msg = llmCommitMessage({ meetings: [], vendors: { researched: 2, published: 1, reviewed: 1, failed: 0, gaveUp: 0, remaining: 0 }, costUsd: 0.6, monthSpendUsd: 0.6, capUsd: 25, capped: false })
-    expect(msg.subject).toBe('Vendor profiles: 2 researched, 1 profile published')
+    const msg = llmCommitMessage({ meetings: [], vendors: { merged: [], keptSeparate: 0, mergeGroupsLeft: 0, historiesUpdated: 0, historiesRemoved: 0, historiesLeft: 0, researched: 2, published: 1, reviewed: 1, failed: 0, gaveUp: 0, remaining: 0 }, costUsd: 0.6, monthSpendUsd: 0.6, capUsd: 25, capped: false })
+    expect(msg.subject).toBe('Vendors: 2 researched, 1 profile published')
   })
 
   it('keeps a reply that fails some checks (the build drops those fields), and a rejected review is not published', async () => {

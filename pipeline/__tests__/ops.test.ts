@@ -46,7 +46,7 @@ describe('alerts for a run', () => {
       ...baseSummary,
       llm: {
         status: 'ran', reason: null, meetings: [], usage: { requests: 1, inputTokens: 0, outputTokens: 0, cacheReadTokens: 0, cacheWriteTokens: 0, costUsd },
-        monthSpendUsd, capUsd: 25, commit: null, pushed: true, deployed: true, error: null, research: null,
+        monthSpendUsd, capUsd: 25, commit: null, pushed: true, deployed: true, error: null, merge: null, history: null, research: null,
         changes: { meetings: [{ key: '2026-10-14', summaries: 87, secondReadings: 24, failed: 0, waiting: 0, gaveUp, flagged }], costUsd, monthSpendUsd, capUsd: 25, capped: false },
       },
     })

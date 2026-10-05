@@ -75,6 +75,15 @@ export function runNotices(s: TRunSummary): TNotice[] {
     }
   }
   const v = llm.changes.vendors
+  if (v?.merged.length) {
+    // A wrong merge puts one organization's contracts on another's page, so each one is announced.
+    notices.push({
+      title: `${plural(v.merged.reduce((n, m) => n + m.from.length, 0), 'duplicate vendor')} merged`,
+      message: `${v.merged.map(m => `${m.from.join(', ')} → ${m.into}: ${m.reason}`).join('\n')}\nTo undo one, remove its entry from the "manual" section of data/vendors/aliases.json.`,
+      priority: 'default',
+      tags: ['link'],
+    })
+  }
   if (v?.published) {
     notices.push({ title: `${plural(v.published, 'vendor profile')} published`, message: `${v.researched} new vendor(s) researched; ${plural(v.published, 'profile')} passed the independent review.`, priority: 'low', tags: ['mag'], click: SITE })
   }
@@ -136,13 +145,20 @@ export function stepSummary(s: TRunSummary, notices: TNotice[]): string {
   const llm = s.llm
   if (llm.status === 'planned') {
     lines.push(`- LLM step would run for ${llm.plan.length} meeting(s)`)
-    if (llm.research.pending) lines.push(`- Vendor research would run for ${Math.min(llm.research.pending, llm.research.perRun)} of ${llm.research.pending} new vendor(s)`)
+    const v = llm.vendors
+    if (v.mergeGroups) lines.push(`- Duplicate-vendor judge would run for ${Math.min(v.mergeGroups, v.mergePerRun)} of ${v.mergeGroups} group(s)`)
+    if (v.historiesDue) lines.push(`- Vendor histories would update for ${Math.min(v.historiesDue, v.historyPerRun)} of ${v.historiesDue} vendor(s)`)
+    if (v.research) lines.push(`- Vendor research would run for ${Math.min(v.research, v.researchPerRun)} of ${v.research} new vendor(s)`)
   }
   else if (llm.status === 'skipped') lines.push(`- LLM step skipped: ${llm.reason}`)
   else if (llm.status !== 'disabled') {
     if (llm.commit) lines.push(`- LLM commit: \`${llm.commit.sha.slice(0, 7)}\` ${llm.commit.subject}`)
     const v = llm.changes.vendors
-    if (v && (v.researched || v.reviewed || v.remaining)) lines.push(`- Vendors: ${v.researched} researched, ${v.reviewed} reviewed, ${v.published} published, ${v.remaining} still to research`)
+    if (v) {
+      lines.push(`- Vendors: ${v.merged.length} merge(s), ${v.keptSeparate} kept separate, ${v.mergeGroupsLeft} group(s) left to judge`)
+      lines.push(`- Vendor histories: ${v.historiesUpdated} updated, ${v.historiesRemoved} removed, ${v.historiesLeft} left`)
+      lines.push(`- Vendor research: ${v.researched} researched, ${v.reviewed} reviewed, ${v.published} published, ${v.remaining} left`)
+    }
     lines.push(`- LLM cost: $${(llm.usage?.costUsd ?? 0).toFixed(2)} (this month $${llm.monthSpendUsd.toFixed(2)} of $${llm.capUsd})`)
   }
   for (const n of notices) lines.push(`- Alert: **${n.title}**: ${n.message}`)

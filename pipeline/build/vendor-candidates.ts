@@ -108,7 +108,10 @@ function components(pairs: [string, string][]): string[][] {
   return [...groups.values()].map(g => g.sort()).sort((a, b) => a[0].localeCompare(b[0]))
 }
 
-export async function findVendorCandidates(batchSize = 8): Promise<{ groups: number; vendors: number; batches: string[] }> {
+export type TCandidateGroup = { group: string; vendors: TVendorEvidence[] }
+
+/** Groups of possibly-duplicate organizations that no judge has decided yet, with evidence. */
+export async function candidateGroups(): Promise<TCandidateGroup[]> {
   const index = JSON.parse(await readFile(path.join(getDataRoot(), 'published', 'vendors', 'index.json'), 'utf8')) as TVendorIndexFile
   const orgs = index.vendors.filter(v => v.kind !== 'individual')
   const log = await readMergeLog()
@@ -141,10 +144,14 @@ export async function findVendorCandidates(batchSize = 8): Promise<{ groups: num
     }
   }
   const groups = components(pairs).filter(g => g.length <= 6 && !decided.has(g.join('|')))
-
-  await mkdir(MERGE_DIR, { recursive: true })
-  const withEvidence = []
+  const withEvidence: TCandidateGroup[] = []
   for (const [i, keys] of groups.entries()) withEvidence.push({ group: `g${String(i + 1).padStart(3, '0')}`, vendors: await Promise.all(keys.map(evidence)) })
+  return withEvidence
+}
+
+export async function findVendorCandidates(batchSize = 8): Promise<{ groups: number; vendors: number; batches: string[] }> {
+  const withEvidence = await candidateGroups()
+  await mkdir(MERGE_DIR, { recursive: true })
   await writeFile(path.join(MERGE_DIR, 'candidates.json'), `${JSON.stringify(withEvidence, null, 2)}\n`)
   const batches: string[] = []
   for (let start = 0, n = 1; start < withEvidence.length; start += batchSize, n++) {
@@ -159,8 +166,27 @@ export async function findVendorCandidates(batchSize = 8): Promise<{ groups: num
 
 export const MERGE_PROMPT_VERSION = 'vendor-merge.v1.md'
 
-type TJudgeDecision = { group: string; into: string | null; merge: string[]; reason: string }
-type TBatchInput = { batch: string; groups: { group: string; vendors: TVendorEvidence[] }[] }
+export type TJudgeDecision = { group: string; into: string | null; merge: string[]; reason: string }
+type TBatchInput = { batch: string; groups: TCandidateGroup[] }
+
+/** Problems with one group's decision; an empty list means it passes. */
+export function checkDecision(g: TCandidateGroup, d: Omit<TJudgeDecision, 'group'>): string[] {
+  const problems: string[] = []
+  const keys = new Set(g.vendors.map(v => v.key))
+  if (!Array.isArray(d.merge)) return [`${g.group}: merge must be a list`]
+  if (typeof d.reason !== 'string' || !d.reason.trim()) problems.push(`${g.group}: reason is required`)
+  if (!d.merge.length) {
+    if (d.into != null) problems.push(`${g.group}: into must be null when merge is empty`)
+    return problems
+  }
+  if (!d.into || !keys.has(d.into)) problems.push(`${g.group}: into must be one of the group's keys`)
+  for (const k of d.merge) {
+    if (!keys.has(k)) problems.push(`${g.group}: ${k} is not in the group`)
+    if (k === d.into) problems.push(`${g.group}: ${k} can't be merged into itself`)
+  }
+  if (d.into?.startsWith('n-') && d.merge.some(k => k.startsWith('v-'))) problems.push(`${g.group}: a vendor with a number (v-) can't merge into a name-only vendor; use a v- key as into`)
+  return problems
+}
 
 async function readBatch(batch: string): Promise<{ input: TBatchInput; output: unknown }> {
   const input = JSON.parse(await readFile(path.join(MERGE_DIR, `${batch}.input.json`), 'utf8')) as TBatchInput
@@ -187,19 +213,7 @@ export async function checkMergeBatch(batch: string): Promise<string[]> {
       problems.push(`${g.group}: missing`)
       continue
     }
-    const keys = new Set(g.vendors.map(v => v.key))
-    if (!Array.isArray(d.merge)) problems.push(`${g.group}: merge must be a list`)
-    if (typeof d.reason !== 'string' || !d.reason.trim()) problems.push(`${g.group}: reason is required`)
-    if (!d.merge?.length) {
-      if (d.into != null) problems.push(`${g.group}: into must be null when merge is empty`)
-      continue
-    }
-    if (!d.into || !keys.has(d.into)) problems.push(`${g.group}: into must be one of the group's keys`)
-    for (const k of d.merge) {
-      if (!keys.has(k)) problems.push(`${g.group}: ${k} is not in the group`)
-      if (k === d.into) problems.push(`${g.group}: ${k} can't be merged into itself`)
-    }
-    if (d.into?.startsWith('n-') && d.merge.some(k => k.startsWith('v-'))) problems.push(`${g.group}: a vendor with a number (v-) can't merge into a name-only vendor; use a v- key as into`)
+    problems.push(...checkDecision(g, d))
   }
   return problems
 }
@@ -211,31 +225,38 @@ export async function checkMergeBatch(batch: string): Promise<string[]> {
  * group isn't judged again.
  */
 export async function applyMergeBatches(batches: string[], decidedBy: string, decidedOn: string): Promise<{ merged: number; kept: number }> {
+  const decisions: { group: TCandidateGroup; decision: TJudgeDecision }[] = []
+  for (const batch of batches) {
+    if ((await checkMergeBatch(batch)).length) throw new Error(`${batch} doesn't pass vendor-merge-check`)
+    const { input, output } = await readBatch(batch)
+    for (const d of (output as { decisions: TJudgeDecision[] }).decisions) decisions.push({ group: input.groups.find(g => g.group === d.group)!, decision: d })
+  }
+  return applyDecisions(decisions, decidedBy, decidedOn)
+}
+
+/** Record checked decisions: merges as `manual` aliases, and every decision in the log. */
+export async function applyDecisions(decisions: { group: TCandidateGroup; decision: Omit<TJudgeDecision, 'group'> }[], decidedBy: string, decidedOn: string): Promise<{ merged: number; kept: number }> {
   const aliasesFile = path.join(getDataRoot(), 'vendors', 'aliases.json')
   const aliases = JSON.parse(await readFile(aliasesFile, 'utf8')) as { manual: { vendorNumbers: Record<string, string>; names: Record<string, string> } }
   const log = await readMergeLog()
   let merged = 0
   let kept = 0
-  for (const batch of batches) {
-    if ((await checkMergeBatch(batch)).length) throw new Error(`${batch} doesn't pass vendor-merge-check`)
-    const { input, output } = await readBatch(batch)
-    for (const d of (output as { decisions: TJudgeDecision[] }).decisions) {
-      const keys = input.groups.find(g => g.group === d.group)!.vendors.map(v => v.key)
-      if (!d.merge.length || !d.into) {
-        log.keptSeparate.push({ keys: [...keys].sort(), reason: d.reason, decidedBy, decidedOn })
-        kept++
-        continue
-      }
-      for (const from of d.merge) {
-        const target = d.into.slice(2)
-        if (from.startsWith('v-')) aliases.manual.vendorNumbers[from.slice(2)] = target
-        else aliases.manual.names[from.slice(2).replace(/-/g, ' ')] = d.into.startsWith('v-') ? target : target.replace(/-/g, ' ')
-        log.merged.push({ from, into: d.into, reason: d.reason, decidedBy, decidedOn })
-        merged++
-      }
-      const rest = keys.filter(k => k !== d.into && !d.merge.includes(k))
-      if (rest.length) log.keptSeparate.push({ keys: [...new Set([d.into, ...rest])].sort(), reason: d.reason, decidedBy, decidedOn })
+  for (const { group, decision: d } of decisions) {
+    const keys = group.vendors.map(v => v.key)
+    if (!d.merge.length || !d.into) {
+      log.keptSeparate.push({ keys: [...keys].sort(), reason: d.reason, decidedBy, decidedOn })
+      kept++
+      continue
     }
+    for (const from of d.merge) {
+      const target = d.into.slice(2)
+      if (from.startsWith('v-')) aliases.manual.vendorNumbers[from.slice(2)] = target
+      else aliases.manual.names[from.slice(2).replace(/-/g, ' ')] = d.into.startsWith('v-') ? target : target.replace(/-/g, ' ')
+      log.merged.push({ from, into: d.into, reason: d.reason, decidedBy, decidedOn })
+      merged++
+    }
+    const rest = keys.filter(k => k !== d.into && !d.merge.includes(k))
+    if (rest.length) log.keptSeparate.push({ keys: [...new Set([d.into, ...rest])].sort(), reason: d.reason, decidedBy, decidedOn })
   }
   const { stableStringify } = await import('../store')
   await writeFile(aliasesFile, stableStringify(aliases))

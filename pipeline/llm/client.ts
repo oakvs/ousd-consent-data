@@ -26,12 +26,14 @@ export const MODELS = {
   /** Vendor research with web search; a different model does the independent review. */
   research: process.env.CONSENT_RESEARCH_MODEL ?? 'claude-sonnet-5-5',
   review: process.env.CONSENT_REVIEW_MODEL ?? 'claude-opus-5-5',
+  /** Duplicate-vendor judge: a wrong merge puts one organization's contracts on another's page. */
+  merge: process.env.CONSENT_MERGE_MODEL ?? 'claude-opus-5-5',
 } as const
 
 export type TEffort = 'low' | 'medium' | 'high' | 'xhigh' | 'max'
 
 /** Effort is set explicitly: Opus 5.5 defaults to `medium`, and these readings decide what gets published as fact. */
-export const EFFORT: Record<keyof typeof MODELS, TEffort> = { enrich: 'high', verify: 'high', tiebreak: 'high', research: 'high', review: 'high' }
+export const EFFORT: Record<keyof typeof MODELS, TEffort> = { enrich: 'high', verify: 'high', tiebreak: 'high', research: 'high', review: 'high', merge: 'high' }
 
 /** USD per web search (web fetch has no per-use charge, only tokens). */
 export const WEB_SEARCH_USD = 0.01

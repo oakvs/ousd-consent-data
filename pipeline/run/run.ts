@@ -13,10 +13,12 @@
  *        from the meeting date until it is final
  *   2. fast publish: build → commit → push → deploy hook
  *   3. LLM publish: summaries for new or changed items, then second
- *      readings → vendor aliases → build → research for new vendors (with
- *      web search) and an independent review → build → commit → push →
- *      deploy hook. Skipped without ANTHROPIC_API_KEY or with --no-llm;
- *      stopped by the monthly cap, which summaries get first.
+ *      readings → vendor aliases → build → the duplicate-vendor judge →
+ *      vendor histories from Legistar → build → research for new vendors
+ *      (with web search) and an independent review → build → commit → push
+ *      → deploy hook. The LLM parts are skipped without ANTHROPIC_API_KEY
+ *      and stopped by the monthly cap, which summaries get first; vendor
+ *      histories still run. --no-llm skips the whole step.
  *
  * `--dry-run` works on a scratch copy of data/ and prints what would change;
  * it reports what the LLM step would do but never calls the API.
@@ -36,7 +38,10 @@ import { regenerateAliasFile } from '../build/aliases'
 import { buildAll } from '../build/write'
 import { addUsage, emptyUsage } from '../llm/client'
 import { llmPhase, llmPlan } from '../llm/phase'
+import { mergePhase, mergePerRun } from '../llm/merge'
 import { researchPhase, researchPerRun } from '../llm/research'
+import { candidateGroups } from '../build/vendor-candidates'
+import { historyPerRun, updateVendorHistories, vendorHistoriesDue } from '../legistar/vendor-history'
 import { unresearchedVendors } from '../research/vendor-research'
 import { ingestMeeting } from '../ingest'
 import { getEventItems, stats } from '../legistar/client'
@@ -52,7 +57,9 @@ import type { TBuildSummary } from '../build/write'
 import type { TProbedEvents } from '../legistar/discover'
 import type { ILlm } from '../llm/client'
 import type { TLlmPhaseResult } from '../llm/phase'
+import type { TMergePhaseResult } from '../llm/merge'
 import type { TResearchPhaseResult } from '../llm/research'
+import type { TVendorHistoryUpdate } from '../legistar/vendor-history'
 import type { TLlmChanges, TMeetingChange, TRunChanges } from './message'
 
 /** Resolve EventIds for meetings from this many days ago … */
@@ -79,9 +86,17 @@ export type TRunOptions = {
 
 export type TLlmSummary =
   | { status: 'disabled' }
-  | { status: 'planned'; plan: { key: string; enrich: number; verify: number }[]; research: { pending: number; perRun: number } }
+  | {
+    status: 'planned'
+    plan: { key: string; enrich: number; verify: number }[]
+    vendors: { mergeGroups: number; mergePerRun: number; historiesDue: number; historyPerRun: number; research: number; researchPerRun: number }
+  }
   | (TLlmPhaseResult & {
-    /** Vendor research, run after the summaries; null when it didn't run (the summaries failed or hit the cap). */
+    /** The duplicate-vendor judge; null when it didn't run (the summaries failed, were skipped, or hit the cap). */
+    merge: TMergePhaseResult | null
+    /** Legistar histories for vendors with new items; null if the step failed before them. */
+    history: TVendorHistoryUpdate | null
+    /** Vendor research, run last; null when it didn't run. */
     research: TResearchPhaseResult | null
     changes: TLlmChanges
     commit: { sha: string; subject: string } | null
@@ -242,10 +257,17 @@ async function dryRun(now: Date): Promise<TRunSummary> {
     const changes = await cycle(now)
     const changedFiles = (await diffTrees(real, copy)).map(f => path.join('data', f))
     const plan = await llmPlan()
-    const research = { pending: (await unresearchedVendors()).length, perRun: researchPerRun() }
+    const vendors = {
+      mergeGroups: (await candidateGroups()).length,
+      mergePerRun: mergePerRun(),
+      historiesDue: (await vendorHistoriesDue()).length,
+      historyPerRun: historyPerRun(),
+      research: (await unresearchedVendors()).length,
+      researchPerRun: researchPerRun(),
+    }
     return {
       ...changes,
-      llm: { status: 'planned', plan, research },
+      llm: { status: 'planned', plan, vendors },
       startedAt,
       dryRun: true,
       changedFiles,
@@ -268,7 +290,10 @@ async function deploy(url: string): Promise<boolean> {
 }
 
 /** Summary numbers for the LLM commit, with how many items the build flagged per meeting. */
-export function toLlmChanges(phase: TLlmPhaseResult, built: TBuildSummary, research: TResearchPhaseResult | null = null): TLlmChanges {
+export type TVendorSteps = { merge?: TMergePhaseResult | null; history?: TVendorHistoryUpdate | null; research?: TResearchPhaseResult | null }
+
+export function toLlmChanges(phase: TLlmPhaseResult, built: TBuildSummary, { merge = null, history = null, research = null }: TVendorSteps = {}): TLlmChanges {
+  const paid = [merge, research].filter((x): x is TMergePhaseResult | TResearchPhaseResult => x?.usage != null)
   return {
     meetings: phase.meetings.map(m => {
       const meeting = built.meetings.find(b => b.meeting.key === m.key)
@@ -282,18 +307,27 @@ export function toLlmChanges(phase: TLlmPhaseResult, built: TBuildSummary, resea
         flagged: meeting?.items.filter(i => i.review.status === 'needs_review' || i.review.status === 'blocked').length ?? 0,
       }
     }),
-    vendors: research && {
-      researched: research.researched.length,
-      published: research.reviewed.filter(r => r.publishable).length,
-      reviewed: research.reviewed.length,
-      failed: research.failed.length,
-      gaveUp: research.gaveUp.length,
-      remaining: research.remaining,
-    },
-    costUsd: (phase.usage?.costUsd ?? 0) + (research?.usage?.costUsd ?? 0),
-    monthSpendUsd: research?.usage ? research.monthSpendUsd : phase.monthSpendUsd,
+    vendors: merge || history || research
+      ? {
+        merged: merge?.merged ?? [],
+        keptSeparate: merge?.kept ?? 0,
+        mergeGroupsLeft: merge?.remaining ?? 0,
+        historiesUpdated: history?.updated.length ?? 0,
+        historiesRemoved: history?.removed.length ?? 0,
+        historiesLeft: history?.remaining ?? 0,
+        researched: research?.researched.length ?? 0,
+        published: research?.reviewed.filter(r => r.publishable).length ?? 0,
+        reviewed: research?.reviewed.length ?? 0,
+        failed: (research?.failed.length ?? 0) + (merge?.failed.length ?? 0),
+        gaveUp: (research?.gaveUp.length ?? 0) + (merge?.gaveUp.length ?? 0),
+        remaining: research?.remaining ?? 0,
+      }
+      : null,
+    costUsd: (phase.usage?.costUsd ?? 0) + paid.reduce((n, x) => n + x.usage!.costUsd, 0),
+    // Each step reads the ledger the one before it wrote, so the last paid step has the month's total.
+    monthSpendUsd: paid.at(-1)?.monthSpendUsd ?? phase.monthSpendUsd,
     capUsd: phase.capUsd,
-    capped: phase.status === 'capped' || research?.status === 'capped',
+    capped: phase.status === 'capped' || merge?.status === 'capped' || research?.status === 'capped',
   }
 }
 
@@ -350,6 +384,8 @@ async function fastPublish(now: Date, push: boolean, deployHookUrl: string | und
 async function llmPublish(now: Date, push: boolean, deployHookUrl: string | undefined, llmClient: ILlm | undefined): Promise<TLlmSummary> {
   const today = oaklandToday(now)
   let phase: TLlmPhaseResult | null = null
+  let merge: TMergePhaseResult | null = null
+  let history: TVendorHistoryUpdate | null = null
   let research: TResearchPhaseResult | null = null
   let failure: unknown = null
   try {
@@ -357,14 +393,29 @@ async function llmPublish(now: Date, push: boolean, deployHookUrl: string | unde
   } catch (error) {
     failure = error
   }
-  if (phase?.status === 'skipped') {
-    return { ...phase, research: null, changes: toLlmChanges(phase, { meetings: [], vendors: 0 }), commit: null, pushed: false, deployed: false, error: null }
-  }
-  // New summaries can name new vendors: fold obvious name variants into known vendors before
-  // building the vendor index, so a variant isn't researched as a new vendor.
+  // The paid vendor steps run only after the summaries finished, within the cap.
+  const paidOk = (): boolean => !failure && phase?.status === 'ran' && merge?.status !== 'capped'
+
+  // New summaries can name new vendors: fold obvious name variants into known vendors first.
   await regenerateAliasFile()
   let built = await buildAll()
-  if (!failure && phase?.status === 'ran') {
+  if (paidOk()) {
+    try {
+      merge = await mergePhase({ llm: llmClient, today })
+    } catch (error) {
+      failure = error
+    }
+  }
+  if (!failure) {
+    try {
+      // After the judge, so histories are filed under the merged vendor keys.
+      history = await updateVendorHistories()
+    } catch (error) {
+      failure = error
+    }
+  }
+  if (merge?.merged.length || history?.updated.length || history?.removed.length) built = await buildAll()
+  if (paidOk()) {
     try {
       research = await researchPhase({ llm: llmClient, today })
       if (research.researched.length || research.reviewed.length) built = await buildAll()
@@ -372,20 +423,24 @@ async function llmPublish(now: Date, push: boolean, deployHookUrl: string | unde
       failure = error
     }
   }
+
   const result: TLlmPhaseResult = phase ?? { status: 'ran', reason: null, meetings: [], usage: null, monthSpendUsd: 0, capUsd: 0 }
-  const changes = toLlmChanges(result, built, research)
+  const changes = toLlmChanges(result, built, { merge, history, research })
   let usage = result.usage
-  if (research?.usage) {
+  for (const step of [merge, research]) {
+    if (!step?.usage) continue
     usage = { ...(usage ?? emptyUsage()) }
-    addUsage(usage, research.usage)
+    addUsage(usage, step.usage)
   }
-  const status = research?.status === 'capped' ? 'capped' : result.status
+  const cappedBy = [result, merge, research].find(x => x?.status === 'capped')
   const summary: TLlmSummary = {
     ...result,
-    status,
-    reason: status === 'capped' ? (result.reason ?? research?.reason ?? null) : result.reason,
+    status: cappedBy ? 'capped' : result.status,
+    reason: cappedBy?.reason ?? result.reason,
     usage,
     monthSpendUsd: changes.monthSpendUsd,
+    merge,
+    history,
     research,
     changes,
     commit: null,
@@ -449,11 +504,14 @@ export function printSummary(s: TRunSummary): void {
     const enrich = llm.plan.reduce((n, p) => n + p.enrich, 0)
     const verify = llm.plan.reduce((n, p) => n + p.verify, 0)
     console.log(enrich || verify ? `LLM step would run: ${enrich} summar${enrich === 1 ? 'y' : 'ies'}, ${verify} second reading(s)` : 'LLM step: nothing to do')
-    if (llm.research.pending) console.log(`vendor research would run: ${Math.min(llm.research.pending, llm.research.perRun)} of ${llm.research.pending} new vendor(s) (plus any from new summaries)`)
+    const v = llm.vendors
+    if (v.mergeGroups) console.log(`duplicate-vendor judge would run: ${Math.min(v.mergeGroups, v.mergePerRun)} of ${v.mergeGroups} group(s)`)
+    if (v.historiesDue) console.log(`vendor histories would update: ${Math.min(v.historiesDue, v.historyPerRun)} of ${v.historiesDue} vendor(s)`)
+    if (v.research) console.log(`vendor research would run: ${Math.min(v.research, v.researchPerRun)} of ${v.research} new vendor(s) (plus any from new summaries)`)
     return
   }
-  if (llm.status === 'skipped') return void console.log(`LLM step skipped: ${llm.reason}`)
-  if (llm.meetings.length === 0 && !llm.commit && !llm.error) return void console.log('LLM step: nothing to do')
+  if (llm.status === 'skipped') console.log(`LLM step skipped: ${llm.reason}`)
+  if (llm.meetings.length === 0 && !llm.commit && !llm.error) return void (llm.status !== 'skipped' && console.log('LLM step: nothing to do'))
   const m = llmCommitMessage(llm.changes)
   if (llm.commit) console.log(`LLM commit ${llm.commit.sha.slice(0, 7)}: ${llm.commit.subject}`)
   console.log(m.body)
