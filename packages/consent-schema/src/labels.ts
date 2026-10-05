@@ -66,6 +66,11 @@ export const ACTION_LABELS: Record<TActionType, string> = {
 export type TFlagTone = 'warn' | 'crit' | 'info'
 
 export const FLAG_LABELS: Record<TFlag, { label: string; explain: string; tone: TFlagTone }> = {
+  budget_allocation: {
+    label: 'Budget allocation',
+    explain: 'The district dividing up its own funds, such as a Measure N, G1 or H plan, budget or carryover. Not counted as spending: the money is spent through contracts that come to the Board separately.',
+    tone: 'info',
+  },
   grant_application: {
     label: 'Grant application',
     explain: 'The district is applying for this money, not receiving it yet. Not counted as money coming in; an award usually comes back to the Board to be accepted.',
@@ -170,6 +175,7 @@ export const FLAG_ORDER: readonly TFlag[] = [
   'pulled_from_consent',
   'payment_ratification',
   'grant_application',
+  'budget_allocation',
   'after_work_began',
   'no_competitive_bid',
   'raises_existing_contract',

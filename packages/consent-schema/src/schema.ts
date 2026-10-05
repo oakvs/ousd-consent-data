@@ -65,6 +65,7 @@ export const DerivedFlag = z.enum([
   'pulled_from_consent',
   'payment_ratification',
   'grant_application',
+  'budget_allocation',
 ])
 export type TDerivedFlag = z.infer<typeof DerivedFlag>
 
@@ -421,6 +422,13 @@ export const Totals = z.object({
    */
   paymentsRatifiedTotal: z.number(),
   paymentsRatifiedItems: z.number(),
+  /**
+   * The district dividing up its own funds (Measure N/G1/H plans, budgets, allocations and
+   * carryovers; spending plans). Kept out of spendingTotal: the money is spent through contracts
+   * and stipends that come to the Board as their own items.
+   */
+  budgetAllocatedTotal: z.number(),
+  budgetAllocatedItems: z.number(),
   /** Grants and funding the district applied for; kept out of revenueTotal until accepted. */
   appliedForTotal: z.number(),
   appliedForItems: z.number(),

@@ -22,6 +22,12 @@ export const PAYMENT_RATIFICATION = /^\s*(accounts\s+payable|payroll)\s+warrants
  * "Consolidated Application …" (CARS), "Continued Funding Application …", "E-Rate … Application".
  * One title starts "23-127123Grant Application", so "grant" needn't start the title.
  */
+/**
+ * The district dividing up its own funds: "Measure N Commission - … Plans and Budgets",
+ * "… Carryover …", "Measure G1 - Allocations …", "Education Protection Act …", "… Expenditure Plan".
+ */
+export const BUDGET_ALLOCATION = /^\s*measure\s+(n|g1|h|g)\b.*\b(plans?|budgets?|allocations?|carryover|funding\s+levels?|probationary|education\s+plan)\b|education\s+protection\s+(act|account)|\b(spending|expenditure)\s+plan\b|block\s+grant.*\bplan\b/i
+
 export const GRANT_APPLICATION = /(^|[^a-z])grant\s+(application|proposal)\b|^\s*consolidated\s+application\b|continued\s+(and\s+expansion\s+)?funding\s+application\b|e-?rate\b[^,]*\bapplication\b/i
 const MULTI_YEAR_DAYS = 400 // a little over 13 months
 
@@ -54,6 +60,7 @@ export function deriveFlags(input: TDerivedFlagInput): TDerivedFlag[] {
   if (previouslyDelayed(input.history, input.meetingDate)) flags.push('previously_delayed')
   if (input.sourceIssue) flags.push('source_issue')
   if (input.title && PAYMENT_RATIFICATION.test(input.title)) flags.push('payment_ratification')
+  if (input.title && BUDGET_ALLOCATION.test(input.title)) flags.push('budget_allocation')
   // An E-Rate "application" can also be the purchase itself; only money not going out is an application.
   if (input.title && GRANT_APPLICATION.test(input.title) && enrichment?.money.direction !== 'expense') flags.push('grant_application')
   if (!enrichment) return flags

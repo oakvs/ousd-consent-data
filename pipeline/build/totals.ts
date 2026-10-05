@@ -22,6 +22,8 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
     paymentsRatifiedItems: 0,
     appliedForTotal: 0,
     appliedForItems: 0,
+    budgetAllocatedTotal: 0,
+    budgetAllocatedItems: 0,
     flagCounts: {},
     byCategory: {},
   }
@@ -32,6 +34,13 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
     if (!e) continue
     totals.enrichedItems++
     if (!item.countsTowardTotals) continue
+    if (item.flags.includes('budget_allocation')) {
+      if (e.money.thisAction && e.money.direction === 'expense') {
+        totals.budgetAllocatedTotal += e.money.thisAction
+        totals.budgetAllocatedItems++
+      }
+      continue
+    }
     if (item.flags.includes('grant_application')) {
       if (e.money.thisAction) {
         totals.appliedForTotal += e.money.thisAction
@@ -76,6 +85,7 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
   totals.decreaseTotal = cents(totals.decreaseTotal)
   totals.paymentsRatifiedTotal = cents(totals.paymentsRatifiedTotal)
   totals.appliedForTotal = cents(totals.appliedForTotal)
+  totals.budgetAllocatedTotal = cents(totals.budgetAllocatedTotal)
   for (const bucket of Object.values(totals.byCategory)) bucket.spending = cents(bucket.spending)
   return totals
 }

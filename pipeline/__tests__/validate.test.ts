@@ -254,4 +254,16 @@ describe('payment ratifications', () => {
     expect(deriveFlags({ ...base, title: '2020-2021 - E-Rate Category 2 Application, Procurement of Equipment', enrichment: purchase })).not.toContain('grant_application')
     expect(deriveFlags({ ...base, title: 'Grant Agreement - City of Oakland - OFCY', enrichment: revenue })).not.toContain('grant_application')
   })
+
+  it('flags budget allocations, not contracts paid from them', () => {
+    const e = makeEnrichment({ money: { direction: 'expense', thisAction: 11_987_571.3 } })
+    for (const title of [
+      'Measure N - College and Career Readiness Commission -Recommendations - Education Plans and Budgets',
+      'Measure N Commission - Fremont High School - Carryover 2020-2021 Measure N Fund Balance',
+      'Measure G1 - Allocations - 2024 – 2025 School Year (Revised)',
+      'Education Protection Act - Proposition 30 Funds - Fiscal Year 2020-2021 - Chief Business Officer',
+      'Arts Music and Instructional Materials Discretionary Block Grant (AMIM) - Expenditure Plan - OUSD',
+    ]) expect(deriveFlags({ ...base, title, enrichment: e })).toContain('budget_allocation')
+    expect(deriveFlags({ ...base, title: 'Services Agreement 2022-2023 - Linked Learning - Measure N funded', enrichment: e })).not.toContain('budget_allocation')
+  })
 })
