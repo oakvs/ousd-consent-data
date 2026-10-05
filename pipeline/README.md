@@ -10,6 +10,7 @@ npm run consent:run -- --no-push                     # one update cycle; commits
 npm run consent:run                                  # one update cycle: commit, push, then POST $VERCEL_DEPLOY_HOOK_URL
 npm run consent:llm -- [--key K]                     # just the LLM step (summaries, second readings), then rebuild; no git
 npm run consent:llm-compare -- --key 2026-09-23 --sample 20   # redo a meeting's LLM step on a scratch copy and compare
+npx tsx --env-file=.env pipeline/cli.ts research [--limit N]   # just vendor research for new vendors, then rebuild; no git
 npm run consent:discover -- --date 2026-09-23        # resolve EventId, print consent item count
 npm run consent:ingest -- --key 2026-09-23 [--event 5810]
 npm run consent:backfill -- --from 2025-08-01 --to 2026-09-30 [--limit N] [--force]
@@ -47,7 +48,7 @@ The data repo is the state; there is no database. Each run:
 
 A quiet run costs about 15 Legistar requests. Runs refuse to start on a dirty work tree, and a lock file (`.cache/run.lock`) keeps two runs on one machine from overlapping. `--summary run.json` writes the run's changes as JSON for alerts.
 
-5. **LLM publish**: summaries for new or changed items, then second readings, then build → commit (`2026-10-14: summaries — 87 items, 24 second readings (2 flagged for review)`) → push → deploy hook. Skipped without `ANTHROPIC_API_KEY` or with `--no-llm`. Raw data is already public by then; items show "Summary pending" until this lands, and a failed step is retried by the next run. If the step dies part-way, what it finished is still committed.
+5. **LLM publish**: summaries for new or changed items, then second readings, then vendor aliases → build → **vendor research** for new vendors (below) → build → commit (`2026-10-14: summaries — 87 items, 24 second readings (2 flagged for review)`, or `Vendor profiles: 3 researched, 2 profiles published` when only research ran) → push → deploy hook. Skipped without `ANTHROPIC_API_KEY` or with `--no-llm`. Raw data is already public by then; items show "Summary pending" until this lands, and a failed step is retried by the next run. If the step dies part-way, what it finished is still committed.
 
 ## Meeting → EventId
 
@@ -69,13 +70,16 @@ Code in `llm/`. One item per request, with structured outputs constraining the r
 | Summary | `claude-opus-5-5`, effort `high` | `prompts/enrich.v4.md` | `checkEnrichment` (schema, evidence verbatim, every amount in the text), the same as `enrich-check` |
 | Second reading | `claude-sonnet-5-5`, effort `high` | `prompts/verify.v2.md` | `checkVerification`, the same as `verify-check` |
 | Money tiebreak (third reading) | `claude-opus-5-5`, effort `high` | `prompts/verify.v2.md` | same |
+| Vendor research | `claude-sonnet-5-5`, effort `high`, web search + fetch | `prompts/vendor-research.v3.md` | `runResearchChecks` (schema, every cited page loads, contact details and registry IDs verbatim on a page cited for them), the same as `research-check` |
+| Vendor review (independent) | `claude-opus-5-5`, effort `high`, web search + fetch | `prompts/vendor-review.v2.md` | schema; `isPublishable` decides, the same as `review-import` |
 
 - **What gets a summary:** items with no record, or whose text or title changed since their record (the record's `cacheKey` no longer matches). Changing the model or prompt does not redo existing summaries; use `llm-compare` first, then delete records to redo them.
 - **What gets a second reading** is unchanged from the agent workflow (`tasksForMeeting`): the top 20 amounts per meeting, money that fails a check, every suggested problem in the text, and headlines that name an individual. The reader never sees the first reading's numbers. A totals-changing disagreement gets a third reading from a different model, and code takes the majority.
 - **Records** carry the `modelId` that actually answered. Server-side refusal fallbacks are on (`fallbacks: "default"`), so a declined request may be answered by a fallback model, and the record says so.
 - **Failures** (checks still failing after 3 attempts, or a decline) are logged in `llm-state.json`. Each item is retried at most once a day and given up on after 3 days, so one stubborn item can't cost money every 30 minutes.
 - **Spend:** each run's estimated cost is added to `llm-state.json`. The step stops for the month at `CONSENT_LLM_MONTHLY_CAP_USD` (default $25). Also set a spend limit on the Anthropic API key itself.
-- **Overrides:** override models with `CONSENT_ENRICH_MODEL`, `CONSENT_VERIFY_MODEL` and `CONSENT_TIEBREAK_MODEL`.
+- **Vendor research** runs after the summaries, and only if they finished without hitting the cap, so summaries always get the budget first. It takes organizations (and vendors of unknown kind) with no record in `vendor-research/`, largest approved totals first, `CONSENT_RESEARCH_PER_RUN` per run (default 4; the rest wait for later runs). Vendor aliases are regenerated first, so a name variant of a known vendor isn't researched again. The web tools are capped per request (6 searches, 10 fetches). A reply that still fails some checks after 3 attempts is stored anyway, because the build drops every field that failed. High-confidence results then get the independent review; only confirmed ones are published. Failures go in `llm-state.json` as `research:{vendorKey}` / `review:{vendorKey}`, with the same once-a-day retry and 3-day give-up. Expect about $0.15–0.50 and 2–5 minutes per vendor. Individuals are never researched.
+- **Overrides:** override models with `CONSENT_ENRICH_MODEL`, `CONSENT_VERIFY_MODEL`, `CONSENT_TIEBREAK_MODEL`, `CONSENT_RESEARCH_MODEL` and `CONSENT_REVIEW_MODEL`.
 
 Locally, put the key in `.env` (gitignored) and run with `npx tsx --env-file=.env pipeline/cli.ts <command>`. The agent workflow (`enrich-export` / `enrich-check` / `enrich-import`, and the `verify-*` equivalents) still works for backfills.
 

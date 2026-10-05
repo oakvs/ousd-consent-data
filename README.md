@@ -91,7 +91,7 @@ Every change becomes a commit in this repository with a readable message, like `
 | Vendor research (1,911 vendors, 1,284 published) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`) |
 <!-- /generated:models -->
 
-New items from October 2026 on are summarized by Claude Opus 5.5 through the Claude API (prompt `enrich.v4`), which also does the tie-breaking third readings. Their second readings come from Claude Sonnet 5.5 (prompt `verify.v2`). They'll show up in the table above as they're written.
+New items from October 2026 on are summarized by Claude Opus 5.5 through the Claude API (prompt `enrich.v4`), which also does the tie-breaking third readings. Their second readings come from Claude Sonnet 5.5 (prompt `verify.v2`). New vendors are researched by Claude Sonnet 5.5 with web search (prompt `vendor-research.v3`) and independently reviewed by Claude Opus 5.5 (prompt `vendor-review.v2`). They'll show up in the table above as they're written.
 
 Switching models or instructions doesn't quietly rewrite older records. New instructions get a new version number and are compared against the existing summaries before they're used.
 

@@ -10,7 +10,7 @@
  */
 import { z } from 'zod'
 
-import { ActionType, Category, IssueTopic, IssueVerdict, LlmFlag } from '@oakvs/consent-schema/schema'
+import { ActionType, Category, IssueTopic, IssueVerdict, LlmFlag, ProfileField } from '@oakvs/consent-schema/schema'
 
 const Direction = z.enum(['expense', 'revenue', 'decrease', 'no_cost'])
 const AmountType = z.enum(['not_to_exceed', 'fixed', 'cumulative', 'per_year', 'sales_cap']).nullable()
@@ -66,3 +66,39 @@ export const VerifyReply = z.object({
   headlineFix: z.string().nullable(),
 })
 export type TVerifyReply = z.infer<typeof VerifyReply>
+
+/**
+ * Vendor research reply: `VendorResearch` without the key (code adds it),
+ * and with plain strings where the real schema has formats, lengths or
+ * patterns (URLs, the summary's 600 characters, the EIN). Code checks those
+ * against `VendorResearch` afterwards.
+ */
+export const ResearchReply = z.object({
+  identitySignals: z.array(z.string()),
+  confidence: z.enum(['high', 'medium', 'low', 'none']),
+  profile: z.object({
+    legalName: z.string().nullable(),
+    summary: z.string(),
+    orgType: z.enum(['nonprofit', 'company', 'public_agency', 'other']).nullable(),
+    website: z.string().nullable(),
+    phone: z.string().nullable(),
+    email: z.string().nullable(),
+    address: z.string().nullable(),
+    headquarters: z.string().nullable(),
+    ein: z.string().nullable(),
+    caEntityNumber: z.string().nullable(),
+    samUei: z.string().nullable(),
+  }).nullable(),
+  sources: z.array(z.object({ url: z.string(), title: z.string(), supports: z.array(ProfileField) })),
+  notes: z.string().nullable(),
+})
+export type TResearchReply = z.infer<typeof ResearchReply>
+
+/** Independent review reply: `VendorResearchReview` without the key. */
+export const ReviewReply = z.object({
+  verdict: z.enum(['confirmed', 'rejected']),
+  sameOrganization: z.boolean(),
+  unsupportedFields: z.array(ProfileField),
+  notes: z.string().nullable(),
+})
+export type TReviewReply = z.infer<typeof ReviewReply>

@@ -74,9 +74,16 @@ export function runNotices(s: TRunSummary): TNotice[] {
       })
     }
   }
+  const v = llm.changes.vendors
+  if (v?.published) {
+    notices.push({ title: `${plural(v.published, 'vendor profile')} published`, message: `${v.researched} new vendor(s) researched; ${plural(v.published, 'profile')} passed the independent review.`, priority: 'low', tags: ['mag'], click: SITE })
+  }
+  if (v?.gaveUp) {
+    notices.push({ title: `${plural(v.gaveUp, 'vendor')}: research ${v.gaveUp === 1 ? 'needs' : 'need'} a human`, message: 'Vendor research or its review still fails after 3 days. See data/llm-state.json and the RUNBOOK.', priority: 'default', tags: ['construction'] })
+  }
   if (llm.error) notices.push({ title: 'LLM step failed part-way', message: `${llm.error}\nWhat it finished was committed; the next run continues.`, priority: 'high', tags: ['x'] })
   if (llm.status === 'capped') {
-    notices.push({ title: 'LLM monthly cap reached', message: `Summaries are paused until next month (cap $${llm.capUsd}). Raise CONSENT_LLM_MONTHLY_CAP_USD to resume.`, priority: 'high', tags: ['money_with_wings'] })
+    notices.push({ title: 'LLM monthly cap reached', message: `Summaries and vendor research are paused until next month (cap $${llm.capUsd}). Raise CONSENT_LLM_MONTHLY_CAP_USD to resume.`, priority: 'high', tags: ['money_with_wings'] })
   } else {
     const before = llm.monthSpendUsd - (llm.usage?.costUsd ?? 0)
     const line = SPEND_WARNING_SHARE * llm.capUsd
@@ -127,10 +134,15 @@ export function stepSummary(s: TRunSummary, notices: TNotice[]): string {
   const lines = [`### consent run${s.dryRun ? ' (dry run)' : ''}`, '', `- Legistar requests: ${s.legistarRequests}`]
   lines.push(s.commit ? `- Commit: \`${s.commit.sha.slice(0, 7)}\` ${s.commit.subject}` : `- ${s.changedFiles.length ? `${s.changedFiles.length} file(s) would change` : 'No changes'}`)
   const llm = s.llm
-  if (llm.status === 'planned') lines.push(`- LLM step would run for ${llm.plan.length} meeting(s)`)
+  if (llm.status === 'planned') {
+    lines.push(`- LLM step would run for ${llm.plan.length} meeting(s)`)
+    if (llm.research.pending) lines.push(`- Vendor research would run for ${Math.min(llm.research.pending, llm.research.perRun)} of ${llm.research.pending} new vendor(s)`)
+  }
   else if (llm.status === 'skipped') lines.push(`- LLM step skipped: ${llm.reason}`)
   else if (llm.status !== 'disabled') {
     if (llm.commit) lines.push(`- LLM commit: \`${llm.commit.sha.slice(0, 7)}\` ${llm.commit.subject}`)
+    const v = llm.changes.vendors
+    if (v && (v.researched || v.reviewed || v.remaining)) lines.push(`- Vendors: ${v.researched} researched, ${v.reviewed} reviewed, ${v.published} published, ${v.remaining} still to research`)
     lines.push(`- LLM cost: $${(llm.usage?.costUsd ?? 0).toFixed(2)} (this month $${llm.monthSpendUsd.toFixed(2)} of $${llm.capUsd})`)
   }
   for (const n of notices) lines.push(`- Alert: **${n.title}**: ${n.message}`)

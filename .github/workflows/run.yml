@@ -27,7 +27,8 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Summaries for a new agenda plus a few vendor researches (2–5 minutes each) fit well inside this.
+    timeout-minutes: 45
     env:
       NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
       NTFY_TOKEN: ${{ secrets.NTFY_TOKEN }}

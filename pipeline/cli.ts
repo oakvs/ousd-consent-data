@@ -41,6 +41,7 @@
  *   review-export                             Write independent-review inputs for high-confidence research
  *   review-check --key K                      Validate one review output
  *   review-import                             Store reviews; mark profiles publishable
+ *   research [--limit N]                      Research new vendors through the Claude API (as in `run`), then rebuild; no git
  *   upcoming                                  Detect the next Board meeting from future-dated items → published/upcoming.json
  */
 import { readFile } from 'node:fs/promises'
@@ -441,6 +442,17 @@ async function main(): Promise<void> {
       for (const p of problems) console.log(`ERROR ${p}`)
       console.log(problems.length ? `FAIL: ${problems.length} error(s)` : 'PASS')
       process.exitCode = problems.length ? 1 : 0
+      break
+    }
+    case 'research': {
+      const [{ researchPhase }, { oaklandToday }] = await Promise.all([import('./llm/research'), import('@oakvs/consent-schema/format')])
+      const r = await researchPhase({ today: oaklandToday(), limit: values.limit ? Number(values.limit) : undefined })
+      for (const x of r.researched) console.log(`${x.key}: ${x.confidence}`)
+      for (const x of r.reviewed) console.log(`${x.key}: reviewed, ${x.publishable ? 'publishable' : 'not published'}`)
+      for (const x of r.failed) console.log(`${x.key}: FAILED ${x.error}`)
+      if (r.reason) console.log(r.reason)
+      console.log(`${r.remaining} vendor(s) still to research · cost $${(r.usage?.costUsd ?? 0).toFixed(2)} (this month $${r.monthSpendUsd.toFixed(2)} of $${r.capUsd})`)
+      if (r.researched.length || r.reviewed.length) await buildAll()
       break
     }
     case 'review-import': {

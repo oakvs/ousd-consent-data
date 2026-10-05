@@ -87,8 +87,21 @@ export type TLlmMeetingChange = {
   flagged: number
 }
 
+export type TVendorResearchChange = {
+  researched: number
+  /** Profiles that passed the review and now show on vendor pages. */
+  published: number
+  reviewed: number
+  failed: number
+  gaveUp: number
+  /** Unresearched vendors left for later runs. */
+  remaining: number
+}
+
 export type TLlmChanges = {
   meetings: TLlmMeetingChange[]
+  /** Null when vendor research didn't run. */
+  vendors?: TVendorResearchChange | null
   costUsd: number
   monthSpendUsd: number
   capUsd: number
@@ -111,10 +124,25 @@ export function llmCommitMessage(c: TLlmChanges): { subject: string; body: strin
     m.failed ? `${m.key}: ${plural(m.failed, 'item')} failed the checks (retried tomorrow)` : null,
     m.gaveUp ? `${m.key}: ${plural(m.gaveUp, 'item')} still failing after 3 days — needs a human` : null,
   ]).filter((l): l is string => l != null)
-  const subject = lines.length ? lines.join('; ') : problems.length ? `llm: ${problems[0]}` : 'llm: bookkeeping'
+  const v = c.vendors
+  const vendorLine = v && (v.researched || v.reviewed)
+    ? `vendors: ${v.researched} researched, ${plural(v.published, 'profile')} published`
+    : null
+  const vendorProblems = v
+    ? [
+      v.failed ? `vendors: ${plural(v.failed, 'vendor')} failed research or review (retried tomorrow)` : null,
+      v.gaveUp ? `vendors: ${plural(v.gaveUp, 'vendor')} still failing after 3 days — needs a human` : null,
+      v.remaining ? `vendors: ${v.remaining} still to research (next runs)` : null,
+    ].filter((l): l is string => l != null)
+    : []
+  const subject = lines.length
+    ? lines.join('; ')
+    : vendorLine ? `Vendor profiles: ${vendorLine.slice('vendors: '.length)}` : problems.length ? `llm: ${problems[0]}` : 'llm: bookkeeping'
   const body = [
     ...lines,
+    ...(vendorLine ? [vendorLine] : []),
     ...problems,
+    ...vendorProblems,
     `LLM cost ${usd(c.costUsd)} (this month ${usd(c.monthSpendUsd)} of ${usd(c.capUsd)})${c.capped ? ' — monthly cap reached, step stopped' : ''}`,
   ]
   return { subject, body: body.map(l => `- ${l}`).join('\n') }

@@ -2,7 +2,7 @@
  * LLM bookkeeping in `data/llm-state.json` (committed, never published):
  *
  * - spend per month, so a monthly cap can stop the LLM step
- * - items whose reply kept failing the checks (or was declined). Each is
+ * - items (and vendors being researched) whose reply kept failing the checks (or was declined). Each is
  *   retried at most once a day, and given up on after GIVE_UP_AFTER days, so
  *   one stubborn item can't cost money every 30 minutes. A change to the
  *   item's text (a new cache key) starts over.
@@ -31,7 +31,7 @@ export type TFailure = z.infer<typeof Failure>
 const LlmState = z.object({
   /** "YYYY-MM" → estimated USD. */
   spend: z.record(z.string(), z.number()),
-  /** `${stage}:${meetingKey}:${file}` → the latest failure. */
+  /** `${stage}:${meetingKey}:${file}` (or `${stage}:${vendorKey}` for vendor research) → the latest failure. */
   failures: z.record(z.string(), Failure),
 })
 export type TLlmState = z.infer<typeof LlmState>
@@ -49,6 +49,9 @@ export async function readLlmState(): Promise<TLlmState> {
 export const writeLlmState = (state: TLlmState): Promise<void> => writeJson(statePath(), state)
 
 export const failureKey = (stage: 'enrich' | 'verify', meetingKey: string, file: string): string => `${stage}:${meetingKey}:${file}`
+
+/** `${stage}:${vendorKey}`, for vendor research and its review. */
+export const vendorFailureKey = (stage: 'research' | 'review', vendorKey: string): string => `${stage}:${vendorKey}`
 
 export type TRetryDecision = 'try' | 'wait' | 'gave_up'
 

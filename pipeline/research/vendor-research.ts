@@ -26,6 +26,7 @@ import type {
   TVendorFile,
   TVendorResearch,
   TVendorResearchRecord,
+  TVendorResearchReview,
 } from '@oakvs/consent-schema/schema'
 import { siteConfig } from '../config'
 
@@ -76,14 +77,19 @@ function toInput(v: TVendorFile): TResearchInput {
   }
 }
 
-/** Organizations only, largest approved totals first. */
-export async function exportResearch({ keys, top, minApproved = 0, skipExisting = true }: { keys?: string[]; top?: number; minApproved?: number; skipExisting?: boolean }): Promise<string[]> {
-  await mkdir(RESEARCH_DIR, { recursive: true })
+export const readVendorInput = async (key: string): Promise<TResearchInput> => toInput(await readVendor(key))
+
+/**
+ * Organizations (and vendors of unknown kind) with no research record yet,
+ * largest approved totals first. Research is stored under the key a vendor
+ * had when it was researched; it's mapped to today's key, so a vendor whose
+ * key changed (a backfill supplied its OUSD number, or a merge) isn't
+ * researched again.
+ */
+export async function unresearchedVendors({ keys, minApproved = 0, skipExisting = true }: { keys?: string[]; minApproved?: number; skipExisting?: boolean } = {}): Promise<string[]> {
   const index = JSON.parse(await readFile(path.join(publishedVendors(), 'index.json'), 'utf8')) as {
     vendors: { key: string; kind: string | null; approvedTotal: number }[]
   }
-  // Research is stored under the key a vendor had when it was researched; map it to today's key so a
-  // vendor whose key changed (a backfill supplied its OUSD number, or a merge) isn't researched again.
   const aliases = await readVendorAliases()
   const existing = new Set(skipExisting
     ? (await readdir(recordsDir()).catch(() => [])).map(f => currentVendorKey(f.replace(/\.json$/, ''), aliases))
@@ -91,14 +97,20 @@ export async function exportResearch({ keys, top, minApproved = 0, skipExisting 
   let candidates = index.vendors.filter(v => v.kind !== 'individual' && !existing.has(v.key) && v.approvedTotal >= minApproved)
   if (keys?.length) candidates = candidates.filter(v => keys.includes(v.key))
   candidates.sort((a, b) => b.approvedTotal - a.approvedTotal || a.key.localeCompare(b.key))
-  const chosen = candidates.slice(0, top ?? candidates.length)
-  for (const { key } of chosen) {
+  return candidates.map(c => c.key)
+}
+
+/** Organizations only, largest approved totals first. */
+export async function exportResearch({ keys, top, minApproved = 0, skipExisting = true }: { keys?: string[]; top?: number; minApproved?: number; skipExisting?: boolean }): Promise<string[]> {
+  await mkdir(RESEARCH_DIR, { recursive: true })
+  const chosen = (await unresearchedVendors({ keys, minApproved, skipExisting })).slice(0, top)
+  for (const key of chosen) {
     const vendor = await readVendor(key)
     if (vendor.kind === 'individual') continue
     await writeFile(io(key, 'input'), `${JSON.stringify(toInput(vendor), null, 2)}\n`)
   }
-  await writeFile(path.join(RESEARCH_DIR, 'manifest.json'), `${JSON.stringify(chosen.map(c => c.key), null, 2)}\n`)
-  return chosen.map(c => c.key)
+  await writeFile(path.join(RESEARCH_DIR, 'manifest.json'), `${JSON.stringify(chosen, null, 2)}\n`)
+  return chosen
 }
 
 // ─── Page fetching (cached) ──────────────────────────────────────────────────
@@ -185,10 +197,12 @@ const VERBATIM_FIELDS: TProfileField[] = ['phone', 'email', 'address', 'ein', 'c
 
 export type TResearchCheck = { field: string; pass: boolean; detail: string | null; severity: 'error' | 'warning' }
 
-export async function runResearchChecks(research: TVendorResearch): Promise<TResearchCheck[]> {
+export type TPageFetcher = (url: string) => Promise<TPage>
+
+export async function runResearchChecks(research: TVendorResearch, fetcher: TPageFetcher = fetchPage): Promise<TResearchCheck[]> {
   const checks: TResearchCheck[] = []
   const pages = new Map<string, TPage>()
-  for (const s of research.sources) pages.set(s.url, await fetchPage(s.url))
+  for (const s of research.sources) pages.set(s.url, await fetcher(s.url))
   for (const s of research.sources) {
     const p = pages.get(s.url)!
     checks.push({ field: `source:${s.url}`, pass: p.ok, detail: p.ok ? null : `HTTP ${p.status || 'error'} (fields supported only by this page will be dropped)`, severity: 'warning' })
@@ -214,7 +228,7 @@ export async function runResearchChecks(research: TVendorResearch): Promise<TRes
   }
 
   if (profile.website) {
-    const site = await fetchPage(profile.website)
+    const site = await fetcher(profile.website)
     const host = (u: string): string => new URL(u).hostname.replace(/^www\./, '')
     const listed = research.sources.some(s => host(s.url) === host(profile.website!))
     checks.push({ field: 'website', pass: site.ok && listed, detail: !site.ok ? `website returned HTTP ${site.status || 'error'}` : listed ? null : 'website is not among the cited sources', severity: site.ok ? 'error' : 'warning' })
@@ -251,13 +265,43 @@ export async function checkResearchOutput(key: string): Promise<TResearchCheck[]
 export const toRfc3986 = (url: string): string =>
   url.replace(/[^A-Za-z0-9\-._~:/?#[\]@!$&'()*+,;=%]/g, ch => encodeURIComponent(ch))
 
-function withRfc3986Urls(research: TVendorResearch): TVendorResearch {
+export function withRfc3986Urls(research: TVendorResearch): TVendorResearch {
   const profile = research.profile
   return {
     ...research,
     sources: research.sources.map(s => ({ ...s, url: toRfc3986(s.url) })),
     profile: profile ? { ...profile, website: profile.website ? toRfc3986(profile.website) : profile.website } : profile,
   }
+}
+
+/** A research record as stored, with the code checks' results; not publishable until reviewed. */
+export function toResearchRecord(research: TVendorResearch, checks: TResearchCheck[], modelId: string, promptVersion: string, researchedAt: string): TVendorResearchRecord {
+  return VendorResearchRecord.parse({
+    key: research.key,
+    researchedAt,
+    modelId,
+    promptVersion,
+    research,
+    review: null,
+    checks: checks.map(({ severity: _s, ...c }) => c),
+    publishable: false,
+  })
+}
+
+export const writeResearchRecord = (rec: TVendorResearchRecord): Promise<void> => writeJson(recordPath(rec.key), rec)
+
+/** Published only when confidence is high, the reviewer confirmed the same organization, identity held up, and a cited page loaded. */
+export function isPublishable(rec: TVendorResearchRecord, review: TVendorResearchReview): boolean {
+  const anySourceLoaded = rec.checks.some(c => c.field.startsWith('source:') && c.pass)
+  const identityOk = rec.research.identitySignals.length >= 2 && !rec.checks.some(c => c.field === 'identity' && !c.pass)
+  return rec.research.confidence === 'high' && review.verdict === 'confirmed' && review.sameOrganization && identityOk && anySourceLoaded
+}
+
+/** Records that need an independent review: high confidence, with a profile, not yet reviewed. */
+export async function pendingReviews(): Promise<TVendorResearchRecord[]> {
+  return [...(await readAllResearch()).values()]
+    .filter(rec => rec.research.confidence === 'high' && rec.research.profile && !rec.review)
+    .sort((a, b) => a.key.localeCompare(b.key))
 }
 
 export async function importResearch(modelId: string, researchedAt: string): Promise<{ key: string; confidence: string; failed: number }[]> {
@@ -269,17 +313,7 @@ export async function importResearch(modelId: string, researchedAt: string): Pro
     if (!parsed.success) continue
     const research = withRfc3986Urls(parsed.data)
     const checks = await runResearchChecks(research)
-    const record: TVendorResearchRecord = VendorResearchRecord.parse({
-      key,
-      researchedAt,
-      modelId,
-      promptVersion: RESEARCH_PROMPT_VERSION,
-      research,
-      review: null,
-      checks: checks.map(({ severity: _s, ...c }) => c),
-      publishable: false,
-    })
-    await writeJson(recordPath(key), record)
+    await writeResearchRecord(toResearchRecord({ ...research, key }, checks, modelId, RESEARCH_PROMPT_VERSION, researchedAt))
     out.push({ key, confidence: research.confidence, failed: checks.filter(c => !c.pass).length })
   }
   return out
@@ -314,10 +348,7 @@ export async function importReviews(): Promise<{ key: string; publishable: boole
     const review = VendorResearchReview.safeParse(JSON.parse(await readFile(path.join(RESEARCH_DIR, f), 'utf8')))
     if (!review.success) continue
     const rec = VendorResearchRecord.parse(JSON.parse(await readFile(recordPath(key), 'utf8')))
-    const anySourceLoaded = rec.checks.some(c => c.field.startsWith('source:') && c.pass)
-    const identityOk = rec.research.identitySignals.length >= 2 && !rec.checks.some(c => c.field === 'identity' && !c.pass)
-    const publishable = rec.research.confidence === 'high'
-      && review.data.verdict === 'confirmed' && review.data.sameOrganization && identityOk && anySourceLoaded
+    const publishable = isPublishable(rec, review.data)
     await writeJson(recordPath(key), { ...rec, review: review.data, publishable })
     out.push({ key, publishable })
   }

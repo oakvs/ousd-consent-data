@@ -66,6 +66,7 @@ You'll see these commits:
 | `2026-10-14: meeting found (event 5825, via probe)` | Its Legistar EventId was found. The agenda is being built. |
 | `2026-10-14: agenda posted — 87 items` | The official text is live, with "Summary pending" on each item. |
 | `2026-10-14: summaries — 87 items, 24 second readings (2 flagged for review)` | The LLM step finished for those items. |
+| `Vendor profiles: 3 researched, 2 profiles published` | New vendors were looked up and independently reviewed. Only confirmed profiles show on vendor pages. |
 | `2026-10-14: agenda revised — 2 added, 1 revised` | Staff changed the agenda after it was posted. |
 | `2026-10-14: outcomes updated — 85 items` | The daily outcome check found new actions or votes (from the meeting date until the meeting is final). |
 | `registry: routine check` | Bookkeeping only (e.g. the daily outcome check found nothing). No deploy. |
@@ -120,6 +121,8 @@ Also set a monthly spend limit on the Anthropic API key itself, in the Claude Co
 | Agenda revised | low |
 | Summaries published, with second readings and how many were flagged | default, or high if any are flagged |
 | Items still failing after 3 days | high |
+| Vendor profiles published | low |
+| Vendor research still failing after 3 days | default |
 | LLM step failed part-way; monthly cap reached | high |
 | LLM spend crossed 80% of the monthly cap | default |
 | Two failed runs in a row | urgent |
@@ -184,7 +187,7 @@ The item stays "Summary pending" with its official text published in the meantim
 
 ### The LLM step stopped: monthly cap
 
-The LLM commit says "monthly cap reached". Spend per month is in `data/llm-state.json` under `spend`. Raise `CONSENT_LLM_MONTHLY_CAP_USD` or wait for the next month. Summaries pick up where they left off.
+The LLM commit says "monthly cap reached". Spend per month is in `data/llm-state.json` under `spend`. Raise `CONSENT_LLM_MONTHLY_CAP_USD` or wait for the next month. Summaries pick up where they left off, then vendor research.
 
 ### Changing the model or a prompt
 
@@ -212,7 +215,7 @@ A meeting is final 14 or more days after it happened, once every item has a Legi
 ## Periodic
 
 - **Quarterly:** `events-check.yml` checks whether Legistar's `/events` endpoint works for OUSD again, and sends the answer to ntfy. If it does, meeting discovery could be simplified. To check by hand: `npx tsx pipeline/cli.ts events-check`. As of October 2026 it returns HTTP 400.
-- **Vendor research** for new vendors is a separate, occasional batch job, not part of the 30-minute loop. See `research-*` in `pipeline/cli.ts`.
+- **Vendor research** for new vendors runs in the 30-minute loop, a few vendors per run, after the summaries. If an alert says a vendor's research "needs a human", look at its `research:` or `review:` entry in `data/llm-state.json`; deleting the entry makes the next run try again. To catch up a backlog faster, run `npx tsx --env-file=.env pipeline/cli.ts research --limit 20` locally and commit. Possible duplicate vendors are still a by-hand job (`vendor-candidates` and the merge judge).
 
 ## Before merging a code change
 

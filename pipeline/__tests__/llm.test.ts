@@ -115,6 +115,30 @@ describe('Claude API wrapper', () => {
     expect(calls).toHaveLength(1)
   })
 
+  it('with web tools, continues a paused turn and sends failed checks back as a new turn', async () => {
+    const calls: TParams[] = []
+    const searchBlocks = [{ type: 'server_tool_use', id: 's1', name: 'web_search', input: { query: 'x' } }]
+    const responses = [
+      response(null, { stop_reason: 'pause_turn', content: searchBlocks, usage: { input_tokens: 10, output_tokens: 5, server_tool_use: { web_search_requests: 2, web_fetch_requests: 0 } } }),
+      response({ n: 1 }, { content: [{ type: 'text', text: '{"n":1}' }] }),
+      response({ n: 2 }),
+    ]
+    const tools = [{ type: 'web_search_20260318', name: 'web_search', max_uses: 6 }] as Anthropic.Beta.BetaToolUnion[]
+    const result = await anthropicLlm(fakeClient(responses, calls)).ask({
+      model: 'claude-sonnet-5-5', effort: 'high', system: 'rules', user: '{"vendor":1}', schema: EnrichmentReply as never, tools,
+      validate: async (r: { n: number }) => (r.n === 2 ? [] : [`n must be 2, got ${r.n}`]),
+    } as TAskRequest<{ n: number }>)
+    expect(result).toMatchObject({ reply: { n: 2 }, attempts: 2 })
+    expect(result.usage.requests).toBe(3)
+    // Two searches at $0.01 each, on top of tokens.
+    expect(result.usage.costUsd).toBeGreaterThan(0.02)
+    expect(calls[0].tools).toEqual(tools)
+    const roles = (c: TParams): string[] => (c.messages as unknown as { role: string }[]).map(m => m.role)
+    expect(roles(calls[1])).toEqual(['user', 'assistant'])
+    expect(roles(calls[2])).toEqual(['user', 'assistant', 'user'])
+    expect(JSON.stringify(calls[2].messages.at(-1))).toContain('n must be 2, got 1')
+  })
+
   it('gives up after three failed attempts', async () => {
     const calls: TParams[] = []
     const result = await ask(anthropicLlm(fakeClient([response({ n: 1 }), response({ n: 3 }), response({ n: 4 })], calls)))
@@ -159,7 +183,7 @@ describe('LLM step', () => {
         const reply = item.tasks
           ? { money: opts.secondReading ? opts.secondReading(item.file, money, req.model) : money, issue: null, vendorKind: null, headlineFix: null }
           : toReply(e)
-        const errors = req.validate(reply as T)
+        const errors = await req.validate(reply as T)
         if (errors.length) throw new Error(`fake reply failed checks: ${errors.join('; ')}`)
         return { reply: reply as T, modelId: req.model, attempts: 1, errors: [], refusal: null, usage }
       },
