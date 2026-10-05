@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943261846",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://apen4ej.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://apen4ej.org/who-is-apen/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006613",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match to a registered 501(c)(3) nonprofit, 'Asian Pacific Environmental Network', EIN 94-3261846, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Headquartered in Oakland, CA, matching the agenda location",
+      "Organization's website describes community organizing in Oakland and youth organizing, consistent with a school-based services agreement at an Oakland middle school"
+    ],
+    "key": "v-006613",
+    "notes": "A separate 501(c)(4) affiliate, Asian Pacific Environmental Network Action (EIN 45-4027112), also exists in Oakland; this record is the 501(c)(3) matching the agenda name. The cited pages do not mention OUSD directly.",
+    "profile": {
+      "address": "1212 Broadway, Suite 200, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-3261846",
+      "email": "info@apen4ej.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Asian Pacific Environmental Network",
+      "orgType": "nonprofit",
+      "phone": "(510) 834-8920",
+      "samUei": null,
+      "summary": "A nonprofit environmental justice organization that brings together Asian immigrant and refugee communities in Oakland, Richmond and Los Angeles. It does community organizing, policy advocacy and leadership development on issues such as pollution, housing and a shift away from fossil fuels.",
+      "website": "https://apen4ej.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Asian Pacific Environmental Network - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943261846"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - Asian Pacific Environmental Network",
+        "url": "https://apen4ej.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Who is APEN? - Asian Pacific Environmental Network",
+        "url": "https://apen4ej.org/who-is-apen/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006613",
+    "notes": "Exact name and Oakland location match the agenda; ProPublica confirms the 501(c)(3) with EIN 94-3261846, and the APEN contact and about pages confirm the contact details and the neutral summary. APEN runs youth programs in Oakland, which is plausible for a middle-school services agreement, though no source mentions OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

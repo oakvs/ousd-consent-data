@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/320460001",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://trellislegacy.com/history/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/32-0460001",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-trellis-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists a 501(c)(3) named 'Trellis' (EIN 32-0460001) located in San Francisco, CA, matching the agenda location",
+      "GuideStar lists 'Trellis Education' with the same EIN and website trelliseducation.org, with a mission of preparing STEM teachers, matching OUSD's 'STEM Teacher Pathway and Mentor Fellow Project' MOUs for Talent/Human Resources",
+      "The Trellis Legacy Project history page lists Oakland Unified School District among Trellis Education's partners"
+    ],
+    "key": "n-trellis-education",
+    "notes": "Organization appears to have dissolved in 2022 (per trellislegacy.com); IRS no longer lists it as tax exempt and its last revenue was $0. Original website trelliseducation.org did not load, so website and contact fields are left null. GuideStar shows a mailing address in Oakland while ProPublica shows San Francisco; address left null because of the conflict. Agenda MOUs were for 2019-2022, before closure.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "32-0460001",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Trellis",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Trellis Education was a Bay Area nonprofit founded in 2015 that worked with California school districts and teacher preparation programs to recruit, support and retain middle and high school STEM (science, technology, engineering and math) teachers. According to its former board's Legacy Project site, the organization closed in 2022.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Trellis - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/320460001"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "History - Trellis Legacy",
+        "url": "https://trellislegacy.com/history/"
+      },
+      {
+        "supports": [
+          "summary",
+          "ein"
+        ],
+        "title": "Trellis Education - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/32-0460001"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-trellis-education",
+    "notes": "ProPublica (Trellis, San Francisco, EIN 32-0460001), GuideStar (Trellis Education, same EIN, STEM teacher pathways mission) and the Trellis Legacy history page (founded 2015, OUSD listed as partner, closed 2022) all agree and match the STEM Teacher Pathway MOUs. Summary, legal name, EIN, org type and headquarters are supported and neutral; contact fields are null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/731312965",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/73-1312965",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.schusterman.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.schusterman.org/education/our-grantees",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-charles-and-lynn-schusterman-family-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name in OUSD agenda text matches a registered private foundation exactly: 'Charles And Lynn Schusterman Family Foundation' (ProPublica Nonprofit Explorer, EIN 73-1312965, Tulsa, OK). The name is distinctive and no similarly named organization was found.",
+      "The foundation's website describes an education funding area (literacy and teacher quality, school system partnerships), matching OUSD's 'Classroom & academic programs' grants handled by the Chief Academic Officer.",
+      "The foundation's education grantee list includes an Oakland, California organization (The Oakland REACH), showing it funds education work in Oakland."
+    ],
+    "key": "n-charles-and-lynn-schusterman-family-foundation",
+    "notes": "Registered legal name is 'Charles and Lynn Schusterman Family Foundation'; it now brands itself 'Charles and Lynn Schusterman Family Philanthropies'. Phone, email and address left null: the foundation's site blocked or did not show a general phone/address. No California entity number or SAM UEI looked up (out-of-state private foundation). No direct OUSD-Schusterman link was confirmed from a third-party page; identity rests on the exact name plus the foundation's education grantmaking in Oakland.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "73-1312965",
+      "email": null,
+      "headquarters": "Tulsa, OK",
+      "legalName": "Charles and Lynn Schusterman Family Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private grantmaking foundation based in Tulsa, Oklahoma. It gives grants in the United States and Israel in areas including criminal justice, democracy and voting rights, education, gender and reproductive equity, the Tulsa community and Jewish community life. It does not run programs itself. It operates publicly as Charles and Lynn Schusterman Family Philanthropies.",
+      "website": "http://www.schusterman.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Charles And Lynn Schusterman Family Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/731312965"
+      },
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "ein",
+          "summary",
+          "orgType"
+        ],
+        "title": "CHARLES AND LYNN SCHUSTERMAN FAMILY FOUNDATION - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/73-1312965"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Charles and Lynn Schusterman Family Philanthropies",
+        "url": "https://www.schusterman.org/"
+      },
+      {
+        "supports": [],
+        "title": "Our Education Grantees",
+        "url": "https://www.schusterman.org/education/our-grantees"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-charles-and-lynn-schusterman-family-foundation",
+    "notes": "The agenda funding source is a grant from the Charles and Lynn Schusterman Family Foundation, and ProPublica, GuideStar and the foundation's site confirm the legal name, EIN 73-1312965, Tulsa location, grantmaker model, focus areas (including education) and the Oakland education grantee. The summary is neutral and supported; the grantor role fits the grant-agreement titles.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943340838",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-3340838",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ed-data.org/school/Alameda/Oakland-Unified/North-Oakland-Community-Charter",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-north-oakland-community-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'North Oakland Community Charter School', EIN 94-3340838, Oakland, CA (ProPublica Nonprofit Explorer, GuideStar)",
+      "EdData lists a K-5 charter school of the same name at 1000 42nd Street, Oakland, CA 94608, under Oakland Unified, matching the agenda's charter operating-terms agreement with the District",
+      "Address on GuideStar (1000 42nd St, Oakland) matches the EdData school address"
+    ],
+    "key": "n-north-oakland-community-charter-school",
+    "notes": "School is closed as of June 30, 2024 per EdData; the noccs.org website could not be read, so website and phone are omitted.",
+    "profile": {
+      "address": "1000 42nd St, Oakland, CA 94608-3621",
+      "caEntityNumber": null,
+      "ein": "94-3340838",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "North Oakland Community Charter School",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that operated a public charter elementary school for grades K-5 in Oakland, California, authorized by Oakland Unified School District. The school opened in 2000 and closed on June 30, 2024.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "North Oakland Community Charter School - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943340838"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "address",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "North Oakland Community Charter School - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-3340838"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "headquarters"
+        ],
+        "title": "EdData - School Profile - North Oakland Community Charter",
+        "url": "https://www.ed-data.org/school/Alameda/Oakland-Unified/North-Oakland-Community-Charter"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-north-oakland-community-charter-school",
+    "notes": "ProPublica, GuideStar and EdData all show a 501(c)(3) of this exact name (EIN 94-3340838) running a K-5 charter at 1000 42nd St, Oakland, authorized by OUSD, which fits the charter operating-terms amendment. Summary (opened 2000, closed June 30, 2024), address, EIN, orgType and headquarters are all supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

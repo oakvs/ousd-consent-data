@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/behavioral-health-department/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/contact-us-bh/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-behavioral-health",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official Alameda County Health page for the Behavioral Health department; name matches the agenda's 'Alameda County Behavioral Health' (the old acbhcs.org site redirects to this page)",
+      "Department is headquartered in Oakland, CA, in the district OUSD serves, and operates a Child & Young Adult System of Care and School Based Behavioral Health Services, consistent with an OUSD 'Provider Contract Authorization Form - Special Education' contract"
+    ],
+    "key": "n-alameda-county-behavioral-health",
+    "notes": "County public agency, so no EIN or Secretary of State entity number sought. A general email was not cited because the only address on the contact page is the Director's inbox.",
+    "profile": {
+      "address": "2000 Embarcadero Cove, Suite 400, Oakland, California 94606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 567-8100",
+      "samUei": null,
+      "summary": "Alameda County Behavioral Health is the county government department that provides mental health and substance use services for people with Medi-Cal and for people without insurance. Its services include a system of care for children, youth and young adults ages 0 to 24 and school-based behavioral health services.",
+      "website": "https://health.alamedacountyca.gov/department/behavioral-health-department/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Alameda County Behavioral Health Department",
+        "url": "https://health.alamedacountyca.gov/department/behavioral-health-department/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Behavioral Health",
+        "url": "https://health.alamedacountyca.gov/contact-us-bh/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-alameda-county-behavioral-health",
+    "notes": "The agenda names Alameda County Behavioral Health (Contracts Unit, Provider Contract Authorization Form), which is the county department the profile describes. The department page supports the summary, and the contact page supports the main phone and the Oakland address. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

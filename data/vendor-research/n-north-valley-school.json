@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.victor.org/santa-rosa/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-north-valley-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: North Valley School is a school in Santa Rosa, CA, matching the agenda location 'Santa Rosa, CA' (victor.org school page)",
+      "Described as a private, non-profit, non-public school with IEP-aligned services for grades 1-12, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services Master Contract - Special Education Program' title",
+      "Certified by the California Department of Education as a nonpublic school, per its own page"
+    ],
+    "key": "n-north-valley-school",
+    "notes": "The school is run by Victor Treatment Centers (nonprofit, ProPublica lists Victor Treatment Centers Inc, EIN 94-2264395, HQ Chico), but I could not confirm which legal entity holds the OUSD contract, so legal name and EIN are left null. The page lists only named staff emails, so no email was recorded. CDE school directory page blocked automated fetching.",
+    "profile": {
+      "address": "3164 Condo Court, Santa Rosa, CA 95403",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Santa Rosa, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": "(707) 523-2334",
+      "samUei": null,
+      "summary": "North Valley School is a private, non-profit, non-public school in Santa Rosa, California, serving students in grades 1 to 12. It offers small classes and mental health services, such as individual and group counseling, that follow each student's Individualized Education Program (IEP). It serves youth living at Victor Treatment Centers and day students from nearby school districts.",
+      "website": "https://www.victor.org/santa-rosa/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "North Valley School Santa Rosa - Victor",
+        "url": "https://www.victor.org/santa-rosa/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-north-valley-school",
+    "notes": "The cited Victor page confirms a nonprofit non-public school in Santa Rosa (grades 1-12, small classes, IEP-aligned mental health services, CDE certified) at the stated address and phone, matching the agenda's Santa Rosa location and nonpublic special education master contract. The summary is neutral and supported; legal name and EIN are rightly left null since the contracting entity is not confirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

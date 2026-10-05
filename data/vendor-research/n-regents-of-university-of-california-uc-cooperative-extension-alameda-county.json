@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://lao.ca.gov/Publications/Report/4490",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.californialandcan.org/local-resources/UC-Cooperative-Extension-Alameda-County/6498",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://ucanr.edu/county/alameda-county-cooperative-extension",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-regents-of-university-of-california-uc-cooperative-extension-alameda-county",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names The Regents of the University of California (UC Cooperative Extension, Alameda County), and the agreement title names UC Agriculture and Natural Resources (UC ANR) and its UC Cooperative Extension - Alameda County, which matches the public UC Cooperative Extension county-office system run by UC ANR (Legislative Analyst's Office report)",
+      "UC Cooperative Extension Alameda County is a listed public UC outreach office serving Alameda County, which includes Oakland, matching the agenda's Oakland, CA location (California Land Conservation Assistance Network listing)",
+      "Search results for UC ANR's Alameda County site describe UC Cooperative Extension Alameda County working with Oakland Unified School District garden and nutrition education programs, matching the 'Student health, support & family services' purpose"
+    ],
+    "key": "n-regents-of-university-of-california-uc-cooperative-extension-alameda-county",
+    "notes": "ucanr.edu returned HTTP 403 to automated fetching, so the website could not be fetched by me or likely by the checker. Contact details were left null: sources disagree on the phone number ((510) 670-5622 vs (510) 670-5650) and the county office is in Hayward, not Oakland. The legal entity contracting is The Regents of the University of California (a public body); legalName left null because no fetched page shows it for this office.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "UC Cooperative Extension, Alameda County is the local office of the University of California's Agriculture and Natural Resources division. UC Cooperative Extension offices bring University of California research and educational resources to communities through outreach, in areas such as food, nutrition, gardening and the environment.",
+      "website": "https://ucanr.edu/county/alameda-county-cooperative-extension"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "An Analysis of the University of California's Agricultural and Natural Resource Programs",
+        "url": "https://lao.ca.gov/Publications/Report/4490"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "UC Cooperative Extension Alameda County - California Land Conservation Assistance Network",
+        "url": "https://www.californialandcan.org/local-resources/UC-Cooperative-Extension-Alameda-County/6498"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Alameda County Cooperative Extension",
+        "url": "https://ucanr.edu/county/alameda-county-cooperative-extension"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-regents-of-university-of-california-uc-cooperative-extension-alameda-county",
+    "notes": "The LAO report and the California Land Conservation Assistance Network listing both show UC Cooperative Extension Alameda County as a local arm of the University of California, UC ANR's county office system, and the contracting entity is the Regents; the summary and orgType are supported and neutral. The website page returned HTTP 403 to automated fetches (including mine), so that field could not be confirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "website"
+    ],
+    "verdict": "confirmed"
+  }
+}

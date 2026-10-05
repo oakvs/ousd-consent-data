@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://fresno.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941021164",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-fresno-pacific-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Fresno Pacific University', Fresno, CA (ProPublica Nonprofit Explorer, EIN 94-1021164)",
+      "University offers K-12 teaching credential programs with intern and field-experience pathways, matching OUSD's 'Intern Partnership and Practica Programs - K-12 Teaching' agreement for the Talent/Human Resources department"
+    ],
+    "key": "n-fresno-pacific-university",
+    "notes": "Agenda gives no city; identification rests on name match plus teaching-credential intern programs. No general email found on cited pages. OUSD partnership not directly confirmed on a public page.",
+    "profile": {
+      "address": "1717 S Chestnut Ave, Fresno, CA 93702",
+      "caEntityNumber": null,
+      "ein": "94-1021164",
+      "email": null,
+      "headquarters": "Fresno, CA",
+      "legalName": "Fresno Pacific University",
+      "orgType": "nonprofit",
+      "phone": "559-453-2000",
+      "samUei": null,
+      "summary": "A private Christian university in Fresno, California, offering undergraduate, graduate, seminary and degree completion programs. It enrolls about 3,000 students across several locations and online, and offers teaching credential programs that include intern and student teaching pathways.",
+      "website": "https://www.fresno.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "About Fresno Pacific University",
+        "url": "https://fresno.edu/about"
+      },
+      {
+        "supports": [
+          "ein",
+          "legalName",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Fresno Pacific University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941021164"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-fresno-pacific-university",
+    "notes": "Identity is plausible (Fresno Pacific University, EIN 94-1021164, CA teaching credential programs fit the K-12 intern MOU), and address, phone, website, EIN and org type are confirmed. However, the summary's claim that credential programs 'include intern and student teaching pathways' is not shown on either cited source (fresno.edu/about only says CTC-accredited credentials), so the summary is unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

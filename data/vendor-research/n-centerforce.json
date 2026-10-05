@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942446248",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.idealist.org/en/nonprofit/3620ac7c2ff848ebaf1891e423945a07-centerforce-oakland",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-centerforce",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered nonprofit 'Centerforce' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-2446248), matching the agenda's 'Centerforce, Oakland, CA'",
+      "Idealist profile for Centerforce in Oakland describes services for people impacted by incarceration and their families, consistent with OUSD's 'Student health, support & family services' category for a no-cost MOU through Community Schools and Student Services",
+      "Search results describe youth court diversion and family reunification programs by the Oakland organization; no page found that explicitly mentions OUSD"
+    ],
+    "key": "n-centerforce",
+    "notes": "Organization's own website (centerforce1.org / centerforce.ngo) could not be fetched from this environment (DNS failure), so website, phone, email and street address were left null rather than copied from third-party listings. Third-party listings show 1904 Franklin St, Oakland CA 94612 and (510) 834-3457; reviewer may verify on the org's site. No CA SOS or SAM record checked. No page found explicitly linking the organization to OUSD.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-2446248",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Centerforce",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that supports people affected by incarceration, including people in prison, those returning home, and their families. Founded in 1977, it offers reentry, family and community programs in the San Francisco Bay Area.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Centerforce - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942446248"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Centerforce - Organization - Idealist",
+        "url": "https://www.idealist.org/en/nonprofit/3620ac7c2ff848ebaf1891e423945a07-centerforce-oakland"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-centerforce",
+    "notes": "Centerforce is an Oakland 501(c)(3) (EIN 94-2446248) serving people and families affected by incarceration, matching the agenda's Oakland location and a no-cost student and family services MOU. ProPublica, the About page and the Contact page support the name, EIN, type, address, phone, generic info@ email, founding year and summary, which is neutral; no source ties it to OUSD directly and ProPublica notes it is absent from the latest IRS list.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.graystep.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.graystep.com/asbworks/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-gray-step-software",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company name 'Gray Step Software Inc.' matches the agenda's 'Gray Step Software'",
+      "Company address is in El Dorado Hills, CA, matching the agenda location (graystep.com contact page)",
+      "Company makes ASBWorks, the student body accounting software named in the OUSD agenda title 'ASB Works Software License Agreement', matching the 'Technology' category"
+    ],
+    "key": "n-gray-step-software",
+    "notes": "Registry IDs (CA SOS entity number, EIN, SAM UEI) not checked or found. Gray Step was acquired by KEV Group in 2024 per the company site; the contact page address and phone are still Gray Step's.",
+    "profile": {
+      "address": "4671 Golden Foothill Pkwy., Ste. 101 El Dorado Hills, CA 95762",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "El Dorado Hills, CA",
+      "legalName": "Gray Step Software Inc.",
+      "orgType": "company",
+      "phone": "(844) 944-7798",
+      "samUei": null,
+      "summary": "Gray Step Software develops web-based fund management and event tracking software for schools and school organizations. Its products include ASBWorks for student body funds, Booster Finance for booster clubs, myPTEZ for parent groups, Event Tracker and Polling Works. The company says it is now part of KEV Group.",
+      "website": "https://www.graystep.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Gray Step Software",
+        "url": "https://www.graystep.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact",
+        "url": "https://www.graystep.com/asbworks/contact.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-gray-step-software",
+    "notes": "Gray Step Software Inc. in El Dorado Hills, CA matches the agenda name and city, and it makes ASBWorks, which matches the ASB Works license item. The homepage and contact page support the summary, products, KEV Group mention, address and phone; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

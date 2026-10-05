@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.partnerforchildren.org/about-pcy-1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/043653529",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/04-3653529",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003274",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Partnership For Children And Youth' (ProPublica Nonprofit Explorer, EIN 04-3653529)",
+      "GuideStar lists a payment/mailing address at PO Box 2847, El Cerrito, CA 94530-5847, matching the agenda's 'El Cerrito, CA'",
+      "Organization works on school-based and expanded learning (afterschool, summer, community schools) programs, consistent with OUSD's 'Classroom & academic programs' contract through the Superintendent's office"
+    ],
+    "key": "v-003274",
+    "notes": "Headquarters and street address are in Sacramento; the El Cerrito link is a PO Box (2847, El Cerrito, CA 94530-5847) listed on GuideStar as a payment address. No explicit OUSD mention found on fetched pages. Formerly Bay Area Partnership for Children and Youth.",
+    "profile": {
+      "address": "1121 L Street, Suite 205, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": "04-3653529",
+      "email": "info@partnerforchildren.org",
+      "headquarters": "Sacramento, CA",
+      "legalName": "Partnership for Children and Youth",
+      "orgType": "nonprofit",
+      "phone": "510-830-4200",
+      "samUei": null,
+      "summary": "Partnership for Children & Youth is a California nonprofit that works to expand and improve afterschool and summer learning programs for young people in under-resourced communities. It trains program providers, connects schools with community partners, and advocates for supportive policies.",
+      "website": "https://www.partnerforchildren.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "About PCY - Partnership for Children & Youth",
+        "url": "https://www.partnerforchildren.org/about-pcy-1"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "Partnership For Children And Youth - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/043653529"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein"
+        ],
+        "title": "PARTNERSHIP FOR CHILDREN AND YOUTH - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/04-3653529"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-003274",
+    "notes": "Exact name match to the Sacramento-based 501(c)(3) (formerly Bay Area Partnership for Children and Youth), and GuideStar lists its mailing address as PO Box 2847, El Cerrito, matching the agenda location. The summary, contact fields and EIN are shown on the org's site, ProPublica and GuideStar; no OUSD-specific mention was found, so the match rests on name plus El Cerrito.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

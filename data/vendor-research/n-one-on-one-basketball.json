@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.1on1basketball.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.1on1basketball.com/about-us/history",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-one-on-one-basketball",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official website names the legal entity 'One on One Basketball, Inc' with a Washington, DC mailing address, matching the agenda's 'One on One Basketball, Inc.' and 'Washington, D.C.'",
+      "History page lists after-school programs among its services, matching OUSD's 'After-school & summer programs' contract",
+      "History page lists 'San Francisco East Bay, CA' among its program regions, consistent with serving Oakland schools"
+    ],
+    "key": "n-one-on-one-basketball",
+    "notes": "Nonprofit status not confirmed (no ProPublica match found for the EIN listed on GreatNonprofits), so orgType and EIN left null. No CA registry or SAM.gov check done.",
+    "profile": {
+      "address": "PO BOX 40514, Washington, DC 20016",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@1on1basketball.com",
+      "headquarters": "Washington, DC",
+      "legalName": "One on One Basketball, Inc",
+      "orgType": null,
+      "phone": "202-244-2255",
+      "samUei": null,
+      "summary": "One on One Basketball provides basketball instruction and event management in the United States and abroad. Its programs include after-school programs, player development, camps, leagues, personal training and special events. It started in 1991 and was incorporated in 1992, and is based in the Washington, D.C. area with regional offices in other areas, including the San Francisco East Bay.",
+      "website": "https://www.1on1basketball.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.1on1basketball.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "History",
+        "url": "https://www.1on1basketball.com/about-us/history"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-one-on-one-basketball",
+    "notes": "The official site names the legal entity 'One on One Basketball, Inc' with a Washington, DC address, matching the agenda, and it lists after-school programs and a San Francisco East Bay region. The summary, contact fields and headquarters match the cited Contact Us and History pages, and the email is a generic business address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

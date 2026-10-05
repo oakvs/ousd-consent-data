@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://hiddengeniusproject.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/460689949",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-hidden-genius-project",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Hidden Genius Project', located in Oakland, CA (ProPublica Nonprofit Explorer, EIN 46-0689949)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes training and mentoring Black male youth in technology, entrepreneurship and leadership, consistent with an OUSD community partnerships MOU for classroom and academic programs"
+    ],
+    "key": "n-hidden-genius-project",
+    "notes": "No main phone number found on the pages fetched; left null. CA SOS entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1441 Franklin Street, Fourth Floor, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "46-0689949",
+      "email": "Contact@hiddengeniusproject.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Hidden Genius Project",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Hidden Genius Project is a nonprofit that trains and mentors Black male youth in technology creation, entrepreneurship and leadership skills. It runs an Intensive Immersion Program in several cities and is based in Oakland, California.",
+      "website": "https://hiddengeniusproject.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "The Hidden Genius Project - About",
+        "url": "https://hiddengeniusproject.org/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Hidden Genius Project - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/460689949"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-hidden-genius-project",
+    "notes": "The Oakland-based 501(c)(3) Hidden Genius Project (EIN 46-0689949, 1441 Franklin St) matches the agenda name and city, and its Community Partnerships program fits a no-cost MOU. The organization's About page and the ProPublica page support the summary, address, email, EIN, org type and website.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

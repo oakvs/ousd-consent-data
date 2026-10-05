@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941186168",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edgewood.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edgewood.org/connect-with-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-edgewood-center-for-children-and-families",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Edgewood Center For Children And Families', San Francisco, CA, EIN 94-1186168 (ProPublica Nonprofit Explorer)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "Edgewood website says it runs Edgewood Community School, a non-public school program, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services Master Contract' for Special Education"
+    ],
+    "key": "n-edgewood-center-for-children-and-families",
+    "notes": "General email is obfuscated on the contact page and was omitted. No street address confirmed.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1186168",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Edgewood Center For Children And Families",
+      "orgType": "nonprofit",
+      "phone": "415.682.3160",
+      "samUei": null,
+      "summary": "A nonprofit mental health care provider for youth and families in the San Francisco Bay Area. Its services include crisis stabilization, residential treatment, intensive outpatient programs and counseling. It also runs Edgewood Community School, a non-public school.",
+      "website": "https://www.edgewood.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Edgewood Center For Children And Families - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941186168"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Edgewood Center for Children and Families",
+        "url": "https://www.edgewood.org"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Connect With Us - Edgewood",
+        "url": "https://edgewood.org/connect-with-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-edgewood-center-for-children-and-families",
+    "notes": "Name, San Francisco location, EIN 94-1186168 and 501(c)(3) status are confirmed by ProPublica and edgewood.org, which also lists a Non-Public School program that fits OUSD's nonpublic school master contract for special education. The summary and phone 415.682.3160 (main line on the contact page) are supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

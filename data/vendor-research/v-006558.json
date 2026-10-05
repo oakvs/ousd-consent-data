@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.skillastics.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.skillastics.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/corona/sandy-spin-slade-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006558",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Sandy Spin Slade dba Skillastics'; Skillastics' own contact page lists its legal entity as 'Sandy Spin Slade, Inc. / DBA Skillastics', so the vendor is an incorporated business, not an individual",
+      "Located in Corona, CA (670 E. Parkridge Ave., Suite 104, Corona, CA 92879), matching the agenda's 'Corona, CA'",
+      "Skillastics sells physical activity programs for after-school and PE programs, matching OUSD's 'After-school & summer programs' contract category",
+      "A California corporation record for Sandy 'spin' Slade, Inc. (Corona, CA) shows the same principal address and lists www.skillastics.com"
+    ],
+    "key": "v-006558",
+    "notes": "Entity number comes from a third-party aggregator of California Secretary of State data (bizprofile.net), not the SOS site itself; the registered legal name there is Sandy 'spin' Slade, Inc. The only email on the contact page is a named staff member's address, so email is left null. No EIN or SAM UEI was found.",
+    "profile": {
+      "address": "670 E. Parkridge Ave., Suite 104, Corona, CA 92879",
+      "caEntityNumber": "2213573",
+      "ein": null,
+      "email": null,
+      "headquarters": "Corona, CA",
+      "legalName": "Sandy Spin Slade, Inc.",
+      "orgType": "company",
+      "phone": "(951) 279-3476",
+      "samUei": null,
+      "summary": "Skillastics is a company that sells physical education and physical activity programs for after-school and PE settings. It offers activity kits with mats and lesson plans, plus online programs such as yoga and jump rope. Its customers are schools, after-school programs and community organizations serving children from early childhood through 8th grade.",
+      "website": "https://www.skillastics.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Skillastics - Contact",
+        "url": "https://www.skillastics.com/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Skillastics",
+        "url": "https://www.skillastics.com/"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Sandy 'spin' Slade, Inc. Corona, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/corona/sandy-spin-slade-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006558",
+    "notes": "The agenda's 'Sandy Spin Slade dba Skillastics' in Corona, CA matches the contact page legal entity 'Sandy Spin Slade, Inc. / DBA Skillastics' at 670 E. Parkridge Ave, and the CA corporation record (entity 2213573, active) lists the same address and skillastics.com; its after-school PE programs fit the after-school contract. Summary is neutral and supported by the homepage (the 'community organizations' wording is slightly broader than the homepage's 'schools and expanded learning programs' but is minor); the named staff email was correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943309981",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aimsk12.org/contact-district",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aimsk12.org/milestones",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aimsk12.org/about-aims",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-american-indian-public-high-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists a 501(c)(3) named 'American Indian Model Schools' in Oakland, CA (EIN 94-3309981), the operator of American Indian Public High School per Wikipedia",
+      "AIMS K-12's Milestones page says the organization changed its name from 'American Indian Model Schools' in 2019 and lists American Indian Public High School (founded 2006) as its high school",
+      "The school is in Oakland, CA (746 Grand Ave), and OUSD's agenda items are facilities use agreements with its Office of Charter Schools, consistent with an Oakland charter school"
+    ],
+    "key": "n-american-indian-public-high-school",
+    "notes": "The agenda names the school 'American Indian Public High School'; the organization renamed itself in 2019 (per aimsk12.org Milestones). The legal name is taken from the IRS/ProPublica record; the website calls the entity 'AIMS K-12 College Prep Charter District'. The old domain aimschools.org is now a parked page. CA Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": "171 12th Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-3309981",
+      "email": "communications@aimsk12.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "American Indian Model Schools",
+      "orgType": "nonprofit",
+      "phone": "510-893-8701",
+      "samUei": null,
+      "summary": "A nonprofit charter school organization in Oakland, California, now called AIMS K-12 College Prep Charter District. It runs public charter schools serving students from kindergarten through 12th grade, including a high school for grades 9 to 12. It began in 1996 as American Indian Public Charter School.",
+      "website": "https://aimsk12.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "American Indian Model Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943309981"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website"
+        ],
+        "title": "Contact District - AIMS K-12",
+        "url": "https://aimsk12.org/contact-district"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Milestones - AIMS K-12",
+        "url": "https://aimsk12.org/milestones"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About AIMS - AIMS K-12",
+        "url": "https://aimsk12.org/about-aims"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-american-indian-public-high-school",
+    "notes": "AIMS K-12's Milestones and About pages confirm American Indian Public High School (2006, 746 Grand Ave, Oakland) is part of the district formerly American Indian Public Charter School, renamed in 2019; ProPublica confirms the 501(c)(3) American Indian Model Schools, EIN 94-3309981, in Oakland, and the contact page confirms the address, phone, email and website. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

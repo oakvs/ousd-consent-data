@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/455551029",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.loveneverfailsus.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.loveneverfailsus.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002650",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Love Never Fails' located in Dublin, CA (ProPublica Nonprofit Explorer, EIN 45-5551029), matching the agenda's 'Dublin, CA'",
+      "Organization's own contact page gives a Dublin, CA mailing address (6937 Village Parkway #2074) and lists an Oakland regional office",
+      "Mission (anti-trafficking prevention education, survivor support, job training) fits OUSD's 'Classroom & academic programs' and 'Student health, support & family services' no-cost MOUs; web search results also describe its prevention education program being offered in Oakland schools (not fetched)"
+    ],
+    "key": "v-002650",
+    "notes": "Legal name taken from ProPublica as 'Love Never Fails'; some aggregators list 'Love Never Fails INC'. No OUSD mention found on fetched pages; the OUSD link rests on name/location/mission match. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": "6937 Village Parkway #2074, Dublin, CA 94568",
+      "caEntityNumber": null,
+      "ein": "45-5551029",
+      "email": "executiveoffice@loveneverfailsus.com",
+      "headquarters": "Dublin, CA",
+      "legalName": "Love Never Fails",
+      "orgType": "nonprofit",
+      "phone": "(844) 249-2698",
+      "samUei": null,
+      "summary": "Love Never Fails is a nonprofit based in Dublin, California, that works to end human trafficking. It provides housing and support for survivors, runs technology job training through its ITbiz Tech Academy, and offers community outreach and prevention education. It has offices across the San Francisco Bay Area and Central Valley.",
+      "website": "https://www.loveneverfailsus.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Love Never Fails - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/455551029"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "contact us - Love Never Fails",
+        "url": "https://www.loveneverfailsus.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Love Never Fails",
+        "url": "https://www.loveneverfailsus.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-002650",
+    "notes": "ProPublica confirms a Dublin, CA 501(c)(3) named Love Never Fails (EIN 45-5551029); the contact page confirms phone, generic executive-office email, Dublin mailing address, an Oakland office and a Stockton office; the homepage supports the anti-trafficking, housing, ITbiz Tech Academy and education summary, which fits the no-cost MOUs including Adult and Career Education. The OUSD link rests on name, location and mission match, with no direct OUSD mention found.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

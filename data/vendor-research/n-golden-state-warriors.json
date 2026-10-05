@@ -1,0 +1,59 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Golden_State_Warriors",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/communications-public-affairs/newsroom/news/~board/ousd-news/post/nba-all-star-game-events-in-oakland-create-excitement-for-students-across-ousd",
+      "pass": true
+    }
+  ],
+  "key": "n-golden-state-warriors",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name 'Golden State Warriors' matches the NBA basketball team, which owns and operates the Warriors Community Foundation that gives annual flagship grants to Oakland Unified School District (per search results; the foundation's own pages could not be fetched)",
+      "OUSD's own news page describes the Warriors organization donating tickets to OUSD students and staff, matching the agenda item 'Donation - Golden State Warriors'",
+      "The agenda gives no city or legal entity name, so it is unclear whether the donor is the team itself or its community foundation"
+    ],
+    "key": "n-golden-state-warriors",
+    "notes": "Medium confidence only: agenda text gives no location or legal entity, and the donor could be the team (a company) or the separate Warriors Community Foundation (a nonprofit that funds OUSD). Official nba.com/warriors and community.warriors.com pages returned no extractable contact details and the registries were not checked, so legal name, website, contact details and registry IDs are left null. Reviewer should check the OUSD board item to see which entity is the donor.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, California",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Golden State Warriors are a professional basketball team in the National Basketball Association (NBA). The team plays at Chase Center in San Francisco, California.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Golden State Warriors - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Golden_State_Warriors"
+      },
+      {
+        "supports": [],
+        "title": "NBA All Star Game Events in Oakland Create Excitement for Students Across OUSD",
+        "url": "https://www.ousd.org/communications-public-affairs/newsroom/news/~board/ousd-news/post/nba-all-star-game-events-in-oakland-create-excitement-for-students-across-ousd"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

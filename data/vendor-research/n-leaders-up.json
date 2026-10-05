@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/462606773",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.leadersup.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.leadersup.org/get-connected",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-leaders-up",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Leadersup' (ProPublica Nonprofit Explorer, EIN 46-2606773), located in Los Angeles, CA, matching the agenda location",
+      "Organization's own website (leadersup.org) gives a Los Angeles, CA mailing address, matching the agenda text 'Los Angeles, CA'",
+      "Organization's mission is connecting young adults to career pathways, which fits a services agreement with OUSD's Adult and Career Education Department"
+    ],
+    "key": "n-leaders-up",
+    "notes": "No mention of Oakland Unified found on the organization's pages; identity rests on name, Los Angeles location and mission fit. The Bay Area regional work is from a search result summary and is not independently cited. No public phone number found. California SOS and SAM.gov not checked.",
+    "profile": {
+      "address": "P.O. Box 862190, Los Angeles, CA 90086",
+      "caEntityNumber": null,
+      "ein": "46-2606773",
+      "email": "info@leadersup.org",
+      "headquarters": "Los Angeles, CA",
+      "legalName": "Leadersup",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "LeadersUp is a nonprofit that works to connect young adults of color to careers and to change education, workforce and economic systems. It does research, develops solutions and builds networks of employers and partners. It works in the Bay Area, Chicago and Greater Los Angeles.",
+      "website": "https://www.leadersup.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Leadersup - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/462606773"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "orgType"
+        ],
+        "title": "LeadersUp",
+        "url": "https://www.leadersup.org/"
+      },
+      {
+        "supports": [
+          "email",
+          "address"
+        ],
+        "title": "LeadersUp - Get Connected",
+        "url": "https://www.leadersup.org/get-connected"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-leaders-up",
+    "notes": "Identity is plausible (Los Angeles 501(c)(3) LeadersUp, EIN 46-2606773, career-pathways mission fits Adult and Career Education), and the contact and legal fields check out. However, the summary states it works in the Bay Area, Chicago and Greater Los Angeles and builds networks of employers; the cited pages do not say this (the homepage does not mention the Bay Area), and the candidate admits the regional claim is uncited, so the summary is not supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

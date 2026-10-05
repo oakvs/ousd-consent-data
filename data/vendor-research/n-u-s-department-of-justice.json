@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.justice.gov/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.justice.gov/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cops.usdoj.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-u-s-department-of-justice",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'U.S. Department of Justice' in Washington, DC; justice.gov lists its headquarters at 950 Pennsylvania Avenue NW, Washington DC",
+      "Agenda grant titles name the Community Oriented Policing Services (COPS) School Violence Prevention Program; the COPS Office website (cops.usdoj.gov) states it is part of the U.S. Department of Justice and lists a School Violence Prevention Program in its grants menu",
+      "Presenting office is OUSD Chief of Police Services, consistent with a COPS Office law enforcement grant"
+    ],
+    "key": "n-u-s-department-of-justice",
+    "notes": "Federal agency; grant is from the COPS Office School Violence Prevention Program. No general email published (contact form only).",
+    "profile": {
+      "address": "950 Pennsylvania Avenue NW, Washington DC 20530",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "U.S. Department of Justice",
+      "orgType": "public_agency",
+      "phone": "202-514-2000",
+      "samUei": null,
+      "summary": "The U.S. Department of Justice is a federal agency led by the Attorney General. Its mission is to uphold the rule of law, keep the country safe, and protect civil rights. It includes more than 30 component organizations, such as the Office of Community Oriented Policing Services (COPS Office), which awards grants to law enforcement agencies.",
+      "website": "https://www.justice.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us | United States Department of Justice",
+        "url": "https://www.justice.gov/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About DOJ",
+        "url": "https://www.justice.gov/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "COPS Office",
+        "url": "https://cops.usdoj.gov/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-u-s-department-of-justice",
+    "notes": "OUSD's records name the U.S. Department of Justice (Washington, DC) as grantor of the COPS School Violence Prevention Program; justice.gov and cops.usdoj.gov confirm the name, address, phone, mission, 30+ components, and the COPS Office and SVPP. The summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

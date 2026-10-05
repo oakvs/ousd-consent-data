@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/133148295",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://allstars.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://allstars.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-all-stars-project-of-bay-area",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'The All Stars Project of the Bay Area' with location New York, NY; the national All Stars Project, Inc. is a registered nonprofit headquartered in New York, NY (ProPublica, EIN 13-3148295)",
+      "allstars.org lists a San Francisco Bay Area regional site with its own advisory board, matching the 'of the Bay Area' name in the agenda",
+      "The organization runs youth development programs, consistent with a no-cost partnership MOU with OUSD's Community Schools and Student Services department"
+    ],
+    "key": "n-all-stars-project-of-bay-area",
+    "notes": "The agenda vendor is the Bay Area chapter of the national All Stars Project, Inc.; the legal entity and EIN are the national organization's. The Bay Area chapter phone is not listed separately here. No general email or street address was found on the cited pages (contact form only).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "13-3148295",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "All Stars Project, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(212) 256-8411",
+      "samUei": null,
+      "summary": "The All Stars Project is a nonprofit that runs performance-based youth development programs for young people from poor and underserved communities. Its programs include the Development School for Youth, the All Stars Talent Show Network and the Performance Lab. It is headquartered in New York and also operates in New Jersey, Chicago, Dallas and the San Francisco Bay Area.",
+      "website": "https://allstars.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "All Stars Project Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/133148295"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About Us - All Stars Project, Inc.",
+        "url": "https://allstars.org/about-us/"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "ein"
+        ],
+        "title": "All Stars Project, Inc.",
+        "url": "https://allstars.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-all-stars-project-of-bay-area",
+    "notes": "The agenda's New York, NY location matches the national All Stars Project, Inc. (ProPublica EIN 13-3148295, 501(c)(3)), whose site lists a San Francisco Bay Area site and youth development programs that fit a no-cost partnership MOU. The summary, EIN, HQ and New York phone (212) 256-8411 are all shown on the cited pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

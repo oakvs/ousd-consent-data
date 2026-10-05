@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://edtechjpa.org/about/edtech-jpa-overview",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://iusd.org/business-services/purchasing/education-technology-joint-powers-authority/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edtechjpa.org/about/our-ed-tech-jpa-members",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ed-tech-jpa",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Ed Tech JPA' matches the California public agency the Ed Tech JPA website calls itself (Education Technology Joint Powers Authority), which negotiates consortium technology contracts for California school districts",
+      "The Ed Tech JPA members page (edtechjpa.org) lists Oakland Unified School District as an Associate Member",
+      "OUSD's contract category 'Technology' (educational technology) matches the JPA's purpose of negotiating digital technology contracts for schools"
+    ],
+    "key": "n-ed-tech-jpa",
+    "notes": "Website lists two offices (procurement: 5050 Barranca Parkway, Irvine, CA 92604; administrative: 1450 Herndon Avenue, Clovis, CA 93611) and no public phone or general email, so address, headquarters and contact fields were left null to avoid guessing. Legal name left null because pages vary between 'Education Technology' and 'Educational Technology'. Public agency, so no EIN or SAM UEI looked up; CA Secretary of State entity number not found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Education Technology Joint Powers Authority (Ed Tech JPA) is a California public agency formed by school districts and a county office of education. It negotiates competitively priced digital technology contracts that California public school agencies can use, and it requires vendors to follow student data privacy rules. Joining as an associate member is currently free.",
+      "website": "https://edtechjpa.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "EdTech JPA Overview",
+        "url": "https://edtechjpa.org/about/edtech-jpa-overview"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us (Irvine Unified School District, Education Technology Joint Powers Authority)",
+        "url": "https://iusd.org/business-services/purchasing/education-technology-joint-powers-authority/about-us"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Our Ed Tech JPA Members",
+        "url": "https://edtechjpa.org/about/our-ed-tech-jpa-members"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-ed-tech-jpa",
+    "notes": "The Ed Tech JPA is a California public agency whose members page lists Oakland Unified as an Associate Member, so it is the organization named in the agenda. The summary is neutral and supported: the overview and members pages cover its purpose, privacy requirement and founding members (districts plus El Dorado County), and the 'no cost to join' claim is confirmed on edtechjpa.org/members/becoming-member, which the candidate did not cite.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

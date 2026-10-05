@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/362167808",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.norc.org/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.norc.org/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-national-opinion-research-center-norc",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'National Opinion Research Center', Chicago, IL (ProPublica Nonprofit Explorer, EIN 36-2167808); NORC's own site calls the organization 'NORC at the University of Chicago' (renamed from National Opinion Research Center in 2010)",
+      "Located in Chicago, IL, matching the agenda text",
+      "NORC's website describes it as a research and data science organization with an education division, consistent with a data sharing agreement with OUSD's Research, Assessment, Data department"
+    ],
+    "key": "n-national-opinion-research-center-norc",
+    "notes": "Agenda name is the former name; the organization now operates as 'NORC at the University of Chicago'. Legal name taken from the IRS/ProPublica record. No general email found.",
+    "profile": {
+      "address": "300 E. Randolph Street, Suite 4600, Chicago, IL 60601",
+      "caEntityNumber": null,
+      "ein": "36-2167808",
+      "email": null,
+      "headquarters": "Chicago, IL",
+      "legalName": "National Opinion Research Center",
+      "orgType": "nonprofit",
+      "phone": "(312) 759-4000",
+      "samUei": null,
+      "summary": "NORC at the University of Chicago is a nonprofit research organization that collects and analyzes data for decision-makers. It conducts studies in areas such as economics, education, global affairs, health, public affairs and society and culture. It has been working in research and data science for more than 80 years.",
+      "website": "https://www.norc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National Opinion Research Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/362167808"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us - NORC at the University of Chicago",
+        "url": "https://www.norc.org/about.html"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - NORC at the University of Chicago",
+        "url": "https://www.norc.org/contact.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-national-opinion-research-center-norc",
+    "notes": "ProPublica confirms a 501(c)(3) 'National Opinion Research Center' in Chicago, IL with EIN 36-2167808, and NORC's site confirms the 80+ year history, research divisions, website, and the downtown HQ address and phone. The summary is neutral and supported, and a Chicago research organization fits a data sharing agreement with OUSD's Research, Assessment, Data department.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

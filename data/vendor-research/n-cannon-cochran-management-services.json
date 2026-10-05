@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ccmsi.com/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ccmsi.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-cannon-cochran-management-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the agenda: the CCMSI website footer shows 'Cannon Cochran Management Services, Inc.'",
+      "Company's own About page says it was incorporated in Danville, Illinois, matching the agenda location 'Danville, IL'",
+      "Website describes third-party administration of self-insured property and casualty claims (liability and property coverage), matching OUSD's 'Property and Liability Third Party Administrator' contract paid from Fund 67 Self-Insurance"
+    ],
+    "key": "n-cannon-cochran-management-services",
+    "notes": "Address and email not found on fetched pages; left null. Registry IDs not looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Danville, IL",
+      "legalName": "Cannon Cochran Management Services, Inc.",
+      "orgType": "company",
+      "phone": "(800) 252-5059",
+      "samUei": null,
+      "summary": "A third-party administrator that helps organizations manage their self-insured property and casualty claims, including workers' compensation, liability and property coverage. It was incorporated in Danville, Illinois in 1978 and operates offices across the United States.",
+      "website": "https://www.ccmsi.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us - CCMSI",
+        "url": "https://www.ccmsi.com/about-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone"
+        ],
+        "title": "CCMSI",
+        "url": "https://www.ccmsi.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-cannon-cochran-management-services",
+    "notes": "The legal name Cannon Cochran Management Services, Inc., the Danville, IL origin and the third-party administration of self-insured liability and property claims all match the agenda item and the cited CCMSI pages. The toll-free phone and the 1978 incorporation, 32-office and nationwide-presence claims are also confirmed. The headquarters value rests on the page saying it was incorporated in Danville, which is consistent with the agenda location.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

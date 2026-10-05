@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/510390132",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/51-0390132",
+      "pass": true
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://corporate.comcast.com/values/foundation",
+      "pass": false
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://corporate.comcast.com/news-information/news-feed/more-than-67000-volunteers-spring-into-action-as-comcast-and-nbcuniversal-celebrate-their-commitment-to-communities-on-11th-comcast-cares-day",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-comcast-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'The Comcast Foundation' in Philadelphia, PA; ProPublica lists The Comcast Nbcuniversal Foundation (EIN 51-0390132) in Philadelphia, PA",
+      "Comcast's own foundation page (corporate.comcast.com/values/foundation) lists tax filings made by 'The Comcast Foundation', the same name used in the agenda",
+      "InfluenceWatch states the Comcast NBCUniversal Foundation was formerly the Comcast Foundation, and names Comcast Cares Day as one of its activities, matching the grant title 'Comcast Cares Day' in the agenda",
+      "Comcast press release says the Comcast Foundation was founded in June 1999, matching ProPublica's tax exemption date of July 1999"
+    ],
+    "key": "n-comcast-foundation",
+    "notes": "Legal name on IRS/ProPublica is 'The Comcast Nbcuniversal Foundation' (formerly The Comcast Foundation); the agenda uses the older name. Phone, email and mailing address omitted because sources disagree on floor/building address and no general contact was found. This is a Philadelphia-based corporate foundation, not an Oakland local; the grant was for Bunche High School Comcast Cares Day.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "51-0390132",
+      "email": null,
+      "headquarters": "Philadelphia, PA",
+      "legalName": "The Comcast Nbcuniversal Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "The charitable foundation of Comcast Corporation, based in Philadelphia. It was founded in 1999 and gives grants to nonprofit organizations. It supports programs on digital literacy, community service and youth leadership, and it gives college scholarships to high school seniors. It also supports Comcast Cares Day, an annual employee volunteer day.",
+      "website": "https://corporate.comcast.com/values/foundation"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "The Comcast Nbcuniversal Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/510390132"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "The Comcast Nbc Universal Foundation - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/51-0390132"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Comcast Foundation | Comcast Corporation",
+        "url": "https://corporate.comcast.com/values/foundation"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Comcast Cares Day press release",
+        "url": "https://corporate.comcast.com/news-information/news-feed/more-than-67000-volunteers-spring-into-action-as-comcast-and-nbcuniversal-celebrate-their-commitment-to-communities-on-11th-comcast-cares-day"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-comcast-foundation",
+    "notes": "ProPublica shows The Comcast Nbcuniversal Foundation (EIN 51-0390132, 501(c)(3), Philadelphia, ruling July 1999), and the Comcast press release confirms the Comcast Foundation was founded June 1999 with the same priorities, matching the agenda's Philadelphia-based 'Comcast Foundation' Comcast Cares Day grant. The summary matches GuideStar and the press release and is neutral; no personal contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

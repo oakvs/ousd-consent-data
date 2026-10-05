@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://regents.universityofcalifornia.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://regents.universityofcalifornia.edu/about/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://regents.universityofcalifornia.edu/contact/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://give.ucsfbenioffchildrens.org/stories/easing-burden-complex-care",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-novel-interventions-in-childrens-health",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'The Regents of the University of California', the legal governing body of the University of California, which includes UCSF (San Francisco, CA, matching the agenda location)",
+      "The agenda title names UCSF Benioff Children's Hospital's Novel Interventions in Children's Health (NICH) program; UCSF's NICH program (launched 2020) supports children and teens with complex medical conditions, matching OUSD's 'Student health, support & family services' category",
+      "UCSF Benioff Children's Hospital Oakland is part of UCSF, so the program serves the Oakland area"
+    ],
+    "key": "n-regents-of-university-of-california-novel-interventions-in-childrens-health",
+    "notes": "Profile is for the Regents (the contracting legal entity) at its systemwide office, not for the UCSF NICH program or UCSF campus. legalName left null because the cited pages do not show the full legal name 'The Regents of the University of California' verbatim as a registry name. No main phone number on the cited Regents contact page. No school-district mention found on NICH pages; identity rests on name, UCSF location and program match.",
+    "profile": {
+      "address": "1111 Franklin St., 12th floor, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "regentsoffice@ucop.edu",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Board of Regents governs the University of California, a public university system, under the California Constitution. The Board has 26 voting members. The University of California includes UCSF, whose Novel Interventions in Children's Healthcare (NICH) program pairs children and teens who have complex medical conditions with interventionists who help with care, housing, food and transportation.",
+      "website": "https://regents.universityofcalifornia.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Home | Board of Regents",
+        "url": "https://regents.universityofcalifornia.edu/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About the Regents | Board of Regents",
+        "url": "https://regents.universityofcalifornia.edu/about/index.html"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contacting the Regents",
+        "url": "https://regents.universityofcalifornia.edu/contact/index.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "NICH: Easing the Burden of Complex Care",
+        "url": "https://give.ucsfbenioffchildrens.org/stories/easing-burden-complex-care"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-regents-of-university-of-california-novel-interventions-in-childrens-health",
+    "notes": "The Regents of the University of California is the legal contracting entity for the UCSF Benioff Children's Hospital NICH data sharing agreement, and the website, email, Oakland systemwide address and 26-voting-member governance details are confirmed on the cited Regents pages. The summary's NICH sentence says interventionists help with food, but the cited NICH page names care coordination, childcare, housing and transportation and does not list food assistance, so the summary is flagged as not fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

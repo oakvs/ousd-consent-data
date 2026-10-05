@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/845127230",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nfcap.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://members.fcica.com/commercialflooringresourceguide/Details/national-flooring-contractors-apprenticeship-program-nfcap-2021515",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-national-flooring-contractors-flooring-apprenticeship-program-nfcap",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'National Flooring Contractors Apprenticeship Program Inc' (ProPublica, EIN 84-5127230, Miami, FL), matching the agenda's Miami, FL",
+      "Website describes a federally recognized flooring apprenticeship and career training program, matching OUSD's Oakland Adult and Career Education services agreement",
+      "Acronym NFCAP and Miami address are consistent across the organization's own website and the FCICA directory"
+    ],
+    "key": "n-national-flooring-contractors-flooring-apprenticeship-program-nfcap",
+    "notes": "Only general email found on the website is a named staff address, so email left null. Website does not mention Oakland or OUSD. No California entity or SAM UEI checked.",
+    "profile": {
+      "address": "223 East Flagler St. #502a, Miami, FL 33131",
+      "caEntityNumber": null,
+      "ein": "84-5127230",
+      "email": null,
+      "headquarters": "Miami, FL",
+      "legalName": "National Flooring Contractors Apprenticeship Program Inc",
+      "orgType": "nonprofit",
+      "phone": "(305) 972-2232",
+      "samUei": null,
+      "summary": "A nonprofit that runs a federally recognized apprenticeship program connecting young people to careers in the flooring industry. It provides hands-on training, certification and job placement support.",
+      "website": "https://www.nfcap.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National Flooring Contractors Apprenticeship Program Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/845127230"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "NFCAP",
+        "url": "https://www.nfcap.org"
+      },
+      {
+        "supports": [
+          "phone",
+          "website"
+        ],
+        "title": "National Flooring Contractors Apprenticeship Program (NFCAP) - FCICA",
+        "url": "https://members.fcica.com/commercialflooringresourceguide/Details/national-flooring-contractors-apprenticeship-program-nfcap-2021515"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-national-flooring-contractors-flooring-apprenticeship-program-nfcap",
+    "notes": "ProPublica, nfcap.org and the FCICA listing all show a Miami, FL flooring apprenticeship nonprofit (NFCAP, EIN 84-5127230) matching the agenda's name, acronym and location, and its adult career training fits the Oakland Adult and Career Education agreement. Legal name, address, phone, EIN and summary are each supported; the named-staff email was correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

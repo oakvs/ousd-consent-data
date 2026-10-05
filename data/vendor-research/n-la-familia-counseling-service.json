@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942297155",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://livelafamilia.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://livelafamilia.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/health-wellness/substance-use/support-resources/professional-support-for-drug-use",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-la-familia-counseling-service",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'La Familia Counseling Service', Hayward, CA (ProPublica Nonprofit Explorer, EIN 94-2297155), matching the agenda location Hayward, CA",
+      "Organization's website (livelafamilia.org, redirected from the old lafamiliacounseling.org) lists headquarters at Southland Drive, Hayward, CA and describes behavioral health and community services in Alameda County",
+      "OUSD's own Professional Support for Drug Use page lists La Familia Counseling's adolescent substance abuse treatment program with services at schools in Oakland, matching OUSD's 'Student health, support & family services' contract"
+    ],
+    "key": "n-la-familia-counseling-service",
+    "notes": "ProPublica lists the IRS name as 'La Familia Counseling Service' with the trade/current name 'The Alliance for Community Wellness'. The website is now livelafamilia.org. No general email or CA entity number or SAM UEI was verified.",
+    "profile": {
+      "address": "24301 Southland Drive, Suite 300, Hayward, CA 94545",
+      "caEntityNumber": null,
+      "ein": "94-2297155",
+      "email": null,
+      "headquarters": "Hayward, CA",
+      "legalName": "La Familia Counseling Service",
+      "orgType": "nonprofit",
+      "phone": "1-510-300-3500",
+      "samUei": null,
+      "summary": "La Familia is a community nonprofit that offers behavioral and preventative health care and wraparound community services in the Bay Area. Its programs include mental health support, substance use recovery, housing assistance, primary care, basic needs support, jobs programs, and services for people with developmental disabilities. It serves Alameda, Contra Costa and Stanislaus counties.",
+      "website": "https://livelafamilia.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Alliance For Community Wellness - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942297155"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "La Familia",
+        "url": "https://livelafamilia.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - La Familia",
+        "url": "https://livelafamilia.org/contact/"
+      },
+      {
+        "supports": [],
+        "title": "Professional Support for Drug Use - Oakland Unified School District",
+        "url": "https://www.ousd.org/health-wellness/substance-use/support-resources/professional-support-for-drug-use"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-la-familia-counseling-service",
+    "notes": "ProPublica lists EIN 94-2297155 (Hayward, CA) with the other name La Familia Counseling Service, the contact page confirms the Hayward address and phone, and OUSD's own page lists La Familia Counseling's adolescent substance-use program at Oakland schools. The summary matches the website's program list and is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

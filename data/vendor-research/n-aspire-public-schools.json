@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943311088",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aspirepublicschools.org/contact-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aspirepublicschools.org/discover_aspire/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-aspire-public-schools",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Aspire Public Schools', EIN 94-3311088, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Headquartered in Oakland, CA; the agenda item concerns Aspire Berkley Maynard Academy, an Oakland charter school that Aspire's own website lists as part of its Bay Area region",
+      "Aspire's website describes a charter school network, matching an OUSD Charter School Facilities Program MOU with the District"
+    ],
+    "key": "n-aspire-public-schools",
+    "notes": "Foundation entity 'Aspire Public Schools Foundation' (EIN 84-2381617) is a separate organization and was not used. The agenda text gives no location; identity rests on the name, the Oakland charter school named in the agenda title, and the charter facilities MOU context. CA Secretary of State number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1001 22nd Avenue, Suite 100, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "94-3311088",
+      "email": "info@aspirepublicschools.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Aspire Public Schools",
+      "orgType": "nonprofit",
+      "phone": "(510) 434-5000",
+      "samUei": null,
+      "summary": "A nonprofit that operates a network of tuition-free public charter schools for students in kindergarten through 12th grade in California. Its schools are in the Bay Area, the Central Valley and Los Angeles regions. The organization was founded in 1998 and says it aims to prepare underserved students for college and career success.",
+      "website": "https://aspirepublicschools.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Aspire Public Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943311088"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact - Aspire Public Schools",
+        "url": "https://aspirepublicschools.org/contact-2/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Discover Aspire - Aspire Public Schools",
+        "url": "https://aspirepublicschools.org/discover_aspire/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-aspire-public-schools",
+    "notes": "ProPublica (EIN 94-3311088, Oakland) and Aspire's contact and about pages support the name, EIN, address, phone, email, website, regions, founding year and mission; Aspire Public Schools is the nonprofit charter network that operates Aspire Berkley Maynard Academy in Oakland, which fits the charter facilities MOU. The summary is neutral and supported, though 'career success' loosely paraphrases the site's 'college and post-secondary pathways'.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

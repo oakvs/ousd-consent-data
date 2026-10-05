@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://about.underarmour.com/en/our-company/contact-ua.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://about.underarmour.com/en/stories/2025/03/stephen-and-ayesha-curry-s-eat-learn-play-under-armour-and-curry.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-under-armour",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches Under Armour, Inc., a Maryland-incorporated public company (SEC EDGAR filer, CIK 0001336917)",
+      "Under Armour's own site describes a partnership with Oakland Unified School District and the Oakland Athletic League (official outfitter of OUSD high schools, uniforms and coach training), matching the agenda's 'Letter of Agreement - Under Armour, Inc. - Oakland Athletic League'",
+      "Athletic apparel and sports programs match the Oakland Athletic League / Community Schools and Student Services context"
+    ],
+    "key": "n-under-armour",
+    "notes": "Large public company; no EIN, California entity number or UEI confirmed from a cited page, so left null. Phone is the customer service line (the contact page's only general number).",
+    "profile": {
+      "address": "101 Performance Drive, Baltimore, MD 21230-2080",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "UAHelp@underarmour.com",
+      "headquarters": "Baltimore, MD",
+      "legalName": "Under Armour, Inc.",
+      "orgType": "company",
+      "phone": "1.888.727.6687",
+      "samUei": null,
+      "summary": "Under Armour is a global athletic performance brand that makes sportswear, footwear and accessories for athletes. It sells through its own stores, websites and wholesale partners. It has also partnered with Oakland schools and the Oakland Athletic League on school sports uniforms and coach training.",
+      "website": "https://about.underarmour.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact UA - Under Armour",
+        "url": "https://about.underarmour.com/en/our-company/contact-ua.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Eat. Learn. Play., Under Armour and Curry Brand Unite to Revitalize Youth Sports in Oakland",
+        "url": "https://about.underarmour.com/en/stories/2025/03/stephen-and-ayesha-curry-s-eat-learn-play-under-armour-and-curry.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-under-armour",
+    "notes": "Organization is correct (Under Armour, Inc., Baltimore; its own story page documents the OUSD/Oakland Athletic League partnership). However the summary claims school sports uniforms and sales through own stores, websites and wholesale partners, and neither cited page says this (the Oakland page mentions gear and equipment support for middle school basketball and coach training only), so the summary is not supported by the cited sources. Contact fields (address, phone, email, website) are confirmed on the contact page.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

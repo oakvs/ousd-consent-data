@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/832001085",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.helpamotherout.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/83-2001085",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007819",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Help A Mother Out' (ProPublica Nonprofit Explorer, EIN 83-2001085, Oakland, CA)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes family-support work (diaper access for families in need), consistent with OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "v-007819",
+    "notes": "No OUSD mention found on the organization's pages. Phone, email and mailing address could not be confirmed from a fetchable page, so they are left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "83-2001085",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Help A Mother Out",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that works to improve baby and family well-being by increasing access to diapers for families in need. It runs the Bay Area Diaper Bank and the San Francisco Diaper Bank, which give diapers to families through partner social service organizations.",
+      "website": "https://www.helpamotherout.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Help A Mother Out - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/832001085"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Help a Mother Out",
+        "url": "https://www.helpamotherout.org"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Help a Mother Out - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/83-2001085"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007819",
+    "notes": "Oakland-based 501(c)(3) Help A Mother Out (EIN 83-2001085) matches the agenda name and city, and diaper/family-support services fit the 'student health, support & family services' category. ProPublica, GuideStar and the organization's own site (including its programs page) support the neutral summary, including the Bay Area and San Francisco Diaper Banks and distribution via community partners.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

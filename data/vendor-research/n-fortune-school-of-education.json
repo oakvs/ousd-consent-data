@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943187528",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fortuneschool.us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fortuneschool.us/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-fortune-school-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Rex And Margaret Fortune School Of Education', EIN 94-3187528, Sacramento, CA (ProPublica Nonprofit Explorer)",
+      "Located in Sacramento, CA, matching the location given in the agenda text",
+      "Organization's own site says it runs educator preparation programs for teachers, matching OUSD's MOU for a K-12 teaching credential program (Multiple Subject, Single Subject, Education Specialist) with the Talent department"
+    ],
+    "key": "n-fortune-school-of-education",
+    "notes": "Site brands itself 'Rex & Margaret Fortune School of Education'; legal name taken from ProPublica/IRS. No general email found on the cited pages (contact form only). CA Secretary of State entity number and SAM UEI not looked up. No page found that names OUSD directly; identity rests on name, city and the credential-program match.",
+    "profile": {
+      "address": "2890 Gateway Oaks Drive, Suite 100, Sacramento, CA 95833",
+      "caEntityNumber": null,
+      "ein": "94-3187528",
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "Rex And Margaret Fortune School Of Education",
+      "orgType": "nonprofit",
+      "phone": "(916) 924-8633",
+      "samUei": null,
+      "summary": "A nonprofit organization founded in 1989 in Sacramento, California. It runs tuition-free public charter schools and preschools in Sacramento and San Bernardino, with a focus on closing the African American achievement gap. It also offers educator preparation programs that train teachers and administrators.",
+      "website": "https://www.fortuneschool.us"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Rex And Margaret Fortune School Of Education - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943187528"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Rex & Margaret Fortune School of Education",
+        "url": "https://www.fortuneschool.us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Rex & Margaret Fortune School of Education",
+        "url": "https://www.fortuneschool.us/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-fortune-school-of-education",
+    "notes": "Name, Sacramento location, and educator-preparation programs match the OUSD MOU for a teaching credential program; ProPublica confirms the 501(c)(3) name, EIN and city, and the organization's site confirms phone, address, 1989 founding, charter schools/preschool and San Bernardino presence. Summary is neutral and supported; no personal contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.devereux.org/site/SPageServer/?pagename=ga_contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://www.devereux.org/site/PageServer?pagename=georgia_about_us_history_information",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.devereux.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-devereux-advanced-behavioral-health-georgia",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: devereux.org's Georgia contact page is titled 'Contact Devereux Georgia - Devereux Advanced Behavioral Health Georgia'",
+      "Located in Kennesaw, GA (1291 Stanley Road, Kennesaw, GA 30152), matching the agenda's 'Kennesaw, GA'",
+      "Site describes residential treatment and educational services for youth with emotional and behavioral challenges, consistent with a Non-Public School/Agency special education master contract",
+      "Georgia state agency (DBHDD) lists 'Devereux Advanced Behavioral Health Georgia' as a location"
+    ],
+    "key": "n-devereux-advanced-behavioral-health-georgia",
+    "notes": "This is the Georgia location of Devereux (parent: Devereux Foundation, Villanova, PA, EIN 23-1390618 per ProPublica). EIN and legal name deliberately omitted because it is not confirmed whether the Georgia operation files under the parent's EIN or is separately incorporated. No general email found. No page found mentioning OUSD directly.",
+    "profile": {
+      "address": "1291 Stanley Road, Kennesaw, GA 30152",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Kennesaw, GA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": "(770) 427-0147",
+      "samUei": null,
+      "summary": "Devereux Advanced Behavioral Health Georgia is part of Devereux, a national nonprofit behavioral health organization. The Georgia location offers residential treatment for youth with emotional, behavioral and developmental challenges, specialty foster care, and educational services. It has operated in Cobb County, Georgia since 1973.",
+      "website": "https://www.devereux.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Devereux Georgia - Devereux Advanced Behavioral Health Georgia",
+        "url": "https://www.devereux.org/site/SPageServer/?pagename=ga_contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Devereux - Devereux Advanced Behavioral Health Georgia",
+        "url": "http://www.devereux.org/site/PageServer?pagename=georgia_about_us_history_information"
+      },
+      {
+        "supports": [
+          "website",
+          "orgType"
+        ],
+        "title": "Devereux Advanced Behavioral Health",
+        "url": "https://www.devereux.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-devereux-advanced-behavioral-health-georgia",
+    "notes": "Name, Kennesaw GA address, phone, nonprofit status, 1973 Cobb County founding, residential treatment, foster care and accredited school are all shown on the cited devereux.org pages and fit a non-public school special education contract. 'Headquarters' is the Georgia site's location, not the organization's HQ (national parent is in Villanova, PA), so it is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

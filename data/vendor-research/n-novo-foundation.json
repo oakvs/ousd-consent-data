@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://novofoundation.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/470824753",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-novo-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered private foundation: 'Novo Foundation', Hurley, NY, EIN 47-0824753 (ProPublica Nonprofit Explorer), filing Form 990-PF through fiscal year 2024",
+      "ProPublica lists Jennifer Buffett and Peter Buffett as officers of this EIN, consistent with the NoVo Foundation they established; the foundation's website (novofoundation.org) also refers to its work in Kingston, NY, next to Hurley",
+      "NoVo Foundation's website and public pages describe funding of social and emotional learning, matching OUSD's 'Grant Award - NoVo Foundation - Social and Emotional Learning Department'; a public OUSD SEL page mentions a grant report to the NoVo Foundation"
+    ],
+    "key": "n-novo-foundation",
+    "notes": "Phone and email come from the website's structured page metadata (212.808.5400 is a New York City number; the registry address is Hurley, NY). ProPublica spells the legal name 'Novo Foundation'; the website uses 'NoVo Foundation'. No street address found. Private grantmaking foundation (990-PF filer), not a public charity.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "47-0824753",
+      "email": "info@novofoundation.org",
+      "headquarters": "Hurley, NY",
+      "legalName": "NoVo Foundation",
+      "orgType": "nonprofit",
+      "phone": "212.808.5400",
+      "samUei": null,
+      "summary": "A private philanthropic foundation, established in 2006, that makes grants to people and organizations. Its stated aims include supporting children's joy and curiosity and adults' health, well-being and agency. It has funded social and emotional learning programs in schools. It does not accept unsolicited funding proposals.",
+      "website": "https://novofoundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "legalName",
+          "orgType"
+        ],
+        "title": "Home - NoVo Foundation",
+        "url": "https://novofoundation.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Novo Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/470824753"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-novo-foundation",
+    "notes": "novofoundation.org's structured metadata confirms legal name, 2006 founding, phone and generic info@ email, and its page confirms the mission wording and no-unsolicited-proposals policy; ProPublica confirms EIN 47-0824753, Hurley NY, 990-PF private foundation with the Buffetts as co-presidents. The SEL grant fits OUSD's 'Grant Award - NoVo Foundation - Social and Emotional Learning' item (the SEL-in-schools phrase rests on OUSD's own record, not the cited pages); the EIN's 2021 exemption date suggests a reorganized entity, but the brand, officers and mission match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

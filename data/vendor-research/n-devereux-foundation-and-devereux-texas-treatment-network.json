@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/231390618",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.devereux.org/site/PageServer?pagename=about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.devereux.org/site/SPageServer/?pagename=tx_index",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-devereux-foundation-and-devereux-texas-treatment-network",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Devereux Foundation', Villanova, PA, EIN 23-1390618 (ProPublica Nonprofit Explorer)",
+      "Devereux's own website lists a Texas program at 1150 Devereux Drive, League City, TX, matching the agenda's 'Texas' location and the 'Devereux Texas Treatment Network' name",
+      "Devereux describes clinical, educational and school-based programs for people with autism and developmental disabilities, consistent with OUSD's non-public school special education master contract"
+    ],
+    "key": "n-devereux-foundation-and-devereux-texas-treatment-network",
+    "notes": "The agenda names two entities (The Devereux Foundation and Devereux Texas Treatment Network). This profile describes the parent nonprofit, Devereux Foundation (EIN 23-1390618), which now brands itself Devereux Advanced Behavioral Health; the Texas program is a unit of it (League City, TX, 1150 Devereux Drive, (800) 373-0011). The California Department of Education directory entry for the Texas school could not be fetched (bot-blocked), so the separate legal status of the Texas entity was not confirmed. No general email found; only a contact form.",
+    "profile": {
+      "address": "444 Devereux Drive, Villanova, PA 19085",
+      "caEntityNumber": null,
+      "ein": "23-1390618",
+      "email": null,
+      "headquarters": "Villanova, PA",
+      "legalName": "Devereux Foundation",
+      "orgType": "nonprofit",
+      "phone": "1-800-345-1292",
+      "samUei": null,
+      "summary": "Devereux Advanced Behavioral Health is a nonprofit, founded in 1912, that provides clinical, therapeutic, educational and employment programs. It serves people with autism, intellectual and developmental disabilities, mental health needs, and those in foster care. Programs run in hospital, residential, community and school-based settings in several states, including a residential program in League City, Texas.",
+      "website": "https://www.devereux.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Devereux Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/231390618"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "About Devereux Advanced Behavioral Health",
+        "url": "https://www.devereux.org/site/PageServer?pagename=about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Devereux Texas Overview",
+        "url": "https://www.devereux.org/site/SPageServer/?pagename=tx_index"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-devereux-foundation-and-devereux-texas-treatment-network",
+    "notes": "ProPublica confirms Devereux Foundation (EIN 23-1390618, Villanova PA, 501(c)(3)); devereux.org confirms 1912 founding, HQ address, phone, service areas and Texas operations at League City, consistent with a non-public school special education contract. The summary is neutral and supported (the 'employment programs' wording rests on transition and independent-living services; the Texas entity's separate legal status is unconfirmed but the profile appropriately describes the parent).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

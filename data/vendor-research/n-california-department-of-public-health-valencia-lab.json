@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.cdph.ca.gov/Programs/OPA/Pages/NR21-335.aspx",
+      "pass": false
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.cdph.ca.gov/Pages/About.aspx",
+      "pass": false
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.cdph.ca.gov/Pages/contact_us.aspx",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-california-department-of-public-health-valencia-lab",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda item is an MOU for sending COVID-19 test samples to the 'CDPH Valencia Branch State Public Health Laboratory'; CDPH's own press release NR21-335 describes the Valencia Branch Laboratory as a California Department of Public Health COVID-19 testing laboratory",
+      "The press release says the laboratory takes samples from a network of collection sites developed with churches, schools, clinics and community groups, matching an MOU for local entities and community groups (such as a school district) sending samples",
+      "The agenda item is presented by OUSD General Counsel under student health services, consistent with a state public health agency MOU rather than a commercial purchase"
+    ],
+    "key": "n-california-department-of-public-health-valencia-lab",
+    "notes": "The vendor named in the agenda is the CDPH Valencia Branch State Public Health Laboratory, a facility of the California Department of Public Health (the press release says it is operated by contractor PerkinElmer). The profile describes CDPH, the contracting public agency. No street or mailing address was confirmed on a fetchable CDPH page, so address is null. Public agencies have no EIN, CA entity number or SAM UEI of interest.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Public Health",
+      "orgType": "public_agency",
+      "phone": "(916) 558-1784",
+      "samUei": null,
+      "summary": "The California Department of Public Health is the state agency responsible for public health in California. Its mission is to advance the health and well-being of California's diverse people and communities. Its work includes preventing disease, running public health laboratories, and responding to public health emergencies.",
+      "website": "https://www.cdph.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "headquarters",
+          "orgType",
+          "legalName"
+        ],
+        "title": "CDPH Laboratory Field Services Concludes Inspection Process for the Valencia Branch Laboratory",
+        "url": "https://www.cdph.ca.gov/Programs/OPA/Pages/NR21-335.aspx"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About CDPH",
+        "url": "https://www.cdph.ca.gov/Pages/About.aspx"
+      },
+      {
+        "supports": [
+          "phone",
+          "website"
+        ],
+        "title": "Contact Us - CDPH",
+        "url": "https://www.cdph.ca.gov/Pages/contact_us.aspx"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-california-department-of-public-health-valencia-lab",
+    "notes": "The agenda MOU is for sending samples to the CDPH Valencia Branch State Public Health Laboratory, and the CDPH press release (NR21-335, Sacramento dateline) and About page confirm CDPH is the state agency behind it, with the mission, laboratory services and emergency preparedness as stated; the contact page and site footer give the (916) 558-1784 general number. Summary is neutral and supported, and the profile contains only business contact details.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

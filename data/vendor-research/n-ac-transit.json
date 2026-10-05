@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.actransit.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.actransit.org/press-release/alameda-county-middle-and-high-school-students-invited-to-apply-for-free-transit-passes",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ac-transit",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda title names 'AC Transit' in the Alameda CTC Student Transit Pass Program / Youth Clipper Card agreement; AC Transit's own press release says it takes part in that program and lists Oakland as a 'Universal District'",
+      "Alameda CTC's Student Transit Pass Program page lists AC Transit as a participating operator giving Oakland Unified students free rides",
+      "AC Transit's site identifies it as the Alameda-Contra Costa Transit District, headquartered at 1600 Franklin Street, Oakland, CA, matching an Oakland transportation contract (Transportation Department)"
+    ],
+    "key": "n-ac-transit",
+    "notes": "Public agency; no EIN, CA SOS entity number or SAM UEI looked up. Main phone is listed on the contact page as '(510) 891-4777, option 2' and elsewhere as 510-891-4777, so phone was omitted to avoid format mismatch. No general inbox found (only media@ and externalaffairs@).",
+    "profile": {
+      "address": "1600 Franklin Street, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Alameda-Contra Costa Transit District",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "AC Transit is a public transit agency that runs bus service in 13 cities and nearby unincorporated areas of Alameda and Contra Costa counties in the East Bay, including transbay service to San Francisco. It describes itself as California's largest bus-only transit agency.",
+      "website": "https://www.actransit.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "website",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Contact Us | AC Transit",
+        "url": "https://www.actransit.org/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Alameda County Middle and High School Students Invited to Apply for Free Transit Passes",
+        "url": "https://www.actransit.org/press-release/alameda-county-middle-and-high-school-students-invited-to-apply-for-free-transit-passes"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-ac-transit",
+    "notes": "The agenda item is the AC Transit/Alameda CTC Student Transit Pass Program Youth Clipper Card agreement, and AC Transit's press release lists Oakland as a Universal District. The contact page confirms the legal name, Oakland HQ address, website and public-agency status, and the press release boilerplate supports the neutral summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

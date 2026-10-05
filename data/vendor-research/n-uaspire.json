@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/461314848",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.uaspire.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.uaspire.org/join-us/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.uaspire.org/about/locations",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 404",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-uaspire",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'Uaspire Inc' in Boston, MA, EIN 46-1314848 (ProPublica Nonprofit Explorer), matching the agenda's 'uAspire, Inc.', Boston, MA",
+      "uAspire's own Locations page lists Oakland, Hayward and San Francisco, California as places it serves",
+      "Website describes financial aid advising and counselor training for students, consistent with a Community Schools and Student Services partnership"
+    ],
+    "key": "n-uaspire",
+    "notes": "No general info email is published (only department/person-specific addresses), so email is null. California SOS and SAM.gov not checked.",
+    "profile": {
+      "address": "6 Liberty Square PMB 98549, Boston, MA 02109",
+      "caEntityNumber": null,
+      "ein": "46-1314848",
+      "email": null,
+      "headquarters": "Boston, MA",
+      "legalName": "Uaspire Inc",
+      "orgType": "nonprofit",
+      "phone": "857-344-0770",
+      "samUei": null,
+      "summary": "uAspire is a nonprofit that works to improve the economic mobility of underrepresented students. It helps high school and college students with financial aid, trains school counselors on financial aid, advocates for policy changes, and consults with partners. It serves students in Massachusetts, California and New York.",
+      "website": "https://www.uaspire.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Uaspire Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/461314848"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us - uAspire",
+        "url": "https://www.uaspire.org/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact Us - uAspire",
+        "url": "https://www.uaspire.org/join-us/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Locations - uAspire",
+        "url": "https://www.uaspire.org/about/locations"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-uaspire",
+    "notes": "Boston-based 501(c)(3) Uaspire Inc (EIN 46-1314848) matches the agenda's 'uAspire, Inc.', Boston, MA, and its own Locations page lists Oakland; financial aid advising fits a Community Schools partnership. Summary, phone, address, EIN and HQ were all confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

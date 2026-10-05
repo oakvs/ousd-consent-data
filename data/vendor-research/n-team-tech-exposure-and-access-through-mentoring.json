@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/813838152",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.weareteaminc.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-team-tech-exposure-and-access-through-mentoring",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Tech Exposure & Access Through Mentoring Inc' (ProPublica, EIN 81-3838152), which uses the short name TEAM Inc.",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes coding and mentorship programs for youth ages 14-24, consistent with OUSD's 'Classroom & academic programs' category and a Community Schools partnership"
+    ],
+    "key": "n-team-tech-exposure-and-access-through-mentoring",
+    "notes": "Agenda does not give a phone; none found on the site. Website does not mention OUSD.",
+    "profile": {
+      "address": "1441 Franklin Street, Suite 302, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "81-3838152",
+      "email": "contact@weareteaminc.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Tech Exposure & Access Through Mentoring Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "TEAM Inc. is an Oakland nonprofit that trains and mentors Black and Brown youth ages 14-24 who are underrepresented in sports and data analytics. It offers coding skills training and mentorship through bootcamps and core programs.",
+      "website": "https://www.weareteaminc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Tech Exposure & Access Through Mentoring Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/813838152"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "TEAM Inc.",
+        "url": "https://www.weareteaminc.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-team-tech-exposure-and-access-through-mentoring",
+    "notes": "The agenda names Tech Exposure and Access through Mentoring (TEAM, Inc.) in Oakland. ProPublica lists the 501(c)(3) of that name in Oakland (EIN 81-3838152), and the website shows the same EIN, the 1441 Franklin St address, the contact email and the youth mentoring and coding programs. The summary matches the site's wording and is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

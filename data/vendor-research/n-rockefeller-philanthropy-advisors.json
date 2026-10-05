@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/133615533",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rockpa.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rockpa.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-rockefeller-philanthropy-advisors",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Rockefeller Philanthropy Advisors Inc' in New York, NY (ProPublica Nonprofit Explorer, EIN 13-3615533), matching the agenda's 'Rockefeller Philanthropy Advisors, Inc.' and 'New York, NY'",
+      "Official website (rockpa.org) describes a nonprofit that offers fiscal sponsorship and advisory services for philanthropy, consistent with OUSD recording it as a grant funding source ('Grant Agreement - Rockefeller Philanthropy Advisors - Urban Promise Academy')"
+    ],
+    "key": "n-rockefeller-philanthropy-advisors",
+    "notes": "General email and street address not shown on the organization's own contact pages, so left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "13-3615533",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "Rockefeller Philanthropy Advisors Inc",
+      "orgType": "nonprofit",
+      "phone": "(212) 812-4330",
+      "samUei": null,
+      "summary": "Rockefeller Philanthropy Advisors is a nonprofit that helps donors give money to causes around the world. It offers fiscal sponsorship for more than 100 projects, advisory services for donors and foundations, and resources for the philanthropy field.",
+      "website": "https://www.rockpa.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Rockefeller Philanthropy Advisors Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/133615533"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "orgType"
+        ],
+        "title": "Rockefeller Philanthropy Advisors",
+        "url": "https://www.rockpa.org/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact - Rockefeller Philanthropy Advisors",
+        "url": "https://www.rockpa.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-rockefeller-philanthropy-advisors",
+    "notes": "ProPublica confirms Rockefeller Philanthropy Advisors Inc, New York NY, EIN 13-3615533, 501(c)(3); rockpa.org and its contact page confirm fiscal sponsorship of 100+ projects, advisory services and the (212) 812-4330 phone. Name and city match the agenda grant-funder entry, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

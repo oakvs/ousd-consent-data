@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.cdph.ca.gov/Pages/contact_us.aspx",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://ebudget.ca.gov/2016-17/Enacted/StateAgencyBudgets/4000/4265/mission_statement.html",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-california-department-of-public-health",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'California Department of Public Health', which exactly matches the name of the California state agency whose official site is www.cdph.ca.gov (the Contact Us page names it).",
+      "The agency's mission (promoting healthy lifestyles, preventing disease, protecting the public) matches OUSD's 'Student health, support & family services' category for a Memorandum of Understanding handled by General Counsel.",
+      "State agency with no location given in the agenda; statewide scope covers Oakland, so no conflicting same-name organization is plausible."
+    ],
+    "key": "n-california-department-of-public-health",
+    "notes": "State agency headquartered in Sacramento (headquarters city not verified on a cited page; reviewer may drop). Address and email omitted: no exact general mailing address or inbox found on a fetched official page. Mission text taken from the state budget site (2016-17); cdph.ca.gov pages fail WebFetch certificate checks but load with curl.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Public Health",
+      "orgType": "public_agency",
+      "phone": "(916) 558-1784",
+      "samUei": null,
+      "summary": "The California Department of Public Health is a California state agency. Its mission is to optimize the health and well-being of all Californians. It works to promote healthy lifestyles, prevent disease and disability, protect the public from unhealthy and unsafe environments, and provide access to quality health services.",
+      "website": "https://www.cdph.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "orgType"
+        ],
+        "title": "CDPH Contact Us",
+        "url": "https://www.cdph.ca.gov/Pages/contact_us.aspx"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "4265 Department of Public Health - Mission Statement",
+        "url": "https://ebudget.ca.gov/2016-17/Enacted/StateAgencyBudgets/4000/4265/mission_statement.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-california-department-of-public-health",
+    "notes": "The agenda name matches the California state agency exactly, and the MOU with OUSD's General Counsel fits its public health mission. The summary matches the state budget mission statement, and the phone number and name are on the CDPH contact page. Neither cited page states Sacramento as headquarters (the contact page mentions it only in a county list), so headquarters is unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

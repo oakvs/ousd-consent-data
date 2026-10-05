@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/461946012",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.intuitivewritingproject.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blog.amherstwriters.org/affiliate-news/awa-affiliate-elizabeth-perlman-and-the-intuitive-writing-project/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-intuitive-writing-project",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'The Intuitive Writing Project Inc' (ProPublica Nonprofit Explorer, EIN 46-1946012), youth development category",
+      "Organization was launched in 2013 in Oakland, California, matching the agenda location 'Oakland, CA' (Amherst Writers & Artists blog)",
+      "Offers writing classes and workshops for school-age students, consistent with OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "n-intuitive-writing-project",
+    "notes": "Originally Oakland-based; the founder relocated to the East Coast (ProPublica now lists Greenville, SC). No page found mentions OUSD directly. Website only shows a named person's email, so no contact email, phone or address recorded. No CA entity number or UEI checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "46-1946012",
+      "email": null,
+      "headquarters": "Greenville, SC",
+      "legalName": "The Intuitive Writing Project Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that runs writing classes and workshops for girls and young women, from late elementary school through high school. Its programs use the Amherst Writers & Artists method. It was launched in Oakland, California in 2013 and has published student writing in printed anthologies.",
+      "website": "https://www.intuitivewritingproject.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Intuitive Writing Project Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/461946012"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "The Intuitive Writing Project",
+        "url": "https://www.intuitivewritingproject.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "AWA Affiliate Elizabeth Perlman and The Intuitive Writing Project",
+        "url": "https://blog.amherstwriters.org/affiliate-news/awa-affiliate-elizabeth-perlman-and-the-intuitive-writing-project/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-intuitive-writing-project",
+    "notes": "Name matches exactly a 501(c)(3) (ProPublica, EIN 46-1946012) that was launched in Oakland in 2013 per the AWA blog and offers youth writing classes, fitting a no-cost MOU for classroom programs; no OUSD mention in the sources, but no conflicting same-name organization found. Summary, orgType, website, EIN and headquarters (Greenville, SC per ProPublica) are supported; the grade range in the summary comes from the AWA blog (grades 3-12), while the current website says ages 11 and up.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

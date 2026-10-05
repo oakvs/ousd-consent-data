@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.acoe.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.acoe.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.acoe.org/swa",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-superintendent-of-schools",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The Alameda County Office of Education (ACOE) is the county office led by the Alameda County Superintendent of Schools; its own site describes it as the liaison to the county's 18 public school districts, which include Oakland Unified",
+      "Headquarters are at 313 West Winton Ave, Hayward, CA 94544, matching the agenda's location of Hayward, CA",
+      "ACOE runs a Foster Youth Services Coordinating Program and community schools for foster youth, matching the agenda item about integrating education and child welfare data through the Foster Focus Data System and the Community Schools and Student Services Department"
+    ],
+    "key": "n-alameda-county-superintendent-of-schools",
+    "notes": "The agenda names the vendor 'Alameda County Superintendent of Schools'; this is the county superintendent's office, operating publicly as the Alameda County Office of Education. Public agency, so no EIN or Secretary of State entity number sought. The contact page notes the main entrance is at 24254 Santa Clara Street, Hayward; the mailing address is shown as cited.",
+    "profile": {
+      "address": "313 West Winton Avenue Hayward, CA 94544",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "receptionist@acoe.org",
+      "headquarters": "Hayward, CA",
+      "legalName": "Alameda County Office of Education",
+      "orgType": "public_agency",
+      "phone": "(510) 887-0152",
+      "samUei": null,
+      "summary": "A public agency that serves as a liaison between the California Department of Education and the 18 public school districts in Alameda County. It provides budget oversight and support to districts, and directly runs court schools, community schools for foster youth and other vulnerable students, and an infant support program. It also provides training and support services to educators.",
+      "website": "https://www.acoe.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Alameda County Office of Education - About",
+        "url": "https://www.acoe.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Alameda County Office of Education - Contact",
+        "url": "https://www.acoe.org/contact"
+      },
+      {
+        "supports": [],
+        "title": "Alameda County Office of Education - Student Welfare & Attendance",
+        "url": "https://www.acoe.org/swa"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-alameda-county-superintendent-of-schools",
+    "notes": "The Alameda County Superintendent of Schools is the elected head of the Alameda County Office of Education, headquartered at 313 West Winton Ave, Hayward, matching the agenda's Hayward location and the Foster Focus/community schools item. The about and contact pages support the legal name, summary, org type, website, phone, generic receptionist email and address; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

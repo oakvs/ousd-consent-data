@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/770520414",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://outreach-foundation.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-synopsys-silicon-valley-science-and-technology-outreach-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Legal name on ProPublica Nonprofit Explorer exactly matches the agenda name: 'Synopsys Silicon Valley Science & Technology Outreach Foundation' (EIN 77-0520414, 501(c)(3), category Education N.E.C.)",
+      "The organization's own website (outreach-foundation.org) describes K-12 STEM education programs including science fairs, matching OUSD's 'Classroom & academic programs' / OUSD Science & Engineering Fair MOU",
+      "OUSD's own Science & Engineering Fair page (sites.google.com/ousd.k12.ca.us/science) lists the Synopsys Outreach Foundation as a supporting resource provider for science fairs",
+      "Serves the Greater Bay Area; the agenda gives Palo Alto, CA while registry and website list a Los Gatos, CA mailing address (PO Box), a nearby Silicon Valley location"
+    ],
+    "key": "n-synopsys-silicon-valley-science-and-technology-outreach-foundation",
+    "notes": "Agenda lists Palo Alto, CA; registry and website show a Los Gatos PO Box mailing address (PO Box 1341, Los Gatos, CA 95031). No general phone or email shown on fetched pages, so left null; address left null to avoid a PO-box formatting mismatch. No CA SOS or SAM.gov record checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "77-0520414",
+      "email": null,
+      "headquarters": "Los Gatos, CA",
+      "legalName": "Synopsys Silicon Valley Science & Technology Outreach Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that works with Bay Area schools and community partners to support science, technology, engineering and mathematics (STEM) learning for students in kindergarten through 12th grade. Its programs include science fair support, classroom STEM resources and teacher events. It says it reaches about 150,000 students and teachers each year across California.",
+      "website": "https://outreach-foundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Synopsys Silicon Valley Science & Technology Outreach Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/770520414"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "About The Synopsys Silicon Valley Science and Technology Outreach Foundation",
+        "url": "https://outreach-foundation.org/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-synopsys-silicon-valley-science-and-technology-outreach-foundation",
+    "notes": "Identity is correct (ProPublica legal name and EIN 77-0520414 match the agenda name, Los Gatos mailing address, K-12 STEM nonprofit), but the summary claims 'science fair support' as a program, which neither cited source nor the foundation's homepage or sciencepalooza page mentions (programs listed are Building STEM Classrooms, STEM Opportunity Fund, Teachers & Tacos, Spring into STEM, sciencepalooza). The summary also says 'works with Bay Area schools and community partners' without direct support. Reject the summary as written; a corrected summary limited to the sourced programs would be publishable.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/364802935",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pltw.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.pltw.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/high-school-linked-learning-office/pathways/pathways-directory",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-project-lead-way",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Project Lead The Way Inc', Indianapolis, IN, EIN 36-4802935 (ProPublica Nonprofit Explorer), matching the agenda's 'Project Lead the Way, Inc.' in Indianapolis, IN",
+      "Website describes PreK-12 STEM and career technical education programs, matching OUSD's 'Classroom & academic programs' grant agreements from the High School Linked Learning Office",
+      "OUSD's own Pathways Directory lists an Engineering & Design Project Lead the Way pathway at Oakland High School, matching the grant agreement titles"
+    ],
+    "key": "n-project-lead-way",
+    "notes": "ProPublica also lists an older EIN 14-1816385 for the same organization name (not in the IRS's current exempt list); the current EIN 36-4802935 was used. No street address was found on the cited pages, so address is null. California entity number and SAM UEI not checked/found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "36-4802935",
+      "email": "solutioncenter@pltw.org",
+      "headquarters": "Indianapolis, IN",
+      "legalName": "Project Lead The Way Inc",
+      "orgType": "nonprofit",
+      "phone": "877.335.7589",
+      "samUei": null,
+      "summary": "Project Lead The Way (PLTW) is a nonprofit organization that provides science, technology, engineering and math (STEM) and career technical education programs for students from pre-kindergarten through grade 12. It provides curriculum, teacher training and industry partnerships to schools.",
+      "website": "https://www.pltw.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Project Lead The Way Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/364802935"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "orgType"
+        ],
+        "title": "About Us - PLTW",
+        "url": "https://www.pltw.org/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact - PLTW",
+        "url": "https://www.pltw.org/contact"
+      },
+      {
+        "supports": [],
+        "title": "Pathways Directory - Oakland Unified School District",
+        "url": "https://www.ousd.org/high-school-linked-learning-office/pathways/pathways-directory"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-project-lead-way",
+    "notes": "ProPublica confirms Project Lead The Way Inc, Indianapolis, IN, 501(c)(3), EIN 36-4802935, matching the agenda name and city; the PLTW site supports the summary, phone and generic solution-center email, and OUSD's Pathways Directory lists a PLTW pathway at Oakland High. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

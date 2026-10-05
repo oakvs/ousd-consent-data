@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://treasurer.acgov.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://treasurer.acgov.org/about-the-treasurer/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-treasury",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official Alameda County Treasurer-Tax Collector site (treasurer.acgov.org) is the county treasury office; agenda names 'County of Alameda Treasury' in Alameda County, CA, and OUSD is located in Oakland, Alameda County",
+      "The office page says it manages an investment portfolio for county and school district funds, matching OUSD's 'Temporary Transfer of Funds' items with the County Treasury",
+      "Office is located in Oakland, CA, within the county named in the agenda text"
+    ],
+    "key": "n-alameda-county-treasury",
+    "notes": "County government office (Treasurer-Tax Collector); no separate legal entity name, EIN or SOS number. No general email found on cited pages.",
+    "profile": {
+      "address": "1221 Oak Street, Room 131, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 272-6800",
+      "samUei": null,
+      "summary": "The Alameda County Treasurer-Tax Collector is a county government office. It collects property taxes, manages the county's investment portfolio that holds cash for the county, school districts and other districts, handles delinquent property sales, and administers the county's employee deferred compensation program.",
+      "website": "https://treasurer.acgov.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Alameda County Treasurer-Tax Collector",
+        "url": "https://treasurer.acgov.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address"
+        ],
+        "title": "About the Treasurer",
+        "url": "https://treasurer.acgov.org/about-the-treasurer/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-alameda-county-treasury",
+    "notes": "The Alameda County Treasurer-Tax Collector is the county treasury that OUSD's 'Temporary Transfer of Funds' items with the County of Alameda Treasury refer to; the cited pages confirm address, phone, tax collection, the County and School District funds portfolio, delinquent property sales and the deferred compensation program. The summary's phrase 'and other districts' goes slightly beyond the cited text, which says only 'County and School District funds', but it is minor and not material.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

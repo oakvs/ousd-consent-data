@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.berkeley.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.berkeley.edu/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bse.berkeley.edu/ousd-bse-delpi-expansion",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-california-berkeley",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'University of California, Berkeley' in Berkeley, CA; berkeley.edu is the official UC Berkeley site (footer: Copyright UC Regents)",
+      "UC Berkeley's School of Education publicly describes partnerships with Oakland Unified School District (OUSD), consistent with a research data sharing agreement with OUSD's Research, Assessment and Data department"
+    ],
+    "key": "n-university-of-california-berkeley",
+    "notes": "Public university, part of the University of California (UC Regents). Legal contracting entity is likely The Regents of the University of California; not confirmed on a cited page, so legalName, EIN and registry IDs left null. Main campus phone is the campus operator line.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "510-642-6000",
+      "samUei": null,
+      "summary": "UC Berkeley is the flagship campus of the University of California, a public university founded in 1868. It offers undergraduate and graduate education across many academic departments and programs, conducts research, and maintains libraries and museums.",
+      "website": "https://www.berkeley.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About - UC Berkeley",
+        "url": "https://www.berkeley.edu/about"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us - UC Berkeley",
+        "url": "https://www.berkeley.edu/contact-us/"
+      },
+      {
+        "supports": [],
+        "title": "OUSD and UC Berkeley expand partnership",
+        "url": "https://bse.berkeley.edu/ousd-bse-delpi-expansion"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-university-of-california-berkeley",
+    "notes": "UC Berkeley in Berkeley, CA matches the agenda vendor for a data sharing agreement with OUSD's Research, Assessment and Data department, and the berkeley.edu footer shows UC Regents; website and phone (campus operator 510-642-6000) are confirmed. The cited About page does not say 'public university' or 'flagship campus', and its 1868 date is for the University of California as a whole, so summary and orgType are not supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary",
+      "orgType"
+    ],
+    "verdict": "confirmed"
+  }
+}

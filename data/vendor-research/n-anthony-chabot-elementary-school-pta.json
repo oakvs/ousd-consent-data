@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/946171779",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-6171779",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://chabot.ousd.org/chabot-pta",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-anthony-chabot-elementary-school-pta",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "IRS-registered 501(c)(3) named 'Anthony Chabot Elementary PTA', EIN 94-6171779, in Oakland, CA (ProPublica Nonprofit Explorer, GuideStar)",
+      "Located at 6686 Chabot Rd, Oakland, CA 94618, the address of Anthony Chabot Elementary School, matching the agenda's Oakland, CA",
+      "The OUSD-hosted Chabot Elementary School page describes the Chabot PTA as a local unit of the California State PTA funding school programs, matching OUSD's donation entry 'Donation - Chabot Elementary School PTA - Chabot Elementary School' and funding source 'Chabot PTA'"
+    ],
+    "key": "n-anthony-chabot-elementary-school-pta",
+    "notes": "Phone and email omitted: the OUSD-hosted PTA page shows the school's main phone and only role-specific emails, so no PTA-specific general line could be confirmed. ProPublica's registry record lists the legal name oddly (as a California PTA group-exemption entry); the PTA's own name was used. No California SOS entry number was checked.",
+    "profile": {
+      "address": "6686 Chabot Rd, Oakland, CA 94618",
+      "caEntityNumber": null,
+      "ein": "94-6171779",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Anthony Chabot Elementary PTA",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A parent-teacher association (PTA) at Anthony Chabot Elementary School in Oakland, California, and a local unit of the California State PTA. It raises money through an annual fund and a spring auction, and coordinates volunteers. The funds support school programs such as art, music, library and science lab services.",
+      "website": "https://chabot.ousd.org/chabot-pta"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Anthony Chabot Elementary PTA - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/946171779"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Anthony Chabot Elementary PTA - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-6171779"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Chabot PTA - Chabot Elementary School",
+        "url": "https://chabot.ousd.org/chabot-pta"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-anthony-chabot-elementary-school-pta",
+    "notes": "ProPublica and GuideStar show the 501(c)(3) Anthony Chabot Elementary PTA (EIN 94-6171779) at 6686 Chabot Rd, Oakland, and the OUSD Chabot PTA page supports the summary (California State PTA unit, annual fund, spring auction, art/music/library/science lab). This matches OUSD's Chabot PTA donation item, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

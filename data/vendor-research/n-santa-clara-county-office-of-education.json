@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sccoe.org/aboutsccoe/Pages/Contact-Us.aspx",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sccoe.org/aboutsccoe",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.sccoe.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-santa-clara-county-office-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Exact name match: the agenda names 'Santa Clara County Office of Education' and the official sccoe.org site is for the Santa Clara County Office of Education, the only county office of education for Santa Clara County",
+      "Location matches: the agenda gives 'Santa Clara, CA' (the county); SCCOE is headquartered in San Jose, Santa Clara County, CA",
+      "Role matches: SCCOE provides instructional services and support to school districts, consistent with an OUSD Chief Academic Officer memorandum of understanding for teacher training (classroom and academic programs)"
+    ],
+    "key": "n-santa-clara-county-office-of-education",
+    "notes": "Public county office of education, so no EIN, California Secretary of State entity number or SAM.gov UEI was sought. No general email address is published on the Contact page, so email is null. California Department of Education directory page was blocked by bot protection and not used. No page found directly documenting the OUSD teacher-training MOU.",
+    "profile": {
+      "address": "1290 Ridder Park Drive, San Jose, CA 95131-2304",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Jose, CA",
+      "legalName": "Santa Clara County Office of Education",
+      "orgType": "public_agency",
+      "phone": "(408) 453-6500",
+      "samUei": null,
+      "summary": "A public agency that serves the 31 school districts of Santa Clara County, California. It provides instructional, business and technology services to districts, and directly runs some educational programs such as special education, alternative schools and preschool. It also oversees districts' academic and fiscal health and county-authorized charter schools.",
+      "website": "https://www.sccoe.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact Us - Santa Clara County Office of Education",
+        "url": "https://www.sccoe.org/aboutsccoe/Pages/Contact-Us.aspx"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "About SCCOE - Santa Clara County Office of Education",
+        "url": "https://www.sccoe.org/aboutsccoe"
+      },
+      {
+        "supports": [
+          "website",
+          "legalName",
+          "phone",
+          "address"
+        ],
+        "title": "Santa Clara County Office of Education",
+        "url": "https://www.sccoe.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-santa-clara-county-office-of-education",
+    "notes": "The agenda name matches the official Santa Clara County Office of Education exactly. The county location and the teacher-training MOU fit a county office of education's instructional support role. The phone, address, headquarters and summary (31 districts, direct programs, oversight) all match the fetched sccoe.org pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

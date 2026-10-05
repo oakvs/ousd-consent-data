@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943261786",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ourfamily.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ourfamily.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007808",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Our Family Coalition' (ProPublica Nonprofit Explorer, EIN 94-3261786), located in San Francisco, CA, matching the agenda location",
+      "Organization's website says it works toward LGBTQ+ families and children thriving in schools, matching a classroom and academic programs services agreement",
+      "Organization has an East Bay office in Oakland, CA (contact page), consistent with serving Oakland schools"
+    ],
+    "key": "v-007808",
+    "notes": "No CA SOS or SAM.gov record checked. Summary drawn from the About page and web search description.",
+    "profile": {
+      "address": "1385 Mission Street, #330, San Francisco, CA 94103",
+      "caEntityNumber": null,
+      "ein": "94-3261786",
+      "email": "info@ourfamily.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Our Family Coalition",
+      "orgType": "nonprofit",
+      "phone": "(415) 981-1960",
+      "samUei": null,
+      "summary": "Our Family Coalition is a nonprofit based in San Francisco with an East Bay office in Oakland. It supports LGBTQ+ families and children through affinity groups, education programs, and policy advocacy in schools, institutions, and communities.",
+      "website": "https://ourfamily.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Our Family Coalition - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943261786"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Who we are - Our Family Coalition",
+        "url": "https://ourfamily.org/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Our Family Coalition",
+        "url": "https://ourfamily.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007808",
+    "notes": "ProPublica confirms Our Family Coalition, a San Francisco 501(c)(3) with EIN 94-3261786, matching the agenda name and city. Its About page describes LGBTQ+ family advocacy with educator training and school programs, which fits a classroom and academic programs agreement, and the contact page confirms the phone, general email, address and Oakland East Bay office.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/371609659",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/37-1609659",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eoschools.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eoschools.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-equal-opportunity-schools",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Equal Opportunity Schools', EIN 37-1609659 (ProPublica Nonprofit Explorer, GuideStar)",
+      "GuideStar lists the organization at 5601 6th Ave S, Seattle, WA, matching the agenda's 'Seattle, WA'",
+      "Website describes helping districts and schools increase enrollment in advanced courses, matching OUSD's 'Classroom & academic programs' category and the agreements involving high schools (Skyline, Life Academy)"
+    ],
+    "key": "n-equal-opportunity-schools",
+    "notes": "ProPublica shows an IRS address in Edmonds, WA, while GuideStar lists Seattle, WA (agenda says Seattle). Address and phone left null because no consistent business address or phone was found on the organization's own pages. No public page found explicitly linking EOS to OUSD.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "37-1609659",
+      "email": "partnerwithus@eoschools.org",
+      "headquarters": "Seattle, WA",
+      "legalName": "Equal Opportunity Schools",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Equal Opportunity Schools is a nonprofit that works with school districts and schools to increase student participation in advanced courses such as Advanced Placement and International Baccalaureate. It surveys students, shares data with school leaders, and provides training and on-site support. It says it has worked with more than 900 schools in over 250 districts across 35 states.",
+      "website": "https://eoschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Equal Opportunity Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/371609659"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "website",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Equal Opportunity Schools - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/37-1609659"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us - Equal Opportunity Schools",
+        "url": "https://eoschools.org/about"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Contact - Equal Opportunity Schools",
+        "url": "https://eoschools.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-equal-opportunity-schools",
+    "notes": "Seattle-based 501(c)(3) Equal Opportunity Schools (EIN 37-1609659) matches the agenda name and city, and its advanced-course enrollment work fits high-school agreements with Skyline and Life Academy. Summary figures, services and the partnerwithus@ email are supported by the cited pages; 'on-site support' is a loose paraphrase of coaching and program facilitation, and the ProPublica Edmonds address is correctly left out.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

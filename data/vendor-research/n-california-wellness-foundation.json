@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/954292101",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.calwellness.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.calwellness.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-wellness-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered private foundation: 'The California Wellness Foundation' (ProPublica Nonprofit Explorer, EIN 95-4292101); it is the only search result for that name",
+      "OUSD's record is a 'Grant Award' funded by 'The California Wellness Foundation Grant', and this organization is a grantmaker that says public school districts may apply directly",
+      "The foundation has an Oakland office (499 14th Street, Suite 300), consistent with funding Oakland-area work"
+    ],
+    "key": "n-california-wellness-foundation",
+    "notes": "Confidence medium: the agenda gives San Francisco, CA, but the foundation's headquarters is in Los Angeles with an Oakland office; no San Francisco office is listed. No page directly linking the foundation to an OUSD grant was found. The name is distinctive and the vendor is plainly a grantor, so this is likely right, but the location mismatch and missing OUSD link keep it below high. General email omitted because the site shows it as 'info(at)calwellness.org'.",
+    "profile": {
+      "address": "515 S. Flower Street, Suite 1100, Los Angeles, CA 90071",
+      "caEntityNumber": null,
+      "ein": "95-4292101",
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "The California Wellness Foundation",
+      "orgType": "nonprofit",
+      "phone": "(818) 702-1900",
+      "samUei": null,
+      "summary": "A private, independent foundation that makes grants to organizations working to protect and improve health and wellness in California. Its grantmaking focuses on community well-being, economic security, equity in access to care, and leadership for change. It has offices in Los Angeles and Oakland.",
+      "website": "https://www.calwellness.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The California Wellness Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/954292101"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us - The California Wellness Foundation",
+        "url": "https://www.calwellness.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "legalName"
+        ],
+        "title": "The California Wellness Foundation",
+        "url": "https://www.calwellness.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-california-wellness-foundation",
+    "notes": "Same organization: The California Wellness Foundation (EIN 95-4292101, LA HQ, Oakland office) is the grantor in the OUSD grant award; legalName, EIN, orgType, phone, address, headquarters and website are confirmed by the cited pages. The summary's 'leadership development' claim is not shown on the mission page or homepage, so the summary is listed as unsupported and should be dropped or trimmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

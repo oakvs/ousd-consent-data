@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.nfl.com/legal/privacy/nfl-entities-list/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/National_Football_League",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-nfl-productions-and-nfl-enterprises",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Both names, 'NFL Enterprises LLC' and 'NFL Productions LLC', appear on the National Football League's own list of NFL entities (nfl.com legal pages)",
+      "The agenda gives no city, and no public page was found linking these entities to an access or named-facilities agreement at Oakland Technical High School, so the match to this specific agreement is not independently confirmed"
+    ],
+    "key": "n-nfl-productions-and-nfl-enterprises",
+    "notes": "Two entities named in the agenda; profile covers NFL Enterprises LLC only. NFL Productions LLC is listed at 1 NFL Plaza, Mount Laurel, NJ 08054. Link to the Oakland Tech agreement could not be independently confirmed (no location in agenda), so confidence is medium and should not be published without a reviewer checking the agenda item.",
+    "profile": {
+      "address": "345 Park Avenue, 5th Floor, New York, NY 10154",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "NFL Enterprises LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "NFL Enterprises LLC is a company owned by the National Football League, the professional American football league with 32 teams. It operates media businesses such as the NFL Network. NFL Productions LLC, the second party named in the agenda, is a separate NFL entity based in Mount Laurel, New Jersey.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "NFL entities list",
+        "url": "https://www.nfl.com/legal/privacy/nfl-entities-list/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "National Football League - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/National_Football_League"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

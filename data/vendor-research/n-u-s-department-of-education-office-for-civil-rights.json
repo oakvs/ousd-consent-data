@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Office_for_Civil_Rights",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lccrsf.org/pressroom_posts/office-civil-rights-resolves-discrimination-complaint-oakland-school/",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-u-s-department-of-education-office-for-civil-rights",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'U.S. Department of Education, Office for Civil Rights' and the item is an 'Agreement to Resolve' with a case number, presented by OUSD's General Counsel, which matches OCR's role as a federal civil rights enforcement agency",
+      "Lawyers' Committee for Civil Rights of the San Francisco Bay Area reports that the U.S. Department of Education Office for Civil Rights reached resolution agreements with Oakland Unified School District",
+      "Wikipedia describes the Office for Civil Rights as a sub-agency of the U.S. Department of Education that enforces civil rights laws in schools, headquartered in Washington, D.C."
+    ],
+    "key": "n-u-s-department-of-education-office-for-civil-rights",
+    "notes": "Federal agency (not a vendor); it is the counterparty to a resolution agreement, not a paid contractor. ed.gov returns 403 to automated fetching, so phone, email and mailing address were not cited.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, D.C.",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Office for Civil Rights is part of the U.S. Department of Education. It enforces federal civil rights laws that prohibit discrimination in schools based on race, color, national origin, sex, disability and age. It investigates complaints and can reach resolution agreements with school districts.",
+      "website": "https://www.ed.gov/about/ed-offices/ocr"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Office for Civil Rights - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Office_for_Civil_Rights"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Office for Civil Rights Resolves Discrimination Complaint with Oakland School - LCCRSF",
+        "url": "https://lccrsf.org/pressroom_posts/office-civil-rights-resolves-discrimination-complaint-oakland-school/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-u-s-department-of-education-office-for-civil-rights",
+    "notes": "The agenda item is an Agreement to Resolve with the federal OCR (case 09-19-1027, handled by General Counsel), and the cited Wikipedia page supports the summary, orgType, website and Washington, D.C. headquarters. The LCCRSF page confirms OCR has reached resolution agreements with OUSD. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

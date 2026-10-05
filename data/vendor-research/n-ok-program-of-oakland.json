@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.okprogramofoakland.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/264130155",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://okprogram.org/news/2020/7/26/ok-program-of-oakland",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ok-program-of-oakland",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Ok Program Of Oakland' (ProPublica Nonprofit Explorer, EIN 26-4130155, Oakland, CA)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Website describes youth mentoring and leadership programs for Black youth ages 12-18, matching OUSD's 'Student health, support & family services' contracts",
+      "OK Program's own page names Oakland Unified School District (OUSD) as a partner"
+    ],
+    "key": "n-ok-program-of-oakland",
+    "notes": "Mailing address for checks is 1034 66th Avenue, Oakland, CA 94621 (also the national OK Program address). California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "6220 International Blvd, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "26-4130155",
+      "email": "info@okprogramofoakland.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Ok Program Of Oakland",
+      "orgType": "nonprofit",
+      "phone": "(510) 626-2105",
+      "samUei": null,
+      "summary": "OK Program of Oakland is a nonprofit mentoring and leadership organization for Black boys and young men ages 12 to 18. It works with police officers, school districts and faith communities to build leadership and critical thinking skills, support school success and reduce incarceration and homicide among young Black males.",
+      "website": "https://www.okprogramofoakland.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "OK Program of Oakland",
+        "url": "https://www.okprogramofoakland.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Ok Program Of Oakland - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/264130155"
+      },
+      {
+        "supports": [],
+        "title": "OK Program of Oakland — OK Program",
+        "url": "https://okprogram.org/news/2020/7/26/ok-program-of-oakland"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-ok-program-of-oakland",
+    "notes": "The Oakland-based 501(c)(3) youth mentoring nonprofit matches the agenda name, city and student-support services. The OK Program page names OUSD as a partner. Its site supports the summary, phone, email and address. ProPublica supports the legal name and EIN 26-4130155. The summary is neutral and uses only supported claims.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

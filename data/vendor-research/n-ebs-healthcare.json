@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://opennpi.com/provider/1750723086",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prnewswire.com/news-releases/the-stepping-stones-group-acquires-ebs-healthcare-301247301.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-ebs-healthcare",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: federal NPI registry listing (via OpenNPI) shows legal name EBS HEALTHCARE, INC. at 200 Skiles Blvd, West Chester, PA, matching the agenda's 'EBS Healthcare, Inc.' and 'West Chester, PA'",
+      "PR Newswire release describes EBS as a Pennsylvania-based provider of school, clinic and home-based therapeutic services for children with special needs, matching OUSD's special education nonpublic agency contract",
+      "Search results consistently place EBS Healthcare headquarters at 200 Skiles Blvd, West Chester, PA 19382"
+    ],
+    "key": "n-ebs-healthcare",
+    "notes": "ebshealthcare.com now redirects to its parent, The Stepping Stones Group (thesteppingstonesgroup.com, HQ Boston, MA), so no EBS-specific website, phone or email was set to avoid attributing the parent's contact details to the subsidiary. No EIN, PA/CA entity number or SAM UEI found.",
+    "profile": {
+      "address": "200 Skiles Blvd, West Chester, PA 19382",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "West Chester, PA",
+      "legalName": "EBS HEALTHCARE, INC.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A Pennsylvania-based company that provides school-based, clinic-based and home-based behavioral and therapeutic services to children with autism, special needs, and developmental or behavior issues. It was acquired by The Stepping Stones Group in March 2021 and remains a legally separate entity.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters"
+        ],
+        "title": "Ebs Healthcare, Inc. - Provider Information",
+        "url": "https://opennpi.com/provider/1750723086"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "The Stepping Stones Group acquires EBS Healthcare",
+        "url": "https://www.prnewswire.com/news-releases/the-stepping-stones-group-acquires-ebs-healthcare-301247301.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-ebs-healthcare",
+    "notes": "OpenNPI shows legal name EBS HEALTHCARE, INC. at 200 Skiles Blvd, West Chester, PA 19382, matching the agenda name and city; the PR Newswire release confirms the Pennsylvania-based school/clinic/home-based therapeutic services, the March 2021 Stepping Stones acquisition, and that EBS remains legally separate. The summary is neutral and supported, and no unsupported contact fields were set.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

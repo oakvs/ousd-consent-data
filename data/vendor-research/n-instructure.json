@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.instructure.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.instructure.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-instructure",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Instructure's own About page gives the legal name 'Instructure, Inc.', matching the agenda name exactly",
+      "Headquarters is in Salt Lake City, UT, matching the agenda location 'Salt Lake City, UT'",
+      "Instructure makes Canvas, a learning management system for K-12, matching a 'Technology' contract with OUSD's Technology Services Department and a student data privacy agreement",
+      "OUSD's own website offers a Canvas login portal to students and staff"
+    ],
+    "key": "n-instructure",
+    "notes": "Contact page shows suite as separate lines; address assembled from those lines. No registry IDs verified.",
+    "profile": {
+      "address": "6330 South 3000 East, Suite 700, Salt Lake City, UT 84121",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@instructure.com",
+      "headquarters": "Salt Lake City, UT",
+      "legalName": "Instructure, Inc.",
+      "orgType": "company",
+      "phone": "1-800-203-6755",
+      "samUei": null,
+      "summary": "Instructure is an education technology company that makes learning software. Its main product is Canvas, a learning management system used in K-12 schools, colleges and workforce training. It also makes tools for assessment and for digital credentials.",
+      "website": "https://www.instructure.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About Instructure",
+        "url": "https://www.instructure.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Instructure",
+        "url": "https://www.instructure.com/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-instructure",
+    "notes": "Instructure's About page shows legal name Instructure, Inc. headquartered in Salt Lake City, UT, matching the agenda name and location, and a Canvas LMS vendor fits a Technology Services student data privacy agreement. Summary, website, phone, general email and address are all confirmed on the cited About and Contact pages; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/834332521",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.htmelle.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/san-francisco/htm-elle-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006292",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California nonprofit public benefit corporation 'Htm . Elle Inc.' (document number 4257454) and IRS-registered 'Htmelle Inc' (EIN 83-4332521), both in San Francisco, CA, matching the agenda location 'San Francisco, CA'",
+      "Its website (htmelle.org) describes educational programs combining computer science, creativity and entrepreneurship for girls, consistent with OUSD's 'Classroom & academic programs' professional services contract at a high school"
+    ],
+    "key": "v-006292",
+    "notes": "Registry names are 'Htm . Elle Inc.' (CA SOS, via bizprofile.net mirror) and 'Htmelle Inc' (IRS/ProPublica). The OUSD agenda's Fremont High School link was not independently confirmed on the vendor's site. The htmelle.com domain is parked for sale; the site is htmelle.org though the email domain is htmelle.com. Mailing address omitted because the only source is a third-party mirror of the registered-agent address.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "4257454",
+      "ein": "83-4332521",
+      "email": "hello@htmelle.com",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Htmelle Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "htmelle is a nonprofit based in San Francisco that runs educational and leadership programs for girls. Its programs combine computer science, cognitive science, creativity and entrepreneurship to help girls build solutions to local and global problems.",
+      "website": "https://www.htmelle.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Htmelle Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/834332521"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "htmelle | Educational & Leadership Programs for Young Girls",
+        "url": "https://www.htmelle.org"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Htm . Elle Inc. San Francisco, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/san-francisco/htm-elle-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006292",
+    "notes": "Name 'htm.elle Inc' and San Francisco location match the CA nonprofit 'Htm . Elle Inc.' (entity 4257454) and IRS 501(c)(3) 'Htmelle Inc' (EIN 83-4332521); htmelle.org describes Bay Area high-school girls' CS/leadership programs, fitting a Fremont High School academic services contract. All profile fields (legal name, EIN, entity number, org type, HQ, website, generic business email, neutral summary) are shown by the cited sources; the Fremont link itself is not confirmed on the vendor site, as the candidate notes.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

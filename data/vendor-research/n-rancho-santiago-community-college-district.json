@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.rsccd.edu/Discover-RSCCD/Pages/default.aspx",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cccco.edu/About-Us/Chancellors-Office/Divisions/Workforce-and-Economic-Development/K12-Strong-Workforce/K12-Pathway-Coordinators",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-rancho-santiago-community-college-district",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: Rancho Santiago Community College District, headquartered in Santa Ana, CA, matching the agenda location (rsccd.edu)",
+      "California Community Colleges Chancellor's Office page says RSCCD is the fiscal agent for the K12 Strong Workforce Program, with sub-agreements to host LEAs for K12 Pathway Coordinators, and lists Oakland USD as a host, matching OUSD's 'K12 Workforce Pathways Coordinator Grant' award titles",
+      "OUSD's High School Linked Learning Office has a Strong Workforce Program page, matching the presenting office and funding source in the agenda"
+    ],
+    "key": "n-rancho-santiago-community-college-district",
+    "notes": "Public community college district; no EIN, SOS entity number or UEI looked up. Email not found on cited pages.",
+    "profile": {
+      "address": "2323 N. Broadway Santa Ana, California 92706-1640",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Santa Ana, CA",
+      "legalName": "Rancho Santiago Community College District",
+      "orgType": "public_agency",
+      "phone": "(714) 480-7300",
+      "samUei": null,
+      "summary": "A public community college district in Orange County, California. It operates Santa Ana College and Santiago Canyon College, offering academic programs and continuing education. It also serves as the fiscal agent for regional K12 Strong Workforce Program career pathway funding.",
+      "website": "https://www.rsccd.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Rancho Santiago Community College District",
+        "url": "https://www.rsccd.edu/Discover-RSCCD/Pages/default.aspx"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "K12 Pathway Coordinators and K14 Technical Assistance Providers",
+        "url": "https://www.cccco.edu/About-Us/Chancellors-Office/Divisions/Workforce-and-Economic-Development/K12-Strong-Workforce/K12-Pathway-Coordinators"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-rancho-santiago-community-college-district",
+    "notes": "The organization is very likely right (Santa Ana CCD, grant sub-agreement for the K12 Strong Workforce coordinator grant), but the summary's fiscal-agent claim is not on the cited CCCCO page, which lists RSCCD only as host district for a K14 technical assistance provider and does not mention fiscal agent or sub-agreements, and does not list OUSD as a host for an RSCCD grant. The cited rsccd.edu page is a 404-style page that supports only name, address, phone and the two colleges, not the continuing-education description.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

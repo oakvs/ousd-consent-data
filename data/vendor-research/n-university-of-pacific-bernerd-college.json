@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.pacific.edu/education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156266",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-pacific-bernerd-college",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Benerd College is named on the University of the Pacific's own website as the university's college of education, matching the agenda name 'University of the Pacific, Bernerd College' (the agenda spelling 'Bernerd' differs from the official 'Benerd').",
+      "Main campus and Benerd College are in Stockton, CA, matching the agenda location.",
+      "Benerd College offers teacher and education graduate programs and professional development, matching an MOU for K-12 teaching intern partnership and practica programs.",
+      "University of the Pacific is a registered 501(c)(3) nonprofit based in Stockton, CA (ProPublica Nonprofit Explorer, EIN shown)."
+    ],
+    "key": "n-university-of-pacific-bernerd-college",
+    "notes": "The contracting entity is the university; Benerd College is a college within it, so the legal name and EIN are the university's. The contact details are Benerd College's own. The agenda spells the college 'Bernerd'; the official spelling is 'Benerd'. No OUSD mention was found on the cited pages, so identity rests on name, location and program match.",
+    "profile": {
+      "address": "3601 Pacific Avenue, Stockton, CA 95211",
+      "caEntityNumber": null,
+      "ein": "94-1156266",
+      "email": "benerd@pacific.edu",
+      "headquarters": "Stockton, CA",
+      "legalName": "University Of The Pacific",
+      "orgType": "nonprofit",
+      "phone": "209.946.2683",
+      "samUei": null,
+      "summary": "University of the Pacific is a private nonprofit university based in Stockton, California. Benerd College is its college of education. It offers undergraduate degree completion, graduate degrees in education and leadership, counseling and school psychology programs, and professional development courses on three Northern California campuses.",
+      "website": "https://www.pacific.edu/education"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Benerd College",
+        "url": "https://www.pacific.edu/education"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "University of the Pacific - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156266"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-university-of-pacific-bernerd-college",
+    "notes": "Benerd College (agenda spelling 'Bernerd') is University of the Pacific's college of education in Stockton, matching the agenda location and a K-12 teaching intern/practica MOU. The cited pages confirm the contact details, programs, three campuses, EIN 94-1156266 and 501(c)(3) status; the summary is neutral. The word 'private' is not stated on the cited pages but is not in doubt.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

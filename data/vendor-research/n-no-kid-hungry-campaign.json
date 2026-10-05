@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.nokidhungry.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nokidhungry.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/521367538",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nokidhungry.org/blog/heres-list-our-emergency-grants-through-june-2020",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-no-kid-hungry-campaign",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "No Kid Hungry's About page states it is a national campaign run by Share Our Strength, a nonprofit; the agenda names 'No Kid Hungry Campaign' in Washington, DC, and Share Our Strength is headquartered in Washington, DC (ProPublica, EIN 52-1367538)",
+      "No Kid Hungry's own blog post on its COVID-19 emergency grants says it sent funds to the Oakland Unified School District to hire drivers to stock community meal distribution centers, matching the OUSD item 'Grant Award - No Kid Hungry Campaign - COVID-19 Emergency - Nutrition Services Department'",
+      "Mission (ending childhood hunger, school meals) matches OUSD's 'Food, transportation & operations' category and the Nutrition Services Department"
+    ],
+    "key": "n-no-kid-hungry-campaign",
+    "notes": "The grantee named in the agenda is the No Kid Hungry campaign, which is operated by the nonprofit Share Our Strength (the legal entity and EIN holder). Contact details are the campaign's public contact page. California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1401 Massachusetts Ave NW, Suite 400, Washington, DC 20005",
+      "caEntityNumber": null,
+      "ein": "52-1367538",
+      "email": "info@strength.org",
+      "headquarters": "Washington, DC",
+      "legalName": "Share Our Strength",
+      "orgType": "nonprofit",
+      "phone": "(800) 969-4767",
+      "samUei": null,
+      "summary": "No Kid Hungry is a national campaign run by Share Our Strength, a nonprofit that works to end childhood hunger in the United States. The campaign works on school meals, summer meals, grocery benefits and home feeding support for families. Share Our Strength launched the campaign in 2010.",
+      "website": "https://www.nokidhungry.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website",
+          "headquarters"
+        ],
+        "title": "No Kid Hungry and Share Our Strength",
+        "url": "https://www.nokidhungry.org/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact Us | No Kid Hungry",
+        "url": "https://www.nokidhungry.org/contact-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Share Our Strength - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/521367538"
+      },
+      {
+        "supports": [],
+        "title": "Here's a List of Our Emergency Grants Through June 2020",
+        "url": "https://www.nokidhungry.org/blog/heres-list-our-emergency-grants-through-june-2020"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-no-kid-hungry-campaign",
+    "notes": "No Kid Hungry's about page confirms it is a Share Our Strength campaign launched in 2010 (Washington, DC), ProPublica confirms the EIN and 501(c)(3) status, and the campaign's own blog confirms emergency funds sent to OUSD for meal distribution drivers, matching the agenda item. Contact page confirms the phone, general email and address; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

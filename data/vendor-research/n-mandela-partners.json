@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.mandelapartners.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mandelapartners.org/who-we-are",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/113754129",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-mandela-partners",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Mandela Partners' (ProPublica Nonprofit Explorer, EIN 11-3754129)",
+      "Located in Oakland, CA (1344 7th St), matching the agenda's 'Oakland, CA'",
+      "Website describes wellness education, nutrition programs and healthy food access, consistent with OUSD's 'Student health, support & family services' category and a Community Schools and Student Services partnership MOU",
+      "No other organization named Mandela Partners found; the website does not explicitly mention OUSD (noted for reviewer)"
+    ],
+    "key": "n-mandela-partners",
+    "notes": "Identity rests on exact name, Oakland location and topical fit; no fetched page explicitly mentions OUSD. Only one nonprofit of this name found. California entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "1344 7th St, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "11-3754129",
+      "email": "info@mandelapartners.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Mandela Partners",
+      "orgType": "nonprofit",
+      "phone": "(510) 433-0993",
+      "samUei": null,
+      "summary": "Mandela Partners is an Oakland nonprofit that works with local residents, family farmers and community-based businesses on local food enterprises in low-income communities. Its programs include produce distribution through community supported agriculture (CSA) boxes and community stands, culinary job training, support for food entrepreneurs, and wellness and nutrition education.",
+      "website": "https://www.mandelapartners.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Mandela Partners",
+        "url": "https://www.mandelapartners.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Who We Are - Mandela Partners",
+        "url": "https://www.mandelapartners.org/who-we-are"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Mandela Partners - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/113754129"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-mandela-partners",
+    "notes": "Exact name and Oakland location match the agenda; the site and ProPublica confirm the 501(c)(3), EIN, address, phone and email, and the wellness and nutrition education programs fit a Community Schools MOU. The summary is neutral and supported, though no source mentions OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

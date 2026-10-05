@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/383017223",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ihi.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ihi.org/help",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-institute-for-healthcare-improvement",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Institute For Healthcare Improvement', EIN 38-3017223 (ProPublica Nonprofit Explorer), located in Boston, MA",
+      "Boston, MA matches the location given in the agenda text; IHI's contact page lists 53 State Street, Boston, MA",
+      "IHI describes applying improvement science and collaborative improvement initiatives, which is consistent with a Gates Foundation-funded school improvement network, but no public page was found linking IHI to OUSD or a high school network"
+    ],
+    "key": "n-institute-for-healthcare-improvement",
+    "notes": "Medium confidence: exact name and Boston location match a single well-known nonprofit, but no public source confirms IHI's work with OUSD or a high school network, and a health-care organization running a high school network is unusual. Reviewer should confirm with the agreement document. No main phone number found on the contact page.",
+    "profile": {
+      "address": "53 State Street, 27th Floor, Boston, MA 02109",
+      "caEntityNumber": null,
+      "ein": "38-3017223",
+      "email": "info@ihi.org",
+      "headquarters": "Boston, MA",
+      "legalName": "Institute For Healthcare Improvement",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit based in Boston, Massachusetts, that works with people and organizations around the world to make health and health care safer, more equitable, and more effective. It uses improvement science and practical tools, and offers training, certifications, and collaborative improvement initiatives.",
+      "website": "https://www.ihi.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Institute For Healthcare Improvement - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/383017223"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About IHI",
+        "url": "https://www.ihi.org/about"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "IHI Help and Contact",
+        "url": "https://www.ihi.org/help"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

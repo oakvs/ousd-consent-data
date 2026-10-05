@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/sacramento/profile/workers-compensation-lawyers/stander-reubens-thomas-kinsey-1156-90036758",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
+  "key": "n-stander-reubens-thomas-and-kinsey",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "OUSD board item 22-0772 names 'Stander, Reubens, Thomas & Kinsey (SRTK) law firm, Novato, CA' for workers' compensation defense legal services, matching the agenda's General Counsel / Legal, insurance & risk / Self Insurance fund",
+      "BBB profile lists a firm named 'Stander Reubens Thomas Kinsey' providing workers' compensation attorney services since 1979, matching the OUSD description",
+      "A separate firm, Thomas Kinsey, LLP, exists with overlapping partner names and the same practice area; the relationship and the current official website could not be confirmed (srtklaw.com fails with a certificate error)"
+    ],
+    "key": "n-stander-reubens-thomas-and-kinsey",
+    "notes": "OUSD item 22-0772 gives the Novato office (7250 Redwood Blvd., Suite 370) but the firm's own site could not be fetched (certificate error) and a successor/split firm, Thomas Kinsey, LLP (tklawfirm.com), exists. Contact details were deliberately omitted because BBB shows a Sacramento address that does not match the OUSD Novato address, and the current entity is uncertain. Not publishable until the entity and website are verified manually.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Stander Reubens Thomas Kinsey",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California law firm that provides workers' compensation attorney services. It has been in operation since 1979.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Stander Reubens Thomas Kinsey - BBB",
+        "url": "https://www.bbb.org/us/ca/sacramento/profile/workers-compensation-lawyers/stander-reubens-thomas-kinsey-1156-90036758"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

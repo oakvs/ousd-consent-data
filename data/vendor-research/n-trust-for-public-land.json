@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237222333",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Trust_for_Public_Land",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.baselandscape.com/work-bridges-academy-at-melrose",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://edibleschoolyard.org/program/trust-public-land-green-schoolyards-program-bay-area",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-trust-for-public-land",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Trust For Public Land', EIN 23-7222333, San Francisco, CA (ProPublica Nonprofit Explorer)",
+      "BASE Landscape project page lists 'Trust for Public Land' and 'Oakland Unified School District' as clients for the Bridges Academy schoolyard redesign, matching the OUSD item 'Lease Agreement - Green Schoolyard at Bridges Academy'",
+      "Edible Schoolyard Project page says the Trust for Public Land's Bay Area team runs a Green Schoolyards Program in partnership with Oakland Unified School District"
+    ],
+    "key": "n-trust-for-public-land",
+    "notes": "tpl.org returns HTTP 403 to automated fetching, so contact details were not verified from the organization's own site and are left null. Third-party directories disagree on phone/suite. CA entity number and SAM UEI not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "23-7222333",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Trust For Public Land",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Trust for Public Land is a national nonprofit founded in San Francisco in 1972. It works on land conservation and creating public parks and open space. It also publishes research on parks, conservation finance and urban climate adaptation.",
+      "website": "https://www.tpl.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Trust For Public Land - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237222333"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Trust for Public Land - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Trust_for_Public_Land"
+      },
+      {
+        "supports": [],
+        "title": "Work: Bridges Academy at Melrose - BASE Landscape",
+        "url": "https://www.baselandscape.com/work-bridges-academy-at-melrose"
+      },
+      {
+        "supports": [],
+        "title": "The Trust for Public Land Green Schoolyards Program (Bay Area)",
+        "url": "https://edibleschoolyard.org/program/trust-public-land-green-schoolyards-program-bay-area"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-trust-for-public-land",
+    "notes": "ProPublica confirms the 501(c)(3) name, EIN and San Francisco location; Wikipedia supports the summary, website and headquarters; BASE Landscape and Edible Schoolyard pages tie the Trust for Public Land to OUSD's Bridges Academy green schoolyard project, matching the agenda item. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

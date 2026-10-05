@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/260152908",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.umassglobal.edu/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.umassglobal.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-brandman-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "UMass Global's own About page states its history: Chapman University College, then Brandman University, then renamed University of Massachusetts Global (same institution, renamed)",
+      "ProPublica Nonprofit Explorer lists University Of Massachusetts Global (EIN 26-0152908, Aliso Viejo, CA) and shows its historical filings under the name Brandman University",
+      "Brandman University ran California teaching credential and intern programs (Multiple Subject, Single Subject, Education Specialist), matching the OUSD agenda item for 'Intern Partnership and Practica Programs - K-12 Teaching'"
+    ],
+    "key": "n-brandman-university",
+    "notes": "The agenda uses the former name Brandman University; the institution was renamed University of Massachusetts Global (same EIN, per ProPublica historical filings). Contact details are the current ones from umassglobal.edu. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "65 Enterprise, Suite 150, Aliso Viejo, CA 92656",
+      "caEntityNumber": null,
+      "ein": "26-0152908",
+      "email": null,
+      "headquarters": "Aliso Viejo, CA",
+      "legalName": "University Of Massachusetts Global",
+      "orgType": "nonprofit",
+      "phone": "(800) 746-0082",
+      "samUei": null,
+      "summary": "A private, nonprofit university affiliated with the University of Massachusetts system, formerly named Brandman University. It offers mostly online associate, bachelor's, master's and doctoral degrees, plus teaching credentials and certificates, mainly for working adults.",
+      "website": "https://www.umassglobal.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "University Of Massachusetts Global - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/260152908"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About UMass Global",
+        "url": "https://www.umassglobal.edu/about-us"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "UMass Global",
+        "url": "https://www.umassglobal.edu/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-brandman-university",
+    "notes": "ProPublica and the UMass Global About page both state that Brandman University is the former name of University of Massachusetts Global (EIN 26-0152908), and its School of Education offers California teaching credentials, which fits the OUSD intern/practica item. Legal name, EIN, nonprofit status, phone, address and the neutral summary are all supported by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

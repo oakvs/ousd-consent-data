@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.panoramaed.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.panoramaed.com/about/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006930",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches the agenda vendor 'Panorama Education' (company website panoramaed.com; agenda says 'Panorama Education, Inc.')",
+      "Company sells K-12 student data, survey and student-support software, consistent with an OUSD 'Classroom & academic programs' professional services agreement funded by Title 4-Student Support",
+      "Third-party listings (not fetched, not cited) place the company in Boston, MA, matching the agenda location; the company's own pages fetched did not state a city"
+    ],
+    "key": "v-006930",
+    "notes": "Boston, MA headquarters, legal name 'Panorama Education, Inc.', and registry IDs could not be confirmed on any fetchable official or registry page; no OUSD relationship page found. Confidence held at medium for that reason.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "contact@panoramaed.com",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(888) 268-1590",
+      "samUei": null,
+      "summary": "Panorama Education is a company that provides data and survey software for K-12 school districts. Its platform brings together academic, behavior, attendance and engagement data so educators can support students. It also offers tools for special education, graduation planning and classroom instruction.",
+      "website": "https://www.panoramaed.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Panorama Education Overview",
+        "url": "https://www.panoramaed.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "email"
+        ],
+        "title": "Contact Panorama Education",
+        "url": "https://www.panoramaed.com/about/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006930",
+    "notes": "Panorama Education, Inc. (Boston, MA) is the K-12 data analytics and survey company; the cited about and contact pages support the summary, orgType, website, phone and email, and the services fit the OUSD contract category. Headquarters is correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

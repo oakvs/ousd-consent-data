@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942935507",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.charisyouthcenter.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.charisyouthcenter.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-charis-youth-center",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Charis Youth Center' in Grass Valley, CA (ProPublica Nonprofit Explorer, EIN 94-2935507), matching the agenda's 'Grass Valley, CA'",
+      "Website describes a non-public special education school for emotionally disturbed adolescents, matching OUSD's 'Non-Public, Nonsectarian School/Agency Services Master Contract' for a Special Education Program"
+    ],
+    "key": "n-charis-youth-center",
+    "notes": "General email not found in fetched page text; left null. Website does not mention Oakland or OUSD; identity rests on name, location and special-education nonpublic school match.",
+    "profile": {
+      "address": "714 W Main St, Grass Valley, CA 95945",
+      "caEntityNumber": null,
+      "ein": "94-2935507",
+      "email": null,
+      "headquarters": "Grass Valley, CA",
+      "legalName": "Charis Youth Center",
+      "orgType": "nonprofit",
+      "phone": "+1 (530) 477-9800",
+      "samUei": null,
+      "summary": "A nonprofit in Grass Valley, California, that provides residential, educational and mental health services to adolescents with emotional disturbance, and support services to their families. It runs a non-public special education school and other programs such as vocational training and therapeutic behavior services.",
+      "website": "https://www.charisyouthcenter.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Charis Youth Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942935507"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Charis Youth Center",
+        "url": "https://www.charisyouthcenter.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact - Charis Youth Center",
+        "url": "https://www.charisyouthcenter.org/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-charis-youth-center",
+    "notes": "ProPublica confirms Charis Youth Center, Grass Valley CA, EIN 94-2935507, 501(c)(3); the organization's website confirms a non-public school for emotionally disturbed youth, residential, vocational and TBS services, and the contact page shows the phone and address. This matches the agenda's Grass Valley location and the nonpublic special education master contract; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

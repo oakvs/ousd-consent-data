@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/262763038",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cdss.ca.gov/inforesources/cdss-programs/refugees/youth-initiatives/opportunities-for-youth",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-kids-in-need-of-defense-kind",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3): 'Kind Inc (Kids In Need Of Defense)', EIN 26-2763038, Washington, DC (ProPublica Nonprofit Explorer), matching the agenda's Washington, D.C. location",
+      "California Department of Social Services page on the Opportunities for Youth project names Kids in Need of Defense (KIND) as technical assistance provider and Oakland Unified School District as a service provider, matching the agenda's unaccompanied immigrant youth support grant"
+    ],
+    "key": "n-kids-in-need-of-defense-kind",
+    "notes": "Official site supportkind.org returns 403 to automated fetching, so website, phone, email and address were left null rather than unverified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "26-2763038",
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "Kind Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Kids in Need of Defense (KIND) is a nonprofit based in Washington, DC that provides legal services and advocacy for children. It also gives technical assistance to programs that support immigrant youth, such as California's Opportunities for Youth project.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Kind Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/262763038"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Opportunities for Youth - California Department of Social Services",
+        "url": "https://cdss.ca.gov/inforesources/cdss-programs/refugees/youth-initiatives/opportunities-for-youth"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-kids-in-need-of-defense-kind",
+    "notes": "ProPublica confirms the Washington, DC 501(c)(3) Kind Inc (Kids In Need Of Defense), EIN 26-2763038, in the legal services category. The CDSS page names KIND as technical assistance provider and Oakland Unified as a service provider, which fits the unaccompanied immigrant youth grant. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

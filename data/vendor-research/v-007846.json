@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://breatheforchange.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://breatheforchange.com/for-schools/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473187487",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007846",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches 'Breathe For Change Inc', a 501(c)(3) in San Francisco, CA (ProPublica Nonprofit Explorer), matching the agenda location San Francisco, CA",
+      "Website breatheforchange.com describes teacher wellness, yoga and mindfulness training for educators, consistent with OUSD's 'Student health, support & family services' contract at an elementary school",
+      "Weak point: no page found mentions Oakland or OUSD, and the registry nonprofit shows tiny revenue while the website shows a large operation, so the registry entity may not be the operating entity"
+    ],
+    "key": "v-007846",
+    "notes": "ProPublica lists 'Breathe For Change Inc', EIN 47-3187487, San Francisco, 501(c)(3) since 2015, but its filings show small revenue (peak $161,810 in 2016; $23,118 in 2019), which does not obviously match the larger operation on the website (master's degrees, 20,000+ educators). The website does not state its legal entity or nonprofit status and shows no phone, email or address. EIN and orgType left null until the operating entity is confirmed. California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": null,
+      "phone": null,
+      "samUei": null,
+      "summary": "Breathe For Change is a San Francisco-based organization that offers wellness, yoga, mindfulness and social-emotional learning training for teachers and school staff. It offers certification programs, a master's degree program with a partner college, and professional development for schools and districts.",
+      "website": "https://breatheforchange.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Breathe for Change",
+        "url": "https://breatheforchange.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "For Schools - Breathe For Change",
+        "url": "https://breatheforchange.com/for-schools/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Breathe For Change Inc - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473187487"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007846",
+    "notes": "Exact name match, San Francisco location matches the agenda, and ProPublica confirms a 501(c)(3) with EIN 47-3187487; the site confirms school/district wellness and SEL programs fitting a student-support services contract. The summary is neutral and supported, though no source mentions Oakland specifically.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

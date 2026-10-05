@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/371755860",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://telos.org/services/academy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://telos.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-telos-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'Telos Academy' in Orem, UT, the same name and city given in the OUSD agenda text",
+      "Telos Academy LLC is a registered 501(c)(3) educational nonprofit in Orem, UT (ProPublica, EIN 37-1755860) at 870 W Center St, the same street address shown on telos.org",
+      "telos.org describes Telos Academy as a therapeutic boarding school for teens with learning differences and emotional challenges, consistent with a non-public special education school contract",
+      "Search results list Telos Academy (Orem, UT) as a special-education-type nonpublic school and as having a California Department of Education school directory entry (that page could not be fetched)"
+    ],
+    "key": "n-telos-academy",
+    "notes": "Utah Division of Corporations (via OpenCorporates) shows a Utah LLC entity 8976843-0160 as expired, but this is not a California entity number so caEntityNumber is left null. No public general email found. The California Department of Education directory page could not be fetched (bot protection); the identity match relies on name, city, address and school type.",
+    "profile": {
+      "address": "870 W Center St, Orem, UT 84057",
+      "caEntityNumber": null,
+      "ein": "37-1755860",
+      "email": null,
+      "headquarters": "Orem, UT",
+      "legalName": "Telos Academy LLC",
+      "orgType": "nonprofit",
+      "phone": "801.426.8800",
+      "samUei": null,
+      "summary": "Telos Academy is a therapeutic boarding school in Orem, Utah for teenage boys ages 14 to 17. It combines accredited high school classes with residential mental health treatment and mentoring for students dealing with depression, anxiety, learning differences and emotional challenges. It is part of the Telos organization, which also offers outpatient programs.",
+      "website": "https://telos.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Telos Academy LLC - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/371755860"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Telos Academy - Therapeutic Boarding School in Utah",
+        "url": "https://telos.org/services/academy/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Telos - Teen Residential Treatment & Therapeutic Boarding School",
+        "url": "https://telos.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-telos-academy",
+    "notes": "Name and city (Orem, UT) match the agenda; ProPublica lists Telos Academy LLC as a 501(c)(3) school (EIN 37-1755860) in Orem, and telos.org confirms the address, phone, boys 14-17 residential program with accredited academics, and the wider Telos outpatient offerings, fitting a non-public special education school contract. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://montclair.ousd.org/pta",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/946183886",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-montclair-elementary-school-pta",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Montclair Elementary School's own OUSD web page describes the school's PTA, matching the agenda name and the 'Donation - Montclair Elementary School' title",
+      "ProPublica Nonprofit Explorer lists 'Montclair Elementary PTA' in Oakland, CA as a 501(c)(3) with EIN 94-6183886",
+      "The PTA mailing address (1757 Mountain Blvd, Oakland) is the school's address, within OUSD"
+    ],
+    "key": "n-montclair-elementary-school-pta",
+    "notes": "ProPublica lists the IRS legal name under the state PTA group exemption (Pta California Congress Of Parents Teachers & Students Inc), so legalName was left null. No general email found; only a named-role board address, which was omitted.",
+    "profile": {
+      "address": "1757 Mountain Boulevard, Oakland, CA 94611",
+      "caEntityNumber": null,
+      "ein": "94-6183886",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": "(510) 879-3143",
+      "samUei": null,
+      "summary": "The parent-teacher association (PTA) of Montclair Elementary School in Oakland, California. It is a partnership of parents and educators that raises money to support school programs such as library, music, art, drama and computer science, as well as field trips and classroom supplies. The PTA has operated at the school since 1926.",
+      "website": "https://montclair.ousd.org/pta"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "PTA - Montclair Elementary School",
+        "url": "https://montclair.ousd.org/pta"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Montclair Elementary PTA - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/946183886"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-montclair-elementary-school-pta",
+    "notes": "The OUSD school page for Montclair Elementary's PTA confirms the summary, address, phone, website and 1926 history, and ProPublica lists 'Montclair Elementary Pta' (AKA) in Oakland under EIN 94-6183886 as a 501(c)(3). This matches the donation-giving PTA named in the agenda, and the profile contains no named-individual contacts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

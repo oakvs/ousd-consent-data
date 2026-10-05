@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org/schools/achieve-academy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/202204424",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-achieve-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Achieve Academy is a public charter school (TK-5) at 1700 28th Ave, Oakland, CA, authorized by Oakland Unified School District (CA Dept of Education school directory), matching the agenda's Office of Charter Schools and Proposition 39 facilities agreements",
+      "The school's own website (achieveoakland.org) and the Education for Change Public Schools site list Achieve Academy as one of the Education for Change network's six Oakland schools, so the operating organization is Education for Change",
+      "ProPublica Nonprofit Explorer lists Education For Change, Oakland, CA, a 501(c)(3) K-12 education nonprofit, as the only matching Oakland nonprofit"
+    ],
+    "key": "n-achieve-academy",
+    "notes": "The agenda names only 'Achieve Academy', a charter school operated by the nonprofit Education for Change; the contact details and EIN given are for the operating organization, not the school site. Legal name taken from ProPublica ('Education For Change'); the network brands itself 'Education for Change Public Schools'. The school's own pages show conflicting phone numbers (510-904-6440 and 510-904-6400) and ZIP codes (94601 vs 94621), so the school-site contact details were left out. No CA Secretary of State entity number or SAM UEI was checked.",
+    "profile": {
+      "address": "333 Hegenberger Rd, Suite 705, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "20-2204424",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Education For Change",
+      "orgType": "nonprofit",
+      "phone": "510-568-7936",
+      "samUei": null,
+      "summary": "Education for Change Public Schools is a nonprofit that runs free public charter schools in Oakland, California. Its six schools serve students from transitional kindergarten through 12th grade. Achieve Academy is one of its schools and serves students in transitional kindergarten through 5th grade in Oakland's Fruitvale neighborhood.",
+      "website": "https://www.efcps.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Education for Change Oakland Public Schools",
+        "url": "https://www.efcps.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "Achieve Academy TK-5 - Education for Change Oakland Public Schools",
+        "url": "https://www.efcps.org/schools/achieve-academy"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Education For Change - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/202204424"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-achieve-academy",
+    "notes": "The efcps.org home page and the Achieve Academy page show Achieve Academy (TK-5, Fruitvale, Oakland) as one of six schools in the Education for Change network. They also show the HQ address and phone. ProPublica confirms the 501(c)(3) Education For Change, EIN 20-2204424, Oakland. This fits Prop 39 facilities agreements with OUSD's Office of Charter Schools, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

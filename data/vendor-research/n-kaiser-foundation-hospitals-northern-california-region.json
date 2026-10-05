@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941105628",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://about.kaiserpermanente.org/who-we-are",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kaiser-foundation-hospitals-northern-california-region",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Kaiser Foundation Hospitals', EIN 94-1105628, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Eat. Learn. Play. Foundation page describes a $2.5 million Kaiser Permanente grant supporting OUSD's Central Kitchen, matching the agenda's grant agreement for the Central Kitchen, Educational Center and Instructional Farm",
+      "Kaiser Permanente's own news page says it has given multi-year grants to Oakland Unified totaling $60 million since 2010"
+    ],
+    "key": "n-kaiser-foundation-hospitals-northern-california-region",
+    "notes": "Agenda gives South San Francisco, CA (likely the Northern California regional office); the registered headquarters per IRS/ProPublica is Oakland. The funder is the Northern California Community Benefit Programs Division of Kaiser Foundation Hospitals. Contact details and CA entity number not verified, so left null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-1105628",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Kaiser Foundation Hospitals",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Kaiser Foundation Hospitals is a nonprofit that is part of Kaiser Permanente, an integrated care and coverage organization that provides health care services and health plans. Its stated purpose is to provide high-quality, affordable health care and to improve the health of its members and the communities it serves.",
+      "website": "https://about.kaiserpermanente.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Kaiser Foundation Hospitals - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941105628"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Who We Are - Kaiser Permanente",
+        "url": "https://about.kaiserpermanente.org/who-we-are"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-kaiser-foundation-hospitals-northern-california-region",
+    "notes": "ProPublica confirms Kaiser Foundation Hospitals as a 501(c)(3) with EIN 94-1105628 in Oakland, and the agenda's grantor is the Northern California region/Community Benefit division of that same entity. The Kaiser Permanente page supports the parent-organization description and mission; the website is the Kaiser Permanente parent site.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

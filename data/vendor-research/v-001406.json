@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.doc-tracking.com/privacy.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.doc-tracking.com/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-001406",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Company 'Document Tracking Service, LLC' (DTS) is located in San Diego, CA, matching the agenda location 'San Diego, CA'",
+      "Its website describes web-based software for collecting, tracking and storing documents and forms for school districts, matching OUSD's 'Technology' licensing agreement",
+      "Public records of other California school districts (e.g. Conejo, Paramount, Visalia) show licensing agreements with 'Document Tracking Services, LLC', matching the agenda name"
+    ],
+    "key": "v-001406",
+    "notes": "Agenda spells the name 'Document Tracking Services, LLC'; the company's own privacy page gives the legal name as 'Document Tracking Service, LLC' (singular). No CA Secretary of State or SAM.gov record was checked, so registry IDs are null. Conejo USD board document could not be fetched (HTTP 403) so it is not cited.",
+    "profile": {
+      "address": "1601 India Street, 503 San Diego, CA 92101",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@doc-tracking.com",
+      "headquarters": "San Diego, CA",
+      "legalName": "Document Tracking Service, LLC",
+      "orgType": "company",
+      "phone": "(858) 784-0967",
+      "samUei": null,
+      "summary": "Document Tracking Service, LLC (DTS) provides web-based software for collecting, tracking and storing documents. Its tools include template-based reports, web forms that replace paper forms, and document translation. School districts and charter schools use it for reports, special education paperwork and enrollment forms.",
+      "website": "https://www.doc-tracking.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "DTS",
+        "url": "https://www.doc-tracking.com/privacy.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "DTS",
+        "url": "https://www.doc-tracking.com/contact.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-001406",
+    "notes": "The company's own pages show a San Diego, CA web-based document/forms software vendor for school districts, matching the agenda's 'Document Tracking Services, LLC', San Diego, and a Technology licensing agreement. Legal name (singular 'Service'), address, phone, email and summary are all confirmed on the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

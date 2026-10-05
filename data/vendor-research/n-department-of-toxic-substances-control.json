@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_Department_of_Toxic_Substances_Control",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://calepa.ca.gov/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-department-of-toxic-substances-control",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the California Department of Toxic Substances Control (DTSC), a state agency under CalEPA (Wikipedia; CalEPA About page)",
+      "OUSD's contract title is a 'Standard Voluntary Agreement' presented by General Counsel for 'School buildings & construction'; DTSC offers voluntary cleanup agreements for school and property sites and oversees cleanup of contaminated sites",
+      "DTSC has provided oversight on OUSD property projects (search results for OUSD's 1011 Union Street Central Administrative Center project list DTSC oversight)"
+    ],
+    "key": "n-department-of-toxic-substances-control",
+    "notes": "dtsc.ca.gov returns HTTP 403 to automated fetching, so phone, email and mailing address could not be verified from a cited page and were left null. The website value is taken from Wikipedia and the CalEPA page's link to the DTSC site. The agenda gives no location; the 'Standard Voluntary Agreement' name was not matched to a specific fetched DTSC page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "Department of Toxic Substances Control",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "A California state agency, part of the California Environmental Protection Agency, that protects public health and the environment from hazardous waste. It regulates how hazardous waste is handled, treated and disposed of, and oversees the cleanup of contaminated sites such as former industrial properties.",
+      "website": "https://dtsc.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "California Department of Toxic Substances Control - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_Department_of_Toxic_Substances_Control"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About CalEPA",
+        "url": "https://calepa.ca.gov/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-department-of-toxic-substances-control",
+    "notes": "OUSD's record names the Department of Toxic Substances Control under a Standard Voluntary Agreement presented by General Counsel for school buildings and construction, which fits the California state agency DTSC and its cleanup oversight. The Wikipedia and CalEPA pages support the legal name, neutral summary, public_agency type, website and Sacramento headquarters.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.gene.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.gene.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-genentech",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda names only 'Genentech' with no city; the Bay Area biotechnology company Genentech, Inc. is the best-known organization of that name and gives education and workforce grants in the Bay Area (gene.com corporate giving page).",
+      "The OUSD item is a grant Letter of Agreement for a teacher residency program, which fits Genentech's K-12 STEM and workforce giving, but no public page found links Genentech to Oakland Unified or the Oakland Teacher Residency."
+    ],
+    "key": "n-genentech",
+    "notes": "Identity not confirmed against OUSD: agenda gives no location and no public page found ties Genentech (or the Genentech Foundation, a separate entity) to the Oakland Teacher Residency grant. Grant could come from Genentech, Inc. or the Genentech Foundation. No registry IDs, phone or email verified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "South San Francisco, CA",
+      "legalName": "Genentech, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Genentech is a biotechnology company that discovers and develops medicines for people with serious and life-threatening diseases. It has been a member of the Roche Group since 2009, and its South San Francisco campus is the headquarters for Roche pharmaceutical operations in the United States.",
+      "website": "https://www.gene.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "Genentech About Us",
+        "url": "https://www.gene.com/about-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "website"
+        ],
+        "title": "Genentech",
+        "url": "https://www.gene.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-genentech",
+    "notes": "Genentech is a distinctive name and a corporate grant to the Oakland Teacher Residency is consistent with the company; the summary, legal name, website, orgType and headquarters are supported by gene.com. The address on the contact page is the US Drug Safety department mailing address and the phone is the patient resource line, not general business contact details, so both are dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "address",
+      "phone"
+    ],
+    "verdict": "confirmed"
+  }
+}

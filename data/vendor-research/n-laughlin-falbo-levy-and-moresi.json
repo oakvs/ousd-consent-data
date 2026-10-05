@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lflm.com/offices/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lflm.com/offices/oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lflm.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-laughlin-falbo-levy-and-moresi",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the law firm 'Laughlin, Falbo, Levy & Moresi LLP' on its official site lflm.com",
+      "The firm has an Oakland, CA office (475 14th Street, Suite 500), matching the agenda's Oakland location",
+      "The firm is a workers' compensation defense firm, which fits a contract handled by OUSD's Risk Management Department and General Counsel (Legal, insurance & risk)",
+      "The firm's published materials include a workers' compensation guidebook for educational entities, so it serves school districts"
+    ],
+    "key": "n-laughlin-falbo-levy-and-moresi",
+    "notes": "Phone, address and headquarters are for the Sacramento headquarters office; the Oakland office is 475 14th Street, Suite 500, Oakland, CA 94612, (510) 628-0496. Third-party listings show an older Oakland address (555 12th St). No general firm email found on the site, only individual attorney emails. California SOS entity number and EIN not verified.",
+    "profile": {
+      "address": "One Capitol Mall, Suite 400 Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "Laughlin, Falbo, Levy & Moresi LLP",
+      "orgType": "company",
+      "phone": "(916) 441-6045",
+      "samUei": null,
+      "summary": "A California law firm that specializes in defending workers' compensation claims. It represents employers, insurers and public agencies in disputed claims before the Workers' Compensation Appeals Board. The firm has offices across California, including Oakland.",
+      "website": "https://www.lflm.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Northern & Southern California Workers' Comp Defense Firm",
+        "url": "https://www.lflm.com/offices/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Oakland, California Workers' Compensation Defense Firm, Attorneys, Bay Area",
+        "url": "https://www.lflm.com/offices/oakland/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Laughlin, Falbo, Levy & Moresi LLP",
+        "url": "https://www.lflm.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-laughlin-falbo-levy-and-moresi",
+    "notes": "Same firm: Laughlin, Falbo, Levy & Moresi LLP is a workers' comp defense firm with an Oakland office, which fits a Risk Management MOU. Legal name, website, phone, address and headquarters are confirmed on lflm.com/offices (Sacramento HQ). The summary claims it represents public agencies and has offices 'across California' beyond what the cited pages state; the pages only say employers and insurers, so the summary is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "confirmed"
+  }
+}

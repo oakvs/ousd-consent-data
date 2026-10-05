@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cdss.ca.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdss.ca.gov/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cdss.ca.gov/inforesources/refugees/programs-and-info/youth/rsi",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-social-services-refugee-program-bureau",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the California Department of Social Services, Refugee Program Bureau; the CDSS website lists a Refugee Programs Bureau that oversees refugee programs",
+      "CDSS's Refugee School Impact program serves school-age refugee students, matching OUSD's English Language Learner and Multilingual Achievement (ELLMA) department and its grant-funded student support services",
+      "CDSS has run Refugee School Impact grants open to school districts in Alameda County (search result from cdss.ca.gov), the county OUSD is in"
+    ],
+    "key": "n-california-department-of-social-services-refugee-program-bureau",
+    "notes": "State agency (public_agency); no EIN, CA SOS entity number or SAM UEI listed. Phone and address are the department's main public line and headquarters, not specific to the Refugee Programs Bureau.",
+    "profile": {
+      "address": "744 P Street, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "piar@dss.ca.gov",
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Social Services",
+      "orgType": "public_agency",
+      "phone": "(916) 651-8848",
+      "samUei": null,
+      "summary": "The California Department of Social Services is a California state agency that runs public assistance programs such as CalWORKs, CalFresh, In-Home Supportive Services, Adult Protective Services, foster care and child welfare services, and community care licensing. Its Refugee Programs Bureau oversees refugee support programs, including the Refugee School Impact program, which helps school-age students who have been in the United States five years or less with academic performance and social adjustment.",
+      "website": "https://www.cdss.ca.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "address",
+          "email",
+          "headquarters"
+        ],
+        "title": "California Department of Social Services",
+        "url": "https://www.cdss.ca.gov/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "California Department of Social Services Contact Information",
+        "url": "https://www.cdss.ca.gov/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Refugee School Impact (RSI) Program",
+        "url": "https://www.cdss.ca.gov/inforesources/refugees/programs-and-info/youth/rsi"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-california-department-of-social-services-refugee-program-bureau",
+    "notes": "The vendor is the California Department of Social Services, whose Refugee Programs Bureau and Refugee School Impact program for school-age students in the US five years or less match the ELLMA grant agreements. The address, phone and generic department email are on cdss.ca.gov and the summary is neutral. The RSI page names the Office of Immigrant Youth rather than the bureau, but the bureau's role is plausible.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

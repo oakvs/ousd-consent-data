@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/202204424",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org/schools/lazear-charter-academy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-education-for-change-public-schools-lazear-charter-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the Education for Change Public Schools website lists Lazear Charter Academy as one of its six Oakland charter schools (efcps.org)",
+      "Located in Oakland, CA; a charter school network, consistent with OUSD's Office of Charter Schools presenting a Charter School Facilities Program use agreement",
+      "ProPublica lists a 501(c)(3) 'Education For Change' in Oakland, CA (NTEE B29, K-12 education, 'Operated a school'), matching the network's name and location"
+    ],
+    "key": "n-education-for-change-public-schools-lazear-charter-academy",
+    "notes": "Agenda item is a facilities use agreement with Lazear Charter Academy, a school operated by Education for Change Public Schools. ProPublica registers the legal entity as 'Education For Change'; EIN match to the network is by name, city and school-operator description, not confirmed on the organization's own pages. No general email found on cited pages; CA entity number and SAM UEI not looked up. Operating name is 'Education for Change Public Schools'; legalName is the IRS-registered name shown by ProPublica.",
+    "profile": {
+      "address": "333 Hegenberger Road, Suite 705, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "20-2204424",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Education For Change",
+      "orgType": "nonprofit",
+      "phone": "510-568-7936",
+      "samUei": null,
+      "summary": "Education for Change Public Schools is a nonprofit network of free public charter schools in Oakland, California. It runs six schools serving students from transitional kindergarten through 12th grade, including Lazear Charter Academy, a TK-8 school in East Oakland.",
+      "website": "https://www.efcps.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Education for Change Oakland Public Schools",
+        "url": "https://www.efcps.org/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Education For Change - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/202204424"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "Lazear Charter Academy TK-8 - Education for Change Oakland Public Schools",
+        "url": "https://www.efcps.org/schools/lazear-charter-academy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-education-for-change-public-schools-lazear-charter-academy",
+    "notes": "efcps.org lists Lazear Charter Academy (TK-8) among six Oakland schools and confirms the address, phone and nonprofit status; ProPublica lists the Oakland 501(c)(3) Education For Change (EIN 20-2204424) operating a K-12 school, consistent with the charter operator. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

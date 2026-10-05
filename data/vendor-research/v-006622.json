@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942660844",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.storycenter.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.storycenter.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006622",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Storycenter' (ProPublica Nonprofit Explorer, EIN 94-2660844), listed in Berkeley, CA, matching the agenda location",
+      "StoryCenter's own website describes digital storytelling workshops, consistent with a Linked Learning / classroom and academic programs professional services contract",
+      "Organization history (formerly Center for Digital Storytelling) is rooted in Berkeley, CA; its website now lists a mailing address in Oakland, CA"
+    ],
+    "key": "v-006622",
+    "notes": "ProPublica (IRS data) lists the organization in Berkeley, CA, while its current website lists a mailing address in Oakland, CA; the agenda says Berkeley. The org has long been Berkeley-based (1250 Addison St), so it appears to have moved recently. California SOS entity number not checked.",
+    "profile": {
+      "address": "2323 Broadway, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": "94-2660844",
+      "email": "info@storycenter.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Storycenter",
+      "orgType": "nonprofit",
+      "phone": "(510) 548-2065",
+      "samUei": null,
+      "summary": "StoryCenter is a nonprofit that runs digital storytelling workshops. Participants learn to create short, personal media stories. The organization says its work promotes deep listening and community connection. It was formerly known as the Center for Digital Storytelling.",
+      "website": "https://www.storycenter.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Storycenter - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942660844"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - StoryCenter",
+        "url": "https://www.storycenter.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About - StoryCenter",
+        "url": "https://www.storycenter.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006622",
+    "notes": "ProPublica (EIN 94-2660844, Berkeley CA, 501(c)(3)) and storycenter.org (contact, about, history pages) confirm StoryCenter, a digital storytelling nonprofit formerly the Center for Digital Storytelling and based in Berkeley until a later move to Oakland, which fits a Linked Learning professional services contract. The phone, generic info@ email, address and neutral summary are all supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

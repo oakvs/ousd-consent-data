@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://silvergiving.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://silvergiving.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-silver-giving-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Official site silvergiving.org names 'Silver Giving Foundation', a San Francisco foundation, matching the agenda's San Francisco location",
+      "Its stated focus on California P-12 public education fits OUSD's 'Classroom & academic programs' category",
+      "An earlier OUSD Board item (File ID 17-1915) records a Silvergiving Foundation grant award to Oakland International High School, the same school as in this agenda item"
+    ],
+    "key": "n-silver-giving-foundation",
+    "notes": "EIN not included: ProPublica lists a San Francisco private foundation 'Silver Lining Foundation' (EIN 94-3285094, exempt since Feb 1998) that may be the same entity under a former name, but the name differs and this was not confirmed. No general email is listed on the contact page. CA entity number and UEI not checked/found.",
+    "profile": {
+      "address": "One Lombard Street, Suite 305, San Francisco, CA 94111",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Silver Giving Foundation",
+      "orgType": "nonprofit",
+      "phone": "415.834.9934",
+      "samUei": null,
+      "summary": "A private foundation based in San Francisco. It funds work in California public education, including educator preparation, school and system capacity, and advocacy and research. It also supports families with young children in San Francisco. It says it does not accept unsolicited proposals.",
+      "website": "https://silvergiving.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Silver Giving Foundation",
+        "url": "https://silvergiving.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Silver Giving Foundation",
+        "url": "https://silvergiving.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-silver-giving-foundation",
+    "notes": "silvergiving.org is a San Francisco grantmaking foundation (One Lombard St) focused on California P-12 education, matching the agenda's San Francisco location and a grant for a school; the summary's focus areas and the no-unsolicited-proposals statement are confirmed on the site (the latter on /grantees/becoming-a-grantee, not a cited page). Legal name, phone and address are confirmed on the contact page. Nonprofit/private status is not stated on either cited page, so orgType is unsupported; the summary's word 'private' is likewise unconfirmed but minor.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "orgType"
+    ],
+    "verdict": "confirmed"
+  }
+}

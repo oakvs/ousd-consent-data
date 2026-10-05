@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/474248922",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.newschools.org/blog/educate78-launches-in-oakland/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.leadliberated.org/about-lead-liberated/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-educate78",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Educate78 is an Oakland, CA nonprofit (NewSchools Venture Fund spin-off, 2015) that made grants to Oakland district and charter schools, matching OUSD's 'Educate78 Grant Fund' and 'Grant Agreement - Educate78 - Bridges Academy'",
+      "Bridges Academy (OUSD) lists Educate78 among its partners",
+      "IRS/ProPublica EIN 47-4248922 is listed under the names Educate78 (Charity Navigator, Instrumentl) and Lead Liberated (ProPublica, GuideStar, current legal name), Oakland, CA"
+    ],
+    "key": "n-educate78",
+    "notes": "The EIN appears under both Educate78 and Lead Liberated, so the legal name has changed or the entity is operating under a new name; educate78.org was unreachable to confirm. Unclear whether the current Lead Liberated organization is the grantmaker OUSD refers to, so reviewer should confirm before publishing. Website, phone, address left null to avoid mixing the two names.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "47-4248922",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Lead Liberated",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Educate78 was an Oakland-based nonprofit launched in 2015 as a spin-off of NewSchools Venture Fund, working to give every student in every Oakland neighborhood access to strong public schools, including through grants to district and charter schools. The same tax ID is now registered under the name Lead Liberated, which trains education leaders in antiracist leadership.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Lead Liberated - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/474248922"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Educate78 Launches in Oakland - NewSchools Venture Fund",
+        "url": "https://www.newschools.org/blog/educate78-launches-in-oakland/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Lead Liberated",
+        "url": "https://www.leadliberated.org/about-lead-liberated/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-educate78",
+    "notes": "EIN 47-4248922 is shown as Lead Liberated (ProPublica, GuideStar) and indexed as educate78 (CauseIQ); Lead Liberated's About page says its program was founded at Educate78, and NewSchools describes Educate78 as an Oakland nonprofit focused on school giving, which fits the Bridges Academy grant agreement. Name, EIN, address, phone, website and summary are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

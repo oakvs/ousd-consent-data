@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/710890558",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.gotrbayarea.org/organization",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007616",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Girls On The Run Of The Bay Area Inc', EIN 71-0890558, San Francisco, CA (ProPublica Nonprofit Explorer)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "Website describes a youth program for grades 3-8 serving Alameda County and four other Bay Area counties, consistent with a student support services agreement with OUSD"
+    ],
+    "key": "v-007616",
+    "notes": "Website pages do not explicitly mention OUSD or Oakland schools; identity rests on exact name match, EIN registry record, San Francisco location and Alameda County service area.",
+    "profile": {
+      "address": "3543 18th Street Suite 31, San Francisco, CA 94110",
+      "caEntityNumber": null,
+      "ein": "71-0890558",
+      "email": "info@gotrbayarea.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Girls On The Run Of The Bay Area Inc",
+      "orgType": "nonprofit",
+      "phone": "(415) 863-8942",
+      "samUei": null,
+      "summary": "A nonprofit that runs Girls on the Run programs for girls in grades 3-8 in the Bay Area. The program uses a curriculum that includes running to build participants' social, emotional and physical skills. It serves San Francisco, Marin, San Mateo, Contra Costa and Alameda Counties.",
+      "website": "https://www.gotrbayarea.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Girls On The Run Of The Bay Area Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/710890558"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Girls on the Run Bay Area - Our Organization",
+        "url": "https://www.gotrbayarea.org/organization"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007616",
+    "notes": "Exact name and San Francisco location match the agenda; ProPublica confirms the 501(c)(3) with EIN 71-0890558, and the organization page confirms the grades 3-8 program, five-county service area (including Alameda) and the generic business phone, email and address. Summary is neutral and fully supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

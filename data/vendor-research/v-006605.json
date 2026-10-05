@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.xebecdata.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.xebecdata.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://xebecdata.com/partners-1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006605",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Distinctive name matches: 'Xebec Data Corp.' (agenda: 'Xebec Data Corporation')",
+      "Located in Lafayette, CO (P.O. Box 862, Lafayette, CO 80026), matching the agenda location 'Lafayette, Colorado'",
+      "Company specializes in utility billing and energy usage data for cities, counties and school districts, matching OUSD's Prop 39 energy and utility operations & maintenance contracts"
+    ],
+    "key": "v-006605",
+    "notes": "No registry ID (EIN, CO/CA entity number, UEI) was found, so those are null. No page directly links Xebec to OUSD; identity rests on the distinctive name, the Lafayette, CO location and the energy-billing-data business. Website's legal name appears as 'Xebec Data Corp.' vs 'Corporation' in the agenda.",
+    "profile": {
+      "address": "P.O. Box 862, Lafayette, CO 80026-0862",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "admin@xebecdata.com",
+      "headquarters": "Lafayette, CO",
+      "legalName": "Xebec Data Corp.",
+      "orgType": "company",
+      "phone": "(800) 489-8297",
+      "samUei": null,
+      "summary": "A company that provides web-based Electronic Data Interchange (EDI) services, which let businesses exchange orders and billing data electronically. It serves retailers, suppliers, trucking firms and energy companies, and moves utility billing and usage data into energy management software used by cities, counties and school districts.",
+      "website": "https://www.xebecdata.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "Xebec Data Corp.",
+        "url": "https://www.xebecdata.com"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Xebec Data Corp. Contact",
+        "url": "https://www.xebecdata.com/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Xebec Data Corp.",
+        "url": "https://xebecdata.com/partners-1"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006605",
+    "notes": "Xebec Data Corp. in Lafayette, CO matches the agenda name and location, and its utility billing/energy-management data business fits OUSD's Prop 39 energy and utility O&M contracts; no page names OUSD directly, but the distinctive name, city and service fit are consistent. Website, phone, generic admin email, PO Box address and a neutral summary are all confirmed on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

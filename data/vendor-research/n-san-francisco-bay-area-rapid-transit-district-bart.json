@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bart.gov/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bart.gov/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bart.gov/about/jobs/training",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-san-francisco-bay-area-rapid-transit-district-bart",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "BART's own site describes the San Francisco Bay Area Rapid Transit District as a public transit system, and its headquarters and mailing address are in Oakland, CA, matching the agenda location",
+      "BART's Internships & Career Development page says BART partnered with the Oakland Unified School District, and BART runs paid summer internships for high school students, matching OUSD's Memorandum of Agreement for a Summer Internship Program with the High School Linked Learning Department"
+    ],
+    "key": "n-san-francisco-bay-area-rapid-transit-district-bart",
+    "notes": "Public agency, so no EIN. Mailing address is a P.O. Box; street headquarters is 2150 Webster Street, Oakland, but was not cited from a page fetched directly.",
+    "profile": {
+      "address": "P.O. Box 12688, Oakland, CA 94604-2688",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "510-464-6000",
+      "samUei": null,
+      "summary": "BART (San Francisco Bay Area Rapid Transit District) is a public transit agency that runs a heavy-rail system with 50 stations and 131 miles of track. It connects the San Francisco Peninsula with East Bay and South Bay communities across five counties. BART also offers paid internship programs for students.",
+      "website": "https://www.bart.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About BART",
+        "url": "https://www.bart.gov/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us",
+        "url": "https://www.bart.gov/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Internships & Career Development",
+        "url": "https://www.bart.gov/about/jobs/training"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-san-francisco-bay-area-rapid-transit-district-bart",
+    "notes": "BART is the Oakland-headquartered public transit district named in the agenda and runs paid student/summer internships; its own pages confirm the 50 stations, 131 miles, five counties, phone 510-464-6000 and the P.O. Box address. The summary is neutral and supported; the OUSD partnership on the training page concerns a trades fair, but the identity match is not in doubt.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.salesforce.com/company/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.salesforce.com/company/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.salesforce.com/news/stories/salesforce-celebrates-9-years-supporting-public-education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-salesforce-com",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Salesforce.com, Inc.' as a donor; Salesforce (formerly Salesforce.com, Inc.) is a well-known San Francisco Bay Area software company and the donation fits its long-running public giving to Oakland schools",
+      "Salesforce's own news page states it has donated $100 million in total to San Francisco and Oakland Unified School Districts and quotes the OUSD superintendent",
+      "Agenda item is a donation to the Chief Systems and Services Department, consistent with Salesforce's technology and education-related giving to OUSD"
+    ],
+    "key": "n-salesforce-com",
+    "notes": "Company was formerly named Salesforce.com, Inc. (agenda uses the old name); legal name left null because no cited page shows it exactly. Registry IDs not collected. Phone is the number the locations page lists as main; it may be a sales line.",
+    "profile": {
+      "address": "Salesforce Tower, 415 Mission Street, 3rd Floor, San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-800-664-9073",
+      "samUei": null,
+      "summary": "Salesforce is a software company, founded in 1999, that sells cloud-based customer relationship management (CRM) software and related artificial intelligence and data tools. Its products help businesses manage sales, customer service, marketing and commerce. It is headquartered in San Francisco, California.",
+      "website": "https://www.salesforce.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Us - Salesforce",
+        "url": "https://www.salesforce.com/company/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Salesforce Locations",
+        "url": "https://www.salesforce.com/company/locations/"
+      },
+      {
+        "supports": [],
+        "title": "Salesforce Celebrates Continued Commitment to Education, Reaching $140M+ in Donations",
+        "url": "https://www.salesforce.com/news/stories/salesforce-celebrates-9-years-supporting-public-education/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-salesforce-com",
+    "notes": "Agenda item is a donation from Salesforce.com, Inc. (old name of Salesforce, Inc.), and Salesforce's own news page confirms $100M in donations to SFUSD and OUSD with the OUSD superintendent quoted. About page confirms 1999 founding and CRM/AI/data products; locations page confirms the San Francisco HQ address and the 1-800-664-9073 main number. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

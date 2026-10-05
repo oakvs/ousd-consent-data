@@ -1,0 +1,140 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://inkwire.co",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://inkwire.co/terms",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://inkwire.co/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/san-francisco/inkwire-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cite.org/recently-completed-agreements",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-inkwire",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the company's own Terms and Privacy pages name 'Inkwire Inc' as the legal entity, matching 'Inkwire, Inc.' in the agenda",
+      "Located in San Francisco, CA (2261 Market Street #4390), matching the agenda location; California business filing also lists the same San Francisco address",
+      "Inkwire is an education technology platform for student portfolios and project design, consistent with a California Student Data Privacy Agreement with the district",
+      "Inkwire, Inc. appears on the California IT in Education (CITE) list of completed student data privacy agreements"
+    ],
+    "key": "n-inkwire",
+    "notes": "California entity number comes from a third-party aggregator (bizprofile.net) of Secretary of State data, not the SOS site itself. The Privacy Policy describes Inkwire Inc. as a Delaware corporation while the aggregator lists it as a California-registered stock corporation, so the entity number may be a foreign-registration number. Phone appears only on the Terms page.",
+    "profile": {
+      "address": "2261 Market Street #4390, San Francisco, CA 94114",
+      "caEntityNumber": "4750152",
+      "ein": null,
+      "email": "info@inkwire.co",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Inkwire Inc",
+      "orgType": "company",
+      "phone": "(510) 992-2510",
+      "samUei": null,
+      "summary": "Inkwire is a company that makes an education software platform. Teachers use its design tools, with AI help, to plan standards-aligned projects. Students use its portfolio tools to document their projects and reflections and organize evidence of their learning.",
+      "website": "https://inkwire.co"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Inkwire",
+        "url": "https://inkwire.co"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Terms — Inkwire",
+        "url": "https://inkwire.co/terms"
+      },
+      {
+        "supports": [
+          "email",
+          "summary"
+        ],
+        "title": "Privacy Policy — Inkwire",
+        "url": "https://inkwire.co/privacy"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "headquarters",
+          "address",
+          "orgType"
+        ],
+        "title": "Inkwire Inc San Francisco, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/san-francisco/inkwire-inc"
+      },
+      {
+        "supports": [],
+        "title": "Recently Completed Agreements - California IT in Education",
+        "url": "https://www.cite.org/recently-completed-agreements"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-inkwire",
+    "notes": "Inkwire Inc is an ed-tech portfolio/project-design platform at 2261 Market St #4390, San Francisco (Terms page and CA filing listing), matching the agenda's San Francisco location and a student data privacy agreement; it also appears on the CITE completed-agreements list. All profile fields are supported by the cited sources and the summary is neutral; the CA entity number is a Delaware-formed corporation's California registration per the aggregator, which the candidate already flags.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

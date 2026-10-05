@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/822763443",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandenrolls.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandenrolls.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-enrolls",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'Oakland Enrolls', EIN 82-2763443 (ProPublica Nonprofit Explorer)",
+      "Its website (oaklandenrolls.org) describes a school enrollment platform for Oakland families, matching the agenda title 'Data Sharing Agreement - Oakland Enrolls - Student Enrollment Office' and the 'Partnerships & data sharing' category",
+      "Located in Oakland, CA, the same city OUSD serves"
+    ],
+    "key": "n-oakland-enrolls",
+    "notes": "No page fetched mentions OUSD directly; identity rests on the exact name match with the registered nonprofit and the enrollment function matching the agreement's title. Oakland Enrolls is separate from OUSD's own enrollment platform (EnrollWise / ChooseOUSD). No general email address found. CA Secretary of State and SAM.gov not checked.",
+    "profile": {
+      "address": "433 Hegenberger Road, Suite 222, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "82-2763443",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Enrolls",
+      "orgType": "nonprofit",
+      "phone": "(510) 454-9360",
+      "samUei": null,
+      "summary": "A nonprofit that runs a shared enrollment platform for public charter schools in Oakland, California. Families can browse schools, get enrollment guidance and apply to several charter schools in one place. It offers help in Spanish, Cantonese, Arabic and Cambodian.",
+      "website": "https://oaklandenrolls.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Oakland Enrolls - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/822763443"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact - Oakland Enrolls",
+        "url": "https://oaklandenrolls.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About - Oakland Enrolls",
+        "url": "https://oaklandenrolls.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-oakland-enrolls",
+    "notes": "Exact name match to the only Oakland Enrolls (501(c)(3), EIN 82-2763443, Oakland CA); its charter-school enrollment function fits a data sharing agreement with OUSD's Student Enrollment Office, though no source mentions OUSD directly. Name, EIN, org type, phone, address, website and summary are supported by the cited ProPublica, contact and about pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

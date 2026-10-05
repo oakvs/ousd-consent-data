@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Moss_Adams",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.praxity.com/firms/a-z/firm-details?id=53b60038-558d-e111-9dd2-000c29309fe1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-moss-adams",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches Moss Adams LLP, an accounting, tax and consulting firm headquartered in Seattle, WA, matching the agenda location 'Seattle, WA' (Wikipedia, Praxity)",
+      "A 'Services Agreement' handled by OUSD's Business Services Department is consistent with an accounting/consulting firm, but no public page was found linking Moss Adams to OUSD specifically",
+      "Moss Adams combined with Baker Tilly on June 3, 2025, and its website now redirects to bakertilly.com, so current contact details could not be confirmed"
+    ],
+    "key": "n-moss-adams",
+    "notes": "Not publishable: no direct OUSD link found and the firm's website now redirects to Baker Tilly after the 2025 combination. Registry IDs and contact details not verified.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Seattle, WA",
+      "legalName": "Moss Adams LLP",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Moss Adams LLP was a public accounting firm founded in 1913 and headquartered in Seattle, Washington. It provided accounting, tax and consulting services to public and private mid-sized businesses and organizations. In June 2025 it combined its operations with Baker Tilly.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Moss Adams - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Moss_Adams"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Moss Adams LLP - Praxity",
+        "url": "https://www.praxity.com/firms/a-z/firm-details?id=53b60038-558d-e111-9dd2-000c29309fe1"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

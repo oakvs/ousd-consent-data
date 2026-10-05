@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/161533544",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.we.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-we-charity",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered US 501(c)(3): 'We Charity', EIN 16-1533544, Williamsville, NY (ProPublica Nonprofit Explorer)",
+      "WE Charity's own website describes the 'WE Teachers' program, matching the agenda's 'WE Teachers District Grant Program'; the funder Walgreens launched WE Teachers with WE in 2019 (search results; Walgreens page not fetchable)",
+      "Education/classroom programs match OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "n-we-charity",
+    "notes": "Medium: the agenda lists Vancouver, British Columbia, Canada, which matches neither the US entity (Williamsville, NY) nor the Toronto office on we.org. Unclear whether OUSD's counterparty is the US entity (EIN 16-1533544) or the since-wound-down Canadian entity. Phone and email omitted for that reason (email is obfuscated on the contact page).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "16-1533544",
+      "email": null,
+      "headquarters": "Williamsville, NY",
+      "legalName": "We Charity",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "WE Charity is a charity, formerly known as Free the Children, that runs youth service-learning and education programs such as WE Schools, WE Villages and WE Teachers. A US 501(c)(3) entity is registered in Williamsville, New York.",
+      "website": "https://www.we.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "We Charity - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/161533544"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "WE Charity",
+        "url": "https://www.we.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

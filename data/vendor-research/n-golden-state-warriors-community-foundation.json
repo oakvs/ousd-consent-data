@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/454001645",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://community.warriors.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://valkyries.wnba.com/news/golden-state-community-foundation-surpasses-50-million-in-cumulative-impact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-golden-state-warriors-community-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists Golden State Community Foundation (formerly Golden State Warriors Community Foundation), EIN 45-4001645, a 501(c)(3) in San Francisco, CA",
+      "The foundation's own site (community.warriors.com) describes education programs and an Education pillar, matching OUSD's 'Classroom & academic programs' grant",
+      "Valkyries/foundation news page states the foundation gives Oakland Unified School District an annual flagship grant, matching the OUSD grant agreement",
+      "Foundation site names Rakuten as a presenting partner of its programs, matching the Rakuten Inc. named in the OUSD McClymonds agreement title"
+    ],
+    "key": "n-golden-state-warriors-community-foundation",
+    "notes": "Agenda name uses the former name 'Golden State Warriors Community Foundation'; the IRS/ProPublica legal name is now 'Golden State Community Foundation'. Phone, email and address not found on a fetchable official page, so left null. CA entity number and UEI not looked up.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "45-4001645",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Golden State Community Foundation",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit, the charitable arm of the Golden State Warriors, that gives grants and runs programs in the San Francisco Bay Area. Its focus areas are education, health and wellness, economic development and civic engagement. It gives yearly flagship grants to Oakland Unified and San Francisco Unified school districts and to other Bay Area nonprofits.",
+      "website": "https://community.warriors.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Golden State Community Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/454001645"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Warriors In The Community",
+        "url": "https://community.warriors.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Golden State Community Foundation Surpasses $50 Million In Cumulative Impact",
+        "url": "https://valkyries.wnba.com/news/golden-state-community-foundation-surpasses-50-million-in-cumulative-impact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-golden-state-warriors-community-foundation",
+    "notes": "ProPublica confirms Golden State Community Foundation (EIN 45-4001645, San Francisco 501(c)(3)); the Valkyries/WNBA page confirms $250,000 annual flagship grants to Oakland Unified and San Francisco Unified, and the foundation site confirms the four focus areas, so the profile fits the grant agreement OUSD lists. The Rakuten link in the identity signals was not visible on the homepage but is not used in any profile field, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

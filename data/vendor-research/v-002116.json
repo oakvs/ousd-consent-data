@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.homecampus.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.homecampus.com/terms-and-conditions",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/costa-mesa/carty-web-strategies-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-002116",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Home Campus website (homecampus.com) footer reads 'Carty Web Strategies. All Rights Reserved', tying the 'dba Home Campus' name in the agenda to Carty Web Strategies",
+      "A public business filing page lists Carty Web Strategies Inc. with a principal address in Costa Mesa, CA, matching the agenda's Costa Mesa, CA",
+      "Home Campus sells high school athletics administration software (clearances, scheduling, association software), matching a Technology contract for the Oakland Athletic League (OAL)"
+    ],
+    "key": "v-002116",
+    "notes": "The only registry page found is a Florida foreign-corporation filing (entity F23000005035) for a company based in Costa Mesa, CA; no California Secretary of State entity number was confirmed, so it is left null. A for-profit company, so no EIN or SAM UEI was listed. The Home Campus site does not show a public phone number or street address; the Costa Mesa address appears only on a third-party filing aggregator, so it is not included. Email is the technical-support inbox given in the site's terms.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "support@homecampus.com",
+      "headquarters": "Costa Mesa, CA",
+      "legalName": "Carty Web Strategies Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Carty Web Strategies operates Home Campus, a software company that makes tools for high school sports. Its products handle athletic clearance paperwork, game scheduling, injury tracking and association management for school athletic departments and sports associations. The company started in 2010 to serve the CIF Southern Section.",
+      "website": "https://www.homecampus.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Home Campus - About Us",
+        "url": "https://www.homecampus.com/about-us"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Home Campus - Terms and Conditions",
+        "url": "https://www.homecampus.com/terms-and-conditions"
+      },
+      {
+        "supports": [
+          "legalName",
+          "headquarters"
+        ],
+        "title": "Carty Web Strategies Inc. Costa Mesa, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/costa-mesa/carty-web-strategies-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-002116",
+    "notes": "The Home Campus about page names Carty Web Strategies in its footer, and the filing page lists Carty Web Strategies Inc. in Costa Mesa, CA, matching the agenda's 'dba Home Campus' and city. Athletic association software fits a Technology contract for the Oakland Athletic League. The summary matches the about page, and the support@homecampus.com inbox appears in the terms page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

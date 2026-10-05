@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://invest.grainger.com",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
+  "key": "n-grainger",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda names the vendor only as 'Grainger'; W.W. Grainger, Inc. is the well-known national industrial supply distributor of that name (SEC filer, Lake Forest, IL)",
+      "OUSD's description ('Piggyback - Grainger - Office Supplies, Related Products and Services') is consistent with a national distributor that sells through cooperative purchasing contracts, but no page found links OUSD to W.W. Grainger specifically, and the agenda gives no city"
+    ],
+    "key": "n-grainger",
+    "notes": "Identity not confirmed: the agenda gives no location and only the single word 'Grainger'. No OUSD or California page found that ties the district's piggyback contract to W.W. Grainger, Inc. (a cooperativecontracts.com 'Oakland Schools' page is for Michigan's Oakland Schools, not OUSD, and was not used). Likely W.W. Grainger, Inc., but needs human verification of the piggyback contract's vendor before publishing.",
+    "profile": {
+      "address": "100 Grainger Parkway, Lake Forest, IL 60045-5201",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Lake Forest, IL",
+      "legalName": "W.W. Grainger, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A broad line distributor of maintenance, repair and operating (MRO) products, with operations mainly in North America and Japan. It serves customers with products and related services supported by technology and customer expertise.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "W.W. Grainger, Inc. Investor Relations",
+        "url": "https://invest.grainger.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

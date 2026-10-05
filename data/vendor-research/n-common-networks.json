@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://commonnetworks.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://commonnetworks.com/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-common-networks",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Legal entity name on the company's privacy page is exactly 'Common Networks, Inc.', matching the agenda name",
+      "Mailing address is in San Francisco, CA, matching the agenda location",
+      "Company is a wireless internet provider, plausibly consistent with a Technology Services Department license agreement, but no public page found linking it to OUSD"
+    ],
+    "key": "n-common-networks",
+    "notes": "Identity rests on name and city only; no page found tying Common Networks to OUSD or schools, and the agenda purpose ('Governance & board business', Technology Services license agreement) is generic. California Secretary of State record not retrieved. Contact details omitted because the cited pages' phone/address formatting was only seen via summarized fetch.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Common Networks, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Common Networks is a company based in San Francisco that provides wireless 5G home internet service. It describes its service as bringing fiber-class speeds to communities across the country.",
+      "website": "https://commonnetworks.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Common Networks - About",
+        "url": "https://commonnetworks.com/about"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Common Networks - Privacy",
+        "url": "https://commonnetworks.com/privacy"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

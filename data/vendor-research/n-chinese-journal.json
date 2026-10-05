@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:http://chinesejournal.com/Co.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:http://chinesejournal.com/Services.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-chinese-journal",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: the company's own website is titled 'Chinese Journal LLC' and its footer reads 'Chinese Journal LLC, San Francisco', matching the agenda's 'Chinese Journal, LLC' in San Francisco, CA",
+      "Website describes Chinese translation and desktop publishing for government and other clients, which is plausible for a Measure Y election-cost payment (e.g. Chinese-language voter materials), but no public page confirms work for OUSD or the Alameda County election"
+    ],
+    "key": "n-chinese-journal",
+    "notes": "Identity is probable but not confirmed: only one strong signal (name plus San Francisco). The company site has an expired certificate, shows no phone, email or address, and does not mention OUSD or Measure Y. Third-party listings (Yelp, claimspages) give 3450 Geary Blvd Ste 205, San Francisco, CA 94118 and (415) 668-2388, but those pages could not be read, so contact details were left null. CA Secretary of State entity number not found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Chinese Journal LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A San Francisco company that provides Chinese translation and desktop publishing services, including typesetting, for government, legal, medical, technical and marketing clients. It began in 1972 as a bilingual community newspaper called the San Francisco Journal.",
+      "website": "http://chinesejournal.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Chinese Journal LLC >> Our Company",
+        "url": "http://chinesejournal.com/Co.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Chinese Journal LLC >> Services",
+        "url": "http://chinesejournal.com/Services.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-chinese-journal",
+    "notes": "Fetched chinesejournal.com Co and Services pages (expired cert, via curl): legal name, San Francisco location, 1972 bilingual community newspaper d/b/a San Francisco Journal, and Chinese translation/typesetting/desktop publishing for government and business clients all match; Chinese voter pamphlet services fit a Measure Y election cost payment. Contact details were rightly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

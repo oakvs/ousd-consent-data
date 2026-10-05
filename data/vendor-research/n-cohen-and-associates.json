@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cohenandassoc.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cohenandassoc.com/contact-6",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-cohen-and-associates",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD agenda item 22-0771 (2022-04-13) describes Cohen & Associates as 'a law firm with Oakland offices' providing workers' compensation defense legal services; cohenandassoc.com is a law firm in Oakland, CA that specializes in workers' compensation defense",
+      "The firm's website says it serves public entities and self-insured employers, matching a General Counsel / Risk Management contract paid from Fund 67, Self-Insurance",
+      "Website says the firm is located in Oakland, CA, matching the agenda location"
+    ],
+    "key": "n-cohen-and-associates",
+    "notes": "Legal entity type and California entity number not confirmed (Secretary of State search not used), so orgType 'company' is based on it being a law firm. Another search result listed a street address at 1330 Broadway Ste 450, Oakland, but the firm's own pages show a PO Box, which is used here.",
+    "profile": {
+      "address": "PO Box 29255, Oakland, CA 94604",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "admin@cohenandassoc.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "Cohen & Associates",
+      "orgType": "company",
+      "phone": "510-645-4680",
+      "samUei": null,
+      "summary": "A law firm based in Oakland, California, that focuses on workers' compensation defense. It primarily represents public entities and self-insured employers in the Bay Area and Northern California. Its other practice areas include subrogation, Labor Code matters and estate planning.",
+      "website": "https://www.cohenandassoc.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cohen & Associates",
+        "url": "https://www.cohenandassoc.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact",
+        "url": "https://www.cohenandassoc.com/contact-6"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-cohen-and-associates",
+    "notes": "OUSD item 22-0771 describes Cohen & Associates as a law firm with Oakland offices providing workers' compensation defense services, which matches cohenandassoc.com (Oakland, workers' comp defense for public entities and self-insured employers). Summary, phone, generic admin email and PO Box address all match the firm's own home and contact pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

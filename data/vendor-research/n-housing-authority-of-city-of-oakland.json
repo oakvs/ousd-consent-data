@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oakha.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oakha.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oakha.org/residents/educationinitiative/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-housing-authority-of-city-of-oakland",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Housing Authority of the City of Oakland' matches the public agency that does business as the Oakland Housing Authority (oakha.org), headquartered in Oakland, CA, matching the agenda location",
+      "OHA's Education Initiative page describes a partnership with Oakland Unified School District (OUSD) and sharing of student data, matching OUSD's 'Partnerships & data sharing' MOUs with the Research, Assessment and Data Department"
+    ],
+    "key": "n-housing-authority-of-city-of-oakland",
+    "notes": "Public agency, so no EIN/UEI/CA entity number sought. Legal name given as displayed on oakha.org; formal name may be 'Housing Authority of the City of Oakland'.",
+    "profile": {
+      "address": "1619 Harrison Street, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@oakha.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Housing Authority",
+      "orgType": "public_agency",
+      "phone": "(510) 874-1500",
+      "samUei": null,
+      "summary": "A public housing agency that provides affordable housing assistance to low-income people in Oakland through public housing and voucher programs. It also offers resident services such as education and employment programs and works with property owners to expand affordable housing.",
+      "website": "https://www.oakha.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Oakland Housing Authority",
+        "url": "https://www.oakha.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact Us - Oakland Housing Authority",
+        "url": "https://www.oakha.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Education Initiative - Oakland Housing Authority",
+        "url": "https://www.oakha.org/residents/educationinitiative/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-housing-authority-of-city-of-oakland",
+    "notes": "The Oakland Housing Authority (oakha.org, Oakland CA) is the agency in the agenda, and its Education Initiative page describes an OUSD partnership with shared student data that fits the data-sharing MOU. Phone, email, address, website, org type and the neutral summary are all confirmed on the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

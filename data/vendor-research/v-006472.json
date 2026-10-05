@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473948973",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://traumapartners.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.traumapartners.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://traumapartners.org/the-oakland-post-features-ptr-clinical-trainee-nouf-alrashid/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006472",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Partnerships For Trauma Recovery', Berkeley, CA (ProPublica Nonprofit Explorer, EIN shown)",
+      "Located in Berkeley, CA, matching the agenda text",
+      "Website describes trauma-informed mental health services, matching OUSD's 'Student health, support & family services' contract category",
+      "A page on the organization's own website says it works at Oakland International High School, the school named in the agenda title"
+    ],
+    "key": "v-006472",
+    "notes": "Street address not confirmed on a cited page, so left null. Training of graduate students is from search-result descriptions of the organization's own site; summary is otherwise based on the home page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "47-3948973",
+      "email": "info@traumapartners.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Partnerships For Trauma Recovery",
+      "orgType": "nonprofit",
+      "phone": "510-467-0520",
+      "samUei": null,
+      "summary": "A nonprofit based in Berkeley, California, that provides trauma-informed mental health care to survivors of human rights abuses, including torture and forced displacement. It runs the Mosaic Healing Center and offers counseling in many languages. It also trains graduate students in psychology and social work to serve these communities.",
+      "website": "https://traumapartners.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Partnerships For Trauma Recovery - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473948973"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "Contact - Partnerships for Trauma Recovery",
+        "url": "https://traumapartners.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Partnerships for Trauma Recovery",
+        "url": "https://www.traumapartners.org"
+      },
+      {
+        "supports": [],
+        "title": "PTR Clinical Trainee Nouf Alrashid Featured in the Oakland Post!",
+        "url": "https://traumapartners.org/the-oakland-post-features-ptr-clinical-trainee-nouf-alrashid/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006472",
+    "notes": "Identity is confirmed: Berkeley 501(c)(3) (ProPublica, EIN 47-3948973), and its own site says PTR works at Oakland International High School; phone, email and website are confirmed on the contact page. But the summary claims it trains graduate students in psychology and social work, and the cited pages do not show that. The Oakland Post page only calls someone a 'Clinical Trainee' with no discipline, and the home and about pages say nothing of the kind. The summary also says 'forced displacement', which the pages show only as 'displacement'. A regenerated summary limited to what the home page supports could be published.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

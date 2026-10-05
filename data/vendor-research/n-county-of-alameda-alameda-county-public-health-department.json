@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/public-health-department/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://localnewsmatters.org/2026/08/05/alameda-county-back-to-school-vaccination-clinic/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-county-of-alameda-alameda-county-public-health-department",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the County of Alameda's Public Health Department page on the county Health Agency website (health.alamedacountyca.gov)",
+      "A 2026 Local News Matters article reports the Alameda County Public Health Department holding vaccination clinics at the Oakland Unified School District Student Welcome Center, matching the agenda item about administering COVID-19 vaccines on District facilities",
+      "Department's work on disease prevention and immunization matches OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "n-county-of-alameda-alameda-county-public-health-department",
+    "notes": "County public agency, so no EIN, CA SOS entity number or SAM UEI. The page also lists a public information office email (ACHealth-PIO@acgov.org); omitted because it is a press inbox rather than a general contact address. Old acphd.org domain redirects to the county Health Agency site.",
+    "profile": {
+      "address": "1000 San Leandro Blvd., Suite 300, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 618-3452",
+      "samUei": null,
+      "summary": "The Alameda County Public Health Department is the county government agency responsible for community and population health. It works to prevent disease, monitor the health of residents, run outreach and health promotion, and address causes of health inequity. Its services include immunization programs.",
+      "website": "https://health.alamedacountyca.gov/department/public-health-department/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Public Health Department",
+        "url": "https://health.alamedacountyca.gov/department/public-health-department/"
+      },
+      {
+        "supports": [],
+        "title": "Alameda County holds free vaccination clinic for students, school staff Wednesday",
+        "url": "https://localnewsmatters.org/2026/08/05/alameda-county-back-to-school-vaccination-clinic/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-county-of-alameda-alameda-county-public-health-department",
+    "notes": "The county Public Health Department page confirms the summary, website, phone and address, and the agenda item (COVID-19 vaccine administration on District facilities) matches the department's vaccination clinics at the OUSD Student Welcome Center. The summary is neutral and the press email was rightly omitted.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

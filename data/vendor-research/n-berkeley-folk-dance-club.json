@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942931871",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://berkeleyfolkdancers.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-berkeley-folk-dance-club",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name is similar but not identical: agenda says 'Berkeley Folk Dance Club'; registered nonprofit is 'Berkeley Folk Dancers' (ProPublica, EIN 94-2931871), which describes itself as America's largest folk dance club",
+      "Folk dance subject matter is plausible for a no-cost community partnership MOU, but no page found links this organization to OUSD or Oakland schools",
+      "CONTRADICTION: agenda gives Cupertino, CA; the candidate is based in Berkeley, CA"
+    ],
+    "key": "n-berkeley-folk-dance-club",
+    "notes": "Not confirmed. Agenda name 'Berkeley Folk Dance Club' with location Cupertino, CA does not match the Berkeley-based 'Berkeley Folk Dancers', and nothing found ties it to OUSD. Could be a different or informal group, or a mailing address in Cupertino. Do not publish without a human check of the MOU attachment.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-2931871",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Berkeley Folk Dancers",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit folk dance club in Berkeley, California, that holds international folk dance sessions several times a week for people of all ages and abilities. It describes itself as America's largest folk dance club.",
+      "website": "https://berkeleyfolkdancers.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Berkeley Folk Dancers - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942931871"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About - Berkeley Folk Dancers",
+        "url": "https://berkeleyfolkdancers.org/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

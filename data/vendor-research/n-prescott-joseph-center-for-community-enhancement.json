@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943248535",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bapd.org/gprcc-1.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://localwiki.org/oakland/Prescott-Joseph_Center",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-prescott-joseph-center-for-community-enhancement",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'Prescott-Joseph Center For Community Enhancement Inc', EIN 94-3248535 (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA (920 Peralta Street, West Oakland), matching the agenda text",
+      "Runs health and family-support programs (Northern California Breathmobile, immunization clinic, food pantry, preschool, youth mentoring), consistent with OUSD's 'Student health, support & family services' contract via the Health Services Department"
+    ],
+    "key": "n-prescott-joseph-center-for-community-enhancement",
+    "notes": "Official website prescottjoseph.org currently shows 'Account Suspended', so website and general email (info@prescottjoseph.org, seen only on a third-party listing) were omitted. Two different phone numbers appear on third-party listings ((510) 835-8683 and 510.208.5651), so phone omitted. ProPublica notes the org is not on the IRS's most recent list of exempt organizations (latest filing FY2021); status should be rechecked. No CA SOS or SAM.gov record checked.",
+    "profile": {
+      "address": "920 Peralta Street, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-3248535",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Prescott-Joseph Center for Community Enhancement, Inc.",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit community resource center in the Prescott neighborhood of West Oakland, organized in 1995 in a former convent. It offers family support, health and wellness, youth development and community programs, including a food pantry, a preschool, a youth mentoring and computer learning program, and a mobile health program called the Northern California Breathmobile Project. Staff serve people in English and Spanish.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Prescott-Joseph Center For Community Enhancement Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943248535"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "address",
+          "headquarters"
+        ],
+        "title": "Prescott-Joseph Center for Community Enhancement, Inc.",
+        "url": "https://bapd.org/gprcc-1.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "address",
+          "orgType"
+        ],
+        "title": "Prescott-Joseph Center - Oakland - LocalWiki",
+        "url": "https://localwiki.org/oakland/Prescott-Joseph_Center"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-prescott-joseph-center-for-community-enhancement",
+    "notes": "Name, Oakland location, 501(c)(3) status and EIN match ProPublica; bapd.org and LocalWiki confirm the 920 Peralta St address, 1995 founding in a former convent, the Breathmobile, food pantry, pre-preschool and youth mentoring programs, and English/Spanish service. The Breathmobile fits a no-cost Health Services agreement; the summary is neutral and contact fields are appropriately omitted (the IRS exempt-list gap is noted by the researcher).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

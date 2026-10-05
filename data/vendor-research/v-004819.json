@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/452382705",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://brl-inc.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://brl-inc.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opengovus.com/sam-entity/WKJDQGC3CEA8",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004819",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Beats Rhymes And Life' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 45-2382705), matching the agenda's Oakland, CA location",
+      "Organization's website describes Hip Hop Therapy mental-health services for youth, matching OUSD's 'Student health, support & family services' contract category",
+      "Organization's website lists a headquarters at 450 Santa Clara Avenue, Oakland, CA 94610, the same address in the federal SAM.gov registration for Beats Rhymes and Life, Inc."
+    ],
+    "key": "v-004819",
+    "notes": "Phone omitted: the contact page shows a number that looks malformed, so it was not used. California SOS entity number not found. UEI taken from a SAM.gov mirror (opengovus.com). Website did not mention OUSD directly.",
+    "profile": {
+      "address": "450 Santa Clara Avenue, Oakland, CA 94610",
+      "caEntityNumber": null,
+      "ein": "45-2382705",
+      "email": "info@brl-inc.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Beats Rhymes And Life",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": "WKJDQGC3CEA8",
+      "summary": "A nonprofit based in Oakland, California, that uses rap music creation and hip-hop culture as a form of therapy to connect young people to mental health services. It serves youth and young adults of color and other marginalized young people, including those in foster care or the juvenile justice system. It also runs the BRL Academy and trains service providers.",
+      "website": "https://brl-inc.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Beats Rhymes And Life - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/452382705"
+      },
+      {
+        "supports": [
+          "website",
+          "email",
+          "address",
+          "summary"
+        ],
+        "title": "Beats Rhymes and Life, Inc.",
+        "url": "https://brl-inc.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About Us - Beats Rhymes and Life",
+        "url": "https://brl-inc.org/about-us/"
+      },
+      {
+        "supports": [
+          "samUei"
+        ],
+        "title": "Beats Rhymes & Life Inc - SAM entity",
+        "url": "https://opengovus.com/sam-entity/WKJDQGC3CEA8"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-004819",
+    "notes": "Oakland 501(c)(3) Hip Hop Therapy nonprofit (EIN 45-2382705, 450 Santa Clara Ave) matches the agenda's Oakland location and the student health/support services contract, and its About page notes programs in public schools. Name, EIN, address, email, UEI and summary claims (including foster care/juvenile justice, BRL Academy, provider training) were each confirmed in the cited sources, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://lavaheightsacademy.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lavaheightsacademy.com/about-lava-heights-academy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://npino.com/drug-rehab/1477150910-care-youth-corporation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-care-youth-lava-heights-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Care Youth Corporation - Lava Heights Academy' in Tocquerville, UT (the town is spelled Toquerville, UT); Lava Heights Academy's own site gives 730 Spring Drive, Toquerville, UT 84774",
+      "NPI directory lists 'Care Youth Corporation' at the same address (730 Spring Drive, Toquerville, Utah 84774) and same phone number (435-635-0300) that Lava Heights Academy's website shows",
+      "Lava Heights Academy is a residential treatment center for teens with an on-site school, consistent with OUSD's nonpublic school special education master contract",
+      "Search results show Lava Heights Academy listed in the California Department of Education certified nonpublic school directory at 730 Spring Dr, Toquerville, UT (page itself blocked bot access, not cited)"
+    ],
+    "key": "n-care-youth-lava-heights-academy",
+    "notes": "Link between the legal entity 'Care Youth Corporation' and the Lava Heights Academy brand rests on the agenda text plus matching address and phone in a third-party NPI directory; no registry (Utah business registry, IRS, SAM.gov) was checked, so EIN, entity number and UEI are null and organization type is left null. Rite of Passage / Sequel Youth Services affiliations were not verified beyond the school's own site. The directory notes other Care Youth Corporation affiliates, so this entity may be a multi-site operator.",
+    "profile": {
+      "address": "730 Spring Drive, Toquerville, UT 84774",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Toquerville, UT",
+      "legalName": "Care Youth Corporation",
+      "orgType": null,
+      "phone": "(435) 635-0300",
+      "samUei": null,
+      "summary": "Lava Heights Academy is a residential treatment center in Toquerville, Utah for girls ages 12 to 17 who face mental health and behavioral challenges. It combines clinical services and academics with arts-based therapy in music, drama, visual art and dance and movement. It is licensed by the state of Utah and is a Rite of Passage program.",
+      "website": "https://lavaheightsacademy.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Home - Lava Heights Academy",
+        "url": "https://lavaheightsacademy.com/"
+      },
+      {
+        "supports": [
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "About Lava Heights Academy - Lava Heights Academy",
+        "url": "https://lavaheightsacademy.com/about-lava-heights-academy/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Care Youth Corporation in Toquerville, Utah",
+        "url": "https://npino.com/drug-rehab/1477150910-care-youth-corporation/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-care-youth-lava-heights-academy",
+    "notes": "The agenda's Care Youth Corporation - Lava Heights Academy matches the Toquerville, UT residential treatment center at 730 Spring Drive, with the same address and phone appearing on the school's site and under Care Youth Corporation in the NPI directory (that page does not name Lava Heights, so the link rests on those matches plus the agenda wording). The summary is supported by the school's site and is neutral. Headquarters is listed as unsupported because the NPI page shows a Minden, NV mailing address, so Toquerville is the facility location and not a confirmed corporate headquarters.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

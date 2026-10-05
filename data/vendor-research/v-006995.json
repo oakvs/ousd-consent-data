@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/oakland/studio-pathways-llc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.studiopathways.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.alignable.com/oakland-ca/studio-pathways-2",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006995",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered California LLC 'Studio Pathways LLC' located in Oakland, CA, matching the agenda location (bizprofile.net filing listing)",
+      "Website describes arts-based professional development for teachers and school leaders, matching OUSD's 'Classroom & academic programs' contract category",
+      "Studio Pathways website (what-we-do page) mentions co-directing a grant with Oakland Unified School District, a public tie to OUSD"
+    ],
+    "key": "v-006995",
+    "notes": "Entity number comes from a third-party mirror of CA Secretary of State data, not bizfile directly. Principal address on that listing looks like it may be a residence, so it was deliberately not published. No public phone or general email found on the website (contact is a form).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "201914810200",
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Studio Pathways LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Studio Pathways is an Oakland-based education consulting company. It offers professional development for teachers and school leaders on culturally responsive teaching through the arts, including workshops, frameworks and coaching.",
+      "website": "https://www.studiopathways.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Studio Pathways LLC Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/studio-pathways-llc"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Studio Pathways",
+        "url": "https://www.studiopathways.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Studio Pathways - Oakland, CA - Alignable",
+        "url": "https://www.alignable.com/oakland-ca/studio-pathways-2"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006995",
+    "notes": "Identity is plausible: Studio Pathways LLC (CA entity 201914810200, Oakland, educational consultant) is an arts-integrated teacher PD firm whose founders ran an OUSD-linked arts grant. But the summary claims PD for 'school leaders' and 'frameworks and coaching', and the cited homepage mentions only educators, workshops and resources (no school leaders, no coaching service). The cited what-we-do page 404s, and the Alignable source could not be fetched (429), so the summary cannot be fully confirmed.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943054165",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seedscrc.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.seedscrc.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-seeds-services-that-encourage-effective-dialogue-and-solutions",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda's full name 'Services that Encourage Effective Dialogue and Solutions' is the name SEEDS uses on its own website (seedscrc.org)",
+      "SEEDS Community Resolution Center is a registered 501(c)(3) nonprofit in the East Bay (ProPublica lists Oakland, CA; EIN 94-3054165)",
+      "Its mediation, facilitation and restorative justice services for schools and organizations fit a Board of Education professional services agreement paid from board member discretionary accounts for governance work"
+    ],
+    "key": "n-seeds-services-that-encourage-effective-dialogue-and-solutions",
+    "notes": "ProPublica lists the org in Oakland, CA, while the website gives a Berkeley PO box and says it is not open for in-person services, so headquarters is left null. Neither SEEDS page mentions OUSD; the match rests on the exact name, the East Bay nonprofit registration and the services fit. California SOS entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "PO Box 5336, Berkeley, CA 94705",
+      "caEntityNumber": null,
+      "ein": "94-3054165",
+      "email": "info@seedscrc.org",
+      "headquarters": null,
+      "legalName": "Seeds Community Resolution Center",
+      "orgType": "nonprofit",
+      "phone": "510-548-2377",
+      "samUei": null,
+      "summary": "A nonprofit based in the East Bay of the San Francisco Bay Area that offers community mediation, conflict resolution training and restorative justice services. It trains people in mediation and provides restorative justice programs for schools, workplaces and community groups.",
+      "website": "https://www.seedscrc.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Seeds Community Resolution Center - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943054165"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "SEEDS Community Resolution Center - Contact",
+        "url": "https://www.seedscrc.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "SEEDS Community Resolution Center",
+        "url": "https://www.seedscrc.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-seeds-services-that-encourage-effective-dialogue-and-solutions",
+    "notes": "SEEDS is the documented expansion of the acronym for SEEDS Community Resolution Center (a 501(c)(3), EIN 94-3054165, Bay Area, serves schools), which fits a Board of Education mediation/facilitation agreement; the summary, EIN, legal name, website, email and PO Box address are supported. The seedscrc.org contact page lists 510-548-7377, not the candidate's 510-548-2377 (which appears only in third-party listings), so phone is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "phone"
+    ],
+    "verdict": "confirmed"
+  }
+}

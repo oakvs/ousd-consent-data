@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941358307",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.hnu.edu",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Holy_Names_University",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-holy-names-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: Holy Names University, a private Catholic university in Oakland, CA, matching the agenda's 'Holy Names University' and 'Oakland, CA' (hnu.edu, Wikipedia)",
+      "The IRS-registered nonprofit for the university (EIN 94-1358307, Oakland, CA) is listed on ProPublica as 'Legacy Funds Of Holy Names University' and on other directories under the former name Holy Names University",
+      "An intern partnership and teacher practica MOU for K-12 teaching is consistent with a university that ran teacher-education programs (the university closed in May 2023, so the MOU predates that)"
+    ],
+    "key": "n-holy-names-university",
+    "notes": "The university closed in May 2023; the nonprofit entity now appears as Legacy Funds Of Holy Names University (same EIN). The mailing address is a post-closure mailbox. Medium confidence because the IRS legal name differs from the agenda name and the link between the ProPublica entity and the former university rests on directory listings; the OUSD MOU is presumably pre-closure. Reviewer should verify before publishing.",
+    "profile": {
+      "address": "2648 International Blvd, Ste 301 #164, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "94-1358307",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Legacy Funds Of Holy Names University",
+      "orgType": "nonprofit",
+      "phone": "(510) 436-1000",
+      "samUei": null,
+      "summary": "Holy Names University was a private Catholic university in Oakland, California, founded in 1868 by the Sisters of the Holy Names of Jesus and Mary. It closed after the spring 2023 semester. Its legacy website remains online for former students and alumni, with records and scholarship information.",
+      "website": "https://www.hnu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Legacy Funds Of Holy Names University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941358307"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address"
+        ],
+        "title": "Holy Names University",
+        "url": "https://www.hnu.edu"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Holy Names University - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Holy_Names_University"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

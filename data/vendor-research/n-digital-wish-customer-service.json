@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/261119413",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.digitalwish.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.digitalwish.com/dw/digitalwish/contact_us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-digital-wish-customer-service",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Digital Wish Inc' (ProPublica Nonprofit Explorer, EIN 26-1119413, Milton, DE)",
+      "Digital Wish's website describes a 501(c)(3) that grants and donates classroom technology to schools and teachers, consistent with the agenda title 'Grant - Digital Wish Customer Service' and the 'Technology' category",
+      "The organization runs a 'Customer Service' line, matching the agenda name 'Digital Wish Customer Service'",
+      "No location is given in the agenda text and no page found links Digital Wish to Oakland Unified, so the match rests on name and purpose only"
+    ],
+    "key": "n-digital-wish-customer-service",
+    "notes": "Confidence medium: the agenda gives no city and nothing found ties Digital Wish to OUSD directly; match is by unique name and by purpose (technology grants). The organization's email addresses are obfuscated on its pages, so email is left null. Reviewer should check the OUSD attachment to confirm Digital Wish is the grantor.",
+    "profile": {
+      "address": "PO Box 255, Milton, DE 19968",
+      "caEntityNumber": null,
+      "ein": "26-1119413",
+      "email": null,
+      "headquarters": "Milton, DE",
+      "legalName": "Digital Wish Inc",
+      "orgType": "nonprofit",
+      "phone": "(302) 550-3510",
+      "samUei": null,
+      "summary": "Digital Wish is a nonprofit organization that helps teachers and schools get technology for classrooms. It facilitates donations and grants of computers, devices and software, and runs fundraising and online-store services for educators.",
+      "website": "https://www.digitalwish.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Digital Wish Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/261119413"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Digital Wish",
+        "url": "https://www.digitalwish.com/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Digital Wish - Contact Us",
+        "url": "https://www.digitalwish.com/dw/digitalwish/contact_us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

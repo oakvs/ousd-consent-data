@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.salesforce.com/company/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.salesforce.com/company/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.salesforce.com/news/stories/salesforce-celebrates-9-years-supporting-public-education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-salesforce",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Salesforce headquarters is Salesforce Tower in San Francisco, CA, matching the agenda location 'San Francisco, CA'",
+      "Salesforce's own news page states it gave grants to Oakland Unified School District as part of its public education giving",
+      "Salesforce's Pro Bono program (Salesforce.org) built an asset tracking app for OUSD, matching the agenda's 'Pro Bono Professional Services Agreement (Education)' and technology/data-sharing contracts"
+    ],
+    "key": "n-salesforce",
+    "notes": "Legal name, registry IDs and general email not confirmed on a fetched page, so left null. Phone is as shown on the locations page.",
+    "profile": {
+      "address": "415 Mission Street, 3rd Floor, San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-800-664-9073",
+      "samUei": null,
+      "summary": "Salesforce is a technology company that sells cloud-based customer relationship management (CRM) software and related tools for sales, service, marketing, commerce, data and analytics, including artificial intelligence features. It is headquartered in San Francisco, California.",
+      "website": "https://www.salesforce.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Salesforce Locations",
+        "url": "https://www.salesforce.com/company/locations/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Salesforce",
+        "url": "https://www.salesforce.com/company/about-us/"
+      },
+      {
+        "supports": [],
+        "title": "Salesforce Celebrates Continued Commitment to Education",
+        "url": "https://www.salesforce.com/news/stories/salesforce-celebrates-9-years-supporting-public-education/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-salesforce",
+    "notes": "Salesforce, Inc. in San Francisco matches the agenda; the cited news page names OUSD as a Salesforce grant recipient and mentions Education Cloud. The locations page confirms the address, phone and HQ. The summary's product categories are supported by Salesforce's own product pages, though the cited about page alone does not list them all.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

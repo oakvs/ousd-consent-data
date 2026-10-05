@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941358309",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ebac.org/contact_us.asp",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ebac.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://probation.acgov.org/juvenile-services/resource-connection-network.page",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-east-bay-agency-for-children-delinquency-prevention-network",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) nonprofit 'East Bay Agency For Children' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 94-1358309)",
+      "Located in Oakland, CA (2828 Ford Street), matching the agenda location",
+      "Website describes school-based behavioral health, after-school and family resource services in Alameda County, matching OUSD's 'Student health, support & family services' category",
+      "Alameda County Probation Department's Resource Connection Network (juvenile delinquency prevention) page lists East Bay Agency for Children at 2828 Ford Street in Oakland, consistent with a 'Delinquency Prevention Network' program"
+    ],
+    "key": "n-east-bay-agency-for-children-delinquency-prevention-network",
+    "notes": "The agenda names a program ('Delinquency Prevention Network') of the organization; the ebac.org pages fetched do not name that program directly, but Alameda County Probation lists EBAC in its juvenile prevention network. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "2828 Ford Street, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "94-1358309",
+      "email": "info@ebac.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "East Bay Agency For Children",
+      "orgType": "nonprofit",
+      "phone": "510-268-3770",
+      "samUei": null,
+      "summary": "East Bay Agency for Children is an Oakland nonprofit that serves children, youth and families affected by trauma in Alameda County. Its programs include family resource centers, school-based behavioral health services, after-school programs and youth empowerment programs.",
+      "website": "https://www.ebac.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "East Bay Agency For Children - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941358309"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "EBAC - Contact Us",
+        "url": "https://www.ebac.org/contact_us.asp"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "East Bay Agency for Children",
+        "url": "https://www.ebac.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Juvenile Services - Resource Connection Network",
+        "url": "https://probation.acgov.org/juvenile-services/resource-connection-network.page"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-east-bay-agency-for-children-delinquency-prevention-network",
+    "notes": "ProPublica, ebac.org and the Alameda County Probation Resource Connection Network page all confirm East Bay Agency For Children (EIN 94-1358309, 2828 Ford St, Oakland) as a 501(c)(3) running the listed programs, and the County page lists it as a youth prevention-network member, consistent with the agenda's 'Delinquency Prevention Network' MOU. Contact fields match the contact page (general info email only), and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

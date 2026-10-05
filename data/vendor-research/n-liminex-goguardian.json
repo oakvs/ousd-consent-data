@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.goguardian.com/policies/privacy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.goguardian.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/GoGuardian",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-liminex-goguardian",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "GoGuardian's privacy policy names the legal entity as 'Liminex, Inc. (doing business as GoGuardian and Pear Deck Learning)', matching the agenda's 'Liminex, Inc. dba GoGuardian'",
+      "Wikipedia gives GoGuardian's headquarters as El Segundo, California, matching the agenda location El Segundo, CA",
+      "GoGuardian sells K-12 student safety, web filtering and classroom management software, consistent with a Technology Services Department California Student Data Privacy Agreement"
+    ],
+    "key": "n-liminex-goguardian",
+    "notes": "The mailing address in the privacy policy is in West Hollywood, while the headquarters is El Segundo (per Wikipedia and other directories, 2030 E Maple Ave, Suite 100). The phone and email are privacy-policy contacts, not a general sales line. Registry IDs (EIN, CA entity number, UEI) were not verified.",
+    "profile": {
+      "address": "8605 Santa Monica Blvd., #996559, West Hollywood, CA, 90069-4109",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "privacy@goguardian.com",
+      "headquarters": "El Segundo, CA",
+      "legalName": "Liminex, Inc.",
+      "orgType": "company",
+      "phone": "1-888-310-0410",
+      "samUei": null,
+      "summary": "GoGuardian is an education technology company that sells digital safety and classroom management software to K-12 schools and districts. Its products include web filtering, classroom management tools, student safety monitoring and hall pass management. It operates under the legal name Liminex, Inc.",
+      "website": "https://www.goguardian.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "GoGuardian Privacy Policy",
+        "url": "https://www.goguardian.com/policies/privacy"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "GoGuardian",
+        "url": "https://www.goguardian.com/"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "GoGuardian - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/GoGuardian"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-liminex-goguardian",
+    "notes": "The GoGuardian privacy policy names Liminex, Inc. as the legal entity dba GoGuardian, and Wikipedia places it in El Segundo, CA, matching the agenda. Legal name, phone, role email, mailing address, product summary and headquarters are all confirmed by the cited pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

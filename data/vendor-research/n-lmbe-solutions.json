@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.city-data.com/business-entities/CA/LMBE-SOLUTIONS-LLC-200216410108-CA.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lmbesolutions.com/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lmbesolutions.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-lmbe-solutions",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California LLC registered as 'LMBE SOLUTIONS, LLC' (entity 200216410108, active), principal place of business in Oakland, CA, matching the agenda's 'LMBe Solutions, LLC' and 'Oakland, CA'",
+      "Company website (lmbesolutions.com) describes technology training and web/education tools for schools, nonprofits and small businesses, and a platform teaching kids internet safety and website building, consistent with OUSD's 'Classroom & academic programs' category",
+      "Founder is described on the About page as a long-time K-12 coding instructor, consistent with a school-district partnership agreement"
+    ],
+    "key": "n-lmbe-solutions",
+    "notes": "No page found that explicitly mentions OUSD; identity rests on exact name, Oakland location and education-focused services. Entity number and address come from a third-party mirror of Secretary of State data (city-data.com), last statement of information June 2020. A phone number appeared in search snippets but was not found on a fetched page, so it is omitted.",
+    "profile": {
+      "address": "1007 Arlington Avenue, Oakland, CA 94608",
+      "caEntityNumber": "200216410108",
+      "ein": null,
+      "email": "LMBeSolutions2@lmbesolutions.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "LMBE SOLUTIONS, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "An Oakland, California technology company that helps small businesses, nonprofits and schools with technology planning, website development and training. It also offers a platform that teaches kids internet safety and how to build their own website.",
+      "website": "https://lmbesolutions.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "200216410108 - LMBE SOLUTIONS, LLC",
+        "url": "https://www.city-data.com/business-entities/CA/LMBE-SOLUTIONS-LLC-200216410108-CA.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "website"
+        ],
+        "title": "LMBe Solutions - About-Technology Made Simple",
+        "url": "https://lmbesolutions.com/about.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "orgType"
+        ],
+        "title": "LMBe Solutions",
+        "url": "https://lmbesolutions.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-lmbe-solutions",
+    "notes": "Exact name and Oakland location match the California LLC record (active, entity 200216410108), and the company site describes technology services and training for schools, nonprofits and small businesses, including a kids internet-safety platform, which supports the neutral summary. The email appears only inside an Outlook booking link, not as a displayed contact address, so it is not confirmed; no page explicitly mentions OUSD.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "email"
+    ],
+    "verdict": "confirmed"
+  }
+}

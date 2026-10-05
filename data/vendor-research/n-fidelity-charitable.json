@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.fidelitycharitable.org/about-us.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/110303001",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fidelitycharitable.org/faqs/all/form-processing-address.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-fidelity-charitable",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) public charity: 'Fidelity Investments Charitable Gift Fund' (ProPublica, EIN 11-0303001), which operates as Fidelity Charitable",
+      "Agenda location Cincinnati, OH matches Fidelity Charitable's general mailing address (PO Box 770001, Cincinnati, OH 45277-0001) on its own site",
+      "Fidelity Charitable is a donor-advised fund that makes grants to charities, consistent with OUSD listing it as a grant funder (Fidelity Charitable is the funding source named in the agenda)"
+    ],
+    "key": "n-fidelity-charitable",
+    "notes": "Agenda gives Cincinnati, OH, which is the mailing address for Fidelity Charitable; ProPublica lists the nonprofit's city as Boston, MA (headquarters). The address given is a PO Box mailing address. I did not find a page directly linking Fidelity Charitable to OUSD or Laurel Elementary; the match rests on name, the Cincinnati address and the funder role.",
+    "profile": {
+      "address": "PO Box 770001, Cincinnati, OH 45277-0001",
+      "caEntityNumber": null,
+      "ein": "11-0303001",
+      "email": null,
+      "headquarters": "Boston, MA",
+      "legalName": "Fidelity Investments Charitable Gift Fund",
+      "orgType": "nonprofit",
+      "phone": "800-262-6039",
+      "samUei": null,
+      "summary": "Fidelity Charitable is a nonprofit public charity that runs donor-advised funds, which it calls Giving Accounts. Donors put money into an account and then recommend grants from it to other charities. Its stated mission is to grow the American tradition of philanthropy by making charitable giving accessible, simple, and effective.",
+      "website": "https://www.fidelitycharitable.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone"
+        ],
+        "title": "About Fidelity Charitable",
+        "url": "https://www.fidelitycharitable.org/about-us.html"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Fidelity Investments Charitable Gift Fund - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/110303001"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Where should I send my forms to be processed?",
+        "url": "https://www.fidelitycharitable.org/faqs/all/form-processing-address.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-fidelity-charitable",
+    "notes": "Fidelity Charitable (Fidelity Investments Charitable Gift Fund, EIN 11-0303001) is a donor-advised fund grantmaker, and the Cincinnati PO Box matches the agenda location and the grant-funder role. Summary, phone, address, legal name, EIN and headquarters (Boston per ProPublica) are all confirmed by the cited pages; no direct source ties it to OUSD, but name, location and role fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

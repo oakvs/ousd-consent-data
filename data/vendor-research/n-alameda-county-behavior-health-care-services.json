@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/contact-us-bh/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/behavioral-health-department/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-behavior-health-care-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches Alameda County Behavioral Health Care Services (ACBHCS), the county public agency; agenda text spells it 'Behavior Health' (apparent typo)",
+      "Headquartered in Oakland, CA, matching the agenda location (Oakland, CA)",
+      "Agenda funding source is 'Alameda County', consistent with a county agency",
+      "County behavioral health department runs School Based Behavioral Health Services for children and young adults, consistent with an OUSD Special Education mental health contract"
+    ],
+    "key": "n-alameda-county-behavior-health-care-services",
+    "notes": "County agency, so no EIN or California Secretary of State entity number. The department overview page lists a different address (San Leandro) than the Behavioral Health contact page (Oakland); the Oakland address from the contact page was used. Agenda spelling 'Behavior Health' appears to be a typo.",
+    "profile": {
+      "address": "2000 Embarcadero Cove, Suite 400, Oakland, California 94606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "ACBHInformationOffice@acgov.org",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 567-8100",
+      "samUei": null,
+      "summary": "A department of Alameda County government that provides mental health and substance use services for people with Medi-Cal and for people without insurance. It also runs School Based Behavioral Health Services, which offer mental health support in school settings for children and young adults ages 0 to 24.",
+      "website": "https://health.alamedacountyca.gov/department/behavioral-health-department/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Behavioral Health",
+        "url": "https://health.alamedacountyca.gov/contact-us-bh/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Behavioral Health Department",
+        "url": "https://health.alamedacountyca.gov/department/behavioral-health-department/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-alameda-county-behavior-health-care-services",
+    "notes": "The agenda's 'Behavior Health Care Services' is a typo for Alameda County Behavioral Health Care Services, a county agency in Oakland funded by 'Alameda County', and the summary, phone and address match the cited pages. The email shown (ACBHInformationOffice@acgov.org) is listed on the contact page only for media inquiries, not as a general business contact, so it is dropped.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "email"
+    ],
+    "verdict": "confirmed"
+  }
+}

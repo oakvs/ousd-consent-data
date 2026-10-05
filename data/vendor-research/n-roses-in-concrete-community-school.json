@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/465649314",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/46-5649314",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ed-data.org/school/Alameda/Oakland-Unified/Roses-in-Concrete",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-roses-in-concrete-community-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Roses In Concrete' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 46-5649314, NTEE B29 elementary/secondary education)",
+      "Located in Oakland, CA, matching the agenda text (GuideStar lists 4551 Steele St, Oakland)",
+      "EdData lists 'Roses in Concrete' as a K-8 charter school in Oakland Unified School District (2015-2020)",
+      "Search results (not independently fetched) say the school merged with Howard Elementary in 2020 to form Oakland Academy of Knowledge, which would match the agenda's 'Howard Elementary School' reference; this could not be confirmed on a fetched page"
+    ],
+    "key": "n-roses-in-concrete-community-school",
+    "notes": "Website deliberately omitted: rosesinconcrete.org (listed on GuideStar and other directories) now serves an unrelated blog (Urbanroses, Burnsville MN), so it appears to have lapsed. No verified phone or email found. School closed 2020 per EdData/CDE, so identity is probably the legacy charter nonprofit referenced in a funding commitment letter involving Howard Elementary; the merger with Howard (now Oakland Academy of Knowledge) was seen only in search snippets. CA SOS and SAM.gov not checked. Reviewer should confirm before publishing.",
+    "profile": {
+      "address": "4551 Steele St, Oakland, CA 94619-2743",
+      "caEntityNumber": null,
+      "ein": "46-5649314",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Roses In Concrete",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that ran Roses in Concrete Community School, a K-8 charter school in East Oakland, California, from 2015 to 2020. The school was authorized by Oakland Unified School District. Public records show the school as closed as of June 30, 2020.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Roses In Concrete - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/465649314"
+      },
+      {
+        "supports": [
+          "address",
+          "summary",
+          "headquarters"
+        ],
+        "title": "Roses in Concrete - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/46-5649314"
+      },
+      {
+        "supports": [
+          "summary",
+          "address"
+        ],
+        "title": "EdData - School Profile - Roses in Concrete",
+        "url": "https://ed-data.org/school/Alameda/Oakland-Unified/Roses-in-Concrete"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

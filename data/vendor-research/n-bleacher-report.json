@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://bleacherreport.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Bleacher_Report",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-bleacher-report",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches: Bleacher Report, Inc. is the legal name shown on bleacherreport.com (footer: 'Bleacher Report, Inc. A Warner Bros. Discovery Company')",
+      "Weak/unconfirmed: a national sports media company plausibly requests access to a high school football field for filming, but no public page links Bleacher Report to McClymonds High School or OUSD",
+      "Contradicting/unclear: public sources place headquarters in San Francisco (offices in New York and London), while the agenda gives Culver City, CA; no source found tying Bleacher Report, Inc. to Culver City"
+    ],
+    "key": "n-bleacher-report",
+    "notes": "Could not confirm that the Culver City, CA 'Bleacher Report, Inc.' in the agenda is the same entity as the San Francisco-based sports media company. California Secretary of State entry not retrieved (bizfile not searchable by this tool). Do not publish without manual verification.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": "Bleacher Report, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Bleacher Report is a sports media company that publishes news, analysis and video about professional, college and other sports. It is a subsidiary of TNT Sports Interactive, part of Warner Bros. Discovery.",
+      "website": "https://bleacherreport.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "orgType"
+        ],
+        "title": "Bleacher Report",
+        "url": "https://bleacherreport.com/about"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Bleacher Report - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bleacher_Report"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

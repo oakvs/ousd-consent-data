@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/452981640",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.upwardroots.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-upward-roots",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Upward Roots Inc' based in Oakland, CA (ProPublica Nonprofit Explorer, EIN 45-2981640), matching the agenda's 'Upward Roots, Inc.', Oakland, CA",
+      "Website describes youth leadership and community service programs for Oakland youth, consistent with OUSD's 'After-school & summer programs' category",
+      "Website states it partners with Oakland Unified School District schools (Korematsu Discovery Academy)"
+    ],
+    "key": "n-upward-roots",
+    "notes": "Third-party directories list a different address (270 Grand Ave); the organization's own site was used for contact details.",
+    "profile": {
+      "address": "2744 East 11th Street Suite H, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "45-2981640",
+      "email": "upwardroots@upwardroots.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Upward Roots Inc",
+      "orgType": "nonprofit",
+      "phone": "510-488-4490",
+      "samUei": null,
+      "summary": "Upward Roots is an Oakland nonprofit that helps young people become leaders through youth-led community service. Youth identify issues in their community, design service projects, and build skills such as empathy, critical thinking, communication, and teamwork.",
+      "website": "https://www.upwardroots.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Upward Roots Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/452981640"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Upward Roots",
+        "url": "https://www.upwardroots.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-upward-roots",
+    "notes": "ProPublica confirms Upward Roots Inc, Oakland CA, 501(c)(3) youth development, EIN 45-2981640; the organization's site confirms OUSD afterschool partnerships and the listed business phone, email and address. Summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

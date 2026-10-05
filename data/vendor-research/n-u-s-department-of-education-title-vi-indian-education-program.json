@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.usa.gov/agencies/u-s-department-of-education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://easie.communities.ed.gov/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-u-s-department-of-education-title-vi-indian-education-program",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'U.S. Department of Education, Title VI Indian Education Program' with location Washington, D.C.; USA.gov lists the U.S. Department of Education at 400 Maryland Ave., SW, Washington, DC 20202",
+      "The Department's Office of Indian Education runs the Title VI Indian Education formula grants, which go to local educational agencies such as school districts (EASIE Communities site), matching OUSD's 'Grant Award - Title VI, Indian Education' title"
+    ],
+    "key": "n-u-s-department-of-education-title-vi-indian-education-program",
+    "notes": "Federal public agency; ed.gov blocks automated fetching so contact details come from USA.gov. Program is Title VI Indian Education formula grants run by the Office of Indian Education.",
+    "profile": {
+      "address": "400 Maryland Ave., SW Washington, DC 20202",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "U.S. Department of Education",
+      "orgType": "public_agency",
+      "phone": "1-800-872-5327",
+      "samUei": null,
+      "summary": "The U.S. Department of Education is the federal agency that works to promote educational excellence and equal access to educational opportunity. Its Office of Indian Education runs Title VI Indian Education formula grants, which help school districts, Indian Tribes and other eligible groups run programs for American Indian and Alaska Native students.",
+      "website": "https://www.ed.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "U.S. Department of Education (ED) | USAGov",
+        "url": "https://www.usa.gov/agencies/u-s-department-of-education"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "OIE Formula Grant Program EASIE Communities",
+        "url": "https://easie.communities.ed.gov/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-u-s-department-of-education-title-vi-indian-education-program",
+    "notes": "OUSD's item is a federal Title VI Indian Education grant award from the U.S. Department of Education (Washington, D.C.), which matches the profiled agency. USA.gov confirms the mission, website, phone and address, and the EASIE Communities page confirms the formula grants go to LEAs, Tribes and other eligible entities; the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

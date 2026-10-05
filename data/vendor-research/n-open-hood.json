@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/264312908",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.openhood.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-open-hood",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Openhood Inc' (ProPublica Nonprofit Explorer, EIN 26-4312908), film/video category",
+      "Its own website (openhood.org) describes it as an Oakland-focused film and digital storytelling producer, matching OUSD's 'Filming Access Agreement' title and Oakland, CA in the agenda text",
+      "Its documentary Homeroom follows Oakland High School's class of 2020 and the district's school police debate, a plausible reason for a filming access agreement with OUSD"
+    ],
+    "key": "n-open-hood",
+    "notes": "ProPublica lists the IRS address as Piedmont, CA; the organization is Oakland-focused and the agenda gives Oakland. No contact details were found on openhood.org, so phone, email and address are null. Legal name left null because the registry spelling differs from the agenda.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "26-4312908",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Open'Hood is a nonprofit that produces documentary films and digital storytelling projects. Its work explores large social issues through character-driven nonfiction stories, with a focus on Oakland, California communities.",
+      "website": "https://www.openhood.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "Openhood Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/264312908"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "About - Open'Hood",
+        "url": "https://www.openhood.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-open-hood",
+    "notes": "Open'Hood (openhood.org) is an Oakland-focused documentary nonprofit, matching the Filming Access Agreement and the 501(c)(3) Openhood Inc, EIN 26-4312908 (ProPublica). The summary, orgType, website and EIN are supported; headquarters is not, since the about page only says its work centers on Oakland communities and ProPublica lists a Piedmont, CA address.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

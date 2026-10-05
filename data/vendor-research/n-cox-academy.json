@@ -1,0 +1,124 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org/schools/cox-academy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.efcps.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/202204424",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandside.org/2023/06/16/cox-academy-charter-facilities-school-board-funding/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-cox-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Cox Academy is a TK-5 charter school in East Oakland, operated by the nonprofit Education for Change Public Schools (EFC page and Oaklandside report), matching the agenda's 'Cox Academy' Prop 39 facilities agreements with OUSD's Office of Charter Schools",
+      "Oaklandside reports Cox leases its building from OUSD under a long-term lease with Education for Change, consistent with a Proposition 39 / facilities use agreement with OUSD",
+      "ProPublica Nonprofit Explorer lists a 501(c)(3) 'Education For Change' in Oakland, CA (EIN 20-2204424), matching the operator of Cox Academy"
+    ],
+    "key": "n-cox-academy",
+    "notes": "The agenda vendor 'Cox Academy' is a school; the contracting legal entity is presumably its operator, Education For Change (the profile describes that nonprofit). The phone and address are EFC's central office, shown on the EFC site, not the school campus. California Secretary of State entity number and SAM UEI were not checked/found.",
+    "profile": {
+      "address": "333 Hegenberger Rd, Suite 705, Oakland, CA 94621",
+      "caEntityNumber": null,
+      "ein": "20-2204424",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Education For Change",
+      "orgType": "nonprofit",
+      "phone": "510-568-7936",
+      "samUei": null,
+      "summary": "Education for Change (EFC) is a nonprofit that runs a network of six public charter schools in Oakland, California, from transitional kindergarten through 12th grade. Cox Academy, an elementary school (TK-5) in East Oakland, is one of its schools.",
+      "website": "https://www.efcps.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cox Academy TK-5 - Education for Change Oakland Public Schools",
+        "url": "https://www.efcps.org/schools/cox-academy"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "phone",
+          "address"
+        ],
+        "title": "Education for Change Public Schools",
+        "url": "https://www.efcps.org"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Education For Change - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/202204424"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Are politics blocking this Oakland charter school from badly needed repairs?",
+        "url": "https://oaklandside.org/2023/06/16/cox-academy-charter-facilities-school-board-funding/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-cox-academy",
+    "notes": "Cox Academy is an East Oakland TK-5 charter school operated by Education for Change (confirmed on efcps.org and Oaklandside, which says it leases its building from OUSD, consistent with Prop 39 facilities agreements with the Office of Charter Schools). EIN, name, phone, address and six-school network claims match the cited pages; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/451059457",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.learnfresh.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.learnfresh.org/programs",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-learn-fresh-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Learn Fresh Education Co' in Denver, CO (ProPublica Nonprofit Explorer, EIN 45-1059457), matching the agenda's 'Learn Fresh Education Co, Denver, CO'",
+      "Learn Fresh's own Programs page lists the 'Youth Assist Tracker Challenge', matching the OUSD grant agreement title 'Youth Assist Tracker Challenge - Brookfield Elementary School'",
+      "Website describes K-12 STEM education programs, matching OUSD's 'Classroom & academic programs' category"
+    ],
+    "key": "n-learn-fresh-education",
+    "notes": "Street address omitted: sources disagree (one registry listing shows 700 Colorado Blvd, another 3461 Ringsby Ct) and the website lists none. No phone found on the website.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "45-1059457",
+      "email": "info@learnfresh.org",
+      "headquarters": "Denver, CO",
+      "legalName": "Learn Fresh Education Co",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Learn Fresh is a nonprofit that builds STEM (science, technology, engineering and math) learning programs around students' interest in sports and entertainment. Its programs include NBA Math Hoops, MLB Players STEM League and the Youth Assist Tracker Challenge, in which schools can compete for grant funds.",
+      "website": "https://www.learnfresh.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Learn Fresh Education Co - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/451059457"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "Learn Fresh - About",
+        "url": "https://www.learnfresh.org/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Learn Fresh - Programs",
+        "url": "https://www.learnfresh.org/programs"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-learn-fresh-education",
+    "notes": "ProPublica confirms Learn Fresh Education Co, Denver CO, EIN 45-1059457, 501(c)(3), matching the agenda name and location; the Learn Fresh site lists the Youth Assist Tracker Challenge (the grant program in the OUSD agreement title), NBA Math Hoops and MLB Players STEM League, and shows info@learnfresh.org. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

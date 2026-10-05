@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/205205488",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.svcf.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.svcf.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-silicon-valley-community-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Silicon Valley Community Foundation', EIN 20-5205488 (ProPublica Nonprofit Explorer)",
+      "Registered and headquartered in Mountain View, CA, matching the agenda location 'Mountain View, CA'",
+      "Organization is a community foundation that makes grants, matching the agenda item 'Grant Award - Silicon Valley Community Foundation'"
+    ],
+    "key": "n-silicon-valley-community-foundation",
+    "notes": "No mention of Oakland or OUSD found on the foundation's own pages; identity rests on exact name, Mountain View location and grantmaker type. No general inbox found (only donate@svcf.org for donors), so email left null. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "444 Castro Street, Suite 140 Mountain View, CA 94041",
+      "caEntityNumber": null,
+      "ein": "20-5205488",
+      "email": null,
+      "headquarters": "Mountain View, CA",
+      "legalName": "Silicon Valley Community Foundation",
+      "orgType": "nonprofit",
+      "phone": "650.450.5400",
+      "samUei": null,
+      "summary": "A nonprofit community foundation based in Mountain View, California. It works with donors, businesses and government leaders and makes grants. Its main focus areas include housing, early childhood development and financial stability.",
+      "website": "https://www.svcf.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Silicon Valley Community Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/205205488"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About Us - Silicon Valley Community Foundation",
+        "url": "https://www.svcf.org/about-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Silicon Valley Community Foundation",
+        "url": "https://www.svcf.org/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-silicon-valley-community-foundation",
+    "notes": "Exact name and Mountain View, CA location match the agenda; ProPublica lists a 501(c)(3) community foundation with EIN 20-5205488, and the SVCF about and contact pages support the summary, phone and address. A grant award from a community foundation fits the agenda item; no Oakland link is on SVCF's own pages, but name, city and grantmaker type all align.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

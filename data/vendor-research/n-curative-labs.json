@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Curative_(company)",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://curative.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-curative-labs",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Agenda title is a COVID-19 testing services agreement; Curative is a company that ran large-scale COVID-19 testing in California and wound down testing in 2022 (Wikipedia)",
+      "Search results indicate a separate entity named Curative Labs Inc. exists (Delaware, 2021, formerly KorvaLabs), but no registry page was fetched to confirm it, and Curative's own site names only 'Curative, Inc.'",
+      "Agenda gives no city, and Curative's current website and contact details describe its health insurance business, not the testing lab, so the exact contracting entity could not be confirmed"
+    ],
+    "key": "n-curative-labs",
+    "notes": "Not publishable. Could not confirm that the contracting entity 'Curative Labs, Inc.' (a testing-lab subsidiary) is the same as Curative, Inc., whose website now covers health insurance. Registry pages (CA SOS, SAM.gov) were not retrieved. Contact details on curative.com are health-plan member support lines, so they were not used.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Curative is a privately held company based in Austin, Texas. It began in 2020 by developing COVID-19 tests and ran large-scale COVID-19 testing and vaccination sites until it wound down testing in 2022. It now sells employer-sponsored health insurance plans.",
+      "website": "https://curative.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Curative (company) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Curative_(company)"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "About Curative",
+        "url": "https://curative.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

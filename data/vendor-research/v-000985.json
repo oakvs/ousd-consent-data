@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cast.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cast.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/222746879",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cast.org/resources/timeline-of-innovation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-000985",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'CAST, Inc.' (cast.org contact page) / 'Cast Inc' (ProPublica Nonprofit Explorer, EIN 22-2746879), 501(c)(3)",
+      "cast.org says CAST moved to Wakefield, MA in 2003, matching the agenda's 'Wakefield, MA'; its current mailing address on cast.org and ProPublica is Lynnfield, MA (same Massachusetts North Shore area, same address on both pages)",
+      "CAST is an education research nonprofit that created Universal Design for Learning, consistent with a 2021-2022 services agreement with OUSD's Special Education Department"
+    ],
+    "key": "v-000985",
+    "notes": "Agenda gives Wakefield, MA; CAST's own timeline confirms an office in Wakefield from 2003, and its current contact page and IRS-based records list Lynnfield, MA, so the office appears to have moved. No page found explicitly naming OUSD. No general email address published on the contact page.",
+    "profile": {
+      "address": "50 Salem St Building B, Ste 303, Lynnfield, MA 01940-0030",
+      "caEntityNumber": null,
+      "ein": "22-2746879",
+      "email": null,
+      "headquarters": "Lynnfield, MA",
+      "legalName": "CAST, Inc.",
+      "orgType": "nonprofit",
+      "phone": "781-245-2212",
+      "samUei": null,
+      "summary": "CAST is a nonprofit education research and development organization. It created the Universal Design for Learning (UDL) framework, a way of designing lessons and learning environments so they work for all students. CAST also offers professional development, resources and consulting for schools, colleges and workplaces.",
+      "website": "https://www.cast.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About CAST",
+        "url": "https://www.cast.org/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact CAST",
+        "url": "https://www.cast.org/contact/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Cast Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/222746879"
+      },
+      {
+        "supports": [],
+        "title": "CAST Timeline of Innovation",
+        "url": "https://www.cast.org/resources/timeline-of-innovation/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-000985",
+    "notes": "CAST, Inc. is a 501(c)(3) (EIN 22-2746879) whose own timeline says it moved to Wakefield, MA in 2003 (matching the agenda), and its UDL work fits a special education services agreement. Contact page confirms legal name, phone and Lynnfield address; the summary is neutral and supported (the word 'consulting' is only loosely supported by the professional development and services pages).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

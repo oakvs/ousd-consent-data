@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.agc-ca.org/resources/workforce-development/construction-education-foundation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.agc-ca.org/about/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680463586",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-associated-general-contractors-of-california-construction-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'AGC Construction Education Foundation', the education arm of the Associated General Contractors of California (ProPublica Nonprofit Explorer, EIN 68-0463586, West Sacramento, CA)",
+      "Located in West Sacramento, CA (3095 Beacon Blvd), matching the agenda text",
+      "AGC of California's own website describes the foundation's workforce and student programs (Build California, scholarships, training), matching OUSD's 'Classroom & academic programs' MOU through the High School Linked Learning Office"
+    ],
+    "key": "n-associated-general-contractors-of-california-construction-education",
+    "notes": "No page found that directly mentions OUSD or Fremont High School for this entity; identity rests on name, West Sacramento location and program fit. The phone, email and address are AGC of California's shared headquarters details, shown on the foundation's own page. CA Secretary of State entity number not checked (bizfile blocks automated access). General email (member_services@agc-ca.org) appears only in rendered page content, not in fetched HTML, so it was omitted.",
+    "profile": {
+      "address": "3095 Beacon Blvd., West Sacramento, CA 95691",
+      "caEntityNumber": null,
+      "ein": "68-0463586",
+      "email": null,
+      "headquarters": "West Sacramento, CA",
+      "legalName": "AGC Construction Education Foundation",
+      "orgType": "nonprofit",
+      "phone": "916.371.2422",
+      "samUei": null,
+      "summary": "A 501(c)(3) nonprofit tied to the Associated General Contractors of California, a construction industry trade association. It runs programs to attract, train and keep a skilled construction workforce, including Build California, student chapters, scholarships, small business development and training courses.",
+      "website": "https://www.agc-ca.org/resources/workforce-development/construction-education-foundation/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "AGC Construction Education Foundation (AGC of California)",
+        "url": "https://www.agc-ca.org/resources/workforce-development/construction-education-foundation/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Information - About (AGC of California)",
+        "url": "https://www.agc-ca.org/about/contact/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "AGC Construction Education Foundation - Nonprofit Explorer (ProPublica)",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680463586"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-associated-general-contractors-of-california-construction-education",
+    "notes": "The AGC Construction Education Foundation page, the AGC contact page and ProPublica (EIN 68-0463586, West Sacramento) support the name, 501(c)(3) status, address, phone and program summary. The West Sacramento location and a construction-education MOU for a Linked Learning office fit the agenda text, though no source mentions OUSD directly.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

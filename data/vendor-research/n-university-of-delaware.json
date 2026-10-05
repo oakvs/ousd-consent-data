@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.udel.edu/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.udel.edu/home/contact-ud/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-university-of-delaware",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the University of Delaware, per its own About page (udel.edu)",
+      "Located in Newark, DE 19716, matching the agenda text 'Newark, DE'",
+      "A university is a plausible counterparty for a Research, Assessment, and Data Department data sharing agreement (partnerships and data sharing, no fiscal impact)"
+    ],
+    "key": "n-university-of-delaware",
+    "notes": "Could not find a public page documenting the specific OUSD data sharing agreement; identity rests on exact name and city match. UD describes itself as 'state-assisted yet privately governed', so orgType is 'other'. No registry IDs were verified (ProPublica was rate-limited).",
+    "profile": {
+      "address": "210 South College Ave., Newark, DE 19716",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Newark, DE",
+      "legalName": "University of Delaware",
+      "orgType": "other",
+      "phone": "302-831-2792",
+      "samUei": null,
+      "summary": "The University of Delaware is a public research university in Newark, Delaware, founded in 1743. It is a land-grant, sea-grant and space-grant institution that offers undergraduate and graduate programs and has additional locations in Wilmington, Dover, Georgetown and Lewes.",
+      "website": "https://www.udel.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About | University of Delaware",
+        "url": "https://www.udel.edu/about/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact UD | University of Delaware",
+        "url": "https://www.udel.edu/home/contact-ud/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-university-of-delaware",
+    "notes": "Name and Newark, DE location match the agenda, and phone, address, 1743, land/sea/space-grant and campus locations are confirmed. However, the summary calls UD a 'public research university', while the cited About page says 'state-assisted yet privately governed' (and the candidate itself used orgType 'other' for that reason), so the summary's key characterization is not supported by the cited sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

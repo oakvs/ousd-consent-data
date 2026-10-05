@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.humboldt.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.humboldt.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.humboldt.edu/education/credential-programs/secondary-education/intern-program-single-subject",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-humboldt-state-university-trustees-of-california-state-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Humboldt State University (Trustees of the California State University)'; humboldt.edu identifies the campus as California State Polytechnic University, Humboldt (Cal Poly Humboldt), a California State University campus, formerly Humboldt State University",
+      "The agenda item is an intern partnership and practica MOU for K-12 teaching credentials; the Cal Poly Humboldt School of Education runs intern credential programs for teachers of record (Multiple Subject, Single Subject)"
+    ],
+    "key": "n-humboldt-state-university-trustees-of-california-state-university",
+    "notes": "Agenda legal party is the Trustees of the California State University on behalf of the campus; no EIN, entity number or UEI verified, so those are null. Campus was renamed from Humboldt State University to Cal Poly Humboldt.",
+    "profile": {
+      "address": "1 Harpst Street, Arcata, CA 95521",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Arcata, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(707) 826-3011",
+      "samUei": null,
+      "summary": "Cal Poly Humboldt (formerly Humboldt State University) is a public university in Arcata, California, and part of the California State University system. Its School of Education offers teaching credential programs, including intern programs for teachers who work as the teacher of record while completing their credential.",
+      "website": "https://www.humboldt.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cal Poly Humboldt",
+        "url": "https://www.humboldt.edu/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Cal Poly Humboldt Contact",
+        "url": "https://www.humboldt.edu/contact"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Secondary Education - Intern Program - Single Subject",
+        "url": "https://www.humboldt.edu/education/credential-programs/secondary-education/intern-program-single-subject"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-humboldt-state-university-trustees-of-california-state-university",
+    "notes": "The agenda names Humboldt State University (Trustees of the CSU) for an intern/practica teaching-credential MOU, which matches Cal Poly Humboldt (renamed from HSU) and its School of Education intern programs. Address, phone, website, Arcata location and the intern/teacher-of-record description are confirmed on the cited humboldt.edu pages, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

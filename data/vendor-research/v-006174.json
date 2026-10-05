@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/842436513",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bouncebackgeneration.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006174",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational nonprofit: 'Bounce Back Generation Inc' (ProPublica Nonprofit Explorer, EIN 84-2436513)",
+      "Located in Alameda, CA, matching the 'Alameda, CA' location given in the agenda text",
+      "Website describes youth emotional wellness and resilience programs, matching OUSD's 'Student health, support & family services' category and Community Schools and Student Services contract"
+    ],
+    "key": "v-006174",
+    "notes": "No direct web page linking this organization to OUSD was found; identity rests on exact name, Alameda location and matching youth-wellness services. Website lists no phone, email or mailing address.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "84-2436513",
+      "email": null,
+      "headquarters": "Alameda, CA",
+      "legalName": "Bounce Back Generation Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that teaches resilience skills to young people through science-based media and programs. Its content helps youth understand their nervous systems, interrupt negative thought patterns and cope with stress and trauma. It began in 2011 with community work in San Francisco and became a registered 501(c)(3) nonprofit in 2019.",
+      "website": "https://www.bouncebackgeneration.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Bounce Back Generation Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/842436513"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Bounce Back Generation",
+        "url": "https://www.bouncebackgeneration.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-006174",
+    "notes": "Exact name match to a 501(c)(3) youth emotional wellness nonprofit (EIN 84-2436513) whose IRS address is Alameda, CA, matching the agenda location, and whose services fit student health and support contracts. The ProPublica page and the organization's website support the legal name, EIN, headquarters, type and the neutral summary; no direct OUSD link was found but name, location and service fit are consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

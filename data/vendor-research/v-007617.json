@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.skillstruck.com/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.skillstruck.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.skillstruck.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007617",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches 'Skill Struck', a K-12 computer science education company, and the agenda gives American Fork, UT; a search result lists its headquarters at American Fork, Utah (a directory page lists HQ as Provo, so the location is not consistent)",
+      "Company began with summer coding camps and now serves K-12 schools and districts, which is plausible for OUSD's after-school and summer program contract, but no page found mentions Oakland or OUSD"
+    ],
+    "key": "v-007617",
+    "notes": "Identity not confirmed against OUSD: no page found links Skill Struck to Oakland or OUSD, and the American Fork location is only from a search snippet, while another directory lists HQ in Provo. No registry (Utah or SAM.gov) entry checked, so no entity IDs. Medium confidence; do not publish without review.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "hi@skillstruck.com",
+      "headquarters": null,
+      "legalName": "Skill Struck, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Skill Struck is an education technology company that provides online computer science, artificial intelligence (AI) literacy and typing courses for K-12 schools and teachers. It began in 2017 with summer coding camps and online tutoring before offering curriculum to school districts.",
+      "website": "https://www.skillstruck.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "email"
+        ],
+        "title": "Skill Struck contact",
+        "url": "https://www.skillstruck.com/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - Skill Struck",
+        "url": "https://www.skillstruck.com/about"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Skill Struck - Your School's Computer Science Partner",
+        "url": "https://www.skillstruck.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

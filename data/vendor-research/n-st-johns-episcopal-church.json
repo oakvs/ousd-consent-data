@@ -1,0 +1,130 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.stjohnsoakland.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stjohnsoakland.org/directions.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-1507026",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941507026",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-st-johns-episcopal-church",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered tax-exempt religious organization: St. John's Episcopal Church, Oakland, CA (GuideStar and ProPublica, EIN 94-1507026)",
+      "Located in Oakland, CA (1707 Gouldin Road, 94611), matching the agenda text",
+      "The church has an entrance on Thornhill Drive in the Oakland hills, the same street as Thornhill Elementary School, which the agenda item names (Right of Entry Agreement - Thornhill Elementary School)"
+    ],
+    "key": "n-st-johns-episcopal-church",
+    "notes": "Churches are not required to file Form 990, so no financial data exists in registries. The Thornhill Drive link to Thornhill Elementary is by street proximity (church entrance at 5928 Thornhill Dr per search results); no cited page mentions OUSD directly.",
+    "profile": {
+      "address": "1707 Gouldin Road, Oakland, CA 94611",
+      "caEntityNumber": null,
+      "ein": "94-1507026",
+      "email": "welcome@stjohnsoakland.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "St. John's Episcopal Church",
+      "orgType": "nonprofit",
+      "phone": "(510) 339-2200",
+      "samUei": null,
+      "summary": "An Episcopal church in the Oakland hills that holds Sunday worship services and describes itself as a welcoming community of connection and reflection. It is a tax-exempt religious organization.",
+      "website": "https://www.stjohnsoakland.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "St. John's - St. John's Oakland - Community, Connection, Reflection",
+        "url": "https://www.stjohnsoakland.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Directions to St. John's",
+        "url": "https://www.stjohnsoakland.org/directions.html"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "address"
+        ],
+        "title": "St Johns Episcopal Church in Oakland California - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-1507026"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "St Johns Episcopal Church In Oakland California - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941507026"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-st-johns-episcopal-church",
+    "notes": "Church website confirms name, address (1707 Gouldin Rd, Oakland), phone, generic welcome@ email, Sunday services, and its directions page routes via Thornhill Drive, consistent with a no-cost right of entry for nearby Thornhill Elementary; ProPublica confirms EIN 94-1507026 as a 501(c)(3) religious organization. The profile is neutral and low-risk, though the OUSD link rests on name, city and proximity.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

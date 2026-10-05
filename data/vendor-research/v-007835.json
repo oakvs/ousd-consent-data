@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/364754579",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/36-4754579",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.twinkemp.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007835",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Twinkem Productions' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 36-4754579), matching the agenda's Oakland, CA",
+      "Nonprofit is an arts and music organization that works with youth, consistent with OUSD contracting it for Oakland Fine Arts Summer School / after-school and summer programs",
+      "Organization's own website (twinkemp.com) is titled 'Twinkem Productions' and describes mentoring emerging artists and music production; GuideStar lists twinkemp.com as its website and an Oakland PO Box address"
+    ],
+    "key": "v-007835",
+    "notes": "No page found links Twinkem to OUSD directly; identity rests on exact name, Oakland location, and youth arts/music activity. Website lists email info@twinkem.com but that domain did not resolve, so email omitted. Zip differs across directories (94623 GuideStar vs 94607 CauseIQ); PO Box address used as on GuideStar. Phone (415) 412-6314 appears only on secondary directories, so omitted.",
+    "profile": {
+      "address": "1675 7th Street P.O. Box 23762, Oakland, CA 94623",
+      "caEntityNumber": null,
+      "ein": "36-4754579",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Twinkem Productions",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A small Oakland nonprofit focused on music and the arts. It mentors emerging artists, produces music, and fiscally sponsors community choirs and gospel ensembles. Its stated mission includes educating and offering musician services to underserved communities and working with youth to develop their artistic talents.",
+      "website": "https://www.twinkemp.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Twinkem Productions - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/364754579"
+      },
+      {
+        "supports": [
+          "address",
+          "website",
+          "summary",
+          "headquarters"
+        ],
+        "title": "twinkem productions - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/36-4754579"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Home | Twinkem Productions",
+        "url": "https://www.twinkemp.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007835",
+    "notes": "Exact name match with an Oakland arts/music 501(c)(3) (EIN 36-4754579, ProPublica), whose GuideStar mission includes working with youth on artistic talents, consistent with the Oakland Fine Arts Summer School agreement; no source links it to OUSD directly, so identity rests on name, location and activity. EIN, address, website, orgType and the mission-based summary are all confirmed in the fetched pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

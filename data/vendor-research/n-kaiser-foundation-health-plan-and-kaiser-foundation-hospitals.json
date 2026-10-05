@@ -1,0 +1,75 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://about.kaiserpermanente.org/who-we-are/fast-facts",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://about.kaiserpermanente.org/who-we-are",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kaiser-foundation-health-plan-and-kaiser-foundation-hospitals",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Both names match registered 501(c)(3) nonprofits headquartered in Oakland, CA on ProPublica Nonprofit Explorer: Kaiser Foundation Health Plan Inc (EIN 94-1340523) and Kaiser Foundation Hospitals (EIN 94-1105628)",
+      "Kaiser Permanente's own fast-facts page names 'Kaiser Foundation Health Plan, Inc. and Kaiser Foundation Hospitals' as entities providing care for its members and says it is headquartered in Oakland, Calif.",
+      "A health care provider and plan fits a COVID-19 vaccination clinic facility use agreement for student health services with OUSD in Oakland"
+    ],
+    "key": "n-kaiser-foundation-health-plan-and-kaiser-foundation-hospitals",
+    "notes": "The agenda names two separate legal entities. ProPublica lists Kaiser Foundation Health Plan Inc as EIN 94-1340523 and Kaiser Foundation Hospitals as EIN 94-1105628 (both Oakland, CA, 501(c)(3)); a single ein field cannot hold both, so EIN, legal name and contact details are left null. Phone (510) 271-5800 and 1 Kaiser Plz, Oakland, CA 94612 came from third-party directories only and were not confirmed on an official page.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Kaiser Foundation Health Plan, Inc. and Kaiser Foundation Hospitals are the health plan and hospital entities of Kaiser Permanente, an integrated nonprofit organization that provides health care and health coverage to members in California and several other states. Kaiser Permanente is headquartered in Oakland, California.",
+      "website": "https://about.kaiserpermanente.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "headquarters",
+          "website",
+          "orgType"
+        ],
+        "title": "Kaiser Permanente Fast Facts",
+        "url": "https://about.kaiserpermanente.org/who-we-are/fast-facts"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Who we are - Kaiser Permanente",
+        "url": "https://about.kaiserpermanente.org/who-we-are"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-kaiser-foundation-health-plan-and-kaiser-foundation-hospitals",
+    "notes": "Kaiser's fast-facts page names Kaiser Foundation Health Plan, Inc. and Kaiser Foundation Hospitals as components of Kaiser Permanente, a not-for-profit headquartered in Oakland; the who-we-are page describes it as an integrated nonprofit care and coverage organization. The summary, orgType, headquarters and website are supported and neutral, and the null fields avoid unconfirmed third-party contact data.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

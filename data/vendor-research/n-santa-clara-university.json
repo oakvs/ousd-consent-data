@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156617",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.scu.edu/aboutscu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.scu.edu/ecp/programs/teaching-program/mattc-intern-pathway/mattc-intern-partner-school-districts/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-santa-clara-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) university: 'President-board Of Trustees Santa Clara College', doing business as Santa Clara University (ProPublica Nonprofit Explorer, EIN 94-1156617)",
+      "SCU's own MATTC Intern Pathway page lists Oakland Unified School District as a partner district, matching the agenda item 'Intern Partnership Program - K-12 Teaching'",
+      "SCU runs a teacher-credential intern program, matching the Talent/Human Resources department's staff and hiring purpose"
+    ],
+    "key": "n-santa-clara-university",
+    "notes": "ProPublica lists the IRS legal name as President-board Of Trustees Santa Clara College (dba Santa Clara University). No CA entity number or SAM UEI verified.",
+    "profile": {
+      "address": "500 El Camino Real, Santa Clara, CA 95053",
+      "caEntityNumber": null,
+      "ein": "94-1156617",
+      "email": null,
+      "headquarters": "Santa Clara, CA",
+      "legalName": "Santa Clara University",
+      "orgType": "nonprofit",
+      "phone": "(408) 554-4000",
+      "samUei": null,
+      "summary": "A private university in Santa Clara, California, founded in 1851 in the Jesuit educational tradition. It offers degree programs, including teacher-credential programs that let people work as teachers while earning a credential.",
+      "website": "https://www.scu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Santa Clara University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156617"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About SCU - Santa Clara University",
+        "url": "https://www.scu.edu/aboutscu/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "MATTC Intern Partner School Districts - Santa Clara University",
+        "url": "https://www.scu.edu/ecp/programs/teaching-program/mattc-intern-pathway/mattc-intern-partner-school-districts/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-santa-clara-university",
+    "notes": "ProPublica confirms EIN 94-1156617 as a 501(c)(3) in Santa Clara, CA; scu.edu/aboutscu confirms 1851 founding, Jesuit tradition, phone and address; SCU's MATTC intern partner page lists Oakland Unified, matching the K-12 Teaching intern MOU. The intern-credential detail appears on the parent MATTC Intern Pathway page rather than the cited one, but it is accurate and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

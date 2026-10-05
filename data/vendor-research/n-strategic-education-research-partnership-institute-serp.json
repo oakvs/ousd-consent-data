@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://serpinstitute.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/300231116",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.serpinstitute.org/partners",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-strategic-education-research-partnership-institute-serp",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Strategic Education Research Partnership Institute', EIN 30-0231116, Washington, DC (ProPublica Nonprofit Explorer)",
+      "Located in Washington, DC, matching the agenda text",
+      "Organization's own website describes education research-practice partnerships (literacy, math, science), matching OUSD's 'Classroom & academic programs' category",
+      "SERP's partners page lists 'Oakland Unified School District (CA)' as a partner school district"
+    ],
+    "key": "n-strategic-education-research-partnership-institute-serp",
+    "notes": "CA Secretary of State entity number and SAM.gov UEI not verified (SAM/GovTribe blocked). Agenda names the vendor as 'SERP Institute'; IRS/ProPublica legal name is 'Strategic Education Research Partnership Institute'.",
+    "profile": {
+      "address": "1100 Connecticut Ave NW, Suite 1310, Washington, DC 20036",
+      "caEntityNumber": null,
+      "ein": "30-0231116",
+      "email": "info@serpinstitute.org",
+      "headquarters": "Washington, DC",
+      "legalName": "Strategic Education Research Partnership Institute",
+      "orgType": "nonprofit",
+      "phone": "(202) 223-8555",
+      "samUei": null,
+      "summary": "SERP Institute is an independent nonprofit founded in 2003 that connects education researchers, school district staff and designers. Together they develop and test practical solutions to problems schools face, with a focus on literacy, mathematics and science instruction. Many of its resources are free for educators.",
+      "website": "https://www.serpinstitute.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "SERP Institute - About Us",
+        "url": "https://serpinstitute.org/about-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Strategic Education Research Partnership Institute - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/300231116"
+      },
+      {
+        "supports": [],
+        "title": "Research and Practice Partners",
+        "url": "https://www.serpinstitute.org/partners"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-strategic-education-research-partnership-institute-serp",
+    "notes": "SERP Institute's About page and ProPublica confirm the Washington, DC 501(c)(3) (EIN 30-0231116), and its partners page lists Oakland Unified School District, matching the DC location and the academic-programs subaward. Summary, contact details, founding year and free-resources claim are all supported by the cited pages, and the tone is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

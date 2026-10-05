@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941105628",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.taxexemptworld.com/organization.asp?tn=1421669",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://about.kaiserpermanente.org/who-we-are/fast-facts",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lookinside.kaiserpermanente.org/blog/2023/12/12/9m-oakland-schools-grant-bolsters-health-equity-education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-kaiser-permanente-kaiser-foundation-hospital",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Kaiser Foundation Hospitals', EIN 94-1105628, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Kaiser Permanente is headquartered in Oakland, CA, and Kaiser Foundation Hospitals is one of its three parts (Kaiser Permanente fast facts page)",
+      "Kaiser Permanente publicly describes a multi-year grant partnership with Oakland Unified School District supporting school-based health centers, consistent with the 'Student health, support & family services' category",
+      "Kaiser Permanente donated COVID-19 personal protective equipment to California schools in 2021, consistent with the in-kind PPE donation in the agenda title"
+    ],
+    "key": "n-kaiser-permanente-kaiser-foundation-hospital",
+    "notes": "The agenda names 'Kaiser Foundation Hospital' with no city; matched to the nonprofit Kaiser Foundation Hospitals (EIN 94-1105628), the Kaiser Permanente entity that holds hospitals. Phone, email and CA entity number not verified on a citable page, so left null.",
+    "profile": {
+      "address": "One Kaiser Plaza, Oakland, CA 94612-3610",
+      "caEntityNumber": null,
+      "ein": "94-1105628",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Kaiser Foundation Hospitals",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Kaiser Foundation Hospitals is a nonprofit that is part of Kaiser Permanente, a large health care organization based in Oakland, California. Kaiser Permanente combines health insurance and medical care. Kaiser Foundation Hospitals operates its hospitals, and it works alongside Kaiser Foundation Health Plan, Inc. and the Permanente Medical Groups.",
+      "website": "https://about.kaiserpermanente.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Kaiser Foundation Hospitals - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941105628"
+      },
+      {
+        "supports": [
+          "address",
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Kaiser Foundation Hospitals - 501C3 Nonprofit - Oakland, CA - 941105628",
+        "url": "https://www.taxexemptworld.com/organization.asp?tn=1421669"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Kaiser Permanente fast facts",
+        "url": "https://about.kaiserpermanente.org/who-we-are/fast-facts"
+      },
+      {
+        "supports": [],
+        "title": "$9M Oakland schools grant bolsters health, equity, education",
+        "url": "https://lookinside.kaiserpermanente.org/blog/2023/12/12/9m-oakland-schools-grant-bolsters-health-equity-education/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-kaiser-permanente-kaiser-foundation-hospital",
+    "notes": "ProPublica and TaxExemptWorld confirm Kaiser Foundation Hospitals (EIN 94-1105628, One Kaiser Plaza, Oakland, 501(c)(3)); the Kaiser Permanente fast-facts page confirms the Oakland HQ and the three-part structure. This is the Kaiser Permanente hospital entity named in the Oakland in-kind PPE donation item, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

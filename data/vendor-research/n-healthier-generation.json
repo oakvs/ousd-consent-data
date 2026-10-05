@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/272028308",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.healthiergeneration.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-healthier-generation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Alliance For A Healthier Generation Inc', EIN 27-2028308 (ProPublica Nonprofit Explorer); the organization brands itself 'Healthier Generation' (healthiergeneration.org)",
+      "Third-party nonprofit profile (Cause IQ) lists the organization at Portland, OR, matching the agenda's 'Portland, OR'",
+      "Website describes work with schools and districts on children's physical, social and emotional health, matching OUSD's 'Student health, support & family services' category and a Community Schools and Student Services MOU; the organization has California school and district partners"
+    ],
+    "key": "n-healthier-generation",
+    "notes": "Address and headquarters intentionally left blank: the organization's own contact page gives a Washington, D.C. mailing address (1629 K St. N.W. Suite 300), while Cause IQ lists 1028 SE Water Ave 210, Portland, OR 97214 and the agenda says Portland, OR. The only email on the contact page is give@healthiergeneration.org, a donations inbox, so it was not used. No page found confirms the specific smart-thermometer MOU; identity rests on name, nonprofit registry, Portland location and school-health mission. California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "27-2028308",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Alliance For A Healthier Generation Inc",
+      "orgType": "nonprofit",
+      "phone": "1-888-543-4584",
+      "samUei": null,
+      "summary": "A national nonprofit that works with schools, youth organizations, businesses and communities to support children's physical, social and emotional health. Its work includes expanding access to nutritious foods, physical activity, social-emotional support and tobacco-free spaces.",
+      "website": "https://www.healthiergeneration.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Alliance For A Healthier Generation Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/272028308"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Alliance for a Healthier Generation",
+        "url": "https://www.healthiergeneration.org/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-healthier-generation",
+    "notes": "ProPublica confirms the 501(c)(3) Alliance For A Healthier Generation Inc, EIN 27-2028308, and the about-us page supports the summary and phone 1-888-543-4584. The org describes itself as virtual with staff nationwide, so a Portland, OR presence is plausible, and its school-health mission fits a no-cost Community Schools smart-thermometer MOU; address and headquarters were rightly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

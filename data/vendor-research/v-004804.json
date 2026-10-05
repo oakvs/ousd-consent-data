@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943250304",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jfcs-eastbay.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jfcs-eastbay.org/preschool-consultation",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004804",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Jewish Family And Community Services East Bay', EIN 94-3250304 (ProPublica Nonprofit Explorer)",
+      "Organization's own website lists an Alameda County office at 2484 Shattuck Avenue, Suite 210, Berkeley, CA 94704, matching the agenda's Berkeley, CA location",
+      "Its preschool consultation page says it provides early childhood mental health consultation at 20 Oakland Unified School District sites, matching OUSD's 'Student health, support & family services' contract"
+    ],
+    "key": "v-004804",
+    "notes": "ProPublica lists the IRS location as Concord, CA; the website lists offices in Berkeley (Alameda County) and Concord (Contra Costa County), so headquarters left null. Address given is the Berkeley office, which matches the agenda. First 5 Alameda County funding not confirmed on a cited page. No CA SOS or SAM.gov lookup done.",
+    "profile": {
+      "address": "2484 Shattuck Avenue, Suite 210, Berkeley, CA 94704",
+      "caEntityNumber": null,
+      "ein": "94-3250304",
+      "email": "info@jfcs-eastbay.org",
+      "headquarters": null,
+      "legalName": "Jewish Family And Community Services East Bay",
+      "orgType": "nonprofit",
+      "phone": "925-927-2000",
+      "samUei": null,
+      "summary": "A nonprofit social services agency serving Alameda and Contra Costa counties. It offers mental health services for children and families, refugee support, immigration legal help, and services for older adults.",
+      "website": "https://jfcs-eastbay.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Jewish Family And Community Services East Bay - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943250304"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "orgType"
+        ],
+        "title": "JFCS East Bay",
+        "url": "https://jfcs-eastbay.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "JFCS East Bay - Preschool Consultation",
+        "url": "https://jfcs-eastbay.org/preschool-consultation"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-004804",
+    "notes": "The JFCS East Bay site shows a Berkeley office at 2484 Shattuck Ave and says it provides early childhood mental health consultation at 20 OUSD sites, which fits the agenda's Berkeley location and student health services. ProPublica confirms the 501(c)(3), name and EIN. The summary, phone, general email and address are all supported, and the site now brands itself 'Children's' rather than 'Community', a naming difference only.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

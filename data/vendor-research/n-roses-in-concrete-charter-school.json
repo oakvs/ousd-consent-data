@@ -1,0 +1,74 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/465649314",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ed-data.org/school/Alameda/Oakland-Unified/Roses-in-Concrete",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-roses-in-concrete-charter-school",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Roses In Concrete', EIN 46-5649314, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "California Department of Education/EdData lists 'Roses in Concrete' as a K-8 charter school at 4551 Steele Street, Oakland, in Oakland Unified School District (operated 08/24/2015 to 06/30/2020)",
+      "Agenda item is a partnership MOU between OUSD and the charter school, consistent with a charter school located within the district",
+      "The school's former website domain (rosesinconcrete.org) now shows unrelated content, so it was not used; the school is closed, so current status is unclear"
+    ],
+    "key": "n-roses-in-concrete-charter-school",
+    "notes": "The school appears to have closed June 30, 2020 per state data, so the MOU may predate that or the entity may still exist as a nonprofit. The old website rosesinconcrete.org now shows unrelated content, so no website or contact details are given. Not high confidence because the agenda gives no location and the entity's current status is unclear.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "46-5649314",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Roses In Concrete",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that operated Roses in Concrete, a K-8 charter school in East Oakland, California. The school opened in 2015 and, according to state records, closed in June 2020.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Roses In Concrete - Nonprofit Explorer (ProPublica)",
+        "url": "https://projects.propublica.org/nonprofits/organizations/465649314"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "EdData - School Profile - Roses in Concrete",
+        "url": "https://ed-data.org/school/Alameda/Oakland-Unified/Roses-in-Concrete"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

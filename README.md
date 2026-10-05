@@ -88,7 +88,7 @@ Every change becomes a commit in this repository with a readable message, like `
 | Summaries, June 2026 (263 items) | An earlier prototype (`prototype-v1`, prompt `enrich.v1`) |
 | Second readings, August 2019 – September 2026 (3,849 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `verify.v1`) |
 | Second readings, April 2021 (1 items) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`, prompt `verify.v2`) |
-| Vendor research (1,629 vendors, 1,112 published) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`) |
+| Vendor research (1,911 vendors, 1,284 published) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`) |
 <!-- /generated:models -->
 
 New items from October 2026 on are summarized by Claude Opus 5.5 through the Claude API (prompt `enrich.v4`), which also does the tie-breaking third readings. Their second readings come from Claude Sonnet 5.5 (prompt `verify.v2`). They'll show up in the table above as they're written.

@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/133408731",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nfte.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-003049",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Network For Teaching Entrepreneurship' (ProPublica Nonprofit Explorer, EIN 13-3408731, New York, NY)",
+      "Located in New York, NY, matching the location in the agenda text",
+      "NFTE's website describes entrepreneurship education for students in school settings, matching OUSD's 'Classroom & academic programs' contract for McClymonds High School (which has an Entrepreneurship pathway)"
+    ],
+    "key": "v-003049",
+    "notes": "Could not find a public page naming McClymonds or OUSD as an NFTE partner; identity rests on exact name, New York location and matching subject area. No general public email verified (contact page lists a media-inquiries address only), so email left null.",
+    "profile": {
+      "address": "120 Wall Street, 18th Floor, New York, NY 10005",
+      "caEntityNumber": null,
+      "ein": "13-3408731",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "Network For Teaching Entrepreneurship",
+      "orgType": "nonprofit",
+      "phone": "212-232-3333",
+      "samUei": null,
+      "summary": "A nonprofit founded in 1987 that provides entrepreneurship education to young people, mostly in under-resourced communities. It works with schools and out-of-school programs, in person, online and in hybrid formats, across the United States and in other countries.",
+      "website": "https://www.nfte.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Network For Teaching Entrepreneurship - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/133408731"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "NFTE",
+        "url": "https://www.nfte.com/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-003049",
+    "notes": "ProPublica confirms the exact legal name, EIN 13-3408731, 501(c)(3) status and New York, NY location, matching the agenda's New York location and the entrepreneurship-education services bought for McClymonds. nfte.com confirms founding year 1987, phone and 120 Wall Street address; the in-person/online/hybrid and school/out-of-school delivery claims appear on NFTE's about page rather than the homepage. No page names OUSD directly, but the exact name, location and service fit are consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

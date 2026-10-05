@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.calendow.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.calendow.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/954523232",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.prnewswire.com/news-releases/the-atlantic-philanthropies-and-the-california-endowment-commit-122-million-for-healthcare-career-pathways-in-oakland-unified-school-district-300024295.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-endowment",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered private foundation: 'The California Endowment' (ProPublica Nonprofit Explorer, EIN 95-4523232)",
+      "The foundation's own About page says it maintains an Oakland conference center near Lake Merritt, matching the agenda location of Oakland, CA",
+      "Its website lists Schools as a focus area, matching OUSD's 'Student health, support & family services' category",
+      "A public press release reports California Endowment grants supporting Oakland Unified School District programs"
+    ],
+    "key": "n-california-endowment",
+    "notes": "Headquartered in Los Angeles; the agenda's Oakland location corresponds to its Oakland regional office. California Secretary of State entity number and SAM UEI not found, left null.",
+    "profile": {
+      "address": "1000 N. Alameda Street, Los Angeles, CA 90012",
+      "caEntityNumber": null,
+      "ein": "95-4523232",
+      "email": "Communications@Calendow.Org",
+      "headquarters": "Los Angeles, CA",
+      "legalName": "The California Endowment",
+      "orgType": "nonprofit",
+      "phone": "(800) 449-4149",
+      "samUei": null,
+      "summary": "The California Endowment is a private, nonprofit, statewide foundation that works to make California a healthier place for all. It makes grants to community organizations and focuses on health equity and racial equity, with areas including health systems, justice reinvestment, inclusive communities and schools.",
+      "website": "https://www.calendow.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - The California Endowment",
+        "url": "https://www.calendow.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - The California Endowment",
+        "url": "https://www.calendow.org/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The California Endowment - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/954523232"
+      },
+      {
+        "supports": [],
+        "title": "The Atlantic Philanthropies and The California Endowment Commit $12.2 Million for Healthcare Career Pathways In Oakland Unified School District",
+        "url": "https://www.prnewswire.com/news-releases/the-atlantic-philanthropies-and-the-california-endowment-commit-122-million-for-healthcare-career-pathways-in-oakland-unified-school-district-300024295.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-california-endowment",
+    "notes": "The California Endowment is a Los Angeles-headquartered private foundation with an Oakland regional office and conference center, and it funds OUSD-related programs, so a grant agreement with OUSD fits. The contact page and About page support the contact fields and the neutral summary, and ProPublica supports the legal name, EIN and nonprofit type.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

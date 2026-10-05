@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.fredfinch.org/rising-harte-wellness-center",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fredfinch.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/940474080",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bretharte.ousd.org/programs-services/wellness-center",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-rising-harte-wellness-center-at-fred-finch-youth-center",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Fred Finch's own page describes Rising Harte Wellness Center as a community health clinic on the Fred Finch campus in Oakland, CA, operating as part of Fred Finch Youth & Family Services, matching the agenda name and the Oakland, CA location",
+      "Bret Harte Middle School (an OUSD school) page names Rising Harte Wellness Center as the school's dedicated health clinic through a partnership with Fred Finch Youth Services, matching OUSD's school-based health center MOU",
+      "ProPublica Nonprofit Explorer lists Fred Finch Youth Center, EIN 94-0474080, Oakland, CA, a 501(c)(3) nonprofit in mental health services"
+    ],
+    "key": "n-rising-harte-wellness-center-at-fred-finch-youth-center",
+    "notes": "The agenda vendor is a clinic program of Fred Finch Youth Center; the legal entity and EIN are Fred Finch's. Phone and address are the clinic's own, from the Fred Finch clinic page. Email is Fred Finch's general inbox. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "3800 Coolidge Ave, Oakland",
+      "caEntityNumber": null,
+      "ein": "94-0474080",
+      "email": "info@fredfinch.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Fred Finch Youth Center",
+      "orgType": "nonprofit",
+      "phone": "510-485-5292",
+      "samUei": null,
+      "summary": "Rising Harte Wellness Center is a community health clinic run by Fred Finch Youth & Family Services on its Oakland campus. It offers medical, dental and audiology services, including immunizations, preventative care and hearing evaluations. Fred Finch is a nonprofit that provides mental health care and family services in California.",
+      "website": "https://www.fredfinch.org/rising-harte-wellness-center"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Rising Harte Wellness Center",
+        "url": "https://www.fredfinch.org/rising-harte-wellness-center"
+      },
+      {
+        "supports": [
+          "email",
+          "summary"
+        ],
+        "title": "Fred Finch Youth & Family Services",
+        "url": "https://www.fredfinch.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Fred Finch Youth Center - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/940474080"
+      },
+      {
+        "supports": [],
+        "title": "Wellness Center - Bret Harte Middle School",
+        "url": "https://bretharte.ousd.org/programs-services/wellness-center"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-rising-harte-wellness-center-at-fred-finch-youth-center",
+    "notes": "Fred Finch's clinic page and the Bret Harte OUSD page both show Rising Harte Wellness Center is a Fred Finch clinic in Oakland serving the school as its health clinic, matching the school-based health center MOU. Phone, address, general email, EIN, legal name and the neutral summary are all confirmed by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

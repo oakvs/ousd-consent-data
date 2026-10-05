@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.replate.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.replate.org/terms",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/811005691",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-replate",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Replate's own Terms/Privacy page gives its business address as 1759 Alcatraz Ave, Berkeley, CA, matching the 'Berkeley, CA' location in the agenda text",
+      "ProPublica Nonprofit Explorer lists 'Re-plate', a 501(c)(3) with tax exemption since April 2016 and food distribution/nutrition services (NTEE K30), matching Replate's stated 2016 founding as a nonprofit food rescue organization, and Replate's own site uses the re-plate.org domain",
+      "Replate is a food rescue and food donation organization, consistent with OUSD's 'Food, transportation & operations' category and a no-cost community partnership MOU",
+      "A StopWaste (Alameda County public agency) directory lists Replate as a food recovery organization at PO Box 11338, Oakland, the same mailing address ProPublica shows for EIN 81-1005691"
+    ],
+    "key": "n-replate",
+    "notes": "IRS/ProPublica registers the organization as 'Re-plate' (EIN 81-1005691) with a PO Box 11338, Oakland, CA 94611 mailing address; Replate's own Terms page gives 'Replate Inc.' at 1759 Alcatraz Ave, Berkeley. Not to be confused with Rescuing Leftover Cuisine (a separate New York nonprofit) or other similarly named groups. No direct public page found linking Replate to OUSD; identity rests on name, location, sector and registry match. California SOS entity number not looked up.",
+    "profile": {
+      "address": "1759 Alcatraz Ave Berkeley, CA 94703",
+      "caEntityNumber": null,
+      "ein": "81-1005691",
+      "email": "info@re-plate.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Replate Inc.",
+      "orgType": "nonprofit",
+      "phone": "(415) 347-8277",
+      "samUei": null,
+      "summary": "Replate is a nonprofit that runs a food rescue program. It connects businesses that have extra edible food with food banks, shelters and other nonprofits that serve people who do not have enough to eat. It began in Berkeley, California in 2016 and now operates in the San Francisco Bay Area and several other U.S. regions.",
+      "website": "https://www.replate.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Replate",
+        "url": "https://www.replate.org/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Terms of Service, Policies & Attributions | Replate",
+        "url": "https://www.replate.org/terms"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "Re-plate - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/811005691"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-replate",
+    "notes": "Replate Inc. is a Berkeley-based 501(c)(3) food rescue nonprofit (EIN 81-1005691 per ProPublica, founded 2016), consistent with the agenda's 'RePlate, Berkeley, CA' no-cost community partnership MOU. Summary, legal name, address (Privacy section of Terms), phone and general email are shown on the cited pages; no direct OUSD link was found, but name, city, sector and registry all align.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.blxgroup.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.blxgroup.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.blxgroup.com/office/los-angeles/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-blx-group",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'BLX Group LLC' as shown on the company's own site (blxgroup.com), a municipal advisory firm",
+      "Headquartered in Los Angeles, CA, matching the agenda's location 'Los Angeles, CA'",
+      "Services (municipal advisory, arbitrage rebate and continuing disclosure compliance for tax-exempt issuers, parent firm is bond counsel Orrick) are consistent with a General Counsel professional services agreement for a school district's bond-related work",
+      "No direct page found naming OUSD as a client"
+    ],
+    "key": "n-blx-group",
+    "notes": "Registry IDs (CA entity number, EIN, UEI) not found, so omitted. No page found that explicitly names OUSD as a client; identity rests on name, Los Angeles location and service fit. No general email published.",
+    "profile": {
+      "address": "355 South Grand Avenue Suite 2700 Los Angeles, CA 90071",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "866-342-5259",
+      "samUei": null,
+      "summary": "BLX is a financial technology company registered with the Securities and Exchange Commission and the Municipal Securities Rulemaking Board as a municipal advisor. It provides financial and compliance services to issuers of tax-exempt bonds, including arbitrage rebate compliance, continuing disclosure, and monitoring of how bond proceeds are used. It is a wholly-owned subsidiary of the law firm Orrick.",
+      "website": "https://www.blxgroup.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "BLX Group",
+        "url": "https://www.blxgroup.com/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "BLX Group - Contact Us",
+        "url": "https://www.blxgroup.com/contact-us/"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "BLX Group - Los Angeles office",
+        "url": "https://www.blxgroup.com/office/los-angeles/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-blx-group",
+    "notes": "blxgroup.com confirms BLX as an SEC/MSRB-registered municipal advisor headquartered in Los Angeles, a wholly-owned Orrick subsidiary offering arbitrage rebate, continuing disclosure and private business use monitoring, which fits a General Counsel professional services agreement with BLX Group LLC, Los Angeles. The phone number (contact page) and address (LA office page) are business details and the summary is supported and neutral; no page names OUSD as a client, but the name, city and service fit are consistent.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/san-leandro/profile/home-care/superior-quality-home-health-llc-1116-874840",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
+  "key": "v-006357",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Exact legal name 'Superior Quality Home Health, LLC' matches the agenda name (BBB profile)",
+      "Located in San Leandro, CA, matching the agenda location (BBB profile and GovCB listing)",
+      "Business offers in-home care services, plausibly consistent with a professional services contract at Dewey Academy, but no public page confirms any OUSD relationship"
+    ],
+    "key": "v-006357",
+    "notes": "No official website found (sqhomehealth.com is a parked domain for sale, so not used). No registry IDs found; CA SOS and SAM.gov not directly checked. No public page links the company to OUSD or Dewey Academy, so confidence is medium.",
+    "profile": {
+      "address": "2450 Washington Ave Suite 150, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": "Superior Quality Home Health, LLC",
+      "orgType": "company",
+      "phone": "(510) 560-2443",
+      "samUei": null,
+      "summary": "A limited liability company in San Leandro, California, that provides in-home care services. It has been in business since 2015.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Superior Quality Home Health, LLC",
+        "url": "https://www.bbb.org/us/ca/san-leandro/profile/home-care/superior-quality-home-health-llc-1116-874840"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

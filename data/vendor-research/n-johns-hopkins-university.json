@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/520595110",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Johns_Hopkins_University",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-johns-hopkins-university",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational institution: 'Johns Hopkins University', EIN 52-0595110 (ProPublica Nonprofit Explorer)",
+      "Located in Baltimore, MD, matching the agenda text 'Baltimore, Maryland' (ProPublica and Wikipedia)",
+      "A private research university, consistent with a data sharing agreement for research use of student assessment data (i-Ready), as the agenda title describes"
+    ],
+    "key": "n-johns-hopkins-university",
+    "notes": "jhu.edu blocks automated fetching (HTTP 403), so website and contact details were left null rather than guessed.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "52-0595110",
+      "email": null,
+      "headquarters": "Baltimore, MD",
+      "legalName": "Johns Hopkins University",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A private research university in Baltimore, Maryland. It was founded in 1876 and combines teaching with research across ten academic divisions, with campuses in Baltimore and other locations.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Johns Hopkins University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/520595110"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Johns Hopkins University - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Johns_Hopkins_University"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-johns-hopkins-university",
+    "notes": "ProPublica confirms Johns Hopkins University, Baltimore MD, EIN 52-0595110, 501(c)(3) educational institution, matching the agenda's name and location; a university research data sharing agreement is a plausible fit. Wikipedia confirms the summary (private research university, 1876, ten divisions, multiple campuses) and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/237131209",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.newbridgefoundation.org/about-new-bridge-foundation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-new-bridge-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'New Bridge Foundation Inc' in Berkeley, CA (ProPublica Nonprofit Explorer, EIN 23-7131209), matching the agenda's 'New Bridge Foundation, Berkeley, CA'",
+      "Its own website gives a Berkeley, CA address (2323 Hearst Avenue), matching the agenda location",
+      "Website mission says it serves adults and adolescents with substance-use education and counseling, consistent with an OUSD student health and support services MOU"
+    ],
+    "key": "n-new-bridge-foundation",
+    "notes": "No general contact email found (site shows only a careers address). The agenda MOU is for student health/support services; the organization also runs a school-based adolescent program (ASPIRE) per a county service directory snippet, but that page and any explicit OUSD link could not be fetched, so the OUSD connection rests on name, city and adolescent focus.",
+    "profile": {
+      "address": "2323 Hearst Avenue, Berkeley, CA 94709",
+      "caEntityNumber": null,
+      "ein": "23-7131209",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "New Bridge Foundation Inc",
+      "orgType": "nonprofit",
+      "phone": "(866) 772-8491",
+      "samUei": null,
+      "summary": "New Bridge Foundation is a nonprofit in Berkeley, California that provides addiction treatment and recovery services. Its stated mission is to give adults and adolescents the education, counseling, support and skills to live healthy lives without drugs or alcohol.",
+      "website": "https://www.newbridgefoundation.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "New Bridge Foundation Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/237131209"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Learn More About New Bridge Foundation",
+        "url": "https://www.newbridgefoundation.org/about-new-bridge-foundation/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-new-bridge-foundation",
+    "notes": "Exact name and Berkeley, CA location match the agenda; ProPublica and the organization's own site confirm a 501(c)(3) substance-abuse treatment nonprofit serving adults and adolescents, which fits a no-cost student health MOU. No source explicitly links it to OUSD, but no competing same-named organization appeared; all non-null profile fields (name, EIN, address, phone, website, summary) are confirmed by the cited pages.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/465649314",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-roses-in-concrete",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) educational nonprofit 'Roses In Concrete' in Oakland, CA (ProPublica Nonprofit Explorer, EIN 46-5649314)",
+      "Search results describe Roses in Concrete Community School as a charter school in Oakland Unified School District (not confirmed on a fetchable page; California Department of Education profile blocked automated fetching)",
+      "WEAK: the agenda gives no city and the only OUSD context is a legal agreement; search results say the school closed June 30, 2020, so it is unclear whether the 2026 agreement is with this entity"
+    ],
+    "key": "n-roses-in-concrete",
+    "notes": "Not publishable: the school reportedly closed in 2020, the agenda text gives no city, and the matching legal agreement could not be verified against this entity. rosesinconcrete.org currently shows an unrelated blog, so no website or contact details are given. ProPublica notes the organization is not in the current IRS exempt-organization database.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "46-5649314",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Roses In Concrete",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit educational organization based in Oakland, California, that operated a school (Roses in Concrete Community School). It was recognized as tax-exempt under section 501(c)(3) of the federal tax code in 2017.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Roses In Concrete - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/465649314"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

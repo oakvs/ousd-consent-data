@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/50485883",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bigpicture.org/whoweare",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-big-picture-bpl",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Big Picture Company Inc', EIN 05-0485883, Providence, RI (ProPublica Nonprofit Explorer), matching the agenda's 'The Big Picture Company' in Providence, RI",
+      "The organization operates as Big Picture Learning (BPL), matching the agenda's 'dba BPL', and its website says it developed ImBlaze, an internship-management platform, matching the agenda's 'ImBlaze Pilot Program' technology agreement"
+    ],
+    "key": "n-big-picture-bpl",
+    "notes": "Operating name is Big Picture Learning (dba BPL). Phone, email and street address omitted because no official page cited here shows them in a verifiable form. Rhode Island-based, so no California entity number expected.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "05-0485883",
+      "email": null,
+      "headquarters": "Providence, RI",
+      "legalName": "Big Picture Company Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Big Picture Learning is a nonprofit education organization founded in 1995 in Rhode Island. It supports a network of schools and learning centers that center learning on each student's interests, including internships in the community. It also developed ImBlaze, an online tool that helps schools manage student internships.",
+      "website": "https://www.bigpicture.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Big Picture Company Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/50485883"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Who We Are - Big Picture Learning",
+        "url": "https://www.bigpicture.org/whoweare"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-big-picture-bpl",
+    "notes": "ProPublica confirms Big Picture Company Inc, EIN 05-0485883, 501(c)(3), Providence RI, matching the agenda; the bigpicture.org page confirms the 1995 founding in Rhode Island, the school network and the ImBlaze internship platform, which fits the ImBlaze pilot agreement. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

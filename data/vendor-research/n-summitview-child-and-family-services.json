@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943181886",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://summitviewcf.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://summitviewcf.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://summitviewcf.org/home/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-summitview-child-and-family-services",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Summitview Child & Family Services Inc' (ProPublica Nonprofit Explorer, EIN 94-3181886, El Dorado Hills, CA)",
+      "Organization's own website (summitviewcf.org) lists 'Summitview Child & Family Services' and says it operates a nonpublic school with special education services, matching OUSD's 'Nonpublic, Nonsectarian School/Agency Services' special education contract",
+      "Agenda gives Placerville, CA; the organization's own home page lists 670 Placerville Dr., Placerville, CA and its contact page says the main office recently moved to El Dorado Hills, same area of El Dorado County"
+    ],
+    "key": "n-summitview-child-and-family-services",
+    "notes": "Agenda says Placerville, CA; the organization's home page still shows a Placerville address (670 Placerville Dr. Ste.2) but its contact page says the main office moved to El Dorado Hills. Email domain (summitviewtreatment.org) differs from the website domain but is shown on the organization's own contact page. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "4805 Golden Foothill Pkwy, El Dorado Hills, CA 95762",
+      "caEntityNumber": null,
+      "ein": "94-3181886",
+      "email": "contactus@summitviewtreatment.org",
+      "headquarters": "El Dorado Hills, CA",
+      "legalName": "Summitview Child & Family Services Inc",
+      "orgType": "nonprofit",
+      "phone": "(530) 644-2412",
+      "samUei": null,
+      "summary": "Summitview Child & Family Services is a private nonprofit based in El Dorado County, California. It provides mental health services, residential treatment and special education for children, teens and families. It runs a nonpublic school and uses trauma-informed care and dialectical behavior therapy.",
+      "website": "https://summitviewcf.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Summitview Child & Family Services Inc - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943181886"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Summitview",
+        "url": "https://summitviewcf.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us - Summitview",
+        "url": "https://summitviewcf.org/about-us/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Home - Summitview",
+        "url": "https://summitviewcf.org/home/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-summitview-child-and-family-services",
+    "notes": "Name, 501(c)(3) status, EIN and El Dorado Hills location match ProPublica and the org's own site, which still lists a Placerville office (agenda city) and operates a certified nonpublic school (Summitview Academy) consistent with the special education nonpublic agency contract. Contact fields are generic business details on the official contact page, and the summary is neutral and supported (home page mentions DBT and trauma-informed care).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

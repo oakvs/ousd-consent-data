@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/863648469",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mobmyotherbrother.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.mobmyotherbrother.org/blank-1",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-my-other-brother-fiscal-sponsor-institute-for-sustainable-economic-educational-and-environmental-design",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'My Other Brother Mob', EIN 86-3648469 (ProPublica Nonprofit Explorer)",
+      "Organization website (mobmyotherbrother.org) lists the same EIN, 86-3648469, and an Oakland, CA address, matching the agenda location",
+      "Website describes mentorship and college-access support for Black students and says it partners with Oakland Unified School District schools (Castlemont High School, Dr. Martin Luther King Jr. Academic Middle School), matching OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "n-my-other-brother-fiscal-sponsor-institute-for-sustainable-economic-educational-and-environmental-design",
+    "notes": "Agenda names Institute for Sustainable Economic, Educational and Environmental Design (ISEEED, Oakland, EIN 90-0777307 per a directory listing) as fiscal sponsor. I found no page confirming that relationship, and ProPublica shows My Other Brother Mob has its own 501(c)(3) determination (ruling year 2021), so the sponsorship may predate that or be historical. The profile describes My Other Brother only. The contact email is a Gmail address listed by the organization as its general contact. No phone number or CA SOS entity number was found.",
+    "profile": {
+      "address": "2713 Chestnut St., Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "86-3648469",
+      "email": "myotherbrothermobism@gmail.com",
+      "headquarters": "Oakland, CA",
+      "legalName": "My Other Brother Mob",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "My Other Brother is an Oakland nonprofit founded in 2016 that supports Black American students, mainly boys and young men from low-income communities. Its programs include mentorship, leadership development, scholarship and college-access support, and a companion program called My Other Sister. It places mentors in schools in Oakland Unified School District and elsewhere in the Bay Area.",
+      "website": "https://www.mobmyotherbrother.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "My Other Brother Mob - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/863648469"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email",
+          "address",
+          "ein",
+          "headquarters"
+        ],
+        "title": "My Other Brother I African American Youth Support in Oakland",
+        "url": "https://www.mobmyotherbrother.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "email",
+          "address",
+          "ein"
+        ],
+        "title": "About - My Other Brother (MOB)",
+        "url": "https://www.mobmyotherbrother.org/blank-1"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-my-other-brother-fiscal-sponsor-institute-for-sustainable-economic-educational-and-environmental-design",
+    "notes": "ProPublica and the organization's own site confirm My Other Brother Mob (EIN 86-3648469, 2713 Chestnut St, Oakland), founded 2016, with OUSD named as a partner district; address, email, programs and summary are all shown on the cited pages. The ISEEED fiscal-sponsor link is not confirmed by any source, but the profile describes only My Other Brother and the name, location and services fit the agenda item.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

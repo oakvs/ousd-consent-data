@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://peralta.ousd.org/about-us/pptg",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://peralta.ousd.org/calendar-events",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942831259",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-peralta-parent-teacher-group",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Peralta Elementary School's OUSD page for the Peralta Parent Teacher Group (PPTG) gives 460 63rd Street, Oakland, CA 94609, matching the agenda's Oakland, CA and the 'Donation - Peralta Elementary School' title",
+      "The school's events page states 'PPTG 501(c)(3) Information: Federal Tax ID Number: 94-2831259', and ProPublica shows that EIN belongs to Peralta Parent Group Inc, Oakland, CA (a 501(c)(3))",
+      "The PPTG page describes it as the parent group supporting Peralta Elementary School, an OUSD school, matching a donation to that school"
+    ],
+    "key": "n-peralta-parent-teacher-group",
+    "notes": "The PPTG's former own site (peraltaschool.org) now redirects to the OUSD school page, so the OUSD PPTG page is used as the website. IRS legal name per ProPublica is 'Peralta Parent Group Inc' (also listed as Emerald City Child Care); the PPTG page mentions the group was formally incorporated in 1971. The EIN link between PPTG and Peralta Parent Group Inc rests on the school's own statement of the PPTG Tax ID. No CA SOS number checked.",
+    "profile": {
+      "address": "460 63rd Street, Oakland, CA 94609",
+      "caEntityNumber": null,
+      "ein": "94-2831259",
+      "email": "pptgchair@peraltaschool.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Peralta Parent Group Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 879-3145",
+      "samUei": null,
+      "summary": "A nonprofit parent-teacher group that supports Peralta Elementary School in Oakland. It raises money, builds community and coordinates parent volunteers to support and enrich students' education. Every Peralta parent is automatically a member.",
+      "website": "https://peralta.ousd.org/about-us/pptg"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "PPTG - Peralta Elementary School",
+        "url": "https://peralta.ousd.org/about-us/pptg"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "Events & Fundraising - Peralta Elementary School",
+        "url": "https://peralta.ousd.org/calendar-events"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Peralta Parent Group Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942831259"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-peralta-parent-teacher-group",
+    "notes": "Peralta Elementary's OUSD PPTG page confirms the address, phone, role email, description and membership, and the school's events page states PPTG's federal tax ID 94-2831259, which ProPublica lists as Peralta Parent Group Inc, a 501(c)(3) in Oakland. This fits a donation to Peralta Elementary; the legal-name link rests on the school's own EIN statement, which I judge adequate.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

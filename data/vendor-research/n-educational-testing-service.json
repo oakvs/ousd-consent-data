@@ -1,0 +1,83 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/210634479",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ets.org/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-educational-testing-service",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Educational Testing Service' in Princeton, NJ (ProPublica Nonprofit Explorer, EIN 21-0634479), matching the agenda's 'Princeton, NJ'",
+      "ETS's own website describes it as an assessment organization (TOEFL, GRE, Praxis, etc.), consistent with a high school equivalency testing agreement with OUSD's Adult and Career Education Department"
+    ],
+    "key": "n-educational-testing-service",
+    "notes": "Only registry-confirmed fields included. Phone, email and mailing address not found on a citable general contact page. HQ city taken from ProPublica (Princeton, NJ).",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "21-0634479",
+      "email": null,
+      "headquarters": "Princeton, NJ",
+      "legalName": "Educational Testing Service",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "ETS is a nonprofit education organization that develops and administers tests and assessments, including the TOEFL, GRE and Praxis exams. It also provides assessment solutions for schools, institutions and governments, and conducts education research.",
+      "website": "https://www.ets.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Educational Testing Service - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/210634479"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "ETS Overview",
+        "url": "https://www.ets.org/about.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-educational-testing-service",
+    "notes": "ProPublica confirms Educational Testing Service, EIN 21-0634479, 501(c)(3), Princeton NJ, matching the agenda; ETS's about page supports the summary (TOEFL, GRE, Praxis, institutional/government assessment solutions, research), which is neutral and fits a high school equivalency testing agreement.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

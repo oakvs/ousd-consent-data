@@ -1,0 +1,80 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_Natural_Resources_Agency",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.grants.ca.gov/grants/yca/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-california-department-of-natural-resources",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda's funding source is the 'Youth Community Access Grant', a program that the California Grants Portal lists as administered by the CA Natural Resources Agency (the agenda's 'Department of Natural Resources' is not a separate California entity)",
+      "The grant funds youth access to natural and cultural resources for low-income and disadvantaged communities, which fits a public school district department applying for a youth program grant; eligible applicants include public agencies",
+      "California Natural Resources Agency is a cabinet-level state agency headquartered in Sacramento (Wikipedia)"
+    ],
+    "key": "n-california-department-of-natural-resources",
+    "notes": "The agenda names 'California Department of Natural Resources', which does not exist as a California state entity; the Youth Community Access Grant is administered by the California Natural Resources Agency, so that is the entity profiled. The agency's own site (resources.ca.gov) blocks automated fetching, so phone, email and street address were left null. The grant program's contact (bondsandgrants@resources.ca.gov, 916-653-2812) is a program line, not the agency's main line.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Natural Resources Agency",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "A cabinet-level agency of the State of California government. It oversees departments, conservancies and commissions that protect and manage the state's natural landscapes, cultural sites, lands and waterways. It also administers grant programs, including the Youth Community Access Grant Program, which funds youth access to natural and cultural resources.",
+      "website": "https://resources.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "California Natural Resources Agency - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_Natural_Resources_Agency"
+      },
+      {
+        "supports": [
+          "summary",
+          "legalName"
+        ],
+        "title": "Youth Community Access (2024) - California Grants Portal",
+        "url": "https://www.grants.ca.gov/grants/yca/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-california-department-of-natural-resources",
+    "notes": "The agenda's Youth Community Access Grant is administered by the California Natural Resources Agency per the California Grants Portal, which also lists public agencies as eligible applicants; Wikipedia confirms the cabinet-level status, Sacramento headquarters, oversight role and resources.ca.gov website. The summary is neutral and supported, and no personal contact details are included.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

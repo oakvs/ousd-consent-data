@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/954839405",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edresults.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.edresults.org",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-educational-results-partnership",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Educational Results Partnership' (ProPublica Nonprofit Explorer, EIN 95-4839405)",
+      "Located in Sacramento, CA, matching the agenda text 'Sacramento, CA'",
+      "ERP's own website lists Cal-PASS Plus as one of its programs, matching the agenda item 'Data Privacy Agreement (for use with Cal-PASS Plus MOU)'",
+      "Its student-data sharing work matches OUSD's 'Partnerships & data sharing' category"
+    ],
+    "key": "n-educational-results-partnership",
+    "notes": "California Secretary of State entity number and SAM UEI not looked up. Mailing address taken from the organization's contact page; some third-party sources list an older address.",
+    "profile": {
+      "address": "1029 J Street, Ste. 150, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": "95-4839405",
+      "email": "info@edresults.org",
+      "headquarters": "Sacramento, CA",
+      "legalName": "Educational Results Partnership",
+      "orgType": "nonprofit",
+      "phone": "(916) 498-8980",
+      "samUei": null,
+      "summary": "A nonprofit organization that connects student achievement data, from kindergarten through career, with workforce needs. It maintains a large database on student outcomes and runs programs including Cal-PASS Plus, a data-sharing system for schools and colleges. Its stated focus includes equity for underrepresented students.",
+      "website": "https://www.edresults.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Educational Results Partnership - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/954839405"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | ERP",
+        "url": "https://www.edresults.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "Educational Results Partnership",
+        "url": "https://www.edresults.org"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-educational-results-partnership",
+    "notes": "ProPublica shows a Sacramento 501(c)(3) with the same name and EIN, the ERP contact page confirms phone, email and address, and the homepage lists Cal-PASS Plus as a program, matching the agenda's Cal-PASS Plus MOU data privacy agreement. The summary is neutral and consistent with the site.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

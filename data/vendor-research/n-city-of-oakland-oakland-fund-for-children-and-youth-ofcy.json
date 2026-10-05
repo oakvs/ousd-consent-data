@@ -1,0 +1,105 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ofcy.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ofcy.org/contact-3/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandca.gov/Community/Child-and-Youth-Services/Oakland-Fund-for-Children-and-Youth-OFCY",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-city-of-oakland-oakland-fund-for-children-and-youth-ofcy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the Oakland Fund for Children and Youth (OFCY) is a program of the City of Oakland Human Services Department (ofcy.org About page), matching the agenda text 'City of Oakland, Oakland Fund for Children and Youth (OFCY)'",
+      "Located in Oakland, CA, matching the agenda location",
+      "OFCY funds community-based organizations and agencies providing direct services to Oakland children, youth and families, consistent with the grant application listed for an OUSD school and OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "n-city-of-oakland-oakland-fund-for-children-and-youth-ofcy",
+    "notes": "OFCY is a City of Oakland program, not a separate legal entity, so no EIN, CA entity number or UEI and no separate legal name. The City's own OFCY page lists a different address (1 Frank H. Ogawa Plaza) than the OFCY site (150 Frank H. Ogawa Plaza, Suite 4216); the OFCY contact page address is used.",
+    "profile": {
+      "address": "150 Frank H. Ogawa Plaza, Suite 4216, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "ofcy@oaklandca.gov",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 238-3088",
+      "samUei": null,
+      "summary": "The Oakland Fund for Children and Youth (OFCY) is a grantmaking program of the City of Oakland's Human Services Department. It provides funding to community-based organizations and agencies that offer enrichment and support services to Oakland children and youth from birth to 21 years of age.",
+      "website": "https://www.ofcy.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Oakland Fund for Children and Youth - About Us",
+        "url": "https://www.ofcy.org/about-us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Oakland Fund for Children and Youth - Contact",
+        "url": "https://www.ofcy.org/contact-3/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email"
+        ],
+        "title": "Oakland Fund for Children and Youth (OFCY) - City of Oakland",
+        "url": "https://www.oaklandca.gov/Community/Child-and-Youth-Services/Oakland-Fund-for-Children-and-Youth-OFCY"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-city-of-oakland-oakland-fund-for-children-and-youth-ofcy",
+    "notes": "OFCY is a City of Oakland grantmaking program in the Human Services Department, matching the agenda's grant application from the City of Oakland OFCY; the About, Contact and City pages confirm the summary, phone, email and address (the City page lists a different suite, which the notes disclose). The summary is neutral and the org type is public_agency.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

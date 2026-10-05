@@ -1,0 +1,73 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://corporate.homedepot.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.osconline.org/partners_products/the-home-depot/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-home-depot",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Home Depot' for a piggyback contract for Maintenance, Repair, Operating, Industrial Supplies and Related Products; The Home Depot sells these products and has a school-district MRO purchasing program (Ohio Schools Council preferred partner page)",
+      "The Home Depot is a national home improvement retailer with no local franchises, so the name does not collide with a similarly named local business; the agenda gives no city",
+      "SEC EDGAR lists Home Depot, Inc. in Atlanta, GA, matching the corporate site's Store Support Center in Atlanta, GA"
+    ],
+    "key": "n-home-depot",
+    "notes": "Agenda gives no location or contracting entity; the exact legal entity on the piggyback contract (e.g. Home Depot U.S.A., Inc.) was not confirmed, so legal name, registry IDs and contact details were left null. Website given is the corporate site.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Atlanta, GA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Home Depot is a home improvement retailer with more than 2,300 stores in the United States, Canada and Mexico. It sells tools, building materials and home products to do-it-yourself shoppers, professional contractors and customers who want installation services. It also offers maintenance, repair and operations supplies to school districts and other public buyers.",
+      "website": "https://corporate.homedepot.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "About The Home Depot",
+        "url": "https://corporate.homedepot.com/about"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "The Home Depot - Ohio Schools Council",
+        "url": "https://www.osconline.org/partners_products/the-home-depot/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-home-depot",
+    "notes": "The Home Depot corporate About page confirms 2,300+ stores in the U.S., Canada and Mexico, DIY/Pro/installation segments and the Atlanta Store Support Center; the Ohio Schools Council page confirms Home Depot offers MRO supplies to school districts, matching the agenda's MRO piggyback contract. Summary is neutral; the exact tools/building-materials wording is generic but consistent with 'home improvement products'.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

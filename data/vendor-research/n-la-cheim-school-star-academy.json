@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942268457",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-la-cheim-school-star-academy",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Agenda text names two separate organizations under one entry: 'La Cheim School, Inc.' (El Sobrante, CA) and 'Star Academy' (San Rafael, CA)",
+      "La Cheim School Inc is a registered nonprofit in El Sobrante, CA (ProPublica, EIN 94-2268457), matching the El Sobrante location in the agenda",
+      "Star Academy is a separate nonprofit nonpublic special education school at 4470 Redwood Hwy, San Rafael, CA, matching the San Rafael location; it is not part of La Cheim"
+    ],
+    "key": "n-la-cheim-school-star-academy",
+    "notes": "This vendor key merges two distinct organizations from one agenda line: La Cheim School, Inc. (El Sobrante) and Star Academy (San Rafael, separate nonprofit nonpublic school, staracademy.org). A single profile cannot be correct for both, so this should not be published as one box. Recommend splitting into two vendor entries and researching each separately. The La Cheim details above are only one candidate.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-2268457",
+      "email": null,
+      "headquarters": "El Sobrante, CA",
+      "legalName": "La Cheim School Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "La Cheim School Inc is a 501(c)(3) nonprofit educational institution based in El Sobrante, California.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "La Cheim School Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942268457"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": null
+}

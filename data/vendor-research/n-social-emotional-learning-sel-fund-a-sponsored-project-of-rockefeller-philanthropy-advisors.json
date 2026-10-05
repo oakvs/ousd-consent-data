@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/133615533",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rockpa.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.rockpa.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-social-emotional-learning-sel-fund-a-sponsored-project-of-rockefeller-philanthropy-advisors",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the legal entity 'Rockefeller Philanthropy Advisors, Inc.' as the sponsor of the SEL Fund; ProPublica Nonprofit Explorer lists a registered 501(c)(3) 'Rockefeller Philanthropy Advisors Inc' (EIN 13-3615533, New York, NY)",
+      "RPA's own website says it provides fiscal sponsorship services, consistent with the 'sponsored project' wording in the agenda",
+      "Education First materials describe a Social and Emotional Learning Innovation Fund run with Rockefeller Philanthropy Advisors, whose awardees included Oakland Unified teachers, consistent with OUSD's Social Emotional Learning Department as the grant recipient"
+    ],
+    "key": "n-social-emotional-learning-sel-fund-a-sponsored-project-of-rockefeller-philanthropy-advisors",
+    "notes": "The profile describes the legal fiscal sponsor (RPA), not the SEL Fund project itself, which is not a separate legal entity. No general email or street address was shown on the cited pages, so both are null. Link between OUSD and the fund rests on the agenda text plus Oakland awardees in the earlier SEL Innovation Fund; no OUSD page confirming this specific grant was found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "13-3615533",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "Rockefeller Philanthropy Advisors Inc",
+      "orgType": "nonprofit",
+      "phone": "(212) 812-4330",
+      "samUei": null,
+      "summary": "Rockefeller Philanthropy Advisors (RPA) is a nonprofit, founded in 2002, that helps donors around the world give effectively. Its services include strategy and consulting, management and implementation, fiscal sponsorship, and impact investing. The Social Emotional Learning (SEL) Fund is a project that RPA sponsors.",
+      "website": "https://www.rockpa.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Rockefeller Philanthropy Advisors Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/133615533"
+      },
+      {
+        "supports": [
+          "phone",
+          "summary",
+          "website"
+        ],
+        "title": "Contact - Rockefeller Philanthropy Advisors",
+        "url": "https://www.rockpa.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Home - Rockefeller Philanthropy Advisors",
+        "url": "https://www.rockpa.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-social-emotional-learning-sel-fund-a-sponsored-project-of-rockefeller-philanthropy-advisors",
+    "notes": "The agenda names Rockefeller Philanthropy Advisors, Inc. as the fiscal sponsor of the SEL Fund, and the profile correctly describes that legal entity. ProPublica confirms the name, EIN 13-3615533, New York NY and 501(c)(3) status; rockpa.org confirms the phone, the four services and the 2002 founding. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/460557527",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://scripted.org/our-mission/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://patch.com/new-york/new-york-city/scripted-announces-name-change-code-nation",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 503",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-scripted-code-nation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "ProPublica Nonprofit Explorer lists 'Code Nation Inc', EIN 46-0557527, New York, NY, a 501(c)(3) educational nonprofit; Benevity lists the same EIN under the name 'ScriptEd, Inc DBA Code Nation', matching the agenda's 'ScriptEd Inc., dba Code Nation'",
+      "Located in New York, NY, matching the agenda text",
+      "Patch article says ScriptEd renamed itself Code Nation in 2018 and serves schools in San Francisco and Oakland, matching OUSD's classroom and academic program contract",
+      "Mailing address 85 Broad St, 17th Floor, New York, NY 10004 appears on the ScriptEd site and the Benevity listing"
+    ],
+    "key": "n-scripted-code-nation",
+    "notes": "Website taken from the Patch article (codenation.org), which returned HTTP 503 to automated fetches. The scripted.org site is an apparently older ScriptEd-branded site whose Our Mission page also describes Code Nation. Phone 646-779-2788 appears only on a script-rendered Benevity page and was left out. No CA entity number or SAM UEI found.",
+    "profile": {
+      "address": "85 Broad St, 17th Floor, New York, NY 10004",
+      "caEntityNumber": null,
+      "ein": "46-0557527",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "Code Nation Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Code Nation, formerly known as ScriptEd, is a New York-based nonprofit that teaches coding to students in under-resourced high schools. Volunteer software professionals teach the courses, and the program connects students to careers in technology. It works with schools in New York City and the San Francisco Bay Area.",
+      "website": "https://www.codenation.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Code Nation Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/460557527"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Our Mission | ScriptEd",
+        "url": "https://scripted.org/our-mission/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "ScriptEd Announces Name Change to Code Nation",
+        "url": "https://patch.com/new-york/new-york-city/scripted-announces-name-change-code-nation"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-scripted-code-nation",
+    "notes": "ProPublica (Code Nation Inc, EIN 46-0557527, New York), the ScriptEd mission page (85 Broad St, volunteer teachers, NYC and Bay Area, 'formerly known as Code Nation') and the 2018 Patch article all match the agenda's 'ScriptEd Inc., dba Code Nation', New York location, and a coding-education contract. The website codenation.org is only supported by a 2018 article and returns 503; scripted.org now appears to be the active site, so the website is unconfirmed. The summary's 'formerly known as ScriptEd' direction is outdated since the current site says ScriptEd is the current name, but the substantive claims are supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "website"
+    ],
+    "verdict": "confirmed"
+  }
+}

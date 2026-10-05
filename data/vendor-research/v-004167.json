@@ -1,0 +1,99 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.syska.com/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://syska.com/offices/san-francisco/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://syska.com/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-004167",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: Syska Hennessy Group is a full-service MEP (mechanical, electrical, plumbing) engineering firm, matching OUSD's 'School buildings & construction' contract for the Fremont High School new construction project (syska.com)",
+      "Has a San Francisco office at 425 California Street, Suite 400, matching the agenda's 'San Francisco, CA' (syska.com/offices/san-francisco)"
+    ],
+    "key": "v-004167",
+    "notes": "Phone and address are the San Francisco office (matching the agenda), not necessarily the corporate headquarters. Company headquarters and registry IDs (CA SOS entity number, SAM UEI) not verified; legal name not confirmed from a registry. No page found explicitly linking Syska to OUSD; identity rests on name, SF location and service type.",
+    "profile": {
+      "address": "425 California Street, Suite 400, San Francisco, CA 94104",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@syska.com",
+      "headquarters": null,
+      "legalName": null,
+      "orgType": "company",
+      "phone": "415-288-9060",
+      "samUei": null,
+      "summary": "Syska Hennessy Group is an engineering firm founded in 1928. It designs mechanical, electrical and plumbing systems for buildings and also provides technology and communications design, commissioning, fire and life safety, and architectural lighting services. It has about 21 offices, including one in San Francisco.",
+      "website": "https://syska.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Syska Hennessy Group",
+        "url": "https://www.syska.com/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "San Francisco - Syska",
+        "url": "https://syska.com/offices/san-francisco/"
+      },
+      {
+        "supports": [
+          "email"
+        ],
+        "title": "Contact - Syska Hennessy Group",
+        "url": "https://syska.com/contact/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-004167",
+    "notes": "Syska Hennessy Group is an MEP engineering firm with a San Francisco office, matching the agenda name, city and the Fremont High School new construction engineering service. The cited pages confirm the 1928 founding, services, about 21 offices, SF address and phone, and the general info@syska.com address; the summary is neutral. No page links Syska to OUSD directly, so identity rests on name, city and service fit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680463586",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.agc-ca.org/resources/workforce-development/construction-education-foundation/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://buildcalifornia.com/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-construction-education-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda title names 'AGC Construction Education Foundation' and the agenda gives West Sacramento, CA; ProPublica Nonprofit Explorer lists 'AGC Construction Education Foundation' as a 501(c)(3) in W Sacramento, CA",
+      "The foundation's own page on AGC of California's site gives its address as 3095 Beacon Blvd., West Sacramento, CA 95691, matching the agenda location",
+      "Its mission of building the construction workforce through youth-focused programs (Build California, student outreach) fits a contract with OUSD's High School Linked Learning Office (career pathway programs)"
+    ],
+    "key": "n-construction-education-foundation",
+    "notes": "No Oakland or OUSD mention found on the organization's pages; identity rests on exact name match plus West Sacramento location. No California SOS or SAM.gov record was checked. Phone and website are those of the foundation page hosted by AGC of California.",
+    "profile": {
+      "address": "3095 Beacon Blvd., West Sacramento, CA 95691",
+      "caEntityNumber": null,
+      "ein": "68-0463586",
+      "email": null,
+      "headquarters": "West Sacramento, CA",
+      "legalName": "Agc Construction Education Foundation",
+      "orgType": "nonprofit",
+      "phone": "916.371.2422",
+      "samUei": null,
+      "summary": "A California nonprofit, affiliated with the Associated General Contractors (AGC) of California, that works to attract, develop and keep a skilled construction workforce. It runs programs such as Build California, a campaign that promotes construction careers to young people, along with student chapters, scholarships, and training and education.",
+      "website": "https://www.agc-ca.org/resources/workforce-development/construction-education-foundation/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "AGC Construction Education Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680463586"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "AGC Construction Education Foundation (AGC of California)",
+        "url": "https://www.agc-ca.org/resources/workforce-development/construction-education-foundation/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Build California",
+        "url": "https://buildcalifornia.com/about/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-construction-education-foundation",
+    "notes": "The agenda title names AGC Construction Education Foundation in West Sacramento, CA; ProPublica (EIN 68-0463586, 501(c)(3), West Sacramento) and the AGC of California page (3095 Beacon Blvd, 916.371.2422) match exactly. The workforce and youth-outreach mission fits a No Cost agreement with the High School Linked Learning Office, and the summary is supported by the cited pages and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

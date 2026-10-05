@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sec.gov/Archives/edgar/data/1585521/000158552126000030/zm-20260131.htm",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.zoom.com/en/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.zoom.com/en/industry/education/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-zoom",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Zoom, Inc.' in a California Student Data Privacy Agreement piggybacked from Pleasanton USD; Zoom (now Zoom Communications, Inc.) is the video and collaboration software company that offers K-12 school products and a K-12 privacy statement",
+      "Zoom's own education page lists K-12 schools and districts as customers, matching a student data privacy agreement for a technology service",
+      "SEC 10-K filing for Zoom Communications, Inc. (formerly Zoom Video Communications, Inc.) shows its principal offices in San Jose, CA, and describes it as serving the education sector"
+    ],
+    "key": "n-zoom",
+    "notes": "Agenda says 'Zoom, Inc.'; the company's current legal name is Zoom Communications, Inc. (renamed December 2024). No general email address is published on the contact page. CA entity number and SAM UEI not verified, left null.",
+    "profile": {
+      "address": "55 Almaden Boulevard, 6th Floor, San Jose, California 95113",
+      "caEntityNumber": null,
+      "ein": "61-1648780",
+      "email": null,
+      "headquarters": "San Jose, CA",
+      "legalName": "Zoom Communications, Inc.",
+      "orgType": "company",
+      "phone": "(888) 799-9666",
+      "samUei": null,
+      "summary": "A technology company that makes a communications platform for video meetings, phone calls, team chat, document collaboration and contact centers. It also offers products for schools and universities. The company was formerly named Zoom Video Communications, Inc. and is headquartered in San Jose, California.",
+      "website": "https://www.zoom.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "phone",
+          "ein",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Zoom Communications, Inc. - Form 10-K - FY2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/1585521/000158552126000030/zm-20260131.htm"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "legalName"
+        ],
+        "title": "About Zoom",
+        "url": "https://www.zoom.com/en/about/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Zoom for Education",
+        "url": "https://www.zoom.com/en/industry/education/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-zoom",
+    "notes": "The agenda item is a student data privacy agreement with 'Zoom, Inc.' for a technology service, which fits the video and collaboration software company now named Zoom Communications, Inc. The 10-K confirms the legal name, San Jose address, phone and EIN, and the Zoom pages confirm the products and K-12 offerings; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

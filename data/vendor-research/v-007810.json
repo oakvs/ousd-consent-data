@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://charactercounts.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/420680460",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.thedowneypatriot.com/articles/drake-university-acquires-rights-to-character-counts",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007810",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'CHARACTER COUNTS Drakes University' in Des Moines, IA; the CHARACTER COUNTS! program is run by the Ray Center at Drake University, 2702 Forest Avenue, Des Moines, IA 50311 (charactercounts.org contact page)",
+      "Drake University acquired exclusive global rights to CHARACTER COUNTS! in 2019 and the Ray Center is its global headquarters (Downey Patriot, July 16, 2019)",
+      "Drake University is a registered 501(c)(3) in Des Moines, IA (ProPublica Nonprofit Explorer, EIN 42-0680460), matching the agenda's Des Moines location",
+      "CHARACTER COUNTS! is a school character-education program, consistent with OUSD's 'Student health, support & family services' services agreement funded by Title 4-Student Support"
+    ],
+    "key": "v-007810",
+    "notes": "The agenda vendor 'CHARACTER COUNTS Drakes University' is the Drake University Ray Center, which owns CHARACTER COUNTS!. Legal entity is Drake University (EIN 42-0680460); the contact details are those of the Ray Center, not the university's main campus. No CA entity number or SAM UEI looked up.",
+    "profile": {
+      "address": "2702 Forest Avenue, Des Moines, IA 50311",
+      "caEntityNumber": null,
+      "ein": "42-0680460",
+      "email": "CustomerService@CharacterCounts.org",
+      "headquarters": "Des Moines, IA",
+      "legalName": "Drake University",
+      "orgType": "nonprofit",
+      "phone": "515-271-1910",
+      "samUei": null,
+      "summary": "Drake University is a private nonprofit university in Des Moines, Iowa. Its Robert D. and Billie Ray Center is the global home of CHARACTER COUNTS!, a character education program based on six pillars: trustworthiness, respect, responsibility, fairness, caring and citizenship. The Ray Center manages training, licensing and communications for the program, which is used in schools and youth organizations.",
+      "website": "https://charactercounts.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "Contact Us - Character Counts!",
+        "url": "https://charactercounts.org/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Drake University - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/420680460"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Drake University acquires rights to Character Counts - The Downey Patriot",
+        "url": "https://www.thedowneypatriot.com/articles/drake-university-acquires-rights-to-character-counts"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007810",
+    "notes": "The agenda vendor 'CHARACTER COUNTS Drakes University' in Des Moines, IA matches the Ray Center at Drake University, which the charactercounts.org contact page and the Downey Patriot article show runs CHARACTER COUNTS!; address, phone, generic customer-service email, EIN and 501(c)(3) status were all confirmed. The word 'private' in the summary is not stated in the cited sources (though true of Drake), and the summary is otherwise neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

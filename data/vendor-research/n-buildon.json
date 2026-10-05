@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/223128648",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildon.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.buildon.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-buildon",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered nonprofit 'Buildon Inc' in Stamford, CT (ProPublica Nonprofit Explorer, EIN 22-3128648), matching the agenda's 'buildOn' and 'Stamford, CT'",
+      "buildOn's own contact page lists its address as 1111 Summer Street, Suite 602A, Stamford, CT 06905, in the same city the agenda gives",
+      "buildOn's website describes after-school service-learning programs in high schools, consistent with OUSD's 'Classroom & academic programs' category and a no-cost partnership agreement"
+    ],
+    "key": "n-buildon",
+    "notes": "No Oakland mention found on buildOn's site; identity rests on the unique name plus the agenda's Stamford, CT location and matching education purpose. No main phone number found on the pages fetched.",
+    "profile": {
+      "address": "1111 Summer Street, Suite 602A, Stamford, CT 06905",
+      "caEntityNumber": null,
+      "ein": "22-3128648",
+      "email": "info@buildon.org",
+      "headquarters": "Stamford, CT",
+      "legalName": "Buildon Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "buildOn is a nonprofit that works to break the cycle of poverty, illiteracy and low expectations through service and education. In the United States it runs service-learning programs for students in high schools. Internationally it builds schools in developing countries.",
+      "website": "https://www.buildon.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Buildon Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/223128648"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Contact - buildOn",
+        "url": "https://www.buildon.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - buildOn",
+        "url": "https://www.buildon.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-buildon",
+    "notes": "ProPublica shows Buildon Inc, EIN 22-3128648, 501(c)(3) in Stamford, CT, matching the agenda's name and city; the buildOn contact page confirms address, general email and website, and the About page supports the neutral summary. The About page does not mention Oakland, but the distinctive name, matching HQ city and education purpose fit a no-cost partnership.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

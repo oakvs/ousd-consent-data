@@ -1,0 +1,126 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156335",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jcrc.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://jcrc.org/who-we-are/jcrc-history/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://oaklandliteracycoalition.org/jewish-coalition-for-literacy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-jewish-community-relations-council-jewish-coalition-for-literacy-project",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered San Francisco nonprofit: 'Jewish Community Relations Council Of San Francisco Marin & Peninsula', EIN 94-1156335 (ProPublica Nonprofit Explorer)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "JCRC's own history page says JCRC established a local branch of the Jewish Coalition for Literacy in 1999, matching the agenda's 'Jewish Coalition for Literacy Project'",
+      "A public page about the Jewish Coalition for Literacy describes one-on-one reading support for K-3 students in Title 1 schools, including Greenleaf Elementary School in Oakland, matching OUSD's 'Classroom & academic programs' contract"
+    ],
+    "key": "n-jewish-community-relations-council-jewish-coalition-for-literacy-project",
+    "notes": "Agenda names both JCRC and the Jewish Coalition for Literacy (JCL) program; JCL is a JCRC program per JCRC's history page. The Oakland Literacy Coalition page lists a separate Oakland address/phone for JCL, which were not used; the profile reflects the JCRC parent. California entity number and SAM UEI not found.",
+    "profile": {
+      "address": "121 Steuart Street, Ste. 301, San Francisco, CA 94105",
+      "caEntityNumber": null,
+      "ein": "94-1156335",
+      "email": "info@jcrc.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Jewish Community Relations Council Of San Francisco Marin & Peninsula",
+      "orgType": "nonprofit",
+      "phone": "(415) 957-1551",
+      "samUei": null,
+      "summary": "A San Francisco nonprofit, known as JCRC Bay Area, that works on behalf of the Bay Area Jewish community on issues such as social justice, combating hate and community safety. Through its Jewish Coalition for Literacy program, started in 1999, trained volunteers give one-on-one reading support to students in kindergarten through 3rd grade, with a focus on Title 1 schools.",
+      "website": "https://jcrc.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Jewish Community Relations Council Of San Francisco Marin & Peninsula - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156335"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address"
+        ],
+        "title": "Contact - JCRC Bay Area",
+        "url": "https://jcrc.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "JCRC History - Jewish Community Relations Council",
+        "url": "https://jcrc.org/who-we-are/jcrc-history/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Jewish Coalition for Literacy - Oakland Literacy Coalition",
+        "url": "https://oaklandliteracycoalition.org/jewish-coalition-for-literacy/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-jewish-community-relations-council-jewish-coalition-for-literacy-project",
+    "notes": "ProPublica confirms the San Francisco 501(c)(3) with EIN 94-1156335; the JCRC contact page confirms address, phone, email and website; JCRC's history page confirms it opened the Jewish Coalition for Literacy affiliate in 1999, and the Oakland Literacy Coalition page confirms K-3 one-on-one reading in Title 1 schools including Oakland's Greenleaf Elementary, which fits the no-cost classroom partnership. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

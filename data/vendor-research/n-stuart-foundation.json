@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://stuartfoundation.org/who-we-are/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stuartfoundation.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/200882784",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-stuart-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Stuart Foundation' as the funder of a grant for a Learning Lab at Oakland International High School; the Stuart Foundation of San Francisco is a private foundation whose stated mission is public education for young people in California",
+      "The foundation's own site gives its name as 'Stuart Foundation'; a third-party funder profile (Hinchilla) identifies it as 'Stuart Foundation (Elbridge Stuart Foundation)' with EIN 20-0882784 and the same 500 Washington Street address, and ProPublica lists Elbridge Stuart Foundation, EIN 20-0882784, in San Francisco, CA",
+      "The foundation's own newsletter (March 2023) discusses the Linked Learning approach in Oakland Unified, showing it follows OUSD's education work"
+    ],
+    "key": "n-stuart-foundation",
+    "notes": "Legal name per IRS/ProPublica is Elbridge Stuart Foundation, operating as Stuart Foundation (DBA link confirmed via third-party profile hinchilla.com, not cited). The agenda text gave no location and no page directly confirmed the OIHS Learning Lab grant; identity rests on name, registry, and mission match. CA entity number and SAM UEI not searched.",
+    "profile": {
+      "address": "500 Washington Street, 8th Floor, San Francisco, CA 94111",
+      "caEntityNumber": null,
+      "ein": "20-0882784",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Elbridge Stuart Foundation",
+      "orgType": "nonprofit",
+      "phone": "(415) 393-1551",
+      "samUei": null,
+      "summary": "The Stuart Foundation is a private foundation based in San Francisco. It makes grants to help young people through public education. Its work focuses on California schools and, more broadly, on well-resourced and inclusive public education systems.",
+      "website": "https://stuartfoundation.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Stuart Foundation",
+        "url": "https://stuartfoundation.org/who-we-are/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address"
+        ],
+        "title": "About Us - Stuart Foundation",
+        "url": "https://www.stuartfoundation.org/about-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Elbridge Stuart Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/200882784"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-stuart-foundation",
+    "notes": "Cited sources confirm the Stuart Foundation's San Francisco address, phone, and mission, and ProPublica confirms Elbridge Stuart Foundation (EIN 20-0882784) as a 501(c)(3) private foundation; a search result (GuideStar: 'Elbridge Stuart Foundation DBA Stuart Foundation') links the two names. A California education funder fits a Learning Lab grant at Oakland International High School, though no source directly confirms that specific grant.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

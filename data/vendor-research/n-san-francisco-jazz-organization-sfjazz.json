@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942990335",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-2990335",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/SFJAZZ_Center",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-san-francisco-jazz-organization-sfjazz",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'San Francisco Jazz Organization' (ProPublica Nonprofit Explorer, EIN 94-2990335, San Francisco, CA), matching the agenda name and the agenda location San Francisco, CA",
+      "GuideStar lists it as also known as SFJAZZ, matching the '(SFJAZZ)' in the agenda text, at 201 Franklin St, San Francisco, CA 94102",
+      "Its stated mission includes jazz education, matching OUSD's 'Classroom & academic programs' category for a no-cost services agreement"
+    ],
+    "key": "n-san-francisco-jazz-organization-sfjazz",
+    "notes": "sfjazz.org returned 403 to automated fetching, so phone and email could not be verified and are left null. The Oakland school programs mentioned in a search result were not fetched, so they are not cited. CA entity number and SAM UEI not found.",
+    "profile": {
+      "address": "201 Franklin St, San Francisco, CA 94102",
+      "caEntityNumber": null,
+      "ein": "94-2990335",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "San Francisco Jazz Organization",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit arts organization in San Francisco that presents jazz performances and offers jazz education. It operates the SFJAZZ Center, a venue built for jazz performance and education, and describes itself as an international leader in jazz creation, presentation, and education.",
+      "website": "http://www.sfjazz.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "San Francisco Jazz Organization - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942990335"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "address",
+          "website",
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "San Francisco Jazz Organization - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-2990335"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "SFJAZZ Center - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/SFJAZZ_Center"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-san-francisco-jazz-organization-sfjazz",
+    "notes": "ProPublica and GuideStar confirm the 501(c)(3) San Francisco Jazz Organization (AKA SFJAZZ, EIN 94-2990335, 201 Franklin St, San Francisco), matching the agenda name and city and a no-cost classroom program agreement. The summary, address, website and EIN are supported by the cited sources, and the wording is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

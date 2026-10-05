@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/680433289",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.projectavary.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-project-avary",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Project Avary Inc' (ProPublica Nonprofit Explorer, EIN 68-0433289)",
+      "Registered and headquartered in San Rafael, CA, matching the agenda text 'San Rafael, CA'",
+      "Website describes support programs for children with incarcerated parents, including school and community training, consistent with OUSD's 'Student health, support & family services' category"
+    ],
+    "key": "n-project-avary",
+    "notes": "Website home page did not mention Oakland or OUSD; identity rests on name, San Rafael location, and service type.",
+    "profile": {
+      "address": "P.O. Box 150088, San Rafael, CA 94915",
+      "caEntityNumber": null,
+      "ein": "68-0433289",
+      "email": "info@projectavary.org",
+      "headquarters": "San Rafael, CA",
+      "legalName": "Project Avary Inc",
+      "orgType": "nonprofit",
+      "phone": "(415) 457-8799",
+      "samUei": null,
+      "summary": "Project Avary is a nonprofit based in San Rafael, California, that supports children with incarcerated parents. Its programs include outdoor leadership activities, support groups, whole family support, and training for schools and communities.",
+      "website": "https://www.projectavary.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Project Avary Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/680433289"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Project Avary",
+        "url": "https://www.projectavary.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-project-avary",
+    "notes": "Exact name and San Rafael, CA location match the agenda; ProPublica confirms Project Avary Inc, EIN 68-0433289, a San Rafael 501(c)(3), and the website confirms the programs, phone, generic info@ email and PO box. The site does not mention Oakland or OUSD, but a no-cost student-support MOU fits a Bay Area nonprofit serving youth, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

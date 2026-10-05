@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ausdk12.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ausdk12.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-albany-unified-school-district",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Albany Unified School District' (official site ausdk12.org)",
+      "Located in Albany, CA, matching the agenda text 'Albany, CA'",
+      "District website has a Special Education department section, matching OUSD's 'Special education' MOU with the Special Education Department"
+    ],
+    "key": "n-albany-unified-school-district",
+    "notes": "Public school district; no EIN, CA entity number or SAM UEI sought. Only general email found on the home page is a ParentSquare address, so email left null.",
+    "profile": {
+      "address": "1216 Solano Ave, Albany, CA 94706",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Albany, CA",
+      "legalName": "Albany Unified School District",
+      "orgType": "public_agency",
+      "phone": "(510) 558-3750",
+      "samUei": null,
+      "summary": "A public school district serving the city of Albany, California. It runs preschool through grade 12 programs, including elementary schools, a middle school, a high school and a continuation high school. It also has a Special Education department that coordinates services with the North Region Special Education Local Plan Area (SELPA).",
+      "website": "https://www.ausdk12.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Albany Unified School District",
+        "url": "https://www.ausdk12.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "address",
+          "headquarters"
+        ],
+        "title": "Albany Unified School District - About Us",
+        "url": "https://www.ausdk12.org/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-albany-unified-school-district",
+    "notes": "Cited ausdk12.org pages show the name, Albany CA address (1216 Solano Ave), phone, PreK-12 schools, and Special Education/North Region SELPA membership, matching the agenda's Albany Unified School District special education MOU. Summary is neutral and supported; email correctly left null.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

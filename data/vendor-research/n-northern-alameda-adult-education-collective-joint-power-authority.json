@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.naaec.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.naaec.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://prod-nova-attachments.s3-us-west-1.amazonaws.com/documents/proposal/4097/2023/05/22/232737/42_Northern_Alameda_Adult_Education_Collective_CFAD_2023_24.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://caladulted.org/ConsortiumDetails/369",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-northern-alameda-adult-education-collective-joint-power-authority",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the Northern Alameda Adult Education Collective (NAAEC) is a regional adult education consortium based in Oakland, CA (naaec.org; CAEP consortium directory)",
+      "The consortium's 2023-24 CAEP planning document (CFAD) says it operates as a JPA (joint powers authority), matching the 'Joint Power Authority' in the agenda name",
+      "California Adult Education Program directory lists Oakland Unified as a member of the consortium, matching an OUSD data-sharing MOU presented by the Chief Academic Officer",
+      "naaec.org lists OUSD's Oakland Adult and Career Education program among its member programs"
+    ],
+    "key": "n-northern-alameda-adult-education-collective-joint-power-authority",
+    "notes": "No EIN, CA entity number or SAM UEI found; no general email published. Phone is the toll-free number shown on the NAAEC contact page, which lists the Peralta CCD District Office address.",
+    "profile": {
+      "address": "333 East 8th Street, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Northern Alameda Adult Education Collective",
+      "orgType": "public_agency",
+      "phone": "833.491.1530",
+      "samUei": null,
+      "summary": "A regional consortium of adult schools, community colleges, school districts and the county office of education in northern Alameda County. It coordinates adult education services such as English as a Second Language, basic literacy, high school diploma or equivalency, and career training. It operates as a joint powers authority, with Peralta Community College District as its fiscal agent.",
+      "website": "https://www.naaec.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName",
+          "website"
+        ],
+        "title": "Contact - Northern Alameda Adult Education Collective",
+        "url": "https://www.naaec.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About NAAEC - Northern Alameda Adult Education Collective",
+        "url": "https://www.naaec.org/about/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "CAEP CFAD 42 Northern Alameda Adult Education Collective 2023-24",
+        "url": "https://prod-nova-attachments.s3-us-west-1.amazonaws.com/documents/proposal/4097/2023/05/22/232737/42_Northern_Alameda_Adult_Education_Collective_CFAD_2023_24.html"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Consortium Directory - Northern Alameda Adult Education Collective - California Adult Education Program",
+        "url": "https://caladulted.org/ConsortiumDetails/369"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-northern-alameda-adult-education-collective-joint-power-authority",
+    "notes": "The CFAD states the consortium operates as a JPA with Peralta CCD as fiscal agent and lists Oakland Unified as a member, which fits a data-sharing MOU. The contact page and directory confirm the name, phone, address and website, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943179772",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rosefdn.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rosefdn.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://rosefdn.org/latest/turning-gray-to-green/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-rose-foundation",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Rose Foundation For Communities And The Environment', EIN 94-3179772, Oakland, CA (ProPublica Nonprofit Explorer)",
+      "Located in Oakland, CA, matching the agenda text",
+      "Rose Foundation's own page says its New Voices Are Rising program won a California Urban Greening grant to green the Coliseum College Prep Academy campus, an OUSD school, matching the agenda's 'Campus Greening Project' donation agreement"
+    ],
+    "key": "n-rose-foundation",
+    "notes": "Contact page lists only an accessibility-request email (access@rosefdn.org), not a general inbox, so email left null. CA entity number and SAM UEI not looked up.",
+    "profile": {
+      "address": "201 4th Street, Suite 102 Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "94-3179772",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Rose Foundation For Communities And The Environment",
+      "orgType": "nonprofit",
+      "phone": "(510) 658-0702",
+      "samUei": null,
+      "summary": "A nonprofit based in Oakland, California, that supports environmental justice and community health. It directs funds from legal settlements and grants to community groups, funds small grassroots and consumer rights organizations, and runs a youth leadership program called New Voices Are Rising.",
+      "website": "https://rosefdn.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Rose Foundation For Communities And The Environment - ProPublica Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943179772"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "phone"
+        ],
+        "title": "Rose Foundation for Communities & The Environment",
+        "url": "https://rosefdn.org/"
+      },
+      {
+        "supports": [
+          "address",
+          "phone"
+        ],
+        "title": "Contact - Rose Foundation",
+        "url": "https://rosefdn.org/contact/"
+      },
+      {
+        "supports": [],
+        "title": "Turning Gray to Green - Rose Foundation",
+        "url": "https://rosefdn.org/latest/turning-gray-to-green/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-rose-foundation",
+    "notes": "Rose Foundation for Communities and the Environment is an Oakland 501(c)(3) (EIN 94-3179772), and its own article describes the Coliseum College Prep Academy campus greening grant that matches the OUSD donation agreement. Summary, address, phone, website, EIN and headquarters are all shown on the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

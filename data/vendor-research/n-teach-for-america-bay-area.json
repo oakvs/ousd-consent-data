@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/133541913",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.teachforamerica.org/where-we-work/bay-area",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.teachforamerica.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-teach-for-america-bay-area",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the registered nonprofit 'Teach For America Inc' (ProPublica Nonprofit Explorer, EIN 13-3541913); the agenda's 'Teach for America-Bay Area' is its Bay Area regional office",
+      "Teach For America's Bay Area region page describes a San Francisco Bay Area region operating in Oakland, San Jose, Richmond and San Francisco, matching the agenda's San Francisco, CA location and an Oakland district contract",
+      "Teach For America recruits and develops teachers, matching the OUSD Talent/Human Resources office as the presenting office for the data sharing agreement"
+    ],
+    "key": "n-teach-for-america-bay-area",
+    "notes": "The Bay Area region is part of the national nonprofit Teach For America Inc (EIN is the national entity's; HQ New York, NY), not a separate legal entity found in registries. Phone, mailing address and CA entity number not confirmed on cited pages, so left null. No page found naming OUSD directly.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "13-3541913",
+      "email": "bayarea@teachforamerica.org",
+      "headquarters": null,
+      "legalName": "Teach For America Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Teach For America is a nonprofit that recruits, develops and supports leaders who teach and work in education. Its Bay Area region places and supports teachers in schools in San Francisco, San Jose, Oakland and Richmond.",
+      "website": "https://www.teachforamerica.org/where-we-work/bay-area"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Teach For America Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/133541913"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "email"
+        ],
+        "title": "Teach For America Bay Area",
+        "url": "https://www.teachforamerica.org/where-we-work/bay-area"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Teach For America",
+        "url": "https://www.teachforamerica.org/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-teach-for-america-bay-area",
+    "notes": "Teach For America Inc (EIN 13-3541913, New York NY, 501(c)(3)) confirmed on ProPublica; the TFA Bay Area page confirms Oakland/SF/Richmond/San Jose service, the generic bayarea@ email, and the mission wording the neutral summary paraphrases. The agenda's Bay Area regional office under the national nonprofit fits a talent data sharing agreement; no page names OUSD directly, but nothing conflicts.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

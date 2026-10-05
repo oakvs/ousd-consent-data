@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.clifbar.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.clifbar.com/contact-us",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/emeryville/profile/food-manufacturer/clif-bar-and-company-1116-49659",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Clif_Bar",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-clif-bar-and",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches 'Clif Bar & Company', a food manufacturer headquartered in Emeryville, CA, matching the agenda location 'Emeryville, CA' (Wikipedia, BBB)",
+      "Company makes energy bars and snack foods, consistent with a donation agreement with the Superintendent's office filed under 'Food, transportation & operations'",
+      "Company's own website (clifbar.com) is for the same food maker; Wikipedia notes company community work in East Oakland"
+    ],
+    "key": "n-clif-bar-and",
+    "notes": "Registry IDs not looked up. Phone is the consumer line shown on clifbar.com. Address is from a BBB listing, not an official registry.",
+    "profile": {
+      "address": "1451 66th St, Emeryville, CA 94608-1004",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Emeryville, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-866-805-2879",
+      "samUei": null,
+      "summary": "Clif Bar & Company makes energy bars and nutritional snacks, including CLIF Bar, LUNA, BUILDERS and Zbar products for kids. It is based in Emeryville, California, and has been owned by Mondelez International since 2022.",
+      "website": "https://www.clifbar.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Clif Bar",
+        "url": "https://www.clifbar.com/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us | Clif Bar",
+        "url": "https://www.clifbar.com/contact-us"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Clif Bar and Company",
+        "url": "https://www.bbb.org/us/ca/emeryville/profile/food-manufacturer/clif-bar-and-company-1116-49659"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Clif Bar",
+        "url": "https://en.wikipedia.org/wiki/Clif_Bar"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-clif-bar-and",
+    "notes": "Name and Emeryville location match the agenda record for a donation agreement; clifbar.com, the contact page, BBB and Wikipedia support the products, Mondelez ownership (2022), phone, address and headquarters. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

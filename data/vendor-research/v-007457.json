@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://candidlyspeaking.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/853059439",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.idealist.org/en/nonprofit/282318425fb84c5aac2bdab9d4c11b7b-candidly-speaking-san-jose",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007457",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit 'Candidly Speaking', EIN 85-3059439 (ProPublica, Cause IQ)",
+      "Idealist lists Candidly Speaking in San Jose, CA, matching the agenda location, and describes programs for high schools",
+      "Organization website says it runs programs for schools on communication skills and empathy, consistent with OUSD's 'Classroom & academic programs' contract",
+      "CONTRADICTION/WEAK: IRS-based registries list the address as View Park / Los Angeles, CA, not San Jose; no public page found that mentions OUSD or Redwood Heights Elementary"
+    ],
+    "key": "v-007457",
+    "notes": "Medium confidence: name, San Jose location (Idealist) and school programs fit, but IRS registries show a Los Angeles-area (View Park) address and no page links this organization to OUSD or Redwood Heights Elementary. Needs human review before publishing.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "85-3059439",
+      "email": "info@candidlyspeakingworldwide.org",
+      "headquarters": null,
+      "legalName": "Candidly Speaking",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit that hosts conversations across cultures to build listening and communication skills. It runs free monthly community events and offers programs for schools, workplaces and communities.",
+      "website": "https://candidlyspeaking.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "email"
+        ],
+        "title": "Candidly Speaking",
+        "url": "https://candidlyspeaking.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Candidly Speaking - Nonprofit Explorer",
+        "url": "https://projects.propublica.org/nonprofits/organizations/853059439"
+      },
+      {
+        "supports": [],
+        "title": "Candidly Speaking - Organization - Idealist",
+        "url": "https://www.idealist.org/en/nonprofit/282318425fb84c5aac2bdab9d4c11b7b-candidly-speaking-san-jose"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "v-007457",
+    "notes": "Distinctive name, San Jose P.O. Box mailing address in the CA registry, educational-services 501(c)(3) with school programs, and revenue growth in 2021-22 all fit the OUSD school services agreement; no source ties it to OUSD directly, but no conflicting same-name entity surfaced. Summary, orgType, website, generic info@ email, EIN and CA entity number are supported by the cited pages and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

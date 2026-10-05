@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.marinschools.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.marinschools.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-marin-county-office-of-education",
+  "modelId": "sonnet-agent",
+  "promptVersion": "vendor-research.v2.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "OUSD's own board backup document for this item (2020-21 CEI PLLN Agreement) names the Marin County Superintendent of Schools and the Marin County Office of Education as Administrative Agent, at 1111 Las Gallinas Avenue, San Rafael, CA 94903, the same address shown on marinschools.org",
+      "The agenda item is a county-office-of-education grant agreement acting for the California Collaborative for Educational Excellence, consistent with a county education agency",
+      "marinschools.org (Marin County Office of Education) describes regional education services for school districts across Marin County, matching a county office of education"
+    ],
+    "key": "n-marin-county-office-of-education",
+    "notes": "County office of education (public agency), so no EIN or California Secretary of State entity number is expected. Identity confirmed against the address in OUSD's own agreement document (ousd.legistar.com, ID 9304987). No general email found on the cited pages.",
+    "profile": {
+      "address": "1111 Las Gallinas Avenue San Rafael, CA 94903",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Rafael, CA",
+      "legalName": "Marin County Office of Education",
+      "orgType": "public_agency",
+      "phone": "415-472-4110",
+      "samUei": null,
+      "summary": "The Marin County Office of Education is a regional public education agency serving school districts in Marin County, California. It provides services such as special education programs, career and technical education, early childhood education, alternative education, professional development for educators, and business and personnel support for districts.",
+      "website": "https://www.marinschools.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Marin County Office of Education",
+        "url": "https://www.marinschools.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About - Marin County Office of Education",
+        "url": "https://www.marinschools.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-04",
+  "review": {
+    "key": "n-marin-county-office-of-education",
+    "notes": "The agenda names the Marin County Office of Education as administrative agent of the CCEE-funded Community Engagement Initiative PLLN, which fits a county office of education. marinschools.org confirms the name, address (1111 Las Gallinas Ave, San Rafael), phone 415-472-4110 and the listed services. The summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
