@@ -14,7 +14,7 @@ import type { ILlm, TAskRequest, TAskResult } from '../llm/client'
 import type { TMergeReply } from '../llm/schemas'
 
 const REAL = getDataRoot()
-const FIXTURE = 'n-360-degree'
+const FIXTURE = 'n-360-degree-customer' // any published vendor file works as the template
 const EMPTY_ALIASES = { generated: { vendorNumbers: {}, names: {} }, manual: { vendorNumbers: {}, names: {} } }
 
 let dir: string

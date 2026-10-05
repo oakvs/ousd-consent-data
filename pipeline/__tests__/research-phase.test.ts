@@ -18,7 +18,7 @@ import type { TResearchReply, TReviewReply } from '../llm/schemas'
 import type { TPage } from '../research/vendor-research'
 
 const REAL = getDataRoot()
-const FIXTURE = 'n-360-degree' // any published vendor file works as the input
+const FIXTURE = 'n-360-degree-customer' // any published vendor file works as the template
 
 const SITE = 'https://example.org/'
 const pageFor = (url: string): TPage => {

@@ -6,7 +6,7 @@ The data backs the [Consent Report Tracker on the Oakland vs. the World blog](ht
 
 The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
-<!-- generated:stats -->As of October 4, 2026, it covers 162 Board meetings, from August 14, 2019 to September 23, 2026. That's 12,061 consent items authorizing $2.02 billion in spending, plus $469.8 million in grants and other money coming in, across 2,184 vendors and partners. Not counted in those totals: $257.0 million in grant applications, $150.3 million in budget allocations such as Measure N and G1 plans, and $3.76 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
+<!-- generated:stats -->As of October 4, 2026, it covers 162 Board meetings, from August 14, 2019 to September 23, 2026. That's 12,061 consent items authorizing $2.02 billion in spending, plus $469.8 million in grants and other money coming in, across 2,183 vendors and partners. Not counted in those totals: $257.0 million in grant applications, $150.3 million in budget allocations such as Measure N and G1 plans, and $3.76 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
 
 ## Why this exists
 
