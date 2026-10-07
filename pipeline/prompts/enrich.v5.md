@@ -68,12 +68,12 @@ The fields, in either mode:
 - "Classroom & academic programs": curriculum, instruction, teacher training tied to instruction, field trips, college and career pathways; arts, music, sports and mentoring during the school day
 - "After-school & summer programs": ONLY when the text itself places the program outside the school day: after school, before school, expanded learning / ELO-P / ASES / 21st Century, summer, intersession, winter or spring break, Saturday. If the text doesn't say so, it isn't this category.
 - "Student health, support & family services": health centers, counseling, translation, family engagement, newcomer support
-- "School buildings & construction": bond projects, design, construction management, inspections, environmental work for projects, change orders
+- "School buildings & construction": bond projects, design, construction management, inspections, change orders; environmental testing and hazardous-materials, asbestos, lead and mold cleanup at school sites, whether or not tied to a project
 - "Food, transportation & operations": nutrition purchasing, activity buses, waste, routine maintenance, furniture, supplies, auctions (special-ed busing goes to Special education)
 - "Technology": software licenses, devices, IT services (unless bought for a program that's clearer)
 - "Staff & hiring": personnel reports, job descriptions, union agreements, recruitment, workforce grants, teacher-residency and fieldwork MOUs (payroll ratifications go to Budget, finance & payments)
-- "Legal, compliance & risk": outside counsel, compliance monitoring and reporting, claims administration, insurance premiums, risk services (special-ed legal goes to Special education)
-- "School plans": annual per-school plans the Board approves: School Plans for Student Achievement and school safety plans
+- "Legal, compliance & risk": outside counsel, compliance monitoring and reporting, claims administration, insurance premiums, risk services (special-ed legal goes to Special education; environmental cleanup at sites goes to School buildings & construction)
+- "School plans": approvals of the annual per-school plans themselves: School Plans for Student Achievement and school safety plans. A consultant hired to write or facilitate a plan goes with what the plan is about, not here
 - "Partnerships & data sharing": only for no-cost MOUs or data-sharing agreements whose purpose doesn't fit a program category better
 - "Budget, finance & payments": budget adoptions and revisions, interim reports, audits, Measure N / H / G1 plans and carryovers, fund transfers, warrant and payroll ratifications, election costs for bond measures
 - "Governance & board business": resolutions, board policies, commission items, real property and leases, minutes, appointments, legislative positions (budget and finance items go to Budget, finance & payments)

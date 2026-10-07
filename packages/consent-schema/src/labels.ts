@@ -18,7 +18,7 @@ export const CATEGORY_NOTES: Record<TCategory, { includes: string; excludes: str
     excludes: 'Special-ed services',
   },
   'School buildings & construction': {
-    includes: 'Bond projects, design, construction management, inspections, environmental work tied to projects, change orders',
+    includes: 'Bond projects, design, construction management, inspections, change orders, environmental testing and hazardous-materials cleanup at school sites',
     excludes: 'Routine maintenance contracts',
   },
   'Food, transportation & operations': {
@@ -35,11 +35,11 @@ export const CATEGORY_NOTES: Record<TCategory, { includes: string; excludes: str
   },
   'Legal, compliance & risk': {
     includes: 'Outside counsel, compliance monitoring and reporting, claims administration, insurance premiums, risk services',
-    excludes: 'Special-ed legal (goes to Special education)',
+    excludes: 'Special-ed legal (Special education); environmental cleanup at sites (School buildings & construction)',
   },
   'School plans': {
-    includes: 'Annual per-school plans the Board approves: School Plans for Student Achievement (SPSAs) and school safety plans',
-    excludes: null,
+    includes: 'Approvals of the annual per-school plans themselves: School Plans for Student Achievement (SPSAs) and school safety plans',
+    excludes: 'Consultants who help write a plan (they go with the plan\'s subject)',
   },
   'Partnerships & data sharing': {
     includes: 'No-cost agreements and data-sharing agreements without a clearer program home',
