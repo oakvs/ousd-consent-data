@@ -18,7 +18,7 @@ import { listRawKeys, paths, readEnrichments, readRaw, writeJson } from '../stor
 import { runChecks } from '../validate/checks'
 
 export const ENRICH_DIR = path.join(process.cwd(), '.cache', 'enrich')
-export const AGENT_PROMPT_VERSION = 'enrich.v3.md'
+export const AGENT_PROMPT_VERSION = 'enrich.v5.md'
 
 export type TChunkInput = {
   chunk: string

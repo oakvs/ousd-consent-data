@@ -267,3 +267,15 @@ describe('payment ratifications', () => {
     expect(deriveFlags({ ...base, title: 'Services Agreement 2022-2023 - Linked Learning - Measure N funded', enrichment: e })).not.toContain('budget_allocation')
   })
 })
+
+describe('checkEnrichment and the sub-category rule', () => {
+  it('rejects a special education item without a sub-category, from either path', async () => {
+    const { checkEnrichment } = await import('../enrich/agent-io')
+    const text = 'Approval of an agreement with Zum, in an amount not to exceed $100,000.00, for special education busing.'
+    const bad = makeEnrichment({ category: 'Special education', subcategory: null })
+    const problems = checkEnrichment(text, bad).problems
+    expect(problems.some(p => p.severity === 'error' && p.message.includes('subcategory'))).toBe(true)
+    const good = makeEnrichment({ category: 'Special education', subcategory: 'Transportation' })
+    expect(checkEnrichment(text, good).problems.filter(p => p.severity === 'error')).toEqual([])
+  })
+})
