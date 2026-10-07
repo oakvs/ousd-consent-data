@@ -18,7 +18,7 @@ import { failureKey, recordFailure, retryDecision } from './state'
 import type { TLlmContext, TStageResult } from './context'
 import type { TEnrichmentReply } from './schemas'
 
-export const ENRICH_PROMPT_VERSION = 'enrich.v5.md'
+export const ENRICH_PROMPT_VERSION = 'enrich.v6.md'
 const CONCURRENCY = 4
 
 /** True when the item has no record, or its record was written for different text or title. */

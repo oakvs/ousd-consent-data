@@ -21,7 +21,7 @@ import { runChecks } from '../validate/checks'
 export const enrichDir = (): string => process.env.CONSENT_ENRICH_DIR ?? path.join(process.cwd(), '.cache', 'enrich')
 /** Snapshot of data/enrichments taken by the first `enrich-export --all`, for `category-diff`. */
 export const previousDir = (): string => path.join(enrichDir(), 'previous')
-export const AGENT_PROMPT_VERSION = 'enrich.v5.md'
+export const AGENT_PROMPT_VERSION = 'enrich.v6.md'
 
 /** An enrichments file read without validation: during a re-run, stored records may predate the schema. */
 export type TLooseEnrichmentsFile = {
