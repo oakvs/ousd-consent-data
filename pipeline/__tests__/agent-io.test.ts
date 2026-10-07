@@ -7,7 +7,7 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest'
 import { SCHEMA_VERSION } from '@oakvs/consent-schema/schema'
 import type { TRawItem, TRawSnapshot } from '@oakvs/consent-schema/schema'
 
-import { exportChunks, importChunks, outputPath, previousDir } from '../enrich/agent-io'
+import { AGENT_PROMPT_VERSION, exportChunks, importChunks, outputPath, previousDir } from '../enrich/agent-io'
 import { getDataRoot, paths, readJsonLoose, setDataRoot, writeJson } from '../store'
 
 import { makeEnrichment } from './helpers'
@@ -99,12 +99,12 @@ describe('enrich-import', () => {
     expect(kept).toEqual({ meetingKey: KEY, imported: 1, rejected: 0 })
     let file = await readJsonLoose<TLooseEnrichmentsFile>(paths.enrichments(KEY))
     expect(file?.items['26-0001'].cacheKey).toBe('old')
-    expect(file?.items['26-0002'].promptVersion).toBe('enrich.v5.md')
+    expect(file?.items['26-0002'].promptVersion).toBe(AGENT_PROMPT_VERSION)
 
     const [replaced] = await importChunks([KEY], 'sonnet-agent', { replace: true })
     expect(replaced).toEqual({ meetingKey: KEY, imported: 2, rejected: 0 })
     file = await readJsonLoose<TLooseEnrichmentsFile>(paths.enrichments(KEY))
-    expect(file?.items['26-0001'].promptVersion).toBe('enrich.v5.md')
+    expect(file?.items['26-0001'].promptVersion).toBe(AGENT_PROMPT_VERSION)
     expect(file?.items['26-0001'].modelId).toBe('sonnet-agent')
   })
 
