@@ -25,6 +25,7 @@
  *   enrich-export [--key K] [--size 30] [--all]  Write agent input chunks (.cache/enrich); --all = every item, for a re-run
  *   enrich-check --chunk ID                   Validate one agent output chunk (exit 1 on errors)
  *   enrich-import [--key K] --model M [--replace]  Merge validated chunk outputs into data/enrichments; --replace overwrites
+ *   category-diff                             Compare .cache/enrich/previous with data/enrichments → .cache/enrich/category-diff.json
  *   verify-export [--key K] [--size 30] [--also F]
  *                                             Write second-reading chunks (.cache/verify); F lists extra item ids to read
  *   verify-check --chunk ID                   Validate one second-reading output chunk (exit 1 on errors)
@@ -367,6 +368,15 @@ async function main(): Promise<void> {
       for (const s of await importChunks(values.key ? [values.key] : null, values.model, { replace: values.replace })) {
         console.log(`${s.meetingKey}: imported ${s.imported}, rejected ${s.rejected}`)
       }
+      break
+    }
+    case 'category-diff': {
+      const { categoryDiff, formatCategoryDiff } = await import('./enrich/category-diff')
+      const { enrichDir } = await import('./enrich/agent-io')
+      const diff = await categoryDiff()
+      await writeJson(path.join(enrichDir(), 'category-diff.json'), diff)
+      console.log(formatCategoryDiff(diff))
+      console.log(`\n${diff.movers.length} movers listed in ${path.join(enrichDir(), 'category-diff.json')}`)
       break
     }
     case 'vendor-candidates': {
