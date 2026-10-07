@@ -44,7 +44,7 @@ export function toOfficialMatter(m: TLegistarMatter, relatedMatterIds: number[])
     vendorNo: normalizeVendorNo(m.MatterEXText1),
     fundingSource: withoutEmails(clean(m.MatterText1)),
     resourceSite: normalizeCode(m.MatterEXText3),
-    legistarUrl: legistarItemUrl(m.MatterId, m.MatterGuid),
+    legistarUrl: legistarItemUrl(m.MatterId),
     relatedMatterIds: [...new Set(relatedMatterIds)].sort((a, b) => a - b),
   }
 }

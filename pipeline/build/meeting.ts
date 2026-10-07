@@ -206,7 +206,7 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
       ...item,
       id: `${key}:${item.file}`,
       vendorKey: vendorKey(item.vendorNo, published?.vendor.name ?? null, vendorAliases),
-      legistarUrl: legistarItemUrl(item.matterId, item.matterGuid),
+      legistarUrl: legistarItemUrl(item.matterId),
       enrichment: published,
       flags,
       sourceIssue,

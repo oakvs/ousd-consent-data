@@ -93,7 +93,14 @@ export function toRawItem(
   }
 }
 
-export function legistarItemUrl(matterId: number, matterGuid: string | null): string {
-  const guid = matterGuid ? `&GUID=${matterGuid}` : ''
-  return `https://ousd.legistar.com/LegislationDetail.aspx?ID=${matterId}${guid}`
+/**
+ * Public link to a matter on ousd.legistar.com.
+ *
+ * The web app's LegislationDetail.aspx takes its own ID and GUID, which differ
+ * from the API's MatterId and MatterGuid, so building that URL from API fields
+ * shows "Invalid parameters!". gateway.aspx takes the API MatterId and redirects
+ * to the right LegislationDetail page.
+ */
+export function legistarItemUrl(matterId: number): string {
+  return `https://ousd.legistar.com/gateway.aspx?M=L&ID=${matterId}`
 }

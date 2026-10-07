@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { FILE_NUMBER, agendaLabel, cleanFileNumber, normalizeCode } from '../normalize/raw-item'
+import { FILE_NUMBER, agendaLabel, cleanFileNumber, legistarItemUrl, normalizeCode } from '../normalize/raw-item'
 import { cleanTitle, findConsentRows } from '../normalize/sections'
 import { blankEntry, registerFutureDates } from '../registry/entries'
 
@@ -128,5 +128,13 @@ describe('odd Legistar rows', () => {
   it('labels an unnumbered consent item by its agenda order (2020-06-29 special meeting)', () => {
     expect(agendaLabel({ EventItemAgendaNumber: null, EventItemAgendaSequence: 12 })).toBe('#12')
     expect(agendaLabel({ EventItemAgendaNumber: ' T.-3 ', EventItemAgendaSequence: 40 })).toBe('T.-3')
+  })
+})
+
+describe('legistarItemUrl', () => {
+  // LegislationDetail.aspx takes the web app's own ID and GUID, not the API's
+  // MatterId/MatterGuid; built from API fields it shows "Invalid parameters!".
+  it('links through gateway.aspx, which takes the API MatterId', () => {
+    expect(legistarItemUrl(70157)).toBe('https://ousd.legistar.com/gateway.aspx?M=L&ID=70157')
   })
 })
