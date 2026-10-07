@@ -96,7 +96,7 @@ Tie-breaks:
 - "change_order"
 - "bid_award"
 - "cooperative_purchase" (piggyback, CMAS, or another agency's contract)
-- "mou_or_data_sharing"
+- "mou_or_data_sharing" (no-cost partnerships and data-sharing agreements; a paid services engagement styled as an MOU, such as a law firm's "Memorandum of Understanding and Engagement Policy", is "new_agreement")
 - "grant_or_funding_in"
 - "school_plan"
 - "personnel"
