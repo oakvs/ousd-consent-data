@@ -1,18 +1,10 @@
 import { describe, expect, it } from 'vitest'
 
 import { failureNotice, runNotices, sendNotice } from '../ops/notify'
-import { emptyStandbyState, standbyDecision, watchdog } from '../ops/standby'
 
-import type { TWorkflowRun } from '../ops/github'
 import type { TRunSummary } from '../run/run'
 
 const NOW = new Date('2026-10-14T20:00:00Z')
-const minutesAgo = (m: number): string => new Date(NOW.getTime() - m * 60_000).toISOString()
-
-function ciRun(startedMinutesAgo: number, status: string, conclusion: string | null): TWorkflowRun {
-  const at = minutesAgo(startedMinutesAgo)
-  return { id: startedMinutesAgo, status, conclusion, event: 'schedule', created_at: at, run_started_at: at, updated_at: at, html_url: '' }
-}
 
 const baseSummary: TRunSummary = {
   upcoming: { changed: false, date: null, consentItems: null },
@@ -70,41 +62,5 @@ describe('alerts for a run', () => {
 
   it('does nothing without an ntfy topic', async () => {
     expect(await sendNotice({ title: 't', message: 'm', priority: 'low', tags: [] }, { server: 'https://ntfy.sh', topic: undefined, token: undefined })).toBe(false)
-  })
-})
-
-describe('standby', () => {
-  it('stays out of the way of a recent or running CI run', () => {
-    expect(standbyDecision([ciRun(10, 'completed', 'success')], NOW).run).toBe(false)
-    expect(standbyDecision([ciRun(5, 'in_progress', null)], NOW).run).toBe(false)
-  })
-
-  it('runs when CI is late, or its recent run failed', () => {
-    expect(standbyDecision([ciRun(55, 'completed', 'success')], NOW).run).toBe(true)
-    expect(standbyDecision([ciRun(10, 'completed', 'failure')], NOW).run).toBe(true)
-    expect(standbyDecision([], NOW).run).toBe(true)
-  })
-})
-
-describe('watchdog (dead-man switch)', () => {
-  it('alerts once when nothing has succeeded for 6 hours, repeats every 6 hours, and announces recovery', () => {
-    const stale = [ciRun(7 * 60, 'completed', 'success'), ciRun(30, 'completed', 'failure')]
-    const first = watchdog(stale, emptyStandbyState(), NOW)
-    expect(first.notices.map(n => n.priority)).toEqual(['urgent'])
-
-    const soon = watchdog(stale, first.state, new Date(NOW.getTime() + 60 * 60_000))
-    expect(soon.notices).toEqual([])
-    const later = watchdog(stale, first.state, new Date(NOW.getTime() + 6 * 60 * 60_000))
-    expect(later.notices.map(n => n.priority)).toEqual(['urgent'])
-
-    const recovered = watchdog([ciRun(5, 'completed', 'success')], first.state, NOW)
-    expect(recovered.notices.map(n => n.title)).toEqual(['consent runs are succeeding again'])
-    expect(recovered.state.deadAlertedAt).toBeNull()
-  })
-
-  it('says so when CI has stopped but the standby is covering', () => {
-    const state = { ...emptyStandbyState(), lastLocalSuccess: minutesAgo(20) }
-    const { notices } = watchdog([ciRun(8 * 60, 'completed', 'success')], state, NOW)
-    expect(notices.map(n => [n.title, n.priority])).toEqual([['GitHub Actions has stopped running consent run', 'high']])
   })
 })

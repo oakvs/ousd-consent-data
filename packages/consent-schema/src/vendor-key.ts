@@ -1,5 +1,5 @@
 /**
- * Cross-meeting vendor identity (§12).
+ * Cross-meeting vendor identity.
  *
  * The OUSD vendor number wins when present. Otherwise we fall back to a
  * normalized name, which the hand-edited alias table can map onto a vendor

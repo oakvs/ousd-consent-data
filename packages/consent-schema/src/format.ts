@@ -73,7 +73,7 @@ export function sortAmount(money: TMoneySummary | null | undefined): number {
 }
 
 /**
- * The money column, in the six variants worked out in the prototype (§11.3).
+ * The money column, in the six variants worked out in the prototype.
  */
 export function moneyCell(
   enrichment: TMoneyCellInput | null,
@@ -204,7 +204,7 @@ export const BOARD_START_TIME = '16:00'
 
 /**
  * Brown Act posting deadline for a meeting's agenda: at least 72 hours before a
- * regular meeting (Gov. Code §54954.2), 24 hours before a special one (§54956).
+ * regular meeting (Gov. Code §54954.2), 24 hours before a special one (Gov. Code §54956).
  */
 export function agendaDeadline(dateIso: string, kind: 'regular' | 'special', start = BOARD_START_TIME): Date {
   const hours = kind === 'regular' ? 72 : 24

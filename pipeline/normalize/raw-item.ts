@@ -1,5 +1,5 @@
 /**
- * Legistar → RawItem (§4.2).
+ * Legistar → RawItem.
  *
  * Never reads `MatterText2` (staff email) or `MatterCost` (unreliable), and
  * strips stray email addresses from `MatterText1` (funding source).

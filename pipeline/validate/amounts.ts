@@ -1,5 +1,5 @@
 /**
- * Amount-format matcher (§9.1 `amounts_in_text`).
+ * Amount-format matcher (`amounts_in_text`).
  *
  * Pulls every dollar-like figure out of a string so we can check an LLM's
  * numbers against the official text. Handles `$1,234.56`, `1,234`, `1234.56`,

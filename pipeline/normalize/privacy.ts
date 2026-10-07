@@ -1,5 +1,5 @@
 /**
- * Staff emails are never kept (BRIEF §1). Legistar's free-text fields are
+ * Staff emails are never kept. Legistar's free-text fields are
  * filled in by hand, and staff sometimes type their own address into one
  * (e.g. file 21-3054 has an email as its funding source). Strip
  * email-shaped text from every Legistar field we store.

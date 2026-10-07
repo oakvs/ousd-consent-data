@@ -194,7 +194,7 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
       sourceIssueBy = 'human'
     }
     const status = routeReview(checks, published, override, alerts)
-    // Blocked items publish official text only (§9, WF-4).
+    // Blocked items publish official text only.
     if (status === 'blocked') published = null
 
     const derived = deriveFlags({ meetingDate, title: item.title, text: item.text, history: item.history, enrichment: published, sourceIssue })

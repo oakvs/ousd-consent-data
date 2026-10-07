@@ -1,5 +1,5 @@
 /**
- * Deterministic checks (§9.1), run on every enrichment, and review routing (WF-4).
+ * Deterministic checks, run on every enrichment, and review routing.
  */
 import { JARGON_EXPANSIONS } from '@oakvs/consent-schema/labels'
 import { Enrichment } from '@oakvs/consent-schema/schema'
@@ -138,7 +138,7 @@ export function runChecks(input: TCheckInput): { checks: TCheck[]; enrichment: T
   const jargon = unexpandedJargon(e.headline, e.summary)
   checks.push(check('jargon', jargon.length === 0, jargon.length ? `unexpanded: ${jargon.join(', ')}` : null))
 
-  // person_in_headline (§15: keep individuals' names out of headlines)
+  // person_in_headline (keep individuals' names out of headlines)
   // Known kind wins; the name-shape heuristic only nominates candidates for a second reading.
   const maybePerson = e.vendor.kind ? e.vendor.kind === 'individual' : looksLikePerson(e.vendor.name)
   if (maybePerson) {

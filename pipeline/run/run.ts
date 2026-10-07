@@ -1,7 +1,7 @@
 /* eslint-disable no-console -- CLI output */
 /**
- * `consent run`: one full update cycle, the same on a laptop, in CI or on the
- * homelab. The data repo is the state; there is no database.
+ * `consent run`: one full update cycle, the same on a laptop or in CI. The
+ * data repo is the state; there is no database.
  *
  *   1. check (cheap, ~10–20 Legistar requests; most runs stop here)
  *      - future-dated matters → published/upcoming.json, and new meetings
