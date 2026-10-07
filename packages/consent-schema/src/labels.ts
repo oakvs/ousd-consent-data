@@ -1,17 +1,17 @@
-import type { TActionType, TCategory, TFlag, TReviewStatus } from './schema'
+import type { TActionType, TCategory, TFlag, TReviewStatus, TSpecialEdSubcategory } from './schema'
 
 export const CATEGORY_NOTES: Record<TCategory, { includes: string; excludes: string | null }> = {
   'Special education': {
-    includes: 'Nonpublic school and agency contracts, special-ed transport, related services, school psychology interns, special-ed legal',
+    includes: 'Nonpublic school and agency contracts, special-ed transport, related services and contract staff for students with IEPs, school psychology interns, special-ed legal, SELPA and special-ed compliance, special-ed grants',
     excludes: 'General student health',
   },
   'Classroom & academic programs': {
-    includes: 'Curriculum, instructional services, teacher training tied to instruction, field trips, college and career pathways',
-    excludes: 'After-school providers',
+    includes: 'Curriculum, instructional services, teacher training tied to instruction, field trips, college and career pathways, arts, music, sports and mentoring during the school day',
+    excludes: 'After-school providers; Measure N, H and G1 plans and budgets (Budget, finance & payments)',
   },
   'After-school & summer programs': {
-    includes: 'Expanded learning lead agencies, enrichment providers, summer programs',
-    excludes: null,
+    includes: 'Programs the text places outside the school day: after school, before school, expanded learning (ELO-P, ASES, 21st Century), summer, intersession, breaks, Saturdays',
+    excludes: 'Daytime enrichment (Classroom & academic programs)',
   },
   'Student health, support & family services': {
     includes: 'Health centers, counseling, translation and interpretation, family engagement, newcomer support',
@@ -30,22 +30,42 @@ export const CATEGORY_NOTES: Record<TCategory, { includes: string; excludes: str
     excludes: 'Tech purchased for a program, when the program is clearer',
   },
   'Staff & hiring': {
-    includes: 'Personnel reports, job descriptions, union agreements, recruitment, workforce grants',
-    excludes: null,
+    includes: 'Personnel reports, job descriptions, union agreements, recruitment, workforce grants, teacher-residency and fieldwork partnerships',
+    excludes: 'Payroll ratifications (Budget, finance & payments)',
   },
-  'Legal, insurance & risk': {
-    includes: 'Outside counsel, claims administration, insurance premiums, risk services',
+  'Legal, compliance & risk': {
+    includes: 'Outside counsel, compliance monitoring and reporting, claims administration, insurance premiums, risk services',
     excludes: 'Special-ed legal (goes to Special education)',
   },
-  'School plans': { includes: 'School Plans for Student Achievement (SPSAs)', excludes: null },
+  'School plans': {
+    includes: 'Annual per-school plans the Board approves: School Plans for Student Achievement (SPSAs) and school safety plans',
+    excludes: null,
+  },
   'Partnerships & data sharing': {
     includes: 'No-cost agreements and data-sharing agreements without a clearer program home',
     excludes: null,
   },
-  'Governance & board business': {
-    includes: 'Resolutions, board policies, commission items, real property, minutes, appointments',
+  'Budget, finance & payments': {
+    includes: 'Budget adoptions and revisions, interim reports, audits, Measure N, H and G1 plans and carryovers, fund transfers, warrant and payroll ratifications, election costs for bond measures',
     excludes: null,
   },
+  'Governance & board business': {
+    includes: 'Resolutions, board policies, commission items, real property and leases, minutes, appointments, legislative positions',
+    excludes: 'Budget and finance items',
+  },
+}
+
+/** Plain-English scope of each Special education sub-category, shown on the about page. */
+export const SUBCATEGORY_NOTES: Record<TSpecialEdSubcategory, string> = {
+  'Nonpublic schools & agencies':
+    'Annual nonpublic school and agency master authorizations, individual placements including out-of-state residential schools, and paying or receiving money from another district for a student\'s placement',
+  Transportation: 'Busing, cabs and other transport to placements and services',
+  'Services & contract staff':
+    'Therapists (speech, occupational, physical), nurses and health aides, psychologists and psychiatrists, behavior specialists, mental-health providers, interpreters and ASL, evaluators and assessors, whether a staffing agency or an individual contractor',
+  'Programs & support':
+    'Tutoring and compensatory services, transition and vocational programs, staff training and coaching, intern stipends and fieldwork agreements, consultants, software and materials',
+  'Legal, compliance & policy':
+    'Attorneys, mediators, due process and settlements, compliance assurances, resolutions, SELPA governance, special-ed grant acceptances and budget items',
 }
 
 export const ACTION_LABELS: Record<TActionType, string> = {
@@ -217,7 +237,8 @@ export const CATEGORY_SLUGS: Record<TCategory, string> = {
   'Food, transportation & operations': 'food-transportation-operations',
   Technology: 'technology',
   'Staff & hiring': 'staff-hiring',
-  'Legal, insurance & risk': 'legal-insurance-risk',
+  'Legal, compliance & risk': 'legal-compliance-risk',
+  'Budget, finance & payments': 'budget-finance-payments',
   'School plans': 'school-plans',
   'Partnerships & data sharing': 'partnerships-data-sharing',
   'Governance & board business': 'governance-board',

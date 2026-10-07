@@ -14,7 +14,7 @@
  */
 import { z } from 'zod'
 
-export const SCHEMA_VERSION = '1.0.0'
+export const SCHEMA_VERSION = '2.0.0'
 
 // ─── Codebook ────────────────────────────────────────────────────────────────
 
@@ -27,12 +27,23 @@ export const Category = z.enum([
   'Food, transportation & operations',
   'Technology',
   'Staff & hiring',
-  'Legal, insurance & risk',
+  'Legal, compliance & risk',
   'School plans',
   'Partnerships & data sharing',
+  'Budget, finance & payments',
   'Governance & board business',
 ])
 export type TCategory = z.infer<typeof Category>
+
+/** Second level for Special education only; `null` on every other category. */
+export const SpecialEdSubcategory = z.enum([
+  'Nonpublic schools & agencies',
+  'Transportation',
+  'Services & contract staff',
+  'Programs & support',
+  'Legal, compliance & policy',
+])
+export type TSpecialEdSubcategory = z.infer<typeof SpecialEdSubcategory>
 
 export const ActionType = z.enum([
   'new_agreement',
@@ -107,10 +118,13 @@ export const Money = z.object({
 })
 export type TMoney = z.infer<typeof Money>
 
-export const Enrichment = z.object({
+/** The enrichment's fields. Use `Enrichment` to parse; this is for `.shape` and `.pick`. */
+export const EnrichmentFields = z.object({
   headline: z.string().max(140),
   summary: z.string().max(900),
   category: Category,
+  /** Required when `category` is Special education, null otherwise (enforced by `Enrichment`). */
+  subcategory: SpecialEdSubcategory.nullable(),
   actionType: ActionType,
   vendor: z.object({
     name: z.string().nullable(),
@@ -130,6 +144,15 @@ export const Enrichment = z.object({
   /** LLM-noticed inconsistency; needs a human to confirm before it's public. */
   sourceIssueCandidate: z.string().nullable(),
   uncertain: z.array(z.string()),
+})
+
+export const Enrichment = EnrichmentFields.superRefine((e, ctx) => {
+  if (e.category === 'Special education' && e.subcategory === null) {
+    ctx.addIssue({ code: 'custom', path: ['subcategory'], message: 'Special education items need a sub-category' })
+  }
+  if (e.category !== 'Special education' && e.subcategory !== null) {
+    ctx.addIssue({ code: 'custom', path: ['subcategory'], message: 'only Special education items have a sub-category' })
+  }
 })
 export type TEnrichment = z.infer<typeof Enrichment>
 
@@ -231,11 +254,12 @@ export const Override = z.object({
       headline: z.string(),
       summary: z.string(),
       category: Category,
+      subcategory: SpecialEdSubcategory.nullable(),
       actionType: ActionType,
-      vendor: Enrichment.shape.vendor,
+      vendor: EnrichmentFields.shape.vendor,
       schools: z.array(z.string()),
       money: Money.partial(),
-      term: Enrichment.shape.term,
+      term: EnrichmentFields.shape.term,
       flags: z.array(LlmFlag),
     })
     .partial(),
@@ -440,6 +464,8 @@ export const Totals = z.object({
   appliedForItems: z.number(),
   flagCounts: z.record(z.string(), z.number()),
   byCategory: z.record(z.string(), z.object({ items: z.number(), spending: z.number() })),
+  /** Special education sub-categories only; same counting rules as byCategory. */
+  bySubcategory: z.record(z.string(), z.object({ items: z.number(), spending: z.number() })),
 })
 export type TTotals = z.infer<typeof Totals>
 
@@ -495,10 +521,11 @@ export const ListItem = PublishedItem.pick({
 }).extend({
   review: PublishedItem.shape.review.pick({ status: true }),
   outcome: Outcome.pick({ action: true, date: true, adopted: true }).nullable(),
-  enrichment: Enrichment.pick({
+  enrichment: EnrichmentFields.pick({
     headline: true,
     summary: true,
     category: true,
+    subcategory: true,
     actionType: true,
     vendor: true,
     schools: true,

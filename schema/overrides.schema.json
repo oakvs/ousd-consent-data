@@ -1,7 +1,7 @@
 {
   "$id": "https://raw.githubusercontent.com/oakvs/ousd-consent-data/main/schema/overrides.schema.json",
   "title": "Human overrides",
-  "description": "data/overrides/{key}.json (schema version 1.0.0). Generated from packages/consent-schema; do not edit by hand.",
+  "description": "data/overrides/{key}.json (schema version 2.0.0). Generated from packages/consent-schema; do not edit by hand.",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
@@ -37,10 +37,28 @@
                   "Food, transportation & operations",
                   "Technology",
                   "Staff & hiring",
-                  "Legal, insurance & risk",
+                  "Legal, compliance & risk",
                   "School plans",
                   "Partnerships & data sharing",
+                  "Budget, finance & payments",
                   "Governance & board business"
+                ]
+              },
+              "subcategory": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "enum": [
+                      "Nonpublic schools & agencies",
+                      "Transportation",
+                      "Services & contract staff",
+                      "Programs & support",
+                      "Legal, compliance & policy"
+                    ]
+                  },
+                  {
+                    "type": "null"
+                  }
                 ]
               },
               "actionType": {

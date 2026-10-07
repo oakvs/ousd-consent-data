@@ -13,6 +13,7 @@ export function makeEnrichment(
     headline: 'Pays Acme up to $100,000 for tutoring',
     summary: 'Acme will tutor students.',
     category: 'Classroom & academic programs',
+    subcategory: null,
     actionType: 'new_agreement',
     vendor: { name: 'Acme', location: null, kind: null },
     schools: [],
