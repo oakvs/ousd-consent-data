@@ -7,18 +7,27 @@
  * output into `data/enrichments/{key}.json`. The build then applies
  * overrides, the full deterministic checks and review routing as usual.
  */
-import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
+import { access, cp, mkdir, readFile, readdir, writeFile } from 'node:fs/promises'
 import path from 'node:path'
 
 import { Enrichment } from '@oakvs/consent-schema/schema'
-import type { TEnrichment, TEnrichmentRecord, TEnrichmentsFile, TRawItem } from '@oakvs/consent-schema/schema'
+import type { TEnrichment, TEnrichmentRecord, TRawItem } from '@oakvs/consent-schema/schema'
 
 import { enrichmentCacheKey } from '../import/prototype'
-import { listRawKeys, paths, readEnrichments, readRaw, writeJson } from '../store'
+import { getDataRoot, listRawKeys, paths, readJsonLoose, readRaw, writeJson } from '../store'
 import { runChecks } from '../validate/checks'
 
-export const ENRICH_DIR = path.join(process.cwd(), '.cache', 'enrich')
+/** Where chunk inputs and outputs live; `CONSENT_ENRICH_DIR` redirects it (tests). */
+export const enrichDir = (): string => process.env.CONSENT_ENRICH_DIR ?? path.join(process.cwd(), '.cache', 'enrich')
+/** Snapshot of data/enrichments taken by the first `enrich-export --all`, for `category-diff`. */
+export const previousDir = (): string => path.join(enrichDir(), 'previous')
 export const AGENT_PROMPT_VERSION = 'enrich.v5.md'
+
+/** An enrichments file read without validation: during a re-run, stored records may predate the schema. */
+export type TLooseEnrichmentsFile = {
+  meetingKey: string
+  items: Record<string, { modelId: string; promptVersion: string; cacheKey: string; output: Record<string, unknown> }>
+}
 
 export type TChunkInput = {
   chunk: string
@@ -29,17 +38,30 @@ export type TChunkInput = {
 
 export type TManifestEntry = { chunk: string; meetingKey: string; items: number; input: string; output: string }
 
-const inputPath = (chunk: string): string => path.join(ENRICH_DIR, `${chunk}.input.json`)
-export const outputPath = (chunk: string): string => path.join(ENRICH_DIR, `${chunk}.output.json`)
+const inputPath = (chunk: string): string => path.join(enrichDir(), `${chunk}.input.json`)
+export const outputPath = (chunk: string): string => path.join(enrichDir(), `${chunk}.output.json`)
 
-/** Write chunk inputs for every meeting item that has no enrichment yet. */
-export async function exportChunks(keys: string[] | null, size: number): Promise<TManifestEntry[]> {
-  await mkdir(ENRICH_DIR, { recursive: true })
+const exists = (p: string): Promise<boolean> => access(p).then(() => true, () => false)
+
+/** Copy data/enrichments to the snapshot folder, once; later exports keep the original baseline. */
+async function snapshotPrevious(): Promise<void> {
+  if (await exists(previousDir())) return
+  const src = path.join(getDataRoot(), 'enrichments')
+  if (await exists(src)) await cp(src, previousDir(), { recursive: true })
+}
+
+/**
+ * Write chunk inputs. By default only items with no enrichment; with `all`, every item
+ * (a full re-run), after snapshotting the current records for `category-diff`.
+ */
+export async function exportChunks(keys: string[] | null, size: number, opts: { all?: boolean } = {}): Promise<TManifestEntry[]> {
+  await mkdir(enrichDir(), { recursive: true })
+  if (opts.all) await snapshotPrevious()
   const manifest: TManifestEntry[] = []
   for (const key of keys ?? await listRawKeys()) {
-    const [raw, existing] = await Promise.all([readRaw(key), readEnrichments(key)])
+    const [raw, existing] = await Promise.all([readRaw(key), readJsonLoose<TLooseEnrichmentsFile>(paths.enrichments(key))])
     if (!raw) continue
-    const todo = raw.items.filter(i => !existing?.items[i.file])
+    const todo = opts.all ? raw.items : raw.items.filter(i => !existing?.items[i.file])
     for (let start = 0, n = 1; start < todo.length; start += size, n++) {
       const chunk = `${key}.${String(n).padStart(2, '0')}`
       const input: TChunkInput = {
@@ -61,7 +83,7 @@ export async function exportChunks(keys: string[] | null, size: number): Promise
       manifest.push({ chunk, meetingKey: key, items: input.items.length, input: inputPath(chunk), output: outputPath(chunk) })
     }
   }
-  await writeFile(path.join(ENRICH_DIR, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`)
+  await writeFile(path.join(enrichDir(), 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`)
   return manifest
 }
 
@@ -134,9 +156,12 @@ export function checkEnrichment(text: string, candidate: unknown): TEnrichmentCh
 
 export type TImportSummary = { meetingKey: string; imported: number; rejected: number }
 
-/** Merge every chunk output for these meetings into data/enrichments. Items failing the schema are skipped. */
-export async function importChunks(keys: string[] | null, modelId: string): Promise<TImportSummary[]> {
-  const files = (await readdir(ENRICH_DIR)).filter(f => f.endsWith('.output.json'))
+/**
+ * Merge every chunk output for these meetings into data/enrichments. Items failing the
+ * schema are rejected. An item that already has a record is skipped unless `replace`.
+ */
+export async function importChunks(keys: string[] | null, modelId: string, opts: { replace?: boolean } = {}): Promise<TImportSummary[]> {
+  const files = (await readdir(enrichDir())).filter(f => f.endsWith('.output.json'))
   const chunksByKey = new Map<string, string[]>()
   for (const f of files) {
     const chunk = f.replace(/\.output\.json$/, '')
@@ -150,7 +175,7 @@ export async function importChunks(keys: string[] | null, modelId: string): Prom
     const raw = await readRaw(key)
     if (!raw) continue
     const rawByFile = new Map(raw.items.map(i => [i.file, i]))
-    const file: TEnrichmentsFile = (await readEnrichments(key)) ?? { meetingKey: key, items: {} }
+    const file: TLooseEnrichmentsFile = (await readJsonLoose<TLooseEnrichmentsFile>(paths.enrichments(key))) ?? { meetingKey: key, items: {} }
     let imported = 0
     let rejected = 0
     for (const chunk of chunks.sort()) {
@@ -159,10 +184,11 @@ export async function importChunks(keys: string[] | null, modelId: string): Prom
         const { file: fileNo, ...rest } = candidate as { file: string }
         const source = rawByFile.get(fileNo)
         const parsed = Enrichment.safeParse(rest)
-        if (!source || !parsed.success || file.items[fileNo]) {
-          if (!file.items[fileNo]) rejected++
+        if (!source || !parsed.success) {
+          rejected++
           continue
         }
+        if (file.items[fileNo] && !opts.replace) continue
         const record: TEnrichmentRecord = {
           modelId,
           promptVersion: AGENT_PROMPT_VERSION,

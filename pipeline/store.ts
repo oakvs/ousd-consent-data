@@ -67,14 +67,23 @@ export async function writeJson(file: string, value: unknown): Promise<void> {
   await writeFile(file, stableStringify(value))
 }
 
-async function readParsed<T extends z.ZodType>(file: string, schema: T): Promise<z.infer<T> | null> {
+/**
+ * A file's JSON without validation, or null when it doesn't exist. For migrations and
+ * comparisons, where stored records may predate the current schema.
+ */
+export async function readJsonLoose<T>(file: string): Promise<T | null> {
   let text: string
   try {
     text = await readFile(file, 'utf8')
   } catch {
     return null
   }
-  return schema.parse(JSON.parse(text))
+  return JSON.parse(text) as T
+}
+
+async function readParsed<T extends z.ZodType>(file: string, schema: T): Promise<z.infer<T> | null> {
+  const value = await readJsonLoose<unknown>(file)
+  return value === null ? null : schema.parse(value)
 }
 
 export const readRegistry = async (): Promise<TRegistry> =>
