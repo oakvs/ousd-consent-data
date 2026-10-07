@@ -25,71 +25,12 @@ import { assess, compareMoney, isMaterialDiscrepancy } from '../validate/alerts'
 import { runChecks } from '../validate/checks'
 import { describePulled, votedActions } from '../validate/separate-vote'
 
-import { h, makeEnrichment } from './helpers'
+import { h, makeEnrichment, makePublishedItem } from './helpers'
 
 const PUBLISHED = path.join(process.cwd(), 'data', 'published')
 const GOLDEN = path.join(process.cwd(), 'data', 'fixtures', 'golden', '2026-06-24')
 
-function item(file: string, overrides: Partial<TPublishedItem> = {}): TPublishedItem {
-  return {
-    id: `2026-06-24:${file}`,
-    vendorKey: null,
-    agendaNumber: 'R.-1',
-    agendaSequence: 1,
-    consentSection: 'general',
-    group: null,
-    file,
-    matterId: 1,
-    matterGuid: null,
-    title: 'Title',
-    text: 'Text',
-    matterType: null,
-    presenter: null,
-    vendorNo: null,
-    resourceSite: null,
-    fundingSource: null,
-    introDate: null,
-    attachments: [],
-    history: [],
-    legistarUrl: 'https://ousd.legistar.com/LegislationDetail.aspx?ID=1',
-    enrichment: makeEnrichment(),
-    flags: [],
-    sourceIssue: null,
-    amountVerified: true,
-    checks: [],
-    sourceIssueBy: null,
-    pulled: null,
-    notes: [],
-    review: { status: 'auto_ok', modelId: null, promptVersion: null, reviewedAt: null, correction: null, verifiedBy: null, alerts: [] },
-    outcome: null,
-    countsTowardTotals: true,
-    lineage: { amendmentNo: null, otherMeetings: [] },
-    ...overrides,
-  }
-}
-
-describe('totals', () => {
-  it('keeps yearly caps, sales caps, revenue and decreases out of spending', () => {
-    const totals = computeTotals([
-      item('26-0001'),
-      item('26-0002', { enrichment: makeEnrichment({ money: { amountType: 'per_year', thisAction: 17_608_594 } }) }),
-      item('26-0003', { enrichment: makeEnrichment({ money: { direction: 'no_cost', amountType: 'sales_cap', thisAction: null } }) }),
-      item('26-0004', { enrichment: makeEnrichment({ actionType: 'grant_or_funding_in', money: { direction: 'revenue', thisAction: 600_000 } }) }),
-      item('26-0005', { enrichment: makeEnrichment({ money: { direction: 'decrease', thisAction: 164_385 } }) }),
-      item('26-0006', { enrichment: null }),
-    ])
-    expect(totals).toMatchObject({
-      items: 6,
-      enrichedItems: 5,
-      spendingTotal: 100_000,
-      spendingItems: 1,
-      yearlyCapsTotal: 17_608_594,
-      yearlyCapItems: 1,
-      revenueTotal: 600_000,
-      decreaseTotal: 164_385,
-    })
-  })
-})
+const item = makePublishedItem
 
 describe('merge and outcomes', () => {
   it('applies overrides field by field', () => {

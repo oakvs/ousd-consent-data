@@ -1,4 +1,4 @@
-import type { TEnrichment, THistoryEntry } from '@oakvs/consent-schema/schema'
+import type { TEnrichment, THistoryEntry, TPublishedItem } from '@oakvs/consent-schema/schema'
 
 /** A history entry with Legistar's optional fields defaulted. */
 export function h(entry: Pick<THistoryEntry, 'date' | 'action'> & Partial<THistoryEntry>): THistoryEntry {
@@ -33,5 +33,44 @@ export function makeEnrichment(
       evidence: 'not to exceed $100,000.00',
       ...money,
     },
+  }
+}
+
+/** A published item for the 2026-06-24 meeting with every field defaulted; `enrichment` is `makeEnrichment()`. */
+export function makePublishedItem(file: string, overrides: Partial<TPublishedItem> = {}): TPublishedItem {
+  return {
+    id: `2026-06-24:${file}`,
+    vendorKey: null,
+    agendaNumber: 'R.-1',
+    agendaSequence: 1,
+    consentSection: 'general',
+    group: null,
+    file,
+    matterId: 1,
+    matterGuid: null,
+    title: 'Title',
+    text: 'Text',
+    matterType: null,
+    presenter: null,
+    vendorNo: null,
+    resourceSite: null,
+    fundingSource: null,
+    introDate: null,
+    attachments: [],
+    history: [],
+    legistarUrl: 'https://ousd.legistar.com/LegislationDetail.aspx?ID=1',
+    enrichment: makeEnrichment(),
+    flags: [],
+    sourceIssue: null,
+    amountVerified: true,
+    checks: [],
+    sourceIssueBy: null,
+    pulled: null,
+    notes: [],
+    review: { status: 'auto_ok', modelId: null, promptVersion: null, reviewedAt: null, correction: null, verifiedBy: null, alerts: [] },
+    outcome: null,
+    countsTowardTotals: true,
+    lineage: { amendmentNo: null, otherMeetings: [] },
+    ...overrides,
   }
 }
