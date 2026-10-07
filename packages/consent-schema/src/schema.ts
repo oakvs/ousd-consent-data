@@ -1,10 +1,16 @@
 /**
  * Consent Tracker data contracts.
  *
- * Shared by the pipeline (`pipeline/consent`) and the site. Every published file
- * is parsed against these schemas at the boundary, so the two can't drift.
- * Bump SCHEMA_VERSION on any breaking change; published files are fully
- * derived from raw + enrichments + overrides, so a bump means `build --all`.
+ * Shared by the pipeline and the oakvs site. The site's build downloads this
+ * repo's archive and takes both `data/published/` and this package from it,
+ * so the data and the schema that parses it always come from the same commit.
+ *
+ * Adding things (a new flag, category or optional field) is safe: the site
+ * shows a new flag or category with its label here and a generic icon and
+ * color until it styles them. Removing or renaming anything is breaking: bump
+ * SCHEMA_VERSION's major number, and the site's build stops with a clear
+ * message until the site is updated for it. Published files are fully derived
+ * from raw + enrichments + overrides, so a bump means `build --all`.
  */
 import { z } from 'zod'
 

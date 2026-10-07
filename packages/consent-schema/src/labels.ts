@@ -43,7 +43,7 @@ export const CATEGORY_NOTES: Record<TCategory, { includes: string; excludes: str
     excludes: null,
   },
   'Governance & board business': {
-    includes: 'Resolutions, board policies, commission items, real property',
+    includes: 'Resolutions, board policies, commission items, real property, minutes, appointments',
     excludes: null,
   },
 }
@@ -64,6 +64,24 @@ export const ACTION_LABELS: Record<TActionType, string> = {
 }
 
 export type TFlagTone = 'warn' | 'crit' | 'info'
+
+/** Plain-English description of each action type, shown on the about page. */
+export const ACTION_NOTES: Record<TActionType, string> = {
+  new_agreement: 'A new contract or agreement with a vendor or partner.',
+  amendment: 'A change to an existing contract, such as adding money, time or work.',
+  change_order: 'A change to the work or price of a construction project already under contract.',
+  bid_award: 'Awarding a contract to the winner of a competitive bid.',
+  cooperative_purchase:
+    'Buying through a contract another public agency already bid out (sometimes called "piggybacking"), instead of running the district\'s own bid.',
+  mou_or_data_sharing:
+    'A memorandum of understanding (MOU) or data-sharing agreement, usually with a partner organization and often at no cost.',
+  grant_or_funding_in: 'Accepting a grant or other money coming in to the district.',
+  school_plan: 'Approving a school\'s annual School Plan for Student Achievement (SPSA).',
+  personnel: 'Staffing matters, such as personnel reports, job descriptions and employee agreements.',
+  resolution_or_policy: 'A board resolution or a new or updated board policy.',
+  termination: 'Ending an existing contract or agreement.',
+  other: 'Anything that doesn\'t fit the types above.',
+}
 
 export const FLAG_LABELS: Record<TFlag, { label: string; explain: string; tone: TFlagTone }> = {
   budget_allocation: {

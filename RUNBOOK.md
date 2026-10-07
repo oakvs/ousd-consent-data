@@ -229,4 +229,4 @@ A meeting is final 14 or more days after it happened, once every item has a Legi
 ## Before merging a code change
 
 - `npm test` passes. Among other things, it checks that `consent:build` reproduces `data/published/` and `data/exports/` exactly, that every committed file validates against `schema/`, and that `schema/` is up to date.
-- If you changed `packages/consent-schema`, run `npm run schema` and commit `schema/`.
+- If you changed `packages/consent-schema`, run `npm run schema` and commit `schema/`. The oakvs site builds against this package as it is on `main`, so additions (a new flag, category or optional field) go live with the next deploy. A removal or rename is breaking: bump the major number of `SCHEMA_VERSION` and update the site first (see the comment at the top of `schema.ts`).
