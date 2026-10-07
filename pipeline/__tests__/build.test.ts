@@ -312,11 +312,12 @@ describe('golden set, 2026-06-24', async () => {
     it(`${f.replace('.json', '')} matches its golden fixture`, async () => {
       const golden = JSON.parse(await readFile(path.join(GOLDEN, f), 'utf8')) as {
         file: string
-        expected: { category: string; actionType: string; money: Record<string, unknown>; term: unknown; flags: string[] }
+        expected: { category: string; subcategory?: string | null; actionType: string; money: Record<string, unknown>; term: unknown; flags: string[] }
       }
       const published = byFile.get(golden.file)
       expect(published?.enrichment).toBeTruthy()
       expect(published!.enrichment!.category).toBe(golden.expected.category)
+      if ('subcategory' in golden.expected) expect(published!.enrichment!.subcategory).toBe(golden.expected.subcategory ?? null)
       expect(published!.enrichment!.actionType).toBe(golden.expected.actionType)
       expect(published!.enrichment!.money).toMatchObject(golden.expected.money)
       expect(published!.enrichment!.term).toEqual(golden.expected.term)
