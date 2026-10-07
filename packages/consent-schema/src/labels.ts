@@ -223,11 +223,14 @@ export const CATEGORY_SLUGS: Record<TCategory, string> = {
   'Governance & board business': 'governance-board',
 }
 
-/** A flag's color token. */
-export const flagColor = (flag: TFlag): string => `var(--flag-${flag})`
+/**
+ * A flag's color token. A flag the site gives no color of its own (the three that only say
+ * how money is counted, or one added here before the site styles it) uses the muted text color.
+ */
+export const flagColor = (flag: TFlag): string => `var(--flag-${flag}, var(--consent-muted))`
 
-/** A category's color token; unknown strings fall back to the muted text color. */
+/** A category's color token; unknown or unstyled categories fall back to the muted text color. */
 export const categoryColor = (category: string | null | undefined): string => {
   const slug = category ? CATEGORY_SLUGS[category as TCategory] : undefined
-  return slug ? `var(--cat-${slug})` : 'var(--consent-muted)'
+  return slug ? `var(--cat-${slug}, var(--consent-muted))` : 'var(--consent-muted)'
 }
