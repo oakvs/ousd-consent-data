@@ -1,13 +1,13 @@
 {
   "items": {
     "20-1814": {
-      "cacheKey": "74946d13352c87b74c79b5f569bf8fc053027d0b7aca1226f1f8f7c5639bd55a",
+      "cacheKey": "b7305e1045fe77ab50aa2edd7938c6ddf3af581b85de4a5a96646ecb4ec8e7c3",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "other",
-        "category": "Governance & board business",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves $25.5M in accounts payable checks the district issued in September 2020",
+        "headline": "Approves $25.5M in accounts payable checks for September 2020",
         "money": {
           "amountType": "cumulative",
           "byYear": {},
@@ -20,7 +20,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board approves 606 checks the district printed to pay its bills from September 1 through September 30, 2020. The total for the month is $25,534,046.30, and the full list is in an attached exhibit.",
+        "subcategory": null,
+        "summary": "The Board approves the district's bill payments for September 1 through September 30, 2020: 606 consolidated checks totaling $25,534,046.30. The individual payments are listed in Exhibit 1.",
         "term": {
           "addedStart": null,
           "end": "2020-09-30",
@@ -33,16 +34,16 @@
           "name": null
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-1817": {
-      "cacheKey": "47cc9a25f0afaf2e92417e67946d68e328903ef4ea675ae7d2d436f109627d85",
+      "cacheKey": "69d168f5fbae7dc7924dbb7afa09562b005e881af03acbdcd5b2cea949b1fa9d",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "other",
-        "category": "Governance & board business",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves $23.2M in payroll checks and direct deposits issued in September 2020",
+        "headline": "Approves $23.2M in September 2020 payroll checks and direct deposits",
         "money": {
           "amountType": "cumulative",
           "byYear": {},
@@ -55,7 +56,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board approves 855 payroll checks and 7,359 direct deposits the district made to its employees from September 1 through September 30, 2020. The total for the month is $23,203,977.96, and the full list is in an attached exhibit.",
+        "subcategory": null,
+        "summary": "The Board approves district payroll for September 1 through September 30, 2020: 855 payroll checks and 7,359 direct deposits totaling $23,203,977.96. The details are listed in Exhibit 1.",
         "term": {
           "addedStart": null,
           "end": "2020-09-30",
@@ -68,16 +70,16 @@
           "name": null
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-1975": {
-      "cacheKey": "27b717f746f8a3201a7b8782595fa75af937fa1e09a25c62adbf3359c8dcc468",
+      "cacheKey": "ca7cc5824c902f0959efe7f5f96e4a7e0263d6a468ffd703e79096a10864b16c",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "grant_or_funding_in",
         "category": "Special education",
         "flags": [],
-        "headline": "Accepts up to $980,857 from Alameda County for special education counseling and mental health services",
+        "headline": "Accepts up to $980,857 from Alameda County for special education mental health services",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -89,24 +91,27 @@
           "thisActionRange": null
         },
         "schools": [],
-        "sourceIssueCandidate": "The contract term of July 1, 2019 through June 30, 2020 ended before the November 12, 2020 meeting at which it was placed on the consent agenda.",
-        "summary": "Alameda County Behavior Health Care Services will fund counseling in special day classes and mental health assessments for special education students, plus training for teachers and administrators. The district receives up to $980,857 for the period July 1, 2019 through June 30, 2020. That period ended before this November 2020 vote.",
+        "sourceIssueCandidate": null,
+        "subcategory": "Services & contract staff",
+        "summary": "Alameda County Behavior Health Care Services will provide funding to the district's Special Education Department for counseling-enriched special day classes and mental health assessments for students. The money also supports teacher and parent consultation and staff training. This is for July 1, 2019 through June 30, 2020, and the district receives the funds.",
         "term": {
           "addedStart": null,
           "end": "2020-06-30",
           "start": "2019-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "subcategory"
+        ],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
           "name": "Alameda County Behavior Health Care Services"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-1977": {
-      "cacheKey": "e3b2d9dde837f1342169a830b72b2a1f0904443714db63e2163efdad8bbf2c19",
+      "cacheKey": "f3e58c9d4ff47238d22b2b04c49f9f7bab2e11bf48dc95c55503775a69e6ae36",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "amendment",
@@ -117,7 +122,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "not to exceed $980,857.00",
+          "evidence": "$980,857.00 for the term of this Master Contract",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 980857,
@@ -125,15 +130,15 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This interim amendment renews Alameda County Behavior Health Care Services funding for special education counseling and mental health assessments for the 2020-21 school year. The district receives up to $980,857 for the term. The county will send a final amendment after the fiscal year ends.",
+        "subcategory": "Services & contract staff",
+        "summary": "This interim amendment sets the 2020-21 funding from Alameda County Behavior Health Care Services for counseling-enriched special day classes and mental health assessments in special education. The county will send a final amendment after the fiscal year ends. The district receives the funds for July 1, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
         "uncertain": [
-          "money",
-          "actionType"
+          "subcategory"
         ],
         "vendor": {
           "kind": "organization",
@@ -141,16 +146,16 @@
           "name": "Alameda County Behavior Health Care Services"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-1995": {
-      "cacheKey": "921d109cd9183f6484a2d18a676b28cdbc945d189183c7e34c8cc6da177ed9e5",
+      "cacheKey": "43b9779442480dc4944b0f1dea534a652f77ccbb00a6d8c2edb38289a78b2c9b",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Ratifies up to $28,234 for a coordinator of student support services at Peralta Elementary",
+        "headline": "Ratifies up to $28,234 for a Peralta Elementary contractor to run student support teams",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -165,7 +170,8 @@
           "Peralta Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "An Oakland contractor will manage Peralta Elementary's Coordination of Services Team, oversee mental health interns, aides and after-school tutoring, and handle student referrals. The contractor also works with the principal on interventions and on students' accommodation plans. The board is ratifying the agreement after work was scheduled to start on August 10, 2020.",
+        "subcategory": null,
+        "summary": "An individual contractor will manage Peralta Elementary's Coordination of Services Team and oversee mental health interns, instructional aides, tutoring and referrals. She will also work with the principal on student interventions and monitor disability accommodation plans (504 plans). The Board is ratifying (approving after the fact) the agreement for August 10, 2020 through May 27, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-27",
@@ -178,21 +184,21 @@
           "name": "Sonia Kreit-Spindt"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2006": {
-      "cacheKey": "24be1275a842aa5aeccc2c085a63a4c522db5cccd898824cc773a9cf7a7dd678",
+      "cacheKey": "11ecd5ec234bf7a005c8230e96de663b8150520113c759554973677c2d6582a5",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "After-school & summer programs",
         "flags": [],
-        "headline": "Pays Girls Inc. of Alameda County up to $104,925 to run Burckhalter Elementary's after-school program",
+        "headline": "Pays Girls Inc. of Alameda County up to $104,925 to run Burckhalter's after-school program",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$104,925.00",
+          "evidence": "in an amount not to exceed $104,925.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 104925,
@@ -202,31 +208,30 @@
           "Burckhalter Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Girls Inc. of Alameda County will be the lead agency for Burckhalter Elementary School's After School Program. It will coordinate the program and provide math help, homework support, student supervision and enrichment activities. The memorandum of understanding (MOU) runs September 1, 2020 through July 31, 2021.",
+        "subcategory": null,
+        "summary": "Girls Inc. of Alameda County will lead the after-school program at Burckhalter Elementary School. Its work includes program coordination, math intervention, homework support, student supervision and enrichment activities. The agreement runs September 1, 2020 through July 31, 2021, which began before this vote, and is paid from an After School Education and Safety (ASES) grant.",
         "term": {
           "addedStart": null,
           "end": "2021-07-31",
           "start": "2020-09-01"
         },
-        "uncertain": [
-          "actionType"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
           "name": "Girls Inc. of Alameda County"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2013": {
-      "cacheKey": "b60a914438d56738ba0915e42c60229e98a1539bbcb3c88d8f89b430a52a0bea",
+      "cacheKey": "4aec77f8c471aa0992fe3c3e9e62b9e6c359bd8b55c44023c21878c208384bea",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Staff & hiring",
         "flags": [],
-        "headline": "Ratifies up to $56,800 for TeachBar to run classes for teacher candidates",
+        "headline": "Ratifies up to $56,800 for TeachBar to run test-prep classes for teacher candidates",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -239,7 +244,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "TeachBar, an Oakland company, will hold about 2 to 3 classes each season over 12 months for people working toward teaching credentials. The classes use TeachBar's own materials plus district online resources. The board is ratifying the agreement after its July 1, 2020 start date.",
+        "subcategory": null,
+        "summary": "TeachBar, an Oakland company, will hold about 2 to 3 classes each season over 12 months to help teacher candidates prepare for credential exams. It will use its own materials plus online tools from the district's Talent Division. The Board is ratifying (approving after the fact) this agreement for July 1, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -252,10 +258,10 @@
           "name": "TeachBar"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2014": {
-      "cacheKey": "e6b771001070ac3d480fd1ebb8ee6a590a59b8cde30c70852d4fc1e3ca3a868d",
+      "cacheKey": "7252c2a46c227af7ad8ede7e680897378b6f81887005a44d4d7d192eaeb33009",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
@@ -266,7 +272,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$63,000.00",
+          "evidence": "in an amount not to exceed $63,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 63000,
@@ -274,7 +280,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Oakland Public Education Fund will support the district's Distance and Safety Leads at school sites. The leads provide training and coordination on technology for students, help for staff in distance learning, and information about on-site safety. The agreement runs August 1, 2020 through June 1, 2021 and the board is ratifying it after its start date.",
+        "subcategory": null,
+        "summary": "Oakland Public Education Fund will support the district's Distance and Safety Leads at school sites. They provide training and coordination on technology for students, help for staff in distance learning, and information about on-site safety procedures. The agreement runs August 1, 2020 through June 1, 2021 and is being ratified after its start date.",
         "term": {
           "addedStart": null,
           "end": "2021-06-01",
@@ -289,16 +296,16 @@
           "name": "Oakland Public Education Fund"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2021": {
-      "cacheKey": "1298aaf028f282db6ac0156f5da7f9c6b0dd0f3a745f4c1f85f5399a6c3025b9",
+      "cacheKey": "35dccbb0bf6e69ca9f345b694ef36d8494dbdba0f0bdfe4aa099643edb734ba4",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Ratifies up to $27,468 for Karuna Consulting to give teachers mindfulness training",
+        "headline": "Ratifies up to $27,468 for Karuna Consulting mindfulness training for 30 teachers",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -311,29 +318,32 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Karuna Consulting LLC of Santa Fe, NM will serve 30 teachers in the Healthy Oakland Teen Program with online mindfulness courses, live training sessions, two retreats and coaching. The period is October 1, 2020 through May 30, 2021. The board is ratifying the agreement after its start date.",
+        "subcategory": null,
+        "summary": "Karuna Consulting LLC will give 30 teachers online mindfulness courses, live training sessions, two retreats, coaching and monthly practice sessions, as part of the Healthy Oakland Teen Program. The Board is ratifying (approving after the fact) the agreement for October 1, 2020 through May 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-30",
           "start": "2020-10-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": "Santa Fe, NM",
           "name": "Karuna Consulting LLC"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2024": {
-      "cacheKey": "8b6a9c03a27eb5f4c2ccb472342426ccf8b96766444a55bbb90bf38b05a7cd8c",
+      "cacheKey": "fdf792d25238c8fc322d25efe330c48a06c3035a9f8af11be52847e4b6d796c3",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "mou_or_data_sharing",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Ratifies a no-cost partnership with Healthier Generation to distribute smart thermometers",
+        "headline": "Ratifies a no-cost partnership with Healthier Generation to hand out smart thermometers",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -346,7 +356,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Healthier Generation of Portland, OR will work with district staff to hand out Kinsa Health smart thermometers and encourage families to use them. The agreement is a memorandum of understanding (MOU) that runs October 7, 2020 through January 31, 2021. It costs the district nothing.",
+        "subcategory": null,
+        "summary": "In this no-cost memorandum of understanding (MOU), Healthier Generation will work with district staff to distribute Kinsa Health smart thermometers and encourage families to use them. It runs October 7, 2020 through January 31, 2021. The Board is ratifying (approving after the fact) the agreement.",
         "term": {
           "addedStart": null,
           "end": "2021-01-31",
@@ -359,16 +370,16 @@
           "name": "Healthier Generation"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2025": {
-      "cacheKey": "9c870dc44bbe9ee3a3dee4a15d1dabf6b782099628a10386a88ac426f7dff256",
+      "cacheKey": "0b5d1e4f28a8f0cdbdd7c16ac6fa500630b212a34813821de2032941cf4cafb9",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Staff & hiring",
         "flags": [],
-        "headline": "Ratifies up to $35,000 for a consultant on teacher-credential program accreditation",
+        "headline": "Ratifies up to $35,000 for a consultant on teacher credentialing review and mentoring",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -381,7 +392,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "An Oakland consultant will prepare for the state's accreditation site visit for the district's New Teacher Support and Development Program. The consultant will also analyze program data, set up an advisory committee, and help hire a Lead Mentor. The board is ratifying the agreement after its July 1, 2020 start date.",
+        "subcategory": null,
+        "summary": "An individual contractor will prepare for a state teacher-credentialing accreditation site visit for the New Teacher Support and Development Program. She will also analyze program data, set up an advisory committee, and help hire a lead mentor. The Board is ratifying (approving after the fact) the agreement for July 1, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -394,16 +406,16 @@
           "name": "Jennifer Bloom"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2026": {
-      "cacheKey": "07f33d74ab6f4ff2609d03efbdcd129e6ca9211fd16fd79f91d520977283f53d",
+      "cacheKey": "1d59e1e1763634ad9c4bbf0915506e3fea03a66b600816544796522a12eca8c7",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves up to $49,000 for East Bay Asian Youth Center mentoring at Urban Promise Academy",
+        "headline": "Pays East Bay Asian Youth Center up to $49,000 for mentoring at Urban Promise Academy",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -418,7 +430,8 @@
           "Urban Promise Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "East Bay Asian Youth Center will work with the instructional team at Urban Promise Academy to provide one-on-one mentoring and small-group instruction during personalized learning time. The period is August 10, 2020 through May 27, 2021.",
+        "subcategory": null,
+        "summary": "East Bay Asian Youth Center will work with the school's instructional team to provide one-on-one mentoring and small group instruction during personalized learning time. The agreement runs August 10, 2020 through May 27, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-27",
@@ -431,16 +444,16 @@
           "name": "East Bay Asian Youth Center"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2027": {
-      "cacheKey": "8e9ffcb70751d825fcb74f1d1939adc3d54bbbac68be2eea3ddf87e484e83ee5",
+      "cacheKey": "a12a5ab4ed19668f0e8f5ff7d09640285ad66e5b055a1d588390a0150304caf8",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves up to $58,325 for Bay Area Community Resources job-readiness class at Rudsdale High",
+        "headline": "Pays Bay Area Community Resources up to $58,325 for a job readiness class at Rudsdale",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -455,7 +468,8 @@
           "Rudsdale Continuation High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Bay Area Community Resources will create a Job Readiness elective class held by live Zoom every Monday and Friday at Rudsdale Continuation High School. It will also build partnerships that give students job skills and opportunities. The period is September 30, 2020 through June 30, 2021.",
+        "subcategory": null,
+        "summary": "Bay Area Community Resources will create a Job Readiness elective class that meets by live Zoom every Monday and Friday. It will also build partnerships that give students job skills and opportunities. The agreement runs September 30, 2020 through June 30, 2021 at Rudsdale Continuation High School.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -468,10 +482,10 @@
           "name": "Bay Area Community Resources"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2036": {
-      "cacheKey": "0206e78d0ab7ab9209313a32d72e67ee9cd68486636b3e00e51d44e565ef292b",
+      "cacheKey": "bda427534ec94ee2a3596a317a4aa3182f54c6b1ec3b7ed5ee16f27bf6f26978",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "amendment",
@@ -479,12 +493,12 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Adds $24,107 to Anthonio's inspection contract for the Foster Center project and extends it to December 2020",
+        "headline": "Adds $24,107 and about six months to Anthonio's inspection contract for the Foster Center project",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$24,107.00",
+          "evidence": "in an additional amount of $24,107.00",
           "newTotal": 1289157,
           "priorTotal": 1265050,
           "thisAction": 24107,
@@ -494,7 +508,8 @@
           "Foster Center"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Anthonio, Inc. provides Inspector of Record services (an inspector who checks that construction follows the approved plans) for the Foster Center project. This amendment adds $24,107 because of a rate increase, raising the contract limit from $1,265,050 to $1,289,157. It also extends the end date by 190 days to December 4, 2020.",
+        "subcategory": null,
+        "summary": "Anthonio, Inc. provides Inspector of Record services (on-site construction inspection) for the Foster Center project. This amendment adds $24,107 because of a rate increase, raising the contract limit from $1,265,050 to $1,289,157. It also extends the end date by 190 days, from May 29, 2020 to December 4, 2020, so the extension is being approved after the old end date.",
         "term": {
           "addedStart": "2020-05-30",
           "end": "2020-12-04",
@@ -507,10 +522,10 @@
           "name": "Anthonio, Inc."
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2058": {
-      "cacheKey": "53a139351c0d89d7071239dc69d011601b28c7ba91bffc222972c805c3ec4cac",
+      "cacheKey": "5f10c656f7b140b37f798d84bde128993801e24e730e5dfaf263fa6089fb63bd",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "amendment",
@@ -518,7 +533,7 @@
         "flags": [
           "time_extension_only"
         ],
-        "headline": "Extends Metro Contract Group's Fremont High furniture delivery agreement to December 31, 2020",
+        "headline": "Extends Metro Contract Group's furniture delivery agreement for Fremont High to Dec. 31, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -533,34 +548,33 @@
           "Fremont High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Metro Contract Group is providing and delivering furniture for the Fremont High School Increments 3 and 4 Project. This amendment adds 69 days, moving the end date from October 23, 2020 to December 31, 2020. No money is added.",
+        "subcategory": null,
+        "summary": "Metro Contract Group is buying and delivering furniture for the Fremont High School Increments 3 and 4 project. This amendment adds 69 days, moving the end date from October 23, 2020 to December 31, 2020, so it is approved after the old end date. No added money is stated.",
         "term": {
           "addedStart": "2020-10-24",
           "end": "2020-12-31",
           "start": "2020-06-25"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
           "name": "Metro Contract Group"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2060": {
-      "cacheKey": "fc213e6e0619ee611f00cec6044908eb50e7241ab112cd2c701aaff0a87496b1",
+      "cacheKey": "b2c6ea569ee8f22cd60e7499aad633f884c3c2e38b481ad16a5ab1156c298893",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "amendment",
         "category": "School buildings & construction",
         "flags": [
-          "multi_year",
-          "time_extension_only"
+          "time_extension_only",
+          "multi_year"
         ],
-        "headline": "Extends Terraphase Engineering's Emerson Elementary softball field agreement to March 2021",
+        "headline": "Extends Terraphase Engineering's agreement for Emerson's girls' softball field to March 2021",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -575,7 +589,8 @@
           "Emerson Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Terraphase Engineering provides engineering services for the Emerson Elementary School Girls' Softball Field Project. This amendment adds 185 days, moving the end date from September 27, 2020 to March 31, 2021. No money is added.",
+        "subcategory": null,
+        "summary": "Terraphase Engineering provides engineering services for the Emerson Elementary School Girls' Softball Field project. This amendment adds 185 days, moving the end date from September 27, 2020 to March 31, 2021, so it is approved after the old end date. No added money is stated.",
         "term": {
           "addedStart": "2020-09-28",
           "end": "2021-03-31",
@@ -588,21 +603,21 @@
           "name": "Terraphase Engineering"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2066": {
-      "cacheKey": "8085c1464b1039168d9cd0df32db895f0ecf4cc326decc61563dab6cefb1ed0d",
+      "cacheKey": "304ef10a6753c678ccf27367159413fb0a045a7990f3372332592b8c3818f36f",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Approves up to $25,000 for East Bay Agency for Children wellness services at Frick United Academy",
+        "headline": "Pays East Bay Agency for Children up to $25,000 for a wellness consultant at Frick",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not to exceed $25,000.00",
+          "evidence": "2021 in an amount not to exceed $25,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 25000,
@@ -612,7 +627,8 @@
           "Frick United Academy of Language"
         ],
         "sourceIssueCandidate": null,
-        "summary": "East Bay Agency for Children will provide a wellness consultant who offers weekly support to at-risk students. The consultant will also train a team of 20 students to lead mindfulness activities at Frick United Academy of Language. The period is September 7, 2020 through May 31, 2021.",
+        "subcategory": null,
+        "summary": "East Bay Agency for Children will provide a wellness consultant who offers weekly support to at-risk students at Frick United Academy of Language. The consultant will also train a team of 20 students to lead mindfulness activities. The agreement runs September 7, 2020 through May 31, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-31",
@@ -625,10 +641,10 @@
           "name": "East Bay Agency for Children"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2067": {
-      "cacheKey": "bff92c8c88acad5e270127ab9479e9651f5463e2ec4e864944ab5558538b0770",
+      "cacheKey": "7ea8b1d09bfe5ead5776a7f602182a277ca403feff3c78188002408e0c18b099",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
@@ -647,7 +663,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Bounce Back Generation of Alameda, CA will lead 40 hours of virtual housing and resilience workshops, spread over 16 weeks, for families experiencing homelessness. The period is August 19, 2020 through October 30, 2020. The board is ratifying the agreement after work began.",
+        "subcategory": null,
+        "summary": "Bounce Back Generation will run 40 hours of virtual housing and resiliency workshops over 16 weeks for families without stable housing who are covered by the federal McKinney-Vento program. The agreement ran August 19, 2020 through October 30, 2020, and the Board is ratifying (approving after the fact) it.",
         "term": {
           "addedStart": null,
           "end": "2020-10-30",
@@ -660,16 +677,16 @@
           "name": "Bounce Back Generation"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2069": {
-      "cacheKey": "2f66e873e1b9fbcc9208d677fcbb3ba416b2caeda84799584a8a327b0385bf1b",
+      "cacheKey": "004021d50deac0d485a887b91509cd2e7a7f20f5b8e6e9f6ce24aa6c7e17dcec",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Technology",
         "flags": [],
-        "headline": "Approves up to $80,000 for Oakland Public Education Fund to pay for Adult Education student hotspots",
+        "headline": "Pays Oakland Public Education Fund up to $80,000 for internet service on student hotspots",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -682,7 +699,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Oakland Public Education Fund will provide and maintain 12 months of monthly internet service from T-Mobile for the mobile hotspots the Adult and Career Education Department bought for students. The period is July 1, 2020 through May 31, 2021.",
+        "subcategory": null,
+        "summary": "The Oakland Public Education Fund will provide and maintain a 12-month program of monthly T-Mobile internet service to power the hotspots that the Adult and Career Education Department bought for students. The agreement runs July 1, 2020 through May 31, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-31",
@@ -695,10 +713,10 @@
           "name": "Oakland Public Education Fund"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2070": {
-      "cacheKey": "430973a89aafda83b185d963bb96c10a542d13a96a42d19c26e9188713b563e0",
+      "cacheKey": "4d76824bc5a169c69da5be998ff7883ffc2fe8e3f067f8451e4880bce55e1618",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "mou_or_data_sharing",
@@ -706,11 +724,11 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves San Jose State University partnership to train district teacher interns through 2023",
+        "headline": "Renews San Jose State University partnership for teacher intern and practicum programs",
         "money": {
           "amountType": null,
           "byYear": {},
-          "direction": "no_cost",
+          "direction": "expense",
           "evidence": null,
           "newTotal": null,
           "priorTotal": null,
@@ -719,7 +737,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "San Jose State University's Lurie College of Education will provide intern and practicum programs for people earning teaching and student-services credentials in the district. The agreement is a memorandum of understanding (MOU) that runs July 1, 2020 through June 30, 2023. The item text does not state a dollar amount.",
+        "subcategory": null,
+        "summary": "This memorandum of understanding (MOU) with San Jose State University's Lurie College of Education lets the university provide intern and practicum programs for people earning teaching and student-support credentials in the district. It runs July 1, 2020 through June 30, 2023. The item text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -731,19 +750,19 @@
         "vendor": {
           "kind": "organization",
           "location": null,
-          "name": "Trustees of the California State University, on behalf of San Jose State University"
+          "name": "San Jose State University (Trustees of the California State University)"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2089": {
-      "cacheKey": "d1fb6ab04f836d50e85ed140b3bdd68724bfcd93aa5a48536770ba3aeff4ba0d",
+      "cacheKey": "a02921438008207fbd7efa1d04b3ef201d1d0e4169cfc3543ae627836498f284",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Approves up to $25,000 for East Bay Agency for Children mental health consultants",
+        "headline": "Pays East Bay Agency for Children up to $25,000 for two student mental health consultants",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -756,7 +775,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "East Bay Agency for Children will provide two mental health consultants who hold weekly virtual check-ins with students struggling emotionally or with schoolwork, lead skill-building or grief groups, and give crisis counseling when needed. The period is September 7, 2020 through May 31, 2021.",
+        "subcategory": null,
+        "summary": "East Bay Agency for Children will provide two mental health consultants who hold weekly virtual check-ins with students facing emotional or schoolwork challenges. They will also run skill-building or grief groups and give crisis counseling when needed. The agreement runs September 7, 2020 through May 31, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-31",
@@ -769,16 +789,16 @@
           "name": "East Bay Agency for Children"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2090": {
-      "cacheKey": "65678ea11b46ecfd86aa002fc72b7ead55e61e0068a48fcc0c506161a140d989",
+      "cacheKey": "76df6808b0d909c218c6a25ab62c041711d48e2a8c9507013651dcf46d0136bc",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $9,000 for Paul Dresher Ensemble music instruction at Elmhurst United Middle School",
+        "headline": "Ratifies up to $9,000 for Paul Dresher Ensemble music lessons at Elmhurst United",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -793,7 +813,8 @@
           "Elmhurst United Middle School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Paul Dresher Ensemble of San Francisco will provide extra music instruction in strings, mariachi, percussion and jazz at Elmhurst United Middle School. The period is October 1, 2020 through May 28, 2021. The board is ratifying the agreement after its start date.",
+        "subcategory": null,
+        "summary": "Paul Dresher Ensemble will provide extra music instruction in strings, mariachi, percussion and jazz at Elmhurst United Middle School. The Board is ratifying (approving after the fact) the agreement for October 1, 2020 through May 28, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-28",
@@ -806,16 +827,16 @@
           "name": "Paul Dresher Ensemble"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2091": {
-      "cacheKey": "1e048e0b219496bede622a3791ed71480f5c2829d4baa4d4f3ef2cd97dc4df6d",
+      "cacheKey": "393d3ca0df2eb187f0de8375976d028f655338775e6ce8e0f9208c1f480df9f2",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Approves up to $12,000 for Bay Area Community Resources student support at Futures Elementary",
+        "headline": "Pays Bay Area Community Resources up to $12,000 for student behavior support at Futures",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -830,7 +851,8 @@
           "Futures Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Bay Area Community Resources will give daily support to students with serious behavior and social-emotional challenges at Futures Elementary School. Staff will also supervise and teach physical education skills during recess and lunch. The period is August 10, 2020 through May 28, 2021.",
+        "subcategory": null,
+        "summary": "Bay Area Community Resources will give daily support to students with serious behavior and social-emotional challenges at Futures Elementary School, meeting with them one-on-one. It will also supervise and teach physical education skills during recess and lunch. The agreement runs August 10, 2020 through May 28, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-28",
@@ -843,16 +865,16 @@
           "name": "Bay Area Community Resources"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2092": {
-      "cacheKey": "5a673e623a9dbe9992e3ba6ec24444cf2591ff8bab2d29fc8b321a8b28ae8603",
+      "cacheKey": "850f0dee9147f2f817130fe737922e69f38acc981aca05104cb6f2395e8a6045",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves up to $17,976 for a digital arts specialist at Community Day High School",
+        "headline": "Ratifies up to $17,976 for a digital arts specialist at Community Day High School",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -867,7 +889,8 @@
           "Community Day High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Oakland Public Education Fund will provide a digital arts specialist from its fiscally sponsored project, Media Enterprise Alliance. The specialist works 4 hours a week to help teachers with the Multimedia I class in the school's digital arts pathway. The period is September 14, 2020 through May 14, 2021.",
+        "subcategory": null,
+        "summary": "The Oakland Public Education Fund, on behalf of its sponsored project Media Enterprise Alliance, will provide a digital arts specialist 4 hours a week to help teachers with the Multimedia I class. The class is part of the school's digital arts pathway. The agreement runs September 14, 2020 through May 14, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-14",
@@ -880,10 +903,10 @@
           "name": "Oakland Public Education Fund"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2093": {
-      "cacheKey": "15d0d44d1a2696bdcddf2b5f2d0ca6635b32418e6b631a686ee2605d525d6b58",
+      "cacheKey": "3863f19bef56e62d590be8336216fd68d00546aa35f3f7fd9951514cad9a44cf",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "personnel",
@@ -893,7 +916,7 @@
         "money": {
           "amountType": null,
           "byYear": {},
-          "direction": "no_cost",
+          "direction": "expense",
           "evidence": null,
           "newTotal": null,
           "priorTotal": null,
@@ -902,7 +925,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board approves a personnel report from the district's Talent/Human Resources Department. The item text does not describe the individual hiring or staffing actions or any dollar amounts.",
+        "subcategory": null,
+        "summary": "The Board approves a personnel report from the Talent department, which handles district hiring and staffing. The item text does not list the individual actions or any dollar amount.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -915,10 +939,10 @@
           "name": null
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2096": {
-      "cacheKey": "60d29197d939cba325a91ea7b012506cdb2b76d7292e47681d8a9276a05d7957",
+      "cacheKey": "70581d9d451734f2aa9ddf2ab4781b21460be1ebc73a27183422890b8a86b9e4",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "grant_or_funding_in",
@@ -926,12 +950,12 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Accepts an $80,500 Educate78 grant for Bridges Academy's three-year transformation plan",
+        "headline": "Accepts $80,500 from Educate78 to support the Bridges Academy transformation plan",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "accepting $80,500.00",
+          "evidence": "with the District accepting $80,500.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 80500,
@@ -941,27 +965,30 @@
           "Bridges Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Educate78 is giving the district $80,500 to support the three-year School Transformation Plan at Bridges Academy. The grant period is November 2, 2020 through June 30, 2022.",
+        "subcategory": null,
+        "summary": "Educate78 is giving the district $80,500 to support the 3-year School Transformation Plan at Bridges Academy. The grant runs November 2, 2020 through June 30, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
           "start": "2020-11-02"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
           "name": "Educate78"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2097": {
-      "cacheKey": "b3f7f55fdbd239e74337472d882c5ddb1782402dfe10ec7d8efbc004bfb8a93d",
+      "cacheKey": "d2eb2b2094ec984025d1f915a34be5f62881c901c1dc94812def976a5a433e6b",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
-        "category": "Food, transportation & operations",
+        "category": "Student health, support & family services",
         "flags": [],
         "headline": "Ratifies up to $70,500 for TransformCA to run Safe Routes to School programs",
         "money": {
@@ -976,7 +1003,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "TransformCA of Oakland will carry out the Safe Routes to School program, which promotes safe walking and biking through education, activities and events. The period is July 1, 2020 through June 30, 2021. The board is ratifying the agreement after its start date.",
+        "subcategory": null,
+        "summary": "TransformCA will carry out the Safe Routes to School program, which promotes safe walking and biking through education, activities and events. The Board is ratifying (approving after the fact) the agreement for July 1, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -991,16 +1019,16 @@
           "name": "TransformCA"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2098": {
-      "cacheKey": "e196ccefe5ed3a98f7144ecfeb815f7324f58f85189f50e46f469a027dd0f381",
+      "cacheKey": "747f6b901777f6bdf0ed59606b00c93823e01d12256b24df0ea8f4b90b74af70",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $4,200 for Mills Teacher Scholars coaching for the Visual and Performing Arts Program",
+        "headline": "Ratifies up to $4,200 for Mills Teacher Scholars coaching for arts teachers",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -1013,7 +1041,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Mills Teacher Scholars will give twenty 1-hour coaching sessions, scheduled monthly, to two staff members in the district's Visual and Performing Arts Program. The period is October 1, 2020 through June 30, 2021. The board is ratifying the agreement after its start date.",
+        "subcategory": null,
+        "summary": "Mills Teacher Scholars will provide twenty 1-hour coaching sessions, scheduled monthly, for two educators in the Visual and Performing Arts Program. The Board is ratifying (approving after the fact) the agreement for October 1, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -1026,16 +1055,16 @@
           "name": "Mills Teacher Scholars"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2099": {
-      "cacheKey": "9fc9f3c7a3bcbdd3670ecc54ba0151be925cfbbe6ebf546c63bd094855c66526",
+      "cacheKey": "d7d13749602a8e76f7ce8e8146389c6976b0ea5e9645e0f52332e70f31f0d7f1",
       "modelId": "sonnet-agent",
       "output": {
-        "actionType": "mou_or_data_sharing",
+        "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves up to $12,500 for the Junior Center of Art and Science arts residency at Franklin Elementary",
+        "headline": "Pays Junior Center of Art and Science up to $12,500 for an arts residency at Franklin",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -1050,7 +1079,8 @@
           "Franklin Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Junior Center of Art and Science will run a one-year arts residency at Franklin Elementary School in which arts learning is built into classroom lessons. The agreement is a memorandum of understanding (MOU) for November 13, 2020 through June 30, 2021.",
+        "subcategory": null,
+        "summary": "The Junior Center of Art and Science will provide a one-year arts residency at Franklin Elementary School, where arts learning is woven into classroom lessons. It is a paid memorandum of understanding (MOU) and runs November 13, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -1063,16 +1093,16 @@
           "name": "The Junior Center of Art and Science"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2100": {
-      "cacheKey": "06aa708874f45d968cea56bee54d6d86a9f963e8e6ffe3a6be76483a8fdd4bae",
+      "cacheKey": "394b4ff583bc82eee478176980dea614754d2e091c6fc98292640d31f75b2688",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Ratifies up to $5,000 for Lincoln counseling and behavior support at LaEscuelita Elementary",
+        "headline": "Ratifies up to $5,000 for Lincoln to provide a counselor at LaEscuelita Elementary",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -1087,7 +1117,8 @@
           "LaEscuelita Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Lincoln will provide a counselor at LaEscuelita Elementary School to support students, coach teachers on behavior strategies, and coordinate the school's student support teams. The period is July 1, 2020 through June 30, 2021. The board is ratifying the agreement after its start date.",
+        "subcategory": null,
+        "summary": "Lincoln will provide a counselor to support students at LaEscuelita Elementary School. The counselor will also coach teachers on behavior support and coordinate the school's student support teams. The Board is ratifying (approving after the fact) the agreement for July 1, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -1100,16 +1131,16 @@
           "name": "Lincoln"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2101": {
-      "cacheKey": "fd9e199bdbb44ca9069c5711da513909ccfff3aa2a2560afdc7fdd9c09a0de38",
+      "cacheKey": "91b61efaee73685188cda3cba947b5f92f27f60586cb8cd53272d1023e2122cb",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
-        "category": "Staff & hiring",
+        "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Ratifies up to $16,117 for The Teaching Well to run staff wellness workshops at Futures Elementary",
+        "headline": "Ratifies up to $16,117 for The Teaching Well staff wellness workshops at Futures",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -1124,7 +1155,8 @@
           "Futures Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Teaching Well will lead workshops on strengths, stress resilience and communication for all staff at Futures Elementary School, plus a nutrition workshop and one-on-one mindfulness mentoring for some staff. The period is August 10, 2020 through May 28, 2021. The board is ratifying the agreement after its start date.",
+        "subcategory": null,
+        "summary": "The Teaching Well will give all staff at Futures Elementary School workshops on strengths, stress resilience and communication, plus a nutrition workshop. It will also offer one-on-one mindfulness mentoring for some staff. The Board is ratifying (approving after the fact) the agreement for August 10, 2020 through May 28, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-28",
@@ -1139,16 +1171,16 @@
           "name": "The Teaching Well"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2102": {
-      "cacheKey": "3874659599f6741a11bbf41da994bf48db9c07c28bcc76a37fb47b21ea929c35",
+      "cacheKey": "f72ac3e466764b4d911e97634275a4bbc31956649944ef2c678a39c66d790614",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
-        "category": "Staff & hiring",
+        "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Ratifies up to $16,118 for The Teaching Well to run staff wellness workshops at Community United Elementary",
+        "headline": "Ratifies up to $16,118 for The Teaching Well staff wellness workshops at Community United",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -1163,7 +1195,8 @@
           "Community United Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Teaching Well will lead workshops on strengths, stress resilience and communication for all staff at Community United Elementary School, plus a nutrition workshop and one-on-one mindfulness mentoring for some staff. The period is August 10, 2020 through May 28, 2021. The board is ratifying the agreement after its start date.",
+        "subcategory": null,
+        "summary": "The Teaching Well will give all staff at Community United Elementary School workshops on strengths, stress resilience and communication, plus a nutrition workshop. It will also offer one-on-one mindfulness mentoring for some staff. The Board is ratifying (approving after the fact) the agreement for August 10, 2020 through May 28, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-28",
@@ -1178,10 +1211,10 @@
           "name": "The Teaching Well"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2105": {
-      "cacheKey": "b57eaabea0f101e97ba96c056fefbb7f1442391dbd750f09e022524302e9c4cc",
+      "cacheKey": "c7756cac3de1d94ae40fbc86c84e7ec1d4f8744c7feb0aa6df88f76c60684f4d",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
@@ -1202,7 +1235,8 @@
           "Grass Valley Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Lincoln will provide services based on each student's needs at Grass Valley Elementary School, including classroom and playground support, individual, group and family therapy, crisis help and a virtual summer program. It will also train staff in social-emotional skills. The period is August 10, 2020 through May 28, 2021. The board is ratifying the agreement after its start date.",
+        "subcategory": null,
+        "summary": "Lincoln will provide services based on each student's needs at Grass Valley Elementary School, including classroom and playground support, individual, group and family therapy, and crisis intervention. It will also consult with teachers and train staff. The Board is ratifying (approving after the fact) the agreement for August 10, 2020 through May 28, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-05-28",
@@ -1215,21 +1249,21 @@
           "name": "Lincoln"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2106": {
-      "cacheKey": "d8c9267e8a0890fbe4b48a99ea1a9fc82bffbe5e3574cf2dd254e0752c6992f8",
+      "cacheKey": "5174b3beba8e081ddd2756312ed0860e1a53d57ccb06c5f943caa51bcfade96f",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "grant_or_funding_in",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Accepts a $50,000 San Francisco Foundation grant to evaluate the Oakland Goes Outdoors program",
+        "headline": "Accepts $50,000 from the San Francisco Foundation for Oakland Goes Outdoors evaluation",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "in the amount of $50,000.00",
+          "evidence": "Riddell Fund, in the amount of $50,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 50000,
@@ -1237,7 +1271,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The San Francisco Foundation, on behalf of the Robert and Kathryn Riddell Fund, is giving the district $50,000 to fund a data lead for the Oakland Goes Outdoors (OGO) program. The lead will document and evaluate the middle school program and set evaluation measures for the K-12 program. The period is October 15, 2020 through June 30, 2021.",
+        "subcategory": null,
+        "summary": "The San Francisco Foundation, on behalf of the Robert and Kathryn Riddell Fund, is giving the district $50,000 to pay for a data lead. The lead will document and evaluate the Oakland Goes Outdoors middle school program and set evaluation measures for the K-12 program. The grant runs October 15, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -1250,10 +1285,10 @@
           "name": "San Francisco Foundation"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2109": {
-      "cacheKey": "35266005fcf025e784f713ea5912e4ffd8d556dbaabb2a538485d259c85ef4c3",
+      "cacheKey": "df9033287e348844d579621c48db7b9fee519cd028e04d44614c6daa2423ec7b",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "mou_or_data_sharing",
@@ -1261,7 +1296,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves a no-cost data-sharing agreement with the Northern Alameda Adult Education Collective",
+        "headline": "Approves a no-cost agreement to share student data with an adult education consortium",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1274,7 +1309,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The district and the Northern Alameda Adult Education Collective Joint Power Authority, a group of education institutions, will share student data to track performance from high school through college. The agreement is a memorandum of understanding (MOU) that runs November 13, 2020 through June 30, 2023. It costs the district nothing.",
+        "subcategory": null,
+        "summary": "In this no-cost memorandum of understanding (MOU), the Northern Alameda Adult Education Collective Joint Power Authority, a group of educational institutions, will collect, analyze and share student data. The goal is to track student performance and improve success from high school through college. It runs November 13, 2020 through June 30, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -1287,21 +1323,21 @@
           "name": "Northern Alameda Adult Education Collective Joint Power Authority"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2110": {
-      "cacheKey": "9d7155eb03ddd1b2302a9e999e20f3f2368f14ff72d3923018e7d31abff1611c",
+      "cacheKey": "3f96bf19d3c0f24f57c9438fa487e4318046a3649fd0960389d84b81e7013f50",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "grant_or_funding_in",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Accepts $100,000 from the Walter & Elise Haas Fund to pay 180 Oakland youth in work-based internships",
+        "headline": "Accepts $100,000 from the Haas Fund to pay 180 Oakland youth for Career Pathways internships",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$100,000.00",
+          "evidence": "with the District accepting $100,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 100000,
@@ -1309,7 +1345,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Walter & Elise Haas Fund is giving the district $100,000 to pay 180 Oakland students in Career Pathways programs for their work-based learning internships. The grant is meant to ease the economic and learning losses caused by COVID-19. It is managed through the High School Linked Learning Office and covers October 7, 2020 through October 6, 2021.",
+        "subcategory": null,
+        "summary": "The Walter & Elise Haas Fund is giving the district $100,000. The money pays 180 Oakland youth in Career Pathways for work-based learning internships, to offset economic and learning losses from COVID-19. The grant runs from October 7, 2020 through October 6, 2021 and is run by the High School Linked Learning Office.",
         "term": {
           "addedStart": null,
           "end": "2021-10-06",
@@ -1322,19 +1359,19 @@
           "name": "Walter & Elise Haas Fund"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2111": {
-      "cacheKey": "08088925c67892d25d0f0cdc533f250a65fa09906dd2265577aeac179abf5cb6",
+      "cacheKey": "9fb504c5713cd5a35b8ebd6200f16f2173d6473b765954831100b775c11b643e",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "amendment",
         "category": "School buildings & construction",
         "flags": [
-          "multi_year",
-          "time_extension_only"
+          "time_extension_only",
+          "multi_year"
         ],
-        "headline": "Extends Kaboom!'s agreement to build a new play space at Franklin Elementary to December 2021",
+        "headline": "Extends Kaboom!'s agreement to build a new play space at Franklin Elementary to Dec. 2021",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1349,7 +1386,8 @@
           "Franklin Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Kaboom! Inc. is building a new play space at Franklin Elementary School. This amendment extends the agreement's end date from December 31, 2020 to December 31, 2021. No dollar amount is stated, and all other terms stay the same.",
+        "subcategory": null,
+        "summary": "Kaboom! Inc. is building a new play space at Franklin Elementary School under a community partner agreement. This amendment extends the agreement's end date from December 31, 2020 to December 31, 2021. No dollar amount is stated, and all other terms stay the same.",
         "term": {
           "addedStart": "2021-01-01",
           "end": "2021-12-31",
@@ -1362,16 +1400,16 @@
           "name": "Kaboom! Inc."
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2138": {
-      "cacheKey": "9612ae2f88794be90a33f04db6f590796b50fc687041582c7cbfc99270fa57b1",
+      "cacheKey": "a635d83ef145150a1abfe9349f4cf3bde9e4402519d1960b3fb00b9c1461c7c4",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Approves the minutes of the October 28, 2020 regular board meeting",
+        "headline": "Approves the minutes of the Board's October 28, 2020 regular meeting",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1384,7 +1422,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board ratifies the written minutes of its regular meeting held on October 28, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board is ratifying the official minutes of its Regular Meeting held October 28, 2020. Staff prepared the minutes shortly after the meeting. The item states no cost.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -1397,21 +1436,21 @@
           "name": null
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2186": {
-      "cacheKey": "13868375750d234878ebeef76e822b1ebcdde7b1529cc5544b5642e6dd8ffa1f",
+      "cacheKey": "c0f69c18051685c5d7348f55774dd0c762551e2bc60a8b4043854047dc22335e",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use Brookfield Elementary School as a voting location",
+        "headline": "Ratifies $200 from the county for using Brookfield Elementary School as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1421,7 +1460,8 @@
           "Brookfield Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Alameda County Registrar of Voters will use Brookfield Elementary School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used Brookfield Elementary School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1430,25 +1470,25 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2187": {
-      "cacheKey": "eef93e157217090f6af098496fed8853eceb65596427e5a50fc5e4cdcfef5452",
+      "cacheKey": "9130448adae614aaf336009f328bab02f94150a966ec3e2bdf482bc62b3356d4",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use Elmhurst United School as a voting location",
+        "headline": "Ratifies $200 from the county for using Elmhurst United School as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1458,7 +1498,8 @@
           "Elmhurst United School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Alameda County Registrar of Voters will use Elmhurst United School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used Elmhurst United School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1467,25 +1508,25 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2188": {
-      "cacheKey": "565e0276a9d5b7ab47adc607a65e4197b033f47d96772b41d83262690f814348",
+      "cacheKey": "9ead20639febd49211211ca24bbee45206b143bdb91940504769489ea6eaf90a",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use Montera Middle School as a voting location",
+        "headline": "Ratifies $200 from the county for using Montera Middle School as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1495,7 +1536,8 @@
           "Montera Middle School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Alameda County Registrar of Voters will use Montera Middle School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used Montera Middle School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1504,25 +1546,25 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2189": {
-      "cacheKey": "96fddd68fe5b33992723895f7280769c795a1aae9df577fca8a5402503124898",
+      "cacheKey": "85e8c07827139fd60d81ca74aa2d4eebae546916e0d4648478d5ff6c39939cf0",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use Oakland High School as a voting location",
+        "headline": "Ratifies $200 from the county for using Oakland High School as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1532,7 +1574,8 @@
           "Oakland High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Alameda County Registrar of Voters will use Oakland High School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used Oakland High School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1541,25 +1584,25 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2190": {
-      "cacheKey": "05fd7a290330f1093bf2b721866d0e6d02b17226daae8f770f731089c33204dd",
+      "cacheKey": "6b1988e82757c5219004c05c80f9764b2a79f89098282f9ef97d7f207c732212",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use Oakland Technical High School as a voting location",
+        "headline": "Ratifies $200 from the county for using Oakland Technical High School as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1569,7 +1612,8 @@
           "Oakland Technical High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Alameda County Registrar of Voters will use Oakland Technical High School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used Oakland Technical High School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1578,25 +1622,25 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2192": {
-      "cacheKey": "105f95588a60a3507f2372e2382d5911e14af8a5c25a436b69b7dfb3c37f5af0",
+      "cacheKey": "f47f6533f92b306404e97e9657d3db679318c1c3ea842214279a6645c7bcd10d",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use Prescott School as a voting location",
+        "headline": "Ratifies $200 from the county for using Prescott School as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1606,7 +1650,8 @@
           "Prescott School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Alameda County Registrar of Voters will use Prescott School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used Prescott School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1615,25 +1660,25 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2193": {
-      "cacheKey": "73adcf1185538a71aa909ff4e69f668a9d9b17cec4e0f36fe7556fea93d1cc84",
+      "cacheKey": "23ead2263927a72210175c53810f3d33095cffcfa2dadb778e05a7b22c74cc47",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use Think College Now School as a voting location",
+        "headline": "Ratifies $200 from the county for using Think College Now School as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1643,7 +1688,8 @@
           "Think College Now School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Alameda County Registrar of Voters will use Think College Now School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used Think College Now School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1652,25 +1698,25 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2194": {
-      "cacheKey": "e568fea22cf7374464563b3c78613e5711c5cf354de213dc3783744bb33f489a",
+      "cacheKey": "76419c502ad7ce04fe530d6b6931b0d8a4da40fcf034c1e5a9d9fb3dd7cc5ed6",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use United for Success Academy as a voting location",
+        "headline": "Ratifies $200 from the county for using United for Success Academy as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1679,8 +1725,9 @@
         "schools": [
           "United for Success Academy"
         ],
-        "sourceIssueCandidate": "The title names 'United for Success Academy' but the action text says 'United Success Academy'.",
-        "summary": "The Alameda County Registrar of Voters will use United for Success Academy as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "sourceIssueCandidate": "The title calls the site United for Success Academy, but the action text says United Success Academy.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used United Success Academy as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1689,25 +1736,25 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2195": {
-      "cacheKey": "8d229a42a2636a9178fcb23c916c9cc92fad1f08e77e22a802ca228fff853e6b",
+      "cacheKey": "c414f70c64aee96c2ac6b01eddd295921c9d439330c11de961c9042db47eec32",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "new_agreement",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Receives $200 from the county Registrar of Voters to use West Oakland Middle School as a voting location",
+        "headline": "Ratifies $200 from the county for using West Oakland Middle School as a voting location",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$200.00",
+          "evidence": "for $200.00 payable to District",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200,
@@ -1717,7 +1764,8 @@
           "West Oakland Middle School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Alameda County Registrar of Voters will use West Oakland Middle School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The board is ratifying (approving after the fact) the agreement and its addendum.",
+        "subcategory": null,
+        "summary": "The Alameda County Registrar of Voters used West Oakland Middle School as an accessible voting location from October 31 through November 3, 2020. The county pays the district $200. The Board is approving this after the voting dates, as a ratification.",
         "term": {
           "addedStart": null,
           "end": "2020-11-03",
@@ -1726,20 +1774,20 @@
         "uncertain": [],
         "vendor": {
           "kind": "organization",
-          "location": null,
+          "location": "Alameda County",
           "name": "Alameda County Registrar of Voters"
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2259": {
-      "cacheKey": "256585652b796ff02abc4e8fb4356fe49632a04957f995e40a000fc919acffca",
+      "cacheKey": "cd792e1a53b11e5fc7e0829449fdf472cb48ed29855fa6c27832fb0325188c2a",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Approves the minutes of the November 4, 2020 special board meeting",
+        "headline": "Approves the minutes of the Board's November 4, 2020 special meeting",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1752,7 +1800,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board ratifies the written minutes of its special meeting held on November 4, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board is ratifying the official minutes of its Special Meeting held November 4, 2020. Staff prepared the minutes shortly after the meeting. The item states no cost.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -1765,16 +1814,16 @@
           "name": null
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2261": {
-      "cacheKey": "4b13b625215d711ca89cdd19fb6f320beaaa76c216a0238c40e66a2ad41c5ee4",
+      "cacheKey": "c42958fe446c828dc8d392e12a64cf40a7afcf586e4bef06332aa34cce48945b",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "amendment",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Amends the donation agreement with Trust for Public Land to build living schoolyards",
+        "headline": "Amends the Trust for Public Land agreement to build living schoolyards on district campuses",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1787,7 +1836,46 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This amendment changes the existing donation agreement with Trust for Public Land, Green Schoolyards America, which is to build living schoolyards on district campuses. The text does not say what changed or list a dollar amount.",
+        "subcategory": null,
+        "summary": "Trust for Public Land, Green Schoolyards America is building living schoolyards on district campuses under a donation agreement. This amendment changes that agreement as detailed in the amendment itself. The item states no dollar amount.",
+        "term": {
+          "addedStart": null,
+          "end": null,
+          "start": null
+        },
+        "uncertain": [
+          "term"
+        ],
+        "vendor": {
+          "kind": "organization",
+          "location": null,
+          "name": "Trust for Public Land, Green Schoolyards America"
+        }
+      },
+      "promptVersion": "enrich.v5.md"
+    },
+    "20-2262": {
+      "cacheKey": "4f501ba8c8764fc9a47271e6a11fba560559fa9f9a03792c06c49261a13af952",
+      "modelId": "sonnet-agent",
+      "output": {
+        "actionType": "resolution_or_policy",
+        "category": "Governance & board business",
+        "flags": [],
+        "headline": "Certifies that early learning and child care programs have been closed for in-person instruction",
+        "money": {
+          "amountType": null,
+          "byYear": {},
+          "direction": "no_cost",
+          "evidence": null,
+          "newTotal": null,
+          "priorTotal": null,
+          "thisAction": null,
+          "thisActionRange": null
+        },
+        "schools": [],
+        "sourceIssueCandidate": null,
+        "subcategory": null,
+        "summary": "The Board, acting as the district's governing authority, certifies that its Early Learning and Childcare (ELC) programs have been closed for in-person instruction since March 2020 because of COVID-19 health orders. It commits to hold a public hearing on the closure and prepare a safe reopening plan. The Board president signs the verification, and the Superintendent sends it to the California Department of Education.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -1795,52 +1883,15 @@
         },
         "uncertain": [],
         "vendor": {
-          "kind": "organization",
+          "kind": null,
           "location": null,
-          "name": "Trust for Public Land, Green Schoolyards America"
+          "name": null
         }
       },
-      "promptVersion": "enrich.v3.md"
-    },
-    "20-2262": {
-      "cacheKey": "3b312e6a033314d7e38d30a5573fa3dd4dc4d03933ceaff04e9ffc598d840ff6",
-      "modelId": "sonnet-agent",
-      "output": {
-        "actionType": "resolution_or_policy",
-        "category": "Governance & board business",
-        "flags": [],
-        "headline": "Certifies that early learning and child care programs have been closed for in-person instruction since March 2020",
-        "money": {
-          "amountType": null,
-          "byYear": {},
-          "direction": "no_cost",
-          "evidence": null,
-          "newTotal": null,
-          "priorTotal": null,
-          "thisAction": null,
-          "thisActionRange": null
-        },
-        "schools": [],
-        "sourceIssueCandidate": null,
-        "summary": "The board, acting as the district's governing authority, certifies that its Early Learning and Childcare (ELC) programs have been closed to in-person instruction since March 2020 because of COVID-19 health orders and board order. It commits to discuss the closure in a public hearing and to plan a safe reopening. The board president signs the form, and the Superintendent sends it to the California Department of Education, as state law requires.",
-        "term": {
-          "addedStart": null,
-          "end": null,
-          "start": null
-        },
-        "uncertain": [
-          "vendor"
-        ],
-        "vendor": {
-          "kind": "organization",
-          "location": null,
-          "name": "California Department of Education"
-        }
-      },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2275": {
-      "cacheKey": "a2eee5651d50c8f99780f65948640ed712db7623cafa44b72ea0fc02f7765c81",
+      "cacheKey": "b518ab2857b074db8f8a11c0462cbaf0b2754f8e676ff81d3dcd0ede62c18874",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "resolution_or_policy",
@@ -1859,7 +1910,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board adopts a resolution declaring the month of November each year as Indigenous People's Heritage Month in the district. The text lists no cost.",
+        "subcategory": null,
+        "summary": "The Board is adopting Resolution No. 2021-0129. It declares the month of November each year as Indigenous People's Heritage Month in the district. The item states no cost.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -1872,16 +1924,16 @@
           "name": null
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     },
     "20-2276": {
-      "cacheKey": "9358a7af3a5d7a52a232a50080ce64f7183d3a18daee4d13e1f0eeee52241828",
+      "cacheKey": "2d7dfe627d9fba432cac1cf48df580ed99d250d8260e32b7aa54f443e6a3c801",
       "modelId": "sonnet-agent",
       "output": {
         "actionType": "resolution_or_policy",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Adopts an amendment to the board policy on purchasing procedures (BP 3310)",
+        "headline": "Adopts changes to Board Policy 3310 on district purchasing procedures",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1894,7 +1946,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board adopts changes to Board Policy 3310, which sets the district's purchasing procedures. The text refers to the attached policy for the details and lists no dollar amount.",
+        "subcategory": null,
+        "summary": "The Board is adopting an amendment to Board Policy 3310, Purchasing Procedures, which is part of its policies on business and noninstructional operations. The specific changes are in the attached policy text. The item states no cost.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -1907,7 +1960,7 @@
           "name": null
         }
       },
-      "promptVersion": "enrich.v3.md"
+      "promptVersion": "enrich.v5.md"
     }
   },
   "meetingKey": "2020-11-12"
