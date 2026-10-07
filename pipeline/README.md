@@ -35,7 +35,7 @@ npm test
 | `vendors/aliases.json` | `vendors.aliases` | Normalized name → vendor number or canonical name. |
 | `published/` | what the site reads | Fully derived. `build` regenerates it byte-identically. |
 | `exports/` | CSVs + `datapackage.json` | Also derived by `build`: `items.csv`, `meetings/{key}.csv`, `meetings.csv`, `vendors.csv`. Columns are defined once in `build/exports.ts`. |
-| `fixtures/golden/` | §14 golden set | Seeded from v1; **hand-verify, then set `verified: true`**. |
+| `fixtures/golden/` | Golden set | Seeded from v1; **hand-verify, then set `verified: true`**. |
 
 The Legistar response cache lives in `.cache/legistar/` (gitignored, and never published: it holds verbatim responses, including staff emails). A backfill re-run makes no network calls for meetings marked `final`.
 

@@ -70,7 +70,7 @@ export const LlmFlag = z.enum([
 ])
 export type TLlmFlag = z.infer<typeof LlmFlag>
 
-/** Flags computed in code, never by the LLM (§7.3). */
+/** Flags computed in code, never by the LLM. */
 export const DerivedFlag = z.enum([
   'after_work_began',
   'raises_existing_contract',
@@ -100,7 +100,7 @@ export const MeetingKey = z.string().regex(/^\d{4}-\d{2}-\d{2}(-[a-z]+)?$/)
 
 export const IsoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/)
 
-// ─── Enrichment (LLM output, §8) ─────────────────────────────────────────────
+// ─── Enrichment (LLM output) ─────────────────────────────────────────────
 
 export const Money = z.object({
   direction: z.enum(['expense', 'revenue', 'decrease', 'no_cost']),
@@ -129,7 +129,7 @@ export const EnrichmentFields = z.object({
   vendor: z.object({
     name: z.string().nullable(),
     location: z.string().nullable(),
-    /** Individuals' names stay out of headlines (§15); organizations are always named. */
+    /** Individuals' names stay out of headlines; organizations are always named. */
     kind: z.enum(['individual', 'organization']).nullable().default(null),
   }),
   schools: z.array(z.string()),
@@ -156,7 +156,7 @@ export const Enrichment = EnrichmentFields.superRefine((e, ctx) => {
 })
 export type TEnrichment = z.infer<typeof Enrichment>
 
-// ─── Raw (normalized Legistar, §4.2) ─────────────────────────────────────────
+// ─── Raw (normalized Legistar) ─────────────────────────────────────────
 
 export const Attachment = z.object({ name: z.string(), url: z.url() })
 export type TAttachment = z.infer<typeof Attachment>
@@ -367,7 +367,7 @@ export const Registry = z.object({
 })
 export type TRegistry = z.infer<typeof Registry>
 
-// ─── Published files (§6.3) ──────────────────────────────────────────────────
+// ─── Published files ──────────────────────────────────────────────────
 
 export const ReviewStatus = z.enum(['auto_ok', 'needs_review', 'blocked', 'human_reviewed', 'pending'])
 export type TReviewStatus = z.infer<typeof ReviewStatus>
@@ -497,7 +497,7 @@ export const MeetingFile = z.object({
 export type TMeetingFile = z.infer<typeof MeetingFile>
 
 /**
- * The light list sent to the client explorer (§11.6): everything the rows,
+ * The light list sent to the client explorer: everything the rows,
  * filters and search need, without official text, history, checks,
  * attachments or evidence. Details load from the full file on expand.
  */
@@ -613,7 +613,7 @@ export const IndexFile = z.object({
 })
 export type TIndexFile = z.infer<typeof IndexFile>
 
-// ─── Vendors (cross-meeting, §12) ────────────────────────────────────────────
+// ─── Vendors (cross-meeting) ────────────────────────────────────────────
 
 /**
  * An official Legistar record, as published. Fields come straight from the
@@ -764,7 +764,7 @@ export const VendorFile = z.object({
   /** UID: `v-{OUSD vendor number}`, or `n-{normalized name}` when Legistar has no vendor number. */
   key: z.string(),
   vendorNo: z.string().nullable(),
-  /** Display name. For individuals this is a role description, not their name (§15). */
+  /** Display name. For individuals this is a role description, not their name. */
   displayName: z.string(),
   kind: z.enum(['individual', 'organization']).nullable(),
   /** Names as written in the agenda text (extracted by the summarizer). */

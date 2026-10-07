@@ -1,5 +1,5 @@
 /**
- * Cross-meeting vendor rollups (§12).
+ * Cross-meeting vendor rollups.
  *
  * One file per vendor UID (`v-{vendor number}` or `n-{normalized name}`),
  * combining:

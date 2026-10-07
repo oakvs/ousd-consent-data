@@ -36,19 +36,11 @@ Done once, by a person, because each step needs an account sign-in. Check them o
   Paste `codeberg-mirror` (the private half) into the GitHub secret `CODEBERG_DEPLOY_KEY`, then delete both files.
 - The first mirror push comes from the first scheduled run, or run the `mirror` workflow by hand.
 
-**3. Homelab standby**
-
-- On a machine that's always on: install Node 22, clone the GitHub repo with an SSH key that can push to it (a GitHub deploy key with write access on this repo only), and create `.env` with `ANTHROPIC_API_KEY`, `VERCEL_DEPLOY_HOOK_URL` and `NTFY_TOPIC` (and `NTFY_TOKEN` if used).
-- Set a git identity in that clone (e.g. `git config user.name 'consent standby'`). Turn off commit signing there unless the machine has an unlocked signing key, or cron runs will hang.
-- Optional: add a `codeberg` remote with its own deploy key, so the standby also updates the mirror.
-- Add the cron line from the top of `scripts/standby.sh`. Test it once by hand with `scripts/standby.sh --dry-run`.
-- The homelab's own Forgejo can keep a third copy as a **pull mirror** of the GitHub repo (Forgejo → New migration → GitHub, tick "This repository will be a mirror"). That needs no secrets in CI.
-
-**4. Zenodo (DOIs for releases)**
+**3. Zenodo (DOIs for releases)**
 
 - Sign in to zenodo.org with GitHub, open **GitHub** in the account menu, and switch on `oakvs/ousd-consent-data`. As an org repo, it may need an org owner to approve the Zenodo app first (GitHub → oakvs → Settings → Third-party access).
 
-**5. Check it all**
+**4. Check it all**
 
 - Actions → **consent run** → Run workflow, with "Dry run" ticked. It should finish green, and the step summary should show the run.
 - Then run it once without the dry run. Check the commit (if any), the Codeberg mirror, and that an ntfy message arrives for anything it published.
@@ -106,17 +98,14 @@ Locally, keep secrets in `.env` (gitignored) and run with `npx tsx --env-file=.e
 | `NTFY_TOPIC` | Where alerts go. Without it, alerts are only printed. | — |
 | `NTFY_SERVER`, `NTFY_TOKEN` | A self-hosted or protected ntfy. | `https://ntfy.sh`, none |
 | `CODEBERG_DEPLOY_KEY`, `CODEBERG_KNOWN_HOSTS` | The Codeberg mirror push (`scripts/mirror.sh`). | —, fetched with `ssh-keyscan` |
-| `CONSENT_STANDBY_GRACE_MIN` | The standby skips if a CI run started within this many minutes. | `40` |
 
 Also set a monthly spend limit on the Anthropic API key itself, in the Claude Console. The pipeline's cap uses estimated prices; the Console's is the real backstop.
 
-## Scheduler, standby and alerts
+## Scheduler and alerts
 
 - **GitHub Actions** (`.github/workflows/run.yml`) runs `consent run` at :07 and :37 past each hour, one at a time (concurrency group `consent-run`). Scheduled runs can start late, sometimes by 10–20 minutes. The run page's summary shows what happened.
-- **The homelab standby** (`scripts/standby.sh` from cron, every 30 minutes) checks the workflow's recent runs. It runs `consent run` only if no CI run started in the last 40 minutes (or the one that did failed), then pushes to its `codeberg` remote if it has one. If both run at once, git sorts it out: the later push is rejected, and that run pulls and re-runs.
-- **The dead-man switch** lives in the standby, because CI can't report its own absence. No successful run anywhere for 6 hours → an urgent alert, repeated every 6 hours, then a "succeeding again" message. If CI has stopped but the standby is covering, you get one high-priority alert a day.
-- **GitHub disables schedules** in public repos after 60 days without activity. The routine bookkeeping commits count as activity, so this shouldn't happen. If it does, the standby's alert above is how you'll find out: re-enable the workflow under Actions.
-- If GitHub itself is down, runs can't push, and the data waits. The Codeberg and homelab copies stay readable, and the next run catches up.
+- **GitHub disables schedules** in public repos after 60 days without activity. The routine bookkeeping commits count as activity, so this shouldn't happen. If it does, re-enable the workflow under Actions.
+- If GitHub itself is down, runs can't push, and the data waits. The Codeberg mirror stays readable, and the next run catches up.
 
 | Alert | Priority |
 |---|---|
@@ -130,7 +119,6 @@ Also set a monthly spend limit on the Anthropic API key itself, in the Claude Co
 | LLM step failed part-way; monthly cap reached | high |
 | LLM spend crossed 80% of the monthly cap | default |
 | Two failed runs in a row | urgent |
-| No successful run in 6 hours (standby) | urgent |
 | Codeberg mirror push failed | low |
 | Quarterly Legistar `/events` check | low, or high if it works again |
 
@@ -197,7 +185,7 @@ The LLM commit says "monthly cap reached". Spend per month is in `data/llm-state
 
 Only for a codebook change that should apply to the whole dataset (October 2026: `enrich.v5`). Every published headline and summary changes, so this is a planned, one-shot migration:
 
-1. Pause the scheduler: `gh workflow disable "consent run"` and stop the homelab standby if one is running. Nothing may push `main` until step 8.
+1. Pause the scheduler: `gh workflow disable "consent run"`. Nothing may push `main` until step 8.
 2. Work on a branch. `npm run consent:enrich-export -- --all` writes a chunk per ~30 items to `.cache/enrich/` and snapshots the current `data/enrichments/` to `.cache/enrich/previous/` (once). Clear any stale `.cache/enrich/*.output.json` from earlier runs first.
 3. Run the agents (a Claude Code swarm; each agent follows the prompt's "agent mode", writes its chunk's output and runs `enrich-check`), or `consent llm` for the API path after deleting the records to redo.
 4. `npm run consent:enrich-import -- --model sonnet-agent --replace`.

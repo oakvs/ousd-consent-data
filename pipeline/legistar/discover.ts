@@ -1,5 +1,5 @@
 /**
- * Meeting → EventId resolution (§4.3). `/events` is broken for OUSD, so:
+ * Meeting → EventId resolution. `/events` is broken for OUSD, so:
  *
  * 1. history (past meetings): matters with that agenda date → their
  *    histories → the `MatterHistoryEventId` on Board of Education entries

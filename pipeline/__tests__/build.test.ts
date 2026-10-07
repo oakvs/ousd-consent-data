@@ -295,9 +295,9 @@ describe('golden set, 2026-06-24', async () => {
   const byFile = new Map(meeting.items.map(i => [i.file, i]))
   const fixtures = await readdir(GOLDEN)
 
-  it('matches the §18.5 prototype numbers', () => {
+  it('matches the prototype\'s numbers', () => {
     expect(meeting.totals.items).toBe(263)
-    // §18.5 said 103 spending items and 22 yearly caps. R.-225 (Claremont Partners, "$36,000.00
+    // The v1 prototype counted 103 spending items and 22 yearly caps. R.-225 (Claremont Partners, "$36,000.00
     // annually") was misread as a total by the v1 prototype; two of three independent readings
     // correct it to a yearly cap, so it moves from spending to yearly caps.
     expect(meeting.totals.spendingItems).toBe(102)
@@ -306,7 +306,7 @@ describe('golden set, 2026-06-24', async () => {
     // of $36,000.00 annually") as no added money; its API second reading says per_year 36,000, and the override in
     // data/overrides/2026-06-24.json settles it as the yearly cap.
     expect(meeting.totals.yearlyCapItems).toBe(23)
-    // source_issue: 12 in §18.5, plus R.-237 (26-1467, Segal), confirmed in the 2026-10-04 attachment check:
+    // source_issue: 12 in the prototype, plus R.-237 (26-1467, Segal), confirmed in the 2026-10-04 attachment check:
     // the text keeps "$201,000.00 per year" and "$603,000.00 for term" while doubling the term to six years.
     // The codebook-v5 re-read (October 2026) surfaced three more, each confirmed material by the independent
     // second reading: R.-34 (26-1341, an amendment amount that doesn't say whether it's added or a new total),

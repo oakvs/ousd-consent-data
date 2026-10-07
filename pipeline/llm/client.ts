@@ -1,7 +1,7 @@
 /**
  * Claude API access for the unattended LLM steps.
  *
- * - Pinned models (BRIEF §9.5): Opus writes summaries, Sonnet does the
+ * - Pinned models: Opus writes summaries, Sonnet does the
  *   independent second reading, Opus breaks money ties. Override with
  *   CONSENT_ENRICH_MODEL / CONSENT_VERIFY_MODEL / CONSENT_TIEBREAK_MODEL.
  * - Structured outputs constrain the reply's shape; code checks the values,

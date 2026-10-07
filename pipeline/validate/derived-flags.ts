@@ -1,5 +1,5 @@
 /**
- * Derived flags (§7.3). Computed in code, never by the LLM.
+ * Derived flags. Computed in code, never by the LLM.
  */
 import type { TDerivedFlag, TEnrichment, THistoryEntry } from '@oakvs/consent-schema/schema'
 

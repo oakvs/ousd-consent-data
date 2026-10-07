@@ -5,7 +5,7 @@
  *
  * Two passes per run: first readings, then follow-ups the first readings
  * call for. A money disagreement that changes totals gets a third,
- * tie-breaking reading from a different model (BRIEF §4).
+ * tie-breaking reading from a different model.
  */
 import type { TVerificationsFile } from '@oakvs/consent-schema/schema'
 

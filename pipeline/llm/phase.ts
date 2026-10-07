@@ -1,5 +1,5 @@
 /**
- * The LLM step of `consent run` (BRIEF §3, step 3): summaries for new or
+ * The LLM step of `consent run`: summaries for new or
  * changed items, then second readings, for every meeting. Raw data is
  * already public by now; if this step fails or is capped, the next run
  * retries it.

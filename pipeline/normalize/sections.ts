@@ -1,5 +1,5 @@
 /**
- * Consent-section finder (§2 facts 4–5).
+ * Consent-section finder.
  *
  * The section letter changes every meeting (L., O., R. …), so we find it by
  * its header row ("Adoption of the General Consent Report"), then take every

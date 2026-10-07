@@ -1,5 +1,5 @@
 /**
- * Alerts (BRIEF §7), sent to ntfy.
+ * Alerts, sent to ntfy.
  *
  *   new agenda posted, with counts            default priority
  *   agenda revised                            low
@@ -8,7 +8,6 @@
  *   LLM step failed part-way, or capped       high
  *   80% of the monthly LLM cap reached        default
  *   two failed runs in a row                  urgent  (notifyFailure)
- *   no successful run in 6 hours              urgent  (the standby's watchdog)
  *
  * Configure with NTFY_TOPIC (required to send anything), NTFY_SERVER
  * (default https://ntfy.sh) and NTFY_TOKEN (for a protected topic).

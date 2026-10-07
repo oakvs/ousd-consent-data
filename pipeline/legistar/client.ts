@@ -1,5 +1,5 @@
 /**
- * Polite Legistar Web API client (§4.4).
+ * Polite Legistar Web API client.
  *
  * - Identifies itself with a User-Agent carrying the site URL.
  * - Caps concurrency, backs off exponentially on 429/5xx (max 5 tries).

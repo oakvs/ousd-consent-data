@@ -190,7 +190,7 @@ export const REVIEW_LABELS: Record<TReviewStatus, string> = {
 }
 
 /**
- * Acronyms and terms that must be explained on first use (§8.1), with the
+ * Acronyms and terms that must be explained on first use, with the
  * lowercase phrases that count as explaining them.
  */
 export const JARGON_EXPANSIONS: Record<string, string[]> = {

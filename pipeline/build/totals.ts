@@ -1,5 +1,5 @@
 /**
- * Meeting totals (§7.4). Spending excludes per-year caps and sales caps.
+ * Meeting totals. Spending excludes per-year caps and sales caps.
  *
  * Every listed item counts toward `items`, `enrichedItems` and `flagCounts`. Money and
  * categories count only items with `countsTowardTotals` (see buildMeeting).

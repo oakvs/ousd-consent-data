@@ -11,7 +11,6 @@
  *   notify --summary F                        Send alerts for a run summary (ntfy), and the GitHub step summary
  *   notify-failure --previous CONCLUSION      Alert when this and the previous run both failed
  *   notify-text --title T --message M [--priority P]
- *   standby [--repo R] [--dry-run]            Homelab standby: dead-man check, then `run` if CI hasn't run recently
  *   events-check                              Quarterly: is Legistar's /events endpoint working for OUSD again?
  *   llm [--key K]                             Run the LLM step (summaries, second readings) and rebuild; no git
  *   llm-compare --key K [--sample N] [--files A,B]
@@ -20,7 +19,7 @@
  *   discover-past --from D --to D [--dry-run] Find past Board meetings with a consent report and add them to the registry (for a backfill)
  *   ingest --key K [--event N]                Fetch a meeting from Legistar into data/raw
  *   backfill --from D --to D [--limit N]      resolve → ingest for every registry meeting in range, then build
- *   import-prototype [--dir <dir>]            Seed 2026-06-24 from the v1 prototype files
+ *   import-prototype --dir <dir>              Seed 2026-06-24 from the v1 prototype files
  *   build                                     Rebuild every published file
  *   enrich-export [--key K] [--size 30] [--all]  Write agent input chunks (.cache/enrich); --all = every item, for a re-run
  *   enrich-check --chunk ID                   Validate one agent output chunk (exit 1 on errors)
@@ -48,7 +47,6 @@
  *   upcoming                                  Detect the next Board meeting from future-dated items → published/upcoming.json
  */
 import { readFile } from 'node:fs/promises'
-import os from 'node:os'
 import path from 'node:path'
 import { parseArgs } from 'node:util'
 
@@ -75,8 +73,6 @@ import {
 } from './research/vendor-research'
 import { readRegistry, writeJson, writeRegistry } from './store'
 
-const DEFAULT_PROTOTYPE_DIR = path.join(os.homedir(), 'ousd-mseg', 'consent-prototype')
-
 const { positionals, values } = parseArgs({
   allowPositionals: true,
   options: {
@@ -97,7 +93,6 @@ const { positionals, values } = parseArgs({
     title: { type: 'string' },
     message: { type: 'string' },
     priority: { type: 'string' },
-    repo: { type: 'string' },
     summary: { type: 'string' },
     force: { type: 'boolean', default: false },
     update: { type: 'boolean', default: false },
@@ -167,7 +162,8 @@ async function main(): Promise<void> {
   const [command] = positionals
   switch (command) {
     case 'import-prototype': {
-      const dir = values.dir ?? DEFAULT_PROTOTYPE_DIR
+      if (!values.dir) throw new Error('--dir is required')
+      const dir = values.dir
       const { raw, enrichments, overrides } = await importPrototype(
         '2026-06-24',
         path.join(dir, 'OUSD-BOE_2026-06-24_consent_raw.json'),
@@ -213,11 +209,6 @@ async function main(): Promise<void> {
       const { notifyText } = await import('./ops/commands')
       const priority = (['min', 'low', 'default', 'high', 'urgent'] as const).find(p => p === values.priority) ?? 'default'
       await notifyText(values.title, values.message, priority)
-      break
-    }
-    case 'standby': {
-      const { standby } = await import('./ops/commands')
-      await standby({ repo: values.repo, dryRun: values['dry-run'] })
       break
     }
     case 'events-check': {
