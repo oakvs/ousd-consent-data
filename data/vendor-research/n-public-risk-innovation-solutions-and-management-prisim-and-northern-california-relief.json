@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.prismrisk.gov/contact/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.prismrisk.gov/about-prism/mission/",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-public-risk-innovation-solutions-and-management-prisim-and-northern-california-relief",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "The agenda names \"Public Risk Innovation, Solutions, and Management (PRISM)\". The official PRISM website (prismrisk.gov) uses this exact legal name.",
+      "PRISM describes itself as a risk-sharing pool for public agencies, and it provides risk coverage programs. That matches OUSD's \"Legal, compliance & risk\" payments for workers' compensation and excess property and liability coverage.",
+      "PRISM's public member directory (shown in a search result; the page itself could not be fetched) lists Oakland Unified School District as a member.",
+      "The agenda line also names a second entity, Northern California ReLiEF (Regional Liability Excess Fund). It is a separate pooled fund that serves school districts. The profile below covers PRISM only."
+    ],
+    "key": "n-public-risk-innovation-solutions-and-management-prisim-and-northern-california-relief",
+    "notes": "The agenda line covers two entities: PRISM and Northern California ReLiEF (Northern California Regional Liability Excess Fund). Only PRISM is profiled here. ReLiEF is a separate pool and was not profiled, so confidence is medium rather than high. PRISM's membership page naming Oakland Unified could not be fetched, so it is not cited. The \"formerly CSAC Excess Insurance Authority\" detail comes from a search result for PRISM's rebrand press release, which is not cited. No EIN, California entity number, SAM UEI or general email was found. PRISM is a joint powers authority and is not likely to be a nonprofit registrant.",
+    "profile": {
+      "address": "75 Iron Point Circle, Suite 200, Folsom, CA 95630",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Folsom, CA",
+      "legalName": "Public Risk Innovation, Solutions, and Management",
+      "orgType": "public_agency",
+      "phone": "(916) 850-7300",
+      "samUei": null,
+      "summary": "Public Risk Innovation, Solutions, and Management (PRISM) is a member-directed risk-sharing pool for public agencies in California. It was formerly known as the CSAC Excess Insurance Authority. It offers risk coverage programs and risk management services to its members.",
+      "website": "https://www.prismrisk.gov/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact - PRISM",
+        "url": "https://www.prismrisk.gov/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Mission - PRISM",
+        "url": "https://www.prismrisk.gov/about-prism/mission/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-07",
+  "review": null
+}
