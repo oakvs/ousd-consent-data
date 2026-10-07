@@ -193,6 +193,27 @@ The item stays "Summary pending" with its official text published in the meantim
 
 The LLM commit says "monthly cap reached". Spend per month is in `data/llm-state.json` under `spend`. Raise `CONSENT_LLM_MONTHLY_CAP_USD` or wait for the next month. Summaries pick up where they left off, then vendor research.
 
+### Re-running every summary
+
+Only for a codebook change that should apply to the whole dataset (October 2026: `enrich.v5`). Every published headline and summary changes, so this is a planned, one-shot migration:
+
+1. Pause the scheduler: `gh workflow disable "consent run"` and stop the homelab standby if one is running. Nothing may push `main` until step 8.
+2. Work on a branch. `npm run consent:enrich-export -- --all` writes a chunk per ~30 items to `.cache/enrich/` and snapshots the current `data/enrichments/` to `.cache/enrich/previous/` (once). Clear any stale `.cache/enrich/*.output.json` from earlier runs first.
+3. Run the agents (a Claude Code swarm; each agent follows the prompt's "agent mode", writes its chunk's output and runs `enrich-check`), or `consent llm` for the API path after deleting the records to redo.
+4. `npm run consent:enrich-import -- --model sonnet-agent --replace`.
+5. `npm run consent:category-diff` and read the movers before trusting the result.
+6. Replaced records invalidate their second readings; `npx tsx --env-file=.env pipeline/cli.ts llm` re-reads every meeting (raise `CONSENT_LLM_MONTHLY_CAP_USD` first).
+7. `npm run consent:build`, `npm test`, update README's categorization note.
+8. If the schema major changed, merge the site change first (below). Merge, push, re-enable the scheduler.
+
+### Bumping the schema major version
+
+Renaming or removing anything in `packages/consent-schema` is breaking: the site's build refuses data whose major version it doesn't know.
+
+1. `SCHEMA_VERSION` in `packages/consent-schema/src/schema.ts`; `npm run schema`.
+2. `data/raw/*.json` carry `schemaVersion` and must be rewritten to the new value (a one-line change per file; use `writeJson` so the formatting stays stable).
+3. In `oakvs`: `SUPPORTED_SCHEMA_MAJOR` in `src/lib/consent/data.ts`, plus any renamed slugs in `src/app/consent-tracker/layout.module.scss`. Merge that before pushing the data; its own build fails on the version gate until the data lands, and Vercel keeps serving the previous deploy.
+
 ### Changing the model or a prompt
 
 1. Copy the prompt to a new version (e.g. `enrich.v5.md`) rather than editing it in place, and update `ENRICH_PROMPT_VERSION` in `pipeline/llm/enrich.ts` (or `VERIFY_API_PROMPT_VERSION` in `pipeline/llm/verify.ts`).

@@ -305,7 +305,11 @@ describe('golden set, 2026-06-24', async () => {
     expect(meeting.totals.yearlyCapItems).toBe(23)
     // source_issue: 12 in §18.5, plus R.-237 (26-1467, Segal), confirmed in the 2026-10-04 attachment check:
     // the text keeps "$201,000.00 per year" and "$603,000.00 for term" while doubling the term to six years.
-    expect(meeting.totals.flagCounts).toMatchObject({ no_competitive_bid: 16, previously_delayed: 56, source_issue: 13 })
+    // The codebook-v5 re-read (October 2026) surfaced three more, each confirmed material by the independent
+    // second reading: R.-34 (26-1341, an amendment amount that doesn't say whether it's added or a new total),
+    // R.-41 (26-1443, title says Architectural Services, text says surveying under the General Services MA) and
+    // R.-122 (26-1407, "$3,134,100.00 30, 2028" garbles the term).
+    expect(meeting.totals.flagCounts).toMatchObject({ no_competitive_bid: 16, previously_delayed: 56, source_issue: 16 })
   })
 
   for (const f of fixtures) {

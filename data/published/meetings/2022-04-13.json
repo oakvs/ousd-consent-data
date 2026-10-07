@@ -58,7 +58,7 @@
         "actionType": "grant_or_funding_in",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Accepts $835,300 in donated COVID-19 protective gear from Kaiser Permanente for students",
+        "headline": "Accepts $835,300 in donated COVID protective equipment from Kaiser Foundation Hospital",
         "money": {
           "amountType": "fixed",
           "byYear": {},
@@ -71,7 +71,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Kaiser Permanente - Kaiser Foundation Hospital donated protective equipment worth $835,300 for district students. It includes wipes, cloth masks, gowns, KN95 masks and hand sanitizer valued at $758,000, plus hand sanitizer pump bottles valued at $77,300. The donation covers July 1, 2021 through January 31, 2022.",
+        "subcategory": null,
+        "summary": "Kaiser Permanente - Kaiser Foundation Hospital is donating masks, gowns, hand sanitizer, wipes and sanitizer pump bottles valued at $835,300 for district students. The items cover July 1, 2021 through January 31, 2022. This is a gift of goods, so the district pays nothing.",
         "term": {
           "addedStart": null,
           "end": "2022-01-31",
@@ -129,10 +130,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -201,20 +202,21 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Adds $310,000 to ER Plumbing's on-call plumbing maintenance contract, now up to $537,700",
+        "headline": "Adds $310,000 to ER Plumbing's on-call plumbing maintenance contract, raising it to $537,700",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$310, 000.00",
+          "evidence": "in an additional amount of $310, 000.00",
           "newTotal": 537700,
           "priorTotal": 227700,
           "thisAction": 310000,
           "thisActionRange": null
         },
         "schools": [],
-        "sourceIssueCandidate": "The added amount is printed with a stray space as \"$310, 000.00\" in the official text.",
-        "summary": "This amendment adds $310,000 to ER Plumbing and Construction's contract for on-call plumbing maintenance and minor repairs across the district, raising the not-to-exceed amount from $227,700 to $537,700. The contract term runs April 8, 2020 through April 8, 2023. All other terms stay the same.",
+        "sourceIssueCandidate": "The added amount is printed with a space as \"$310, 000.00\"; it is read here as $310,000, which matches the stated increase from $227,700 to $537,700.",
+        "subcategory": null,
+        "summary": "This amendment adds money to the district's agreement with ER Plumbing and Construction for on-call plumbing maintenance and minor repairs at schools across the district. The contract's not-to-exceed amount rises from $227,700 to $537,700. The term runs April 8, 2020 through April 8, 2023, and all other terms stay the same.",
         "term": {
           "addedStart": null,
           "end": "2023-04-08",
@@ -263,7 +265,7 @@
       "notes": [
         {
           "kind": "cosmetic",
-          "text": "The added amount is printed with a stray space as \"$310, 000.00\"; the intended value of $310,000.00 is consistent with the stated totals."
+          "text": "The added amount is printed as \"$310, 000.00\" with a stray space, but its intended value of $310,000 matches the stated increase from $227,700 to $537,700."
         }
       ],
       "outcome": {
@@ -279,10 +281,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -339,12 +341,12 @@
         "actionType": "new_agreement",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Pays Johnson Controls up to $9,348 for fire-system testing to close out state approval at four schools",
+        "headline": "Pays Johnson Controls up to $9,348 for fire-system testing at four schools",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "not-to-exceed amount of $9,348.00",
+          "evidence": "in the not-to-exceed amount of $9,348.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 9348,
@@ -357,7 +359,8 @@
           "Sherman Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Johnson Controls Fire Protection will test the fire alarm and communication systems and provide a completion certificate so that four schools' projects can be closed out with the Division of the State Architect (DSA). The amount is up to $9,348, including up to $1,220 set aside for additional services. Work is scheduled from April 14, 2022 to February 1, 2023.",
+        "subcategory": null,
+        "summary": "Johnson Controls Fire Protection will do testing only, including the communication system test and a fire-protection completion certificate, to close out state-approval (Division of the State Architect, or DSA) paperwork at Oakland Technical High, Sequoia, Howard and Sherman elementary schools. The limit of $9,348 includes up to $1,220 for additional services. Work is planned from April 14, 2022 to February 1, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-02-01",
@@ -413,7 +416,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -477,15 +480,13 @@
       "enrichment": {
         "actionType": "new_agreement",
         "category": "Food, transportation & operations",
-        "flags": [
-          "no_competitive_bid"
-        ],
-        "headline": "Pays Julian Tree Care $10,488.53 to remove and replace a large tree at Piedmont Elementary",
+        "flags": [],
+        "headline": "Pays Julian Tree Care $10,488.53 to remove a giant sequoia at Piedmont Elementary and plant a new one",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "lump sum amount of $10,488.53",
+          "evidence": "in the lump sum amount of $10,488.53",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 10488.53,
@@ -495,7 +496,8 @@
           "Piedmont Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Julian Tree Care, Inc. will completely remove and grind a giant sequoia tree at Piedmont Elementary School and plant one Aptos Blue Sequoia, for a lump sum of $10,488.53. Work is scheduled for April 14 to April 21, 2022. The title says the contract was not competitively bid.",
+        "subcategory": null,
+        "summary": "Julian Tree Care will remove and grind a large sequoia tree in a high-use area at Piedmont Elementary School and plant one Aptos Blue Sequoia. The price is a lump sum of $10,488.53, with work planned for April 14 to April 21, 2022. The item's title says it was not competitively bid.",
         "term": {
           "addedStart": null,
           "end": "2022-04-21",
@@ -509,9 +511,7 @@
         }
       },
       "file": "22-0587",
-      "flags": [
-        "no_competitive_bid"
-      ],
+      "flags": [],
       "fundingSource": "Routine Restricted Maintenance Account",
       "group": "Deputy Chief, Facilities Planning and Management",
       "history": [
@@ -553,7 +553,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -621,28 +621,30 @@
           "no_competitive_bid",
           "multi_year"
         ],
-        "headline": "Approves East Bay Community Energy electricity deal, estimated $1.5M to $2.5M over two years",
+        "headline": "Signs two-year electricity deal with East Bay Community Energy, estimated $1.5M to $2.5M",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$1,500,000 to $2,500,000",
+          "evidence": "not to exceed $1,500,000 to $2,500,000 for the Initial Term",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 2500000,
-          "thisActionRange": null
+          "thisActionRange": [
+            1500000,
+            2500000
+          ]
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board declares that public bidding would be futile and approves an electricity contract with East Bay Community Energy Authority, which offers fixed rates below its standard rates in exchange for the district's long-term commitment as a customer. The initial term runs May 1, 2022 to April 30, 2024, with a non-binding estimate of $1,500,000 to $2,500,000 based on past usage. The range would rise if the district uses significantly more electricity.",
+        "subcategory": null,
+        "summary": "The district would buy electricity from East Bay Community Energy Authority at fixed rates below the authority's standard rates, in return for a long-term commitment as a customer. The first term runs May 1, 2022 through April 30, 2024, with a non-binding estimate of $1,500,000 to $2,500,000 that would rise if usage rises significantly. The board is declaring that public bidding would be futile, so the district is not running its own bid.",
         "term": {
           "addedStart": null,
           "end": "2024-04-30",
           "start": "2022-05-01"
         },
-        "uncertain": [
-          "money"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -695,10 +697,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -760,12 +762,12 @@
         "actionType": "new_agreement",
         "category": "Staff & hiring",
         "flags": [],
-        "headline": "Ratifies $24,600 for TeachBar test prep and tutoring for teaching-program candidates",
+        "headline": "Ratifies $24,600 for TeachBar to tutor teaching candidates for credential exams",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $24,600.00",
+          "evidence": "in an amount not to exceed $24,600.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 24600,
@@ -773,7 +775,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "TeachBar will provide test prep and tutoring to help candidates in the district's transition-to-teaching programs pass the CBEST and CSET (multiple subject) exams needed for their credentials. The amount is up to $24,600 for September 1, 2021 through August 31, 2022. The board is approving it after the service period began.",
+        "subcategory": null,
+        "summary": "TeachBar provides test prep and tutoring so candidates in the district's Talent Division teaching programs can pass the CBEST and CSET (multiple subject) exams needed for their credentials. The limit is $24,600 for September 1, 2021 through August 31, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-08-31",
@@ -831,7 +834,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -894,7 +897,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This resolution officially proclaims May 11, 2022 as the Oakland Unified School District's Day of the Teacher. It has no stated cost.",
+        "subcategory": null,
+        "summary": "The board adopts a resolution proclaiming May 11, 2022 as the Oakland Unified School District's Day of the Teacher. It is a ceremonial item with no dollar amount.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -950,7 +954,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1013,7 +1017,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This resolution officially proclaims April 27, 2022 as Administrative Professionals Day in the district. It has no stated cost.",
+        "subcategory": null,
+        "summary": "The board adopts a resolution proclaiming April 27, 2022 as Administrative Professionals Day in the district. It is a ceremonial item with no dollar amount.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -1069,7 +1074,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1119,7 +1124,7 @@
         "actionType": "resolution_or_policy",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Names three teachers as the district's 2022-23 Teachers of the Year",
+        "headline": "Names three teachers as the district's 2022-2023 Teachers of the Year",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1132,7 +1137,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This resolution designates Michelle Chu, Shartresa Nixon and Floresa Vaughn, collectively and individually, as Oakland Unified's Teachers of the Year for 2022-2023. It has no stated cost.",
+        "subcategory": null,
+        "summary": "The board adopts a resolution designating three named teachers, collectively and individually, as the district's 2022-2023 Teachers of the Year. It is a recognition item with no dollar amount.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -1188,7 +1194,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1251,7 +1257,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board approves a routine personnel report from the Talent/Human Resources Department. The official text does not list the individual personnel actions or any dollar amounts.",
+        "subcategory": null,
+        "summary": "The board approves a routine personnel report from the Talent/Human Resources Department. The item text does not list the individual actions or any dollar amounts.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -1307,7 +1314,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1372,12 +1379,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies $30,000 for Oakland Kids First paid internships at Castlemont High",
+        "headline": "Ratifies $30,000 for Oakland Kids First paid career internships at Castlemont High",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $30,000.00",
+          "evidence": "in an amount not to exceed $30,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 30000,
@@ -1387,7 +1394,8 @@
           "Castlemont High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Oakland Kids First will enroll Castlemont High School students in a paid internship program that offers career exploration in health and urban design. The amount is up to $30,000 for November 18, 2021 through June 30, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "Oakland Kids First gives Castlemont High School students the chance to join a paid internship program exploring health and urban design careers. The limit is $30,000 for November 18, 2021 through June 30, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -1445,7 +1453,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1510,12 +1518,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies $61,500 for Oakland Kids First to run Castlemont High's farm and gardens program",
+        "headline": "Ratifies $61,500 for Oakland Kids First to run the Castlemont High farm education program",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $61,500.00",
+          "evidence": "in an amount not to exceed $61,500.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 61500,
@@ -1525,7 +1533,8 @@
           "Castlemont High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Oakland Kids First will provide a Farm Education Co-Manager who manages the Castlemont High School farm and gardens as an education space and leads programming that teaches students to grow and maintain a 1-acre farm. The amount is up to $61,500 for December 1, 2021 through June 30, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "Oakland Kids First provides a Farm Education Co-Manager who looks after the Castlemont High School farm and gardens as a learning space and leads programming where students learn to grow and maintain a 1-acre farm. The limit is $61,500 for December 1, 2021 through June 30, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -1583,7 +1592,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1655,12 +1664,12 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Accepts up to $6M from East Bay Community Foundation for full-service community schools",
+        "headline": "Accepts up to $6M from East Bay Community Foundation for community school programs",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "amount not to exceed $6,000,000.00",
+          "evidence": "in an amount not to exceed $6,000,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 6000000,
@@ -1668,7 +1677,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The East Bay Community Foundation will provide grant funds, up to $6,000,000, to support the district's Full-Service Community School programs and initiatives. The grant covers July 1, 2022 through June 30, 2024 and is managed through the Community Schools and Student Services Department.",
+        "subcategory": null,
+        "summary": "The East Bay Community Foundation will provide grant funds, up to $6,000,000, to support the district's Full-Service Community Schools programs and initiatives. The grant covers July 1, 2022 through June 30, 2024 and is managed by the Community Schools and Student Services Department.",
         "term": {
           "addedStart": null,
           "end": "2024-06-30",
@@ -1816,10 +1826,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -1888,7 +1898,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Accepts $1M Kaiser Foundation Hospitals grant for the central kitchen, instructional farm and education center",
+        "headline": "Accepts a $1M Kaiser grant for the Central Kitchen, instructional farm and education center",
         "money": {
           "amountType": "fixed",
           "byYear": {},
@@ -1901,15 +1911,14 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Kaiser Foundation Hospitals, Northern California Region is giving the district $1,000,000 to support its Central Kitchen, Instructional Farm and Education Center. The grant covers November 1, 2021 through October 31, 2023 and is managed through the Community Schools and Student Services Department.",
+        "subcategory": null,
+        "summary": "Kaiser Foundation Hospitals, Northern California Region is giving the district a $1,000,000 grant to support its Central Kitchen, Instructional Farm and Education Center. The grant covers November 1, 2021 through October 31, 2023 and is managed by the Community Schools and Student Services Department.",
         "term": {
           "addedStart": null,
           "end": "2023-10-31",
           "start": "2021-11-01"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "South San Francisco, CA",
@@ -1962,10 +1971,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -2032,7 +2041,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $30,000.00",
+          "evidence": "in an amount not to exceed $30,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 30000,
@@ -2040,7 +2049,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Global Seed will coordinate the district's implementation of the Y-PLAN Civic Engagement Strategy through the Linked Learning Department. The amount is up to $30,000 for February 21, 2022 through May 10, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "Global Seed coordinates the district's Y-PLAN Civic Engagement Strategy through the Linked Learning Department. The limit is $30,000 for February 21, 2022 through May 10, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-05-10",
@@ -2098,7 +2108,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -2163,7 +2173,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $3,000.00",
+          "evidence": "in an amount not to exceed $3,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 3000,
@@ -2171,7 +2181,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Children Rising will provide Succeed by Reading tutors to improve literacy for second and third-grade students in under-resourced schools who are falling behind in reading. The amount is up to $3,000 for October 1, 2021 through May 25, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "Children Rising provides Succeed by Reading tutors to improve literacy for second and third-grade students in under-resourced schools who are behind in reading. The limit is $3,000 for October 1, 2021 through May 25, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-05-25",
@@ -2229,7 +2240,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -2311,15 +2322,14 @@
           "Urban Promise Academy"
         ],
         "sourceIssueCandidate": null,
+        "subcategory": null,
         "summary": "Rockefeller Philanthropy Advisors, Inc. is giving the district a $7,500 Social and Emotional Learning Fund grant to support student leadership and youth empowerment at Urban Promise Academy. The grant period is August 1, 2021 through December 31, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-12-31",
           "start": "2021-08-01"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "New York, NY",
@@ -2372,7 +2382,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -2437,12 +2447,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies $25,000 for C&C Educational Consultants to coach Brookfield Elementary's principal",
+        "headline": "Ratifies $25,000 for C&C Educational Consultants to coach the Brookfield Elementary principal",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $25,000.00",
+          "evidence": "in an amount not to exceed $25,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 25000,
@@ -2452,13 +2462,16 @@
           "Brookfield Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "C&C Educational Consultants will train and coach the site administrator at Brookfield Elementary School on instructional leadership, budgeting, and teacher observation and feedback, and will help with classroom observations and teacher evaluations. It will also provide leadership and coaching if the school closes or merges. The amount is up to $25,000 for January 31 to June 10, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "C&C Educational Consultants trains and coaches the site administrator at Brookfield Elementary School in instructional leadership, budgeting and teacher observation and feedback. They also help with school consolidation if the school closes or merges. The limit is $25,000 for January 31, 2022 through June 10, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-06-10",
           "start": "2022-01-31"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": "Suisun, CA",
@@ -2563,7 +2576,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -2623,12 +2636,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies $5,000 for Reading Partners one-on-one reading help for about 40 Laurel Elementary students",
+        "headline": "Ratifies $5,000 for Reading Partners one-on-one reading help at Laurel Elementary",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $5,000.00",
+          "evidence": "in an amount not to exceed $5,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 5000,
@@ -2638,7 +2651,8 @@
           "Laurel Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Reading Partners will enroll about 40 Laurel Elementary School students, identified by staff referral, in a one-on-one reading intervention program. The amount is up to $5,000 for February 1 to May 27, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "Reading Partners enrolls about 40 students, referred by staff, in a one-on-one reading intervention program at Laurel Elementary School. The limit is $5,000 for February 1, 2022 through May 27, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-05-27",
@@ -2696,7 +2710,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -2756,12 +2770,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies $6,000 for Tandem to build preschoolers' early literacy and oral language skills",
+        "headline": "Ratifies $6,000 for Tandem to build preschoolers' early reading and speaking skills",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $6,000.00",
+          "evidence": "in an amount not to exceed $6,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 6000,
@@ -2769,7 +2783,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Tandem, Partners in Early Learning will work to strengthen preschool children's early literacy and oral language skills in Spanish and English, through the Early Childhood Development Department. The scope may be adjusted if COVID-19 health and safety guidelines change. The amount is up to $6,000 for October 13, 2021 through June 30, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "Tandem, Partners in Early Learning works to build preschool children's early literacy and oral language in Spanish and English, through the Early Childhood Development Department. The scope may be adjusted if COVID-19 health and safety guidelines change. The limit is $6,000 for October 13, 2021 through June 30, 2022, and the board is approving it after the period began.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -2827,7 +2842,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -2892,12 +2907,12 @@
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Approves $50,000 for added clinician hours at Rudsdale Continuation High School",
+        "headline": "Pays Easy Bay Agency for Children up to $50,000 for added clinician hours at Rudsdale",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $50,000.00",
+          "evidence": "in an amount not to exceed $50,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 50000,
@@ -2906,8 +2921,9 @@
         "schools": [
           "Rudsdale Continuation High School"
         ],
-        "sourceIssueCandidate": "The vendor is spelled \"Easy Bay Agency for Children\" in the title and text; it may be a misspelling of East Bay Agency for Children.",
-        "summary": "Easy Bay Agency for Children, as spelled in the official text, will add hours for a part-time clinician who offers extra therapy and case management services, especially to students who are not on Medi-Cal or are transitioning off it, at Rudsdale Continuation High School. The amount is up to $50,000 for February 28 to June 30, 2022.",
+        "sourceIssueCandidate": null,
+        "subcategory": null,
+        "summary": "The agency adds hours for a part-time clinician to offer more therapy and case management, especially to students at Rudsdale Continuation High School who are not on Medi-Cal or are moving off it. The limit is $50,000 for February 28, 2022 through June 30, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -2951,12 +2967,7 @@
       "matterGuid": "8F5129F8-92B9-4B16-A903-CC2835016A79",
       "matterId": 54880,
       "matterType": "Agreement or Contract",
-      "notes": [
-        {
-          "kind": "cosmetic",
-          "text": "The vendor name is printed as \"Easy Bay Agency for Children\" in both the title and the text, which appears to be a misspelling of \"East Bay\"."
-        }
-      ],
+      "notes": [],
       "outcome": {
         "action": "Adopted on the General Consent Report",
         "adopted": true,
@@ -2970,10 +2981,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": null
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -3040,12 +3051,12 @@
         "actionType": "amendment",
         "category": "Special education",
         "flags": [],
-        "headline": "Adds $200,000 for Hanna Interpreting's interpreting and translation for special education families",
+        "headline": "Adds $200,000 to Hanna Interpreting's special education interpreting and translation contract",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "additional amount of $200,000.00",
+          "evidence": "in an additional amount of $200,000.00",
           "newTotal": 296700,
           "priorTotal": 96700,
           "thisAction": 200000,
@@ -3053,15 +3064,14 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This amendment adds $200,000 to Hanna Interpreting Services' contract, raising the not-to-exceed amount from $96,700 to $296,700. The company provides interpreting and document translation, including Individualized Education Program (IEP) documents and enrollment information, so families can understand information from the Special Education Department. The term is July 1, 2021 through July 31, 2022.",
+        "subcategory": "Services & contract staff",
+        "summary": "This amendment adds money for more interpreting and document translation so families can understand Special Education Department information, such as education plan documents and enrollment steps, in their native language. The contract limit rises from $96,700 to $296,700 for July 1, 2021 through July 31, 2022. All other terms stay the same.",
         "term": {
           "addedStart": null,
           "end": "2022-07-31",
           "start": "2021-07-01"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Spring Valley, CA",
@@ -3114,10 +3124,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -3184,7 +3194,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $4,896.00",
+          "evidence": "in an amount not to exceed $4,896.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 4896,
@@ -3192,7 +3202,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "An individual contractor will provide group support to various students in iReady math and reading through the Community Schools and Student Services Department. The amount is up to $4,896 for November 3, 2021 through May 13, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "An individual contractor provides group support to various students in iReady (a math and reading learning program), through the Community Schools and Student Services Department. The limit is $4,896 for November 3, 2021 through May 13, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-05-13",
@@ -3250,7 +3261,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3310,12 +3321,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves $5,439.70 for Oakland Public Education Fund to hire help for recess and early literacy at Melrose",
+        "headline": "Pays Oakland Public Education Fund up to $5,439.70 for recess help and reading aid at Melrose Leadership",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $5,439.70",
+          "evidence": "in an amount not to exceed $5,439.70",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 5439.7,
@@ -3325,13 +3336,16 @@
           "Melrose Leadership Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Oakland Public Education Fund will hire a contractor to provide extra recess and lunch supervision on the Sherman Campus and classroom assistance in early literacy at Melrose Leadership Academy. The amount is up to $5,439.70 for January 3 to May 27, 2022.",
+        "subcategory": null,
+        "summary": "Oakland Public Education Fund hires a contractor to provide extra recess and lunch supervision on the Sherman Campus and classroom help with early reading at Melrose Leadership Academy. The limit is $5,439.70 for January 3, 2022 through May 27, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-05-27",
           "start": "2022-01-03"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -3383,7 +3397,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3448,12 +3462,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves $35,640 for Love, Learn, Success to support recess and PE at Melrose Leadership Academy",
+        "headline": "Pays Love, Learn, Success up to $35,640 for recess and PE support at Melrose Leadership",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $35,640.00",
+          "evidence": "in an amount not to exceed $35,640.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 35640,
@@ -3463,7 +3477,8 @@
           "Melrose Leadership Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Love, Learn, Success will identify 2 to 3 staff members to support students in informal outdoor spaces such as recess and PE, adding to current supervision and PE teams. It will also provide extra recess and lunch supervision, conflict management support, and structured fitness and play. The amount is up to $35,640 for August 10, 2021 through May 25, 2022.",
+        "subcategory": null,
+        "summary": "Love, Learn, Success provides 2 to 3 staff members to support students in informal outdoor spaces such as recess and PE, adding recess and lunch supervision, conflict management, structured fitness and structured play at Melrose Leadership Academy. The limit is $35,640 for August 10, 2021 through May 25, 2022. The agreement period began before the board vote.",
         "term": {
           "addedStart": null,
           "end": "2022-05-25",
@@ -3523,7 +3538,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3588,12 +3603,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies $25,000 for Museum of Children's Arts to teach visual art lessons at East Oakland Pride",
+        "headline": "Ratifies $25,000 for Museum of Children's Arts visual art lessons at East Oakland Pride Elementary",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $25,000.00",
+          "evidence": "in an amount not to exceed $25,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 25000,
@@ -3603,7 +3618,8 @@
           "East Oakland Pride Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Museum of Children's Arts will develop and teach grade-appropriate lessons tied to the state's visual art standards at East Oakland Pride Elementary School. The amount is up to $25,000 for August 10, 2021 through May 24, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "The Museum of Children's Arts develops and teaches visual art lessons that match state art standards and are right for each grade at East Oakland Pride Elementary School. The limit is $25,000 for August 10, 2021 through May 24, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-05-24",
@@ -3661,7 +3677,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3726,12 +3742,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies $41,000 for Crescendo Education Group's monthly equitable grading workshops for teachers",
+        "headline": "Ratifies $41,000 for Crescendo Education Group to host equitable grading workshops for teachers",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $41,000.00",
+          "evidence": "in an amount not to exceed $41,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 41000,
@@ -3739,7 +3755,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Crescendo Education Group, LLC will host monthly equitable grading workshops for teachers through the Strategic Resource Planning Department. The amount is up to $41,000 for February 16 through June 30, 2022. The board is approving it after the start date.",
+        "subcategory": null,
+        "summary": "Crescendo Education Group, LLC hosts monthly equitable grading workshops for teachers, through the Strategic Resource Planning Department. The limit is $41,000 for February 16, 2022 through June 30, 2022. The board is approving this after the service period began.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -3797,7 +3814,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3862,12 +3879,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves $59,000 for Bay Area Community Resources career exploration at Fremont High",
+        "headline": "Pays Bay Area Community Resources up to $59,000 for career pathway engagement at Fremont High",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $59,000.00",
+          "evidence": "in an amount not to exceed $59,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 59000,
@@ -3877,7 +3894,8 @@
           "Fremont High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Bay Area Community Resources will offer more equitable ways to engage Fremont High School students who face attendance and academic challenges, through pathway-aligned courses and career exploration experiences. The amount is up to $59,000 for October 19, 2021 through June 30, 2022.",
+        "subcategory": null,
+        "summary": "Bay Area Community Resources offers more equitable ways to engage Fremont High School students who face attendance and academic challenges in pathway-aligned courses and career exploration. The limit is $59,000 for October 19, 2021 through June 30, 2022. The agreement period began before the board vote.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -3935,7 +3953,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3995,12 +4013,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves $6,560 for Oakland Public Education Fund work-based learning at Oakland International High",
+        "headline": "Pays Oakland Public Education Fund up to $6,560 for work-based learning at Oakland International High",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $6,560.00",
+          "evidence": "in an amount not to exceed $6,560.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 6560,
@@ -4010,7 +4028,8 @@
           "Oakland International High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Oakland Public Education Fund, through KDOL/YouthBeats, will provide a classroom support staff person and a work-based learning experience for 11th graders in the Dual Enrollment Media Arts Class Pathway at Oakland International High School. The amount is up to $6,560 for January 1 to June 30, 2022.",
+        "subcategory": null,
+        "summary": "Through KDOL/YouthBeats, Oakland Public Education Fund provides a classroom support staff person who gives 11th graders work-based learning experience in the Dual Enrollment Media Arts Class Pathway at Oakland International High School. The limit is $6,560 for January 1, 2022 through June 30, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -4068,7 +4087,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -4133,12 +4152,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves $15,000 for Common Vision to run farm and fresh food programs at Castlemont High",
+        "headline": "Pays Common Vision up to $15,000 for farm and gardens programs at Castlemont High",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "amount not to exceed $15,000.00",
+          "evidence": "in an amount not to exceed $15,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 15000,
@@ -4148,7 +4167,8 @@
           "Castlemont High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Common Vision (Growing Together) will partner with the Castlemont Farm and Gardens to provide its Farm & Garden Stewardship and Education and Fresh Food Enterprises programs at Castlemont High School. The amount is up to $15,000 for January 1 to June 30, 2022.",
+        "subcategory": null,
+        "summary": "Common Vision (Growing Together) partners with the Castlemont Farm and Gardens to provide its farm stewardship and education programs and its Fresh Food Enterprises program at Castlemont High School. The limit is $15,000 for January 1, 2022 through June 30, 2022. The agreement period began before the board vote.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -4206,7 +4226,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -4271,12 +4291,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Pays Street Academy Foundation up to $82,575.57 for pathway support at Emiliano Zapata Street Academy",
+        "headline": "Pays Street Academy Foundation up to $82,575.57 for career pathway support at Zapata Street Academy",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$82,575.57",
+          "evidence": "not to exceed $82,575.57",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 82575.57,
@@ -4286,7 +4306,8 @@
           "Emiliano Zapata Street Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Street Academy Foundation will help students at Emiliano Zapata Street Academy get into courses and experiences tied to the Education, Child Development & Family Services career pathway. The agreement runs from August 9, 2021 to June 30, 2022 and is paid from Measure N funds. Its start date is before the April 13, 2022 board vote.",
+        "subcategory": null,
+        "summary": "The Street Academy Foundation will help students at Emiliano Zapata Street Academy get into courses and experiences in the Education, Child Development and Family Services career pathway. The agreement runs from August 9, 2021 to June 30, 2022 and is paid for with Measure N funds. The agreement period began before this vote.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -4344,7 +4365,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -4414,12 +4435,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $12,000 for a farm and garden program contractor at Castlemont High School",
+        "headline": "Pays a farm and garden program contractor up to $12,000 at Castlemont High School",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$12,000.00",
+          "evidence": "not to exceed $12,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 12000,
@@ -4429,7 +4450,8 @@
           "Castlemont High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "An individual contractor will support the Farm and Gardens Program at Castlemont High School. Tasks include helping plan and cultivate the space, educational programming, curriculum support, and family and community engagement. The work runs from March 14 to June 30, 2022, and the board is approving it after it began.",
+        "subcategory": null,
+        "summary": "An individual contractor will support the Farm and Gardens Program at Castlemont High School. The work includes planning and cultivating the space, educational programming, curriculum support, and family and community engagement, from March 14 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -4487,7 +4509,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -4552,12 +4574,12 @@
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Ratifies up to $6,000 for English classes for parents at Elmhurst United Middle School",
+        "headline": "Pays an instructor up to $6,000 for English classes for parents at Elmhurst United Middle School",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$6,000.00",
+          "evidence": "not to exceed $6,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 6000,
@@ -4567,15 +4589,14 @@
           "Elmhurst United Middle School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "An individual contractor will teach English to parents who are not native English speakers, focusing on the language they need to talk with school staff and support their children's schooling. The service runs from March 1 to June 30, 2022, and the board is approving it after it began. It is paid from Title I funds for low-income students.",
+        "subcategory": null,
+        "summary": "An individual instructor will teach English to parents of students who are not native English speakers at Elmhurst United Middle School. The classes focus on everyday language for talking with school staff and helping children succeed, from March 1 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
           "start": "2022-03-01"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "individual",
           "location": "Oakland, CA",
@@ -4627,7 +4648,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -4692,12 +4713,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $27,000 for BLK to advise fashion classes at Oakland Technical High School",
+        "headline": "Pays BLK up to $27,000 for a fashion industry consultant at Oakland Technical High School",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$27,000.00",
+          "evidence": "not to exceed $27,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 27000,
@@ -4707,15 +4728,14 @@
           "Oakland Technical High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "BLK will provide a fashion industry consultant to help with the Career Technical Education courses in Fashion Fundamentals, Fashion Design History and Fashion Marketing. The work runs from January 3 to June 30, 2022, and the board is approving it after it began. It is paid from a Riverside Community College fund.",
+        "subcategory": null,
+        "summary": "BLK will provide a fashion industry consultant to help with career technical education courses in Fashion Fundamentals, Fashion Design History and Fashion Marketing at Oakland Technical High School. The period is January 3 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
           "start": "2022-01-03"
         },
-        "uncertain": [
-          "vendor"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -4767,7 +4787,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -4832,12 +4852,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $12,500 for Reading Partners tutoring at Reach Academy",
+        "headline": "Pays Reading Partners up to $12,500 for one-on-one reading tutoring at Reach Academy",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$12,500.00",
+          "evidence": "not to exceed $12,500.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 12500,
@@ -4847,7 +4867,8 @@
           "Reach Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Reading Partners will give one-on-one reading tutoring at each student's reading level, in two 45-minute sessions per week during or after the school day. The agreement runs from September 6, 2021 to May 25, 2022, and the board is approving it after it began. It is paid from Title I funds for low-income students.",
+        "subcategory": null,
+        "summary": "Reading Partners will give students one-on-one reading tutoring at their reading level, in two 45-minute sessions a week, during the school day or after school at Reach Academy. The period is September 6, 2021 to May 25, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-05-25",
@@ -4905,7 +4926,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -4970,12 +4991,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Pays Attitudinal Healing Connection up to $25,000 for arts and African drumming at West Oakland Middle",
+        "headline": "Pays Attitudinal Healing Connection up to $25,000 for arts and drumming at West Oakland Middle School",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$25,000.00",
+          "evidence": "not to exceed $25,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 25000,
@@ -4985,7 +5006,8 @@
           "West Oakland Middle School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Attitudinal Healing Connection, Inc. will teach visual and performing arts, including African drumming, to students during and after school at West Oakland Middle School. The agreement runs from February 28 to May 31, 2022, and starts before the April 13, 2022 board vote. It is paid from Measure G parcel tax funds.",
+        "subcategory": null,
+        "summary": "Attitudinal Healing Connection, Inc. will teach visual and performing arts, including African drumming, to students during and after school at West Oakland Middle School. The agreement runs from February 28 to May 31, 2022 and is paid from Measure G parcel tax funds. The agreement period began before this vote.",
         "term": {
           "addedStart": null,
           "end": "2022-05-31",
@@ -5043,7 +5065,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5108,12 +5130,12 @@
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Pays Oakland Public Education Fund up to $25,000 for hotel housing vouchers for homeless students",
+        "headline": "Pays Oakland Public Education Fund up to $25,000 for housing vouchers for families without stable housing",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$25,000.00",
+          "evidence": "not to exceed $25,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 25000,
@@ -5121,7 +5143,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Oakland Public Education Fund will process more housing vouchers to move students and families from cars into hotel or motel rooms for short-term housing, along with intensive housing case management, to help students attend school more steadily. The money comes from a California homeless-youth grant, and the work runs from March 1 to June 30, 2022. The agreement starts before the April 13, 2022 board vote.",
+        "subcategory": null,
+        "summary": "The Oakland Public Education Fund will process additional housing vouchers that move students and families from cars to hotel or motel rooms for temporary housing, along with intensive housing case management. The goal is to steady school attendance, and the work is funded by a California Department of Education homeless youth grant. The period is March 1 to June 30, 2022. The agreement period began before this vote.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -5179,7 +5202,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5244,12 +5267,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $10,080 for Marram Collaborative garden learning design at Peralta Elementary",
+        "headline": "Pays Marram Collaborative up to $10,080 to design garden-based learning at Peralta Elementary",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$10,080.00",
+          "evidence": "not to exceed $10,080.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 10080,
@@ -5259,7 +5282,8 @@
           "Peralta Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Marram Collaborative LLC will design hands-on, garden-based learning experiences that fit the school's curriculum, include arts-based teaching and build social-emotional learning through nature for all students at Peralta Elementary School. The work runs from February 1 to May 25, 2022, and the board is approving it after it began. It is paid from federal pandemic relief funds (ESSER II).",
+        "subcategory": null,
+        "summary": "Marram Collaborative LLC will design hands-on, garden-centered learning experiences for all students at Peralta Elementary School. They are meant to complement the regular curriculum and include arts-based teaching and nature-based social-emotional learning. The period is February 1 to May 25, 2022, and the board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-05-25",
@@ -5407,7 +5431,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5472,12 +5496,12 @@
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Ratifies up to $75,000 for Stanford's Gardner Center to study Oakland's community schools work",
+        "headline": "Pays Stanford's Gardner Center up to $75,000 to study Oakland's Community Schools initiative",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$75,000.00",
+          "evidence": "to not exceed $75,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 75000,
@@ -5485,7 +5509,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The John W. Gardner Center at Stanford University will work with the district on a multi-year study documenting how the district's Community Schools initiative is being carried out. This agreement covers February 1 to June 30, 2022, and the board is approving it after it began. It is paid from Kaiser funds.",
+        "subcategory": null,
+        "summary": "The John W. Gardner Center at Stanford University will work with the district on a multi-year study documenting how the district's Community Schools initiative is being carried out. This agreement covers February 1 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -5497,7 +5522,7 @@
         "vendor": {
           "kind": "organization",
           "location": "Stanford, CA",
-          "name": "John W. Gardner Center for Youth and Their Communities, Stanford University"
+          "name": "John W. Gardner Center for Youth and Their Communities (Stanford University)"
         }
       },
       "file": "22-0664",
@@ -5545,10 +5570,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": null
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -5597,10 +5622,10 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "new_agreement",
+        "actionType": "mou_or_data_sharing",
         "category": "After-school & summer programs",
         "flags": [],
-        "headline": "Ratifies a no-cost after-school drama class by Doug's Drama at Chabot Elementary",
+        "headline": "Approves Doug's Drama running a free after-school theater class at Chabot Elementary",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5615,7 +5640,8 @@
           "Chabot Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Doug's Drama will teach an after-school class on theater games, creative drama, puppetry and storytelling at Chabot Elementary School. It costs the district nothing. The agreement runs from March 14 to June 30, 2022, and the board is approving it after it began.",
+        "subcategory": null,
+        "summary": "Doug's Drama will teach an after-school class on theater games, creative drama, puppetry and storytelling at Chabot Elementary School at no cost to the district. The period is March 14 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -5673,7 +5699,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5725,12 +5751,12 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "new_agreement",
+        "actionType": "mou_or_data_sharing",
         "category": "After-school & summer programs",
         "flags": [
           "multi_year"
         ],
-        "headline": "Ratifies a no-cost after-school class by Trendy Crafts at Chabot Elementary through June 2024",
+        "headline": "Approves Trendy Crafts running a free after-school class at Chabot Elementary through June 2024",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5744,8 +5770,9 @@
         "schools": [
           "Chabot Elementary School"
         ],
-        "sourceIssueCandidate": "The title says 2021-2022, but the action text gives a term ending June 28, 2024.",
-        "summary": "Trendy Crafts, LLC will teach an after-school class called Room To Bloom at Chabot Elementary School at no cost to the district. The stated term runs from March 21, 2022 to June 28, 2024, which is longer than the 2021-2022 year in the title. The board is approving it after it began.",
+        "sourceIssueCandidate": "The title says 2021-2022, but the stated agreement period runs from March 21, 2022 through June 28, 2024.",
+        "subcategory": null,
+        "summary": "Trendy Crafts, LLC will teach an after-school class called Room To Bloom at Chabot Elementary School at no cost to the district. The stated period runs from March 21, 2022 to June 28, 2024, longer than the 2021-2022 year in the title. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2024-06-28",
@@ -5761,6 +5788,7 @@
       "file": "22-0672",
       "flags": [
         "after_work_began",
+        "source_issue",
         "multi_year"
       ],
       "fundingSource": null,
@@ -5790,12 +5818,7 @@
       "matterGuid": "53E69EFA-CFD8-43D5-AAD1-867B9EB3ADF9",
       "matterId": 54967,
       "matterType": "Agreement or Contract",
-      "notes": [
-        {
-          "kind": "cosmetic",
-          "text": "The title says 2021-2022, but the action text gives a term of March 21, 2022 through June 28, 2024, which governs."
-        }
-      ],
+      "notes": [],
       "outcome": {
         "action": "Adopted on the General Consent Report",
         "adopted": true,
@@ -5809,13 +5832,13 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
-      "sourceIssue": null,
-      "sourceIssueBy": null,
+      "sourceIssue": "The title labels the agreement 2021-2022, but the action text sets its period from March 21, 2022 through June 28, 2024, which extends beyond the 2021-2022 school year.",
+      "sourceIssueBy": "verifier",
       "text": "Ratification by the Board of Education of a No-Cost Services Agreement 2021-2022 by and between the District and Trendy Crafts, LLC, Burien, WA, for the latter to teach an after school class called Room To Bloom, as described in Exhibit A of the Agreement at Chabot Elementary School, for the period of March 21, 2022 through June 28, 2024, at no cost to the District.",
       "title": "Services Agreement 2021-2022 - No Cost - Trendy Crafts LLC - Chabot Elementary School",
       "vendorKey": "v-007694",
@@ -5879,12 +5902,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $15,000 for research support on the district's Kindergarten Readiness Program",
+        "headline": "Pays a Seattle-based consultant up to $15,000 to evaluate the Kindergarten Readiness Program",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$15,000.00",
+          "evidence": "not to exceed $15,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 15000,
@@ -5892,7 +5915,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "An individual contractor will provide data, evaluation and research support for the Kindergarten Readiness Program, including the teacher leader program, the summer transition bridge, home visits and transition forms, to measure how well they work and student results. The work runs from March 7 to June 30, 2022, is paid from First 5 Alameda County funds, and the board is approving it after it began.",
+        "subcategory": null,
+        "summary": "An individual contractor will give technical, data, evaluation and research support to the Kindergarten Readiness Program, including the transition teacher leader program, summer kinder bridge and home visits. The aim is to judge how well it works and what results students see. The period is March 7 to June 30, 2022, and the board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -5950,7 +5974,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6007,10 +6031,10 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "new_agreement",
+        "actionType": "mou_or_data_sharing",
         "category": "After-school & summer programs",
         "flags": [],
-        "headline": "Ratifies a no-cost after-school musical theater class at Chabot Elementary",
+        "headline": "Approves a no-cost after-school musical play class taught by an individual at Chabot Elementary",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -6025,7 +6049,8 @@
           "Chabot Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "An individual instructor will teach an after-school class at Chabot Elementary School that builds the skills and confidence students need to perform a musical play for an audience. It costs the district nothing. The agreement runs from March 14 to June 30, 2022, and the board is approving it after it began.",
+        "subcategory": null,
+        "summary": "An individual will teach an after-school class at Chabot Elementary School that builds the skills and confidence to perform a musical play for an audience. It costs the district nothing. The period is March 14 to June 30, 2022, and the board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -6083,7 +6108,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6153,7 +6178,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$22,000.00",
+          "evidence": "not to exceed $22,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 22000,
@@ -6163,7 +6188,8 @@
           "EnCompass Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Sylvan Learning Center, working with Right Path to Learning, will expand tutoring for students in grades 4-5 who are far below grade level in reading foundations at EnCompass Academy. The agreement runs from January 13 to May 13, 2022, and starts before the April 13, 2022 board vote. It is paid from federal pandemic relief funds (ESSER II).",
+        "subcategory": null,
+        "summary": "Sylvan Learning Center, working with Right Path to Learning, will expand tutoring for students in grades 4-5 who are far below grade level in reading foundations at EnCompass Academy. The period is January 13 to May 13, 2022. The agreement period began before this vote.",
         "term": {
           "addedStart": null,
           "end": "2022-05-13",
@@ -6221,7 +6247,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6284,14 +6310,14 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "new_agreement",
-        "category": "Classroom & academic programs",
+        "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies up to $39,400 for C&C Educational Consultants to plan the New Highland Academy merger",
+        "headline": "Pays C&C Educational Consultants up to $39,400 for a school merger plan at New Highland Academy",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$39,400.00",
+          "evidence": "not to exceed $39,400.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 39400,
@@ -6302,7 +6328,8 @@
           "RISE Community"
         ],
         "sourceIssueCandidate": null,
-        "summary": "C&C Educational Consultants will help the school's administrator develop and carry out a transition plan for the planned merger of RISE Community with New Highland Academy for the 2022-23 school year. The work runs from March 7 to June 10, 2022, and the board is approving it after it began. It is paid from unrestricted concentration funds.",
+        "subcategory": null,
+        "summary": "C&C Educational Consultants will help the New Highland Academy principal develop and carry out a School Merger Transition Plan for the planned merger of RISE Community with New Highland Academy in 2022-23. The period is March 7 to June 10, 2022, and the board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-10",
@@ -6415,7 +6442,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6480,12 +6507,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $14,000 for Destiny Arts Center African arts program at Madison Park Primary",
+        "headline": "Pays Destiny Arts Center up to $14,000 for African arts and culture at Madison Park Academy",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$14,000.00",
+          "evidence": "not to exceed $14,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 14000,
@@ -6495,7 +6522,8 @@
           "Madison Park Academy-Primary"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Destiny Arts Center will provide 210 hours of African Arts and Culture instruction that fits the school's mission, vision and values at Madison Park Academy-Primary. The work runs from March 14 to May 20, 2022, and the board is approving it after it began. It is paid from federal pandemic relief funds for community school partners.",
+        "subcategory": null,
+        "summary": "Destiny Arts Center will provide 210 hours of African arts and culture programming at Madison Park Academy-Primary, tied to the school's mission and values. The period is March 14 to May 20, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-05-20",
@@ -6553,7 +6581,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6623,7 +6651,7 @@
         "actionType": "amendment",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Adds $20,000 from Alameda County for health services for unaccompanied immigrant youth",
+        "headline": "Accepts $20,000 from Alameda County for health services for unaccompanied immigrant youth",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -6635,7 +6663,8 @@
           "thisActionRange": null
         },
         "schools": [],
-        "sourceIssueCandidate": "The text says the district is 'accepting/adding' $20,000 under a community-based organization master contract, so it is unclear whether the district is receiving or paying this amount.",
+        "sourceIssueCandidate": null,
+        "subcategory": null,
         "summary": "This amends a master contract with the Alameda County Health Care Services Agency. The county reimburses the district for actual expenses, up to $20,000, to remove barriers and expand access to health and wellness services for unaccompanied immigrant youth. The period is July 1, 2021 to June 30, 2022, and all other terms stay the same.",
         "term": {
           "addedStart": null,
@@ -6696,10 +6725,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": "2026-10-04",
         "status": "human_reviewed",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": null
       },
       "sourceIssue": "The text says the District is \"accepting/adding\" $20,000.00 under a master contract with the Alameda County Health Care Services Agency without stating plainly whether the District receives or pays that amount.",
       "sourceIssueBy": "human",
@@ -6756,12 +6785,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $6,000 for The Teaching Well teacher training on trauma-informed practices",
+        "headline": "Pays The Teaching Well up to $6,000 for monthly trauma-informed teaching sessions for faculty",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$6,000.00",
+          "evidence": "not to exceed $6,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 6000,
@@ -6769,7 +6798,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Teaching Well will lead monthly sessions for teachers that model trauma-informed practices and train them in specific teaching methods they can use in their classrooms. The work runs from February 16 to June 30, 2022, and the board is approving it after it began. It is paid from Title II teacher quality funds.",
+        "subcategory": null,
+        "summary": "The Teaching Well will lead monthly sessions in which teachers experience and learn trauma-informed practices and specific teaching methods they can use in their classrooms. It is arranged through the Strategic Resource Planning Department for February 16 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -6827,7 +6857,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6892,12 +6922,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $15,000 for Reading Partners tutoring at Bella Vista Elementary",
+        "headline": "Pays Reading Partners up to $15,000 for a reading tutoring program at Bella Vista Elementary",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$15,000.00",
+          "evidence": "not to exceed $15,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 15000,
@@ -6907,7 +6937,8 @@
           "Bella Vista Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Reading Partners will run a reading tutoring program, led by a full-time coordinator, for identified students at Bella Vista Elementary School. The agreement runs from October 1, 2021 to May 25, 2022, and the board is approving it after it began.",
+        "subcategory": null,
+        "summary": "Reading Partners will run a reading tutoring program, led by a full-time coordinator, for identified students at Bella Vista Elementary School. The period is October 1, 2021 to May 25, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-05-25",
@@ -6965,7 +6996,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -7030,12 +7061,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $24,000 for Destiny Arts Center African arts program at Prescott Elementary",
+        "headline": "Pays Destiny Arts Center up to $24,000 for African arts and culture at Prescott Elementary",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$24,000.00",
+          "evidence": "not to exceed $24,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 24000,
@@ -7045,7 +7076,8 @@
           "Prescott Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Destiny Arts Center will provide 210 hours of African Arts and Culture instruction that fits the school's mission, vision and values at Prescott Elementary School. The agreement runs from September 1, 2021 to June 30, 2022, and the board is approving it after it began. It is paid from Measure G parcel tax funds.",
+        "subcategory": null,
+        "summary": "Destiny Arts Center will provide 210 hours of African arts and culture programming at Prescott Elementary School, tied to the school's mission and values. It is paid from Measure G parcel tax funds, for September 1, 2021 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -7103,7 +7135,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -7166,14 +7198,14 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "new_agreement",
-        "category": "Food, transportation & operations",
+        "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies up to $91,000 for Mid-County Officials Network to staff Oakland Athletic League games",
+        "headline": "Pays Mid-County Officials Network up to $91,000 for officials at Oakland Athletic League games",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$91,000.00",
+          "evidence": "not to exceed $91,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 91000,
@@ -7181,7 +7213,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Mid-County Officials Network will provide game officials for Oakland Athletic League middle and high school volleyball, baseball and softball games and do related tasks. The work runs from February 1 to June 30, 2022, and the board is approving it after it began. It is paid from general unrestricted funds.",
+        "subcategory": null,
+        "summary": "Mid-County Officials Network will supply officials for Oakland Athletic League middle and high school volleyball, baseball and softball games and do related work. It is arranged through the Community Schools and Student Services Department for February 1 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -7241,10 +7274,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -7293,10 +7326,10 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "new_agreement",
+        "actionType": "mou_or_data_sharing",
         "category": "After-school & summer programs",
         "flags": [],
-        "headline": "Ratifies a no-cost after-school ceramics class by Dana Zed Ceramics at Chabot Elementary",
+        "headline": "Approves Dana Zed Ceramics running a free after-school ceramics class at Chabot Elementary",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -7311,7 +7344,8 @@
           "Chabot Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Dana Zed Ceramics will provide an after-school ceramics class at Chabot Elementary School at no cost to the district. The agreement runs from March 14 to June 30, 2022, and the board is approving it after it began.",
+        "subcategory": null,
+        "summary": "Dana Zed Ceramics will teach an after-school ceramics class at Chabot Elementary School at no cost to the district. The period is March 14 to June 30, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -7369,7 +7403,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -7434,7 +7468,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$7,800.00",
+          "evidence": "not to exceed $7,800.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 7800,
@@ -7444,7 +7478,8 @@
           "Bella Vista Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Girls Inc. of Alameda County, working with the Oakland Athletic League, will offer its Bodies in Motion program and structured recreation as part of the regular after-school program at Bella Vista Elementary School. The agreement runs from April 13 to June 30, 2022, and is paid from Expanded Learning Opportunities Program funds.",
+        "subcategory": null,
+        "summary": "Girls Inc. of Alameda County will offer its Bodies in Motion program and structured recreation as part of the regular after-school program at Bella Vista Elementary School, working with the Oakland Athletic League. The period is April 13 to June 30, 2022, and it is paid from Expanded Learning Opportunities Program funds.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -7500,10 +7535,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": null
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -7560,12 +7595,12 @@
         "actionType": "new_agreement",
         "category": "After-school & summer programs",
         "flags": [],
-        "headline": "Pays Safe Passages up to $5,200 to recruit families for Fruitvale Elementary's after-school program",
+        "headline": "Pays Safe Passages up to $5,200 for family outreach before it runs the Fruitvale after-school program",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$5,200.00",
+          "evidence": "at a cost not to exceed $5,200.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 5200,
@@ -7574,8 +7609,9 @@
         "schools": [
           "Fruitvale Elementary School"
         ],
-        "sourceIssueCandidate": null,
-        "summary": "Safe Passages will hold recruitment and special orientation events outside regular school hours to increase student and family engagement as it prepares to take over managing the after-school program at Fruitvale Elementary School for the 2022-23 school year. The agreement runs from April 13 to June 30, 2022, and is paid from Expanded Learning Opportunities Program funds.",
+        "sourceIssueCandidate": "The text prints the 2022-23 school year as \"2022-20223\".",
+        "subcategory": null,
+        "summary": "Safe Passages will hold recruitment and orientation events outside regular school hours to build student and family engagement as it prepares to take over the After School Program at Fruitvale Elementary School for 2022-23. The period is April 13 to June 30, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -7617,7 +7653,12 @@
       "matterGuid": "C76EA929-CFA6-4381-914F-B4C7897BB4B3",
       "matterId": 55022,
       "matterType": "Agreement or Contract",
-      "notes": [],
+      "notes": [
+        {
+          "kind": "cosmetic",
+          "text": "The action text misprints the 2022-23 school year as \"2022-20223\", but the agreement's dates (April 13, 2022 through June 30, 2022) and amount are clearly stated."
+        }
+      ],
       "outcome": {
         "action": "Adopted on the General Consent Report",
         "adopted": true,
@@ -7631,10 +7672,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": null
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -7701,7 +7742,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$15,600.00",
+          "evidence": "not to exceed $15,600.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 15600,
@@ -7711,7 +7752,8 @@
           "MetWest High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Safe Passages will give MetWest High School students chances to build job skills, explore careers and develop as young leaders through extended-day internships that prepare them for jobs in extended-day and summer programs. The agreement runs from April 13 to June 30, 2022, and is paid from Expanded Learning Opportunities Program funds.",
+        "subcategory": null,
+        "summary": "Safe Passages will give MetWest High School students extended-day internships that build professional skills, career exploration and youth development, during extended day and summer programs. The period is April 13 to June 30, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -7767,7 +7809,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -7837,7 +7879,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$87,843.00",
+          "evidence": "not to exceed $87,843.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 87843,
@@ -7848,15 +7890,14 @@
           "Global Family Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Safe Passages will run four school readiness playgroups for pre-kindergarten through first-grade students and their parents or caregivers at Emerson and Global Family Elementary Schools. The agreement runs from February 1 to May 31, 2022, and starts before the April 13, 2022 board vote. It is paid from state Expanded Learning Opportunities funds.",
+        "subcategory": null,
+        "summary": "Safe Passages will run four school readiness playgroups for students in pre-kindergarten through first grade and their parents or caregivers at Emerson and Global Family Elementary Schools. The period is February 1 to May 31, 2022, and the board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-05-31",
           "start": "2022-02-01"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -7908,7 +7949,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -7973,12 +8014,12 @@
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Pays Seneca Family of Agencies up to $132,000 for student behavior and wellness support at Prescott Elementary",
+        "headline": "Pays Seneca Family of Agencies up to $132,000 for student behavior and wellness support at Prescott",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$132,000.00",
+          "evidence": "not to exceed $132,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 132000,
@@ -7988,7 +8029,8 @@
           "Prescott Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Seneca Family of Agencies will help Prescott Elementary School build strategies for student support at three levels, including sensory regulation and trauma-informed practices and sensory spaces in classrooms. It will also lead the school's Positive Behavioral Interventions and Supports team, set up school-wide recognition, and help plan staff wellness and mindfulness. The agreement runs from August 2, 2021 to May 31, 2022 and starts before the April 13, 2022 board vote.",
+        "subcategory": null,
+        "summary": "Seneca Family of Agencies will build strategies for student behavior support at three levels, including sensory regulation and trauma-informed practices, sensory spaces in classrooms, schoolwide positive behavior recognition, and staff wellness at Prescott Elementary School. The period is August 2, 2021 to May 31, 2022. The agreement period began before this vote.",
         "term": {
           "addedStart": null,
           "end": "2022-05-31",
@@ -8046,10 +8088,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -8106,12 +8148,12 @@
         "actionType": "new_agreement",
         "category": "Special education",
         "flags": [],
-        "headline": "Ratifies up to $6,000 for CAST to train after-school staff on supporting students with disabilities",
+        "headline": "Pays CAST Inc. up to $6,000 to train after-school staff who support students in special education",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$6,000.00",
+          "evidence": "not to exceed $6,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 6000,
@@ -8119,15 +8161,14 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "CAST Inc. will lead a three-hour virtual training for after-school community staff who work directly with students receiving special education services. It will share best practices and resources based on the Universal Design for Learning guidelines. The training is on January 10, 2022, and the board is approving it after it took place. It is paid from federal pandemic relief funds (ESSER III).",
+        "subcategory": "Programs & support",
+        "summary": "CAST Inc. will give a three-hour virtual training on January 10, 2022 for after-school community staff who work directly with students receiving special education services. It covers best practices and resources based on the Universal Design for Learning guidelines. The board is approving it after the training date.",
         "term": {
           "addedStart": null,
           "end": "2022-01-10",
           "start": "2022-01-10"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Wakefield, MA",
@@ -8179,7 +8220,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -8251,12 +8292,12 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Applies for $180,000 from UConn's Korey Stringer Institute to hire athletic trainers for high schools",
+        "headline": "Approves applying for $180,000 from UConn's Korey Stringer Institute for athletic trainers",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$180,000.00",
+          "evidence": "$180,000.00 in funding",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 180000,
@@ -8264,7 +8305,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board is approving the district's application to the University of Connecticut's Korey Stringer Institute for $180,000 to support hiring and keeping athletic trainers, plus supplies and equipment, for district high schools through the Oakland Athletic League. The funding would cover the 2021-24 school years. The text describes an application, not an award.",
+        "subcategory": null,
+        "summary": "The board is approving the district's application to the University of Connecticut's Korey Stringer Institute for $180,000 to hire and keep athletic trainers and buy supplies and equipment for district high schools through the Oakland Athletic League. The application covers the 2021-24 school years. It is a request, so the award is not yet decided.",
         "term": {
           "addedStart": null,
           "end": "2024-06-30",
@@ -8275,7 +8317,7 @@
         ],
         "vendor": {
           "kind": "organization",
-          "location": "Storrs, CT",
+          "location": "Storss, CT",
           "name": "Korey Stringer Institute, University of Connecticut"
         }
       },
@@ -8326,10 +8368,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -8396,12 +8438,12 @@
         "actionType": "new_agreement",
         "category": "Technology",
         "flags": [],
-        "headline": "Ratifies up to $20,000 for computer technical help at Edna Brewer Middle School",
+        "headline": "Pays a technical consultant up to $20,000 for computer technical help at Edna Brewer Middle School",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$20,000.00",
+          "evidence": "not to exceed $20,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 20000,
@@ -8411,7 +8453,8 @@
           "Edna Brewer Middle School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "An individual contractor will provide technical assistance with Windows and Apple Macintosh computers so students and staff at Edna Brewer Middle School get the most use from them. The agreement runs from August 1, 2021 to May 31, 2022, and the board is approving it after it began.",
+        "subcategory": null,
+        "summary": "An individual contractor will give technical help with Windows and Apple Macintosh computers so students and staff at Edna Brewer Middle School get the most use from them. The period is August 1, 2021 to May 31, 2022. The board is approving it after the start date.",
         "term": {
           "addedStart": null,
           "end": "2022-05-31",
@@ -8469,7 +8512,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -8534,12 +8577,12 @@
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Pays Community and Youth Outreach up to $90,000 for staff to keep school passing periods calm",
+        "headline": "Pays Community and Youth Outreach up to $90,000 for a positive adult presence on campuses",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$90,000.00",
+          "evidence": "in an amount not to exceed $90,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 90000,
@@ -8547,7 +8590,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Community and Youth Outreach of Oakland will provide staff who stand on campuses chosen by the district during passing periods and breaks. The goal is to help students and staff feel safe and to support calm transitions between classes. The agreement runs April 1 to May 25, 2022.",
+        "subcategory": null,
+        "summary": "Community and Youth Outreach will provide staff on campuses chosen by the district to be a positive presence during passing periods and breaks. The goal is to help students and staff feel safer and to keep transitions between classes calm. The agreement runs April 1 through May 25, 2022, with a cap of $90,000.",
         "term": {
           "addedStart": null,
           "end": "2022-05-25",
@@ -8605,10 +8649,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -8670,12 +8714,12 @@
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Pays Saving Shorty up to $90,000 for staff to keep school passing periods calm",
+        "headline": "Pays Saving Shorty up to $90,000 for a positive adult presence on campuses",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$90,000.00",
+          "evidence": "in an amount not to exceed $90,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 90000,
@@ -8683,7 +8727,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Saving Shorty of Modesto will provide staff who stand on campuses chosen by the district during passing periods and breaks. The goal is to help students and staff feel safe and to support calm transitions between classes. The agreement runs April 16 to May 25, 2022.",
+        "subcategory": null,
+        "summary": "Saving Shorty, based in Modesto, will provide staff on campuses chosen by the district to be a positive presence during passing periods and breaks. The goal is to help students and staff feel safer and to keep transitions between classes calm. The agreement runs April 16 through May 25, 2022, with a cap of $90,000.",
         "term": {
           "addedStart": null,
           "end": "2022-05-25",
@@ -8739,7 +8784,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -8809,12 +8854,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves up to $10,000 for a consultant to coach six principals on instructional leadership",
+        "headline": "Ratifies up to $10,000 for a consultant to coach six principals on instructional leadership",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$10,000.00",
+          "evidence": "in an amount not to exceed $10,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 10000,
@@ -8822,7 +8867,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "An individual consultant will give targeted support to up to six principals through a plan focused on instructional leadership and lasting, schoolwide change. The work is run through Network 4 and covers March 4 to June 30, 2022. The board is ratifying this after the start date.",
+        "subcategory": null,
+        "summary": "An individual consultant will give targeted support to up to six principals through a plan focused on instructional leadership, working through Network 4. The service period is March 4 through June 30, 2022, with a cap of $10,000. The board is ratifying (approving after the fact) an agreement whose service period began before this vote.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -8880,7 +8926,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -8950,12 +8996,12 @@
         "actionType": "amendment",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Adds $72,200 for We Lead Ours' tobacco use prevention coaching, raising the total to $163,600",
+        "headline": "Adds $72,200 for We Lead Ours tobacco and substance use prevention work, raising cap to $163,600",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$72,200.00",
+          "evidence": "in the additional amount of $72,200.00",
           "newTotal": 163600,
           "priorTotal": 91400,
           "thisAction": 72200,
@@ -8963,7 +9009,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This amendment adds 1,805 hours of service from We Lead Ours to the district's Tobacco Use Prevention Education (TUPE) program. The work includes individual coaching, classroom presentations and youth development activities to reduce tobacco and other substance use at participating schools. The contract limit rises from $91,400 to $163,600 for August 1, 2021 to June 30, 2022.",
+        "subcategory": null,
+        "summary": "This amendment adds 1,805 hours of service from We Lead Ours for the Tobacco Use Prevention Education (TUPE) program, which includes individual coaching, classroom presentations and youth development activities to reduce tobacco and other substance use. It raises the contract cap from $91,400 to $163,600. The service period is August 1, 2021 through June 30, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -9022,7 +9069,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -9079,7 +9126,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves a no-cost data-sharing deal so students' records can go to the California Colleges website",
+        "headline": "Ratifies no-cost agreement with California College Guidance Initiative for student college records",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -9092,7 +9139,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The district will upload students' education records to the California Colleges website, run by the Foundation for California Community Colleges for the California College Guidance Initiative. The Foundation provides account support services for the website. The agreement costs the district nothing and runs October 1, 2022 to September 30, 2027.",
+        "subcategory": null,
+        "summary": "The district agrees to upload student education records to the California Colleges website, and the Foundation for California Community Colleges, acting for the California College Guidance Initiative, provides account support on that site. This is a data-sharing agreement that costs the district nothing. It runs October 1, 2022 through September 30, 2027.",
         "term": {
           "addedStart": null,
           "end": "2027-09-30",
@@ -9152,7 +9200,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -9217,12 +9265,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves up to $6,000 for a consultant to build a student-progress plan for Bunche's culinary pathway",
+        "headline": "Ratifies up to $6,000 for a consultant to build a student-progress plan for Bunche Academy culinary pathway",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$6,000.00",
+          "evidence": "in an amount not to exceed $6,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 6000,
@@ -9232,7 +9280,8 @@
           "Ralph J. Bunche Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "An individual consultant will develop a structure and action plan for teachers to monitor student progress during internships, catering and pathway promotion. It serves 20 students in the Culinary Pathway at Ralph J. Bunche Academy and covers January 3 to June 30, 2022. The board is ratifying this after the start date.",
+        "subcategory": null,
+        "summary": "An individual consultant will develop a structure and action plan so teachers can track student progress in internships, catering and pathway promotion for 20 students in the Culinary Pathway at Ralph J. Bunche Academy. The service period is January 3 through June 30, 2022, with a cap of $6,000. The board is ratifying (approving after the fact) work whose period began before this vote.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -9290,7 +9339,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -9345,7 +9394,7 @@
         "actionType": "resolution_or_policy",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves a no-cost Life Academy trip to Washington DC and New York City for 16 students",
+        "headline": "Approves Life Academy trip to Washington DC and New York City for 16 students at no cost",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -9360,7 +9409,8 @@
           "Life Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The board approves an out-of-state field trip for 16 Life Academy students and 2 adults to tour locations in Washington DC and New York City. The trip runs May 14 to May 22, 2022. It costs the district nothing.",
+        "subcategory": null,
+        "summary": "The board approves an out-of-state field trip for 16 Life Academy students and 2 adults to tour locations in Washington DC and New York City. The trip runs May 14 through May 22, 2022, and costs the district nothing.",
         "term": {
           "addedStart": null,
           "end": "2022-05-22",
@@ -9416,7 +9466,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -9481,12 +9531,12 @@
         "actionType": "new_agreement",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Pays Oakland Natives Give Back Fund up to $90,000 for a citywide back-to-school campaign",
+        "headline": "Pays Oakland Natives Give Back Fund up to $90,000 for citywide back-to-school campaign",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$90,000.00",
+          "evidence": "in an amount not to exceed $90,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 90000,
@@ -9494,15 +9544,14 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Oakland Natives Give Back Fund, Inc. ran its Back On Track Program, a citywide Back to School campaign promoting a return to school, through the High School Network. The agreement period was July 12 to September 30, 2021, so the work was set to be finished before this approval.",
+        "subcategory": null,
+        "summary": "Oakland Natives Give Back Fund will run its Back On Track Program, a citywide Back to School campaign promoting a return to school, through the High School Network. The service period was July 12 through September 30, 2021, which ended before this vote. Payment is capped at $90,000.",
         "term": {
           "addedStart": null,
           "end": "2021-09-30",
           "start": "2021-07-12"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -9554,7 +9603,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -9626,12 +9675,12 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Accepts $150,001 from WestEd under a National Science Foundation grant for a middle school data science project",
+        "headline": "Accepts $150,001 from WestEd for National Science Foundation middle school computer science project",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$150,001.00",
+          "evidence": "accepting $150,001.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 150001,
@@ -9639,7 +9688,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The district receives $150,001 through a subcontract with WestEd for the project \"Computer Science Connections: Using Data Science to Broaden Participation in Middle School.\" The money comes from a National Science Foundation award. The term is August 15, 2021 to July 31, 2023.",
+        "subcategory": null,
+        "summary": "The district accepts $150,001 through a subcontract with WestEd for a National Science Foundation project called Computer Science Connections: Using Data Science to Broaden Participation in Middle School. The subcontract runs August 15, 2021 through July 31, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-07-31",
@@ -9698,10 +9748,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -9768,12 +9818,12 @@
         "actionType": "grant_or_funding_in",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Accepts a $125,000 donation from Philanthropic Ventures Foundation for Grass Valley Elementary",
+        "headline": "Accepts $125,000 donation from Philanthropic Ventures Foundation for Grass Valley Elementary",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "$125,000.00",
+          "evidence": "in an amount valued at $125,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 125000,
@@ -9783,7 +9833,8 @@
           "Grass Valley Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The district accepts a donation valued at $125,000 from Philanthropic Ventures Foundation, from its Agency By Design Oakland Fund. It pays for a teacher's salary, professional development and supplies at Grass Valley Elementary School for the 2022-2023 school year.",
+        "subcategory": null,
+        "summary": "The district accepts a donation valued at $125,000 from Philanthropic Ventures Foundation, from its Agency By Design Oakland Fund. It pays for a teacher’s salary, professional development and supplies at Grass Valley Elementary School for the 2022-2023 school year.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -9880,10 +9931,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -9943,14 +9994,14 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "amendment",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [],
-        "headline": "Adds $350,000 for Fagen Friedman & Fulfrost legal services, raising the 2021-22 limit to $850,000",
+        "headline": "Adds $350,000 for Fagen Friedman & Fulfrost legal services in 2021-22, for a cap of $850,000",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$350,000.00",
+          "evidence": "in an additional amount of $350,000.00",
           "newTotal": 850000,
           "priorTotal": null,
           "thisAction": 350000,
@@ -9958,7 +10009,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This third amendment to the law firm's memorandum of understanding and engagement policy adds $350,000 for more hourly legal work in 2021-22. The work covers special education, employment law, labor negotiations, facilities and construction law, litigation and general advice, as needed. The total limit for the year becomes $850,000.",
+        "subcategory": null,
+        "summary": "This third amendment to the law firm’s engagement agreement adds $350,000 for more of the same hourly legal services during the 2021-22 fiscal year. The work covers special education, employment law, labor negotiations, facilities and construction law, litigation and general legal advice, as needed. The total cap for the year becomes $850,000.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -10070,10 +10122,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -10128,16 +10180,16 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "new_agreement",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [
           "multi_year"
         ],
-        "headline": "Hires Shaw, Jacobsmeyer, Crain & Claffey for workers' comp defense, up to $200,000 a year",
+        "headline": "Hires Shaw, Jacobsmeyer, Crain & Claffey for workers' compensation defense, up to $200,000 a year",
         "money": {
           "amountType": "per_year",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$200,000 per fiscal year",
+          "evidence": "not to exceed $200,000 per fiscal year",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200000,
@@ -10145,7 +10197,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The law firm will provide legal services as needed in workers' compensation defense for the district. The agreement, a memorandum of understanding and engagement policy, caps spending at $200,000 per fiscal year. It covers July 1, 2021 to June 30, 2023, so it started before this approval.",
+        "subcategory": null,
+        "summary": "The district signs an engagement agreement with Shaw, Jacobsmeyer, Crain & Claffey Law Firm to provide legal defense in workers' compensation cases as needed. Payment is capped at $200,000 per fiscal year. The agreement runs from July 1, 2021 through June 30, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -10155,7 +10208,7 @@
         "vendor": {
           "kind": "organization",
           "location": null,
-          "name": "Shaw, Jacobsmeyer, Crain & Claffey"
+          "name": "Shaw, Jacobsmeyer, Crain & Claffey Law Firm"
         }
       },
       "file": "22-0770",
@@ -10246,16 +10299,16 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
       "text": "Approval by the Board of Education of Memorandum of Understanding and Engagement Policy by and between District and Shaw, Jacobsmeyer, Crain and Claffey Law Firm, for the latter to provide legal services to the District in the area of workers’ compensation defense law on an as needed basis, for the period of July 1, 2021 through June 30, 2023, in an amount not to exceed $200,000 per fiscal year.",
       "title": "Memorandum of Understanding and Engagement Policy - Shaw, Jacobsmeyer, Crain & Claffey Law Firm - Risk Management Department",
-      "vendorKey": "n-shaw-jacobsmeyer-crain-and-claffey",
+      "vendorKey": "n-shaw-jacobsmeyer-crain-and-claffey-law-firm",
       "vendorNo": null
     },
     {
@@ -10304,16 +10357,16 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "new_agreement",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [
           "multi_year"
         ],
-        "headline": "Hires Cohen & Associates for workers' comp defense, up to $100,000 a year",
+        "headline": "Hires Cohen & Associates for workers' compensation defense, up to $100,000 a year",
         "money": {
           "amountType": "per_year",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$100,000.00 per fiscal year",
+          "evidence": "not to exceed $100,000.00 per fiscal year",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 100000,
@@ -10321,7 +10374,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The law firm will provide legal services as needed in workers' compensation defense for the district. The agreement, a memorandum of understanding and engagement policy, caps spending at $100,000 per fiscal year. It covers July 1, 2021 to June 30, 2023, so it started before this approval.",
+        "subcategory": null,
+        "summary": "The district signs an engagement agreement with Cohen & Associates to provide legal defense in workers' compensation cases as needed. Payment is capped at $100,000 per fiscal year. The agreement runs from July 1, 2021 through June 30, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -10422,10 +10476,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -10480,16 +10534,16 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "new_agreement",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [
           "multi_year"
         ],
-        "headline": "Hires Stander, Reubens, Thomas & Kinsey for workers' comp defense, up to $100,000 a year",
+        "headline": "Hires Stander, Reubens, Thomas & Kinsey for workers' compensation defense, up to $100,000 a year",
         "money": {
           "amountType": "per_year",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$100,000.00 per fiscal year",
+          "evidence": "not to exceed $100,000.00 per fiscal year",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 100000,
@@ -10497,7 +10551,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The law firm will provide legal services as needed in workers' compensation defense for the district. The agreement, a memorandum of understanding and engagement policy, caps spending at $100,000 per fiscal year. It covers July 1, 2021 to June 30, 2023, so it started before this approval.",
+        "subcategory": null,
+        "summary": "The district signs an engagement agreement with Stander, Reubens, Thomas & Kinsey to provide legal defense in workers' compensation cases as needed. Payment is capped at $100,000 per fiscal year. The agreement runs from July 1, 2021 through June 30, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -10598,10 +10653,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -10656,16 +10711,16 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "new_agreement",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [
           "multi_year"
         ],
-        "headline": "Hires Testan Law for workers' comp defense, up to $200,000 a year",
+        "headline": "Hires Testan Law for workers' compensation defense, up to $200,000 a year",
         "money": {
           "amountType": "per_year",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$200,000.00 per fiscal year",
+          "evidence": "not to exceed $200,000.00 per fiscal year",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200000,
@@ -10673,7 +10728,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The law firm will provide legal services as needed in workers' compensation defense for the district. The agreement, a memorandum of understanding and engagement policy, caps spending at $200,000 per fiscal year. It covers July 1, 2021 to June 30, 2023, so it started before this approval.",
+        "subcategory": null,
+        "summary": "The district signs an engagement agreement with Testan Law to provide legal defense in workers' compensation cases as needed. Payment is capped at $200,000 per fiscal year. The agreement runs from July 1, 2021 through June 30, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -10774,10 +10830,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -10832,24 +10888,25 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "new_agreement",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [
           "multi_year"
         ],
-        "headline": "Hires Friedman & Bartoumian for workers' comp defense, up to $100,000 a year",
+        "headline": "Hires Friedman & Bartoumian for workers' compensation defense, up to $100,000 a year",
         "money": {
           "amountType": "per_year",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$100,000.00 per fiscal year",
+          "evidence": "not to exceed $100,000.00 per fiscal year",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 100000,
           "thisActionRange": null
         },
         "schools": [],
-        "sourceIssueCandidate": null,
-        "summary": "The law firm will provide legal services as needed in workers' compensation defense for the district. The agreement, a memorandum of understanding and engagement policy, caps spending at $100,000 per fiscal year. It covers July 1, 2021 to June 30, 2023, so it started before this approval.",
+        "sourceIssueCandidate": "The title spells the firm \"Friedman & Bartoumain\" while the action text spells it \"Friedman & Bartoumian\".",
+        "subcategory": null,
+        "summary": "The district signs an engagement agreement with Friedman & Bartoumian Law Firm to provide legal defense in workers' compensation cases as needed. Payment is capped at $100,000 per fiscal year. The agreement runs from July 1, 2021 through June 30, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -10859,7 +10916,7 @@
         "vendor": {
           "kind": "organization",
           "location": "Agoura Hills, CA",
-          "name": "Friedman & Bartoumian"
+          "name": "Friedman & Bartoumian Law Firm"
         }
       },
       "file": "22-0774",
@@ -10934,7 +10991,12 @@
       "matterGuid": "0B3CA148-94D4-4A70-A19B-28D2284EFF10",
       "matterId": 55068,
       "matterType": "Agreement or Contract",
-      "notes": [],
+      "notes": [
+        {
+          "kind": "cosmetic",
+          "text": "The title spells the firm \"Friedman & Bartoumain\" while the action text spells it \"Friedman & Bartoumian\", a spelling difference for the same Agoura Hills law firm."
+        }
+      ],
       "outcome": {
         "action": "Adopted",
         "adopted": true,
@@ -10950,10 +11012,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -11008,16 +11070,16 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "new_agreement",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [
           "multi_year"
         ],
-        "headline": "Hires Hanna Brophy for workers' comp defense, up to $200,000 a year",
+        "headline": "Hires Hanna Brophy for workers' compensation defense, up to $200,000 a year",
         "money": {
           "amountType": "per_year",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$200,000.00 per fiscal year",
+          "evidence": "not to exceed $200,000.00 per fiscal year",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200000,
@@ -11025,7 +11087,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The law firm will provide legal services as needed in workers' compensation defense for the district. The agreement, a memorandum of understanding and engagement policy, caps spending at $200,000 per fiscal year. It covers July 1, 2021 to June 30, 2023, so it started before this approval.",
+        "subcategory": null,
+        "summary": "The district signs an engagement agreement with Hanna Brophy Law Firm to provide legal defense in workers' compensation cases as needed. Payment is capped at $200,000 per fiscal year. The agreement runs from July 1, 2021 through June 30, 2023.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -11035,7 +11098,7 @@
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
-          "name": "Hanna, Brophy, MacLean, McAleer & Jensen"
+          "name": "Hanna Brophy Law Firm"
         }
       },
       "file": "22-0775",
@@ -11126,16 +11189,16 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
       "text": "Approval by the Board of Education of Memorandum of Understanding and Engagement Policy by and between District and Hanna Brophy Law firm with Oakland offices, for the latter to provide legal services to the District in the area of workers’ compensation defense law on an as needed basis, for the period of July 1, 2021 through June 30, 2023, in an amount not to exceed $200,000.00 per fiscal year.",
       "title": "Memorandum of Understanding and Engagement Policy - Hanna, Brophy, Maclean, McAleer and JensenLaw Firm - Risk Management Department",
-      "vendorKey": "n-hanna-brophy-maclean-mcaleer-and-jensen",
+      "vendorKey": "n-hanna-brophy-law-firm",
       "vendorNo": null
     },
     {
@@ -11189,14 +11252,14 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "amendment",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [],
-        "headline": "Adds $250,000 for Lozano Smith legal services, raising the 2021-22 limit to $550,000",
+        "headline": "Adds $250,000 for Lozano Smith legal services in 2021-22, for a cap of $550,000",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$250,000.00",
+          "evidence": "in an additional amount of $250,000.00",
           "newTotal": 550000,
           "priorTotal": null,
           "thisAction": 250000,
@@ -11204,7 +11267,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "This first amendment to the law firm's memorandum of understanding and engagement policy adds $250,000 for more legal services as needed in 2021-22. The total limit for the fiscal year becomes $550,000.",
+        "subcategory": null,
+        "summary": "This first amendment to the law firm’s engagement agreement adds $250,000 for more of the same legal services, as needed, during the 2021-22 fiscal year. The total cap for the year becomes $550,000.",
         "term": {
           "addedStart": null,
           "end": "2022-06-30",
@@ -11301,10 +11365,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -11366,12 +11430,12 @@
         "actionType": "bid_award",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Awards Native Soil $55,000 to build a new garden irrigation system and drains at The Center",
+        "headline": "Awards Native Soil $55,000 to install a new irrigation system and drains at The Center",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$55,000.00",
+          "evidence": "in the amount of $55,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 55000,
@@ -11381,15 +11445,14 @@
           "The Center"
         ],
         "sourceIssueCandidate": null,
-        "summary": "Native Soil, Inc. won this contract through competitive bidding. It will design and install a new irrigation system for the garden area, separate from the site landscape system, plus drains at the greenhouse and sink enclosure. The $55,000 includes a $9,500 contingency for extra amounts the contractor may be owed. Work is expected to start April 14, 2022 and last 90 days.",
+        "subcategory": null,
+        "summary": "Native Soil, Inc. won a competitive bid to design and install a new garden irrigation system separate from the site landscape system, plus trench drains at the Greenhouse and a drain at the Sink Enclosure. The $55,000 price includes a $9,500 contingency for any additional amounts the contractor may be owed under the contract. Work is expected to run about 90 days, from April 14 to July 12, 2022.",
         "term": {
           "addedStart": null,
           "end": "2022-07-12",
           "start": "2022-04-14"
         },
-        "uncertain": [
-          "schools"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -11439,7 +11502,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -11506,12 +11569,12 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Adds $1,630.01 and a year to Digital Communications' Glenview sprinkler-valve monitoring work",
+        "headline": "Adds $1,630.01 and a year to Digital Communications’ Glenview Elementary fire sprinkler monitoring work",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "$1,630.01",
+          "evidence": "in an additional amount of $1,630.01",
           "newTotal": 4342.43,
           "priorTotal": 2712.42,
           "thisAction": 1630.01,
@@ -11520,16 +11583,15 @@
         "schools": [
           "Glenview Elementary School"
         ],
-        "sourceIssueCandidate": "The title names the contractor \"Digital Design Communications\" but the action text says \"Digital Communications\".",
-        "summary": "This amendment pays for relocating monitoring modules for sprinkler valves at the Glenview Elementary School new construction project and testing the signals. It adds $1,630.01, raising the contract limit from $2,712.42 to $4,342.43. It also extends the end date from December 31, 2021 to December 31, 2022, after the original term had already ended.",
+        "sourceIssueCandidate": "The title names the contractor \"Digital Design Communications\" while the action text names it \"Digital Communications\".",
+        "subcategory": null,
+        "summary": "This amendment adds work to relocate monitoring modules for two stair sprinkler valves at the Glenview Elementary School new construction project and to test the valve switch signals. It adds $1,630.01, raising the contract cap from $2,712.42 to $4,342.43, and extends the end date by 365 days, from December 31, 2021 to December 31, 2022.",
         "term": {
           "addedStart": "2022-01-01",
           "end": "2022-12-31",
           "start": "2021-05-27"
         },
-        "uncertain": [
-          "vendor"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -11541,6 +11603,7 @@
         "after_work_began",
         "raises_existing_contract",
         "large_increase",
+        "source_issue",
         "multi_year"
       ],
       "fundingSource": "Fund 21, Measure J",
@@ -11570,12 +11633,7 @@
       "matterGuid": "E87A5A07-8FA6-42A1-B308-1060A91FE6D4",
       "matterId": 54898,
       "matterType": "Agreement or Contract",
-      "notes": [
-        {
-          "kind": "cosmetic",
-          "text": "The title names the contractor \"Digital Design Communications\" while the action text says \"Digital Communications\"; the amounts and project are otherwise the same."
-        }
-      ],
+      "notes": [],
       "outcome": {
         "action": "Adopted on the General Consent Report",
         "adopted": true,
@@ -11589,13 +11647,13 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
-      "sourceIssue": null,
-      "sourceIssueBy": null,
+      "sourceIssue": "The title names the contractor as Digital Design Communications, but the action text names it as Digital Communications.",
+      "sourceIssueBy": "verifier",
       "text": "Approval by the Board of Education of Amendment No. 1, Agreement Between Owner and Contractor by and between the District and Digital Communications, Oakland, CA, for the latter to provide relocating FA monitor modules for stair 2 sprinkler valves DDCV and Stair 2 Sprinkler valve PIV from La Cresta Ave to Electrical room #013, using two Aquasaeal cables to connect vales to modules and if necessary de-program monitor modules from JCI panel. Test signals from DDCV and PIV switches, as described in the Scope of Work dated February 22, 2022, which are attached to this Amendment as Exhibit A, for the Glenview New Construction Project, in an additional amount of $1,630.01, increasing the Agreement's not-to-exceed amount from $2,712.42 to $4,342.43, and extending the term of the Agreement from May 27, 2021, through December 31, 2021, to December 31, 2022, (an additional 365 calendar days). All other terms and condition of the Agreement remain in full force and effect.",
       "title": "-Amendment No. 1, Agreement Between Owner and Contractor - Digital Design Communications - Glenview Elementary School New Construction Project – Division of Facilities Planning and Management",
       "vendorKey": "v-001380",
@@ -11639,7 +11697,7 @@
         "actionType": "termination",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Ends the Integral Group's services agreement for the Cole Administration Center project",
+        "headline": "Ends the district’s agreement with The Integral Group for the Cole Administration Center project",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -11652,7 +11710,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The board approves a resolution terminating the district's General Services Agreement with The Integral Group, Inc. for the Cole Administration Center Project. The district is ending the agreement for convenience, meaning without a stated cause. No dollar amount is stated.",
+        "subcategory": null,
+        "summary": "The board is voting to terminate the district’s General Services Agreement with The Integral Group, Inc. for the Cole Administration Center Project. The text describes it as a termination for convenience and does not state any dollar amount.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -11708,7 +11767,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -11828,7 +11887,7 @@
     "title": "Board of Education Regular Meeting",
     "updatedAt": "2026-10-03T17:37:19.963Z"
   },
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
   "totals": {
     "appliedForItems": 1,
     "appliedForTotal": 180000,
@@ -11841,17 +11900,17 @@
       },
       "Classroom & academic programs": {
         "items": 35,
-        "spending": 761434.27
+        "spending": 813034.27
       },
       "Food, transportation & operations": {
-        "items": 5,
-        "spending": 2911488.53
+        "items": 4,
+        "spending": 2820488.53
       },
       "Governance & board business": {
-        "items": 3,
-        "spending": 0
+        "items": 4,
+        "spending": 39400
       },
-      "Legal, insurance & risk": {
+      "Legal, compliance & risk": {
         "items": 8,
         "spending": 600000
       },
@@ -11876,6 +11935,16 @@
         "spending": 20000
       }
     },
+    "bySubcategory": {
+      "Programs & support": {
+        "items": 1,
+        "spending": 6000
+      },
+      "Services & contract staff": {
+        "items": 1,
+        "spending": 200000
+      }
+    },
     "decreaseTotal": 0,
     "enrichedItems": 81,
     "flagCounts": {
@@ -11883,11 +11952,11 @@
       "grant_application": 1,
       "large_increase": 4,
       "multi_year": 16,
-      "no_competitive_bid": 2,
+      "no_competitive_bid": 1,
       "no_total_stated": 6,
       "pulled_from_consent": 13,
       "raises_existing_contract": 4,
-      "source_issue": 1,
+      "source_issue": 3,
       "yearly_cap": 6
     },
     "items": 81,
