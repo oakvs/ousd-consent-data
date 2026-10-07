@@ -1,0 +1,115 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943311088",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aspirepublicschools.org/contact-2/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://aspirepublicschools.org/locations/bay-area/aspire-lionel-wilson-college-preparatory-academy/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-aspire-lionel-wilson-preparatory-academy",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda item is a Measure N (OUSD College and Career Readiness Commission) review of this school. Aspire's own website lists 'Aspire Lionel Wilson College Preparatory Academy' as an Oakland charter high school at 400 105th Ave, Oakland, CA 94603, with Oakland as its sponsoring district.",
+      "The school's page sits on Aspire Public Schools' official site, so Aspire Public Schools, a nonprofit headquartered in Oakland, CA, operates it.",
+      "ProPublica Nonprofit Explorer lists 'Aspire Public Schools' in Oakland, CA as a 501(c)(3) with EIN 94-3311088. Its website and home-office address match the Aspire contact page."
+    ],
+    "key": "n-aspire-lionel-wilson-preparatory-academy",
+    "notes": "The agenda names the school, not a legal entity. I treated the vendor as Aspire Public Schools, the nonprofit that operates the school. I did not check the California Secretary of State or SAM.gov, so the entity number and UEI are null. The contact details are for Aspire's home office. The school's own line is 510-635-7737, at 400 105th Ave, Oakland, CA 94603.",
+    "profile": {
+      "address": "1001 22nd Avenue, Suite 100, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "94-3311088",
+      "email": "info@aspirepublicschools.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Aspire Public Schools",
+      "orgType": "nonprofit",
+      "phone": "(510) 434-5000",
+      "samUei": null,
+      "summary": "Aspire Public Schools is a nonprofit charter school network. It describes itself as a K-12 school system that prepares underserved students for college, trains teachers and shares teaching practices. Its Bay Area schools include Aspire Lionel Wilson College Preparatory Academy, a grades 6-12 charter school in Oakland.",
+      "website": "https://aspirepublicschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Aspire Public Schools - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943311088"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "summary",
+          "headquarters"
+        ],
+        "title": "Contact - Aspire Public Schools",
+        "url": "https://aspirepublicschools.org/contact-2/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Aspire Lionel Wilson College Preparatory Academy - Aspire Public Schools",
+        "url": "https://aspirepublicschools.org/locations/bay-area/aspire-lionel-wilson-college-preparatory-academy/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-07",
+  "review": {
+    "key": "n-aspire-lionel-wilson-preparatory-academy",
+    "notes": "Aspire's own school page lists Aspire Lionel Wilson College Preparatory Academy as a grades 6-12 Oakland charter school (Charter #465, sponsoring district Oakland) at 400 105th Ave, which fits the Measure N school review, and ProPublica shows Aspire Public Schools in Oakland, CA as a 501(c)(3) with EIN 94-3311088. The cited sources confirm every field: the contact page shows the home-office address, the phone (510) 434-5000 and the general info@ email, and the summary matches Aspire's own K-12 description, stays neutral and names no individuals.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
