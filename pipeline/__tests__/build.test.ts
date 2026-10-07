@@ -302,11 +302,10 @@ describe('golden set, 2026-06-24', async () => {
     // correct it to a yearly cap, so it moves from spending to yearly caps.
     expect(meeting.totals.spendingItems).toBe(102)
     expect(Math.round(meeting.totals.spendingTotal / 1e5) / 10).toBe(135.2)
-    // 22 after the codebook-v5 re-read: the v5 agent read R.-225 (26-1260, Claremont, "at the unchanged cost of
-    // $36,000.00 annually") as no added money, while its API second reading says per_year 36,000. With no amount on
-    // the first reading there is nothing for the discrepancy check to compare, so the item shows no money and is not
-    // counted as a yearly cap until a human override settles it.
-    expect(meeting.totals.yearlyCapItems).toBe(22)
+    // Still 23 after the codebook-v5 re-read: the v5 agent read R.-225 (26-1260, Claremont, "at the unchanged cost
+    // of $36,000.00 annually") as no added money; its API second reading says per_year 36,000, and the override in
+    // data/overrides/2026-06-24.json settles it as the yearly cap.
+    expect(meeting.totals.yearlyCapItems).toBe(23)
     // source_issue: 12 in §18.5, plus R.-237 (26-1467, Segal), confirmed in the 2026-10-04 attachment check:
     // the text keeps "$201,000.00 per year" and "$603,000.00 for term" while doubling the term to six years.
     // The codebook-v5 re-read (October 2026) surfaced three more, each confirmed material by the independent

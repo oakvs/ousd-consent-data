@@ -2,7 +2,7 @@
   "verified": false,
   "agendaNumber": "R.-48",
   "file": "26-1570",
-  "note": "Seeded from the v1 prototype enrichment. The v5 agent reading leaves priorTotal null although the text states the original $3,675,000 and the $12,243,000 cumulative; a human override can restore the raises_existing_contract flag. Hand-verify against the official text, then set verified: true.",
+  "note": "Seeded from the v1 prototype enrichment. The v5 agent reading left priorTotal null; the override in data/overrides/2026-06-24.json restores the $3,675,000 original stated in the text, and so the raises_existing_contract flag. Hand-verify against the official text, then set verified: true.",
   "expected": {
     "category": "Food, transportation & operations",
     "subcategory": null,
@@ -16,7 +16,7 @@
       },
       "direction": "expense",
       "newTotal": 12243000,
-      "priorTotal": null,
+      "priorTotal": 3675000,
       "thisAction": null,
       "thisActionRange": null
     },
@@ -26,6 +26,7 @@
       "start": "2025-08-13"
     },
     "flags": [
+      "raises_existing_contract",
       "multi_year"
     ]
   }
