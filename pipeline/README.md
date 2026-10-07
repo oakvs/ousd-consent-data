@@ -69,7 +69,7 @@ Code in `llm/`. One item per request, with structured outputs constraining the r
 
 | Step | Model (pinned) | Prompt | Checks |
 |---|---|---|---|
-| Summary | `claude-opus-5-5`, effort `high` | `prompts/enrich.v4.md` | `checkEnrichment` (schema, evidence verbatim, every amount in the text), the same as `enrich-check` |
+| Summary | `claude-opus-5-5`, effort `high` | `prompts/enrich.v5.md` | `checkEnrichment` (schema, evidence verbatim, every amount in the text), the same as `enrich-check` |
 | Second reading | `claude-sonnet-5-5`, effort `high` | `prompts/verify.v2.md` | `checkVerification`, the same as `verify-check` |
 | Money tiebreak (third reading) | `claude-opus-5-5`, effort `high` | `prompts/verify.v2.md` | same |
 | Vendor research | `claude-sonnet-5-5`, effort `high`, web search + fetch | `prompts/vendor-research.v3.md` | `runResearchChecks` (schema, every cited page loads, contact details and registry IDs verbatim on a page cited for them), the same as `research-check` |

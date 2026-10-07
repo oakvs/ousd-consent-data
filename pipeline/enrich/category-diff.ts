@@ -22,9 +22,17 @@ import type { TLooseEnrichmentsFile } from './agent-io'
 
 type TBucket = { items: number; spending: number }
 
+/** Category values renamed between codebooks: old → new. A move along one of these is a rename, not a reclassification. */
+export const CATEGORY_RENAMES: Record<string, string> = {
+  'Legal, insurance & risk': 'Legal, compliance & risk',
+}
+
 export type TCategoryDiff = {
   compared: number
+  /** Items whose category changed, not counting pure renames. */
   changed: number
+  /** Items whose only change is a renamed category value (see CATEGORY_RENAMES). */
+  renamed: number
   /** from → to → items and spending (current record's money). Only off-diagonal cells. */
   matrix: Record<string, Record<string, TBucket>>
   /** Special education sub-categories in the current records. */
@@ -42,7 +50,7 @@ const add = (b: TBucket | undefined, spending: number): TBucket => ({ items: (b?
 const sortKeys = <T,>(o: Record<string, T>): Record<string, T> => Object.fromEntries(Object.entries(o).sort(([a], [b]) => a.localeCompare(b)))
 
 export function diffEnrichments(previous: Map<string, TLooseEnrichmentsFile>, current: Map<string, TLooseEnrichmentsFile>): TCategoryDiff {
-  const d: TCategoryDiff = { compared: 0, changed: 0, matrix: {}, subcategories: {}, movers: [], onlyPrevious: [], onlyCurrent: [] }
+  const d: TCategoryDiff = { compared: 0, changed: 0, renamed: 0, matrix: {}, subcategories: {}, movers: [], onlyPrevious: [], onlyCurrent: [] }
   const keys = [...new Set([...previous.keys(), ...current.keys()])].sort()
   for (const key of keys) {
     const before = previous.get(key)?.items ?? {}
@@ -66,6 +74,10 @@ export function diffEnrichments(previous: Map<string, TLooseEnrichmentsFile>, cu
       const spending = spend(b.output)
       if (to === 'Special education' && subcategory) d.subcategories[subcategory] = add(d.subcategories[subcategory], spending)
       if (from === to) continue
+      if (CATEGORY_RENAMES[from] === to) {
+        d.renamed++
+        continue
+      }
       d.changed++
       d.matrix[from] = { ...d.matrix[from], [to]: add(d.matrix[from]?.[to], spending) }
       d.movers.push({ id, headline: str(b.output.headline), from, to, subcategory })
@@ -101,7 +113,11 @@ export async function categoryDiff(): Promise<TCategoryDiff> {
 const money = (n: number): string => `$${Math.round(n).toLocaleString('en-US')}`
 
 export function formatCategoryDiff(d: TCategoryDiff): string {
-  const lines = [`${d.compared} items compared, ${d.changed} changed category; ${d.onlyPrevious.length} only before, ${d.onlyCurrent.length} only after`, '']
+  const lines = [
+    `${d.compared} items compared, ${d.changed} reclassified, ${d.renamed} renamed only; ${d.onlyPrevious.length} only before, ${d.onlyCurrent.length} only after`,
+    '',
+  ]
+  if (d.renamed) lines.push(`Renames (${Object.entries(CATEGORY_RENAMES).map(([a, b]) => `${a} → ${b}`).join('; ')}) are not counted as moves.`, '')
   lines.push('Moves (from → to: items, spending of the new records):')
   for (const [from, tos] of Object.entries(d.matrix)) {
     for (const [to, b] of Object.entries(tos)) lines.push(`  ${from} → ${to}: ${b.items} (${money(b.spending)})`)
