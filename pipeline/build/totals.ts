@@ -26,6 +26,7 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
     budgetAllocatedItems: 0,
     flagCounts: {},
     byCategory: {},
+    bySubcategory: {},
   }
 
   for (const item of items) {
@@ -75,6 +76,11 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
     const bucket = (totals.byCategory[e.category] ??= { items: 0, spending: 0 })
     bucket.items++
     bucket.spending += spend
+    if (e.subcategory) {
+      const sub = (totals.bySubcategory[e.subcategory] ??= { items: 0, spending: 0 })
+      sub.items++
+      sub.spending += spend
+    }
   }
 
   // Round away float noise from summing cents; display rounding still happens in the UI.
@@ -87,5 +93,6 @@ export function computeTotals(items: TPublishedItem[]): TTotals {
   totals.appliedForTotal = cents(totals.appliedForTotal)
   totals.budgetAllocatedTotal = cents(totals.budgetAllocatedTotal)
   for (const bucket of Object.values(totals.byCategory)) bucket.spending = cents(bucket.spending)
+  for (const bucket of Object.values(totals.bySubcategory)) bucket.spending = cents(bucket.spending)
   return totals
 }

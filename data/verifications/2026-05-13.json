@@ -1,10 +1,10 @@
 {
   "items": {
     "26-0560": {
-      "enrichmentCacheKey": "134e91843b186db326bc3083e7193ed55ee26ef3dd422e43eab55e85f914b943",
+      "enrichmentCacheKey": "9aac11f1ac0b244706c568ab2f981672d1018a28fbbc1b3065b7d406970511cc",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "cumulative",
         "direction": "expense",
@@ -12,50 +12,41 @@
         "priorTotal": null,
         "thisAction": 11301768.96
       },
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": null
-    },
-    "26-0570": {
-      "enrichmentCacheKey": "60b666959d421e552d2cbd272cdb1eb3c476f5d9d53d6828ca822946b70ba496",
-      "headlineFix": null,
-      "issue": {
-        "explanation": "The text names the vendor as Carter-Kelly Services in one place and Debra Carter-Kelly Services in another, and it is unclear whether one contract is modified and a second created.",
-        "quote": "establish a new strategic action $21,000.00 Consultant contract with Debra Carter-Kelly Services",
-        "topic": "vendor",
-        "verdict": "material"
-      },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0685": {
-      "enrichmentCacheKey": "580ea35278d70df6503dbad37cb04907257b9dde9852182dbf656d0e63fb657c",
+      "enrichmentCacheKey": "e4f54e479d8968387da7596c6cf0a0dfc82c31ec2cd8fc229efb24502d8684fc",
       "headlineFix": null,
       "issue": {
-        "explanation": "The contracting party is named Solar Star Castlemont HS, LLC, although the project named in the title and text is at Oakland Technical High School.",
+        "explanation": "The action text names the counterparty as Solar Star Castlemont HS, LLC while the project is at Oakland Technical High School, leaving unclear which site-specific entity the agreement covers.",
         "quote": "Solar Star Castlemont HS, LLC c/o TotalEnergies Distributed Generation USA, LLC",
-        "topic": "vendor",
-        "verdict": "cosmetic"
+        "topic": "school",
+        "verdict": "material"
       },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
+      "modelId": "claude-sonnet-5-5",
+      "money": {
+        "amountType": null,
+        "direction": "no_cost",
+        "newTotal": null,
+        "priorTotal": null,
+        "thisAction": null
+      },
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0712": {
-      "enrichmentCacheKey": "1e85892e0c26ef7d9e2a10c3e27799a97074539be9f3b022a8f188a760a1d2b9",
+      "enrichmentCacheKey": "0f5fe2a5258101aa41118e639b7b42d2bef94b5786c8996fe5782a038a881807",
       "headlineFix": null,
       "issue": {
-        "explanation": "The prior total of $19,765,831.77 plus the added $457,657.84 equals $20,223,489.61, but the text states the new total as $20,223,399.61.",
-        "quote": "from $19,765,831.77 to $20,223,399.61",
+        "explanation": "Adding the stated $457,657.84 to the stated prior total of $19,765,831.77 gives $20,223,489.61, but the text states a new total of $20,223,399.61, which is $90 lower.",
+        "quote": "increasing the Master Contract not-to-exceed amount from $19,765,831.77 to $20,223,399.61",
         "topic": "money",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -63,15 +54,15 @@
         "priorTotal": 19765831.77,
         "thisAction": 457657.84
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
-      "vendorKind": "organization"
+      "vendorKind": null
     },
     "26-0731": {
-      "enrichmentCacheKey": "f37936be8269ea55df0a330e3e8d405f7d8efe7a78100b53ba7e95d4e6224d9f",
+      "enrichmentCacheKey": "bed54a5e76bd334e207943c5182d6f16802a3f509d678e0b1dbcab1cd301f8fd",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -79,46 +70,36 @@
         "priorTotal": 9087186.6,
         "thisAction": 294647.22
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
-    "26-0756": {
-      "enrichmentCacheKey": "4369163fb58ac6c279952ea9a28490299d8044c1cdf18fa6d1991cdc11843850",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
     "26-0757": {
-      "enrichmentCacheKey": "66532bdf25ff4523d04f0ded3ef995e0b463f46c86b3a93b916594c3708bb2de",
+      "enrichmentCacheKey": "32260e1043e0f5c8e52521c66949213232a171802deb3be6de2a4928be971f2d",
       "headlineFix": null,
       "issue": {
-        "explanation": "The starting equipment amount is printed as $10,000,00, a punctuation misprint whose intended value of $10,000.00 matches the stated reduction of $3,800.00 to $6,200.00.",
-        "quote": "reduce $10,000,00 Equipment for Community Health Strand",
+        "explanation": "The text prints the original equipment amount as \"$10,000,00\", a punctuation misprint whose intended value of $10,000.00 is confirmed by the stated reduction of $3,800.00 to $6,200.00.",
+        "quote": "to reduce $10,000,00 Equipment for Community Health Strand",
         "topic": "money",
         "verdict": "cosmetic"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
-        "amountType": "fixed",
-        "direction": "expense",
+        "amountType": null,
+        "direction": "no_cost",
         "newTotal": null,
         "priorTotal": null,
-        "thisAction": 3800
+        "thisAction": null
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0822": {
-      "enrichmentCacheKey": "80178cd08f09a16c14594ea7e2f4a4728d45605ab548848ad94d6b2c1d373aa2",
+      "enrichmentCacheKey": "283effd9850be3b31465e8ef9daa3d663c7835ec6b7437e6e1775d748ff55828",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -126,25 +107,15 @@
         "priorTotal": null,
         "thisAction": 97500
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0852": {
-      "enrichmentCacheKey": "45767b648ccfe4a20470ed46e96a0606ea3e49d1c97ad59eec97feb583cbfc2f",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
+      "vendorKind": null
     },
     "26-0854": {
-      "enrichmentCacheKey": "6855e6b7025b9654cfdb7d1c09ad679a3d62d7efe0786a8c9282b3735f1ad2de",
+      "enrichmentCacheKey": "aed45db9481725f1a7e9bfedaf51bcd314d96e2756b8de795ef33bcf9a35c92d",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -152,25 +123,15 @@
         "priorTotal": null,
         "thisAction": 56193.6
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0855": {
-      "enrichmentCacheKey": "4458c89dc2b761fd58931958e7a712c93a3f71a161cbe0a11a70d50bb1c4a040",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
+      "vendorKind": null
     },
     "26-0856": {
-      "enrichmentCacheKey": "364d4a680de60bb0151d163f85a29cd9accc8f76857d551a2b119fa71647e25f",
+      "enrichmentCacheKey": "dc179b5ec12ae4370ebf37b976fccb92b46ff544a2bbeb4d806daf81f8994327",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -178,60 +139,36 @@
         "priorTotal": null,
         "thisAction": 110351.7
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0863": {
-      "enrichmentCacheKey": "7d929feba3147ec69ebc7c8c9069d3ff6036ddd91c121e99cd7fc46ecac1e4bf",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0864": {
-      "enrichmentCacheKey": "815d814fd14c68f54aadb14a057640ca67ff03895a78da4de954dd2f9a4813cb",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0868": {
-      "enrichmentCacheKey": "a4e92cc76ff7fb3a035f9a79221d4e49d5118115b967cb0f852fafba35604c34",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
+      "vendorKind": null
     },
     "26-0870": {
-      "enrichmentCacheKey": "c91a6174654e4185c7872f21d46ba7d38a11b6408349872b6a1cd27462f1792b",
+      "enrichmentCacheKey": "aff3ada082f9cf0e7c366301dbb6d389a078d0f5a03cf62331f6e696a8657680",
       "headlineFix": null,
       "issue": {
-        "explanation": "The text consistently cites a proposal dated February 13, 2025 and nothing in it contradicts that date; the amounts also add up ($23,387.50 plus $7,016.26 equals $30,403.76).",
+        "explanation": "Nothing in the official text contradicts the February 13, 2025 proposal date, and the amounts add up ($23,387.50 + $7,016.26 = $30,403.76), so a misprint cannot be shown from the text.",
         "quote": "as outlined in the Proposal dated February 13, 2025",
         "topic": "other",
         "verdict": "not_real"
       },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
+      "modelId": "claude-sonnet-5-5",
+      "money": {
+        "amountType": "not_to_exceed",
+        "direction": "expense",
+        "newTotal": 30403.76,
+        "priorTotal": 23387.5,
+        "thisAction": 7016.26
+      },
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0871": {
-      "enrichmentCacheKey": "13251c6e2b1ce47bf15e25f5113237eae496110222e0423e22a0ed2cc3b0b1ed",
+      "enrichmentCacheKey": "8c38138c2b07836b4ec0d0c45edb11cfc8699c0426d0b4e9c06044c763b9f4c7",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "expense",
@@ -239,15 +176,15 @@
         "priorTotal": null,
         "thisAction": 890500
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0872": {
-      "enrichmentCacheKey": "994fbe902ca75b78ee3f3a680ac0caaa698fd0bd0eb57d4dd0bac092da2159fe",
+      "enrichmentCacheKey": "c16d5ed872b1cd8f02e83a56d2a95fae7ae702c5cd0485baa2deb48970968d7f",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -255,15 +192,36 @@
         "priorTotal": 2370000,
         "thisAction": 65632.71
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
+      "vendorKind": null
+    },
+    "26-0875": {
+      "enrichmentCacheKey": "38f9e37b5d806e9bb29532e48da5a1d87596b1b12f5ed1d04beb0809c3949349",
+      "headlineFix": null,
+      "issue": {
+        "explanation": "The text cites a proposal dated May 19, 2026, which is after the May 13, 2026 meeting date, but the amount, vendor, scope and work dates are clearly stated.",
+        "quote": "as described in the proposal dated May 19, 2026, attached to this Agreement as Exhibit A",
+        "topic": "other",
+        "verdict": "cosmetic"
+      },
+      "modelId": "claude-sonnet-5-5",
+      "money": {
+        "amountType": "fixed",
+        "direction": "expense",
+        "newTotal": null,
+        "priorTotal": null,
+        "thisAction": 25840.9
+      },
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0876": {
-      "enrichmentCacheKey": "445b73580f7bec4f0312ef36eae761cc6420cdb36e7036b851ed23882dfca3d2",
+      "enrichmentCacheKey": "861853a77428d535c41007122bf4697a829d883ffc390ea73e7b268c336deec2",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -271,15 +229,15 @@
         "priorTotal": null,
         "thisAction": 165759.66
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0880": {
-      "enrichmentCacheKey": "d310a1baf699e3b449d716172399235ae54b9b7723f9d5b284a715f71093f69d",
+      "enrichmentCacheKey": "f903025081af1e2ea6ef7b335c757cdf12b5b83e145f3ac32067a71b35cb9369",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -287,15 +245,15 @@
         "priorTotal": 813500,
         "thisAction": 621389.02
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0881": {
-      "enrichmentCacheKey": "dc41ca3a6f0368d60e80674f65f412d00a8142e8f9b94cf4e5e7ecab825363d9",
+      "enrichmentCacheKey": "58790e59c59dea3d815a9783fba226fa33e9c96fb81bd9de168dbbec19614648",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -303,170 +261,67 @@
         "priorTotal": 567500,
         "thisAction": 403609.01
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
-    "26-0884": {
-      "enrichmentCacheKey": "473b023e60d260bebe894742911f5639c10f03672b4e2a15afea84b49163c4ab",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0886": {
-      "enrichmentCacheKey": "9331afb06a84605aca94694d7cfa6c7d2e67c2848c36e2efd0900d9957896f35",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0888": {
-      "enrichmentCacheKey": "3b7fd82228fab8ea520557d7cc65f80c916767009cce60a8adde993ddd433d93",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0889": {
-      "enrichmentCacheKey": "5877066eca7585acece3dd808f3ea02b8e8243f316ae198b6443919d7abe787f",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
     "26-0896": {
-      "enrichmentCacheKey": "423fc51d60e76dc7d46a761a8896bf02f519ba46fec924a7e0f77c9caf56ef9d",
+      "enrichmentCacheKey": "03159552c52b6fc64645ee1159e65797622df016f761c452f97bd635bb4c68c4",
       "headlineFix": null,
       "issue": {
-        "explanation": "The text refers to the attached proposal (Exhibit A) with two different dates, January 23, 2026 and February 23, 2026, but the amount, vendor, school and term are stated consistently.",
-        "quote": "as outlined in the Proposal dated January 23, 2026",
+        "explanation": "The text refers to the attached Exhibit A proposal as dated January 23, 2026 in one place and February 23, 2026 in another, but the amount, vendor, school and term are stated consistently.",
+        "quote": "as outlined in the Proposal dated January 23, 2026, which is attached to this Amendment as Exhibit A.",
         "topic": "other",
         "verdict": "cosmetic"
       },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
+      "modelId": "claude-sonnet-5-5",
+      "money": {
+        "amountType": "not_to_exceed",
+        "direction": "expense",
+        "newTotal": 22701,
+        "priorTotal": 19551,
+        "thisAction": 3150
+      },
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
-    "26-0899": {
-      "enrichmentCacheKey": "12ba785c0831fc745f70c3b9536e5b0cbd8b7d2da560218bc3ac64140cd12f34",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0902": {
-      "enrichmentCacheKey": "4e766fe920da0455356e3a2ea7615f942d00c5718ebbf7300b28eb02250d697e",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0904": {
-      "enrichmentCacheKey": "d7ff1bd9fe14c89700203d278487cf53b7f13e2dc0202d5433e14ae6cc807bd4",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
     "26-0906": {
-      "enrichmentCacheKey": "114a188a33dff3e8ae3f50b0e484e2b3c6a935180d1ce91efabbe77839f977be",
+      "enrichmentCacheKey": "b97d245e90bf627f057304db140e05233222c2d6c329aa3d790f04fdd1482e0a",
       "headlineFix": null,
       "issue": {
-        "explanation": "The title spells the vendor \"Munson Theatrical\" while the action text spells it \"Musson Theatrical\".",
-        "quote": "Musson Theatrical",
+        "explanation": "The title spells the vendor 'Munson Theatrical' while the action text spells it 'Musson Theatrical', but both refer to the same Santa Clara stage contractor and the action is otherwise unchanged.",
+        "quote": "by and between the District and Musson Theatrical, Santa Clara, CA",
         "topic": "vendor",
         "verdict": "cosmetic"
       },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0908": {
-      "enrichmentCacheKey": "c6a15b16ef71cab0a9d8c3c8021a0f76c55b022030604389d85c9348285e6193",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0909": {
-      "enrichmentCacheKey": "3b56fa6ef07b8cc950729b310ae82afd48e96d430be402707c78cdd4a24b87d5",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0916": {
-      "enrichmentCacheKey": "9536721ccf0367b84acfa02b48f9bee4dbbc5d666f5e80a9bbcf9db65aaa4d6c",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0930": {
-      "enrichmentCacheKey": "da04887b63cef6807346d2e4298b82a7381a3cdffaf2fe47b0c790b3bb5a1993",
-      "headlineFix": "Pays an instructor up to $2,625 for English classes for parents at Esperanza Elementary",
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "individual"
-    },
-    "26-0938": {
-      "enrichmentCacheKey": "2c7d4a5f88ac256fe597fab2d23c0e281000f4fd07e252d9e06d7df197563053",
-      "headlineFix": null,
-      "issue": {
-        "explanation": "The official text does not mention a funding source, so there is nothing in it that conflicts with the family literacy workshop.",
-        "quote": null,
-        "topic": "other",
-        "verdict": "not_real"
+      "modelId": "claude-sonnet-5-5",
+      "money": {
+        "amountType": "not_to_exceed",
+        "direction": "expense",
+        "newTotal": null,
+        "priorTotal": null,
+        "thisAction": 15337.84
       },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
+    "26-0930": {
+      "enrichmentCacheKey": "6fbc4c4ae40378fb52a078f8cf9da18e3577533e45973f9ef0f2031e2e533e3c",
+      "headlineFix": "Pays an instructor up to $2,625 for English classes for parents at Esperanza Elementary",
+      "issue": null,
+      "modelId": "claude-sonnet-5-5",
+      "money": null,
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
+      "vendorKind": "individual"
+    },
     "26-0940": {
-      "enrichmentCacheKey": "926e82dcb460c8eeb74436da4612157db2d96739320795ad016186c0fb390356",
+      "enrichmentCacheKey": "84ec8f00d54df72e3a2dcea28cb9e524f903b158cd9e245f0a37cd4550f906b5",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -474,15 +329,15 @@
         "priorTotal": 6789181.95,
         "thisAction": 247536.1
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0943": {
-      "enrichmentCacheKey": "d9d96b1eca6fca7e3bbaffeecdfe3921974d001c5f983c5ce7e8eb433cf48200",
+      "enrichmentCacheKey": "b1ab888abe389593e9f29b3cde2d702177e29953826ad888f631536d1a73e946",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -490,15 +345,15 @@
         "priorTotal": null,
         "thisAction": 65966.4
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0949": {
-      "enrichmentCacheKey": "1ae04f22d054dcd364448cfb54c41a2e4cc2488d6696c03a41488e49d0f28da4",
+      "enrichmentCacheKey": "34b143eb21f37588cc48236af20cc08532d85e57b8e6d21390041400f0268bff",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -506,40 +361,36 @@
         "priorTotal": null,
         "thisAction": 74500
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0951": {
-      "enrichmentCacheKey": "b8403ddc994aa12096e9bea511faaf6d0a9d0f2049606e19240b8528a63d290b",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
+      "vendorKind": null
     },
     "26-0952": {
-      "enrichmentCacheKey": "5058327dfc2eead067926740b4d8091794531d1e3064cc68d08d75b0f82915de",
+      "enrichmentCacheKey": "90a74bc08242197278a111034735cb0bad334b54ad3834d408ccbe004cb83a70",
       "headlineFix": null,
       "issue": {
         "explanation": "The title names the Cole Administration Center, but the action text places the work at the Dr. Marcus A. Foster Leadership Center.",
-        "quote": "build a sign base for monument address sign at Dr. Marcus A. Foster Leadership Center",
+        "quote": "to build a sign base for monument address sign at Dr. Marcus A. Foster Leadership Center",
         "topic": "school",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
+      "modelId": "claude-sonnet-5-5",
+      "money": {
+        "amountType": "not_to_exceed",
+        "direction": "expense",
+        "newTotal": null,
+        "priorTotal": null,
+        "thisAction": 8150
+      },
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0953": {
-      "enrichmentCacheKey": "bdfc58455687e5d9be097c40efce1135c720a956ccc38fe9c650011646ed5538",
+      "enrichmentCacheKey": "fa099f927b1dfc09e20cb40e9cc758138459a43b420f6bb5581761e9de6cf2ab",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -547,127 +398,46 @@
         "priorTotal": 100000,
         "thisAction": 100000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
-      "vendorKind": "organization"
+      "vendorKind": null
     },
     "26-0954": {
-      "enrichmentCacheKey": "7fc0f14f7cabc52c994676f0deb9f780979e8e2f461b87f910dc2d866ca62ef1",
+      "enrichmentCacheKey": "51d290e7275ac91b96c617b4f22dc3066a76c183d231e47c2e177e35177157e2",
       "headlineFix": null,
       "issue": {
-        "explanation": "The unchanged term start date is misprinted as July 1, 025, and the intended year 2025 is evident from the 2025-2026 agreement.",
+        "explanation": "The text prints the term start as \"July 1, 025\", an evident typo for July 1, 2025, which matches the 2025-2026 agreement year and the June 30, 2026 end date.",
         "quote": "for the unchanged term of July 1, 025 through June 30, 2026",
         "topic": "term",
         "verdict": "cosmetic"
       },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": null
-    },
-    "26-0958": {
-      "enrichmentCacheKey": "599f441e45990b951785e600467949e700ca7426e44fdf2716c7367a18d1f37b",
-      "headlineFix": null,
-      "issue": {
-        "explanation": "The unchanged contract amount is printed as \"$447,00.00\", which is missing a digit, so the intended figure is not clear from the text.",
-        "quote": "$447,00.00",
-        "topic": "money",
-        "verdict": "material"
-      },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
-        "newTotal": null,
-        "priorTotal": null,
-        "thisAction": 447000
+        "newTotal": 40000,
+        "priorTotal": 10000,
+        "thisAction": 30000
       },
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": {
-        "amountType": "fixed",
-        "direction": "expense",
-        "newTotal": null,
-        "priorTotal": null,
-        "thisAction": 447000
-      },
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
-    "26-0959": {
-      "enrichmentCacheKey": "c07b8b018df03a6bd0779d4b40383ebc76d4bc3f46f0243fa73196d05155c75c",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0961": {
-      "enrichmentCacheKey": "e8536f91c3e53763fe7c82d2fe72c847be34c47a420fa0c48fa011818a5d35c1",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0966": {
-      "enrichmentCacheKey": "9ab442c0aec87071ccdabf321a427aeffa9834ac6b58c2c9b8e98fdaecf811c2",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
     "26-0970": {
-      "enrichmentCacheKey": "662989847c0960be56d9cc35d3eafa83f1567977573329a831019252cdba1e8e",
-      "headlineFix": "Pays a consultant up to $6,000 for 24 family workshops at Madison Park Academy-Upper",
+      "enrichmentCacheKey": "c5cc550e3838cb981fc518e8504714c630b8531d0eeec10c741cf5970ce08470",
+      "headlineFix": "Pays a local facilitator up to $6,000 for 24 parent workshops at Madison Park Academy-Upper",
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": null,
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": "individual"
     },
-    "26-0976": {
-      "enrichmentCacheKey": "0de73af04a57a8c17517857e9d6b2f30c38c318e7fda68083c9cc888b8f979d2",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0977": {
-      "enrichmentCacheKey": "045d46ce1e7b00b76140c1e685453f53219a40a1a330d12579fc78b0377fb2b6",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-0980": {
-      "enrichmentCacheKey": "1b561ea41d34600a0f92fff8b2360cd993f9d898d596c0cea850a3d2cc4b6c7d",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
     "26-0988": {
-      "enrichmentCacheKey": "0996e3a070e8ee813a89555a4d69a8f9f86eb2bba2460f29ed70065720a71773",
+      "enrichmentCacheKey": "8731bdebd63809369ba4b5a0264220e03e70cd9e3f08b2be3a799756737766c2",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -675,15 +445,15 @@
         "priorTotal": null,
         "thisAction": 81000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0990": {
-      "enrichmentCacheKey": "de36a211e080732aee61a533422cb9240afa3aca017dc0f13a942be5e4ae32d6",
+      "enrichmentCacheKey": "b482d6b3224159c5f23973ebc52e30d9130bec5bd85006089e8be3c8f753d7f1",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -691,15 +461,15 @@
         "priorTotal": null,
         "thisAction": 81000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0992": {
-      "enrichmentCacheKey": "be08c3a2ff56f1f867263d7c3f3d0c6c3a20f055119d03a7b7c8ae49fd948461",
+      "enrichmentCacheKey": "e58bc777fad5ef40c54d229f7fdf947ab74d0a6c8769e91453c0d452bf0f8c68",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -707,30 +477,15 @@
         "priorTotal": null,
         "thisAction": 81000
       },
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": null
-    },
-    "26-0993": {
-      "enrichmentCacheKey": "71bbff455a0761709cba3d87b4711245b962d25397ffc76b64dfdc8d36de6778",
-      "headlineFix": null,
-      "issue": {
-        "explanation": "The action text says the training is delivered to the Redwood Day School Team, which is not identified as an OUSD school or department, so who receives the services is unclear.",
-        "quote": "professional development experiences during in-service days to Redwood Day School Team",
-        "topic": "school",
-        "verdict": "material"
-      },
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0994": {
-      "enrichmentCacheKey": "7f39fd86fdc2ec9a7c8ffa5f1b3eab43a3924e8a10d2d3b4a457bb32705531f7",
+      "enrichmentCacheKey": "a60ef428fe1b8606b41d5891f766898c7e925bc0215a4b6f249d25b564adcb8d",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "revenue",
@@ -738,15 +493,15 @@
         "priorTotal": null,
         "thisAction": 809234
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-0995": {
-      "enrichmentCacheKey": "30217baeac1592e351a207003d8708d851b8578a203d80a4cec306c05adfdbf9",
+      "enrichmentCacheKey": "ed48fab332417377569ec3f9c2163578d88baa2fb1b0581189a3bdb67edcdb29",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -754,39 +509,9 @@
         "priorTotal": null,
         "thisAction": 26375121
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
-    },
-    "26-1011": {
-      "enrichmentCacheKey": "87489d921b84da08636d004e45772bc2d4a130917fb9593af6039a13c5d3288d",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-1012": {
-      "enrichmentCacheKey": "487e8d91edc5b94b4f1a6c64437dcd17d477057d1b9023683a6fb3adcafbb728",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
-    },
-    "26-1014": {
-      "enrichmentCacheKey": "78e259b1fb3c4117a1ef288b08ed8578c0ae06d88259ec685c45d57f8f051d11",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": "organization"
     }
   },
   "meetingKey": "2026-05-13"

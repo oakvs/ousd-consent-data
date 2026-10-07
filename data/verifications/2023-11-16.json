@@ -1,10 +1,10 @@
 {
   "items": {
     "23-1792": {
-      "enrichmentCacheKey": "6164e88b6e0870a1edd88fdd8bfc4655498afdcd03a607d1454e62be32908427",
+      "enrichmentCacheKey": "62ef315354b2316ce2454e766f7d974a8a716f9907e8d9314bb3e20182c93a1c",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "expense",
@@ -12,15 +12,15 @@
         "priorTotal": null,
         "thisAction": 176134
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2171": {
-      "enrichmentCacheKey": "6fd640a3da97c43d0b6ca2b6c7cdee339702b0e5c401d35cb89aaed8b915b667",
+      "enrichmentCacheKey": "05c7602910cf8bb0085320adbf3b6826082f7e7e215946abb4e571d81bb59302",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -28,20 +28,20 @@
         "priorTotal": null,
         "thisAction": 248689.3
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2202": {
-      "enrichmentCacheKey": "cde8085f11bff4cbad6d92fb55eb6315b6e7db85822fe3df475ccf3a78af1e08",
+      "enrichmentCacheKey": "a1a0e0ab94fb510704499e03b28498715344079c4ae6b8b49de0250329d95158",
       "headlineFix": null,
       "issue": {
-        "explanation": "The text adds $21,414.80 to a prior total of $49,052.00, which equals $70,466.80, but states the new total as $70,446.80.",
+        "explanation": "The text adds $21,414.80 to a prior total of $49,052.00, which equals $70,466.80, but states the new total as $70,446.80, a $20.00 difference.",
         "quote": "increasing the Agreement not to exceed amount from $49,052.00 to $70,446.80",
         "topic": "money",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -49,15 +49,20 @@
         "priorTotal": 49052,
         "thisAction": 21414.8
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2267": {
-      "enrichmentCacheKey": "06abc6094c4bbbcc84d2f070e55d9afc72f62fa2b44351a0811fb088e23d23d8",
+      "enrichmentCacheKey": "640780540487a69f81ce9a000499a0289016e1376b9ed422c8dddc5529128d9e",
       "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
+      "issue": {
+        "explanation": "The agreements are titled 2023-2024, but the stated term runs from July 1, 2022, through June 30, 2024, 'or longer, whichever is greater', leaving the actual term unclear.",
+        "quote": "for the term of July 1, 2022, through June 30, 2024, or longer, whichever is greater",
+        "topic": "term",
+        "verdict": "material"
+      },
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -65,15 +70,36 @@
         "priorTotal": null,
         "thisAction": 120000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
+      "vendorKind": null
+    },
+    "23-2294": {
+      "enrichmentCacheKey": "252bc507b0a4a6196317e06b64b6e21158212aad537893ac80cc5464994f9c7f",
+      "headlineFix": null,
+      "issue": {
+        "explanation": "The action text misspells \"General\" as \"Geneal\" in \"Geneal Services Agreement\", while the title calls it an Engineering Services Agreement; the vendor, school, amount and term are unaffected.",
+        "quote": "Approval by the Board of Education of Geneal Services Agreement",
+        "topic": "other",
+        "verdict": "cosmetic"
+      },
+      "modelId": "claude-sonnet-5-5",
+      "money": {
+        "amountType": "fixed",
+        "direction": "expense",
+        "newTotal": null,
+        "priorTotal": null,
+        "thisAction": 50914
+      },
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2351": {
-      "enrichmentCacheKey": "bca851680fd00f9703167218e9bc24430c0f1e36ae1364057c60e850f339fb6a",
+      "enrichmentCacheKey": "d6529f46c05d06cc24ad3880151cf3f619f3b8c0a7377f9fff0e6f0762ff85a0",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "revenue",
@@ -81,20 +107,20 @@
         "priorTotal": null,
         "thisAction": 150000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2354": {
-      "enrichmentCacheKey": "34bb9f57581ee85e8024ed9023d0ccbfc5bee45234c3433c421b957da08c6c33",
+      "enrichmentCacheKey": "029ff97b6b09f41a9eee6e23caad83b5adcd28b0ea135ad2512812bb8a03f0b9",
       "headlineFix": null,
       "issue": {
-        "explanation": "The title says Services Agreement 2022-2023, but the action text describes a 2023-2024 agreement for July 1, 2023 through June 30, 2024, and those dates govern.",
-        "quote": "Services Agreement 2022-2023",
+        "explanation": "The title labels the agreement 2022-2023, but the action text states it is a 2023-2024 agreement covering July 1, 2023 through June 30, 2024, and those explicit dates govern.",
+        "quote": "Services Agreement 2023-2024 by and between the District and Oakland Public Education Fund",
         "topic": "term",
         "verdict": "cosmetic"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -102,15 +128,15 @@
         "priorTotal": null,
         "thisAction": 22000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2399": {
-      "enrichmentCacheKey": "2cea51538d03f9e7110c24c4c0c450a0c42c1287683f6fe6cbb466f2b7c58cbe",
+      "enrichmentCacheKey": "52450bf9ec2bf54405b695696db881e2cfa503a5d8b1dd2eda080f932b4229ef",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -118,15 +144,15 @@
         "priorTotal": null,
         "thisAction": 125000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2407": {
-      "enrichmentCacheKey": "b62d1a6fa1c8cb865bef9edcbdc945c129423d7ffee2cb45326caf5ef83e6e39",
+      "enrichmentCacheKey": "b8e7cd639092ac18a51d9074986fe2bd6b3390e8fd7b13fddb8e16c1c7c71905",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -134,15 +160,15 @@
         "priorTotal": null,
         "thisAction": 623409
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2408": {
-      "enrichmentCacheKey": "4b0121c0e9f96785ac54837fcd9014e66f13e855e122852ab31386f399237d15",
+      "enrichmentCacheKey": "702ab2594c3ee137b2eae9a898dc223cce636c8dc5111357e71b38b690ca212a",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -150,15 +176,15 @@
         "priorTotal": null,
         "thisAction": 790043
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2414": {
-      "enrichmentCacheKey": "17707efbd969a6757e6b8036fef315d411b82cd77fd28d6893b744e8f7876b12",
+      "enrichmentCacheKey": "1b8c8ab4214393a084767753c5c05aac4c226c675e6a8feddc6ea1f7c3094051",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -166,20 +192,20 @@
         "priorTotal": null,
         "thisAction": 573499
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2441": {
-      "enrichmentCacheKey": "55ab2bdb02fea5ff99c4c5265fd06d248445af4f28f371fa8edc48f6d33e3f9c",
+      "enrichmentCacheKey": "22b43a00ee845ced9449e1e3c01ee3f0a208dc2f865a64585c8001ab2411e40a",
       "headlineFix": null,
       "issue": {
-        "explanation": "The change order of $726,923.26 added to the prior price of $39,298,940.56 equals $40,025,863.82, but the text states the new contract price as $40,025,763.82.",
-        "quote": "increasing the contract price from $39,298,940.56 to $40,025,763.82",
+        "explanation": "The stated prior price of $39,298,940.56 plus the $726,923.26 change order equals $40,025,863.82, but the text states a new price of $40,025,763.82, a $100.00 difference.",
+        "quote": "in the amount of $726,923.26, increasing the contract price from $39,298,940.56 to $40,025,763.82",
         "topic": "money",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "expense",
@@ -187,15 +213,15 @@
         "priorTotal": 39298940.56,
         "thisAction": 726923.26
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2442": {
-      "enrichmentCacheKey": "6162e0226f97f62ddde9cdc6c862ea4946f97fefd9f14fd434fdbb09e11e1b9f",
+      "enrichmentCacheKey": "38abe8ea72bcec2e8efad8c0112dc10568eeb7bffb4a1320eec87c7017d1a19b",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -203,20 +229,20 @@
         "priorTotal": null,
         "thisAction": 275000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2487": {
-      "enrichmentCacheKey": "b2a84402a851248459cf2919124a6937cc9518362d423300807864723db66b69",
+      "enrichmentCacheKey": "1f81576af85f09f3aba658c8203114fdf517ce46730cce1274f53ebacbc15d50",
       "headlineFix": null,
       "issue": {
-        "explanation": "The title says Services Agreement 2023-2034, which appears to be a typo, since the action text describes a 2023-2024 agreement for July 1, 2023 through June 30, 2024.",
-        "quote": "Services Agreement 2023-2034",
+        "explanation": "The title reads 'Services Agreement 2023-2034', but the action text gives 2023-2024 and explicit dates of July 1, 2023 through June 30, 2024, which govern.",
+        "quote": "Services Agreement 2023-2034 - Restroom Alert, LLC - Custodial Services Department",
         "topic": "term",
         "verdict": "cosmetic"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -224,20 +250,20 @@
         "priorTotal": null,
         "thisAction": 116535.85
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2492": {
-      "enrichmentCacheKey": "ca125f3514ee72dbc8b5ab554295c3b4532d1568f8608ef2cb92729a966b3d5d",
+      "enrichmentCacheKey": "2ac9eeb37a0bf41adce101889c69e12a92aadbe56e99cd58de80cc2adf1cc1fc",
       "headlineFix": null,
       "issue": {
-        "explanation": "The phrase \"the former to collaborate with the Unity Council\" is garbled, since the Unity Council appears to be the same organization as the Spanish Speaking Unity Council, but the agreement is stated to be at no cost to the District, with reimbursement funded by the Breaking Barriers Grant.",
-        "quote": "for the former to collaborate with the Unity Council",
+        "explanation": "The text says the District will collaborate with \"the Unity Council\" after naming the Spanish Speaking Unity Council, which appears to be a shortened name for the same organization and does not change the vendor, amount, or scope.",
+        "quote": "for the former to collaborate with the Unity Council to provide services",
         "topic": "other",
         "verdict": "cosmetic"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": null,
         "direction": "no_cost",
@@ -245,15 +271,15 @@
         "priorTotal": null,
         "thisAction": null
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2493": {
-      "enrichmentCacheKey": "faa5b3f8853978c0bdf512b1be1fe4a1076d4688df64d47f34f398053041c7e8",
+      "enrichmentCacheKey": "ac398a180a3c3e8748a93925aad93308961cccc49f3312af800be75637447321",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -261,15 +287,15 @@
         "priorTotal": null,
         "thisAction": 200000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2495": {
-      "enrichmentCacheKey": "718a8c1304d8dac7f2183a13ed89042ac1d00b415885d25d3e9f326e86c0a7db",
+      "enrichmentCacheKey": "e1ca93b9146a6375b181836b4aff8af9186004446f2cd2d7d86d54dc2fd4e4bf",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -277,15 +303,15 @@
         "priorTotal": null,
         "thisAction": 126328.28
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2508": {
-      "enrichmentCacheKey": "afa361e138e8e086b9d935f126af18d74563530ca20452afc28c032cf2fa410d",
+      "enrichmentCacheKey": "940b34b266cb30556bd598ee5d3bae660af40e549d0f0307677be046c7059c55",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -293,20 +319,20 @@
         "priorTotal": null,
         "thisAction": 109000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2516": {
-      "enrichmentCacheKey": "a5872ce227a88b76adc5ec37dac481975743f9df6c7e99d084021046fb91ae3b",
+      "enrichmentCacheKey": "cf9fc35f6a92ee12127d6917f3ce2684fbd6b695fc4a6c549e03509bca928317",
       "headlineFix": null,
       "issue": {
-        "explanation": "The text states a reduction of $15,000.00, but the cap is stated to fall from $85,000.00 to $70,500.00, a difference of $14,500.00.",
+        "explanation": "The text states a $15,000.00 reduction from $85,000.00, which would yield $70,000.00, but it gives the new not-to-exceed amount as $70,500.00.",
         "quote": "in the lesser amount of $15,000.00, reducing the not to exceed cost of the Agreement from $85,000.00 to $70,500.00",
         "topic": "money",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "decrease",
@@ -314,15 +340,15 @@
         "priorTotal": 85000,
         "thisAction": 15000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2517": {
-      "enrichmentCacheKey": "51e820a8c408dbaa0459c92223d4cb10206c3d6b4f7894651b12188c1ab96141",
+      "enrichmentCacheKey": "15b41fd34f7d536649504e2dcc3301abb0b15b0d991c3d81bb372c60f720cc51",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -330,15 +356,15 @@
         "priorTotal": null,
         "thisAction": 300000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2525": {
-      "enrichmentCacheKey": "35ac311c120867bd804d9a88197afc9c03bf37ebf99768b20ad856cfdf66f186",
+      "enrichmentCacheKey": "2f38121a2bfbb34994de4eae553d51a30c187d1a45dcd95e3b9a06e28bacaf03",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -346,31 +372,15 @@
         "priorTotal": 31673629.7,
         "thisAction": 4824860.4
       },
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": null
-    },
-    "23-2567": {
-      "enrichmentCacheKey": "6d6ed5fa80f9900e6b60299264ee0ab2de66cb067b601d6343d222e5a37dcb28",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": {
-        "amountType": "not_to_exceed",
-        "direction": "expense",
-        "newTotal": null,
-        "priorTotal": null,
-        "thisAction": 63423
-      },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2582": {
-      "enrichmentCacheKey": "b74618438e6188a50e6a315453817031ab296046ad9532747f5c3a8df85ec68e",
+      "enrichmentCacheKey": "ed210e9caadbcc2ca871f610882dfed063f36eb7a4c5ebba0823a220adb97837",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -378,15 +388,15 @@
         "priorTotal": null,
         "thisAction": 109000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2583": {
-      "enrichmentCacheKey": "206942d3365445f140606fe66ed9da1927f2d0064b5091c036d879537e398192",
+      "enrichmentCacheKey": "59e0c3ed57b8dc1fb43637bac6afe80a5d69e9a8145897b049f3ab659a985360",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -394,20 +404,20 @@
         "priorTotal": null,
         "thisAction": 217049
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2587": {
-      "enrichmentCacheKey": "f818096d6423ccc5e7d0957bd4b0a53124afb9d1c73f46d68cfca3109cd20a58",
+      "enrichmentCacheKey": "db94de0eb68cd0b4de08f165f282f5fcc1ce6145f476231f1baac751d4ac34a3",
       "headlineFix": null,
       "issue": {
-        "explanation": "The title names the California Commission on Teacher Credentialing as the grant source, but the action text says the grant is from the California Community Colleges Chancellor's Office.",
-        "quote": "California Commission on Teacher Credentialing",
+        "explanation": "The title names the California Commission on Teacher Credentialing as the grantor, but the action text names the California Community Colleges Chancellor’s Office, Division of Workforce and Economic Development.",
+        "quote": "Grant Award from the California Community Colleges Chancellor’s Office, Division of Workforce and Economic Development",
         "topic": "vendor",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -415,15 +425,15 @@
         "priorTotal": null,
         "thisAction": 250000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "23-2595": {
-      "enrichmentCacheKey": "9d76af74ea1e34d022640bb7864089724bb7ff4d0fe86de2e71c679312fac5b3",
+      "enrichmentCacheKey": "9d6b6cbd7d95bfc0ab2f1d463fd2a4d9204ad89231939a637ae1916e21df7efa",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -431,23 +441,7 @@
         "priorTotal": null,
         "thisAction": 836945.38
       },
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": null
-    },
-    "23-2638": {
-      "enrichmentCacheKey": "c56bf773ef3266ed60ea3d54b7f1d8040be3264eb7dcb868465e59c7f531b5be",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": {
-        "amountType": null,
-        "direction": "revenue",
-        "newTotal": null,
-        "priorTotal": null,
-        "thisAction": null
-      },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     }

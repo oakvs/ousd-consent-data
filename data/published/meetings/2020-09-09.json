@@ -58,7 +58,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not to exceed $650,000",
+          "evidence": "$650,000",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 650000,
@@ -66,7 +66,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is awarding a one-year contract to Crystal Creamery of Modesto to supply milk and dairy products to the district's nutrition program, up to $650,000. The district chose this company as the responsive, responsible bidder in a competitive bid. The contract starts July 1, 2020, and the district may renew it for two more one-year terms, but each renewal needs a new Board vote.",
+        "subcategory": null,
+        "summary": "The district picked Crystal Creamery of Modesto as the responsive, responsible bidder to provide milk and dairy products for school nutrition services. The contract runs one year from July 1, 2020, and can be renewed for two more one-year terms, each needing further Board approval.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -124,10 +125,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -194,7 +195,7 @@
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not to exceed $1,300,000.00",
+          "evidence": "$1,300,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 1300000,
@@ -202,7 +203,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is awarding a one-year contract to Daylight Foods, Inc. of Union City to supply fresh produce to the district's nutrition program, up to $1,300,000. The company won as the responsive, responsible bidder in a competitive bid. The contract starts July 1, 2020, and the district may renew it for two more one-year terms, but each renewal needs a new Board vote.",
+        "subcategory": null,
+        "summary": "The district picked Daylight Foods, Inc. of Union City as the responsive, responsible bidder to provide fresh produce for school nutrition services. The contract runs one year from July 1, 2020, with two one-year renewal options that each need further Board approval.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -260,10 +262,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -310,6 +312,11 @@
         },
         {
           "detail": null,
+          "name": "term_dates",
+          "pass": true
+        },
+        {
+          "detail": null,
           "name": "headline_amount",
           "pass": true
         },
@@ -322,15 +329,15 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "other",
-        "category": "Governance & board business",
+        "actionType": "grant_or_funding_in",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Accepts annual report of $1.26M in gifts, donations and grants received in 2019-20",
+        "headline": "Accepts the 2019-20 report of gifts and grants totaling $1.26M given to the district",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "totaling $1,259,321.91",
+          "evidence": "$1,259,321.91",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 1259321.91,
@@ -338,13 +345,17 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "Under Board Policy 3290, the Board is approving the yearly report of gifts, donations, bequests and grants the Superintendent accepted for the district during the 2019-2020 fiscal year. The report totals $1,259,321.91. The text does not list the individual gifts.",
+        "subcategory": null,
+        "summary": "The Board approves the annual report of gifts, donations, bequests and grants that the Superintendent accepted for the district during fiscal year 2019-2020, as Board Policy 3290 requires. The report lists the gifts individually and totals them at $1,259,321.91.",
         "term": {
           "addedStart": null,
-          "end": null,
-          "start": null
+          "end": "2020-06-30",
+          "start": "2019-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category",
+          "actionType"
+        ],
         "vendor": {
           "kind": null,
           "location": null,
@@ -352,7 +363,9 @@
         }
       },
       "file": "20-1414",
-      "flags": [],
+      "flags": [
+        "after_work_began"
+      ],
       "fundingSource": null,
       "group": "Chief Business Officer",
       "history": [
@@ -394,10 +407,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -457,9 +470,9 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "resolution_or_policy",
-        "category": "Governance & board business",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves the 2020-21 summary of $42.7M in state Education Protection Account funds",
+        "headline": "Approves the 2020-21 plan for spending $42.7M in Education Protection Account funds",
         "money": {
           "amountType": "fixed",
           "byYear": {},
@@ -472,7 +485,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is adopting a resolution summarizing how the district will use its Education Protection Account (EPA) money in the 2020-2021 fiscal year. The text lists a total of $42,704,846.00. These are state funds under Proposition 30.",
+        "subcategory": null,
+        "summary": "The Board adopts a resolution summarizing how the district will use its Education Protection Account (state Proposition 30 and 55 tax revenue) money in fiscal year 2020-2021. The summary lists $42,704,846.00.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -533,10 +547,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -581,9 +595,9 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "resolution_or_policy",
-        "category": "Governance & board business",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Adopts the district's state spending (Gann) limit for 2019-20 and an estimate for 2020-21",
+        "headline": "Adopts the district's 2019-20 and estimated 2020-21 Gann Limit calculations",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -596,7 +610,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is adopting a resolution setting the district's 2019-2020 Gann Limit calculation and an estimated 2020-2021 limit, as required by the California Constitution and state law. The Gann Limit caps how much tax revenue a government agency may spend. No dollar amounts are given in the text.",
+        "subcategory": null,
+        "summary": "The Board adopts a resolution setting the district's Gann Limit, the state constitutional cap on how much tax revenue an agency may spend each year, for 2019-2020 and an estimate for 2020-2021. The text states no dollar amounts.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -652,7 +667,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -712,12 +727,12 @@
         "actionType": "amendment",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Adds $4,000 for Anthonio, Inc. inspection work on the Sankofa Elementary portable classrooms",
+        "headline": "Adds $4,000 to Anthonio's inspection contract for Sankofa Elementary portable classrooms",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an additional amount of $4,000.00",
+          "evidence": "in an additional amount of $4,000.00, increasing Agreement not to exceed amount from $18,800.00 to $22,800.00",
           "newTotal": 22800,
           "priorTotal": 18800,
           "thisAction": 4000,
@@ -727,7 +742,8 @@
           "Sankofa Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is amending its agreement with Anthonio, Inc. of Oakland, which provides the inspector of record (the on-site construction inspector) for the Sankofa Elementary School portable classroom project. The change adds $4,000 to cover extra inspection for added construction work and Division of the State Architect requirements. The agreement's cap rises from $18,800 to $22,800.",
+        "subcategory": null,
+        "summary": "This amendment adds $4,000 to the contract with Anthonio, Inc., raising the maximum from $18,800 to $22,800. The extra money pays for more inspection work on additional construction and to meet Division of the State Architect requirements for the Sankofa Elementary School portable classrooms.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -785,7 +801,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -835,7 +851,7 @@
         "actionType": "personnel",
         "category": "Staff & hiring",
         "flags": [],
-        "headline": "Approves Personnel Report No. 2021-0003",
+        "headline": "Approves Personnel Report No. 2021-0003 for the district's hiring and staffing actions",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -848,7 +864,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving Personnel Report No. 2021-0003 from the Talent/Human Resources Department. The text of the item does not describe the individual personnel actions or give any dollar amounts.",
+        "subcategory": null,
+        "summary": "The Board approves Personnel Report No. 2021-0003 from the Talent/Human Resources Department. The text gives no details or dollar amounts; the report itself lists the personnel actions.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -904,7 +921,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -961,7 +978,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Renews a three-year teacher and school-staff intern partnership with Cal State East Bay",
+        "headline": "Partners with Cal State East Bay on teacher and school-staff intern and training programs, 2020-23",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -974,7 +991,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with California State University East Bay for intern and practica (supervised field work) programs. It covers teaching, special education, counseling, school psychology, speech pathology, administrative and social services placements. It runs July 1, 2020 through June 30, 2023, and no dollar amount is stated.",
+        "subcategory": null,
+        "summary": "The district signs a memorandum of understanding (MOU) with California State University East Bay (Trustees of the California State University) for an intern partnership program and a practica (supervised training) program covering teaching, special education, counseling, school psychology, educational therapy, speech pathology and social services credentials. The agreement runs July 1, 2020 through June 30, 2023. The text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -1033,7 +1051,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1090,7 +1108,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves a three-year teacher and school-staff intern partnership with National University",
+        "headline": "Partners with National University on teacher and school-staff intern and training programs, 2020-23",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1103,7 +1121,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with National University of San Diego for intern and practica (supervised field work) programs. It covers teaching, special education, counseling, school psychology, educational therapy and administrative credentials. It runs July 1, 2020 through June 30, 2023, and no dollar amount is stated.",
+        "subcategory": null,
+        "summary": "The district signs a memorandum of understanding (MOU) with National University for an intern partnership program and a practica (supervised training) program covering teaching, special education, counseling, school psychology, educational therapy and administrative credentials. The agreement runs July 1, 2020 through June 30, 2023. The text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -1162,7 +1181,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1219,7 +1238,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves a three-year teacher and school-staff intern partnership with Touro University",
+        "headline": "Partners with Touro University on teacher and school-staff intern and training programs, 2020-23",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1232,7 +1251,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with Touro University of Vallejo for intern and practica (supervised field work) programs. It covers teaching, special education, counseling, school psychology, educational therapy and administrative credentials. It runs July 1, 2020 through June 30, 2023, and no dollar amount is stated.",
+        "subcategory": null,
+        "summary": "The district signs a memorandum of understanding (MOU) with Touro University for an intern partnership program and a practica (supervised training) program covering teaching, special education, counseling, school psychology, educational therapy and administrative credentials. The agreement runs July 1, 2020 through June 30, 2023. The text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -1291,7 +1311,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1348,7 +1368,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves a three-year intern, practica and induction partnership with Mills College",
+        "headline": "Partners with Mills College on teacher and school-staff intern, training and induction programs, 2020-23",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1361,7 +1381,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with Mills College of Oakland for intern, practica (supervised field work) and induction (new-teacher support) programs. It covers teaching, special education, counseling, school psychology, educational therapy and administrative credentials. It runs July 1, 2020 through June 30, 2023, and no dollar amount is stated.",
+        "subcategory": null,
+        "summary": "The district signs a memorandum of understanding (MOU) with Mills College for an intern partnership program, a practica (supervised training) program and an induction program for new teachers, covering teaching, special education, counseling, school psychology, educational therapy and administrative credentials. The agreement runs July 1, 2020 through June 30, 2023. The text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -1420,7 +1441,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1477,7 +1498,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves a three-year teacher and school-staff intern partnership with Holy Names University",
+        "headline": "Partners with Holy Names University on teacher and school-staff intern and training programs, 2020-23",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1490,7 +1511,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with Holy Names University of Oakland for intern and practica (supervised field work) programs. It covers teaching, special education, counseling, school psychology, educational therapy and administrative credentials. It runs July 1, 2020 through June 30, 2023, and no dollar amount is stated.",
+        "subcategory": null,
+        "summary": "The district signs a memorandum of understanding (MOU) with Holy Names University for an intern partnership program and a practica (supervised training) program covering teaching, special education, counseling, school psychology, educational therapy and administrative credentials. The agreement runs July 1, 2020 through June 30, 2023. The text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -1549,7 +1571,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1606,7 +1628,7 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves a three-year teacher and school-staff intern partnership with Dominican University",
+        "headline": "Partners with Dominican University on teacher and school-staff intern and training programs, 2020-23",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -1619,7 +1641,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with Dominican University of San Rafael for intern and practica (supervised field work) programs. It covers teaching, special education, counseling, school psychology, educational therapy and administrative credentials. It runs July 1, 2020 through June 30, 2023, and no dollar amount is stated.",
+        "subcategory": null,
+        "summary": "The district signs a memorandum of understanding (MOU) with Dominican University for an intern partnership program and a practica (supervised training) program covering teaching, special education, counseling, school psychology, educational therapy and administrative credentials. The agreement runs July 1, 2020 through June 30, 2023. The text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2023-06-30",
@@ -1678,7 +1701,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -1748,12 +1771,12 @@
         "actionType": "grant_or_funding_in",
         "category": "Student health, support & family services",
         "flags": [],
-        "headline": "Accepts a $200,000 Silicon Valley Community Foundation grant for the Restorative Justice Program",
+        "headline": "Accepts a $200,000 Silicon Valley Community Foundation grant for restorative justice work",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "in the amount of $200,000.00",
+          "evidence": "$200,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 200000,
@@ -1761,13 +1784,16 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is accepting a $200,000 grant from the Silicon Valley Community Foundation, paid from Bia Echo Foundation funds. The money supports the district's Restorative Justice Program, which the Behavioral Health Department runs. The grant covers July 10, 2020 through June 30, 2021.",
+        "subcategory": null,
+        "summary": "The district accepts $200,000 from the Silicon Valley Community Foundation, paid from Bia Echo Foundation funds, to support its Restorative Justice Program run by the Behavioral Health Department. The grant covers July 10, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-10"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": "Mountain View, CA",
@@ -1819,10 +1845,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -1894,12 +1920,12 @@
         "actionType": "amendment",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Ratifies $12,000 more for a contractor guiding seniors into college and career programs",
+        "headline": "Ratifies $12,000 more for a contractor who guides seniors to college and career training",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in the additional amount of $12,000.00",
+          "evidence": "in the additional amount of $12,000.00, increasing the not to exceed amount of the Contract from $20,000.00 to $32,000.00",
           "newTotal": 32000,
           "priorTotal": 20000,
           "thisAction": 12000,
@@ -1910,7 +1936,8 @@
           "Oakland High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving, after the work period began, a second amendment to a professional services contract with an Oakland contractor who helps seniors at Oakland International and Oakland High Schools move into community college or career training. The work includes Career Technical Education (CTE) guidance and follow-up casework after enrollment papers are submitted. The amendment adds $12,000, raising the cap from $20,000 to $32,000 for April 20 through August 15, 2020.",
+        "subcategory": null,
+        "summary": "The Board ratifies, after the work began on April 20, 2020, an amendment adding $12,000 to a contract with an individual who provides Career Technical Education guidance to seniors at Oakland International and Oakland High Schools. The maximum rises from $20,000 to $32,000, for work through August 15, 2020, including follow-up casework after enrollment papers are submitted.",
         "term": {
           "addedStart": null,
           "end": "2020-08-15",
@@ -1970,7 +1997,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -2042,20 +2069,21 @@
         "flags": [
           "multi_year"
         ],
-        "headline": "Approves agreement with Alameda County Office of Education for up to $2.42M in inclusive preschool grant funds",
+        "headline": "Agrees with Alameda County to use up to $2.42M in state grant funds for inclusive preschool classrooms",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "in an amount not to exceed $2,418,669.00",
+          "evidence": "$2,418,669.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 2418669,
           "thisActionRange": null
         },
         "schools": [],
-        "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with the Alameda County Office of Education so the district can use California Department of Education Inclusive Early Education Expansion Program (IEEEP) grant funds. The money is for new inclusive early learning classrooms, renovations, adaptive equipment and inclusion-focused training, so children with and without disabilities can learn together. The amount is up to $2,418,669 and the agreement runs September 23, 2020 through December 31, 2024.",
+        "sourceIssueCandidate": "The two itemized amounts ($500,000.00 and $1,360,669.00) add up to less than the stated $2,418,669.00 total, and the text does not explain the remaining amount.",
+        "subcategory": null,
+        "summary": "The district signs an agreement with the Alameda County Office of Education to use California Department of Education Inclusive Early Education Expansion Program grant funds, up to $2,418,669, for new inclusive early learning classrooms, renovations, adaptive equipment and training. The text lists $500,000 for new construction and $1,360,669 for classroom renovation. It runs September 23, 2020 through December 31, 2024.",
         "term": {
           "addedStart": null,
           "end": "2024-12-31",
@@ -2073,6 +2101,7 @@
       },
       "file": "20-1647",
       "flags": [
+        "source_issue",
         "multi_year"
       ],
       "fundingSource": null,
@@ -2113,16 +2142,18 @@
       "pulled": null,
       "resourceSite": null,
       "review": {
-        "alerts": [],
+        "alerts": [
+          "Money in the official text is unclear: The itemized amounts ($500,000.00 for new construction and $1,360,669.00 for classroom renovation) total $1,860,669.00, which is less than the stated $2,418,669.00 not-to-exceed amount, and the text does not account for the difference."
+        ],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
-        "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "status": "needs_review",
+        "verifiedBy": "claude-sonnet-5-5"
       },
-      "sourceIssue": null,
-      "sourceIssueBy": null,
+      "sourceIssue": "The itemized amounts ($500,000.00 for new construction and $1,360,669.00 for classroom renovation) total $1,860,669.00, which is less than the stated $2,418,669.00 not-to-exceed amount, and the text does not account for the difference.",
+      "sourceIssueBy": "verifier",
       "text": "Approval by the Board of Education of Memorandum of Understanding between the District and Alameda County Office of Education, Hayward, CA, to enable the Parties to leverage the California Department of Education’s (CDE) Inclusive Early Education Expansion Program Grant (IEEEP) funds for the District’s new inclusive early learning classroom construction, facilities renovation, purchase of adaptive equipment in inclusive classroom settings, and/or provide inclusion-focused professional development as outline in this District’s submitted grant application and as directed by the CDE, and specifically for the expansion and increased access to quality early education opportunities for children with and without disabilities, more specifically stated in the Scope of Services, incorporated herein by reference as though fully set forth,  for the period of September 23, 2020 through December 31, 2024, in an amount not to exceed $2,418,669.00 ($500,000.00 for new construction; $1,360,669.00 for classroom renovation).",
       "title": "Memorandum of Understanding - Inclusive Early Education Expansion Program Grant - Early Childhood Education Department",
       "vendorKey": "v-000318",
@@ -2181,12 +2212,12 @@
         "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Approves up to $278,953.52 for Peralta Community College District to run Gateway at Laney school",
+        "headline": "Pays Peralta Community College District up to $278,953 to run Gateway at Laney Alternative High School",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not to exceed $278,953.52",
+          "evidence": "$278,953.52",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 278953.52,
@@ -2196,13 +2227,16 @@
           "Gateway at Laney Alternative High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a 2020-2021 agreement with the Peralta Community College District to operate Gateway at Laney Alternative High School. The district would pay up to $278,953.52 for the school year from July 1, 2020 to June 30, 2021. The funding source is listed as Gateway to College.",
+        "subcategory": null,
+        "summary": "The district agrees to pay Peralta Community College District up to $278,953.52 to operate Gateway at Laney Alternative High School for the 2020-2021 school year. The agreement runs from July 1, 2020 to June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -2254,10 +2288,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -2324,12 +2358,12 @@
         "actionType": "grant_or_funding_in",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Accepts $2.76M California state child care and development grant for 2020-21",
+        "headline": "Accepts $2.76M from the state for general child care and development programs",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "in the amount of $2,764,390.00",
+          "evidence": "$2,764,390.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 2764390,
@@ -2337,7 +2371,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is adopting a resolution to accept a $2,764,390 contract (CCTR 0010) from the California Department of Education for the State General Child Care and Development Program. The Early Childhood Education Department runs these programs. The grant covers July 1, 2020 to June 30, 2021.",
+        "subcategory": null,
+        "summary": "The Board adopts a resolution accepting a $2,764,390 grant from the California Department of Education under Contract CCTR-0010 for the state child development programs run by the Early Childhood Education Department. The grant covers July 1, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -2397,10 +2432,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -2467,12 +2502,12 @@
         "actionType": "grant_or_funding_in",
         "category": "Classroom & academic programs",
         "flags": [],
-        "headline": "Accepts $12.5M California State Preschool Program grant for 2020-21",
+        "headline": "Accepts $12.5M from the state for the California State Preschool Program",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "revenue",
-          "evidence": "in the amount of $12,544,193.00",
+          "evidence": "$12,544,193.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 12544193,
@@ -2480,7 +2515,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is adopting a resolution to accept a $12,544,193 contract (CSPP-0021) from the California Department of Education for the California State Preschool Program. The Early Childhood Education Department runs the program. The grant covers July 1, 2020 to June 30, 2021.",
+        "subcategory": null,
+        "summary": "The Board adopts a resolution accepting a $12,544,193 grant from the California Department of Education under Contract CSPP-0021 for the state preschool program run by the Early Childhood Education Department. The grant covers July 1, 2020 through June 30, 2021.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -2540,10 +2576,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -2598,25 +2634,26 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "amendment",
-        "category": "Legal, insurance & risk",
+        "category": "Legal, compliance & risk",
         "flags": [
           "multi_year",
           "time_extension_only"
         ],
-        "headline": "Extends Cannon Cochran's claims-administration contract to 2022 at up to $250,000 a year",
+        "headline": "Extends Cannon Cochran's property and liability claims contract to 2022 at up to $250,000 a year",
         "money": {
           "amountType": "per_year",
           "byYear": {},
-          "direction": "no_cost",
-          "evidence": "in an amount not to exceed $250,000.00, each fiscal year commencing July 1",
+          "direction": "expense",
+          "evidence": "$250,000.00, each fiscal year commencing July 1 (no increase in cost)",
           "newTotal": null,
           "priorTotal": null,
-          "thisAction": null,
+          "thisAction": 250000,
           "thisActionRange": null
         },
         "schools": [],
-        "sourceIssueCandidate": "The vendor name is spelled 'Canon Cochran' in the action text and 'Cannon Cochran' in the title.",
-        "summary": "The Board is amending its agreement with Cannon Cochran Management Services, Inc. (CCMSI), a third party administrator (an outside firm that handles claims) for the district's property and liability claims. The amendment extends the term from June 30, 2020 to June 30, 2022. The cap stays at $250,000 each fiscal year, with no increase in cost stated.",
+        "sourceIssueCandidate": "The item title spells the vendor 'Cannon Cochran' while the action text spells it 'Canon Cochran'.",
+        "subcategory": null,
+        "summary": "This amendment extends the contract with Cannon Cochran Management Services, Inc., which handles the district's property and liability claims as a third party administrator, from June 30, 2020 to June 30, 2022. The limit stays at $250,000 each fiscal year, with no increase in cost.",
         "term": {
           "addedStart": "2020-07-01",
           "end": "2022-06-30",
@@ -2668,16 +2705,8 @@
       "matterType": "Agreement or Contract",
       "notes": [
         {
-          "kind": "reading",
-          "text": "The direction was corrected to no_cost by two of three independent readings."
-        },
-        {
-          "kind": "reading",
-          "text": "The amount of this vote was corrected to none by two of three independent readings."
-        },
-        {
           "kind": "cosmetic",
-          "text": "The title spells the vendor 'Cannon Cochran' while the action text spells it 'Canon Cochran'; both refer to the same third party administrator (CCMSI)."
+          "text": "The title spells the vendor 'Cannon Cochran' while the action text spells it 'Canon Cochran', a spelling variation of the same vendor."
         }
       ],
       "outcome": {
@@ -2693,10 +2722,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -2748,7 +2777,7 @@
         "actionType": "termination",
         "category": "After-school & summer programs",
         "flags": [],
-        "headline": "Ends the Ujimaa Foundation after-school program agreement at Burckhalter Elementary",
+        "headline": "Ends the Ujimaa Foundation's after-school agreement at Burckhalter Elementary, effective Aug. 31, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -2763,7 +2792,8 @@
           "Burckhalter Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is terminating, for convenience, its agreement with the Ujimaa Foundation to lead the after-school program at Burckhalter Elementary School. The agreement was approved on June 24, 2020 and ran August 1, 2020 to July 31, 2021, for up to $99,765. The termination takes effect August 31, 2020, and the text does not say how much was paid before then.",
+        "subcategory": null,
+        "summary": "The Board ends, for convenience, the memorandum of understanding (MOU) with the Ujimaa Foundation to coordinate Burckhalter Elementary School's After School Program. The agreement, approved June 24, 2020, had been set at up to $99,765 for August 1, 2020 through July 31, 2021; it now ends August 31, 2020.",
         "term": {
           "addedStart": null,
           "end": "2020-08-31",
@@ -2823,7 +2853,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -2878,7 +2908,7 @@
         "actionType": "grant_or_funding_in",
         "category": "Food, transportation & operations",
         "flags": [],
-        "headline": "Ratifies Clif Bar & Company's donation of products and meals for student and family food distribution",
+        "headline": "Ratifies Clif Bar's donation of products and meals for students and families during shelter in place",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -2891,13 +2921,16 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving, after the donation period began, a donation agreement with Clif Bar & Company of Emeryville. The company donated products and meals for students and families at the district's shelter-in-place and summer food distribution sites. The period was June 1 through July 30, 2020, and no dollar value is stated.",
+        "subcategory": null,
+        "summary": "The Board ratifies, after the fact, a donation agreement in which Clif Bar & Company gives products and meals for students and families at the district's shelter-in-place and summer food distribution sites. The period was June 1 through July 30, 2020, and the text states no dollar value.",
         "term": {
           "addedStart": null,
           "end": "2020-07-30",
           "start": "2020-06-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "actionType"
+        ],
         "vendor": {
           "kind": "organization",
           "location": "Emeryville, CA",
@@ -2949,7 +2982,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3001,10 +3034,10 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "new_agreement",
+        "actionType": "mou_or_data_sharing",
         "category": "Food, transportation & operations",
         "flags": [],
-        "headline": "Ratifies Common Vision's use of the district warehouse to pack fresh produce boxes for families",
+        "headline": "Ratifies Common Vision's use of a district warehouse to pack fresh produce boxes for families",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -3017,13 +3050,16 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving, after the period began, a joint use agreement letting Common Vision of Oakland use the district's warehouse at 900 High Street. Common Vision receives, stores, assembles and packages fresh produce boxes for district students and families. The period is May 1 through August 1, 2020, and no payment is stated.",
+        "subcategory": null,
+        "summary": "The Board ratifies an agreement letting Common Vision use the district's warehouse at 900 High Street to receive, store and pack fresh produce boxes for students and families. The period was May 1 through August 1, 2020, and the text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2020-08-01",
           "start": "2020-05-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -3075,7 +3111,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3130,7 +3166,7 @@
         "actionType": "mou_or_data_sharing",
         "category": "Food, transportation & operations",
         "flags": [],
-        "headline": "Ratifies Fare Resources' use of school sites to deliver up to 3,600 family-style meals",
+        "headline": "Ratifies letting Fare Resources use school sites to deliver up to 3,600 family-style meals",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -3143,7 +3179,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving, after the start date, a memorandum of agreement (MOA) giving Fare Resources, Inc. of Emeryville access to school sites to deliver 600 family-style meals a week, up to 3,600 meals in total. It began July 13, 2020 and ends once 3,600 meals have been served. No payment is stated.",
+        "subcategory": null,
+        "summary": "The Board ratifies a memorandum of agreement giving Fare Resources, Inc. access to district school sites to deliver 600 family-style meals a week, up to 3,600 meals in all. It starts July 13, 2020 and ends after the 3,600th meal is served. The text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -3201,7 +3238,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3254,9 +3291,9 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "resolution_or_policy",
-        "category": "Classroom & academic programs",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves Measure G1 middle school grant plans for Elmhurst United and Aspire ERES Charter for 2020-21",
+        "headline": "Approves Measure G1 spending plan for Elmhurst United Middle and Aspire ERES Charter School, 2020-21",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -3272,15 +3309,14 @@
           "Aspire ERES Charter School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is adopting a resolution, on the Measure G1 Oversight Commission's recommendation, that amends the 2020-2021 middle school grant application and spending plan for Elmhurst United Middle School and Aspire ERES Charter School. It uses the already-approved 2020-2021 funding allocation. No dollar amount is stated in the text.",
+        "subcategory": null,
+        "summary": "The Board adopts a resolution on the Measure G1 oversight commission's recommendation to amend the 2020-2021 middle school grant application and education spending plan for Elmhurst United Middle School and Aspire ERES Charter School. It uses the approved 2020-2021 funding year allocation; the text states no dollar amount.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [
-          "category"
-        ],
+        "uncertain": [],
         "vendor": {
           "kind": null,
           "location": null,
@@ -3334,7 +3370,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3396,15 +3432,15 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
-        "category": "Classroom & academic programs",
+        "actionType": "new_agreement",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves $300,900 Measure N college and career agreement with ARISE High School for 2020-21",
+        "headline": "Approves up to $300,900 in Measure N college and career funding for ARISE High School",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not to exceed $300,900.00",
+          "evidence": "$300,900.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 300900,
@@ -3414,13 +3450,16 @@
           "ARISE High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with ARISE High School, recommended by the Measure N Commission, for up to $300,900 in 2020-2021. Measure N is the College and Career Readiness for All Act. The agreement is meant to make sure Measure N money is spent as the measure requires, and it sets each side's operating and reporting duties.",
+        "subcategory": null,
+        "summary": "The Board approves a Measure N memorandum of understanding (MOU) with ARISE High School for fiscal year 2020-2021, on the Measure N Commission's recommendation. It sets how Measure N college and career readiness money is spent and reported, in an amount up to $300,900.00.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -3485,10 +3524,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -3547,15 +3586,15 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
-        "category": "Classroom & academic programs",
+        "actionType": "new_agreement",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves $108,675 Measure N college and career agreement with East Bay Innovation Academy for 2020-21",
+        "headline": "Approves up to $108,675 in Measure N college and career funding for East Bay Innovation Academy",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not to exceed $108,675.00",
+          "evidence": "$108,675.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 108675,
@@ -3565,13 +3604,16 @@
           "East Bay Innovation Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with East Bay Innovation Academy, recommended by the Measure N Commission, for up to $108,675 in 2020-2021. Measure N is the College and Career Readiness for All Act. The agreement is meant to make sure Measure N money is spent as the measure requires, and it sets each side's operating and reporting duties.",
+        "subcategory": null,
+        "summary": "The Board approves a Measure N memorandum of understanding (MOU) with East Bay Innovation Academy for fiscal year 2020-2021, on the Measure N Commission's recommendation. It sets how Measure N college and career readiness money is spent and reported, in an amount up to $108,675.00.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -3636,7 +3678,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -3698,15 +3740,15 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
-        "category": "Classroom & academic programs",
+        "actionType": "new_agreement",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves $272,000 Measure N college and career agreement with Envision Academy for 2020-21",
+        "headline": "Approves up to $272,000 in Measure N college and career funding for Envision Academy",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not exceed $272,000.00",
+          "evidence": "$272,000.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 272000,
@@ -3716,13 +3758,16 @@
           "Envision Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with Envision Academy, recommended by the Measure N Commission, for up to $272,000 in 2020-2021. Measure N is the College and Career Readiness for All Act. The agreement is meant to make sure Measure N money is spent as the measure requires, and it sets each side's operating and reporting duties.",
+        "subcategory": null,
+        "summary": "The Board approves a Measure N memorandum of understanding (MOU) with Envision Academy for fiscal year 2020-2021, on the Measure N Commission's recommendation. It sets how Measure N college and career readiness money is spent and reported, in an amount up to $272,000.00.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -3787,10 +3832,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -3849,15 +3894,15 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
-        "category": "Classroom & academic programs",
+        "actionType": "new_agreement",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves $264,350 Measure N college and career agreement with ASPIRE Golden State Prep for 2020-21",
+        "headline": "Approves up to $264,350 in Measure N college and career funding for ASPIRE Golden State Prep",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not to exceed $264,350.00",
+          "evidence": "$264,350.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 264350,
@@ -3867,13 +3912,16 @@
           "ASPIRE Golden State College Preparatory Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with ASPIRE Golden State College Preparatory Academy, recommended by the Measure N Commission, for up to $264,350 in 2020-2021. Measure N is the College and Career Readiness for All Act. The agreement is meant to make sure Measure N money is spent as the measure requires, and it sets each side's operating and reporting duties.",
+        "subcategory": null,
+        "summary": "The Board approves a Measure N memorandum of understanding (MOU) with ASPIRE Golden State College Preparatory Academy for fiscal year 2020-2021, on the Measure N Commission's recommendation. It sets how Measure N college and career readiness money is spent and reported, in an amount up to $264,350.00.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -3938,10 +3986,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -4000,15 +4048,15 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
-        "category": "Classroom & academic programs",
+        "actionType": "new_agreement",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Approves $230,350 Measure N college and career agreement with Lighthouse Community Charter for 2020-21",
+        "headline": "Approves up to $230,350 in Measure N college and career funding for Lighthouse Community Charter",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in an amount not to exceed $230,350.00",
+          "evidence": "$230,350.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 230350,
@@ -4018,13 +4066,16 @@
           "Lighthouse Community Charter School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board is approving a memorandum of understanding (MOU) with Lighthouse Community Charter, recommended by the Measure N Commission, for up to $230,350 in 2020-2021. Measure N is the College and Career Readiness for All Act. The agreement is meant to make sure Measure N money is spent as the measure requires, and it sets each side's operating and reporting duties.",
+        "subcategory": null,
+        "summary": "The Board approves a Measure N memorandum of understanding (MOU) with Lighthouse Community Charter School for fiscal year 2020-2021, on the Measure N Commission's recommendation. It sets how Measure N college and career readiness money is spent and reported, in an amount up to $230,350.00.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -4089,10 +4140,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -4151,7 +4202,7 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
+        "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
         "headline": "Approves up to $143,850 in Measure N college and career funds for ASPIRE Lionel Wilson Prep",
@@ -4169,13 +4220,16 @@
           "ASPIRE Lionel Wilson College Preparatory Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board approves a memorandum of understanding (MOU) with ASPIRE Lionel Wilson College Preparatory Academy for the 2020-21 fiscal year, as recommended by the Measure N Commission. It sets out each side's duties for spending and reporting Measure N money, the voter-approved College and Career Readiness for All Act, and caps the amount at $143,850.",
+        "subcategory": null,
+        "summary": "Approves a memorandum of understanding (MOU) with ASPIRE Lionel Wilson College Preparatory Academy for the 2020-21 school year, recommended by the Measure N Commission. Measure N is the local college and career readiness measure; the agreement is meant to make sure its money is spent as the measure requires. It also sets out each side's operating and reporting duties, with payments up to $143,850.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -4240,10 +4294,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -4302,7 +4356,7 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
+        "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
         "headline": "Approves up to $412,250 in Measure N college and career funds for LPS Oakland R&D",
@@ -4320,13 +4374,16 @@
           "LPS Oakland R&D"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board approves a memorandum of understanding (MOU) with LPS Oakland R&D for the 2020-21 fiscal year, as recommended by the Measure N Commission. It sets out each side's duties for spending and reporting Measure N money, the voter-approved College and Career Readiness for All Act, and caps the amount at $412,250.",
+        "subcategory": null,
+        "summary": "Approves a memorandum of understanding (MOU) with LPS Oakland R&D for the 2020-21 school year, recommended by the Measure N Commission. Measure N is the local college and career readiness measure; the agreement is meant to make sure its money is spent as the measure requires. It also sets out each side's operating and reporting duties, with payments up to $412,250.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -4391,10 +4448,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -4453,7 +4510,7 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
+        "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
         "headline": "Approves up to $243,100 in Measure N college and career funds for Oakland School for the Arts",
@@ -4471,13 +4528,16 @@
           "Oakland School for the Arts"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board approves a memorandum of understanding (MOU) with Oakland School for the Arts for the 2020-21 fiscal year, as recommended by the Measure N Commission. It sets out each side's duties for spending and reporting Measure N money, the voter-approved College and Career Readiness for All Act, and caps the amount at $243,100.",
+        "subcategory": null,
+        "summary": "Approves a memorandum of understanding (MOU) with Oakland School for the Arts for the 2020-21 school year, recommended by the Measure N Commission. Measure N is the local college and career readiness measure; the agreement is meant to make sure its money is spent as the measure requires. It also sets out each side's operating and reporting duties, with payments up to $243,100.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -4542,10 +4602,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -4604,7 +4664,7 @@
       "consentSection": "general",
       "countsTowardTotals": true,
       "enrichment": {
-        "actionType": "mou_or_data_sharing",
+        "actionType": "new_agreement",
         "category": "Classroom & academic programs",
         "flags": [],
         "headline": "Approves up to $289,000 in Measure N college and career funds for Oakland Unity High School",
@@ -4622,13 +4682,16 @@
           "Oakland Unity High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board approves a memorandum of understanding (MOU) with Oakland Unity High School for the 2020-21 fiscal year, as recommended by the Measure N Commission. It sets out each side's duties for spending and reporting Measure N money, the voter-approved College and Career Readiness for All Act, and caps the amount at $289,000.",
+        "subcategory": null,
+        "summary": "Approves a memorandum of understanding (MOU) with Oakland Unity High School for the 2020-21 school year, recommended by the Measure N Commission. Measure N is the local college and career readiness measure; the agreement is meant to make sure its money is spent as the measure requires. It also sets out each side's operating and reporting duties, with payments up to $289,000.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
           "start": "2020-07-01"
         },
-        "uncertain": [],
+        "uncertain": [
+          "category"
+        ],
         "vendor": {
           "kind": "organization",
           "location": null,
@@ -4693,10 +4756,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -4741,11 +4804,11 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "other",
-        "category": "Classroom & academic programs",
+        "category": "Budget, finance & payments",
         "flags": [],
-        "headline": "Moves $6,785 at Skyline High from conference costs to computers for media workstations",
+        "headline": "Moves $6,785.06 at Skyline High from conference costs to computers and tablets for career classes",
         "money": {
-          "amountType": null,
+          "amountType": "fixed",
           "byYear": {},
           "direction": "no_cost",
           "evidence": null,
@@ -4758,13 +4821,16 @@
           "Skyline High School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board approves a Skyline High School request, backed by the Measure N Commission, to shift $6,785.06 within its 2020-21 Measure N budget. The money moves from conference expenses to computers or tablets for career technical education media workstations used by students in pathway classes and arts classrooms. No new money is added.",
+        "subcategory": null,
+        "summary": "Approves a 2020-21 budget change requested by Skyline High School, recommended by the Measure N Commission. It moves $6,785.06 from conference expenses to computers or tablets for media workstations for students in career pathway classes and visual and performing arts classrooms. The money is shifted within the school's existing Measure N budget.",
         "term": {
           "addedStart": null,
           "end": null,
           "start": null
         },
-        "uncertain": [],
+        "uncertain": [
+          "money"
+        ],
         "vendor": {
           "kind": null,
           "location": null,
@@ -4829,7 +4895,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -4877,11 +4943,11 @@
       "countsTowardTotals": true,
       "enrichment": {
         "actionType": "other",
-        "category": "Classroom & academic programs",
+        "category": "Budget, finance & payments",
         "flags": [],
         "headline": "Moves $10,000 at Madison Park Academy from canceled field trips to dual-enrollment textbooks",
         "money": {
-          "amountType": null,
+          "amountType": "fixed",
           "byYear": {},
           "direction": "no_cost",
           "evidence": null,
@@ -4894,13 +4960,16 @@
           "Madison Park Academy"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The Board approves a Madison Park Academy request, backed by the Measure N Commission, to shift $10,000.00 within its 2020-21 Measure N budget. The money moves from field trips, which were affected by COVID-19 travel embargoes, to dual-enrollment textbooks to support the academy's acceleration program. No new money is added.",
+        "subcategory": null,
+        "summary": "Approves a 2020-21 budget change requested by Madison Park Academy, recommended by the Measure N Commission. It moves $10,000 from field trips, which were affected by COVID-19 travel embargoes, to buy dual-enrollment textbooks. The money is shifted within the school's existing budget.",
         "term": {
           "addedStart": null,
           "end": null,
           "start": null
         },
-        "uncertain": [],
+        "uncertain": [
+          "money"
+        ],
         "vendor": {
           "kind": null,
           "location": null,
@@ -4965,7 +5034,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5015,7 +5084,7 @@
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies the Board's March 4, 2020 special meeting minutes",
+        "headline": "Approves the minutes of the special Board of Education meeting on March 4, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5028,7 +5097,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board formally approves the written minutes of its special meeting held March 4, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board approves the written record of its special meeting held on March 4, 2020. No money is involved.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -5101,7 +5171,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5160,7 +5230,7 @@
         "actionType": "resolution_or_policy",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Adopts the Board's agenda items calendar for August 2020 through June 2021",
+        "headline": "Adopts the Board's meeting agenda calendar for August 2020 through June 2021",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5173,7 +5243,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board adopts a calendar of when agenda items are planned to come before it from August 2020 through June 2021. It also lets the Board President make further changes to the calendar unless the Board decides otherwise. This is the second reading of the item.",
+        "subcategory": null,
+        "summary": "The Board adopts its calendar of agenda items for meetings from August 2020 through June 2021 (second reading). It also lets the Board President make further changes unless the Board decides otherwise. No money is involved.",
         "term": {
           "addedStart": null,
           "end": "2021-06-30",
@@ -5247,7 +5318,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5297,7 +5368,7 @@
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies the Board's February 5, 2020 special meeting minutes",
+        "headline": "Approves the minutes of the special Board of Education meeting on February 5, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5310,7 +5381,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board formally approves the written minutes of its special meeting held February 5, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board approves the written record of its special meeting held on February 5, 2020. No money is involved.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -5368,7 +5440,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5418,7 +5490,7 @@
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies the Board's June 10, 2020 regular meeting minutes",
+        "headline": "Approves the minutes of the regular Board of Education meeting on June 10, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5431,7 +5503,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board formally approves the written minutes of its regular meeting held June 10, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board approves the written record of its regular meeting held on June 10, 2020. No money is involved.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -5489,7 +5562,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5539,7 +5612,7 @@
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies the Board's June 17, 2020 special meeting minutes",
+        "headline": "Approves the minutes of the special Board of Education meeting on June 17, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5552,7 +5625,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board formally approves the written minutes of its special meeting held June 17, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board approves the written record of its special meeting held on June 17, 2020. No money is involved.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -5610,7 +5684,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5660,7 +5734,7 @@
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies the Board's June 19, 2020 special meeting minutes",
+        "headline": "Approves the minutes of the special Board of Education meeting on June 19, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5673,7 +5747,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board formally approves the written minutes of its special meeting held June 19, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board approves the written record of its special meeting held on June 19, 2020. No money is involved.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -5731,7 +5806,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5781,7 +5856,7 @@
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies the Board's May 27, 2020 regular meeting minutes",
+        "headline": "Approves the minutes of the regular Board of Education meeting on May 27, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5794,7 +5869,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board formally approves the written minutes of its regular meeting held May 27, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board approves the written record of its regular meeting held on May 27, 2020. No money is involved.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -5852,7 +5928,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -5902,7 +5978,7 @@
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies the Board's August 26, 2020 regular meeting minutes",
+        "headline": "Approves the minutes of the regular Board of Education meeting on August 26, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -5915,7 +5991,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board formally approves the written minutes of its regular meeting held August 26, 2020. Staff prepared the minutes shortly after the meeting.",
+        "subcategory": null,
+        "summary": "The Board approves the written record of its regular meeting held on August 26, 2020. No money is involved.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -5973,7 +6050,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6023,7 +6100,7 @@
         "actionType": "other",
         "category": "Governance & board business",
         "flags": [],
-        "headline": "Ratifies the Board's April 22, 2020 regular meeting minutes",
+        "headline": "Approves the minutes of the regular Board of Education meeting on April 22, 2020",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -6036,7 +6113,8 @@
         },
         "schools": [],
         "sourceIssueCandidate": null,
-        "summary": "The Board formally approves the written minutes of its regular meeting held April 22, 2020.",
+        "subcategory": null,
+        "summary": "The Board approves the written record of its regular meeting held on April 22, 2020. No money is involved.",
         "term": {
           "addedStart": null,
           "end": null,
@@ -6094,7 +6172,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6149,10 +6227,10 @@
         "actionType": "amendment",
         "category": "School buildings & construction",
         "flags": [
-          "time_extension_only",
-          "multi_year"
+          "multi_year",
+          "time_extension_only"
         ],
-        "headline": "Extends Johnson Controls' Fruitvale Elementary alarm replacement contract 519 days to Oct. 2020",
+        "headline": "Extends Johnson Controls' Fruitvale alarm replacement contract to October 31, 2020, at no added cost",
         "money": {
           "amountType": null,
           "byYear": {},
@@ -6167,7 +6245,8 @@
           "Fruitvale Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "This amendment gives Johnson Controls Fire Protection, LP, of Livermore, 519 more calendar days on its consulting agreement for the Fruitvale Elementary School fire and intrusion alarm replacement project. The term, which ran June 1, 2018 to May 31, 2019, now runs through October 31, 2020. No money is added, and all other terms stay the same.",
+        "subcategory": null,
+        "summary": "Amends the consulting agreement with Johnson Controls Fire Protection for the fire and intrusion alarm replacement at Fruitvale Elementary School. It adds 519 calendar days, moving the end date from May 31, 2019 to October 31, 2020. No added money is stated, and all other terms stay the same.",
         "term": {
           "addedStart": "2019-06-01",
           "end": "2020-10-31",
@@ -6227,7 +6306,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6292,7 +6371,7 @@
         "actionType": "new_agreement",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Pays Illuminaries up to $59,000 to paint two murals at the new Fremont campus",
+        "headline": "Pays Illuminaries up to $59,000 to paint two murals at the new Fremont gym and fitness areas",
         "money": {
           "amountType": "not_to_exceed",
           "byYear": {},
@@ -6304,10 +6383,11 @@
           "thisActionRange": null
         },
         "schools": [
-          "Fremont New Construction Project"
+          "Fremont"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The district hires Illuminaries, an Oakland company, to paint two murals in the fitness and gym areas of the Fremont New Construction Project, for no more than $59,000. Work is scheduled to start September 10, 2020 and run through August 31, 2021.",
+        "subcategory": null,
+        "summary": "Approves an agreement with Illuminaries, an Oakland company, to paint two murals in the Fitness and Gym areas of the Fremont New Construction Project, for up to $59,000. Work is scheduled from September 10, 2020 to August 31, 2021. The project is paid from Measure J bond funds.",
         "term": {
           "addedStart": null,
           "end": "2021-08-31",
@@ -6363,7 +6443,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6428,7 +6508,7 @@
         "actionType": "bid_award",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Awards Mar Con Builders $113,200 for new playmatting and play structure at Acorn Woodland",
+        "headline": "Awards Mar Con Builders $113,200 to replace playmatting and play structure at Acorn Woodland",
         "money": {
           "amountType": "fixed",
           "byYear": {},
@@ -6443,7 +6523,8 @@
           "Acorn Woodland Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The district awards Mar Con Builders of Oakland the lowest responsive bid to replace the playmatting and play structure at Acorn Woodland Elementary School. The $113,200 price includes a $7,000 contingency. Work is scheduled for 45 calendar days starting September 16, 2020 and ending October 31, 2020.",
+        "subcategory": null,
+        "summary": "Approves a contract with Mar Con Builders of Oakland, CA to remove the old playmatting and play structure at Acorn Woodland Elementary School and install new playmatting tiles and a new play structure, for $113,200, which includes a contingency of $7,000. Mar Con Builders was the lowest responsive and responsible bidder in a competitive bid, and all other bids were rejected. Work is scheduled from September 16, 2020 for 45, ending October 31, 2020.",
         "term": {
           "addedStart": null,
           "end": "2020-10-31",
@@ -6499,7 +6580,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6564,7 +6645,7 @@
         "actionType": "bid_award",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Awards Mar Con Builders $57,600 for new playmatting and play structure at Emerson Child Development Center",
+        "headline": "Awards Mar Con Builders $57,600 to replace playmatting and play structure at Emerson",
         "money": {
           "amountType": "fixed",
           "byYear": {},
@@ -6579,7 +6660,8 @@
           "Emerson Child Development Center"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The district awards Mar Con Builders of Oakland the lowest responsive bid to replace the playmatting and play structure at the Emerson Child Development Center. The $57,600 price includes a $4,500 contingency. Work is scheduled for 45 calendar days starting September 16, 2020 and ending October 31, 2020.",
+        "subcategory": null,
+        "summary": "Approves a contract with Mar Con Builders of Oakland, CA to remove the old playmatting and play structure at Emerson Child Development Center and install new playmatting tiles and a new play structure, for $57,600, which includes a contingency of $4,500. Mar Con Builders was the lowest responsive and responsible bidder in a competitive bid, and all other bids were rejected. Work is scheduled from September 16, 2020 for 45, ending October 31, 2020.",
         "term": {
           "addedStart": null,
           "end": "2020-10-31",
@@ -6635,7 +6717,7 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
         "verifiedBy": null
@@ -6700,12 +6782,12 @@
         "actionType": "bid_award",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Awards Mar Con Builders $88,320 for new playmatting and play structure at Global Family Elementary",
+        "headline": "Awards Mar Con Builders $88,320 to replace playmatting and play structure at Global Family",
         "money": {
           "amountType": "fixed",
           "byYear": {},
           "direction": "expense",
-          "evidence": "in the amount of $$88,320.00",
+          "evidence": "in the amount of $$88,320.00, which includes a contingency of $6, 900.00",
           "newTotal": null,
           "priorTotal": null,
           "thisAction": 88320,
@@ -6714,14 +6796,17 @@
         "schools": [
           "Global Family Elementary School"
         ],
-        "sourceIssueCandidate": "The official text prints the contract amount with a doubled dollar sign ($$88,320.00) and the contingency with a stray space ($6, 900.00).",
-        "summary": "The district awards Mar Con Builders of Oakland the lowest responsive bid to replace the playmatting and play structure at Global Family Elementary School. The $88,320 price includes a $6,900 contingency. Work is scheduled for 45 calendar days starting September 16, 2020 and ending October 31, 2020.",
+        "sourceIssueCandidate": "The amount is printed as \"$$88,320.00\" and the contingency as \"$6, 900.00\"; both look like typing errors.",
+        "subcategory": null,
+        "summary": "Approves a contract with Mar Con Builders of Oakland, CA to remove the old playmatting and play structure at Global Family Elementary School and install new playmatting tiles and a new play structure, for $88,320, which includes a contingency of $6,900. Mar Con Builders was the lowest responsive and responsible bidder in a competitive bid, and all other bids were rejected. Work is scheduled from September 16, 2020 for 45, ending October 31, 2020.",
         "term": {
           "addedStart": null,
           "end": "2020-10-31",
           "start": "2020-09-16"
         },
-        "uncertain": [],
+        "uncertain": [
+          "money"
+        ],
         "vendor": {
           "kind": "organization",
           "location": "Oakland, CA",
@@ -6760,7 +6845,7 @@
       "notes": [
         {
           "kind": "cosmetic",
-          "text": "The text prints the contract amount with a doubled dollar sign and the contingency with a stray space, but the intended amounts ($88,320.00 and $6,900.00) are evident."
+          "text": "The contract amount is printed with a doubled dollar sign (\"$$88,320.00\") and the contingency has a stray space (\"$6, 900.00\"), but the intended values of $88,320.00 and $6,900.00 are evident."
         }
       ],
       "outcome": {
@@ -6776,10 +6861,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -6841,7 +6926,7 @@
         "actionType": "bid_award",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Awards Mar Con Builders $192,000 for new playmatting and play structure at Piedmont Avenue Elementary",
+        "headline": "Awards Mar Con Builders $192,000 to replace playmatting and play structure at Piedmont Avenue",
         "money": {
           "amountType": "fixed",
           "byYear": {},
@@ -6855,8 +6940,9 @@
         "schools": [
           "Piedmont Avenue Elementary School"
         ],
-        "sourceIssueCandidate": "The text says work lasts 45 calendar days but gives an end date of December 15, 2020, which is about 90 days after the September 16, 2020 start.",
-        "summary": "The district awards Mar Con Builders of Oakland the lowest responsive bid to replace the playmatting and play structure at Piedmont Avenue Elementary School. The $192,000 price includes a $15,000 contingency. Work is scheduled for 45 calendar days starting September 16, 2020 and ending December 15, 2020.",
+        "sourceIssueCandidate": null,
+        "subcategory": null,
+        "summary": "Approves a contract with Mar Con Builders of Oakland, CA to remove the old playmatting and play structure at Piedmont Avenue Elementary School and install new playmatting tiles and a new play structure, for $192,000, which includes a contingency of $15,000. Mar Con Builders was the lowest responsive and responsible bidder in a competitive bid, and all other bids were rejected. Work is scheduled from September 16, 2020 for 45, ending December 15, 2020.",
         "term": {
           "addedStart": null,
           "end": "2020-12-15",
@@ -6870,9 +6956,7 @@
         }
       },
       "file": "20-1596",
-      "flags": [
-        "source_issue"
-      ],
+      "flags": [],
       "fundingSource": "Fund 21 Measure J",
       "group": "Board of Education",
       "history": [
@@ -6914,13 +6998,13 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
-      "sourceIssue": "The text says the work lasts 45 calendar days but gives an end date of December 15, 2020, about 90 days after the September 16, 2020 start, so the term is unclear.",
-      "sourceIssueBy": "verifier",
+      "sourceIssue": null,
+      "sourceIssueBy": null,
       "text": "Approval by the Board of Education of Agreement Between Owner and Contractor - Competitively Bid - between District and Mar Con Builders (“Contractor”), Oakland, CA, for the latter to remove existing playmatting and play structure and install new SofSurfaces playmatting tiles and play structure, for the Piedmont Avenue Elementary School Playmatting Installation Project, as described in Bid Proposal - Document 00 31 01 - received 11:45 A.M., July 29, 2020, incorporated herein by reference as though fully set forth, in the amount of $192,000.00, which includes a contingency of $15,000.00, as the lowest responsive and responsible bidder, and rejecting all other bids, if any, and authorizing the President and Secretary of the Board to sign the Agreement for same with said bidder with work scheduled to commence on September 16, 2020, and scheduled to last for Forty-five (45) Calendar days, ending December 15, 2020.",
       "title": "Agreement Between Owner and Contractor - Competitively Bid – Mar Con Builders – Piedmont Avenue Elementary School Playmatting Installation Project – Division of Facilities Planning & Management",
       "vendorKey": "v-002712",
@@ -6979,7 +7063,7 @@
         "actionType": "bid_award",
         "category": "School buildings & construction",
         "flags": [],
-        "headline": "Awards Redgwick Construction $203,900 for new playmatting and play structure at Sherman Elementary",
+        "headline": "Awards Redgwick Construction Company $203,900 to replace playmatting and play structure at Sherman",
         "money": {
           "amountType": "fixed",
           "byYear": {},
@@ -6994,7 +7078,8 @@
           "Sherman Elementary School"
         ],
         "sourceIssueCandidate": null,
-        "summary": "The district awards Redgwick Construction Company of Oakland the lowest responsive bid to replace the playmatting and play structure at Sherman Elementary School. The $203,900 price includes a $9,700 contingency. Work is scheduled for 60 calendar days starting September 16, 2020 and ending November 15, 2020.",
+        "subcategory": null,
+        "summary": "Approves a contract with Redgwick Construction Company of Oakland, CA to remove the old playmatting and play structure at Sherman Elementary School and install new playmatting tiles and a new play structure, for $203,900, which includes a contingency of $9,700. Redgwick Construction Company was the lowest responsive and responsible bidder in a competitive bid, and all other bids were rejected. Work is scheduled from September 16, 2020 for 60, ending November 15, 2020.",
         "term": {
           "addedStart": null,
           "end": "2020-11-15",
@@ -7050,10 +7135,10 @@
         "alerts": [],
         "correction": null,
         "modelId": "sonnet-agent",
-        "promptVersion": "enrich.v3.md",
+        "promptVersion": "enrich.v5.md",
         "reviewedAt": null,
         "status": "auto_ok",
-        "verifiedBy": "sonnet-agent"
+        "verifiedBy": "claude-sonnet-5-5"
       },
       "sourceIssue": null,
       "sourceIssueBy": null,
@@ -7170,7 +7255,7 @@
     "title": "Board of Education Regular Meeting",
     "updatedAt": "2026-10-03T18:03:16.873Z"
   },
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "2.0.0",
   "totals": {
     "appliedForItems": 0,
     "appliedForTotal": 0,
@@ -7181,19 +7266,23 @@
         "items": 1,
         "spending": 0
       },
+      "Budget, finance & payments": {
+        "items": 7,
+        "spending": 1176275
+      },
       "Classroom & academic programs": {
-        "items": 13,
-        "spending": 2555428.52
+        "items": 8,
+        "spending": 1379153.52
       },
       "Food, transportation & operations": {
         "items": 5,
         "spending": 1950000
       },
       "Governance & board business": {
-        "items": 10,
+        "items": 8,
         "spending": 0
       },
-      "Legal, insurance & risk": {
+      "Legal, compliance & risk": {
         "items": 1,
         "spending": 0
       },
@@ -7210,10 +7299,11 @@
         "spending": 0
       }
     },
+    "bySubcategory": {},
     "decreaseTotal": 0,
     "enrichedItems": 52,
     "flagCounts": {
-      "after_work_began": 39,
+      "after_work_began": 40,
       "budget_allocation": 4,
       "grant_application": 1,
       "large_increase": 1,
@@ -7232,7 +7322,7 @@
     "revenueTotal": 19186573.91,
     "spendingItems": 20,
     "spendingTotal": 5223448.52,
-    "yearlyCapItems": 0,
-    "yearlyCapsTotal": 0
+    "yearlyCapItems": 1,
+    "yearlyCapsTotal": 250000
   }
 }

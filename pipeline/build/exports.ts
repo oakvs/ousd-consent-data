@@ -48,6 +48,7 @@ export const ITEM_COLUMNS: TColumn<TItemRow>[] = [
   { name: 'headline', type: 'string', description: 'Plain-English headline (AI-written, checked).', get: r => r.item.enrichment?.headline },
   { name: 'summary', type: 'string', description: 'Plain-English summary (AI-written, checked).', get: r => r.item.enrichment?.summary },
   { name: 'category', type: 'string', description: 'What the item is for (AI classification).', get: r => r.item.enrichment?.category },
+  { name: 'subcategory', type: 'string', description: 'Special education sub-category (AI classification); empty for other categories.', get: r => r.item.enrichment?.subcategory },
   { name: 'action_type', type: 'string', description: 'Kind of action, e.g. new_agreement, amendment (AI classification).', get: r => r.item.enrichment?.actionType },
   { name: 'vendor_name', type: 'string', description: 'Vendor or partner named in the text (AI-extracted).', get: r => r.item.enrichment?.vendor.name },
   { name: 'vendor_kind', type: 'string', description: 'individual or organization (AI-judged).', get: r => r.item.enrichment?.vendor.kind },

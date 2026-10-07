@@ -1,10 +1,10 @@
 {
   "items": {
     "25-0194": {
-      "enrichmentCacheKey": "2e90f605e7281617505e51e4f28216c36e075b2b8880314ca9df2d65dc5bbea3",
+      "enrichmentCacheKey": "cd196dde6c626ea326241e0a03e1129873316197b6d755f0c2e40aeda20c41fd",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -12,15 +12,15 @@
         "priorTotal": null,
         "thisAction": 110000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0462": {
-      "enrichmentCacheKey": "c48d4ab879177a07a51cc3594fb0faa6548ae55a7e08f15d36374a2fa51f2e66",
+      "enrichmentCacheKey": "c032b0c39dac76fedc8451dace95558edd405378a356c06d6dc70efef182b5c8",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -28,15 +28,15 @@
         "priorTotal": 16058032.84,
         "thisAction": 202130.36
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0466": {
-      "enrichmentCacheKey": "24d05bfc75188e017f38ace28f9ac1dfafc419b4124c269b2ee951d138a5dc87",
+      "enrichmentCacheKey": "a69ead929b14affcf24170dc5f83823deb098eac5c84fa5102fc909b86bc9d2d",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -44,15 +44,15 @@
         "priorTotal": null,
         "thisAction": 69763.71
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0499": {
-      "enrichmentCacheKey": "3bdf1151d9e1ff2314c97c13ebcc28cb2a9be990559f39d18573b339e444831c",
+      "enrichmentCacheKey": "82a0c5ab49ccff86ccbe041654bf74c448e260b2ed75511ce7e64d366c8f27f7",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -60,57 +60,63 @@
         "priorTotal": null,
         "thisAction": 60000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0510": {
-      "enrichmentCacheKey": "4f8c82a63af65ebfff8263aa4ca9233f0dec5f3098115b33363fa3ee1047d061",
+      "enrichmentCacheKey": "47d2bc8cf4da8473aa46160c6a6001dc826fe1fd899b8b53655f8213541878cf",
       "headlineFix": null,
       "issue": {
-        "explanation": "The text says a $156,000.00 line is reduced by $11,000.00 to $177,500.00, which is higher than the starting amount, so the stated figures do not add up.",
+        "explanation": "The text says the $156,000.00 consultant contract is reduced by $11,000.00 to $177,500.00, which does not add up since $11,000.00 less than $156,000.00 is not $177,500.00.",
         "quote": "reduce $156,000.00 Consultant Contract: Hiring a Fulltime Pathway Coach by $11,000.00 to $177,500.00",
         "topic": "money",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": null,
-        "direction": "no_cost",
+        "direction": "decrease",
+        "newTotal": 177500,
+        "priorTotal": 156000,
+        "thisAction": 11000
+      },
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": {
+        "amountType": "fixed",
+        "direction": "expense",
         "newTotal": null,
         "priorTotal": null,
-        "thisAction": null
+        "thisAction": 11000
       },
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0512": {
-      "enrichmentCacheKey": "ea96e63bb15c1b76eda47a565f2b8cc48b89c3227f900d4319f431cd4db6544a",
+      "enrichmentCacheKey": "17837527465b8664448485cb4980f3a57d452cfef02932aaf283aef14ce73502",
       "headlineFix": null,
       "issue": {
-        "explanation": "The text says a $121,000.00 line is reduced by $2,000.00 to $19,000.00, which does not add up.",
+        "explanation": "The text says a $121,000.00 consultant contract line is reduced by $2,000.00 to $19,000.00, but a $2,000.00 reduction from $121,000.00 would not leave $19,000.00, so the amounts are inconsistent.",
         "quote": "reduce $121,000.00 Consultant Contract: Hiring a Fulltime Pathway Coach by $2,000.00 to $19,000.00",
         "topic": "money",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
-        "amountType": null,
-        "direction": "no_cost",
-        "newTotal": null,
-        "priorTotal": null,
-        "thisAction": null
+        "amountType": "fixed",
+        "direction": "decrease",
+        "newTotal": 19000,
+        "priorTotal": 121000,
+        "thisAction": 2000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0522": {
-      "enrichmentCacheKey": "0e8a0b0384305d6951bb38f7eb9cf9ee553ca237f1dcce515be026baca602856",
+      "enrichmentCacheKey": "d4597d3133d1954d0aa90c6cedebaf7b103024ab96c7ca386343f9302d1fb744",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -118,15 +124,15 @@
         "priorTotal": 12560499.81,
         "thisAction": 75000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0523": {
-      "enrichmentCacheKey": "cdda3a77cb9ef02f91e45edd424cef43b313b7570e81d3ac222783a1955c68e7",
+      "enrichmentCacheKey": "f1f441e9de649e4f97ce5e34633717d7baa1826e154bdbb0000208451d75a870",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -134,15 +140,15 @@
         "priorTotal": null,
         "thisAction": 49999.95
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0526": {
-      "enrichmentCacheKey": "ce49d9c9156b41affdb51dab9ec46b7ba30df27c6b8a1c3e30c4561b17c16637",
+      "enrichmentCacheKey": "3287a4a94843908292dd8c85ebe5221dc67d7d13bc967ff3b0b16ac31eb54ab5",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -150,15 +156,15 @@
         "priorTotal": null,
         "thisAction": 50000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0532": {
-      "enrichmentCacheKey": "fefcba0575e3bd0d2a7dc62edc40569593391b46edf677c5c1fdd9edf1422a2a",
+      "enrichmentCacheKey": "5fd3cda263a2215709938b19a55d4ff3aa708ea40a065964b913ca675d7f77d9",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -166,15 +172,15 @@
         "priorTotal": 86400,
         "thisAction": 77200
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0538": {
-      "enrichmentCacheKey": "96eec07f1f418925dd12923231c54e77f95cc84ef9b325473549ae31d15d31d1",
+      "enrichmentCacheKey": "b2736b9aeaf563ce1fe1a4a17ea8491301d569654552c00eae0149fb8e49af43",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -182,15 +188,15 @@
         "priorTotal": null,
         "thisAction": 80000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0540": {
-      "enrichmentCacheKey": "aa405e8122cc8e85aa6e348a8668f3061fdfdf75cd092bf58905015583fbbf08",
+      "enrichmentCacheKey": "8a3f617c32fdc70f2f2d91b470e42f3fdf2ed0c93a1506aca22a786f66740d1e",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -198,20 +204,20 @@
         "priorTotal": null,
         "thisAction": 49000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0541": {
-      "enrichmentCacheKey": "4267b5ed7a4e4970671cb531e1bf50d2f1ed2971c133beebd952703655afd995",
+      "enrichmentCacheKey": "ef67eecd90622b90517aa2cf04a8841ff6cb32ed66204cc41bf3ba165e1d587a",
       "headlineFix": null,
       "issue": {
-        "explanation": "The text describes an 8 week wellness program, but the stated term of February 4, 2025 through February 25, 2025 spans about 3 weeks, so the program length and term do not match.",
-        "quote": "an 8 week wellness program consisting of seven comprehensive lessons",
+        "explanation": "The text describes an 8 week wellness program, but the stated service period of February 4, 2025 through February 25, 2025 is only about three weeks.",
+        "quote": "an 8 week wellness program consisting of seven comprehensive lessons, and one community showcase event led by the participants for students at Madison Park Academy-Lower Campus, for the period of February 4, 2025 through February 25, 2025",
         "topic": "term",
         "verdict": "material"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -219,15 +225,15 @@
         "priorTotal": null,
         "thisAction": 5000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0542": {
-      "enrichmentCacheKey": "ffc8b80ffb6e7b6eaec4f74fb566190b4924c2dba642e02c630440d85cfb8263",
+      "enrichmentCacheKey": "798e316aba420f5a370438e517c1079cd7904961ca7e3a5ff2825393e107de7e",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -235,15 +241,15 @@
         "priorTotal": null,
         "thisAction": 40000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0543": {
-      "enrichmentCacheKey": "95b84e4aae60f2239467f861cffc8e81fdf9521f39b999ddfe9b07130fce84a5",
+      "enrichmentCacheKey": "827376368885590f52c5073a95877969bdcb2e3751bfe26c09877ee9e5682724",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -251,15 +257,15 @@
         "priorTotal": null,
         "thisAction": 85500
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0544": {
-      "enrichmentCacheKey": "1303db1fbcc9d64cc6f58ae71bcf5f0a6c68c4cd17e907b4cadd270e4d4c8c58",
+      "enrichmentCacheKey": "650a2b7bed1ca84faec56a2fde69845881c5f14c88a15fe2c46a41a2058027a8",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -267,15 +273,15 @@
         "priorTotal": null,
         "thisAction": 121143
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0546": {
-      "enrichmentCacheKey": "f45433f27a705f19ed6ac3e0556c9b1043036375b00567fb12dda79f65ee4e63",
+      "enrichmentCacheKey": "70b574fb1dad6c5f3c430ee57d8ee05f3aa0016ee7f024101ec52cb8ad103971",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -283,15 +289,15 @@
         "priorTotal": 75809,
         "thisAction": 90591
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0552": {
-      "enrichmentCacheKey": "dc188bb94e3eb390944caec4ae7aba6b415ab2a1d4b5950bdd9f2619c1b23d36",
+      "enrichmentCacheKey": "cccc1a8e6071fe3735e91d7e578921b75312a1c913b143abbc25056e9261e343",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -299,20 +305,15 @@
         "priorTotal": 37620,
         "thisAction": 64625
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0556": {
-      "enrichmentCacheKey": "ff911adfa2863c00ac780413705cab28deb68f0546af66ea9d6c9768dd0ca571",
+      "enrichmentCacheKey": "f4eb1b2c09609485f87f991fc40bde2ca1961b85e85ee068eb285e72dd50056f",
       "headlineFix": null,
-      "issue": {
-        "explanation": "This item has its own stated scope, term (January 1 through June 30, 2025) and amount ($35,000.00); nothing in its text conflicts with the separate Crucible agreement in item 25-0575.",
-        "quote": null,
-        "topic": "other",
-        "verdict": "not_real"
-      },
-      "modelId": "sonnet-agent",
+      "issue": null,
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -320,15 +321,15 @@
         "priorTotal": null,
         "thisAction": 35000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0560": {
-      "enrichmentCacheKey": "b9add846d0992965e6b703eacb11469eb57cd23e370f3598552e2dbefa85fe19",
+      "enrichmentCacheKey": "187a2b62cad6af8d916624c5ded937a3b8d15cd7b59849870695ea1d4b1de363",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -336,15 +337,15 @@
         "priorTotal": null,
         "thisAction": 46170.04
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0562": {
-      "enrichmentCacheKey": "a09938c1cf36d6bddd41741fd24fe32a1cfc51f0fef6487209f6eae3717ac9ad",
+      "enrichmentCacheKey": "8e3acb7b6a2b12df81dc6a98b2cf89525cd69d476ef997c44e8b9f8c03b25d01",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -352,36 +353,31 @@
         "priorTotal": null,
         "thisAction": 50000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0567": {
-      "enrichmentCacheKey": "8b2bb6ac9ea7da709cf3efe7e9db1bf046a2e6e22335efd3b094b2eb61397820",
+      "enrichmentCacheKey": "3736b9c428a04a879f02ad168b1aa0d8790fc248011ebcf45f97301f0a33b103",
       "headlineFix": null,
-      "issue": {
-        "explanation": "The text gives $225,000.00 for an amendment that otherwise describes a term extension, so it is unclear whether that is added money or the grant's existing amount.",
-        "quote": "in the amount of $225,000.00",
-        "topic": "money",
-        "verdict": "material"
-      },
-      "modelId": "sonnet-agent",
+      "issue": null,
+      "modelId": "claude-sonnet-5-5",
       "money": {
-        "amountType": "fixed",
+        "amountType": null,
         "direction": "revenue",
         "newTotal": null,
         "priorTotal": null,
         "thisAction": 225000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     },
     "25-0571": {
-      "enrichmentCacheKey": "57d194bda4b6e559a063bbafb978dc7866cfd2d2e2097ce106172c24cb48dd8f",
+      "enrichmentCacheKey": "cca3a1f528df438dc00e0425f709aa4d3f464db97974e29ceea251621da439ee",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -389,28 +385,7 @@
         "priorTotal": null,
         "thisAction": 50000
       },
-      "promptVersion": "verify.v1.md",
-      "tiebreakMoney": null,
-      "vendorKind": null
-    },
-    "25-0575": {
-      "enrichmentCacheKey": "6aa4ed897d782103bfbaf2060a77ecbe0e7dc60641edc1a64dff072c50f07d45",
-      "headlineFix": null,
-      "issue": {
-        "explanation": "This item has its own stated scope, term (August 1, 2024 through June 30, 2025) and amount ($25,000.00); nothing in its text conflicts with the separate Crucible agreement in item 25-0556.",
-        "quote": null,
-        "topic": "other",
-        "verdict": "not_real"
-      },
-      "modelId": "sonnet-agent",
-      "money": {
-        "amountType": "not_to_exceed",
-        "direction": "expense",
-        "newTotal": null,
-        "priorTotal": null,
-        "thisAction": 25000
-      },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
       "tiebreakMoney": null,
       "vendorKind": null
     }

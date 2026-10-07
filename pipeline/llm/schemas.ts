@@ -10,7 +10,7 @@
  */
 import { z } from 'zod'
 
-import { ActionType, Category, IssueTopic, IssueVerdict, LlmFlag, ProfileField } from '@oakvs/consent-schema/schema'
+import { ActionType, Category, IssueTopic, IssueVerdict, LlmFlag, ProfileField, SpecialEdSubcategory } from '@oakvs/consent-schema/schema'
 
 const Direction = z.enum(['expense', 'revenue', 'decrease', 'no_cost'])
 const AmountType = z.enum(['not_to_exceed', 'fixed', 'cumulative', 'per_year', 'sales_cap']).nullable()
@@ -20,6 +20,7 @@ export const EnrichmentReply = z.object({
   headline: z.string(),
   summary: z.string(),
   category: Category,
+  subcategory: SpecialEdSubcategory.nullable(),
   actionType: ActionType,
   vendor: z.object({ name: z.string().nullable(), location: z.string().nullable(), kind: VendorKind }),
   schools: z.array(z.string()),

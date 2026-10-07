@@ -6,7 +6,7 @@ The data backs the [Consent Report Tracker on the Oakland vs. the World blog](ht
 
 The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
-<!-- generated:stats -->As of October 6, 2026, it covers 162 Board meetings, from August 14, 2019 to September 23, 2026. That's 12,061 consent items authorizing $2.02 billion in spending, plus $469.8 million in grants and other money coming in, across 2,183 vendors and partners. Not counted in those totals: $257.0 million in grant applications, $150.3 million in budget allocations such as Measure N and G1 plans, and $3.76 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
+<!-- generated:stats -->As of October 6, 2026, it covers 162 Board meetings, from August 14, 2019 to September 23, 2026. That's 12,061 consent items authorizing $2.02 billion in spending, plus $501.9 million in grants and other money coming in, across 2,215 vendors and partners. Not counted in those totals: $257.4 million in grant applications, $153.3 million in budget allocations such as Measure N and G1 plans, and $3.76 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
 
 ## Why this exists
 
@@ -22,7 +22,7 @@ Some of what's attached to each item comes straight from Legistar: the title, th
 
 Much of the data is computed by ordinary code with no AI involved, like the meeting totals, most of the flags, which items belong to the same vendor, and which amendments go with which contract.
 
-Then, some of it is written by AI and then checked. That covers the headline and summary, the category and action type, the vendor name, any schools mentioned, the contract dates, the dollar amounts, and four of the flags. The model is (currently) Claude, made by Anthropic, but this may change as open-weight models improve and become less expensive and resource-intensive. Each AI-written record says which model and which version of the instructions produced it.
+Then, some of it is written by AI and then checked. That covers the headline and summary, the category and action type (and, for special education items, a sub-category), the vendor name, any schools mentioned, the contract dates, the dollar amounts, and four of the flags. The model is (currently) Claude, made by Anthropic, but this may change as open-weight models improve and become less expensive and resource-intensive. Each AI-written record says which model and which version of the instructions produced it.
 
 ## How the data gets made
 
@@ -53,6 +53,12 @@ Once an agenda is official, the pipeline in this repo pulls the consent section 
 ### 3. Summarizing each item
 
 For each item, the AI reads only the official text. It writes a headline (110 characters at most) and a two- or three-sentence summary aimed at about an 8th-grade reading level, and it pulls out the facts: who the vendor is, which schools are named, the contract dates, the category, and the dollar amounts, including any prior and new totals and whether the amount is a yearly limit. Its instructions are in [`pipeline/prompts/`](pipeline/prompts/). They ask for neutral wording and spelled-out acronyms, and tell it not to guess at anything the text doesn't say. Individuals who contract in their own name are described by their role rather than named in headlines, as a courtesy.
+
+### How items are categorized
+
+Each item gets one of 13 categories, chosen by the AI from the official text alone against a written codebook, [`pipeline/prompts/enrich.v5.md`](pipeline/prompts/enrich.v5.md), and listed with definitions on the site's [about page](https://oakvs.world/consent-tracker/about). A category says what the money or action is *for*: a busing contract for special education students is Special education, not transportation, and software bought for a reading program goes with the program, not under Technology. It isn't based on which office presented the item or what kind of organization the vendor is. Special education items also get one of five sub-categories (nonpublic schools and agencies; transportation; services and contract staff; programs and support; legal, compliance and policy), because that one category is about a tenth of all counted spending and a single label hid what was in it. Code checks what it can (every special education item must have a sub-category and no other item may), and like everything else the AI writes, a category can be corrected by a person through [`data/overrides/`](data/overrides/).
+
+**October 2026 re-categorization.** The codebook was revised (prompt v5) and every item since 2019 was re-summarized under it, so the whole dataset follows one set of rules. What changed: a "Budget, finance & payments" category for the district's own budget plans and payment ratifications, which had been split across three categories; "Legal, insurance & risk" became "Legal, compliance & risk"; the after-school rule now requires the text itself to place a program outside the school day, after items like daytime arts classes had landed there; and the special education sub-categories were added. 1,865 of 12,063 items (15%) were reclassified, most of them into the new budget category or between the after-school and classroom categories; another 217 changed only because the legal category was renamed. Earlier summaries were written by Claude Sonnet agents under prompts v2 and v3 (and 263 by the v1 prototype); every record now says `enrich.v5.md`. The before-and-after comparison is in the commit that made the change.
 
 ### 4. Checking the numbers
 
@@ -85,15 +91,12 @@ Every change becomes a commit in this repository with a readable message, like `
 <!-- generated:models -->
 | Records | Model |
 |---|---|
-| Summaries, August 2019 – June 2025 (9,915 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `enrich.v3`) |
-| Summaries, August 2025 – September 2026 (1,886 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `enrich.v2`) |
-| Summaries, June 2026 (263 items) | An earlier prototype (`prototype-v1`, prompt `enrich.v1`) |
-| Second readings, August 2019 – September 2026 (3,849 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `verify.v1`) |
-| Second readings, April 2021 (1 items) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`, prompt `verify.v2`) |
+| Summaries, August 2019 – September 2026 (12,063 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `enrich.v5`) |
+| Second readings, August 2019 – September 2026 (3,452 items) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`, prompt `verify.v2`) |
 | Vendor research (1,911 vendors, 1,284 published) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`) |
 <!-- /generated:models -->
 
-New items from October 2026 on are summarized by Claude Opus 5.5 through the Claude API (prompt `enrich.v4`), which also does the tie-breaking third readings. Their second readings come from Claude Sonnet 5.5 (prompt `verify.v2`). New vendors are researched by Claude Sonnet 5.5 with web search (prompt `vendor-research.v3`) and independently reviewed by Claude Opus 5.5 (prompt `vendor-review.v2`). They'll show up in the table above as they're written.
+New items from October 2026 on are summarized by Claude Opus 5.5 through the Claude API (prompt `enrich.v5`), which also does the tie-breaking third readings. Their second readings come from Claude Sonnet 5.5 (prompt `verify.v2`). New vendors are researched by Claude Sonnet 5.5 with web search (prompt `vendor-research.v3`) and independently reviewed by Claude Opus 5.5 (prompt `vendor-review.v2`). They'll show up in the table above as they're written.
 
 Switching models or instructions doesn't quietly rewrite older records. New instructions get a new version number and are compared against the existing summaries before they're used.
 
@@ -132,7 +135,7 @@ Flags point out how something was done. They don't say anything about anyone's m
 | Time extension only | Moves the end date without adding money | AI, from the text |
 | Emergency | The text describes emergency work or contracting | AI, from the text |
 
-Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 11,958 items are `auto_ok`, 110 are `human_reviewed` and 3 are `needs_review`.<!-- /generated:review -->
+Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 11,944 items are `auto_ok`, 117 are `human_reviewed` and 10 are `needs_review`.<!-- /generated:review -->
 
 ## Known limitations
 

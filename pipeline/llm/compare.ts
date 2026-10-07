@@ -20,6 +20,7 @@ import type { ILlm, TUsage } from './client'
 /** Enrichment fields compared, as readable paths. */
 const FIELDS: [string, (e: TEnrichment) => unknown][] = [
   ['category', e => e.category],
+  ['subcategory', e => e.subcategory],
   ['actionType', e => e.actionType],
   ['vendor.name', e => e.vendor.name?.toLowerCase().replace(/[.,]/g, '').trim() ?? null],
   ['vendor.kind', e => e.vendor.kind],

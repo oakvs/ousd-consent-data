@@ -8,7 +8,7 @@ import type { TEnrichment, TRawSnapshot, TVerifiedMoney } from '@oakvs/consent-s
 
 import { enrichmentCacheKey } from '../import/prototype'
 import { anthropicLlm, MODELS } from '../llm/client'
-import { needsEnrichment } from '../llm/enrich'
+import { ENRICH_PROMPT_VERSION, needsEnrichment } from '../llm/enrich'
 import { llmPhase } from '../llm/phase'
 import { EnrichmentReply, toEnrichmentCandidate } from '../llm/schemas'
 import { readLlmState, retryDecision } from '../llm/state'
@@ -198,7 +198,7 @@ describe('LLM step', () => {
 
     const enrichments = (await readEnrichments(KEY))!
     for (const f of FILES) {
-      expect(enrichments.items[f]).toMatchObject({ modelId: MODELS.enrich, promptVersion: 'enrich.v4.md' })
+      expect(enrichments.items[f]).toMatchObject({ modelId: MODELS.enrich, promptVersion: ENRICH_PROMPT_VERSION })
       expect(stableStringify(enrichments.items[f].output)).toBe(stableStringify(stored[f]))
     }
     const verifications = (await readVerifications(KEY))!

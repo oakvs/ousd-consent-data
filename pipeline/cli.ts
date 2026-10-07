@@ -22,9 +22,10 @@
  *   backfill --from D --to D [--limit N]      resolve → ingest for every registry meeting in range, then build
  *   import-prototype [--dir <dir>]            Seed 2026-06-24 from the v1 prototype files
  *   build                                     Rebuild every published file
- *   enrich-export [--key K] [--size 30]       Write agent input chunks for unenriched items (.cache/enrich)
+ *   enrich-export [--key K] [--size 30] [--all]  Write agent input chunks (.cache/enrich); --all = every item, for a re-run
  *   enrich-check --chunk ID                   Validate one agent output chunk (exit 1 on errors)
- *   enrich-import [--key K] --model M         Merge validated chunk outputs into data/enrichments
+ *   enrich-import [--key K] --model M [--replace]  Merge validated chunk outputs into data/enrichments; --replace overwrites
+ *   category-diff                             Compare .cache/enrich/previous with data/enrichments → .cache/enrich/category-diff.json
  *   verify-export [--key K] [--size 30] [--also F]
  *                                             Write second-reading chunks (.cache/verify); F lists extra item ids to read
  *   verify-check --chunk ID                   Validate one second-reading output chunk (exit 1 on errors)
@@ -106,6 +107,8 @@ const { positionals, values } = parseArgs({
     top: { type: 'string' },
     'min-approved': { type: 'string' },
     also: { type: 'string' },
+    all: { type: 'boolean', default: false },
+    replace: { type: 'boolean', default: false },
   },
 })
 
@@ -346,9 +349,9 @@ async function main(): Promise<void> {
       await build()
       break
     case 'enrich-export': {
-      const manifest = await exportChunks(values.key ? [values.key] : null, Number(values.size ?? 30))
+      const manifest = await exportChunks(values.key ? [values.key] : null, Number(values.size ?? 30), { all: values.all })
       const items = manifest.reduce((sum, m) => sum + m.items, 0)
-      console.log(`exported ${manifest.length} chunk(s), ${items} item(s) → .cache/enrich/manifest.json`)
+      console.log(`exported ${manifest.length} chunk(s), ${items} item(s) → .cache/enrich/manifest.json${values.all ? ' (all items; previous records snapshotted to .cache/enrich/previous)' : ''}`)
       break
     }
     case 'enrich-check': {
@@ -362,9 +365,18 @@ async function main(): Promise<void> {
     }
     case 'enrich-import': {
       if (!values.model) throw new Error('--model is required')
-      for (const s of await importChunks(values.key ? [values.key] : null, values.model)) {
+      for (const s of await importChunks(values.key ? [values.key] : null, values.model, { replace: values.replace })) {
         console.log(`${s.meetingKey}: imported ${s.imported}, rejected ${s.rejected}`)
       }
+      break
+    }
+    case 'category-diff': {
+      const { categoryDiff, formatCategoryDiff } = await import('./enrich/category-diff')
+      const { enrichDir } = await import('./enrich/agent-io')
+      const diff = await categoryDiff()
+      await writeJson(path.join(enrichDir(), 'category-diff.json'), diff)
+      console.log(formatCategoryDiff(diff))
+      console.log(`\n${diff.movers.length} movers listed in ${path.join(enrichDir(), 'category-diff.json')}`)
       break
     }
     case 'vendor-candidates': {

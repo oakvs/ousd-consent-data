@@ -1,10 +1,10 @@
 {
   "items": {
     "26-1618": {
-      "enrichmentCacheKey": "c732cf9d6b9bf2438567adbbd8a362f9f7c6dc14cf777eb799da55498f04fc2b",
+      "enrichmentCacheKey": "a182dfe212441bc7c1b517be1cee85a62c542cec5fcdee30d47c29f6fb7278a9",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -12,19 +12,20 @@
         "priorTotal": null,
         "thisAction": 500000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1695": {
-      "enrichmentCacheKey": "4fb8eeae107a74e3d7c79714b54165bd8b651248d38f450b66c878be74630661",
+      "enrichmentCacheKey": "0f2704d1feeda020c83ba3b6cf8dfe7934c71d111b950dfeee20546255a4a07e",
       "headlineFix": null,
       "issue": {
-        "explanation": "The new total is printed as \"$8,273.319.00\" with a period instead of a comma; the stated amounts ($70,000.00 plus $8,203,319.00) give an evident total of $8,273,319.00.",
-        "quote": "$8,273.319.00",
+        "explanation": "The new total is printed as \"$8,273.319.00\" with a period instead of a comma, but its intended value of $8,273,319.00 equals the $70,000.00 prior total plus the $8,203,319.00 addition.",
+        "quote": "increasing the Agreement not to exceed amount from $70,000.00 to $8,273.319.00",
         "topic": "money",
         "verdict": "cosmetic"
       },
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -32,23 +33,36 @@
         "priorTotal": 70000,
         "thisAction": 8203319
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
-    "26-1819": {
-      "enrichmentCacheKey": "63e5ad2b97fb39978436a5b41d340e98aadcc4b3f98a8a5de305de7192da4d3b",
+    "26-1802": {
+      "enrichmentCacheKey": "909889b9243dd46811889b8860563a9ef138cc3901a91f0db35793dd032f05b5",
       "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
+      "issue": {
+        "explanation": "The title names \"Calichi Design Group, Inc.\" but the action text names \"CaliChi Design Group, LLC\", giving two different entity types for the contracting vendor.",
+        "quote": "by and between the District and CaliChi Design Group, LLC, Oakland, CA",
+        "topic": "vendor",
+        "verdict": "material"
+      },
+      "modelId": "claude-sonnet-5-5",
+      "money": {
+        "amountType": "not_to_exceed",
+        "direction": "no_cost",
+        "newTotal": null,
+        "priorTotal": null,
+        "thisAction": null
+      },
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
+      "vendorKind": null
     },
     "26-1825": {
-      "enrichmentCacheKey": "81bbde866ecd4593bedbb379026b0d50ca1eeba31e2c7cb24c24f8bf988d2c07",
+      "enrichmentCacheKey": "d5d71ad8f9c9ce40b92da6af5236ebe721f8c7376c5ece5f668414fa5e3592a6",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -56,14 +70,15 @@
         "priorTotal": null,
         "thisAction": 107600
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1832": {
-      "enrichmentCacheKey": "20014653ef2a6e60091b7e57ff8bbfee8d59d6345a154e0027b23c10a1a6c91e",
+      "enrichmentCacheKey": "8b725873119787aa37453e32453dbb46eae31a4046b805dcc42a0e9e3db65e92",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -71,14 +86,15 @@
         "priorTotal": null,
         "thisAction": 50000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1833": {
-      "enrichmentCacheKey": "f551691d1e37f4d3c09fe2334d0e657af95f7c75a7ac12eac4b171cf6ea5d88e",
+      "enrichmentCacheKey": "c3b4bb46cefab95e013d523b2c7d7ec446511348120a95a370e984534798e7a8",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -86,23 +102,15 @@
         "priorTotal": null,
         "thisAction": 50000
       },
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
-    },
-    "26-1843": {
-      "enrichmentCacheKey": "50ad5c61ec5375228f8465c30b83774df2ffe2a5e6a1aa7e1098c600d6d9de89",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
+      "vendorKind": null
     },
     "26-1851": {
-      "enrichmentCacheKey": "8ec861a80c580a5f5e38236788876c6644a33ad77883702a342c53ff85358653",
+      "enrichmentCacheKey": "8a2a1a7770b7416da80204299e9d0250ef23e40f06c79ab05b62d51e5a2da940",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -110,14 +118,15 @@
         "priorTotal": null,
         "thisAction": 60000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1862": {
-      "enrichmentCacheKey": "2caa6960432739e5a20776b22bed33d6e53abffefca7bcb72d71087cdbedf602",
+      "enrichmentCacheKey": "1440b523a5f6d655194399c926b90e1eb6e24c10ee30f8b8a388d0dc348970d1",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -125,38 +134,31 @@
         "priorTotal": null,
         "thisAction": 50000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
-    "26-1865": {
-      "enrichmentCacheKey": "38680c73123a3aae0edd0560a777aafa7c3e7d384fd3653efe689c07d5b8bbea",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
-    },
     "26-1867": {
-      "enrichmentCacheKey": "9710ab414c06c0696152d57caaf5b420df66bd45213113b91d013940448d6f05",
+      "enrichmentCacheKey": "ce4d120d822f2f6f1e5487564787535e8c969aa15cd9b30f28ecd9de0881caf0",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
-        "amountType": "fixed",
+        "amountType": "cumulative",
         "direction": "revenue",
         "newTotal": null,
         "priorTotal": null,
         "thisAction": 1893910.86
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1876": {
-      "enrichmentCacheKey": "dfa156b56ad01387e4f549cde2f59a88a594a09e9eb3cc7f5a90ca454a2c2507",
+      "enrichmentCacheKey": "9c7b9f27e1d2b8ba081681a3807da83ec60818672825d7e312e0a43175d4bea7",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "fixed",
         "direction": "revenue",
@@ -164,14 +166,15 @@
         "priorTotal": null,
         "thisAction": 361890
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1878": {
-      "enrichmentCacheKey": "575bc0619c01a59c10f1e985725493fac8557dd7e0153775df48b62bf81fc2ad",
+      "enrichmentCacheKey": "a820bfc563fa17d910651e137d0e9c1e7d7b384aaaa6b6dfa26987ee1cd0491d",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -179,23 +182,15 @@
         "priorTotal": null,
         "thisAction": 90000
       },
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
-    },
-    "26-1881": {
-      "enrichmentCacheKey": "a9468731649b2396d5aebd9005590f26c3b310110052926988f281da1a81ff34",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
+      "vendorKind": null
     },
     "26-1885": {
-      "enrichmentCacheKey": "a80140b6740b52b523e58a64c85fbdf14e5c9570912f087dda74caa3acb1d647",
+      "enrichmentCacheKey": "a989ec96d90bcfbc2f9cb8b5a648ba1dfeacda038cb860b491721a16c0d0e08f",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -203,23 +198,15 @@
         "priorTotal": null,
         "thisAction": 72750
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
-    "26-1886": {
-      "enrichmentCacheKey": "34e40b8c979fbeefa9054c6dbffe01b67cb2f893727b27c70f98fe79641c8198",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
-    },
     "26-1895": {
-      "enrichmentCacheKey": "4ccba8268eb7f154fde06eae5657cb24b03b48a67f44d00acbe5ce9729fe7261",
+      "enrichmentCacheKey": "c809eb7d018256da5d7c9e45981111d30caa9e8ed0e0bcdf2d62aa9f357e2a57",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -227,14 +214,15 @@
         "priorTotal": null,
         "thisAction": 65000
       },
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
+      "vendorKind": null
     },
     "26-1899": {
-      "enrichmentCacheKey": "8d17d39a5fa6c06447bb29a6a1588699781ed82f9f7c8914b14b06c9df0a67df",
+      "enrichmentCacheKey": "2cd1a403357ad91112c900b6f4017fa59b1cafdcea6e6d2d8044dc6edd2f7d74",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -242,14 +230,15 @@
         "priorTotal": null,
         "thisAction": 132000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1905": {
-      "enrichmentCacheKey": "7100f7844edda855d0679ff22a56b99b2c2d7e1faec3b2aa2f04911bbb4ae50d",
+      "enrichmentCacheKey": "77423e2208a318c01177723aad73496a6ab64caf454e8fe1e827c72fa78b74bf",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -257,14 +246,15 @@
         "priorTotal": null,
         "thisAction": 50000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1906": {
-      "enrichmentCacheKey": "4522dae9d62ef9ca524e3ce282a658e00d4abd2ae10e6e6ae602dbd88ec98c0d",
+      "enrichmentCacheKey": "5184d8374267c802aae0c2e154323de6f1e757fdef0616fafe022c5ffcc128cf",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -272,14 +262,15 @@
         "priorTotal": null,
         "thisAction": 119000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1907": {
-      "enrichmentCacheKey": "2dfc5e4f235602c52cdf41ebf397a7bbe03e1accc8f054576ab6795896756ccc",
+      "enrichmentCacheKey": "beac030964ca14daa910a824ddc9e435b42903e355c1b60569cadf5469289393",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -287,23 +278,15 @@
         "priorTotal": null,
         "thisAction": 119000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
-    "26-1908": {
-      "enrichmentCacheKey": "641234d2b35619cb5864bb70f7f6afb6f41ca28f32e0cdb286d49d7d73d6ec69",
-      "headlineFix": null,
-      "issue": null,
-      "modelId": "sonnet-agent",
-      "money": null,
-      "promptVersion": "verify.v1.md",
-      "vendorKind": "organization"
-    },
     "26-1909": {
-      "enrichmentCacheKey": "76c66b03943672d90ea07193e3a1e2387d61e4d2d39231aa5bafcd659a1987e6",
+      "enrichmentCacheKey": "6832d55863ae7862bb022a77313edae7c76cdeee08e146a03f8727d6987aeef6",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -311,14 +294,15 @@
         "priorTotal": null,
         "thisAction": 54890
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1910": {
-      "enrichmentCacheKey": "b179ea2040d963d7c4d63d3de81beb1d2a368ec6528bd48f2613df60a1fd1445",
+      "enrichmentCacheKey": "ea611dff12ea9a52009cb3942cc8e6ec2300fc1dcb4cbe47044f65660056cc44",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -326,14 +310,15 @@
         "priorTotal": null,
         "thisAction": 77600
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-1929": {
-      "enrichmentCacheKey": "09b8dcf08c08da65023adf8b5cce0e486115d7031e41d66ff8086bc055f20694",
+      "enrichmentCacheKey": "169da9a751d96e98c1d0d4b6c54b173d9344b80b7fab17de1f3d3d2b707743e2",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -341,14 +326,15 @@
         "priorTotal": null,
         "thisAction": 180000
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     },
     "26-2037": {
-      "enrichmentCacheKey": "7268edd56105e01dabdefd0384877ac7f1ef66edcd79415a5fa23fad02fdb222",
+      "enrichmentCacheKey": "7057c1fafa223ae811438eb073990f9030e9af760a94499c48049cb39d2e50bc",
       "headlineFix": null,
       "issue": null,
-      "modelId": "sonnet-agent",
+      "modelId": "claude-sonnet-5-5",
       "money": {
         "amountType": "not_to_exceed",
         "direction": "expense",
@@ -356,7 +342,8 @@
         "priorTotal": null,
         "thisAction": 246478
       },
-      "promptVersion": "verify.v1.md",
+      "promptVersion": "verify.v2.md",
+      "tiebreakMoney": null,
       "vendorKind": null
     }
   },

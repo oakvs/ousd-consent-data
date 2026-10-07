@@ -12,6 +12,7 @@ import {
   VendorFile,
   VendorIndexFile,
 } from '@oakvs/consent-schema/schema'
+import { SCHEMA_VERSION } from '@oakvs/consent-schema/schema'
 import type { TMeetingFile, TOfficialMatter, TPublishedItem } from '@oakvs/consent-schema/schema'
 import { NO_ALIASES, normalizeVendorName, vendorKey } from '@oakvs/consent-schema/vendor-key'
 
@@ -24,71 +25,12 @@ import { assess, compareMoney, isMaterialDiscrepancy } from '../validate/alerts'
 import { runChecks } from '../validate/checks'
 import { describePulled, votedActions } from '../validate/separate-vote'
 
-import { h, makeEnrichment } from './helpers'
+import { h, makeEnrichment, makePublishedItem } from './helpers'
 
 const PUBLISHED = path.join(process.cwd(), 'data', 'published')
 const GOLDEN = path.join(process.cwd(), 'data', 'fixtures', 'golden', '2026-06-24')
 
-function item(file: string, overrides: Partial<TPublishedItem> = {}): TPublishedItem {
-  return {
-    id: `2026-06-24:${file}`,
-    vendorKey: null,
-    agendaNumber: 'R.-1',
-    agendaSequence: 1,
-    consentSection: 'general',
-    group: null,
-    file,
-    matterId: 1,
-    matterGuid: null,
-    title: 'Title',
-    text: 'Text',
-    matterType: null,
-    presenter: null,
-    vendorNo: null,
-    resourceSite: null,
-    fundingSource: null,
-    introDate: null,
-    attachments: [],
-    history: [],
-    legistarUrl: 'https://ousd.legistar.com/LegislationDetail.aspx?ID=1',
-    enrichment: makeEnrichment(),
-    flags: [],
-    sourceIssue: null,
-    amountVerified: true,
-    checks: [],
-    sourceIssueBy: null,
-    pulled: null,
-    notes: [],
-    review: { status: 'auto_ok', modelId: null, promptVersion: null, reviewedAt: null, correction: null, verifiedBy: null, alerts: [] },
-    outcome: null,
-    countsTowardTotals: true,
-    lineage: { amendmentNo: null, otherMeetings: [] },
-    ...overrides,
-  }
-}
-
-describe('totals', () => {
-  it('keeps yearly caps, sales caps, revenue and decreases out of spending', () => {
-    const totals = computeTotals([
-      item('26-0001'),
-      item('26-0002', { enrichment: makeEnrichment({ money: { amountType: 'per_year', thisAction: 17_608_594 } }) }),
-      item('26-0003', { enrichment: makeEnrichment({ money: { direction: 'no_cost', amountType: 'sales_cap', thisAction: null } }) }),
-      item('26-0004', { enrichment: makeEnrichment({ actionType: 'grant_or_funding_in', money: { direction: 'revenue', thisAction: 600_000 } }) }),
-      item('26-0005', { enrichment: makeEnrichment({ money: { direction: 'decrease', thisAction: 164_385 } }) }),
-      item('26-0006', { enrichment: null }),
-    ])
-    expect(totals).toMatchObject({
-      items: 6,
-      enrichedItems: 5,
-      spendingTotal: 100_000,
-      spendingItems: 1,
-      yearlyCapsTotal: 17_608_594,
-      yearlyCapItems: 1,
-      revenueTotal: 600_000,
-      decreaseTotal: 164_385,
-    })
-  })
-})
+const item = makePublishedItem
 
 describe('merge and outcomes', () => {
   it('applies overrides field by field', () => {
@@ -279,7 +221,7 @@ describe('vendors', () => {
   it("follows the build's countsTowardTotals for a re-agendized file number", () => {
     const adopted = { action: 'Adopted', date: '2026-06-29', meetingEventId: 5786, adopted: true }
     const meeting = (key: string, items: TPublishedItem[]): TMeetingFile => ({
-      schemaVersion: '1.0.0',
+      schemaVersion: SCHEMA_VERSION,
       meeting: { key, date: key, time: null, kind: 'regular', title: 't', eventId: null, agendaPdfUrl: null, legistarMeetingUrl: null, revision: 1, updatedAt: key, note: null, consentVotes: [] },
       totals: computeTotals(items),
       items,
@@ -297,7 +239,7 @@ describe('vendors', () => {
 describe('vendor pages', () => {
   const adopted = { action: 'Adopted', date: '2026-06-24', meetingEventId: 5785, adopted: true }
   const meeting = (key: string, items: TPublishedItem[]): TMeetingFile => ({
-    schemaVersion: '1.0.0',
+    schemaVersion: SCHEMA_VERSION,
     meeting: { key, date: key, time: null, kind: 'regular', title: 't', eventId: null, agendaPdfUrl: null, legistarMeetingUrl: null, revision: 1, updatedAt: key, note: null, consentVotes: [] },
     totals: computeTotals(items),
     items,
@@ -360,21 +302,29 @@ describe('golden set, 2026-06-24', async () => {
     // correct it to a yearly cap, so it moves from spending to yearly caps.
     expect(meeting.totals.spendingItems).toBe(102)
     expect(Math.round(meeting.totals.spendingTotal / 1e5) / 10).toBe(135.2)
+    // Still 23 after the codebook-v5 re-read: the v5 agent read R.-225 (26-1260, Claremont, "at the unchanged cost
+    // of $36,000.00 annually") as no added money; its API second reading says per_year 36,000, and the override in
+    // data/overrides/2026-06-24.json settles it as the yearly cap.
     expect(meeting.totals.yearlyCapItems).toBe(23)
     // source_issue: 12 in §18.5, plus R.-237 (26-1467, Segal), confirmed in the 2026-10-04 attachment check:
     // the text keeps "$201,000.00 per year" and "$603,000.00 for term" while doubling the term to six years.
-    expect(meeting.totals.flagCounts).toMatchObject({ no_competitive_bid: 16, previously_delayed: 56, source_issue: 13 })
+    // The codebook-v5 re-read (October 2026) surfaced three more, each confirmed material by the independent
+    // second reading: R.-34 (26-1341, an amendment amount that doesn't say whether it's added or a new total),
+    // R.-41 (26-1443, title says Architectural Services, text says surveying under the General Services MA) and
+    // R.-122 (26-1407, "$3,134,100.00 30, 2028" garbles the term).
+    expect(meeting.totals.flagCounts).toMatchObject({ no_competitive_bid: 16, previously_delayed: 56, source_issue: 16 })
   })
 
   for (const f of fixtures) {
     it(`${f.replace('.json', '')} matches its golden fixture`, async () => {
       const golden = JSON.parse(await readFile(path.join(GOLDEN, f), 'utf8')) as {
         file: string
-        expected: { category: string; actionType: string; money: Record<string, unknown>; term: unknown; flags: string[] }
+        expected: { category: string; subcategory?: string | null; actionType: string; money: Record<string, unknown>; term: unknown; flags: string[] }
       }
       const published = byFile.get(golden.file)
       expect(published?.enrichment).toBeTruthy()
       expect(published!.enrichment!.category).toBe(golden.expected.category)
+      if ('subcategory' in golden.expected) expect(published!.enrichment!.subcategory).toBe(golden.expected.subcategory ?? null)
       expect(published!.enrichment!.actionType).toBe(golden.expected.actionType)
       expect(published!.enrichment!.money).toMatchObject(golden.expected.money)
       expect(published!.enrichment!.term).toEqual(golden.expected.term)
