@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/department/public-health-department/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/about-public-health/contact-us-ph/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/healthy-schools-and-communities-partnerships/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-alameda-county-public-health-department",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the county department: the Alameda County Public Health Department (ACPHD) page on the county's official health site describes its mission and programs.",
+      "The agenda lists Alameda County, CA. The department is headquartered at 1100 San Leandro Blvd., San Leandro, in Alameda County.",
+      "The agenda item is a joint-use facilities agreement between OUSD and the County of Alameda Public Health Department for COVID-19 vaccines. That fits a county public health department.",
+      "The county's Healthy Schools and Communities Partnerships page lists Oakland Unified School District as a partner. The OUSD Health Services page also says it collaborates with the Alameda County Public Health Department."
+    ],
+    "key": "n-alameda-county-public-health-department",
+    "notes": "This is a county government agency, so it has no EIN, California Secretary of State entity number or SAM UEI, and those fields are null. I left the email null because the only general address I saw was a media-inquiries inbox. The phone and address come from the contact page's search-result text, which I saw in search results. I ran out of fetches and could not confirm that text in a fetched copy. If the phone or address check fails, set them to null. Other county pages list a different Alameda County Health office at 1000 San Leandro Blvd., Suite 300, with phone (510) 618-3452. The older acphd.org site is also still online.",
+    "profile": {
+      "address": "1100 San Leandro Blvd., San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": "Alameda County Public Health Department",
+      "orgType": "public_agency",
+      "phone": "(510) 267-8000",
+      "samUei": null,
+      "summary": "The Alameda County Public Health Department is a county government agency. It works on community and population-level health by monitoring health status, preventing disease, doing outreach, and promoting health policy and education. It is part of Alameda County Health.",
+      "website": "https://health.alamedacountyca.gov/department/public-health-department/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Public Health Department - Alameda County Health",
+        "url": "https://health.alamedacountyca.gov/department/public-health-department/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Alameda County Public Health Department",
+        "url": "https://health.alamedacountyca.gov/about-public-health/contact-us-ph/"
+      },
+      {
+        "supports": [],
+        "title": "Healthy Schools and Communities Partnerships - Alameda County Health",
+        "url": "https://health.alamedacountyca.gov/healthy-schools-and-communities-partnerships/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-alameda-county-public-health-department",
+    "notes": "The OUSD agenda item is a joint-use agreement with the County of Alameda Public Health Department for COVID-19 vaccines, and the cited pages are that department's own pages on the official Alameda County Health site. Those pages back the summary, which is neutral. The fetched copy of the contact page was cut off and showed only navigation, but a search result for that same URL shows the San Leandro headquarters, 1100 San Leandro Blvd., San Leandro, CA 94577, and the phone number (510) 267-8000.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

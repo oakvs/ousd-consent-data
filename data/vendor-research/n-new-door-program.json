@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942780274",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.newdoor.org/what-we-do/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-new-door-program",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "The agenda's 'New Door Program' is a Measure N item for Ralph J. Bunche Academy. An OUSD Measure N presentation for Bunche (12/7/21) says New Door Ventures runs the school's work-based learning.",
+      "New Door Ventures is a registered nonprofit (ProPublica, EIN 94-2780274). Its website says it runs an employment program for young people in San Francisco and Oakland, which fits a college-and-career-readiness contract.",
+      "Weakness: the agenda name is 'New Door Program', not 'New Door Ventures'. No agenda city is given, and I could not open the agenda item itself to confirm the exact vendor."
+    ],
+    "key": "n-new-door-program",
+    "notes": "Medium confidence, so it should not be published automatically. The only link between OUSD's 'New Door Program' and New Door Ventures is a Bunche Academy Measure N slide deck (ousd.legistar.com, ID=101729) that names New Door Ventures as the work-based learning partner. I could not open the specific 2020-21 budget modification item. A reviewer should confirm the vendor name in that item. Phone, email, California entity number and SAM UEI were not found or verified, so they are null.",
+    "profile": {
+      "address": "3221 20th St., San Francisco, CA 94110",
+      "caEntityNumber": null,
+      "ein": "94-2780274",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "New Door Ventures",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "New Door Ventures is a nonprofit that helps young people in San Francisco and Oakland build job skills and move toward economic stability. Its six-month employment program pairs paid work experience with weekly support from a case manager.",
+      "website": "https://www.newdoor.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "New Door Ventures - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942780274"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters"
+        ],
+        "title": "What We Do | New Door Ventures",
+        "url": "https://www.newdoor.org/what-we-do/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": null
+}

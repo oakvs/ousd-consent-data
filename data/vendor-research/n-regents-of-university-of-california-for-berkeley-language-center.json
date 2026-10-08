@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://blc.berkeley.edu/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blc.berkeley.edu/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-for-berkeley-language-center",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the Berkeley Language Center at UC Berkeley (Regents of the University of California), and blc.berkeley.edu is that unit's official site.",
+      "The agenda location, Berkeley, CA, matches the center's address in B-40 Dwinelle Hall, Berkeley, CA 94720-2640.",
+      "The center supports teaching and learning of world languages and says it serves people beyond the UC Berkeley campus. Its site menu lists a Berkeley World Language Project team. This fits OUSD's 'Classroom & academic programs' category, but I found no page that mentions OUSD."
+    ],
+    "key": "n-regents-of-university-of-california-for-berkeley-language-center",
+    "notes": "The vendor is the Regents of the University of California, a public university system, and the contract is with the Berkeley Language Center unit. Legal name is null because no cited page shows 'Regents of the University of California' in full. The footer says only 'UC Regents'. The center's only general email on the contact page is a named staff member's address, so email is null. EIN, California entity number and SAM UEI were not looked up, because the university is a public entity and the contracting unit has no separate registry record.",
+    "profile": {
+      "address": "B-40 Dwinelle Hall, Berkeley, CA 94720-2640",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "510-642-9183",
+      "samUei": null,
+      "summary": "The Berkeley Language Center is a unit in the Division of Arts and Humanities at the University of California, Berkeley. Founded in 1994, it supports teaching, learning and research on world languages and cultures, on campus and beyond.",
+      "website": "https://blc.berkeley.edu/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Berkeley Language Center - UC Berkeley",
+        "url": "https://blc.berkeley.edu/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us | Berkeley Language Center",
+        "url": "https://blc.berkeley.edu/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-regents-of-university-of-california-for-berkeley-language-center",
+    "notes": "blc.berkeley.edu matches the summary almost word for word: founded in 1994, a unit in the Division of Arts and Humanities, supporting world-language teaching, learning and research on campus and beyond. The site also shows the B-40 Dwinelle Hall address and the main phone number 510-642-9183, and it matches the agenda's Berkeley Language Center at UC Berkeley (UC Regents), with K-12 outreach through the Berkeley World Language Project that fits OUSD's academic services contract. The public_agency type reasonably fits a unit of a public university, and leaving email null was correct because the only general contact address belongs to a named staff member.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
