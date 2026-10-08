@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://dcac.berkeley.edu/home/about-dcac",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dcac.berkeley.edu/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cep.berkeley.edu/destination-college-advising-corps",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dcac.berkeley.edu/partnerships/school-partners",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-destination-college-advising-corps-dcac",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the UC Berkeley program 'Destination College Advising Corps' (DCAC), whose own website uses the same name and the acronym DCAC.",
+      "The DCAC School Partners page lists Castlemont High School in Oakland as a partner site. This matches the agenda item, which is for Castlemont High School.",
+      "DCAC places full-time College Adviser Fellows in high schools. This fits the item's source, the OUSD Measures N and H College and Career Readiness Commission.",
+      "DCAC lists several Oakland schools as partners (Oakland High, Oakland Technical, Leadership Public Schools Oakland R&D), so it clearly serves Oakland."
+    ],
+    "key": "n-destination-college-advising-corps-dcac",
+    "notes": "DCAC is a program of UC Berkeley's Center for Educational Partnerships, not a separate legal entity. The contracting entity is likely The Regents of the University of California. The name 'Destination College Advising Corps' is the program name, not a registered legal name. The EIN, California entity number and SAM UEI are null because the program has no registry IDs of its own. A ProPublica record named 'Destination College' (EIN 13-3782557, Bronxville, NY) is a different organization and was not used. The phone number is the main line of the parent Center for Educational Partnerships, because the DCAC site shows no phone. The address is the DCAC mailing address on its Contact page.",
+    "profile": {
+      "address": "1 Hearst Field Annex, Building C50, Berkeley, CA 94720-1060",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "dcac@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Destination College Advising Corps",
+      "orgType": "public_agency",
+      "phone": "(510) 642-6680",
+      "samUei": null,
+      "summary": "Destination College Advising Corps is a college access program run by the University of California, Berkeley's Center for Educational Partnerships. It places recent college graduates in high schools as full-time College Adviser Fellows. They help students prepare for, apply to and enroll in college. The program works in Alameda, Contra Costa and Santa Clara counties.",
+      "website": "https://dcac.berkeley.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Destination College Advising Corps",
+        "url": "https://dcac.berkeley.edu/home/about-dcac"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Contact Us | Destination College Advising Corps",
+        "url": "https://dcac.berkeley.edu/contact-us"
+      },
+      {
+        "supports": [
+          "phone",
+          "orgType"
+        ],
+        "title": "CEP Programs | Center for Educational Partnerships",
+        "url": "https://cep.berkeley.edu/destination-college-advising-corps"
+      },
+      {
+        "supports": [],
+        "title": "School Partners | Destination College Advising Corps",
+        "url": "https://dcac.berkeley.edu/partnerships/school-partners"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-destination-college-advising-corps-dcac",
+    "notes": "This is the right organization: UC Berkeley CEP's DCAC lists Castlemont High School in Oakland among its school partners, and its email, mailing address, three-county reach and full-time College Adviser Fellow model are all confirmed. It's rejected because none of the cited DCAC/CEP pages (or the Apply page) say Fellows are 'recent college graduates', and the phone number (510) 642-6680 is CEP's main contact line, not a DCAC number.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary",
+      "phone"
+    ],
+    "verdict": "rejected"
+  }
+}

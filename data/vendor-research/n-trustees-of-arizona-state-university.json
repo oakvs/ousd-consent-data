@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.asu.edu/about/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Arizona_State_University",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-trustees-of-arizona-state-university",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name match: the agenda's 'Trustees of Arizona State University' matches Arizona State University, a public university in Tempe, AZ. Arizona State University is governed by the Arizona Board of Regents.",
+      "Location match: the agenda gives Tempe, AZ, and Arizona State University's official contact page lists its primary address in Tempe, AZ.",
+      "Service match: OUSD's contract is a Service Agreement for classroom and academic programs with its High School Linked Learning Office. A university is a plausible provider of that. I found no public page confirming the specific OUSD partnership."
+    ],
+    "key": "n-trustees-of-arizona-state-university",
+    "notes": "The agenda names the vendor 'Trustees of Arizona State University'. The legal contracting entity may be the Arizona Board of Regents on behalf of ASU. I did not confirm this. The website's general email is obfuscated on the page, so I left it null. SAM.gov UEIs: third-party sites list conflicting UEIs (NTLHJXM55KZ6 and G5Y3S6WCFFP8), apparently for different ASU-related registrations, so samUei is null. As a public university, it has no EIN or California entity number to report, so both are null. The Wikipedia page is a secondary source, used only for the summary and organization type.",
+    "profile": {
+      "address": "1151 S Forest Ave, Tempe, AZ 85281",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Tempe, AZ",
+      "legalName": "Arizona State University",
+      "orgType": "public_agency",
+      "phone": "855-278-5080",
+      "samUei": null,
+      "summary": "Arizona State University is a public research university based in Tempe, Arizona. It is part of the Arizona university system, which is governed by the Arizona Board of Regents. It offers undergraduate and graduate degrees on campus and online, and it runs research programs.",
+      "website": "https://www.asu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact us | Arizona State University",
+        "url": "https://www.asu.edu/about/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Arizona State University - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Arizona_State_University"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-trustees-of-arizona-state-university",
+    "notes": "This is the same organization: a university in Tempe, AZ fits the agenda's vendor and location, and a service agreement for academic programs is a plausible thing to buy from one. The ASU contact page confirms the website, phone (855-278-5080), address (1151 S Forest Ave, Tempe, AZ 85281) and headquarters, and Wikipedia supports the neutral summary and the public-agency type. I dropped legalName because no source shows 'Arizona State University' is the legal contracting entity: the agenda says 'Trustees of Arizona State University' and Wikipedia lists the Arizona Board of Regents as the parent institution.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}

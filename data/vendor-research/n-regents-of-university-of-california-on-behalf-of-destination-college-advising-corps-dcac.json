@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://dcac.berkeley.edu/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dcac.berkeley.edu/oakland-high-school",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cep.berkeley.edu/destination-college-advising-corps",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-on-behalf-of-destination-college-advising-corps-dcac",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the Regents of the University of California acting for Destination College Advising Corps (DCAC). UC Berkeley's Center for Educational Partnerships runs a program with this exact name at dcac.berkeley.edu.",
+      "DCAC's own website has a page for Oakland High School and lists college advisers at Oakland High, Oakland Technical High and Leadership Public Schools Oakland. This matches OUSD's contracts for classroom and academic programs at named district schools and the high school Linked Learning office.",
+      "The program's purpose is college access advising for high school students, which fits an OUSD academic-programs agreement."
+    ],
+    "key": "n-regents-of-university-of-california-on-behalf-of-destination-college-advising-corps-dcac",
+    "notes": "The contracting party is the Regents of the University of California, a public university system, so it has no California Secretary of State entity number or nonprofit EIN in the registries checked. legalName is null because that exact name did not appear on a cited page. The agenda name is 'The Regents of the University of California'. The only phone number found, (510) 642-6680, is for the parent Center for Educational Partnerships and not for DCAC itself, so phone is null. The SAM.gov UEI was not looked up.",
+    "profile": {
+      "address": "1 Hearst Field Annex, Building C50, Berkeley, CA 94720-1060",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "dcac@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "Destination College Advising Corps is a University of California, Berkeley program run by its Center for Educational Partnerships. It places recent college graduates in high schools as full-time college advisers. They help low-income, first-generation and underrepresented students prepare for and apply to college.",
+      "website": "https://dcac.berkeley.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters",
+          "website",
+          "orgType"
+        ],
+        "title": "Contact Us | Destination College Advising Corps",
+        "url": "https://dcac.berkeley.edu/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Oakland High School | Destination College Advising Corps",
+        "url": "https://dcac.berkeley.edu/oakland-high-school"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "CEP Programs | Center for Educational Partnerships",
+        "url": "https://cep.berkeley.edu/destination-college-advising-corps"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-regents-of-university-of-california-on-behalf-of-destination-college-advising-corps-dcac",
+    "notes": "This is the right organization: DCAC is a UC Berkeley Center for Educational Partnerships program with an Oakland High School partner page, and the contact page confirms the website, email, address and Berkeley headquarters. But none of the cited pages say the advisers are recent college graduates, that they work full-time, or that they serve low-income, first-generation and underrepresented students, so most of the summary is unsupported.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://dby-law.com/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?From=RSS&ID=5665724&GUID=0C67AC50-6705-414B-8040-90174D1DE9C4",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedin.com/company/davis-bengtson-young-aplc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-davis-and-young-law-firm",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The firm's website and LinkedIn say Davis, Bengtson & Young, APLC is the former Davis & Young. It is a civil litigation law firm in San Jose, CA, which matches the agenda's 'Davis and Young Law Firm' in San Jose, CA.",
+      "An OUSD Legistar record (File 22-1367) shows the Board approving an MOU with Davis, Bengtson & Young APLC. The Office of the General Counsel retains the firm for civil litigation and other legal services, which matches the General Counsel / 'Legal, compliance & risk' contracts.",
+      "The firm's own contact page lists a San Jose address and phone number. The page's payment link uses the name 'davisandyoungaprofessionallawcorporation', which ties the current name to the older Davis & Young name."
+    ],
+    "key": "n-davis-and-young-law-firm",
+    "notes": "The agenda uses the older name 'Davis and Young', and the firm is now Davis, Bengtson & Young, APLC. I did not look up the California Secretary of State entity number. A general email address was not found on the fetched pages. The firm's pages list its practice areas as employment, public entity defense, personal injury and business litigation. The summary is based on the firm's LinkedIn and directory descriptions and the OUSD record. The website is the canonical dby-law.com domain. An older domain, davisyounglaw.com, appears in directory listings but was not fetched.",
+    "profile": {
+      "address": "1960 The Alameda, Ste 210 San Jose, CA 95126",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Jose, CA",
+      "legalName": "Davis, Bengtson & Young, APLC",
+      "orgType": "company",
+      "phone": "(669) 245-4200",
+      "samUei": null,
+      "summary": "Davis, Bengtson & Young (formerly Davis & Young) is a law firm in San Jose, California. It handles civil lawsuits and mediation, and its practice areas include employment law and defense of public entities such as school districts.",
+      "website": "https://www.dby-law.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Contact Us - Davis, Bengtson & Young",
+        "url": "https://dby-law.com/contact.html"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Oakland Unified School District - File #: 22-1367",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?From=RSS&ID=5665724&GUID=0C67AC50-6705-414B-8040-90174D1DE9C4"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Davis, Bengtson & Young, APLC",
+        "url": "https://www.linkedin.com/company/davis-bengtson-young-aplc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-davis-and-young-law-firm",
+    "notes": "This is the firm OUSD contracts with: OUSD Legistar File 22-1367 shows the General Counsel retaining Davis, Bengtson & Young APLC for civil litigation, the firm is in San Jose, and its own payment link uses the name 'davisandyoungaprofessionallawcorporation'. The firm's contact page confirms the legal name, phone and address, and its practice-areas page confirms mediation, employment work and claims against public entities. LinkedIn wouldn't load directly, but in search results it says 'Formerly Davis & Young', and a Martindale directory listing (not cited in the profile) includes 'Defense of School Districts', so the summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
