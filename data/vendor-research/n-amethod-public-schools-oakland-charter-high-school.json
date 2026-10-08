@@ -1,0 +1,134 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.amethodschools.org/apps/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-3185735",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943185735/201900459349301660/full",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Amethod_Public_Schools",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://app2.boardontrack.com/public/Q12T9a/minutes/112218",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-amethod-public-schools-oakland-charter-high-school",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda name \"Amethod Public Schools - Oakland Charter High School\" matches the registered nonprofit Amethod Public Schools (EIN 94-3185735, ProPublica Nonprofit Explorer and GuideStar). Its listed NTEE category is Charter Schools.",
+      "Wikipedia says Amethod Public Schools operates Oakland Charter High School (2433 Coolidge Ave, Oakland, in the Oakland Unified School District area). This matches the agenda item, which is a charter-school governance notice from OUSD's Office of Charter Schools.",
+      "The organization has an Oakland connection. Wikipedia describes it as based in Oakland, and a payment address of 2101 Livingston St, Oakland, appears on GuideStar.",
+      "Public board minutes from Amethod Public Schools and the organization's own Contact page give the same Richmond administrative office and phone number as GuideStar."
+    ],
+    "key": "n-amethod-public-schools-oakland-charter-high-school",
+    "notes": "The organization's own Contact page (amethodschools.org/apps/contact/) could not be fetched by my tools, but it appeared in search results. It lists the same Richmond address and phone number. If the automated check can't fetch it, the website field may be dropped. The phone number is also on the fetched board minutes, and the address is on the fetched GuideStar page. Wikipedia describes headquarters as Oakland, but GuideStar and the board minutes give the administrative office as 1450 Marina Way S, Richmond. GuideStar also lists a payment address at 2101 Livingston St, Oakland. I used Richmond, and a reviewer may want to confirm which is right. No general email is shown on the pages I could fetch, so email is null. I did not find a California Secretary of State entity number or SAM.gov UEI, so both are null. Per Wikipedia, Oakland Charter High School closed in June 2025.",
+    "profile": {
+      "address": "1450 Marina Way S, Richmond, CA 94804",
+      "caEntityNumber": null,
+      "ein": "94-3185735",
+      "email": null,
+      "headquarters": "Richmond, CA",
+      "legalName": "Amethod Public Schools",
+      "orgType": "nonprofit",
+      "phone": "(510) 436-0172",
+      "samUei": null,
+      "summary": "Amethod Public Schools is a nonprofit that runs public charter schools in Oakland and Richmond, California. It started in 1993 with Oakland Charter Academy. Its schools serve students from elementary through high school grades.",
+      "website": "https://www.amethodschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone"
+        ],
+        "title": "Contact - Amethod Public Schools",
+        "url": "https://www.amethodschools.org/apps/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "Amethod Public Schools - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-3185735"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType"
+        ],
+        "title": "Amethod Public Schools - Full Filing - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943185735/201900459349301660/full"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "Amethod Public Schools - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Amethod_Public_Schools"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Minutes - Amethod Public Schools",
+        "url": "https://app2.boardontrack.com/public/Q12T9a/minutes/112218"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-amethod-public-schools-oakland-charter-high-school",
+    "notes": "This is the right organization. Amethod Public Schools (EIN 94-3185735) operates Oakland Charter High School, which matches OUSD's charter governance notice, and every profile field checks out in a fetched source. GuideStar shows the legal name, nonprofit status, Richmond address, EIN and the amethodschools.org website; the board minutes show the business phone (510) 436-0172; and Wikipedia supports the summary (founded in 1993, first school later renamed Oakland Charter Academy, elementary-through-high-school campuses in Oakland and Richmond), which is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

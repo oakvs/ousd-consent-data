@@ -1,0 +1,127 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://joincalie.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://joincalie.org/about-rebrand/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942737190/202331149349300538/full/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.setda.org/partner/cue-inc/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-association-for-leading-innovation-in-education",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda name matches CALIE (California Association for Leading Innovation in Education). Its own site says CUE is now CALIE, and SETDA and Project Tomorrow also describe CALIE as formerly CUE.",
+      "ProPublica Nonprofit Explorer lists Computer Using Educators Inc (\"Cue Inc\"), EIN 94-2737190, a tax-exempt education nonprofit. This is the registered entity behind CUE, now CALIE.",
+      "The agenda lists Walnut Creek, CA. Search listings (CauseIQ, ZoomInfo) place CUE's earlier headquarters in Walnut Creek, and the phone on CALIE's contact page, 925-478-3460, matches the number ZoomInfo lists for CUE. CALIE's site now shows a San Francisco address.",
+      "CALIE is an education-technology professional learning organization for educators. That fits OUSD's 'Classroom & academic programs' category and an MOU run by the Chief Academic Officer's office."
+    ],
+    "key": "n-california-association-for-leading-innovation-in-education",
+    "notes": "CALIE is a 2025 rebrand of CUE (Computer Using Educators). The IRS and ProPublica records still list the older legal name, so the legal name and EIN come from the CUE record. The agenda's Walnut Creek location reflects CUE's older address. CALIE's website now gives a San Francisco address. I did not check the California Secretary of State or SAM.gov, so the entity number and UEI are null. A reviewer may want to check whether the legal name has been formally changed to CALIE.",
+    "profile": {
+      "address": "2443 Fillmore St 380 2738, San Francisco, CA 94115",
+      "caEntityNumber": null,
+      "ein": "94-2737190",
+      "email": "info@joincalie.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Computer Using Educators Inc",
+      "orgType": "nonprofit",
+      "phone": "925-478-3460",
+      "samUei": null,
+      "summary": "CALIE (California Association for Leading Innovation in Education), formerly known as CUE, is a nonprofit educator community. It offers professional learning, statewide conferences, certification programs and consulting. Its focus is helping teachers use technology to create engaging and equitable learning.",
+      "website": "https://joincalie.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Information & Details - CALIE",
+        "url": "https://joincalie.org/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About the Rebrand - CALIE",
+        "url": "https://joincalie.org/about-rebrand/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Computer Using Educators Inc - Full Filing - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942737190/202331149349300538/full/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "CALIE (California Association for Leading Innovation in Education) - SETDA",
+        "url": "https://www.setda.org/partner/cue-inc/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-california-association-for-leading-innovation-in-education",
+    "notes": "This is the organization OUSD contracts with. CALIE's own site says CUE is now CALIE, and ProPublica lists Computer Using Educators Inc (EIN 94-2737190). Business listings place CUE in Walnut Creek, which matches the agenda, and CUE has a documented passPORTS partnership with California State Parks that has included OUSD students, which fits the State Parks MOU. The cited pages back the legal name, EIN, nonprofit status, and the general contact details (San Francisco address, phone, info@ email). The neutral summary is supported by SETDA's description and the CALIE site, which also links to a consulting page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

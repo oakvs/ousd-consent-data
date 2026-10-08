@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156365/202211969349300436/full",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stanford.edu/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.stanford.edu",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-board-of-trustees-of-stanford-university",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Board of Trustees of Stanford University' matches the registered legal name of the nonprofit 'The Board Of Trustees Of The Leland Stanford Junior University' (ProPublica Nonprofit Explorer, EIN 94-1156365)",
+      "ProPublica lists the organization in Stanford, CA, matching the agenda location 'Stanford, CA'",
+      "The agenda item is with the Stanford Graduate School of Education, a school of Stanford University, and the contract is for classroom and academic programs and a data-sharing agreement",
+      "Stanford's official contact page gives the campus address in Stanford, CA 94305, matching the agenda location"
+    ],
+    "key": "n-board-of-trustees-of-stanford-university",
+    "notes": "CA Secretary of State entity number and SAM.gov UEI were not looked up, so they are null. No general email address was found. The phone number is the campus main line. The summary is general. The mention of the Graduate School of Education comes from the agenda text. No page directly linking Stanford to OUSD was found beyond the agenda text.",
+    "profile": {
+      "address": "450 Jane Stanford Way, Stanford, CA 94305",
+      "caEntityNumber": null,
+      "ein": "94-1156365",
+      "email": null,
+      "headquarters": "Stanford, CA",
+      "legalName": "The Board Of Trustees Of The Leland Stanford Junior University",
+      "orgType": "nonprofit",
+      "phone": "(650) 723-2300",
+      "samUei": null,
+      "summary": "Stanford University is a private nonprofit research university in Stanford, California. It is governed by its Board of Trustees. It offers undergraduate and graduate education and carries out research, including education research through its Graduate School of Education.",
+      "website": "https://www.stanford.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "The Board Of Trustees Of The Leland Stanford Junior University - Full Filing - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156365/202211969349300436/full"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact - Stanford University",
+        "url": "https://www.stanford.edu/contact/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Stanford University",
+        "url": "https://www.stanford.edu"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-board-of-trustees-of-stanford-university",
+    "notes": "This is the same organization OUSD contracts with. ProPublica shows The Board Of Trustees Of The Leland Stanford Junior University, a nonprofit in Stanford, CA, with EIN 94-1156365, and Stanford's contact page lists 450 Jane Stanford Way, Stanford, CA 94305 and (650) 723-2300. The homepage supports the website and the neutral summary: it describes Stanford as a research and teaching institution, mentions undergraduate and graduate students, and lists Education among its seven schools; 'private' and 'governed by its Board of Trustees' are not stated outright but follow from the nonprofit status and the legal name.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

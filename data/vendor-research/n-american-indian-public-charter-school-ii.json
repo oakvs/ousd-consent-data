@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cde.ca.gov/schooldirectory/details?cdscode=01100170114363",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/display_audit/2023-06-GSAFAC-0000026147",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/American_Indian_Model_Schools",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ed-data.org/school/Alameda/Oakland-Unified/American-Indian-Model-Schools",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    }
+  ],
+  "key": "n-american-indian-public-charter-school-ii",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "The California Department of Education directory lists American Indian Public Charter School II as an active charter school at 171 12th St., Oakland, CA, with website www.aimsk12.org.",
+      "Wikipedia describes American Indian Public Charter School II as a K–8 campus of the American Indian Model Schools charter system in Oakland. The Oakland Unified School District granted that system's charter and oversees it.",
+      "Ed-Data lists American Indian Model Schools at the same address and phone as the school: 171 12th St., Oakland, and (510) 893-8701.",
+      "ProPublica Nonprofit Explorer lists a nonprofit named American Indian Model Schools in Oakland, CA, EIN 94-3309981. The agenda item is a charter-school governance report from OUSD's Office of Charter Schools, which fits."
+    ],
+    "key": "n-american-indian-public-charter-school-ii",
+    "notes": "The agenda names the school (American Indian Public Charter School II), not a legal entity. I linked it to the nonprofit American Indian Model Schools (EIN 94-3309981) using Wikipedia, Ed-Data and the shared Oakland address and phone. I did not see the nonprofit's own filings or charter document tying the two together. The operator now brands itself AIMS K-12 College Prep Charter School District, and a reviewer should confirm that is the same legal entity. The website is null because I could not fetch any page on aimsk12.org to cite. The CDE directory lists www.aimsk12.org as the school's web address. I found no general email address. The CDE directory email belongs to a named person, so I left it out. The California Secretary of State and SAM.gov could not be checked, so caEntityNumber and samUei are null.",
+    "profile": {
+      "address": "171 12th St., Oakland, CA 94607-4900",
+      "caEntityNumber": null,
+      "ein": "94-3309981",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "American Indian Model Schools",
+      "orgType": "nonprofit",
+      "phone": "(510) 893-8701",
+      "samUei": null,
+      "summary": "American Indian Model Schools, now branded AIMS K-12 College Prep Charter School District, is a nonprofit charter school organization in Oakland, California. It runs public charter schools, including American Indian Public Charter School II, which serves grades K–8 in Oakland's Chinatown area. The Oakland Unified School District granted and oversees its charter.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "orgType"
+        ],
+        "title": "American Indian Public Charter School II - School Directory Details (CA Dept of Education)",
+        "url": "https://www.cde.ca.gov/schooldirectory/details?cdscode=01100170114363"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "American Indian Model Schools - Audit for period ending Jun 2023 - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/display_audit/2023-06-GSAFAC-0000026147"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "American Indian Model Schools",
+        "url": "https://en.wikipedia.org/wiki/American_Indian_Model_Schools"
+      },
+      {
+        "supports": [
+          "address",
+          "phone"
+        ],
+        "title": "EdData - School Profile - American Indian Model Schools",
+        "url": "https://www.ed-data.org/school/Alameda/Oakland-Unified/American-Indian-Model-Schools"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": null
+}
