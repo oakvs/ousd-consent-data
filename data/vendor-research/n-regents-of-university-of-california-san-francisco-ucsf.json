@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://fdpclearinghouse.org/organizations/125/print/TAB_NAME",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucsf.edu/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cseo.ucsf.edu/p-20",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-san-francisco-ucsf",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The legal entity name on the Federal Demonstration Partnership (FDP) Clearinghouse profile matches the agenda text: 'The Regents of the University of California, San Francisco' (dba University of California, San Francisco).",
+      "The FDP profile puts the entity in San Francisco, CA, matching the agenda location. It lists the entity type as a public/state-controlled institution of higher education.",
+      "UCSF's own Center for Science, Education, and Outreach page says UCSF has partnered with Oakland Unified School District since 2016.",
+      "UCSF is a health-sciences university with a School of Nursing and a School of Dentistry. The agenda lists a Special Education Department services agreement under 'Student health, support & family services'. This fits, but it is a weak signal."
+    ],
+    "key": "n-regents-of-university-of-california-san-francisco-ucsf",
+    "notes": "UCSF is a campus of the University of California, a public institution. Phone and email are null because the UCSF contact page lists only department and hospital numbers, not a single main campus line or general inbox. The EIN 94-6036493 is the one the FDP Clearinghouse lists for this UCSF entity. ProPublica lists the system-wide Regents EIN as 94-6036494, so a reviewer may want to confirm which one to show. The address is the UCSF entity address on the FDP profile, not the main campus address at 505 Parnassus Ave. The California Secretary of State entity number was not found, and the Regents may not be registered there as a normal business entity. The summary draws on the UCSF contact page (school names) and the P-20 page (K-12 partnerships).",
+    "profile": {
+      "address": "1855 Folsom St Ste 425, San Francisco, CA 94103-4249",
+      "caEntityNumber": null,
+      "ein": "94-6036493",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "The Regents of the University of California, San Francisco",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": "KMH5K9V7S518",
+      "summary": "The University of California, San Francisco (UCSF) is a public university in the University of California system that focuses on health sciences. It has schools of dentistry, medicine, nursing and pharmacy, and runs research, patient care and community programs, including K-12 education partnerships.",
+      "website": "https://www.ucsf.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "address",
+          "headquarters",
+          "ein",
+          "samUei"
+        ],
+        "title": "Federal Demonstration Partnership Expanded Clearinghouse - University of California, San Francisco",
+        "url": "https://fdpclearinghouse.org/organizations/125/print/TAB_NAME"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Contact Us | UC San Francisco",
+        "url": "https://www.ucsf.edu/contact-us"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "P-20 | Center for Science, Education, and Outreach (UCSF)",
+        "url": "https://cseo.ucsf.edu/p-20"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-07",
+  "review": {
+    "key": "n-regents-of-university-of-california-san-francisco-ucsf",
+    "notes": "The FDP Clearinghouse profile shows the legal name 'The Regents of the University of California, San Francisco' in San Francisco, which matches the agenda. It also confirms the public institution type, the 1855 Folsom St address, EIN 94-6036493 and UEI KMH5K9V7S518, and UCSF's P-20 page confirms its OUSD partnership since 2016. The summary is neutral and supported: the schools and patient care come from the contact page, the K-12 partnerships from the P-20 page, and the public status from FDP.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

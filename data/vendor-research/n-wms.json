@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bizprofile.net/ca/elk-grove/wms-llc",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"caEntityNumber\" failed to load",
+      "field": "caEntityNumber",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
+  "key": "n-wms",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name matches a California LLC: 'Wms LLC' (entity no. 202126410023, active, formed 2021), as shown on a third-party mirror of the California Secretary of State registry",
+      "Principal address is in Elk Grove, CA, matching the agenda location",
+      "The LLC's manager has the same name as the person in OUSD's agenda title (Omer H. Wahla). This only links the registry entry to the contract signer. It does not show what the business does."
+    ],
+    "key": "n-wms",
+    "notes": "Low confidence, not publishable. The only source is a third-party mirror of the California Secretary of State listing. I found no company website and no independent page showing that WMS LLC provides special education services, and no OUSD or other agency page naming it. The registered address looks like it could be a residence, so I left the address blank. The entity appears to be a small single-manager LLC. A reviewer should check the entry on bizfileonline.sos.ca.gov directly. I did not research the individual.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "202126410023",
+      "ein": null,
+      "email": null,
+      "headquarters": "Elk Grove, CA",
+      "legalName": "Wms LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Wms LLC is a California limited liability company based in Elk Grove, CA. Its registry listing gives its business type as consulting. No public website or description of its services was found.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "Wms LLC Elk Grove, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/elk-grove/wms-llc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-07",
+  "review": null
+}

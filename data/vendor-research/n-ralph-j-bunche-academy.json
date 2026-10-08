@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://bunche.ousd.org/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ousd.org/our-schools/school-directory/schools/~board/school-directory/post/ralph-j-bunche-academy",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cde.ca.gov/schooldirectory/details?cdscode=01612590118653",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-ralph-j-bunche-academy",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: OUSD's school directory and the school's own site both list 'Ralph J. Bunche Academy' as an Oakland Unified School District school in Oakland, CA.",
+      "The agenda item is a Measure N (College and Career Readiness Commission) funding decision for a school. That fits a high school program, and Bunche is an OUSD high school serving grades 11-12 (9-12 per the state directory).",
+      "The California Department of Education school directory lists Ralph J. Bunche Continuation High as an active public school in Oakland Unified. It shows the same phone number, (510) 879-2309."
+    ],
+    "key": "n-ralph-j-bunche-academy",
+    "notes": "This is an OUSD school, not an outside vendor. The Measure N item is about funding for the school itself. It has no separate EIN, California entity number or SAM UEI, so those are null. The school's site gives 991 14th Street. The state directory and GreatSchools give 1240 18th Street, so the address is inconsistent across sources, and I used the school's own site. No general email was found; the state directory lists only a named principal's email, which I left out.",
+    "profile": {
+      "address": "991 14th Street, Building A Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Ralph J. Bunche Academy",
+      "orgType": "public_agency",
+      "phone": "(510) 879-2309",
+      "samUei": null,
+      "summary": "Ralph J. Bunche Academy is a public alternative high school in the Oakland Unified School District. It helps students work toward high school graduation. It offers academic support, social-emotional development and goal setting.",
+      "website": "https://bunche.ousd.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us - Ralph J. Bunche High School",
+        "url": "https://bunche.ousd.org/about-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Ralph J. Bunche Academy (OUSD school directory)",
+        "url": "https://www.ousd.org/our-schools/school-directory/schools/~board/school-directory/post/ralph-j-bunche-academy"
+      },
+      {
+        "supports": [
+          "orgType",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Ralph J. Bunche Continuation High - School Directory Details (CA Dept of Education)",
+        "url": "https://www.cde.ca.gov/schooldirectory/details?cdscode=01612590118653"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-07",
+  "review": {
+    "key": "n-ralph-j-bunche-academy",
+    "notes": "This is the right organization: the Measure N item funds Ralph J. Bunche Academy, an Oakland Unified high school, and the school's own site describes it as an alternative education and continuation high school focused on graduation, social-emotional development and goal setting. The school's site and the state directory both show the phone (510) 879-2309, and the school's site gives 991 14th Street, Building A. The OUSD and state directories still list 1240 18th St, so the address field is supported but may be worth rechecking.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
