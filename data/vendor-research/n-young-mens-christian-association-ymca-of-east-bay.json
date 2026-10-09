@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ymcaeastbay.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-1156635",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/LegislationDetail.aspx?GUID=EDDBA335-6C55-48FC-8C04-672A8B2CF58F&ID=5710022&Options=&Search=",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-young-mens-christian-association-ymca-of-east-bay",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'YMCA of the East Bay' (GuideStar profile, EIN 94-1156635; also known as 'Young Men's Christian Association of the East Bay')",
+      "The organization's own website (ymcaeastbay.org) describes the YMCA of the East Bay, which runs early care and education programs, matching OUSD's Early Childhood Education Department agreement",
+      "OUSD Legistar file 22-1646 names the same 'Young Men's Christian Association (YMCA) of the East Bay, Oakland, CA' as the party to a Head Start / Early Head Start facilities use agreement at Burbank Preschool and Diagnostic Center in Oakland",
+      "Headquartered in Berkeley, CA, and serves Oakland, which is consistent with the agenda location of Oakland, CA"
+    ],
+    "key": "n-young-mens-christian-association-ymca-of-east-bay",
+    "notes": "The legal name is taken from GuideStar. I did not check the California Secretary of State or SAM.gov, so the entity number and UEI are null. The phone number on the Contact page, (510) 255-6682, differs from the one on the About page, (510) 451-8039. I used the Contact page number. The email is a general membership inbox listed on the site. The headquarters are in Berkeley, not Oakland, and the organization operates Oakland sites. The summary's mention of health and fitness, early care and education and youth development comes from the website's navigation. The mention of job training comes from GuideStar's mission statement.",
+    "profile": {
+      "address": "2111 Martin Luther King Jr Way, Berkeley, CA 94704",
+      "caEntityNumber": null,
+      "ein": "94-1156635",
+      "email": "ymember@ymcaeastbay.org",
+      "headquarters": "Berkeley, CA",
+      "legalName": "YMCA of the East Bay",
+      "orgType": "nonprofit",
+      "phone": "(510) 255-6682",
+      "samUei": null,
+      "summary": "The YMCA of the East Bay is a nonprofit that serves communities in the East Bay area of California. Its mission is to empower youth, advance health and strengthen communities. It runs programs in health and fitness, early care and education, youth development and job training.",
+      "website": "https://www.ymcaeastbay.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website"
+        ],
+        "title": "Contact YMCA Of The East Bay",
+        "url": "https://www.ymcaeastbay.org/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "summary",
+          "orgType",
+          "headquarters",
+          "address"
+        ],
+        "title": "YMCA of the East Bay - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-1156635"
+      },
+      {
+        "supports": [],
+        "title": "Oakland Unified School District - File #: 22-1646",
+        "url": "https://ousd.legistar.com/LegislationDetail.aspx?GUID=EDDBA335-6C55-48FC-8C04-672A8B2CF58F&ID=5710022&Options=&Search="
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-young-mens-christian-association-ymca-of-east-bay",
+    "notes": "This is the same organization OUSD contracts with. Legistar 22-1646 names the YMCA of the East Bay, Oakland, CA, in the Burbank Preschool facilities use agreement, and GuideStar (EIN 94-1156635) lists 'Young Men's Christian Association of the East Bay' as an aka, based in Berkeley. The cited sources confirm every field: the contact page shows the address, the general inbox and the phone number, GuideStar shows the mission and the early childhood education, youth development, community health and job training programs, and the summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

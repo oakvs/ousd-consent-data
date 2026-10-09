@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/274260393/201931349349307348/full",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.yumingschool.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cde.ca.gov/schooldirectory/details?cdscode=01100170124172",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-yu-ming-charter-school",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Yu Ming Charter School', Oakland, CA, EIN 27-4260393 (ProPublica Nonprofit Explorer)",
+      "The agenda item is a Proposition 39 facilities offer for a charter school in 2025-26. Yu Ming is an Oakland charter school, and the California Department of Education lists it at 2501 Chestnut St., Oakland.",
+      "The school's own website and the California Department of Education directory both show the same name, the same Oakland location and the same office@yumingschool.org email domain."
+    ],
+    "key": "n-yu-ming-charter-school",
+    "notes": "The California Secretary of State entity number and SAM UEI were not looked up, so they are null. The agenda gave no city. The match rests on the Prop 39 charter-school context and the Oakland location. The summary's claim that the school is authorized by the Alameda County Board of Education comes from a search-result snippet of the school's Board and Accountability page, which was not fetched. The CDE directory page also lists named staff with direct lines, and those were not used. The phone and address are from the CDE directory, not the school's own Contact page.",
+    "profile": {
+      "address": "2501 Chestnut St., Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": "27-4260393",
+      "email": "office@yumingschool.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Yu Ming Charter School",
+      "orgType": "nonprofit",
+      "phone": "(510) 452-2063",
+      "samUei": null,
+      "summary": "Yu Ming Charter School is a nonprofit, tuition-free public charter school in Oakland, California. It serves students in grades K-8 and teaches in Mandarin Chinese and English through a Mandarin immersion program. It is authorized by the Alameda County Board of Education.",
+      "website": "https://www.yumingschool.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Yu Ming Charter School - Full Filing - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/274260393/201931349349307348/full"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Home - Yu Ming Charter School",
+        "url": "https://www.yumingschool.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Yu Ming Charter - School Directory Details (CA Dept of Education)",
+        "url": "https://www.cde.ca.gov/schooldirectory/details?cdscode=01100170124172"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-yu-ming-charter-school",
+    "notes": "This is the same organization. The CDE directory shows an active K-8 charter at 2501 Chestnut St., Oakland, with the listed phone and email, and ProPublica confirms EIN 27-4260393, an Oakland location and tax exemption since 2011. The summary is neutral and supported: the school's website states it is a tuition-free K-8 Mandarin immersion school, and the CDE page names Alameda County Office of Education as the chartering authority, which supports the county-authorization claim the researcher had taken from an unfetched snippet.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
