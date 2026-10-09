@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://its.humboldt.edu/directory",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.humboldt.edu/education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-trustees-of-california-state-university-for-cal-poly-humboldt",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'Trustees of the California State University for Cal Poly Humboldt'. Cal Poly Humboldt is the official campus brand of California State Polytechnic University, Humboldt, a campus of the California State University (CSU) system.",
+      "The university's School of Education page says it trains teachers and places student teachers in local TK-12 classrooms. This matches OUSD's agreement for an intern partnership and K-12 practica programs through the Talent/Human Resources Department.",
+      "Campus pages list the main address and phone for the university in Arcata, CA. It is a public university, so it is a public agency and not a person."
+    ],
+    "key": "n-trustees-of-california-state-university-for-cal-poly-humboldt",
+    "notes": "The contracting party is the Trustees of the California State University, the legal body for the CSU system, acting for the Cal Poly Humboldt campus. The legal name shown is the campus name on its website, not the Trustees' name. As a public university, it has no IRS EIN or California Secretary of State entity number to list. I did not look up a SAM.gov UEI. No general email was found on the cited pages, so email is null. The phone is the campus operator line.",
+    "profile": {
+      "address": "1 Harpst Street, Arcata, CA 95521",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Arcata, CA",
+      "legalName": "California State Polytechnic University, Humboldt",
+      "orgType": "public_agency",
+      "phone": "(707) 826-3011",
+      "samUei": null,
+      "summary": "Cal Poly Humboldt is a public university in Arcata, California, and one of the campuses of the California State University system. It offers undergraduate and graduate degrees, including teacher credential programs run by its School of Education. Those programs place student teachers in K-12 classrooms.",
+      "website": "https://www.humboldt.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website",
+          "orgType"
+        ],
+        "title": "TNS Directory | Cal Poly Humboldt",
+        "url": "https://its.humboldt.edu/directory"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "School of Education | Cal Poly Humboldt",
+        "url": "https://www.humboldt.edu/education"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-trustees-of-california-state-university-for-cal-poly-humboldt",
+    "notes": "The agenda's party, the Trustees of the CSU acting for Cal Poly Humboldt, is the campus in Arcata. Its School of Education page lists bachelor's and master's programs, credential programs, and teaching experience in local TK-12 schools, which fits OUSD's intern and practica agreement. The cited pages show the legal name, 1 Harpst Street Arcata address, and (707) 826-3011 operator line, and the summary is neutral, though it states the CSU-campus and public-university facts rather than the pages saying them outright.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

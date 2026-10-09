@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/941156636",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://stileshall.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://stileshall.org/ebhs/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-stiles-hall-experience-berkeley",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Stiles Hall', Berkeley, CA (ProPublica Nonprofit Explorer, EIN 94-1156636). This matches the agenda's 'Stiles Hall' and 'Berkeley, CA'.",
+      "The organization's own site lists 'Experience Berkeley' as one of its programs. The agenda names 'Stiles Hall (Experience Berkeley)'.",
+      "The Experience Berkeley program for high school students is a free 10-month program, which fits OUSD's 'After-school & summer programs' category.",
+      "The organization is based in Berkeley, CA, the city the agenda gives."
+    ],
+    "key": "n-stiles-hall-experience-berkeley",
+    "notes": "The contact page lists only a named staff member's email, so email is left null. No California Secretary of State entity number or SAM.gov UEI was checked or found. The fetched pages do not mention Oakland or OUSD, so the Oakland link rests on the Experience Berkeley program name and the Berkeley location. The Experience Berkeley name is also used by the same nonprofit's programs for transfer students.",
+    "profile": {
+      "address": "2400 C Bancroft Way, Berkeley, CA 94704",
+      "caEntityNumber": null,
+      "ein": "94-1156636",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "Stiles Hall",
+      "orgType": "nonprofit",
+      "phone": "510-841-6010",
+      "samUei": null,
+      "summary": "Stiles Hall is a private nonprofit founded in 1884 and located across from the University of California, Berkeley campus. It runs programs that support students, including Experience Berkeley for high school and transfer students, Pathways Coaching, and Facing You, Facing Me.",
+      "website": "https://stileshall.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Stiles Hall - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/941156636"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website",
+          "summary",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Contact Us – Stiles Hall",
+        "url": "https://stileshall.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Experience Berkeley Program for High School Students – Stiles Hall",
+        "url": "https://stileshall.org/ebhs/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-stiles-hall-experience-berkeley",
+    "notes": "This is the same organization: Stiles Hall (EIN 94-1156636, Berkeley, CA) runs the Experience Berkeley program for California high school students, which fits OUSD's data sharing agreement. The cited sources confirm the legal name, EIN, nonprofit type, website, phone, address, Berkeley headquarters, founding year and program list, but none says Stiles Hall is located across from the UC Berkeley campus, so the summary includes an unsupported claim and fails the confirmation rule.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "summary"
+    ],
+    "verdict": "rejected"
+  }
+}

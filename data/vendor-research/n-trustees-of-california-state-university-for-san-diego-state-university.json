@@ -1,0 +1,101 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sdsu.edu/about/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/San_Diego_State_University",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://catalog.csun.edu/about/trustees/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-trustees-of-california-state-university-for-san-diego-state-university",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Trustees of the California State University for San Diego State University' matches the CSU's governing body, the Trustees of the California State University (CSU Northridge catalog page), and San Diego State University (SDSU) is a campus of the California State University (Wikipedia)",
+      "SDSU's own contact page lists San Diego State University at 5500 Campanile Drive, San Diego, CA, a public university; an MOU/interagency agreement with a Talent/Human Resources department fits a public university partnering on staffing/hiring (e.g., education workforce)",
+      "Agreement titled 'Interagency Agreement' is consistent with a public agency counterparty"
+    ],
+    "key": "n-trustees-of-california-state-university-for-san-diego-state-university",
+    "notes": "Contracting party is the CSU Trustees acting for SDSU (a public university, not a nonprofit/company). No registry IDs (EIN, CA entity number, SAM UEI) were verified, so left null. No general email found. The agenda gave no location; location and the OUSD relationship were not directly confirmed on the cited pages.",
+    "profile": {
+      "address": "5500 Campanile Drive, San Diego, CA 92182",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Diego, CA",
+      "legalName": "Trustees of the California State University",
+      "orgType": "public_agency",
+      "phone": "619-594-5200",
+      "samUei": null,
+      "summary": "San Diego State University is a public research university in San Diego, California. It is one of the campuses of the California State University system, which is governed by the Trustees of the California State University. It offers undergraduate and graduate degrees.",
+      "website": "https://www.sdsu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact | San Diego State University",
+        "url": "https://www.sdsu.edu/about/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "San Diego State University - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/San_Diego_State_University"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Trustees of the California State University",
+        "url": "https://catalog.csun.edu/about/trustees/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-trustees-of-california-state-university-for-san-diego-state-university",
+    "notes": "The agenda names the Trustees of the California State University acting for San Diego State University, which is the CSU's governing board and its SDSU campus, a public research university that OUSD contracts with for staffing through an interagency MOU. The cited sources support every non-null field: SDSU's contact page gives the website, 619-594-5200, and 5500 Campanile Drive, San Diego, CA 92182; Wikipedia supports the neutral summary and public type; and the CSUN catalog page names the Trustees.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

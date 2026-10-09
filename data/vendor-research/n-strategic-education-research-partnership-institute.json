@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/300231116",
+      "pass": true
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.serpinstitute.org/about-us",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"email\" failed to load",
+      "field": "email",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-strategic-education-research-partnership-institute",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit, 'Strategic Education Research Partnership Institute' (ProPublica Nonprofit Explorer, EIN 30-0231116)",
+      "The ProPublica listing and the organization's own website both place it in Washington, DC, which matches the agenda location",
+      "The SERP Institute website (serpinstitute.org) lists the same EIN, 30-0231116, and describes education research-and-practice partnerships with school districts. This fits OUSD's 'Classroom & academic programs' subaward through the Academics and Instructional Innovation Department",
+      "A search result titled 'SERP OUSD Partnership' (UNC FPG) and a LinkedIn listing with an Oakland, CA office suggest a working relationship with Oakland Unified. I could not fetch the UNC page, so it is not cited"
+    ],
+    "key": "n-strategic-education-research-partnership-institute",
+    "notes": "The California Secretary of State entity number and SAM.gov UEI were not checked directly, so both are null. A GovTribe search result lists a UEI, but I did not fetch it. The organization is based in Washington, DC and is a subawardee, so a California registration may not exist. Staff emails on the site were deliberately excluded.",
+    "profile": {
+      "address": "1100 Connecticut Ave NW, Suite 1310, Washington, DC 20036",
+      "caEntityNumber": null,
+      "ein": "30-0231116",
+      "email": "info@serpinstitute.org",
+      "headquarters": "Washington, DC",
+      "legalName": "Strategic Education Research Partnership Institute",
+      "orgType": "nonprofit",
+      "phone": "(202) 223-8555",
+      "samUei": null,
+      "summary": "SERP Institute is an independent nonprofit organization founded in 2003 and incubated at the National Academy of Sciences. It connects education researchers, school district staff and designers to work on problems of practice in schools. It also develops and shares classroom tools and programs.",
+      "website": "https://www.serpinstitute.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Strategic Education Research Partnership Institute - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/300231116"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "About Us | SERP Institute",
+        "url": "https://www.serpinstitute.org/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-strategic-education-research-partnership-institute",
+    "notes": "This is the same organization OUSD contracts with. ProPublica and SERP's About Us page both show a Washington, DC 501(c)(3) with EIN 30-0231116, which matches the agenda's location, and its work on research-practice partnerships with school districts fits OUSD's academic subaward. The About Us page backs the neutral summary (founded in 2003 as an independent nonprofit incubated at the National Academy of Sciences, bringing researchers, designers and district practitioners together on district-identified problems and building classroom programs, most of them freely available) and shows the general business phone, info@ email and address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
