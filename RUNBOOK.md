@@ -18,6 +18,8 @@ Done once, by a person, because each step needs an account sign-in. Check them o
   | `VERCEL_DEPLOY_HOOK_URL` | Vercel → the oakvs project → Settings → Git → Deploy Hooks → create one for `main`. |
   | `NTFY_TOPIC` | A long random topic name, e.g. the output of `openssl rand -hex 16`. Anyone who knows it can read and post, so treat it as a secret. |
   | `NTFY_TOKEN` | Optional: an access token, if you reserve the topic on ntfy.sh or self-host ntfy. |
+  | `LISTMONK_URL`, `LISTMONK_API_USER`, `LISTMONK_API_TOKEN` | Optional: subscriber emails. The Listmonk base URL and an API user with campaign permissions (Listmonk → Admin → Users → API user). |
+  | `LISTMONK_CONSENT_LIST_ID` | Optional: the numeric id of the public, double opt-in "OUSD consent reports" list that the site's signup form joins. |
   | `CODEBERG_DEPLOY_KEY` | The private half of the Codeberg deploy key (step 2). |
   | `IA_ACCESS_KEY`, `IA_SECRET_KEY` | Optional: Internet Archive S3 keys (archive.org/account/s3.php), for release zips. |
 
@@ -121,6 +123,12 @@ Also set a monthly spend limit on the Anthropic API key itself, in the Claude Co
 | Two failed runs in a row | urgent |
 | Codeberg mirror push failed | low |
 | Quarterly Legistar `/events` check | low, or high if it works again |
+| Subscriber email scheduled for a meeting | low |
+| Subscriber email step failed | high |
+
+### Subscriber emails
+
+When a meeting's summaries are all in (or the meeting starts within a day and at least some are), the `Subscriber emails` step schedules one Listmonk campaign named `consent-<meeting key>` for 20 minutes later, so the site rebuild lands first. An existing campaign with that name means the meeting was already announced, so a meeting is never emailed twice; to resend, delete or rename its campaign in Listmonk. Without the Listmonk secrets the step only logs what it would send. Preview with `npx tsx pipeline/cli.ts announce --dry-run`.
 
 ## Mirrors, releases and archives
 

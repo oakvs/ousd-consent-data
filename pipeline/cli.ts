@@ -12,6 +12,7 @@
  *   notify-failure --previous CONCLUSION      Alert when this and the previous run both failed
  *   notify-text --title T --message M [--priority P]
  *   events-check                              Quarterly: is Legistar's /events endpoint working for OUSD again?
+ *   announce [--dry-run]                      Schedule a subscriber email (Listmonk) for each meeting whose summaries are ready
  *   llm [--key K]                             Run the LLM step (summaries, second readings) and rebuild; no git
  *   llm-compare --key K [--sample N] [--files A,B]
  *                                             Redo one meeting's LLM step on a scratch copy and compare with the stored results
@@ -214,6 +215,11 @@ async function main(): Promise<void> {
     case 'events-check': {
       const { eventsCheck } = await import('./ops/commands')
       await eventsCheck()
+      break
+    }
+    case 'announce': {
+      const { announceReady } = await import('./ops/announce')
+      await announceReady({ dryRun: values['dry-run'] })
       break
     }
     case 'llm': {

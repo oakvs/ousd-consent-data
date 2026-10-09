@@ -60,6 +60,23 @@ jobs:
       - name: Alerts
         run: npx tsx pipeline/cli.ts notify --summary "$RUNNER_TEMP/run.json"
 
+      # Subscriber emails, once a meeting's summaries are ready (see pipeline/ops/announce.ts).
+      # Without the Listmonk secrets it only logs what it would send; a failure never fails the run.
+      - name: Subscriber emails
+        id: announce
+        if: ${{ !inputs.dry_run }}
+        continue-on-error: true
+        env:
+          LISTMONK_URL: ${{ secrets.LISTMONK_URL }}
+          LISTMONK_API_USER: ${{ secrets.LISTMONK_API_USER }}
+          LISTMONK_API_TOKEN: ${{ secrets.LISTMONK_API_TOKEN }}
+          LISTMONK_CONSENT_LIST_ID: ${{ secrets.LISTMONK_CONSENT_LIST_ID }}
+        run: npx tsx pipeline/cli.ts announce
+
+      - name: Subscriber email failure alert
+        if: ${{ steps.announce.outcome == 'failure' }}
+        run: npx tsx pipeline/cli.ts notify-text --priority high --title 'Subscriber email failed' --message "See $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
       - name: Mirror to Codeberg
         id: mirror
         if: ${{ !inputs.dry_run }}
