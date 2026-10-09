@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.lbl.gov/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.lbl.gov/about/university-of-california/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://govtribe.com/vendors/the-regents-of-the-university-of-california-lawrence-berkeley-national-laboratory-1v9s8",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://regents.universityofcalifornia.edu/governance/bylaws/bl10.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"samUei\" failed to load",
+      "field": "samUei",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-ernest-orlando-lawrence-berkeley-national-laboratory",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'Regents of the University of California (Ernest Orlando Lawrence Berkeley National Laboratory)'. The Berkeley Lab's own site says the University of California manages the lab for the U.S. Department of Energy.",
+      "The federal contractor record (GovTribe, which mirrors SAM.gov data) is for 'The Regents of the University of California' operating as Lawrence Berkeley National Laboratory in Berkeley, CA, matching the agenda's named lab.",
+      "A Cooperative Research and Development Agreement under the Stevenson-Wydler Act is a standard tool for a Department of Energy national laboratory. This fits the agenda title, which names the lab's Division of Facilities Planning and Management."
+    ],
+    "key": "n-regents-of-university-of-california-ernest-orlando-lawrence-berkeley-national-laboratory",
+    "notes": "This is the legal entity that contracts for the lab, so the lab's website and contact details are used. The legal name comes from the Regents' Bylaw 10 (Corporate Name). The UC system's main site is universityofcalifornia.edu. The UEI comes from GovTribe, a federal contracting data aggregator, not directly from SAM.gov. The Regents are a constitutionally created public corporation. No EIN or California Secretary of State entity number was found, and no general email was found. The 'public_agency' type is a judgment call, so a reviewer may want to confirm it.",
+    "profile": {
+      "address": "1 Cyclotron Road, Berkeley, CA 94720",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "The Regents of the University of California",
+      "orgType": "public_agency",
+      "phone": "510-486-4000",
+      "samUei": "ENBLDJUN4N73",
+      "summary": "The Regents of the University of California is the governing body of the University of California system. It manages and operates Lawrence Berkeley National Laboratory in Berkeley, California, for the U.S. Department of Energy's Office of Science. The laboratory does scientific research and energy technology work.",
+      "website": "https://www.lbl.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact – Lawrence Berkeley National Laboratory",
+        "url": "https://www.lbl.gov/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "University of California – Lawrence Berkeley National Laboratory",
+        "url": "https://www.lbl.gov/about/university-of-california/"
+      },
+      {
+        "supports": [
+          "samUei"
+        ],
+        "title": "The Regents Of The University Of California (UEI ENBLDJUN4N73) – Federal Contractor in Berkeley, CA | GovTribe",
+        "url": "https://govtribe.com/vendors/the-regents-of-the-university-of-california-lawrence-berkeley-national-laboratory-1v9s8"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Bylaw 10. Corporate Name | Board of Regents",
+        "url": "https://regents.universityofcalifornia.edu/governance/bylaws/bl10.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-regents-of-university-of-california-ernest-orlando-lawrence-berkeley-national-laboratory",
+    "notes": "This is the right organization. The agenda's contracting party, the Regents of the University of California acting for Lawrence Berkeley National Laboratory, matches the lab's own page saying UC manages the lab for the DOE Office of Science. The GovTribe/SAM record shows UEI ENBLDJUN4N73 at 1 Cyclotron Rd, Berkeley, and the lbl.gov contact page shows the phone number and address. The legal name matches Regents Bylaw 10. The summary is neutral and supported; the 'governing body' wording comes from the Board of Regents site rather than an explicit statement. The public_agency type is a judgment call, but GovTribe lists the entity as part of the State of California and the lab calls UC a public university.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

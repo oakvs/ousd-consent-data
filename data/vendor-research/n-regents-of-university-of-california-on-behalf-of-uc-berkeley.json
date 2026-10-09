@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://fdpclearinghouse.org/organizations/166",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wscuc.org/institutions/university-of-california-berkeley/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/University_of_California,_Berkeley",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website is not among the cited sources",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-regents-of-university-of-california-on-behalf-of-uc-berkeley",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the Regents of the University of California on behalf of UC Berkeley, in Berkeley, CA. The Federal Demonstration Partnership (FDP) Clearinghouse lists the legal entity \"Regents of the University of California, The (doing business as University of California, Berkeley)\" at a Berkeley, CA address.",
+      "The Western Association of Schools and Colleges Senior College and University Commission (WSCUC) lists the University of California, Berkeley at 200 California Hall, Berkeley, CA, matching the agenda's Berkeley location.",
+      "OUSD's contract is a Memorandum of Understanding with UC Berkeley's Talent/Human Resources department. UC Berkeley has a People & Culture (human resources) department, which fits that contract."
+    ],
+    "key": "n-regents-of-university-of-california-on-behalf-of-uc-berkeley",
+    "notes": "The vendor is the Regents of the University of California acting for the Berkeley campus, a California public university, so it is not on the California Secretary of State business registry. caEntityNumber is null for that reason. The EIN and SAM.gov UEI come from the FDP Clearinghouse's campus-specific profile. The systemwide Regents EIN is a different number (94-6036494). No general email was found on a cited page, so email is null. The phone and address are the campus main line and the Chancellor's office address as WSCUC lists them. The website is written exactly as the WSCUC page shows it (http, not https). The HR department's own page could not be fetched.",
+    "profile": {
+      "address": "200 California Hall, Berkeley, CA 94720-1500",
+      "caEntityNumber": null,
+      "ein": "94-6002123",
+      "email": null,
+      "headquarters": "Berkeley, CA",
+      "legalName": "REGENTS OF THE UNIVERSITY OF CALIFORNIA, THE (doing business as University of California, Berkeley)",
+      "orgType": "public_agency",
+      "phone": "510-642-6000",
+      "samUei": "GS3YEVSS12N6",
+      "summary": "UC Berkeley is a public land-grant research university in Berkeley, California. It was founded in 1868 as the first campus of the University of California system. It is governed by the Regents of the University of California.",
+      "website": "http://www.berkeley.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "samUei"
+        ],
+        "title": "University of California, Berkeley - FDP Expanded Clearinghouse",
+        "url": "https://fdpclearinghouse.org/organizations/166"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "University of California Berkeley - WSCUC",
+        "url": "https://www.wscuc.org/institutions/university-of-california-berkeley/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "University of California, Berkeley - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/University_of_California,_Berkeley"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-regents-of-university-of-california-on-behalf-of-uc-berkeley",
+    "notes": "This is the same organization: the FDP Clearinghouse lists the legal name with the UC Berkeley DBA and shows the EIN and SAM UEI, and WSCUC shows the Berkeley address, phone and website, which match the agenda's Berkeley, CA. Wikipedia supports the neutral summary (public land-grant research university, founded 1868, founding UC campus, governed by the Regents) and the public_agency type.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

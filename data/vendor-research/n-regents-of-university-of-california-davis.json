@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ucdavis.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://org.ucdavis.edu/directory/index.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-davis",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'The Regents of the University of California, Davis' in Davis, CA. UC Davis's official site is in Davis, CA, and its footer credits 'The Regents of the University of California, Davis campus'.",
+      "UC Davis's own pages describe a public university with more than 100 majors and 101 graduate degrees. This fits a no-cost services agreement with OUSD's Community Schools and Student Services Department, under the Chief Academic Officer.",
+      "The UC Davis School of Education is a campus unit that works on K-12 education, which is consistent with the agreement. No page I fetched mentions OUSD."
+    ],
+    "key": "n-regents-of-university-of-california-davis",
+    "notes": "The legal contracting entity for all University of California campuses is The Regents of the University of California. UC Davis is a campus of that system. I did not look up registry IDs, because a public university does not have a California Secretary of State entity number or a nonprofit EIN in the usual way. I left the SAM UEI blank because I did not verify it. No general email address was found on the pages I read. The UC Davis site shows the ZIP as 95616 in its footer but 96158 in one header block. I used 95616, which matches the directory page. The phone number is the campus main line, shown as '530-752-1011'.",
+    "profile": {
+      "address": "One Shields Avenue, Davis, CA 95616",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Davis, CA",
+      "legalName": "The Regents of the University of California",
+      "orgType": "public_agency",
+      "phone": "530-752-1011",
+      "samUei": null,
+      "summary": "UC Davis is a public research university in Davis, California, and one of the campuses of the University of California system. It offers more than 100 undergraduate majors and 101 graduate degrees, and it does research. It was founded in 1908.",
+      "website": "https://www.ucdavis.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About Us | UC Davis",
+        "url": "https://www.ucdavis.edu/about"
+      },
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "UC Davis Directory",
+        "url": "https://org.ucdavis.edu/directory/index.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-regents-of-university-of-california-davis",
+    "notes": "Both cited UC Davis pages show the Davis, CA location, One Shields Avenue, Davis, CA 95616, the main line 530-752-1011, and a footer credit to The Regents of the University of California, Davis campus, which matches the agenda's contracting entity. The neutral summary is supported by the About page: it calls UC Davis a public university in the UC system, cites more than 100 majors and 101 graduate degrees, mentions its research, and says it was founded in 1908; the 96158 ZIP in one header block looks like a site typo, and the candidate correctly used 95616.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

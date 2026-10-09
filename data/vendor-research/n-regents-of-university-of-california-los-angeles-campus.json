@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://newsroom.ucla.edu/ucla-fast-facts",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucla.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-los-angeles-campus",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'The Regents of the University of California (Los Angeles campus)' in Los Angeles, CA. This matches UCLA's published address at 405 Hilgard Avenue, Los Angeles, CA 90095.",
+      "UCLA's official website footer carries a copyright line naming the Regents of the University of California, so UCLA is the Regents' Los Angeles campus.",
+      "UCLA is a public research university, which fits a data sharing agreement with OUSD's Research, Assessment, and Data Department."
+    ],
+    "key": "n-regents-of-university-of-california-los-angeles-campus",
+    "notes": "The contracting party is the Regents of the University of California acting for its Los Angeles campus. It is a state public entity, not a nonprofit or company. The legalName field uses the campus name exactly as the cited fast-facts page shows it. EIN, California entity number and SAM UEI are left null. Third-party sites list several different UEIs for UC entities, and no primary registry page was fetched to settle which is correct. The phone number is UCLA's main campus line. The contact page describes it as the admissions team's number. No general email was found.",
+    "profile": {
+      "address": "405 Hilgard Avenue, Los Angeles, CA 90095",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Los Angeles, CA",
+      "legalName": "University of California, Los Angeles",
+      "orgType": "public_agency",
+      "phone": "310-825-4321",
+      "samUei": null,
+      "summary": "UCLA is a public research university in Los Angeles. It was founded in 1919 as the Southern Branch of the University of California. It is one of the University of California system's campuses, which the Regents of the University of California govern.",
+      "website": "https://www.ucla.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About UCLA: Fast facts",
+        "url": "https://newsroom.ucla.edu/ucla-fast-facts"
+      },
+      {
+        "supports": [
+          "website",
+          "phone"
+        ],
+        "title": "Contact UCLA: Reach Out to Us Today!",
+        "url": "https://www.ucla.edu/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-regents-of-university-of-california-los-angeles-campus",
+    "notes": "The cited UCLA fast-facts and contact pages support the summary, which is neutral: founded in 1919 as the Southern Branch, one of 10 UC campuses, with a Regents copyright footer. They also confirm the address 405 Hilgard Ave, Los Angeles, CA 90095, the line 310-825-4321 and the website. legalName is dropped because the contracting legal entity is The Regents of the University of California; 'University of California, Los Angeles' is the campus name, not a separate legal name.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}
