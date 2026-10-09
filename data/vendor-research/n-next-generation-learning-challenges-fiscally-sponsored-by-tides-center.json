@@ -1,0 +1,106 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/943213100/202412739349300301/IRS990",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.tides.org/state-nonprofit-disclosures/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nextgenlearning.org/news/nglc-receives-two-new-grants-2025",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-next-generation-learning-challenges-fiscally-sponsored-by-tides-center",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "The agenda names 'Tides Center' as the fiscal sponsor and legal payee. A registered nonprofit named Tides Center exists in San Francisco, CA (ProPublica, EIN 94-3213100).",
+      "NGLC's own news page says Tides Center is its fiscal sponsor, so Tides Center is the legal entity behind the 'Next Generation Learning Challenges' grant.",
+      "NGLC has run school-redesign grant programs in Oakland (EdSurge, 'Oakland Goes Next Gen'). This fits an OUSD Linked Learning grant, but no page links the two directly.",
+      "The OUSD funding source is listed as 'Tides Center Grant', which matches the Tides Center name."
+    ],
+    "key": "n-next-generation-learning-challenges-fiscally-sponsored-by-tides-center",
+    "notes": "The agenda vendor is a project (NGLC) fiscally sponsored by Tides Center. The profile describes Tides Center, the legal contracting entity, not NGLC itself. NGLC announced a merger with LEAP Innovations (Chicago) in early 2026, and nextgenlearning.org now shows LEAP content. I did not verify whether Tides still sponsors NGLC, so a reviewer should decide whether to show Tides Center or NGLC. The California Secretary of State entity number, SAM UEI and a general email were not found, so they are null.",
+    "profile": {
+      "address": "1012 Torney Avenue, San Francisco, CA 94129",
+      "caEntityNumber": null,
+      "ein": "94-3213100",
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Tides Center",
+      "orgType": "nonprofit",
+      "phone": "415-561-6400",
+      "samUei": null,
+      "summary": "Tides Center is a San Francisco nonprofit (501(c)(3)) that serves as a fiscal sponsor. It legally hosts and manages funds and administration for outside projects, including Next Generation Learning Challenges (NGLC), an education-innovation program that has funded school redesign work.",
+      "website": "https://www.tides.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Tides Center - Form 990 - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/943213100/202412739349300301/IRS990"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "State Nonprofit Disclosures - Tides Center",
+        "url": "https://www.tides.org/state-nonprofit-disclosures/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "NGLC Secures Grants for 2025 Learning Innovation",
+        "url": "https://www.nextgenlearning.org/news/nglc-receives-two-new-grants-2025"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": null
+}

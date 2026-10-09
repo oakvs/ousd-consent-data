@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://tntp.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://tntp.org/about/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/133850158",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-new-teacher-project",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name match: The agenda's 'The New Teacher Project' is the former name of TNTP. ProPublica Nonprofit Explorer lists 'The New Teacher Project Inc' (Tntp Inc), New York, NY, EIN 13-3850158, a 501(c)(3) nonprofit.",
+      "Location match: The agenda gives New York, NY. The registry and the TNTP website both list a New York, NY headquarters at 500 7th Avenue.",
+      "Activity match: TNTP's website describes partnering with schools, districts and states on education. This fits a Chief Academic Officer / Research, Assessment, and Data data-sharing agreement.",
+      "The TNTP About page says 'The New Teacher Project is renamed TNTP', confirming the old name and the current brand are one organization."
+    ],
+    "key": "n-new-teacher-project",
+    "notes": "No general email address was found on the pages checked (the contact page uses a web form), so email is null. California Secretary of State and SAM.gov records were not checked, so caEntityNumber and samUei are null. The legal name is shown as 'TNTP, Inc.' on the TNTP website. ProPublica lists 'The New Teacher Project Inc'. I did not find an explicit public mention of OUSD on TNTP's own pages.",
+    "profile": {
+      "address": "500 7th Avenue, 8th Floor, New York, NY 10018",
+      "caEntityNumber": null,
+      "ein": "13-3850158",
+      "email": null,
+      "headquarters": "New York, NY",
+      "legalName": "TNTP, Inc.",
+      "orgType": "nonprofit",
+      "phone": "718-233-2800",
+      "samUei": null,
+      "summary": "TNTP is a national nonprofit, formerly called The New Teacher Project, that works with schools, districts and states on education. It provides education consulting, research and policy work, and leadership and talent development. It was founded in 1997.",
+      "website": "https://tntp.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact us - TNTP",
+        "url": "https://tntp.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "About TNTP",
+        "url": "https://tntp.org/about/"
+      },
+      {
+        "supports": [
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Tntp Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/133850158"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-new-teacher-project",
+    "notes": "This is the same New York, NY nonprofit that appears in the agenda as 'The New Teacher Project'. ProPublica lists 'Tntp Inc / The New Teacher Project Inc' as a 501(c)(3) in New York, NY with EIN 13-3850158, and TNTP's About page says the organization was founded in 1997 and renamed TNTP in 2011. TNTP's Contact and About pages support every profile field (TNTP, Inc., 500 7th Avenue, 8th Floor, New York, NY 10018, 718-233-2800, and its consulting, research/policy and leadership/talent services). The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
