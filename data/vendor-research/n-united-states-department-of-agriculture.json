@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.usda.gov/contact-us",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.usa.gov/agencies/u-s-department-of-agriculture",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.fna.usda.gov/f2s/farm-to-school",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-united-states-department-of-agriculture",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the federal cabinet department 'U.S. Department of Agriculture' (USAGov agency directory and usda.gov)",
+      "OUSD's agenda item is a Food and Nutrition Service (FNS) Farm to School grant. FNS is a USDA agency, and its fna.usda.gov site describes the Farm to School grant program for schools.",
+      "The agenda gives no location. A federal agency with its headquarters in Washington, DC fits a federal grant funder, and nothing contradicts the match."
+    ],
+    "key": "n-united-states-department-of-agriculture",
+    "notes": "The vendor is a federal agency, so there is no EIN or California entity number. I did not look up a SAM.gov UEI, so it is null. No general public email address was found on the cited contact page. The phone number is the USDA Information Hotline. The grant program is run by the USDA Food and Nutrition Service (its site now appears under the name 'Food and Nutrition Administration').",
+    "profile": {
+      "address": "1400 Independence Ave., S.W., Washington, DC 20250",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Washington, DC",
+      "legalName": "U.S. Department of Agriculture",
+      "orgType": "public_agency",
+      "phone": "(202) 720-2791",
+      "samUei": null,
+      "summary": "The U.S. Department of Agriculture (USDA) is a federal agency that provides leadership on food, agriculture, natural resources, and related issues. Its Food and Nutrition Service runs child nutrition programs and the Farm to School grant program for schools.",
+      "website": "https://www.usda.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "address",
+          "phone",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us | USDA",
+        "url": "https://www.usda.gov/contact-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "U.S. Department of Agriculture (USDA) | USAGov",
+        "url": "https://www.usa.gov/agencies/u-s-department-of-agriculture"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "The Patrick Leahy Farm to School Program | Food and Nutrition Administration",
+        "url": "https://www.fna.usda.gov/f2s/farm-to-school"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-united-states-department-of-agriculture",
+    "notes": "This is the same organization: OUSD's FY23 Farm to School grant comes from USDA's Food and Nutrition Service, and the federal department matches it. The USDA contact page, USAGov listing and fna.usda.gov Farm to School page show the name, website, address, Information Hotline number, Washington, DC headquarters and the neutral summary; the agency's site now calls FNS the 'Food and Nutrition Administration', but that is the same agency.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

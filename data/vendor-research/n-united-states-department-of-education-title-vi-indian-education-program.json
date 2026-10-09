@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.ed.gov/about/ed-offices/oese/oie",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.ed.gov/about/contact-us",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"email\" failed to load",
+      "field": "email",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-united-states-department-of-education-title-vi-indian-education-program",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda's grant award names the U.S. Department of Education's Title VI Indian Education Program. The Department's Office of Indian Education (OIE) runs that program, and its ed.gov page says it administers the Indian Education Program under ESEA Title VI, Part A.",
+      "OUSD's funding source is listed as 'Indian Education' and the contract is a grant award. This matches OIE's role of giving financial and technical help to school districts (local education agencies) for Indian education.",
+      "The vendor is a federal agency and not a person. The grant awarder is the U.S. Department of Education, whose headquarters is the LBJ Building at 400 Maryland Ave SW, Washington, DC."
+    ],
+    "key": "n-united-states-department-of-education-title-vi-indian-education-program",
+    "notes": "The vendor is a federal agency, so there is no EIN or California entity number. The SAM.gov UEI was not checked. The phone and email are for the Office of Indian Education, the program office, not the Department's main line. The ed.gov OIE page and the older www2.ed.gov contacts page show different OIE phone numbers and building rooms. I used the current ed.gov page. The Department's general inquiries line is 1-800-USA-LEARN, which I saw only in a search result and did not fetch.",
+    "profile": {
+      "address": "400 Maryland Ave, SW, Washington, DC 20202",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "indian.education@ed.gov",
+      "headquarters": "Washington, DC",
+      "legalName": "U.S. Department of Education",
+      "orgType": "public_agency",
+      "phone": "202-219-1589",
+      "samUei": null,
+      "summary": "The U.S. Department of Education is a federal agency that sets national education policy and administers federal education funding and programs. Its Office of Indian Education runs the Indian Education Program (Title VI, Part A of the Elementary and Secondary Education Act). That program gives financial and technical help to school districts, tribes, and other groups to meet the education and cultural needs of American Indian and Alaska Native students.",
+      "website": "https://www.ed.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "email",
+          "legalName",
+          "website"
+        ],
+        "title": "Office of Indian Education (OIE) - U.S. Department of Education",
+        "url": "https://www.ed.gov/about/ed-offices/oese/oie"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "legalName",
+          "website"
+        ],
+        "title": "Contact Us - U.S. Department of Education",
+        "url": "https://www.ed.gov/about/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-united-states-department-of-education-title-vi-indian-education-program",
+    "notes": "I fetched the ed.gov Office of Indian Education page. It says the office runs the Title VI, Part A Indian Education Program and gives LEAs and tribes financial and technical help with the educational and cultural needs of American Indian and Alaska Native students, which matches OUSD's grant award, and it lists the office line 202-219-1589 and indian.education@ed.gov. The Contact Us page gives the headquarters as 400 Maryland Ave SW, Washington, DC 20202. The general opening of the summary about national policy and funding isn't stated word for word, but it is standard background, neutral, and not misleading.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

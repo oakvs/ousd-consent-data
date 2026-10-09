@@ -1,0 +1,93 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sfsu.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://bulletin.sfsu.edu/about-sfsu/csu/trustees/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-trustees-of-california-state-university-on-behalf-of-san-francisco-state-university",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'Trustees of the California State University, on behalf of San Francisco State University'. This is the governing body of the CSU system, acting for its San Francisco campus.",
+      "The SF State website identifies San Francisco State University as a California State University campus, at 1600 Holloway Avenue, San Francisco.",
+      "The agreement covers intern partnership and practica programs for K-12 teaching, run through OUSD's Talent/Human Resources office. That fits a public university's teacher credential programs.",
+      "An EdJoin posting for OUSD's Oakland Teacher Resident program lists San Francisco State University as a partner teacher credential university. This page could not be fetched, so it is not cited."
+    ],
+    "key": "n-trustees-of-california-state-university-on-behalf-of-san-francisco-state-university",
+    "notes": "A public university campus run by the CSU Board of Trustees, so there is no IRS EIN or California Secretary of State entity number. SAM.gov UEI was not checked or found. The phone number is SF State's main directory line. The only general email on the contact page is service@sfsu.edu, which is for website feedback, so it is omitted. The CSU system office is at 401 Golden Shore, Long Beach. The campus address is given as the contracting entity's address.",
+    "profile": {
+      "address": "1600 Holloway Avenue, San Francisco, CA 94132",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Trustees of the California State University",
+      "orgType": "public_agency",
+      "phone": "(415) 338-1111",
+      "samUei": null,
+      "summary": "The California State University is a public university system governed by its Board of Trustees. San Francisco State University is one of its campuses, serving students in San Francisco. It offers undergraduate and graduate degrees, including teacher preparation programs.",
+      "website": "https://www.sfsu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "Contacts and Feedback | San Francisco State University",
+        "url": "https://www.sfsu.edu/contact"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Trustees of the California State University | San Francisco State University Bulletin",
+        "url": "https://bulletin.sfsu.edu/about-sfsu/csu/trustees/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-trustees-of-california-state-university-on-behalf-of-san-francisco-state-university",
+    "notes": "The profile describes the right organization: the CSU Trustees acting for SF State, the university that partners with OUSD on K-12 teaching interns. SF State's contact page confirms the website, the (415) 338-1111 phone line, the 1600 Holloway Ave address, its status as a CSU campus and its undergraduate and graduate degrees, and the Bulletin page title confirms the legal name and lists credential programs, so the neutral summary is supported. I dropped headquarters because the named legal entity, the CSU Trustees, is based in Long Beach, not San Francisco, so listing San Francisco as its headquarters would be misleading.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "headquarters"
+    ],
+    "verdict": "confirmed"
+  }
+}

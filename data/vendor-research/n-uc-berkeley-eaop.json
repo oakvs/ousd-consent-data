@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://eaop.berkeley.edu/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://eaop.berkeley.edu/home/about-eaop",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://skyline.ousd.org/students/college-career-center",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-uc-berkeley-eaop",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda vendor 'UC Berkeley (EAOP)' matches the Early Academic Outreach Program (EAOP) at the University of California, Berkeley, whose official site is eaop.berkeley.edu.",
+      "EAOP's own site lists it as a University of California, Berkeley program in Berkeley, CA. It is a college-preparation program for high school students, which fits an OUSD Measures N and H College and Career Readiness Commission item for Skyline High School.",
+      "Skyline High School's (OUSD) College & Career Center page names the UC Berkeley Early Academic Outreach Program (EAOP) as one of the programs on its campus."
+    ],
+    "key": "n-uc-berkeley-eaop",
+    "notes": "The vendor is a program of a public university (the Regents of the University of California, doing business as UC Berkeley), not a separate legal entity. No EIN, California entity number or SAM.gov UEI was verified from a fetched page, so those fields are null. The EAOP contact page shows no phone number. The parent Center for Educational Partnerships lists (510) 642-6680, but that is not EAOP's own line, so I left the phone null. legalName is the campus name as shown on the EAOP contact page. The formal contracting entity is likely 'The Regents of the University of California'.",
+    "profile": {
+      "address": "1 Hearst Field Annex, Building C50, Berkeley, CA 94720-1060",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "eaop@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": "University of California, Berkeley",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Early Academic Outreach Program (EAOP) is a University of California program, run by UC Berkeley, that helps high school students prepare for college. It was established in 1976. It serves students who are first in their families to go to college, face economic barriers, or are learning English. It helps them meet college admission and financial aid requirements, working with schools, districts and community groups.",
+      "website": "https://eaop.berkeley.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | Early Academic Outreach Program",
+        "url": "https://eaop.berkeley.edu/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About EAOP | Early Academic Outreach Program",
+        "url": "https://eaop.berkeley.edu/home/about-eaop"
+      },
+      {
+        "supports": [],
+        "title": "College & Career Center - Skyline High School",
+        "url": "https://skyline.ousd.org/students/college-career-center"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-uc-berkeley-eaop",
+    "notes": "The cited sources back up every field. EAOP's About page shows the summary details: UC set it up in 1976, it serves first-generation, low-income and English-learner students, it helps with admission and financial aid requirements, and it works with schools and districts. EAOP's Contact page lists the campus name, the general email eaop@berkeley.edu and the Hearst Field Annex address, and Skyline High's College & Career Center page names UC Berkeley EAOP as a program on its campus, which matches the OUSD Measures N and H item. The legal name is the campus name; the formal contracting party is likely the Regents of the University of California.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
