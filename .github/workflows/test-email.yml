@@ -1,0 +1,39 @@
+# By hand only: send a [Test] subscriber email for an already-published meeting to the live
+# Listmonk list, then wait until Listmonk reports it sent. It uses the same credentials,
+# rendering and scheduling as the "Subscriber emails" step in run.yml, under its own campaign
+# name (consent-test-…), so it never stands in for a meeting's real announcement.
+name: test subscriber email
+
+on:
+  workflow_dispatch:
+    inputs:
+      meeting:
+        description: Meeting key to send, e.g. 2026-09-23 (blank = the latest meeting with summaries)
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      LISTMONK_URL: ${{ secrets.LISTMONK_URL }}
+      LISTMONK_API_USER: ${{ secrets.LISTMONK_API_USER }}
+      LISTMONK_API_TOKEN: ${{ secrets.LISTMONK_API_TOKEN }}
+      LISTMONK_CONSENT_LIST_ID: ${{ secrets.LISTMONK_CONSENT_LIST_ID }}
+      MEETING: ${{ inputs.meeting }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Send a test email and wait for it
+        run: npx tsx pipeline/cli.ts announce --test ${MEETING:+--key "$MEETING"}

@@ -13,6 +13,7 @@
  *   notify-text --title T --message M [--priority P]
  *   events-check                              Quarterly: is Legistar's /events endpoint working for OUSD again?
  *   announce [--dry-run]                      Schedule a subscriber email (Listmonk) for each meeting whose summaries are ready
+ *   announce --test [--key K]                 Send a [Test] email for a published meeting to the live list and wait for it to finish
  *   llm [--key K]                             Run the LLM step (summaries, second readings) and rebuild; no git
  *   llm-compare --key K [--sample N] [--files A,B]
  *                                             Redo one meeting's LLM step on a scratch copy and compare with the stored results
@@ -97,6 +98,7 @@ const { positionals, values } = parseArgs({
     summary: { type: 'string' },
     force: { type: 'boolean', default: false },
     update: { type: 'boolean', default: false },
+    test: { type: 'boolean', default: false },
     size: { type: 'string' },
     chunk: { type: 'string' },
     model: { type: 'string' },
@@ -218,8 +220,9 @@ async function main(): Promise<void> {
       break
     }
     case 'announce': {
-      const { announceReady } = await import('./ops/announce')
-      await announceReady({ dryRun: values['dry-run'] })
+      const { announceReady, announceTest } = await import('./ops/announce')
+      if (values.test) await announceTest({ key: values.key })
+      else await announceReady({ dryRun: values['dry-run'] })
       break
     }
     case 'llm': {

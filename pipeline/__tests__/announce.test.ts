@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { campaignExists, campaignName, checkList, isReady, listmonkConfig, listmonkConfigProblems, renderEmail, scheduleCampaign } from '../ops/announce'
+import { announceTest, campaignExists, campaignName, checkList, isReady, listmonkConfig, listmonkConfigProblems, renderEmail, scheduleCampaign } from '../ops/announce'
 
 import type { TListmonkConfig } from '../ops/announce'
 import type { TIndexEntry } from '@oakvs/consent-schema/schema'
@@ -128,5 +128,41 @@ describe('Listmonk calls', () => {
   it('reports Listmonk errors with the status and message', async () => {
     const fake = (async () => new Response(JSON.stringify({ message: 'invalid list' }), { status: 400 })) as unknown as typeof fetch
     await expect(scheduleCampaign(cfg, 'x', renderEmail(meeting()), new Date(), fake)).rejects.toThrow('HTTP 400 (invalid list)')
+  })
+})
+
+describe('announce --test', () => {
+  const cfg: TListmonkConfig = { url: 'https://lists.example.org', user: 'bot', token: 't', listId: 7 }
+  const reply = (data: unknown): Response => new Response(JSON.stringify({ data }), { status: 200 })
+
+  function listmonk(statuses: { status: string; sent: number }[], subscribers = 1): typeof fetch & { calls: { method: string; url: string; body: Record<string, unknown> | null }[] } {
+    const calls: { method: string; url: string; body: Record<string, unknown> | null }[] = []
+    const fake = (async (url: string, init: RequestInit) => {
+      const method = init.method ?? 'GET'
+      calls.push({ method, url, body: init.body ? JSON.parse(init.body as string) : null })
+      if (url.endsWith('/lists/7')) return reply({ name: 'OUSD Consent Report', type: 'public', optin: 'double', subscriber_count: subscribers })
+      if (method === 'POST') return reply({ id: 99 })
+      if (method === 'PUT') return reply(true)
+      const st = statuses.shift() ?? { status: 'scheduled', sent: 0 }
+      return reply({ ...st, to_send: 1 })
+    }) as typeof fetch & { calls: typeof calls }
+    fake.calls = calls
+    return fake
+  }
+
+  it('sends a [Test] campaign for a published meeting under its own name, and waits for it to finish', async () => {
+    const fake = listmonk([{ status: 'scheduled', sent: 0 }, { status: 'running', sent: 0 }, { status: 'finished', sent: 1 }])
+    const r = await announceTest({ key: '2026-09-23', now: new Date('2026-10-09T05:00:00Z'), config: cfg, fetch: fake, sleep: async () => undefined })
+    expect(r).toMatchObject({ id: 99, status: 'finished', sent: 1, name: 'consent-test-2026-09-23-20261009T0500' })
+    const created = fake.calls.find(c => c.method === 'POST')!.body!
+    expect(created.subject).toMatch(/^\[Test\] OUSD consent report for Wednesday, September 23, 2026/)
+    expect(created).toMatchObject({ lists: [7], tags: ['consent-report', 'test'], send_at: '2026-10-09T05:01:00Z' })
+    expect(created.name).not.toBe(campaignName('2026-09-23'))
+  })
+
+  it('fails when nothing was sent, or nobody is subscribed', async () => {
+    const stuck = listmonk([{ status: 'paused', sent: 0 }])
+    await expect(announceTest({ key: '2026-09-23', config: cfg, fetch: stuck, sleep: async () => undefined })).rejects.toThrow('ended as "paused" with 0 sent')
+    await expect(announceTest({ key: '2026-09-23', config: cfg, fetch: listmonk([], 0), sleep: async () => undefined })).rejects.toThrow('no subscribers')
   })
 })

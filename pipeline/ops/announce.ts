@@ -140,7 +140,7 @@ export async function campaignExists(cfg: TListmonkConfig, name: string, doFetch
 }
 
 /** Create the campaign as a draft, then schedule it. Returns its id. */
-export async function scheduleCampaign(cfg: TListmonkConfig, name: string, email: TEmail, sendAt: Date, doFetch: TFetch = fetch): Promise<number> {
+export async function scheduleCampaign(cfg: TListmonkConfig, name: string, email: TEmail, sendAt: Date, doFetch: TFetch = fetch, tags: string[] = ['consent-report']): Promise<number> {
   const created = await api<{ id: number }>(cfg, 'POST', '/campaigns', {
     name,
     subject: email.subject,
@@ -150,7 +150,7 @@ export async function scheduleCampaign(cfg: TListmonkConfig, name: string, email
     body: email.html,
     altbody: email.text,
     send_at: sendAt.toISOString().replace(/\.\d{3}Z$/, 'Z'),
-    tags: ['consent-report'],
+    tags,
   }, doFetch)
   await api(cfg, 'PUT', `/campaigns/${created.id}/status`, { status: 'scheduled' }, doFetch)
   return created.id
@@ -203,4 +203,76 @@ export async function announceReady(options: TAnnounceOptions = {}): Promise<str
   }
   if (!ready.length) console.log('no meetings ready to announce')
   return scheduled
+}
+
+// ─── Test send ───────────────────────────────────────────────────────────────
+
+export type TCampaignStatus = { status: string; sent: number; toSend: number }
+
+export async function campaignStatus(cfg: TListmonkConfig, id: number, doFetch: TFetch = fetch): Promise<TCampaignStatus> {
+  const c = await api<{ status?: string; sent?: number; to_send?: number }>(cfg, 'GET', `/campaigns/${id}`, undefined, doFetch)
+  return { status: c?.status ?? '?', sent: c?.sent ?? 0, toSend: c?.to_send ?? 0 }
+}
+
+/** Minutes between scheduling a test email and sending it: long enough to go through Listmonk's scheduler. */
+export const TEST_SEND_DELAY_MINUTES = 1
+
+export type TAnnounceTestOptions = {
+  /** Meeting to send; default: the latest meeting with any summaries. */
+  key?: string
+  now?: Date
+  config?: TListmonkConfig | null
+  fetch?: TFetch
+  pollMs?: number
+  timeoutMs?: number
+  sleep?: (ms: number) => Promise<void>
+}
+
+/**
+ * `announce --test [--key K]`: send a real email for an already-published meeting to the live
+ * list, through the same rendering and scheduling as `announce`, then wait until Listmonk reports
+ * the campaign finished. The subject says [Test] and the campaign is named consent-test-…, so it
+ * never stands in for the meeting's real announcement. Fails unless at least one email went out.
+ */
+export async function announceTest(options: TAnnounceTestOptions = {}): Promise<TCampaignStatus & { id: number; name: string }> {
+  const now = options.now ?? new Date()
+  const cfg = options.config === undefined ? listmonkConfig() : options.config
+  const doFetch = options.fetch ?? fetch
+  const sleep = options.sleep ?? ((ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms)))
+  if (!cfg) throw new Error(`Listmonk not configured: ${listmonkConfigProblems().join('; ') || 'unknown problem'}`)
+
+  const list = await checkList(cfg, doFetch)
+  console.log(`Listmonk OK at ${cfg.url}: list "${list.name}" (${list.type}, ${list.optin} opt-in, ${plural(list.subscribers, 'subscriber')})`)
+  if (list.subscribers === 0) throw new Error(`list "${list.name}" has no subscribers; confirm a subscription first`)
+
+  const index = JSON.parse(await readFile(path.join(paths.published, 'index.json'), 'utf8')) as TIndexFile
+  const m = options.key
+    ? index.meetings.find(x => x.key === options.key)
+    : [...index.meetings].filter(x => x.enrichedItems > 0).sort((a, b) => b.key.localeCompare(a.key))[0]
+  if (!m) throw new Error(options.key ? `no meeting ${options.key} in the published index` : 'no meeting with summaries to send')
+
+  const real = renderEmail(m)
+  const note = 'This is a test of the OUSD consent report email alerts. The meeting below may already have happened.'
+  const email: TEmail = {
+    subject: `[Test] ${real.subject}`,
+    html: `<p><em>${note}</em></p>\n${real.html}`,
+    text: `${note}\n\n${real.text}`,
+  }
+  const name = `consent-test-${m.key}-${now.toISOString().replace(/[-:]/g, '').slice(0, 13)}`
+  const sendAt = new Date(now.getTime() + TEST_SEND_DELAY_MINUTES * 60_000)
+  const id = await scheduleCampaign(cfg, name, email, sendAt, doFetch, ['consent-report', 'test'])
+  console.log(`${name}: campaign ${id} scheduled for ${sendAt.toISOString()} to "${list.name}"\n  ${email.subject}`)
+
+  const deadline = Date.now() + (options.timeoutMs ?? 8 * 60_000)
+  let st = await campaignStatus(cfg, id, doFetch)
+  while (!['finished', 'cancelled', 'paused'].includes(st.status) && Date.now() < deadline) {
+    await sleep(options.pollMs ?? 15_000)
+    st = await campaignStatus(cfg, id, doFetch)
+    console.log(`  status ${st.status}, sent ${st.sent} of ${st.toSend}`)
+  }
+  if (st.status !== 'finished' || st.sent === 0) {
+    throw new Error(`test campaign ${id} ended as "${st.status}" with ${st.sent} sent; check Listmonk → Campaigns and Settings → SMTP`)
+  }
+  console.log(`test email sent: ${plural(st.sent, 'email')} to "${list.name}"`)
+  return { id, name, ...st }
 }

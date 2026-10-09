@@ -130,6 +130,8 @@ Also set a monthly spend limit on the Anthropic API key itself, in the Claude Co
 
 When a meeting's summaries are all in (or the meeting starts within a day and at least some are), the `Subscriber emails` step schedules one Listmonk campaign named `consent-<meeting key>` for 20 minutes later, so the site rebuild lands first. An existing campaign with that name means the meeting was already announced, so a meeting is never emailed twice; to resend, delete or rename its campaign in Listmonk. Every run first reads the subscriber list with the API credentials and logs it (`Listmonk OK at …: list "OUSD Consent Report" (public, double opt-in, N subscribers)`), so a wrong URL, token or list id fails the step and alerts right away. Without the Listmonk secrets the step only logs what it would send. Preview with `npx tsx pipeline/cli.ts announce --dry-run`.
 
+To test the whole path, run the **test subscriber email** workflow by hand (Actions → test subscriber email → Run workflow). It sends a `[Test]` email for an already-published meeting (the latest with summaries, or the one you name) to the live list, then waits until Listmonk reports it sent, and fails if nothing went out. Its campaign is named `consent-test-…`, so it never blocks a meeting's real announcement. Everyone on the list gets it.
+
 ## Mirrors, releases and archives
 
 - **Codeberg** gets every push: `run.yml` mirrors after each run, and `mirror.yml` mirrors pushes made by people. The push is never forced. If someone pushes to Codeberg directly, mirroring fails until the two agree again.
