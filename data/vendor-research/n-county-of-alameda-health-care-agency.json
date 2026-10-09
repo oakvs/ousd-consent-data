@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://apps.acgov.org/health/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://health.alamedacountyca.gov/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-county-of-alameda-health-care-agency",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the agenda's 'County of Alameda Health Care Agency' (Health Care Services Agency) is a county agency, and its official county page uses that name.",
+      "Location matches: the agency's headquarters is at 1000 San Leandro Blvd., Suite 300, San Leandro, CA, which is the San Leandro location in the agenda.",
+      "Services match: the county page lists School Health among the agency's programs, which fits OUSD's 'Student health, support & family services' and 'School-Based Support Services' contracts.",
+      "The agenda's funding source is 'County of Alameda, Health Care Services Agency', which matches this agency."
+    ],
+    "key": "n-county-of-alameda-health-care-agency",
+    "notes": "This is a county public agency, not a nonprofit or company, so no EIN or California Secretary of State entity number applies. The legal name is left null because the legal contracting party is the County of Alameda. No general email was cited. The only public inbox found was a press office address (ACHealth-PIO@acgov.org), which is not a general contact address. The agency now brands itself 'Alameda County Health'. I could not confirm the SAM.gov UEI.",
+    "profile": {
+      "address": "1000 San Leandro Blvd., Suite 300, San Leandro, CA 94577",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Leandro, CA",
+      "legalName": null,
+      "orgType": "public_agency",
+      "phone": "(510) 618-3452",
+      "samUei": null,
+      "summary": "Alameda County Health, also called the Health Care Services Agency, is the county government agency for health services. Its departments include Behavioral Health, Public Health and the Office of the Agency Director, which covers School Health, health insurance enrollment help and indigent health care. It provides mental health, substance abuse and other health services to people in Alameda County.",
+      "website": "https://health.alamedacountyca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Health Care Services Agency - Alameda County's Official Website",
+        "url": "https://apps.acgov.org/health/"
+      },
+      {
+        "supports": [
+          "website"
+        ],
+        "title": "Contact Us - Alameda County Health",
+        "url": "https://health.alamedacountyca.gov/contact-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-county-of-alameda-health-care-agency",
+    "notes": "The official county page (apps.acgov.org/health) confirms the agency and its San Leandro address, the phone number (510) 618-3452, and divisions that include Behavioral Health (mental health and substance abuse services), Public Health and the Office of the Agency Director (School Health). These match the agenda's name, its San Leandro location and the school-based services OUSD contracts for. The contact page confirms health.alamedacountyca.gov as the current 'Alameda County Health' website, and the summary is neutral and backed by these sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

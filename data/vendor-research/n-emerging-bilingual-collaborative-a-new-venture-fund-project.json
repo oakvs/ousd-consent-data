@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/205806345/202243139349303999/full",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.newventurefund.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.newventurefund.org",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://earlyedgecalifornia.org/1-78-million-in-grants-awarded-to-support-the-learning-of-multilingual-students-in-california/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-emerging-bilingual-collaborative-a-new-venture-fund-project",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'Emerging Bilingual Collaborative, a New Venture Fund Project' in Washington, DC. New Venture Fund is a registered 501(c)(3) nonprofit in Washington, DC (ProPublica Nonprofit Explorer, EIN 20-5806345).",
+      "An Early Edge California page says the Emerging Bilingual Collaborative is a sponsored project of New Venture Fund. It also lists Oakland Unified School District among its grantees.",
+      "The collaborative's work (grants for English learner and multilingual instruction) matches OUSD's grant application for English Language Development instruction."
+    ],
+    "key": "n-emerging-bilingual-collaborative-a-new-venture-fund-project",
+    "notes": "The vendor is a project of New Venture Fund, a fiscal sponsor, so the profile describes the sponsoring nonprofit (the legal entity). The Emerging Bilingual Collaborative has no separate legal entity or registry ID that I found. The address was not shown on New Venture Fund's contact page, so it is null. I did not check the California Secretary of State or SAM.gov, so the entity number and UEI are null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "20-5806345",
+      "email": "info@newventurefund.org",
+      "headquarters": "Washington, DC",
+      "legalName": "New Venture Fund",
+      "orgType": "nonprofit",
+      "phone": "202-595-1061",
+      "samUei": null,
+      "summary": "New Venture Fund is a nonprofit based in Washington, DC. It acts as a fiscal sponsor, meaning it provides operational and administrative support to charitable projects run by change leaders and partners. The Emerging Bilingual Collaborative is one of its sponsored projects. That project makes grants to support the learning of multilingual students in California.",
+      "website": "https://newventurefund.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "New Venture Fund - Full Filing - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/205806345/202243139349303999/full"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "website"
+        ],
+        "title": "New Venture Fund - Contact Us",
+        "url": "https://www.newventurefund.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "website"
+        ],
+        "title": "New Venture Fund - Home",
+        "url": "https://www.newventurefund.org"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "$1.78 Million in Grants Awarded to Support the Learning of Multilingual Students in California - Early Edge California",
+        "url": "https://earlyedgecalifornia.org/1-78-million-in-grants-awarded-to-support-the-learning-of-multilingual-students-in-california/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-emerging-bilingual-collaborative-a-new-venture-fund-project",
+    "notes": "The Early Edge California release says the Emerging Bilingual Collaborative is a sponsored project of New Venture Fund and lists Oakland Unified among its grantees for multilingual-learner work. ProPublica lists New Venture Fund in Washington, DC with EIN 20-5806345 and a tax exemption, and NVF's own pages show the fiscal-sponsorship model, the general phone number and info@ email. The summary is neutral and supported, though 'administrative' is a slight paraphrase of the site's 'operational expertise and support'.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

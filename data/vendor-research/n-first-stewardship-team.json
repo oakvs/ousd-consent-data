@@ -1,0 +1,116 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.firstinspires.org/about/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/22-2990908",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.manchester-chamber.org/list/member/first-2236",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-first-stewardship-team",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'FIRST Stewardship Team' in Manchester, NH. FIRST (For Inspiration and Recognition of Science and Technology) is headquartered at 200 Bedford Street, Manchester, NH. GuideStar, Charity Navigator and FIRST's own site all show this.",
+      "The agenda item is a 'FIRST Robotics Team Sponsorship' grant for a high school Linked Learning program. FIRST runs the FIRST Robotics Competition, and its site lists team grants (e.g. 'Sponsoring Team Grants').",
+      "FIRST's own contact page and GuideStar give the same legal name, EIN 22-2990908 and headquarters address, so these independent sources agree."
+    ],
+    "key": "n-first-stewardship-team",
+    "notes": "Phone is from the Manchester Chamber of Commerce listing, not FIRST's own site. No general email was found on a fetched page, so email is null. California Secretary of State and SAM.gov IDs were not checked, since FIRST is a New Hampshire-based nonprofit. The match to OUSD rests on the name, the Manchester location and the robotics sponsorship grant. I did not find a page that mentions OUSD directly.",
+    "profile": {
+      "address": "200 Bedford Street, Manchester, NH 03101",
+      "caEntityNumber": null,
+      "ein": "22-2990908",
+      "email": null,
+      "headquarters": "Manchester, NH",
+      "legalName": "For Inspiration and Recognition of Science and Technology (FIRST)",
+      "orgType": "nonprofit",
+      "phone": "(603) 666-3906",
+      "samUei": null,
+      "summary": "FIRST is a nonprofit youth robotics organization. It runs robotics programs and competitions for students, including the FIRST Robotics Competition, FIRST Tech Challenge and FIRST LEGO League. The programs aim to build students' skills in science, technology, engineering and math. FIRST also offers grants to support robotics teams.",
+      "website": "https://www.firstinspires.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "address",
+          "headquarters",
+          "ein",
+          "website",
+          "orgType"
+        ],
+        "title": "Contact Support - FIRST Inspires",
+        "url": "https://www.firstinspires.org/about/contact-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "address",
+          "headquarters",
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "For Inspiration and Recognition of Science and Technology (FIRST) - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/22-2990908"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "FIRST - Manchester Chamber of Commerce",
+        "url": "https://business.manchester-chamber.org/list/member/first-2236"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-first-stewardship-team",
+    "notes": "This is the same organization: the agenda's Manchester, NH location and robotics team sponsorship grant match FIRST, which GuideStar lists at 200 Bedford St, Manchester, NH, with EIN 22-2990908 and website firstinspires.org, and the Manchester Chamber listing shows the phone number. The cited contact-us page wouldn't load, and the claim that FIRST offers grants isn't in any cited source, but I confirmed it on FIRST's own 'Sponsoring Team Grants' page; GuideStar supports the rest of the neutral summary.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
