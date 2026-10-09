@@ -1,0 +1,104 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.shawlaw.org/contact/post",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.shawlaw.org/home",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.prismrisk.gov/coverages/property-casualty/primary-workers-compensation/facts/attorney-listing/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-shaw-jacobsmeyer-crain-and-claffey-law-firm",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: the firm's own website (shawlaw.org) is for Shaw, Jacobsmeyer, Crain & Claffey, a firm that defends workers' compensation claims for employers.",
+      "Location: the firm's main office is at 475 14th Street in Oakland, CA, the same city as OUSD. Several legal directories list the same Oakland address and phone number.",
+      "Service fit: the work (workers' compensation defense) matches a Risk Management Fund 67 contract handled by the General Counsel.",
+      "The PRISM public-agency risk pool lists the firm in its workers' compensation attorney directory. The listing notes education-code work and an Oakland address on 14th Street."
+    ],
+    "key": "n-shaw-jacobsmeyer-crain-and-claffey-law-firm",
+    "notes": "I did not check the CA Secretary of State, SAM.gov or IRS registries, so there are no registry IDs. The firm's own website uses slightly different names: 'Shaw, Jacobsmeyer, Crain, Claffey & Nix, LLP' in the contact page footer, and 'Crain and Claffey LLP' in the home page description. The agenda uses 'Shaw, Jacobsmeyer, Crain & Claffey Law Firm', so a reviewer may want to confirm the exact legal name with the CA Secretary of State. The general email address is hidden by the site's email-protection script, so email is left null. Directories disagree on the Oakland suite number (230, 500 and 850), so I used the firm's own contact page. I found no page that directly names OUSD as a client.",
+    "profile": {
+      "address": "475 14th Street Suite 230, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Shaw, Jacobsmeyer, Crain, Claffey & Nix, LLP",
+      "orgType": "company",
+      "phone": "(510) 645-7172",
+      "samUei": null,
+      "summary": "A California law firm that defends employers, insurance carriers and claims administrators in workers' compensation cases. It also handles related matters such as subrogation and offers training programs for its clients. It has offices in Oakland, San Francisco and Beverly Hills.",
+      "website": "https://www.shawlaw.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Workers Compensation Law - Contact",
+        "url": "https://www.shawlaw.org/contact/post"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Workers' Compensation Law - Home",
+        "url": "https://www.shawlaw.org/home"
+      },
+      {
+        "supports": [],
+        "title": "PRISM Primary Workers' Compensation Attorney Listing",
+        "url": "https://www.prismrisk.gov/coverages/property-casualty/primary-workers-compensation/facts/attorney-listing/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-shaw-jacobsmeyer-crain-and-claffey-law-firm",
+    "notes": "This is the right firm. Shaw, Jacobsmeyer, Crain & Claffey is an Oakland workers' compensation defense firm at 475 14th St (Ste. 230, phone (510) 645-7172), and the PRISM public-agency attorney list also names it for Ed Code work, which fits a Risk Management Fund 67 contract handled by General Counsel. I'm dropping legalName because the firm's own site gives conflicting names ('...Crain, Claffey & Nix, LLP' in the contact-page footer vs. 'Crain and Claffey LLP' on the home page) and no registry was checked. The summary is neutral and supported: the home page shows the practice areas and training programs, and the contact page lists the Oakland, San Francisco and Beverly Hills offices.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://sisc.kern.org/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.casbo.org/buyers-guide/self-insured-schools-of-california-sisc/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-self-insured-schools-of-california",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'Self Insured Schools of California' in Bakersfield, CA. The organization's own site, sisc.kern.org, shows a Bakersfield address at 2000 K Street.",
+      "The agenda item is a 'Participation Agreement - Dental Plan Administration - Self-Insured Schools of California (SISC III)'. SISC runs health benefit and insurance programs for school districts, and the CASBO directory describes SISC III Health Benefits.",
+      "SISC calls itself a Joint Powers Authority (a public agency formed by several public bodies) administered by the Kern County Superintendent of Schools Office. That fits a school-district participation agreement."
+    ],
+    "key": "n-self-insured-schools-of-california",
+    "notes": "SISC is a public Joint Powers Authority, so it has no IRS EIN or California Secretary of State entity number that I could find, and I did not find a SAM.gov UEI. The only general email I found was a named person's address, so I left email null. The site also lists a mailing address of P.O. Box 1847, Bakersfield, CA 93303-1847. The State Controller's page on the related SISC I entity could not be fetched.",
+    "profile": {
+      "address": "2000 K Street Bakersfield, CA 93301",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Bakersfield, CA",
+      "legalName": "Self-Insured Schools of California",
+      "orgType": "public_agency",
+      "phone": "661-636-4710",
+      "samUei": null,
+      "summary": "Self-Insured Schools of California (SISC) is a Joint Powers Authority, a public agency formed by school bodies, that is administered by the Kern County Superintendent of Schools Office. It provides insurance and benefit programs, including health coverage, to California school districts and related employers. Its motto is \"Schools Helping Schools.\"",
+      "website": "https://sisc.kern.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us | SISC - Self-Insured Schools of California",
+        "url": "https://sisc.kern.org/contact-us/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Self-Insured Schools of California (SISC) - California Association of School Business Officials",
+        "url": "https://www.casbo.org/buyers-guide/self-insured-schools-of-california-sisc/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-self-insured-schools-of-california",
+    "notes": "This is the right organization. SISC's own contact page confirms its name, its Bakersfield address at 2000 K Street, the phone number 661-636-4710, that it is a Joint Powers Authority administered by the Kern County Superintendent of Schools Office, and its 'Schools Helping Schools' motto, and the CASBO listing confirms it provides health benefits to member districts, which fits OUSD's SISC III dental participation agreement. The summary is neutral and mostly supported, though its mention of 'related employers' goes slightly beyond what the sources say, since they only refer to member districts and their employees.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

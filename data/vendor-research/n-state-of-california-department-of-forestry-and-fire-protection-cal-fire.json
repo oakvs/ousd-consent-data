@@ -1,0 +1,90 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.fire.ca.gov/about/resources/cal-fire-contacts",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/California_Department_of_Forestry_and_Fire_Protection",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-state-of-california-department-of-forestry-and-fire-protection-cal-fire",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the vendor as the State of California Department of Forestry and Fire Protection (CAL FIRE). That matches the state agency described on fire.ca.gov and Wikipedia.",
+      "CAL FIRE's Urban and Community Forestry green schoolyards grant applications list (seen in search results) names Oakland Unified School District's Oakland Living Schoolyards project. This matches the agenda's grant award and amendments for the Oakland Living Schoolyards Implementation Project.",
+      "The agency is a state department, so a state grant to a school district for schoolyard greening and construction fits the agenda's 'School buildings & construction' category."
+    ],
+    "key": "n-state-of-california-department-of-forestry-and-fire-protection-cal-fire",
+    "notes": "CAL FIRE is a state agency, so it has no EIN, California Secretary of State entity number or SAM.gov UEI in the sources checked, and those fields are null. The contact page lists only department-specific inboxes, no general inbox, so email is null. The phone number is the Sacramento headquarters line. I did not cite the OUSD Living Schoolyards partners page, because it does not mention CAL FIRE. The grant-list PDF that links CAL FIRE to the OUSD project could not be fetched because its URL was too long, so it is not cited.",
+    "profile": {
+      "address": "715 P St, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Forestry and Fire Protection",
+      "orgType": "public_agency",
+      "phone": "916-653-5123",
+      "samUei": null,
+      "summary": "CAL FIRE is a California state agency, part of the California Natural Resources Agency. It provides fire protection and emergency services and manages state forest lands. It also runs grant programs, including urban and community forestry grants.",
+      "website": "https://www.fire.ca.gov"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "CAL FIRE Contacts",
+        "url": "https://www.fire.ca.gov/about/resources/cal-fire-contacts"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "California Department of Forestry and Fire Protection - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/California_Department_of_Forestry_and_Fire_Protection"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-state-of-california-department-of-forestry-and-fire-protection-cal-fire",
+    "notes": "The agenda names the state agency CAL FIRE outright, and a state schoolyard-greening grant to OUSD matches CAL FIRE's Urban and Community Forestry grant program. The CAL FIRE contacts page shows the Sacramento headquarters at 715 P St with phone 916-653-5123 and links to the grant programs, and Wikipedia supports the agency description, its place in the Natural Resources Agency and its management of state forests.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
