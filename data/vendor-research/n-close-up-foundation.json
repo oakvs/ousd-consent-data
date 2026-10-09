@@ -1,0 +1,120 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.closeup.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/23-7122882",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.closeup.org/program-faqs/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-close-up-foundation",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the registered nonprofit 'Close Up Foundation' (GuideStar profile, EIN 23-7122882)",
+      "Close Up Foundation runs student civic-education trips to Washington, D.C., matching the agenda item 'Student Travel - Washington DC - Life Academy' and the 'Classroom & academic programs' category",
+      "The organization's website says it holds California seller-of-travel registration, so it sells student travel in California",
+      "The agenda gives no city, so there is no location conflict. The organization is national and serves schools nationwide."
+    ],
+    "key": "n-close-up-foundation",
+    "notes": "I did not check the California Secretary of State or SAM.gov registries, so the entity number and UEI are null. I did not find a page tying this vendor to Life Academy or OUSD directly. The match rests on the name and the Washington, D.C. student travel service. Other sites sometimes list the address as Alexandria, VA (an older address), but the organization's own site shows Arlington.",
+    "profile": {
+      "address": "671 N. Glebe Road, Suite 900, Arlington, VA 22203",
+      "caEntityNumber": null,
+      "ein": "23-7122882",
+      "email": "info@closeup.org",
+      "headquarters": "Arlington, VA",
+      "legalName": "Close Up Foundation",
+      "orgType": "nonprofit",
+      "phone": "703-706-3300",
+      "samUei": null,
+      "summary": "Close Up Foundation is a nonprofit, nonpartisan civic education organization founded in 1971. It runs student travel programs to Washington, D.C., and offers classroom resources and professional development for teachers. Its goal is to help young people become informed and engaged citizens.",
+      "website": "https://www.closeup.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Washington DC Student Programs & Resources | Close Up Foundation",
+        "url": "https://www.closeup.org/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType",
+          "summary"
+        ],
+        "title": "Close Up Foundation - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/23-7122882"
+      },
+      {
+        "supports": [
+          "ein",
+          "email",
+          "address"
+        ],
+        "title": "Close Up Foundation Program FAQ's for Educators",
+        "url": "https://www.closeup.org/program-faqs/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-close-up-foundation",
+    "notes": "This is the same organization OUSD contracts with. Close Up Foundation is the national nonprofit that runs student civic-education trips to Washington, D.C., and that fits the Life Academy student travel item. Its site also shows California seller-of-travel registration CST-1002082-40. The cited sources confirm every field: GuideStar and the FAQ page give EIN 23-7122882, a 1971 start, and nonprofit, nonpartisan status, and the site shows the Arlington, VA address, the 703-706-3300 phone number and the info@closeup.org general inbox. The summary is neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
