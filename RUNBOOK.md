@@ -128,7 +128,7 @@ Also set a monthly spend limit on the Anthropic API key itself, in the Claude Co
 
 ### Subscriber emails
 
-When a meeting's summaries are all in (or the meeting starts within a day and at least some are), the `Subscriber emails` step schedules one Listmonk campaign named `consent-<meeting key>` for 20 minutes later, so the site rebuild lands first. An existing campaign with that name means the meeting was already announced, so a meeting is never emailed twice; to resend, delete or rename its campaign in Listmonk. Without the Listmonk secrets the step only logs what it would send. Preview with `npx tsx pipeline/cli.ts announce --dry-run`.
+When a meeting's summaries are all in (or the meeting starts within a day and at least some are), the `Subscriber emails` step schedules one Listmonk campaign named `consent-<meeting key>` for 20 minutes later, so the site rebuild lands first. An existing campaign with that name means the meeting was already announced, so a meeting is never emailed twice; to resend, delete or rename its campaign in Listmonk. Every run first reads the subscriber list with the API credentials and logs it (`Listmonk OK at …: list "OUSD Consent Report" (public, double opt-in, N subscribers)`), so a wrong URL, token or list id fails the step and alerts right away. Without the Listmonk secrets the step only logs what it would send. Preview with `npx tsx pipeline/cli.ts announce --dry-run`.
 
 ## Mirrors, releases and archives
 

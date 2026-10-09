@@ -107,6 +107,18 @@ async function api<T>(cfg: TListmonkConfig, method: string, route: string, body:
   return json?.data as T
 }
 
+export type TListInfo = { name: string; type: string; optin: string; subscribers: number }
+
+/**
+ * The subscriber list, read with the API credentials. Run on every announce, so a wrong URL,
+ * token or list id fails the step (and alerts) right away, not on the day an email is due.
+ */
+export async function checkList(cfg: TListmonkConfig, doFetch: TFetch = fetch): Promise<TListInfo> {
+  const list = await api<{ name?: string; type?: string; optin?: string; subscriber_count?: number }>(cfg, 'GET', `/lists/${cfg.listId}`, undefined, doFetch)
+  if (!list?.name) throw new Error(`Listmonk list ${cfg.listId} not found`)
+  return { name: list.name, type: list.type ?? '?', optin: list.optin ?? '?', subscribers: list.subscriber_count ?? 0 }
+}
+
 /** Has this meeting already been announced (a campaign with its exact name exists)? */
 export async function campaignExists(cfg: TListmonkConfig, name: string, doFetch: TFetch = fetch): Promise<boolean> {
   const data = await api<{ results?: { name: string }[] }>(cfg, 'GET', `/campaigns?query=${encodeURIComponent(name)}&per_page=all`, undefined, doFetch)
@@ -137,6 +149,11 @@ export async function announceReady(options: TAnnounceOptions = {}): Promise<str
   const now = options.now ?? new Date()
   const cfg = options.config === undefined ? listmonkConfig() : options.config
   const doFetch = options.fetch ?? fetch
+  if (cfg && !options.dryRun) {
+    const list = await checkList(cfg, doFetch)
+    console.log(`Listmonk OK at ${cfg.url}: list "${list.name}" (${list.type}, ${list.optin} opt-in, ${plural(list.subscribers, 'subscriber')})`)
+    if (list.optin !== 'double') console.log(`warning: list "${list.name}" is not double opt-in`)
+  }
   const index = JSON.parse(await readFile(path.join(paths.published, 'index.json'), 'utf8')) as TIndexFile
   const ready = index.meetings.filter(m => isReady(m, now))
   const scheduled: string[] = []

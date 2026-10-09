@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { campaignExists, campaignName, isReady, listmonkConfig, renderEmail, scheduleCampaign } from '../ops/announce'
+import { campaignExists, campaignName, checkList, isReady, listmonkConfig, renderEmail, scheduleCampaign } from '../ops/announce'
 
 import type { TListmonkConfig } from '../ops/announce'
 import type { TIndexEntry } from '@oakvs/consent-schema/schema'
@@ -100,6 +100,17 @@ describe('Listmonk calls', () => {
     expect(requests[0].body).toMatchObject({ name: 'consent-2026-10-14', lists: [7], type: 'regular', content_type: 'html', send_at: '2026-10-11T20:20:00Z' })
     expect(requests[1].body).toEqual({ status: 'scheduled' })
     expect(requests[0].auth).toBe(`Basic ${Buffer.from('bot:t').toString('base64')}`)
+  })
+
+  it('checks the list with the API credentials, and fails on a missing list or bad credentials', async () => {
+    const urls: string[] = []
+    const ok = (async (url: string) => (urls.push(url), reply({ id: 7, name: 'OUSD Consent Report', type: 'public', optin: 'double', subscriber_count: 12 }))) as typeof fetch
+    expect(await checkList(cfg, ok)).toEqual({ name: 'OUSD Consent Report', type: 'public', optin: 'double', subscribers: 12 })
+    expect(urls).toEqual(['https://lists.example.org/api/lists/7'])
+    const missing = (async () => reply(null)) as unknown as typeof fetch
+    await expect(checkList(cfg, missing)).rejects.toThrow('list 7 not found')
+    const denied = (async () => new Response(JSON.stringify({ message: 'invalid API credentials' }), { status: 403 })) as unknown as typeof fetch
+    await expect(checkList(cfg, denied)).rejects.toThrow('HTTP 403 (invalid API credentials)')
   })
 
   it('reports Listmonk errors with the status and message', async () => {
