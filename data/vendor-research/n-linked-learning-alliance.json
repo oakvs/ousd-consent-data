@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/473798868",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://linkedlearning.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.linkedlearning.org/about/linked-learning-alliance",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-linked-learning-alliance",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'Linked Learning Alliance', San Francisco, CA (ProPublica Nonprofit Explorer, EIN 47-3798868)",
+      "Located in San Francisco, CA, matching the agenda text",
+      "The organization's website describes work on Linked Learning pathways and school-district supports. This matches OUSD's contract for a 'Linked Learning Secondary School Redesign Network Project' and its High School Linked Learning Office."
+    ],
+    "key": "n-linked-learning-alliance",
+    "notes": "No main phone number found on the organization's own pages; a third-party listing shows a number, but it was not used. The California Secretary of State entity number and SAM.gov UEI were not searched or found. The website's contact page lists 500 Washington St. (the current address); older listings show 730 Harrison St, San Francisco.",
+    "profile": {
+      "address": "500 Washington St., 8th Floor, San Francisco, CA 94111",
+      "caEntityNumber": null,
+      "ein": "47-3798868",
+      "email": "info@linkedlearning.org",
+      "headquarters": "San Francisco, CA",
+      "legalName": "Linked Learning Alliance",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "A nonprofit coalition based in San Francisco that works to connect young people to college, career and purpose through Linked Learning. It sets quality standards and certifies Linked Learning pathways. It also hosts forums for schools, colleges and employers, and advocates for related education and workforce policies.",
+      "website": "https://www.linkedlearning.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Linked Learning Alliance - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/473798868"
+      },
+      {
+        "supports": [
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us | Linked Learning Alliance",
+        "url": "https://linkedlearning.org/contact/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About the Linked Learning Alliance",
+        "url": "https://www.linkedlearning.org/about/linked-learning-alliance"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-linked-learning-alliance",
+    "notes": "This is the same organization OUSD contracts with. ProPublica lists Linked Learning Alliance in San Francisco, CA as a 501(c)(3) with EIN 47-3798868, which matches the agenda's San Francisco location and the Linked Learning network MOU, and its contact and about pages show the 500 Washington St. address, the info@ email, and the mission, standards, certification, forums and advocacy work described in the summary. One small caveat: no source uses the word 'coalition', but it's a fair, neutral reading of 'Alliance' and doesn't affect the verdict.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

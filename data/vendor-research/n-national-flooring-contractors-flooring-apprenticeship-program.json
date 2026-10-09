@@ -1,0 +1,125 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/845127230",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.nfcap.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/84-5127230",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://members.fcica.com/commercialflooringresourceguide/Details/national-flooring-contractors-apprenticeship-program-nfcap-2021515",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-national-flooring-contractors-flooring-apprenticeship-program",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit: 'National Flooring Contractors Apprenticeship Program Inc' (ProPublica Nonprofit Explorer, EIN 84-5127230). The agenda's version adds the word 'Flooring' before 'Apprenticeship'.",
+      "Registry and the organization's website both place it in Miami, FL (223 E Flagler St), matching the agenda's 'Miami, FL'.",
+      "The organization runs flooring-trade apprenticeship training, which fits an Oakland Adult and Career Education services agreement under 'Classroom & academic programs'. OUSD's Oakland Adult and Career Education also lists a Floor Covering trade pre-apprenticeship.",
+      "Its NFCAP acronym matches the acronym in the OUSD agenda title."
+    ],
+    "key": "n-national-flooring-contractors-flooring-apprenticeship-program",
+    "notes": "The agenda name differs slightly from the registered name: the agenda says 'Flooring Apprenticeship Program', while the registry says 'Apprenticeship Program'. I found no public page that explicitly links NFCAP to OUSD, so the match rests on name, location and program type. The phone number comes from a trade-association directory (FCICA), not NFCAP's own site. The only email on nfcap.org is a named person's address, so I left email null. No California entity number or SAM UEI was found. The org is a Florida nonprofit and I did not check Sunbiz.",
+    "profile": {
+      "address": "223 East Flagler St. #502a, Miami, FL 33131",
+      "caEntityNumber": null,
+      "ein": "84-5127230",
+      "email": null,
+      "headquarters": "Miami, FL",
+      "legalName": "National Flooring Contractors Apprenticeship Program Inc",
+      "orgType": "nonprofit",
+      "phone": "(305) 972-2232",
+      "samUei": null,
+      "summary": "A nonprofit based in Miami, Florida, that trains apprentices for careers in the flooring industry. Its program offers training and job placement, and it aims to help graduates start their own flooring companies.",
+      "website": "https://www.nfcap.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "National Flooring Contractors Apprenticeship Program Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/845127230"
+      },
+      {
+        "supports": [
+          "website",
+          "address",
+          "headquarters",
+          "summary"
+        ],
+        "title": "NFCAP website",
+        "url": "https://www.nfcap.org/"
+      },
+      {
+        "supports": [
+          "summary",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "National Flooring Contractors Apprenticeship Program Inc - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/84-5127230"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters"
+        ],
+        "title": "National Flooring Contractors Apprenticeship Program (NFCAP) - FCICA",
+        "url": "https://members.fcica.com/commercialflooringresourceguide/Details/national-flooring-contractors-apprenticeship-program-nfcap-2021515"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-national-flooring-contractors-flooring-apprenticeship-program",
+    "notes": "This is the same organization: its name, the NFCAP acronym, the Miami, FL location and its flooring-apprenticeship training all match the OUSD agenda's no-cost Adult and Career Education agreement. The cited sources back every field. ProPublica confirms the legal name, EIN 84-5127230, 501(c)(3) status and Miami. GuideStar and nfcap.org confirm the address and the summary's points on training, job placement and starting one's own flooring company. The FCICA directory lists the business phone (305) 972-2232. The summary is neutral and leaves out the named person's email.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

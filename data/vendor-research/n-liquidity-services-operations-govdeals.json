@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://liquidityservices.com/company/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://liquidityservices.com/marketplace/govdeals",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://blog.govdeals.com/is-govdeals-legit-everything-you-need-to-know-before-you-bid",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-liquidity-services-operations-govdeals",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "The agenda names 'Liquidity Services Operations LLC (GovDeals, Inc.)' and gives Bethesda, MD. Liquidity Services' own contact page lists its headquarters at 6931 Arlington Road in Bethesda, MD.",
+      "Liquidity Services' website has a GovDeals Marketplace page, so GovDeals is a Liquidity Services brand. A GovDeals blog post says Liquidity Services acquired GovDeals in 2012.",
+      "GovDeals runs online surplus auctions for government and school agencies. That matches the contract for 'Auctioneer Services' paid from a percentage of sales proceeds."
+    ],
+    "key": "n-liquidity-services-operations-govdeals",
+    "notes": "I could not confirm the exact legal entity 'Liquidity Services Operations LLC' on any page I could fetch. A Vermont registration on OpenCorporates and a Dun & Bradstreet profile showed the name at 6931 Arlington Rd Ste 200, Bethesda, but those pages could not be read, so legalName is null. The phone, email and address are for the parent company, Liquidity Services, Inc. The LLC is its subsidiary and appears to share that headquarters. The suite number differs between sources (460 on the company site, 200 in directories). I did not look up an EIN, California entity number or SAM.gov UEI. GovDeals' own Montgomery, AL office is a separate location. A reviewer should check the legal entity and the contact details before publishing.",
+    "profile": {
+      "address": "6931 Arlington Road Suite 460, Bethesda, MD 20814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "Info@LiquidityServices.com",
+      "headquarters": "Bethesda, MD",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "1-800-310-4604",
+      "samUei": null,
+      "summary": "GovDeals is an online marketplace where government agencies, school districts and other public bodies sell surplus and used assets, such as vehicles and equipment, through auctions. It is part of Liquidity Services, a company in Bethesda, Maryland that runs online marketplaces for surplus goods.",
+      "website": "https://www.govdeals.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Liquidity Services",
+        "url": "https://liquidityservices.com/company/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "GovDeals Marketplace | Liquidity Services",
+        "url": "https://liquidityservices.com/marketplace/govdeals"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Is GovDeals Legit? Everything You Need to Know Before You Bid",
+        "url": "https://blog.govdeals.com/is-govdeals-legit-everything-you-need-to-know-before-you-bid"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": null
+}
