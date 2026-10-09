@@ -1,0 +1,110 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://govtribe.com/vendors/cellco-partnership-verizon-wireless-1hwu7",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.verizon.com/support/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://en.wikipedia.org/wiki/Verizon_(wireless_service)",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"samUei\" failed to load",
+      "field": "samUei",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-cellco-partnership-verizon-wireless",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda names 'Cellco Partnership dba Verizon Wireless', and the case caption (State of California ex rel. OnTheGo Wireless, LLC v. Cellco Partnership dba Verizon Wireless) uses the same legal name. The vendor is a defendant paying a class action settlement award, not a service provider.",
+      "Federal SAM.gov registration data (via GovTribe) lists the registrant as 'Cellco Partnership' with UEI CK77N4SCAJD3, at 1 Verizon Way, Basking Ridge, NJ.",
+      "Wikipedia says Cellco Partnership trades as Verizon, formerly Verizon Wireless, and is a wireless carrier headquartered in Basking Ridge, NJ. This fits the wireless-telecom litigation in the case title."
+    ],
+    "key": "n-cellco-partnership-verizon-wireless",
+    "notes": "The agenda lists no city. The match rests on the exact legal name and the case caption. The phone number is Verizon's consumer customer-service line, not a dedicated corporate line, and no general corporate email was found. The California Secretary of State entity number was not looked up, so it is null. The UEI and address come from GovTribe, which mirrors SAM.gov, rather than from SAM.gov directly. The phone appears on the page as 1.800.922.0204.",
+    "profile": {
+      "address": "1 Verizon Way, Basking Ridge, NJ 07920",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Basking Ridge, NJ",
+      "legalName": "Cellco Partnership",
+      "orgType": "company",
+      "phone": "1.800.922.0204",
+      "samUei": "CK77N4SCAJD3",
+      "summary": "Cellco Partnership does business as Verizon Wireless, now branded Verizon. It is a wireless network operator in the United States that provides mobile phone and wireless broadband service. It is a subsidiary of Verizon Communications.",
+      "website": "https://www.verizon.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "samUei",
+          "address",
+          "headquarters",
+          "website",
+          "orgType"
+        ],
+        "title": "Cellco Partnership (UEI CK77N4SCAJD3) - GovTribe",
+        "url": "https://govtribe.com/vendors/cellco-partnership-verizon-wireless-1hwu7"
+      },
+      {
+        "supports": [
+          "phone",
+          "website"
+        ],
+        "title": "Contact us - Verizon",
+        "url": "https://www.verizon.com/support/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Verizon (wireless service) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Verizon_(wireless_service)"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-cellco-partnership-verizon-wireless",
+    "notes": "The agenda's case caption uses the exact legal name Cellco Partnership dba Verizon Wireless. GovTribe confirms UEI CK77N4SCAJD3, 1 Verizon Way in Basking Ridge, NJ 07920, and the verizon.com website. Wikipedia supports the neutral summary (trades as Verizon, mobile and wireless broadband service, parent Verizon Communications), and the Verizon contact page lists 1.800.922.0204 as its general customer-service line.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

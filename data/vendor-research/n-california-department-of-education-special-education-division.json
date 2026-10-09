@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.cde.ca.gov/sp/se/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cde.ca.gov/SchoolDirectory/details?cdscode=34103486069520",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.cde.ca.gov/sp/se/wrkabltyI.asp",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-department-of-education-special-education-division",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches the Special Education Division of the California Department of Education, a state agency in Sacramento, CA. Its page is at cde.ca.gov/sp/se/.",
+      "The agenda item is a WorkAbility 1 Program Grant for OUSD's Special Education Department. The CDE Special Education site hosts the WorkAbility I program page, so the program and the division match.",
+      "The agenda lists California Department of Education as the funding source, which matches the state agency's role as grantor."
+    ],
+    "key": "n-california-department-of-education-special-education-division",
+    "notes": "This is a state government agency, so it has no EIN, California Secretary of State entity number or SAM UEI. Those fields are null. The email is null because the division's general inbox could not be verified on the cited page when it was checked. The address is the department's main address from the CDE School Directory page. The division's own suite (Suite 2401) appeared only on pages that could not be fetched, so it is left out. The phone number is the one on the division's page, not the department's main line.",
+    "profile": {
+      "address": "1430 N Street, Sacramento, CA 95814",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Sacramento, CA",
+      "legalName": "California Department of Education",
+      "orgType": "public_agency",
+      "phone": "916-445-4613",
+      "samUei": null,
+      "summary": "The Special Education Division is part of the California Department of Education, the state agency for public schools. It provides information and resources to serve students with disabilities. It also oversees programs such as WorkAbility I, a transition program for students in special education.",
+      "website": "https://www.cde.ca.gov/sp/se/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "summary",
+          "orgType"
+        ],
+        "title": "Special Education - Specialized Programs (CA Dept of Education)",
+        "url": "https://www.cde.ca.gov/sp/se/"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Special Education - School Directory Details (CA Dept of Education)",
+        "url": "https://www.cde.ca.gov/SchoolDirectory/details?cdscode=34103486069520"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "WorkAbility I: A California Transition Program - Special Education (CA Dept of Education)",
+        "url": "https://www.cde.ca.gov/sp/se/wrkabltyI.asp"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-california-department-of-education-special-education-division",
+    "notes": "This is the right organization: OUSD's WorkAbility I grant comes from the CDE, and the CDE's WorkAbility I page says the CDE funds and administers the program. The CDE Special Education page shows the website, the division phone number 916-445-4613 and the disability-services description, so the neutral summary holds up. One caution: the School Directory source is the wrong entity. It's a closed Sacramento County Office of Education entry for a school called 'Special Education' in Mather, CA. The CDE's 1430 N Street, Sacramento address appears only in that page's site footer, so the address and headquarters are accurate but were cited from a poor source.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cep.berkeley.edu/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cep.berkeley.edu/our-purpose",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://cep.berkeley.edu/trio_ub/schools",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-center-for-educational-partnerships",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Center for Educational Partnerships' is a department of UC Berkeley's Division of Student Affairs (cep.berkeley.edu).",
+      "Located in Berkeley, CA (1 Hearst Field Annex, Building C), matching the agenda location.",
+      "CEP's own site lists Oakland Unified School District high schools (Castlemont, Fremont, McClymonds, Oakland High, Oakland Tech, Skyline) as schools served by its Upward Bound program. This fits a 'High School Network' services agreement with OUSD.",
+      "Its mission, college-access outreach to K-12 students and educators, fits the 'Classroom & academic programs' category and a no-cost services and data-sharing agreement."
+    ],
+    "key": "n-center-for-educational-partnerships",
+    "notes": "CEP is a campus department of UC Berkeley, not a separate legal entity. The contracting legal party is probably The Regents of the University of California, so the department has no separate EIN, California entity number or SAM UEI, and those are left null. The address is copied as the contact page shows it.",
+    "profile": {
+      "address": "1 Hearst Field Annex, Building C Berkeley, CA 94720-1060",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "edpartnerships@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Center for Educational Partnerships",
+      "orgType": "public_agency",
+      "phone": "(510) 642-6680",
+      "samUei": null,
+      "summary": "The Center for Educational Partnerships (CEP) is a department of UC Berkeley's Division of Student Affairs. Since 1984 it has worked to increase access to higher education through outreach and engagement with K-14 students, families and educators, including programs for high school and community college students.",
+      "website": "https://cep.berkeley.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website",
+          "orgType"
+        ],
+        "title": "Contact Us | Center for Educational Partnerships",
+        "url": "https://cep.berkeley.edu/contact-us"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "About CEP | Center for Educational Partnerships",
+        "url": "https://cep.berkeley.edu/our-purpose"
+      },
+      {
+        "supports": [],
+        "title": "Schools served by UB | Center for Educational Partnerships",
+        "url": "https://cep.berkeley.edu/trio_ub/schools"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-center-for-educational-partnerships",
+    "notes": "CEP's own pages show it is a UC Berkeley Division of Student Affairs unit in Berkeley that has worked on college access with K-14 students since 1984. Its Upward Bound program serves six OUSD high schools, which fits the agenda's High School Network agreement, and the phone, email, address and website all appear on the cited pages. I dropped legalName because CEP is a campus department, not a separate legal entity; the actual contracting party is likely The Regents of the University of California.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}
