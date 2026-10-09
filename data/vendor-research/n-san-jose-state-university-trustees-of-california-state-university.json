@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.sjsu.edu/teachered/academics/pk-3/pathways_options.php",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.wscuc.org/institutions/san-jose-state-university/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://catalog.csun.edu/about/trustees/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.calstate.edu/csu-system/board-of-trustees/Pages/about-the-bot.aspx",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-san-jose-state-university-trustees-of-california-state-university",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names San Jose State University as a campus of the Trustees of the California State University. SJSU's official pages show it is a public CSU campus at One Washington Square, San Jose, CA.",
+      "SJSU's Department of Teacher Education runs intern teacher credential pathways with partner school districts. This matches the OUSD memorandum of understanding for an 'Intern Partnership and Practica Program - K12 Teaching'.",
+      "The CSU Board of Trustees is the governing body of the California State University, which matches the 'Trustees of the California State University' contracting name. The CSUN catalog page lists the trustees under that name."
+    ],
+    "key": "n-san-jose-state-university-trustees-of-california-state-university",
+    "notes": "SJSU is a campus of the CSU system, so the legal contracting entity is the Trustees of the California State University, a public agency. It has no IRS EIN or SAM UEI that I checked, and I did not look up a California Secretary of State entity number. I found no general email address on a fetched page, so email is null. I found no page tying SJSU to OUSD specifically, so the match rests on the name and the program type. The address is copied as written on the SJSU page ('San José'), without the ZIP+4 shown on other SJSU pages.",
+    "profile": {
+      "address": "One Washington Square, San José, CA 95192",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Jose, CA",
+      "legalName": "Trustees of the California State University",
+      "orgType": "public_agency",
+      "phone": "408-924-1000",
+      "samUei": null,
+      "summary": "San José State University is a public university in San Jose, California, and one of the campuses of the California State University system. It offers undergraduate and graduate degrees, including teacher credential programs that place intern teachers in partner school districts. The California State University Board of Trustees governs the system.",
+      "website": "https://www.sjsu.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "summary",
+          "website",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Pathways + Options - SJSU Teacher Education",
+        "url": "https://www.sjsu.edu/teachered/academics/pk-3/pathways_options.php"
+      },
+      {
+        "supports": [
+          "phone",
+          "headquarters",
+          "website"
+        ],
+        "title": "San Jose State University - WSCUC",
+        "url": "https://www.wscuc.org/institutions/san-jose-state-university/"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "Trustees of the California State University",
+        "url": "https://catalog.csun.edu/about/trustees/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About the Board of Trustees",
+        "url": "https://www.calstate.edu/csu-system/board-of-trustees/Pages/about-the-bot.aspx"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-san-jose-state-university-trustees-of-california-state-university",
+    "notes": "This is the same organization: SJSU is a public CSU campus that runs intern and residency credential pathways with local school districts, which matches OUSD's K-12 intern and practica agreement. The SJSU page, WSCUC listing, CSUN catalog and CSU trustees page confirm the legal name, public status, degree levels, address, phone, website and headquarters. One wording issue: the summary says SJSU places intern teachers, but SJSU's page says intern candidates find their own teaching jobs with partner-district support; this is minor and the summary is otherwise supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

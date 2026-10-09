@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://ucanr.edu/county/alameda-county-cooperative-extension",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://ucanr.edu/county/alameda-county-cooperative-extension/contact-us",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucop.edu/research-policy-analysis-coordination/resources-tools/ucop-contracts-and-grants-team/commonly-needed-information.html",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://ucanr.edu/site/division-agriculture-and-natural-resources/locations",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-uc-agriculture-and-natural-resources-uc-cooperative-extension-alameda-county",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names The Regents of the University of California, acting for UC Agriculture and Natural Resources and UC Cooperative Extension (UCCE) - Alameda County. The UCOP page gives the same legal name, 'The Regents of the University of California', and the ucanr.edu Alameda County page describes UCCE Alameda as the local arm of UC Agriculture and Natural Resources.",
+      "The agenda gives Oakland, CA. The Regents' official mailing address is in Oakland (1111 Franklin St), and UC Agriculture and Natural Resources lists a second office at that same address. UCCE Alameda serves Alameda County, which includes Oakland.",
+      "The UCCE Alameda page describes nutrition, health and youth programs, which fits OUSD's 'Student health, support & family services' category. It also mentions a playground stenciling program with the Oakland Unified School District."
+    ],
+    "key": "n-regents-of-university-of-california-uc-agriculture-and-natural-resources-uc-cooperative-extension-alameda-county",
+    "notes": "The vendor is the Regents of the University of California, contracting for UC Agriculture and Natural Resources and UCCE Alameda County. The EIN is the Regents' EIN, as listed by UCOP. The address is the UCCE Alameda County office in Hayward, taken from its contact page. The headquarters city is the Regents' UCOP location in Oakland. I left phone and email null because the contact page lists only named staff members' lines and addresses, not a general line or inbox. I left caEntityNumber and samUei null: the California Secretary of State certificate PDF could not be read as text, and I did not search SAM.gov. I could not open the UCCE blog post about the OUSD playground stencils. The OUSD mention comes from the county page.",
+    "profile": {
+      "address": "224 W Winton Ave, Suite 134, Hayward, CA 94544",
+      "caEntityNumber": null,
+      "ein": "94-3067788",
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "The Regents of the University of California",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "The Regents of the University of California is the public body that governs the University of California system. UC Cooperative Extension Alameda County is the local outreach arm of UC Agriculture and Natural Resources. It runs community programs in nutrition and health, youth development, gardening, and agriculture and natural resources.",
+      "website": "https://ucanr.edu/county/alameda-county-cooperative-extension"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "orgType"
+        ],
+        "title": "Alameda County Cooperative Extension",
+        "url": "https://ucanr.edu/county/alameda-county-cooperative-extension"
+      },
+      {
+        "supports": [
+          "address"
+        ],
+        "title": "Contact Us - Alameda County Cooperative Extension",
+        "url": "https://ucanr.edu/county/alameda-county-cooperative-extension/contact-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Organizational Information | UCOP",
+        "url": "https://www.ucop.edu/research-policy-analysis-coordination/resources-tools/ucop-contracts-and-grants-team/commonly-needed-information.html"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Locations - UC Agriculture and Natural Resources",
+        "url": "https://ucanr.edu/site/division-agriculture-and-natural-resources/locations"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-regents-of-university-of-california-uc-agriculture-and-natural-resources-uc-cooperative-extension-alameda-county",
+    "notes": "This is the organization OUSD contracts with. UCOP lists the legal name 'The Regents of the University of California', EIN 94-3067788 and an Oakland office at 1111 Franklin St. The UCCE Alameda page names an OUSD playground stenciling partnership, and its nutrition and youth programs fit the contract category. The contact page shows the Hayward address, and the summary is neutral and supported, except for the general fact that the Regents govern the UC system, which no cited page states.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
