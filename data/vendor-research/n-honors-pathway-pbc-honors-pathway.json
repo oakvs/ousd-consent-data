@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.newswire.com/news/honors-pathways-dual-enrollment-program-expanded-to-all-high-school-21144338",
+      "pass": true
+    },
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.microcollege.info/additional-details/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.yellowpages.com/oakland-ca/mip/honors-pathway-559250814",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 404",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-honors-pathway-pbc-honors-pathway",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches: a press release issued by 'Honors Pathway, PBC' / 'Honors Pathway, Inc.' says it is headquartered in Oakland, CA. This matches the agenda's 'Honors Pathway, PBC dba Honors Pathway, Inc.' and its Oakland location.",
+      "Program match: the press release says Honors Pathway runs MicroCollege, a dual-enrollment first-year-of-college program for high school seniors. The OUSD agenda item is a 'Microcollege Program' Memorandum of Understanding, which fits OUSD's 'Classroom & academic programs' category.",
+      "The MicroCollege website (microcollege.info) lists 'Honors Pathway, Inc.' at 1111 Broadway, 3rd Fl, Oakland, CA 94607 and links to honorspathway.org. A business directory lists the same Broadway address and website."
+    ],
+    "key": "n-honors-pathway-pbc-honors-pathway",
+    "notes": "I could not open the California Secretary of State, SAM.gov or IRS registries, or honorspathway.org itself, so the entity number, UEI and EIN are null. The organization is a public benefit corporation, not a 501(c)(3) nonprofit, so it probably has no EIN on ProPublica. I found only directory and press-release phone numbers and a named person's email, so phone and email are null. The 'PBC' legal name comes from a press release and should be checked against the Secretary of State record. I did not confirm that Oakland Promise partners with Honors Pathway.",
+    "profile": {
+      "address": "1111 Broadway, Oakland, CA 94607",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Honors Pathway, PBC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Honors Pathway is a public benefit corporation based in Oakland, California. It helps students move from high school to college and into professional careers. It partners with public school districts and universities on dual-enrollment programs such as MicroCollege, where high school seniors can earn a year of college credit.",
+      "website": "https://www.honorspathway.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "Honors Pathway's Dual Enrollment Program Expanded to All High School Seniors in Sonoma County Districts",
+        "url": "https://www.newswire.com/news/honors-pathways-dual-enrollment-program-expanded-to-all-high-school-21144338"
+      },
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "Additional Details",
+        "url": "https://www.microcollege.info/additional-details/"
+      },
+      {
+        "supports": [
+          "address",
+          "website",
+          "headquarters"
+        ],
+        "title": "Honors Pathway - Oakland, CA 94607",
+        "url": "https://www.yellowpages.com/oakland-ca/mip/honors-pathway-559250814"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-honors-pathway-pbc-honors-pathway",
+    "notes": "The Newswire release names 'Honors Pathway, PBC' (source: Honors Pathway, Inc.), says it is based in Oakland, gives www.honorspathway.org as its website, and says it runs MicroCollege with public school districts and universities. This matches the agenda's legal name, the Oakland location and the Microcollege MOU. Yellow Pages confirms the address at 1111 Broadway, Oakland 94607, and the summary is neutral and supported by these sources.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

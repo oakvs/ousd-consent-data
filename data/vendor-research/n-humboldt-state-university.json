@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.humboldt.edu/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://humboldt.edu/polytechnic",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.humboldt.edu/education",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-humboldt-state-university",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Humboldt State University' matches the former name of California State Polytechnic University, Humboldt (Cal Poly Humboldt), renamed on January 26, 2022 (humboldt.edu/polytechnic)",
+      "The university's School of Education offers K-12 teacher credential programs (Multiple Subject, Single Subject), matching the MOU for intern partnership and practica programs in K-12 teaching",
+      "The agenda gives no location, so there is no conflict with Arcata, CA. The MOU is a staff and hiring agreement with a university education program, and that fits a public university."
+    ],
+    "key": "n-humboldt-state-university",
+    "notes": "Humboldt State University was renamed Cal Poly Humboldt in 2022, and the agenda uses the old name. Registry IDs (EIN, California entity number, SAM UEI) were not looked up, so they are null. The general contact page lists several office-specific emails and no general inbox, so email is null. I did not find an OUSD-specific page naming Humboldt, so identity rests on the name change and the education program match. orgType is 'public_agency' because it is a California State University campus.",
+    "profile": {
+      "address": "1 Harpst Street, Arcata, CA 95521",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Arcata, CA",
+      "legalName": "California State Polytechnic University, Humboldt",
+      "orgType": "public_agency",
+      "phone": "(707) 826-3011",
+      "samUei": null,
+      "summary": "Cal Poly Humboldt, formerly Humboldt State University, is a public polytechnic university in Arcata, California. It is part of the California State University system. Its School of Education runs undergraduate, graduate and teaching credential programs.",
+      "website": "https://www.humboldt.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact",
+        "url": "https://www.humboldt.edu/contact"
+      },
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType"
+        ],
+        "title": "Humboldt State University is now Cal Poly Humboldt",
+        "url": "https://humboldt.edu/polytechnic"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "School of Education | Cal Poly Humboldt",
+        "url": "https://www.humboldt.edu/education"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-08",
+  "review": {
+    "key": "n-humboldt-state-university",
+    "notes": "Only one university was ever named Humboldt State University. The cited polytechnic page confirms it became Cal Poly Humboldt on January 26, 2022, and that the change was approved by the CSU Board of Trustees. The contact page shows the legal name, 1 Harpst Street, Arcata, CA 95521 and (707) 826-3011, and the School of Education page confirms its undergraduate, graduate and credential programs, which match OUSD's teaching intern and practica MOU. The summary is neutral, though the sources only imply rather than state outright that it is a public CSU campus.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
