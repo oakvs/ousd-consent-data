@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import { campaignExists, campaignName, checkList, isReady, listmonkConfig, renderEmail, scheduleCampaign } from '../ops/announce'
+import { campaignExists, campaignName, checkList, isReady, listmonkConfig, listmonkConfigProblems, renderEmail, scheduleCampaign } from '../ops/announce'
 
 import type { TListmonkConfig } from '../ops/announce'
 import type { TIndexEntry } from '@oakvs/consent-schema/schema'
@@ -67,6 +67,18 @@ describe('listmonkConfig', () => {
     expect(listmonkConfig(env)).toEqual({ url: 'https://lists.example.org', user: 'bot', token: 't', listId: 7 })
     expect(listmonkConfig({ ...env, LISTMONK_CONSENT_LIST_ID: 'abc' })).toBeNull()
     expect(listmonkConfig({ ...env, LISTMONK_API_TOKEN: '' })).toBeNull()
+  })
+})
+
+describe('listmonkConfigProblems', () => {
+  it('names what is missing or malformed, never the values', () => {
+    const env = { LISTMONK_URL: 'https://listmonk.example.org', LISTMONK_API_USER: 'bot', LISTMONK_API_TOKEN: 'secret-token', LISTMONK_CONSENT_LIST_ID: '4e99214a-bf27-4e81-a8f8-dc5d9f6d551c' }
+    const problems = listmonkConfigProblems(env)
+    expect(problems).toEqual(["LISTMONK_CONSENT_LIST_ID must be the list's numeric id (Listmonk → Lists, the ID column), not its UUID"])
+    expect(problems.join(' ')).not.toContain('secret-token')
+    expect(listmonkConfigProblems({ ...env, LISTMONK_CONSENT_LIST_ID: '3' })).toEqual([])
+    expect(listmonkConfigProblems({ ...env, LISTMONK_URL: 'listmonk.example.org', LISTMONK_CONSENT_LIST_ID: '3' })).toEqual(['LISTMONK_URL must start with https://'])
+    expect(listmonkConfigProblems({})).toHaveLength(4)
   })
 })
 

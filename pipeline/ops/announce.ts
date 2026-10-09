@@ -91,6 +91,20 @@ export function listmonkConfig(env: NodeJS.ProcessEnv = process.env): TListmonkC
   return { url: LISTMONK_URL.replace(/\/$/, ''), user: LISTMONK_API_USER, token: LISTMONK_API_TOKEN, listId }
 }
 
+/** What's missing or malformed in the Listmonk settings, by name only (never the values). */
+export function listmonkConfigProblems(env: NodeJS.ProcessEnv = process.env): string[] {
+  const problems: string[] = []
+  for (const name of ['LISTMONK_URL', 'LISTMONK_API_USER', 'LISTMONK_API_TOKEN', 'LISTMONK_CONSENT_LIST_ID'] as const) {
+    if (!env[name]) problems.push(`${name} is not set`)
+  }
+  if (env.LISTMONK_URL && !/^https?:\/\//.test(env.LISTMONK_URL)) problems.push('LISTMONK_URL must start with https://')
+  const id = env.LISTMONK_CONSENT_LIST_ID
+  if (id && !(Number.isInteger(Number(id)) && Number(id) > 0)) {
+    problems.push(`LISTMONK_CONSENT_LIST_ID must be the list's numeric id (Listmonk → Lists, the ID column)${/^[0-9a-f-]{36}$/i.test(id.trim()) ? ', not its UUID' : ''}`)
+  }
+  return problems
+}
+
 type TFetch = typeof fetch
 
 async function api<T>(cfg: TListmonkConfig, method: string, route: string, body: unknown, doFetch: TFetch): Promise<T> {
@@ -149,6 +163,13 @@ export async function announceReady(options: TAnnounceOptions = {}): Promise<str
   const now = options.now ?? new Date()
   const cfg = options.config === undefined ? listmonkConfig() : options.config
   const doFetch = options.fetch ?? fetch
+  if (!cfg && options.config === undefined) {
+    const problems = listmonkConfigProblems()
+    const partly = problems.length < 4 || problems.some(p => !p.endsWith('is not set'))
+    console.log(`Listmonk not configured${partly ? ` (${problems.join('; ')})` : ''}; emails are only logged`)
+    // Some settings present but wrong is a mistake, not a choice: fail so the run alerts.
+    if (partly && !options.dryRun) throw new Error(`Listmonk settings incomplete: ${problems.join('; ')}`)
+  }
   if (cfg && !options.dryRun) {
     const list = await checkList(cfg, doFetch)
     console.log(`Listmonk OK at ${cfg.url}: list "${list.name}" (${list.type}, ${list.optin} opt-in, ${plural(list.subscribers, 'subscriber')})`)
