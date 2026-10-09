@@ -1,0 +1,85 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/264312908",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.openhood.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-openhood",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c) nonprofit, 'Openhood Inc' (also known as Open Hood), EIN 26-4312908, per ProPublica Nonprofit Explorer and GuideStar",
+      "The organization's own site (openhood.org) calls it Open'hood, a nonprofit that makes documentary films with a current focus on Oakland, CA. This matches the agenda's 'Open'Hood Inc.' and 'Oakland, CA'.",
+      "The agreement is a 'Filming Access Agreement' handled by OUSD Communications. That fits a film and media nonprofit, whose Oakland-set documentaries include 'Homeroom', about Oakland schools.",
+      "The MacArthur Foundation grantee page lists OpenHood in Oakland, California, with the website www.openhood.org"
+    ],
+    "key": "n-openhood",
+    "notes": "The IRS and GuideStar list the mailing address as Piedmont, CA. Nextdoor and ZoomInfo list 1904 Franklin St, Oakland, and a phone number, but the organization's own pages did not show them. Address, phone, email and headquarters are therefore left null. The California Secretary of State and SAM.gov were not checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "26-4312908",
+      "email": null,
+      "headquarters": null,
+      "legalName": "Openhood Inc",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Open'hood is a nonprofit founded in 2009 that makes documentary film, television and digital storytelling projects. Its work explores large social issues such as health care, criminal justice and education through personal stories. Its current focus is the communities of Oakland, CA.",
+      "website": "https://www.openhood.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType"
+        ],
+        "title": "Openhood Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/264312908"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About — Open'Hood",
+        "url": "https://www.openhood.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-openhood",
+    "notes": "ProPublica lists Openhood Inc (EIN 26-4312908) as a 501(c)(3) film and video nonprofit in Piedmont, CA, which borders Oakland. The organization's own About page supports the summary: founded in 2009, makes film, TV and digital storytelling projects on issues like health care, criminal justice and education, and currently focuses on Oakland, CA. That fits a filming access agreement with OUSD Communications.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

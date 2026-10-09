@@ -1,0 +1,89 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.peralta.edu/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sites.google.com/ousd.org/ousddualenrollment/home",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-peralta-colleges-district",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Agenda name 'Peralta Colleges District' and the CCAP (College and Career Access Pathways) agreements match Peralta Community College District (PCCD), the public community college district for northern Alameda County. Its own site, peralta.edu, uses the 'Peralta Colleges' branding.",
+      "An OUSD Dual Enrollment page says OUSD and Peralta Community College District have partnered since 2015. It says Peralta College courses are offered to OUSD high school students, which matches the CCAP dual-enrollment agreements.",
+      "The district is headquartered at 333 East Eighth Street in Oakland, CA, the same city as OUSD. Its colleges are Laney, Merritt, College of Alameda and Berkeley City College."
+    ],
+    "key": "n-peralta-colleges-district",
+    "notes": "Public community college district (a government agency), so no EIN or California Secretary of State entity number applies. I did not look up a SAM.gov UEI. No general email was found on the pages checked, so email is null. The agenda gave no location; the match rests on the name, the CCAP dual-enrollment subject matter and the OUSD partnership page. The agenda says 'Peralta Colleges District'. The legal name is Peralta Community College District, as shown in the agenda's official titles.",
+    "profile": {
+      "address": "333 East Eighth Street, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Peralta Community College District",
+      "orgType": "public_agency",
+      "phone": "(510) 466-7200",
+      "samUei": null,
+      "summary": "A public community college district serving northern Alameda County. It was founded in 1964 and includes Berkeley City College, College of Alameda, Laney College and Merritt College. The colleges offer two-year degrees, certificates and university transfer programs.",
+      "website": "https://www.peralta.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "About the Peralta Community College District",
+        "url": "https://www.peralta.edu/about"
+      },
+      {
+        "supports": [],
+        "title": "OUSD Dual Enrollment",
+        "url": "https://sites.google.com/ousd.org/ousddualenrollment/home"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-09",
+  "review": {
+    "key": "n-peralta-colleges-district",
+    "notes": "This is the right organization: the OUSD Dual Enrollment page shows OUSD has partnered with Peralta Community College District since fall 2015, which fits the CCAP agreements. The peralta.edu/about page supports every profile field: the 1964 founding, the four colleges in northern Alameda County, the degree, certificate and transfer programs, and the address and phone at 333 East Eighth Street, Oakland, CA 94606, (510) 466-7200.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
