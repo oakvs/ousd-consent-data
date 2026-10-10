@@ -1,6 +1,6 @@
-import { describe, expect, it } from 'vitest'
+import { beforeAll, describe, expect, it } from 'vitest'
 
-import { announceTest, campaignExists, campaignName, checkList, isReady, listmonkConfig, listmonkConfigProblems, renderEmail, scheduleCampaign } from '../ops/announce'
+import { RETRY, announceReady, announceTest, campaignName, checkList, findCampaigns, isAnnounced, isReady, listmonkConfig, listmonkConfigProblems, renderEmail, scheduleCampaign } from '../ops/announce'
 
 import type { TListmonkConfig } from '../ops/announce'
 import type { TIndexEntry } from '@oakvs/consent-schema/schema'
@@ -26,6 +26,11 @@ const meeting = (over: Partial<TIndexEntry> = {}): TIndexEntry => ({
 
 // Sunday Oct 11, 2026, 1 p.m. in Oakland: three days before a 4 p.m. Wednesday meeting.
 const SUNDAY = new Date('2026-10-11T20:00:00Z')
+
+beforeAll(() => {
+  RETRY.delaysMs = [0, 0]
+  RETRY.sleep = async () => undefined
+})
 
 describe('isReady', () => {
   it('sends once every item has a summary, before the meeting', () => {
@@ -86,15 +91,39 @@ describe('Listmonk calls', () => {
   const cfg: TListmonkConfig = { url: 'https://lists.example.org', user: 'bot', token: 't', listId: 7 }
   const reply = (data: unknown, status = 200): Response => new Response(JSON.stringify({ data }), { status })
 
-  it('treats an exact name match as already announced', async () => {
+  it('finds campaigns by exact name; only a campaign past draft counts as announced', async () => {
     const calls: string[] = []
     const fake = (async (url: string) => {
       calls.push(url)
-      return reply({ results: [{ name: 'consent-2026-10-14-special' }, { name: campaignName('2026-10-14') }] })
+      return reply({ results: [{ id: 1, name: 'consent-2026-10-14-special', status: 'finished' }, { id: 2, name: campaignName('2026-10-14'), status: 'draft' }] })
     }) as typeof fetch
-    expect(await campaignExists(cfg, campaignName('2026-10-14'), fake)).toBe(true)
-    expect(await campaignExists(cfg, campaignName('2026-10-28'), fake)).toBe(false)
+    const found = await findCampaigns(cfg, campaignName('2026-10-14'), fake)
+    expect(found).toEqual([{ id: 2, name: 'consent-2026-10-14', status: 'draft' }])
     expect(calls[0]).toBe('https://lists.example.org/api/campaigns?query=consent-2026-10-14&per_page=all')
+    expect(isAnnounced(found)).toBe(false)
+    for (const status of ['scheduled', 'running', 'finished', 'paused', 'cancelled']) expect(isAnnounced([{ id: 3, name: 'x', status }])).toBe(true)
+  })
+
+  it('retries a connection failure or a 5xx, but not a 4xx', async () => {
+    let tries = 0
+    const flaky = (async () => {
+      tries++
+      if (tries === 1) throw new TypeError('fetch failed')
+      if (tries === 2) return new Response('{}', { status: 502 })
+      return reply({ name: 'OUSD Consent Report', type: 'public', optin: 'double', subscriber_count: 2 })
+    }) as unknown as typeof fetch
+    expect((await checkList(cfg, flaky)).name).toBe('OUSD Consent Report')
+    expect(tries).toBe(3)
+
+    tries = 0
+    const down = (async () => { tries++; throw new TypeError('fetch failed') }) as unknown as typeof fetch
+    await expect(checkList(cfg, down)).rejects.toThrow('Listmonk GET /lists/7: fetch failed (after 3 tries)')
+    expect(tries).toBe(3)
+
+    tries = 0
+    const denied = (async () => { tries++; return new Response(JSON.stringify({ message: 'forbidden' }), { status: 403 }) }) as unknown as typeof fetch
+    await expect(checkList(cfg, denied)).rejects.toThrow('HTTP 403')
+    expect(tries).toBe(1)
   })
 
   it('creates a draft for the list, then schedules it', async () => {
@@ -164,5 +193,54 @@ describe('announce --test', () => {
     const stuck = listmonk([{ status: 'paused', sent: 0 }])
     await expect(announceTest({ key: '2026-09-23', config: cfg, fetch: stuck, sleep: async () => undefined })).rejects.toThrow('ended as "paused" with 0 sent')
     await expect(announceTest({ key: '2026-09-23', config: cfg, fetch: listmonk([], 0), sleep: async () => undefined })).rejects.toThrow('no subscribers')
+  })
+})
+
+describe('announce: failures between creating and scheduling', () => {
+  const cfg: TListmonkConfig = { url: 'https://lists.example.org', user: 'bot', token: 't', listId: 7 }
+  const reply = (data: unknown): Response => new Response(JSON.stringify({ data }), { status: 200 })
+  // The day before the Sept 23 meeting, whose summaries are all in.
+  const BEFORE = new Date('2026-09-22T19:00:00Z')
+
+  type TCall = { method: string; url: string; body: Record<string, unknown> | null }
+  function listmonk(campaigns: { id: number; name: string; status: string }[], opts: { postFails?: 'lost-reply' } = {}): typeof fetch & { calls: TCall[] } {
+    const calls: TCall[] = []
+    const fake = (async (url: string, init: RequestInit) => {
+      const method = init.method ?? 'GET'
+      calls.push({ method, url: url.replace('https://lists.example.org/api', ''), body: init.body ? JSON.parse(init.body as string) : null })
+      if (url.endsWith('/lists/7')) return reply({ name: 'OUSD Consent Report', type: 'public', optin: 'double', subscriber_count: 2 })
+      if (url.includes('/campaigns?query=')) return reply({ results: campaigns })
+      if (method === 'POST') {
+        // The server creates the campaign, but the reply never arrives.
+        campaigns.push({ id: 41, name: 'consent-2026-09-23', status: 'draft' })
+        if (opts.postFails) throw new TypeError('fetch failed')
+        return reply({ id: 41 })
+      }
+      return reply(true)
+    }) as typeof fetch & { calls: TCall[] }
+    fake.calls = calls
+    return fake
+  }
+  const writes = (calls: TCall[]): string[] => calls.filter(c => c.method !== 'GET').map(c => `${c.method} ${c.url}`)
+
+  it('schedules a draft that an earlier run left behind, instead of treating it as sent', async () => {
+    const fake = listmonk([{ id: 5, name: 'consent-2026-09-23', status: 'draft' }])
+    expect(await announceReady({ now: BEFORE, config: cfg, fetch: fake })).toEqual(['2026-09-23'])
+    expect(writes(fake.calls)).toEqual(['PUT /campaigns/5', 'PUT /campaigns/5/status'])
+    expect(fake.calls.find(c => c.url === '/campaigns/5')!.body).toMatchObject({ name: 'consent-2026-09-23', lists: [7], send_at: '2026-09-22T19:20:00Z' })
+  })
+
+  it('leaves a meeting alone once its campaign is scheduled, sent, or stopped by a person', async () => {
+    for (const status of ['scheduled', 'finished', 'cancelled']) {
+      const fake = listmonk([{ id: 5, name: 'consent-2026-09-23', status }])
+      expect(await announceReady({ now: BEFORE, config: cfg, fetch: fake })).toEqual([])
+      expect(writes(fake.calls)).toEqual([])
+    }
+  })
+
+  it('when the reply to creating a campaign is lost, finds the new draft and schedules it, without a second campaign', async () => {
+    const fake = listmonk([], { postFails: 'lost-reply' })
+    expect(await announceReady({ now: BEFORE, config: cfg, fetch: fake })).toEqual(['2026-09-23'])
+    expect(writes(fake.calls)).toEqual(['POST /campaigns', 'PUT /campaigns/41', 'PUT /campaigns/41/status'])
   })
 })

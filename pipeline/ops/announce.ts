@@ -107,18 +107,43 @@ export function listmonkConfigProblems(env: NodeJS.ProcessEnv = process.env): st
 
 type TFetch = typeof fetch
 
-async function api<T>(cfg: TListmonkConfig, method: string, route: string, body: unknown, doFetch: TFetch): Promise<T> {
-  const res = await doFetch(`${cfg.url}/api${route}`, {
-    method,
-    headers: {
-      Authorization: `Basic ${Buffer.from(`${cfg.user}:${cfg.token}`).toString('base64')}`,
-      ...(body === undefined ? {} : { 'Content-Type': 'application/json' }),
-    },
-    body: body === undefined ? undefined : JSON.stringify(body),
-  })
-  const json = (await res.json().catch(() => null)) as { data?: T; message?: string } | null
-  if (!res.ok) throw new Error(`Listmonk ${method} ${route}: HTTP ${res.status}${json?.message ? ` (${json.message})` : ''}`)
-  return json?.data as T
+/**
+ * Retries for a call to Listmonk that couldn't connect, timed out, or got a 5xx or 429: a brief
+ * blip shouldn't fail the step (and alert). A 4xx is a real answer and isn't retried.
+ */
+export const RETRY = {
+  delaysMs: [2_000, 5_000],
+  sleep: (ms: number): Promise<void> => new Promise(resolve => setTimeout(resolve, ms)),
+}
+
+const retryable = (status: number): boolean => status >= 500 || status === 429
+
+async function api<T>(cfg: TListmonkConfig, method: string, route: string, body: unknown, doFetch: TFetch, { retry = true }: { retry?: boolean } = {}): Promise<T> {
+  const attempts = retry ? RETRY.delaysMs.length + 1 : 1
+  for (let attempt = 1; ; attempt++) {
+    let res: Response
+    try {
+      res = await doFetch(`${cfg.url}/api${route}`, {
+        method,
+        headers: {
+          Authorization: `Basic ${Buffer.from(`${cfg.user}:${cfg.token}`).toString('base64')}`,
+          ...(body === undefined ? {} : { 'Content-Type': 'application/json' }),
+        },
+        body: body === undefined ? undefined : JSON.stringify(body),
+      })
+    } catch (error) {
+      if (attempt >= attempts) throw new Error(`Listmonk ${method} ${route}: ${(error as Error).message}${attempts > 1 ? ` (after ${attempts} tries)` : ''}`, { cause: error })
+      await RETRY.sleep(RETRY.delaysMs[attempt - 1])
+      continue
+    }
+    if (retryable(res.status) && attempt < attempts) {
+      await RETRY.sleep(RETRY.delaysMs[attempt - 1])
+      continue
+    }
+    const json = (await res.json().catch(() => null)) as { data?: T; message?: string } | null
+    if (!res.ok) throw new Error(`Listmonk ${method} ${route}: HTTP ${res.status}${json?.message ? ` (${json.message})` : ''}`)
+    return json?.data as T
+  }
 }
 
 export type TListInfo = { name: string; type: string; optin: string; subscribers: number }
@@ -133,27 +158,64 @@ export async function checkList(cfg: TListmonkConfig, doFetch: TFetch = fetch): 
   return { name: list.name, type: list.type ?? '?', optin: list.optin ?? '?', subscribers: list.subscriber_count ?? 0 }
 }
 
-/** Has this meeting already been announced (a campaign with its exact name exists)? */
-export async function campaignExists(cfg: TListmonkConfig, name: string, doFetch: TFetch = fetch): Promise<boolean> {
-  const data = await api<{ results?: { name: string }[] }>(cfg, 'GET', `/campaigns?query=${encodeURIComponent(name)}&per_page=all`, undefined, doFetch)
-  return (data?.results ?? []).some(c => c.name === name)
+export type TCampaign = { id: number; name: string; status: string }
+
+/** Campaigns with exactly this name. */
+export async function findCampaigns(cfg: TListmonkConfig, name: string, doFetch: TFetch = fetch): Promise<TCampaign[]> {
+  const data = await api<{ results?: TCampaign[] }>(cfg, 'GET', `/campaigns?query=${encodeURIComponent(name)}&per_page=all`, undefined, doFetch)
+  return (data?.results ?? []).filter(c => c.name === name)
 }
 
-/** Create the campaign as a draft, then schedule it. Returns its id. */
-export async function scheduleCampaign(cfg: TListmonkConfig, name: string, email: TEmail, sendAt: Date, doFetch: TFetch = fetch, tags: string[] = ['consent-report']): Promise<number> {
-  const created = await api<{ id: number }>(cfg, 'POST', '/campaigns', {
-    name,
-    subject: email.subject,
-    lists: [cfg.listId],
-    type: 'regular',
-    content_type: 'html',
-    body: email.html,
-    altbody: email.text,
-    send_at: sendAt.toISOString().replace(/\.\d{3}Z$/, 'Z'),
-    tags,
-  }, doFetch)
-  await api(cfg, 'PUT', `/campaigns/${created.id}/status`, { status: 'scheduled' }, doFetch)
-  return created.id
+/**
+ * Was this meeting announced? Any campaign past draft counts: scheduled, running, finished, or
+ * paused or cancelled by a person (left alone). A draft alone doesn't: it's a run that created
+ * the campaign and failed before scheduling it, and the next run finishes it.
+ */
+export const isAnnounced = (campaigns: TCampaign[]): boolean => campaigns.some(c => c.status !== 'draft')
+
+const campaignFields = (cfg: TListmonkConfig, name: string, email: TEmail, sendAt: Date, tags: string[]): Record<string, unknown> => ({
+  name,
+  subject: email.subject,
+  lists: [cfg.listId],
+  type: 'regular',
+  content_type: 'html',
+  body: email.html,
+  altbody: email.text,
+  send_at: sendAt.toISOString().replace(/\.\d{3}Z$/, 'Z'),
+  tags,
+})
+
+/**
+ * Create the campaign (or refresh a leftover draft of it), then schedule it. Returns its id.
+ * Creating isn't retried blindly: if the first try's reply was lost, the campaign may exist
+ * already, so look for a draft with the name before trying again.
+ */
+export async function scheduleCampaign(
+  cfg: TListmonkConfig, name: string, email: TEmail, sendAt: Date, doFetch: TFetch = fetch,
+  tags: string[] = ['consent-report'], draftId: number | null = null,
+): Promise<number> {
+  const fields = campaignFields(cfg, name, email, sendAt, tags)
+  let id = draftId
+  if (id != null) {
+    await api(cfg, 'PUT', `/campaigns/${id}`, fields, doFetch)
+  } else {
+    try {
+      id = (await api<{ id: number }>(cfg, 'POST', '/campaigns', fields, doFetch, { retry: false })).id
+    } catch (error) {
+      const draft = (await findCampaigns(cfg, name, doFetch).catch(() => [])).find(c => c.status === 'draft')
+      if (draft) {
+        id = draft.id
+        await api(cfg, 'PUT', `/campaigns/${id}`, fields, doFetch)
+      } else if (/HTTP 4\d\d/.test((error as Error).message) && !/HTTP 429/.test((error as Error).message)) {
+        throw error
+      } else {
+        await RETRY.sleep(RETRY.delaysMs[0] ?? 0)
+        id = (await api<{ id: number }>(cfg, 'POST', '/campaigns', fields, doFetch)).id
+      }
+    }
+  }
+  await api(cfg, 'PUT', `/campaigns/${id}/status`, { status: 'scheduled' }, doFetch)
+  return id
 }
 
 export type TAnnounceOptions = { dryRun?: boolean; now?: Date; config?: TListmonkConfig | null; fetch?: TFetch }
@@ -186,12 +248,15 @@ export async function announceReady(options: TAnnounceOptions = {}): Promise<str
       console.log(`${options.dryRun ? '(dry run)' : '(Listmonk not configured)'} would announce ${m.key}\n  ${email.subject}\n\n${email.text}\n`)
       continue
     }
-    if (await campaignExists(cfg, name, doFetch)) {
-      console.log(`${m.key}: already announced`)
+    const existing = await findCampaigns(cfg, name, doFetch)
+    if (isAnnounced(existing)) {
+      console.log(`${m.key}: already announced (${existing.map(c => `campaign ${c.id} ${c.status}`).join(', ')})`)
       continue
     }
+    const draft = existing.find(c => c.status === 'draft') ?? null
+    if (draft) console.log(`${m.key}: finishing campaign ${draft.id}, left as a draft by an earlier run`)
     const sendAt = new Date(now.getTime() + SEND_DELAY_MINUTES * 60_000)
-    const id = await scheduleCampaign(cfg, name, email, sendAt, doFetch)
+    const id = await scheduleCampaign(cfg, name, email, sendAt, doFetch, ['consent-report'], draft?.id ?? null)
     scheduled.push(m.key)
     console.log(`${m.key}: campaign ${id} scheduled for ${sendAt.toISOString()}`)
     await sendNotice({
