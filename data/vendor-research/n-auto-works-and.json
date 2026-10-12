@@ -1,0 +1,68 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://autoworksandcompany.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-auto-works-and",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches: the company's website and Yelp listing use 'Auto Works & Company' / 'Auto Works and Company', the same name as in the agenda.",
+      "Located in Oakland, CA (3900 Foothill Blvd), matching the agenda location.",
+      "An auto body and collision repair shop is a plausible 'workplace training partner' for a high school career-pathway (ECCCO) program, but no page found links the shop to OUSD, so this signal is weak.",
+      "No California Secretary of State, SAM.gov or other registry record was found to confirm the legal entity."
+    ],
+    "key": "n-auto-works-and",
+    "notes": "Not publishable. I found no public registry record (CA Secretary of State, SAM.gov) and no page tying this shop to OUSD or its workplace training partner program. Identity rests on the name and the Oakland location. The address is copied exactly as the homepage shows it, without a ZIP code. Yelp and Yahoo Local listings give ZIP 94601, but I did not fetch them. The site's only email is a named person's address, so I left email null. Legal entity name, EIN, CA entity number and UEI are unknown. A reviewer should check the CA Secretary of State and the MOU to confirm that this shop is the contracting party.",
+    "profile": {
+      "address": "3900 Foothill Blvd, Oakland CA",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 842-8967",
+      "samUei": null,
+      "summary": "Auto Works & Company is an auto body and collision repair shop in Oakland, California. It offers collision repair, auto painting, glass replacement, detailing and free estimates for all makes and models. It says it has served Oakland and nearby areas for over 15 years.",
+      "website": "https://autoworksandcompany.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Trustworthy Auto Body Services | Collision Repair (Auto Works & Company)",
+        "url": "https://autoworksandcompany.com"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-11",
+  "review": null
+}

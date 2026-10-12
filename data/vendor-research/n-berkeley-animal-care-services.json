@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://berkeleyca.gov/community-recreation/animal-care-services",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://berkeleyca.gov/community-recreation/animal-care-services/animal-shelter",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://berkeleyca.gov/your-government/about-us/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-berkeley-animal-care-services",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'Berkeley Animal Care Services' is the City of Berkeley's municipal animal shelter and services division (berkeleyca.gov)",
+      "Located in Berkeley, CA (1 Bolivar Dr), matching the agenda location",
+      "The agenda item is an MOU naming it as a workplace training partner for a career-exploration program. An animal shelter fits that kind of work-based learning site. No public page was found that links it to OUSD directly."
+    ],
+    "key": "n-berkeley-animal-care-services",
+    "notes": "This is a division of the City of Berkeley, not a separate legal entity, so there is no separate EIN, California entity number or SAM UEI. The nonprofit 'Friends of Berkeley Animal Care Services' (friendsofbacs.org) is a different organization and was not used. The site's mailing address is the shelter street address.",
+    "profile": {
+      "address": "1 Bolivar Dr, Berkeley, CA 94710",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "animalservices@berkeleyca.gov",
+      "headquarters": "Berkeley, CA",
+      "legalName": "Berkeley Animal Care Services",
+      "orgType": "public_agency",
+      "phone": "(510) 981-6600",
+      "samUei": null,
+      "summary": "Berkeley Animal Care Services is the City of Berkeley's animal services division. It runs the municipal Berkeley Animal Shelter, helps stray and lost pets, and handles pet adoptions and pet licensing. It also enforces animal laws and rescues injured wildlife.",
+      "website": "https://berkeleyca.gov/community-recreation/animal-care-services"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Animal Care Services | City of Berkeley",
+        "url": "https://berkeleyca.gov/community-recreation/animal-care-services"
+      },
+      {
+        "supports": [
+          "address",
+          "phone",
+          "headquarters"
+        ],
+        "title": "Animal Shelter | City of Berkeley",
+        "url": "https://berkeleyca.gov/community-recreation/animal-care-services/animal-shelter"
+      },
+      {
+        "supports": [
+          "email",
+          "phone"
+        ],
+        "title": "Contact Us | City of Berkeley",
+        "url": "https://berkeleyca.gov/your-government/about-us/contact-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-11",
+  "review": {
+    "key": "n-berkeley-animal-care-services",
+    "notes": "Berkeley Animal Care Services is the City of Berkeley's animal services division at 1 Bolivar Dr, Berkeley. That matches the agenda's name and city, and an animal shelter is a reasonable workplace training site for the ECCCO program. The City of Berkeley pages support every field: the summary's services (stray and lost pets, adoptions, licensing, enforcing animal laws, wildlife rescue), the address and phone on the shelter page, and the general animalservices@ email and phone on the Contact Us page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
