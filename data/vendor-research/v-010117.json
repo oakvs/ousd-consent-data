@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.abmechanical.com/contact1/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.abmechanical.com/about-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010117",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The name matches: the agenda says 'A and B Mechanical, Inc.' and the company's website and the Northern California Mechanical Contractors Association (NCMCA) listing use 'A&B Mechanical Inc.'",
+      "The location matches: the website gives 2252 Railroad Ave, Livermore, CA 94550, and the agenda says Livermore, CA.",
+      "The trade matches: the company is a licensed commercial HVAC and boiler contractor (CSLB license 740508), and OUSD hired it for a school boiler replacement project.",
+      "Third-party listings (Blue Book, Yahoo Local) show the same Livermore business with the same website, abmechanical.com."
+    ],
+    "key": "v-010117",
+    "notes": "I did not check the California Secretary of State or SAM.gov registries, so the entity number and UEI are null. A nonprofit EIN does not apply. The contact page lists mostly named staff emails and a garbled 'General Information' address, so I left the email null instead of guessing. The BuildZoom listing shows a Hayward address for the same license, which I did not use. I found no page that mentions OUSD directly, so identity rests on the matching name, city and trade.",
+    "profile": {
+      "address": "2252 Railroad Ave, Livermore, CA 94550",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Livermore, CA",
+      "legalName": "A&B Mechanical Inc.",
+      "orgType": "company",
+      "phone": "1-866-502-4822",
+      "samUei": null,
+      "summary": "A&B Mechanical is a union-based, licensed and bonded heating, air conditioning and refrigeration (HVAC/R) contractor in Livermore, California. It designs, installs and maintains commercial and industrial HVAC and boiler systems for customers around the Bay Area. It offers 24/7 on-call service.",
+      "website": "https://www.abmechanical.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "A&B Mechanical Contact",
+        "url": "https://www.abmechanical.com/contact1/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "About A&B Mechanical",
+        "url": "https://www.abmechanical.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-11",
+  "review": {
+    "key": "v-010117",
+    "notes": "The company's contact and About pages give the name A&B Mechanical Inc., the address 2252 Railroad Ave in Livermore, the main number 1-866-502-4822 and CSLB license 740508, and they describe a union-based, licensed and bonded HVAC/R contractor in the Bay Area with 24/7 on-call service. The site also links to an HVAC/R & Boiler Compliance service page, and school-district prequalified-contractor lists show the same Livermore firm and license, which fits OUSD's boiler replacement contract. The summary is neutral, all non-null fields are supported, and the email was correctly left null instead of using staff emails.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

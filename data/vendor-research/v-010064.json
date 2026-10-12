@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/222962532",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.supportiveschools.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.supportiveschools.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010064",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches registered 501(c)(3) 'Center For Supportive Schools Inc' in Princeton, NJ (ProPublica Nonprofit Explorer, EIN 22-2962532), matching the agenda location Princeton, NJ",
+      "Organization's own website (supportiveschools.org) lists 911 Commons Way, Princeton, NJ and shows the same Tax ID 22-2962532 as the registry",
+      "Website describes school-improvement programs for students and teachers, consistent with OUSD's 'Classroom & academic programs' no-cost services agreement"
+    ],
+    "key": "v-010064",
+    "notes": "No California entity number or SAM UEI verified from a fetched page (a third-party site lists a UEI, not used). No explicit public page linking the organization to OUSD was found; identity rests on name, Princeton location, registry and website match.",
+    "profile": {
+      "address": "911 Commons Way, Princeton, NJ 08540",
+      "caEntityNumber": null,
+      "ein": "22-2962532",
+      "email": "hello@supportiveschools.org",
+      "headquarters": "Princeton, NJ",
+      "legalName": "Center For Supportive Schools Inc",
+      "orgType": "nonprofit",
+      "phone": "609-252-9300",
+      "samUei": null,
+      "summary": "A nonprofit based in Princeton, New Jersey, that works with schools across the country. Its programs aim to develop students as leaders, help teachers work together with each other and with students, and involve whole school communities in improving how learning happens.",
+      "website": "https://www.supportiveschools.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "ein",
+          "headquarters"
+        ],
+        "title": "Center For Supportive Schools Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/222962532"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact | Center for Supportive Schools",
+        "url": "https://www.supportiveschools.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "ein",
+          "address",
+          "phone",
+          "email"
+        ],
+        "title": "About Us | Center for Supportive Schools",
+        "url": "https://www.supportiveschools.org/about"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-11",
+  "review": {
+    "key": "v-010064",
+    "notes": "The name, the Princeton, NJ location, and the school-program services all match the OUSD record. The EIN 22-2962532 and 501(c)(3) status on ProPublica match the Tax ID shown on the organization's own site. I fetched all three cited sources: the address, phone, generic email and website come from the contact and about pages, and the neutral summary closely follows the about page's mission statement.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

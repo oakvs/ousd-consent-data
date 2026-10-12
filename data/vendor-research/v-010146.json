@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 404 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.charitynavigator.org/ein/932918074",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.projectshema.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.projectshema.org/k-12-schools",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"ein\" failed to load",
+      "field": "ein",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010146",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) charity: PROJECT SHEMA, EIN 93-2918074, headquartered in Lisle, IL (Charity Navigator). This matches the Lisle, IL location in the agenda.",
+      "The organization's own website describes training and support on antisemitism and Jewish inclusion, and has a K-12 Schools program page. This fits an OUSD General Counsel services agreement for classroom and academic programs.",
+      "Public profiles, including a Kim Funkhouser LinkedIn page that lists Lisle, show the organization operating in Lisle, IL."
+    ],
+    "key": "v-010146",
+    "notes": "The Charity Navigator page blocked automated fetching, so the EIN and address (taken from its search-result text) may be dropped at verification. The website shows its general email as 'info @ projectshema.org', with spaces, so the email is left null instead of reformatted. No phone number was found. The IRS registry address is in Lisle, IL, but LinkedIn and Idealist list Chicago, IL; Lisle is used because it matches the registry and the agenda. No California or SAM.gov registry entries were checked. No page found mentions OUSD directly.",
+    "profile": {
+      "address": "1042 MAPLE AVE, LISLE IL 60532-2329",
+      "caEntityNumber": null,
+      "ein": "93-2918074",
+      "email": null,
+      "headquarters": "Lisle, IL",
+      "legalName": "PROJECT SHEMA",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "Project Shema is a nonprofit training and support organization. It works to address antisemitism, including anti-Jewish ideas that can come up in conversations about Israel and Palestine. It offers programs and workshops for college campuses, mission-driven organizations and K-12 schools.",
+      "website": "https://www.projectshema.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "PROJECT SHEMA - Charity Navigator",
+        "url": "https://www.charitynavigator.org/ein/932918074"
+      },
+      {
+        "supports": [
+          "website",
+          "summary",
+          "orgType"
+        ],
+        "title": "Project Shema | Building Bridges and combatting antisemitism",
+        "url": "https://www.projectshema.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "K-12 Schools | Project Shema",
+        "url": "https://www.projectshema.org/k-12-schools"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-11",
+  "review": {
+    "key": "v-010146",
+    "notes": "Charity Navigator blocked direct fetching, but its indexed text at the cited URL shows PROJECT SHEMA as a 501(c)(3) with EIN 93-2918074 at 1042 Maple Ave, Lisle, IL. That matches the agenda's Lisle, IL, and the organization's own site, projectshema.org, describes antisemitism training for campuses, mission-driven organizations and K-12 schools, which fits a General Counsel services agreement. Every profile field, including the neutral summary, is supported by the cited sources, and the site's own news release confirms the organization is now an independent 501(c)(3) nonprofit.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
