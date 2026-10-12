@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.vspvision.com/utility/contact.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.vspvision.com/cms/about-us/home.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-vsp-vision-care",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "The agenda name 'VSP Vision Care' matches the VSP Vision Care brand of Vision Service Plan, which describes itself as a not-for-profit eye health company (vspvision.com About page).",
+      "VSP's business of eye care and vision benefits fits OUSD's 'Student health, support & family services' category and a Health Services no-cost services agreement.",
+      "The agenda lists San Francisco, CA, but VSP's published headquarters is Rancho Cordova, CA. VSP serves the whole nation, including the Bay Area, so this is a mismatch rather than a confirmation.",
+      "No registry record (ProPublica, California Secretary of State or SAM.gov) was confirmed, and no cited page ties VSP to OUSD."
+    ],
+    "key": "n-vsp-vision-care",
+    "notes": "Confidence is medium. The name matches, but the agenda location (San Francisco) differs from VSP's headquarters (Rancho Cordova), and I found no page linking VSP to this specific OUSD agreement. A reviewer should confirm that the contracting entity is Vision Service Plan / VSP Vision Care. I did not verify the EIN, California entity number or SAM UEI against a primary registry. The only EIN I found (94-1632821) came from a third-party aggregator, so I left it null. The phone shown is the corporate headquarters line from the VSP contact page. No general email address was listed, so email is null.",
+    "profile": {
+      "address": "3333 Quality Drive, Rancho Cordova, CA 95670",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Rancho Cordova, CA",
+      "legalName": "Vision Service Plan",
+      "orgType": "nonprofit",
+      "phone": "1 800-852-7600",
+      "samUei": null,
+      "summary": "VSP Vision Care is part of Vision Service Plan, which describes itself as a not-for-profit eye health company. It provides vision insurance and access to eye care and eyewear through a network of eye doctors. It also offers eyewear and practice services to eye care providers.",
+      "website": "https://www.vspvision.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "phone",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact VSP Vision",
+        "url": "https://www.vspvision.com/utility/contact.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About VSP Vision - Our Purpose",
+        "url": "https://www.vspvision.com/cms/about-us/home.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-11",
+  "review": null
+}
