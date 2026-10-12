@@ -1,0 +1,108 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/275008441",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://curyj.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://curyj.org/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010168",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered 501(c)(3) nonprofit in Oakland, CA: 'Communities United For Restorative Youth Justice' (ProPublica Nonprofit Explorer, EIN 27-5008441). The agenda text also says Oakland, CA.",
+      "The organization's own website (curyj.org) uses the same full name with the acronym CURYJ, matching the agenda's '(CURYJ)'. It lists a street address in Oakland, CA.",
+      "The website describes school-based violence prevention work, restorative justice circles and healing practices for youth. This fits OUSD's 'Student health, support & family services' contract for the Student Support & Safety Department."
+    ],
+    "key": "v-010168",
+    "notes": "Phone left null on purpose. The curyj.org footer shows two different numbers: 501-232-7230 (the 501 area code looks like a typo) and 510-842-9365. I could not tell which is the main line. The California Secretary of State entity number and the SAM.gov UEI were not checked or found, so both are null. The nonprofit's legal name is shown as written on ProPublica. The IRS name may also include 'dba CURYJ'.",
+    "profile": {
+      "address": "1150 35th Ave, Oakland, CA 94601",
+      "caEntityNumber": null,
+      "ein": "27-5008441",
+      "email": "help@curyj.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Communities United For Restorative Youth Justice",
+      "orgType": "nonprofit",
+      "phone": null,
+      "samUei": null,
+      "summary": "CURYJ is an Oakland nonprofit that has worked with young people since 2011. It runs programs on restorative justice, ethnic studies, life coaching, healing practices and violence prevention. It also organizes youth leaders on policy and community campaigns to end youth incarceration.",
+      "website": "https://curyj.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Communities United For Restorative Youth Justice - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/275008441"
+      },
+      {
+        "supports": [
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "CURYJ – Communities United for Restorative Youth Justice",
+        "url": "https://curyj.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "About Us - CURYJ",
+        "url": "https://curyj.org/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-11",
+  "review": {
+    "key": "v-010168",
+    "notes": "I checked the cited sources. ProPublica lists Communities United For Restorative Youth Justice as a 501(c)(3) in Oakland, CA (EIN 27-5008441), and curyj.org uses the same name and acronym, giving 1150 35th Ave, Oakland, CA 94601 and help@curyj.org, which is a general business inbox, not a person's address. The About page backs every part of the summary (work since 2011, ethnic studies, restorative justice circles, healing practices, life coaching, violence prevention, organizing to end youth incarceration), the wording is neutral, and the work fits OUSD's student support contract.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
