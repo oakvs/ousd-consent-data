@@ -45,7 +45,7 @@ import { historyPerRun, updateVendorHistories, vendorHistoriesDue } from '../leg
 import { unresearchedVendors } from '../research/vendor-research'
 import { ingestMeeting } from '../ingest'
 import { getEventItems, stats } from '../legistar/client'
-import { ANCHOR_EVENT_ID, probeEvents, resolveEventId } from '../legistar/discover'
+import { ANCHOR_EVENT_ID, claimedEventIds, probeEvents, resolveEventId } from '../legistar/discover'
 import { updateUpcoming } from '../legistar/upcoming'
 import { isSettled, registerFutureDates } from '../registry/entries'
 import { getDataRoot, readRegistry, setDataRoot, stableStringify, writeRegistry } from '../store'
@@ -146,7 +146,7 @@ export async function cycle(now: Date = new Date()): Promise<TRunChanges> {
     m.eventId == null && m.status === 'discovered'
     && m.date >= addDays(today, -RESOLVE_BEHIND_DAYS) && m.date <= addDays(today, RESOLVE_AHEAD_DAYS))
   for (const entry of unresolved) {
-    probed ??= await probeEvents(registry.lastKnownEventId ?? ANCHOR_EVENT_ID)
+    probed ??= await probeEvents(registry.lastKnownEventId ?? ANCHOR_EVENT_ID, claimedEventIds(registry))
     const r = await resolveEventId(entry.key, entry.date, entry.kind, registry, { useHistory: entry.date < today, probed })
     if (!r) continue
     entry.eventId = r.eventId

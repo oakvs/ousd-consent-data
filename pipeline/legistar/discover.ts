@@ -5,9 +5,11 @@
  *    histories → the `MatterHistoryEventId` on Board of Education entries
  *    dated that day. Majority vote across a sample of matters.
  * 2. probe (upcoming meetings, before anything has a history): probe
- *    sequential EventIds after the last known one, and match an event to
- *    the date by ≥80% overlap of its file numbers with the matters-by-date
- *    list.
+ *    sequential EventIds after the last known one, and the unclaimed ones
+ *    just before it, and match an event to the date by ≥80% overlap of its
+ *    file numbers with the matters-by-date list. EventIds follow the order
+ *    OUSD creates events, not their dates: the Oct 14, 2026 meeting is 5815,
+ *    created before the Sept 28 meeting (5818).
  *
  * Every candidate is confirmed by fetching its event items.
  */
@@ -25,6 +27,8 @@ const BOARD = /board of education/i
 const HISTORY_SAMPLE = 12
 const PROBE_AHEAD = 40
 const PROBE_MAX_EMPTY = 8
+/** Also check this many EventIds at and below the last known one (skipping claimed ones): events aren't created in date order. */
+export const PROBE_BEHIND = 30
 const MIN_OVERLAP = 0.8
 /** June 24, 2026 — a known-good anchor when the registry is empty. */
 export const ANCHOR_EVENT_ID = 5785
@@ -54,11 +58,17 @@ export type TProbedEvents = Map<number, TLegistarEventItem[]>
 
 /**
  * Live-fetch the EventIds after `startAfter` until PROBE_MAX_EMPTY empty ones
- * in a row (or PROBE_AHEAD tried). Returns only events that have items.
+ * in a row (or PROBE_AHEAD tried), plus the PROBE_BEHIND ids at and below it
+ * that no meeting has claimed. Returns only events that have items.
  * `consent run` probes once and shares the result across meetings.
  */
-export async function probeEvents(startAfter: number): Promise<TProbedEvents> {
+export async function probeEvents(startAfter: number, claimed: ReadonlySet<number> = new Set()): Promise<TProbedEvents> {
   const found: TProbedEvents = new Map()
+  const behind = Array.from({ length: PROBE_BEHIND }, (_, i) => startAfter - i).filter(id => id > 0 && !claimed.has(id))
+  await mapConcurrent(behind, async id => {
+    const items = await getEventItems(id, { fresh: true }).catch(() => [])
+    if (items.length) found.set(id, items)
+  })
   let empty = 0
   for (let id = startAfter + 1; id <= startAfter + PROBE_AHEAD && empty < PROBE_MAX_EMPTY; id++) {
     const items = await getEventItems(id, { fresh: true }).catch(() => [])
@@ -116,9 +126,13 @@ export async function resolveEventId(
   }
 
   const dateFiles = new Set(matters.map(m => m.MatterFile))
-  const events = probed ?? await probeEvents(registry.lastKnownEventId ?? ANCHOR_EVENT_ID)
+  const events = probed ?? await probeEvents(registry.lastKnownEventId ?? ANCHOR_EVENT_ID, claimedEventIds(registry))
   return confirm(probeCandidates(dateFiles, events), 'probe')
 }
+
+/** EventIds already assigned to a meeting in the registry. */
+export const claimedEventIds = (registry: TRegistry): Set<number> =>
+  new Set(registry.meetings.map(m => m.eventId).filter((id): id is number => id != null))
 
 // ─── Backfill discovery ──────────────────────────────────────────────────────
 
