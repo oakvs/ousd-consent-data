@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://togetherpictures.com/",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://togetherpictures.com/contact_us/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.oaklandchamber.com/list/member/together-pictures-58260",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"phone\" failed to load",
+      "field": "phone",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-together-pictures",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name match: an Oakland business called \"Together Pictures\" (video production agency) appears on its own website and in the Oakland Metropolitan Chamber of Commerce directory.",
+      "Location match: the website and Chamber listing both give an Oakland, CA address, matching the agenda's \"Oakland, CA\".",
+      "Weak, inferred fit only: a video production company is plausible as an OUSD workplace training partner for the ECCCO (Exploring College, Career, and Community Options) program. No page found links Together Pictures to OUSD."
+    ],
+    "key": "n-together-pictures",
+    "notes": "Confidence is medium, not high: no page found links Together Pictures to OUSD or the ECCCO program, and the two sources found (own site, Chamber listing) are not registries. The California Secretary of State and SAM.gov records were not found, so legal name, entity number and UEI are null. No general email address was found; the site uses a contact form. The vendor may be a small business tied to a named owner, but no individual was researched. The website also mentions a former name, Community Bridge Video, per an Alignable listing (not cited).",
+    "profile": {
+      "address": "1714 Franklin St. #100-395, Oakland, CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(510) 990-0228",
+      "samUei": null,
+      "summary": "Together Pictures is an Oakland, California video production agency. It makes documentary shorts, commercials, still photography, time-lapse and motion pictures, mainly for online marketing. It describes itself as a local, small business.",
+      "website": "https://togetherpictures.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "address",
+          "headquarters",
+          "phone"
+        ],
+        "title": "Together Pictures",
+        "url": "https://togetherpictures.com/"
+      },
+      {
+        "supports": [
+          "phone"
+        ],
+        "title": "Contact Us – Together Pictures",
+        "url": "https://togetherpictures.com/contact_us/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Together Pictures - Oakland Metropolitan Chamber of Commerce",
+        "url": "https://business.oaklandchamber.com/list/member/together-pictures-58260"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-14",
+  "review": null
+}

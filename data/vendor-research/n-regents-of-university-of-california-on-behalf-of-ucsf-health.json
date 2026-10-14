@@ -1,0 +1,107 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.ucsfhealth.org/about",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.ucsfhealth.org/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://osr.ucsf.edu/institutional-information",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://anchor.ucsf.edu/news/highway-er-tech",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-regents-of-university-of-california-on-behalf-of-ucsf-health",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'The Regents of the University of California, on behalf of UCSF Health', and UCSF Health's own site (ucsfhealth.org) describes the San Francisco health system of UC San Francisco.",
+      "The agenda gives San Francisco, CA, and UCSF Health's main campuses and contact pages are in San Francisco (400 Parnassus Ave., San Francisco, CA 94143).",
+      "UCSF's Office of Sponsored Research page lists 'The Regents of the University of California' as the legal entity for UCSF.",
+      "A UCSF page describes a UCSF and Oakland Unified School District partnership, the OUSD Alumni Highway to Work: ER Tech Program. This fits an OUSD health-careers (Linked Learning) affiliation agreement."
+    ],
+    "key": "n-regents-of-university-of-california-on-behalf-of-ucsf-health",
+    "notes": "The contracting party is the University of California's governing board, acting for UCSF Health, so I classed it as a public agency. I left the registry IDs null on purpose. UC campuses and units use different identifiers: UCSF's page lists EIN 94-6036493 and a SAM UEI, while GuideStar lists 94-3067788 for the Regents. I could not tell which one applies to this contract. I did not look up a California Secretary of State entity number, since the Regents are a constitutional entity. I left email and mailing address null because no general inbox or headquarters address was clearly shown. 415-476-1000 is the number the UCSF Health contact page gives for contacting UCSF Health by phone. The agenda text is generic, and the specific Linked Learning agreement was not found.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "The Regents of the University of California",
+      "orgType": "public_agency",
+      "phone": "415-476-1000",
+      "samUei": null,
+      "summary": "UCSF Health is the clinical health system of the University of California, San Francisco. It runs hospitals and outpatient clinics across the Bay Area and does biomedical research and health professional education. It is part of the University of California, a public university system governed by The Regents of the University of California.",
+      "website": "https://www.ucsfhealth.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "website",
+          "headquarters"
+        ],
+        "title": "About UCSF Health | UCSF Health",
+        "url": "https://www.ucsfhealth.org/about"
+      },
+      {
+        "supports": [
+          "phone",
+          "website"
+        ],
+        "title": "Contact Us | UCSF Health",
+        "url": "https://www.ucsfhealth.org/contact-us"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType"
+        ],
+        "title": "Institutional Information | UCSF Office of Sponsored Research",
+        "url": "https://osr.ucsf.edu/institutional-information"
+      },
+      {
+        "supports": [],
+        "title": "ER Tech Training Program: Unlocking Advanced Healthcare Careers for High School Graduates",
+        "url": "https://anchor.ucsf.edu/news/highway-er-tech"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-14",
+  "review": {
+    "key": "n-regents-of-university-of-california-on-behalf-of-ucsf-health",
+    "notes": "This is the same organization. The agenda's contracting party, The Regents of the University of California acting for UCSF Health in San Francisco, matches the UCSF Health and UCSF OSR pages, and UCSF's Anchor page confirms an existing UCSF–OUSD health-careers partnership. All fields check out in the cited sources: the summary's claims (hospitals and clinics across the Bay Area, biomedical research, education, UC/Regents governance) are neutral, the OSR page shows the Regents as the legal entity and UCSF as a public institution, and the contact page lists 415-476-1000 as UCSF Health's general phone line.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
