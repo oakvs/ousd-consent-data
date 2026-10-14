@@ -1,0 +1,123 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://norcal.ja.org/about/contact-us",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.guidestar.org/profile/94-1322179",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://norcal.ja.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-009993",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Junior Achievement of Northern California, Inc.' (GuideStar/Candid profile, EIN 94-1322179)",
+      "Headquartered in Walnut Creek, CA, matching the agenda location 'Walnut Creek, CA'",
+      "Its own website describes school-based education programs (work readiness, financial literacy, career pathways) for youth ages 5-25, consistent with OUSD's 'Classroom & academic programs' and Adult and Career Education contract",
+      "The same address, phone and email appear on both the organization's own contact page and its GuideStar profile"
+    ],
+    "key": "v-009993",
+    "notes": "California Secretary of State entity number and SAM.gov UEI were not looked up and are left null. The agenda says only 'Junior Achievement', and several regional JA chapters exist; the Walnut Creek location points to the Northern California chapter. No public page was found that links this chapter to OUSD by name. The homepage at norcal.ja.org currently serves content from janorcal.org.",
+    "profile": {
+      "address": "1212 Broadway Plaza, Suite 2100, Walnut Creek, CA 94596",
+      "caEntityNumber": null,
+      "ein": "94-1322179",
+      "email": "info@janorcal.org",
+      "headquarters": "Walnut Creek, CA",
+      "legalName": "Junior Achievement of Northern California, Inc.",
+      "orgType": "nonprofit",
+      "phone": "(925) 465-1070",
+      "samUei": null,
+      "summary": "Junior Achievement of Northern California is a nonprofit that teaches young people about work readiness, financial literacy and entrepreneurship. It runs programs for students ages 5 to 25 in Northern California, mostly through schools and volunteers. It is a regional branch of the national Junior Achievement organization.",
+      "website": "https://norcal.ja.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact Us | Junior Achievement of Northern California",
+        "url": "https://norcal.ja.org/about/contact-us"
+      },
+      {
+        "supports": [
+          "ein",
+          "summary",
+          "orgType",
+          "headquarters",
+          "address"
+        ],
+        "title": "JUNIOR ACHIEVEMENT OF NORTHERN CALIFORNIA, INC. - GuideStar Profile",
+        "url": "https://www.guidestar.org/profile/94-1322179"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Junior Achievement of Northern California",
+        "url": "https://norcal.ja.org/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-14",
+  "review": {
+    "key": "v-009993",
+    "notes": "This is the right organization: the agenda lists Walnut Creek, CA, and the cited sources put Junior Achievement of Northern California, Inc. (EIN 94-1322179) at 1212 Broadway Plaza, Suite 2100, Walnut Creek, and show it running school career-readiness, financial-literacy and entrepreneurship programs for ages 5–25, which fits what OUSD contracts it for. The contact page, homepage and GuideStar profile show the name, EIN, address, phone, email, website and nonprofit status, and the summary is neutral; the 'regional branch' wording rests only on the contact page linking to JA USA's locations directory.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
