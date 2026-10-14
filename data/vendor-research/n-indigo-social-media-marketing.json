@@ -1,0 +1,86 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://indigosocialmediamarketing.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 404 (fields supported only by this page will be dropped)",
+      "field": "source:https://indigosocialmediamarketing.com/about-us/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-indigo-social-media-marketing",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda name 'Indigo Social Media Marketing' matches the business's own website, indigosocialmediamarketing.com, which uses that domain name and the brand 'Indigo Marketing'.",
+      "The company's About Us page says it is headquartered in Oakland, CA, which matches the agenda location. Third-party business directories also list it in Oakland.",
+      "The company is a marketing and media firm. It offers videography, photography and social media services and has a team of about 11. This fits a workplace-training partner for a career-exploration program (ECCCO)."
+    ],
+    "key": "n-indigo-social-media-marketing",
+    "notes": "No registry match was checked: the California Secretary of State and SAM.gov could not be searched here, so the legal name, entity number and UEI are null. The street address (2744 E 11th St, Oakland, CA 94601) appears only on third-party directories, not on the company's own pages, so it is left out. No page found links this company to OUSD directly. The match rests on the exact name, the Oakland location and the type of business.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "info@indigosocialmediamarketing.com",
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "415-310-7817",
+      "samUei": null,
+      "summary": "Indigo Marketing is a Bay Area marketing agency. It offers social media marketing, website design, search engine optimization (SEO), paid advertising, and business coaching and planning for small and mid-sized businesses.",
+      "website": "https://indigosocialmediamarketing.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "email"
+        ],
+        "title": "Social Media, SEO, Paid Advertising Bay Area, CA - Indigo Marketing",
+        "url": "https://indigosocialmediamarketing.com/"
+      },
+      {
+        "supports": [
+          "headquarters",
+          "phone",
+          "orgType"
+        ],
+        "title": "About Us - Indigo Marketing",
+        "url": "https://indigosocialmediamarketing.com/about-us/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-14",
+  "review": {
+    "key": "n-indigo-social-media-marketing",
+    "notes": "The site belongs to Indigo Social Media Marketing LLC, and its About Us page says it is headquartered in Oakland, CA, so the name and location match the agenda; the homepage confirms the services, phone number and email. The homepage now lists in-person meetings in Nashville and the SF Bay Area, and it names specific client industries instead of 'small and mid-sized businesses', but these are small wording gaps that don't cast doubt on the match.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

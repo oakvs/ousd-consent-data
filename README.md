@@ -6,7 +6,7 @@ The data backs the [Consent Report Tracker on the Oakland vs. the World blog](ht
 
 The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
-<!-- generated:stats -->As of October 14, 2026, it covers 164 Board meetings, from August 14, 2019 to October 28, 2026. That's 12,220 consent items authorizing $2.03 billion in spending, plus $543.7 million in grants and other money coming in, across 2,205 vendors and partners. Not counted in those totals: $257.4 million in grant applications, $153.3 million in budget allocations such as Measure N and G1 plans, and $3.76 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
+<!-- generated:stats -->As of October 14, 2026, it covers 164 Board meetings, from August 14, 2019 to October 28, 2026. That's 12,220 consent items authorizing $2.03 billion in spending, plus $544.5 million in grants and other money coming in, across 2,219 vendors and partners. Not counted in those totals: $257.4 million in grant applications, $153.3 million in budget allocations such as Measure N and G1 plans, and $3.76 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
 
 ## Why this exists
 
@@ -92,9 +92,9 @@ Every change becomes a commit in this repository with a readable message, like `
 | Records | Model |
 |---|---|
 | Summaries, August 2019 – September 2026 (12,063 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `enrich.v5`) |
-| Summaries, October 2026 (88 items) | Claude Opus 5.5 through the Claude API (`claude-opus-5-5`, prompt `enrich.v6`) |
-| Second readings, August 2019 – October 2026 (3,477 items) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`, prompt `verify.v2`) |
-| Vendor research (91 vendors, 56 published) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`) |
+| Summaries, October 2026 (159 items) | Claude Opus 5.5 through the Claude API (`claude-opus-5-5`, prompt `enrich.v6`) |
+| Second readings, August 2019 – October 2026 (3,504 items) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`, prompt `verify.v2`) |
+| Vendor research (95 vendors, 57 published) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`) |
 | Vendor research (1,911 vendors, 1,284 published) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`) |
 <!-- /generated:models -->
 
@@ -137,7 +137,7 @@ Flags point out how something was done. They don't say anything about anyone's m
 | Time extension only | Moves the end date without adding money | AI, from the text |
 | Emergency | The text describes emergency work or contracting | AI, from the text |
 
-Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 12,032 items are `auto_ok`, 117 are `human_reviewed`, 10 are `needs_review` and 71 are `pending`.<!-- /generated:review -->
+Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 12,102 items are `auto_ok`, 117 are `human_reviewed` and 11 are `needs_review`.<!-- /generated:review -->
 
 ## Known limitations
 
