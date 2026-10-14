@@ -1,0 +1,118 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/464328520",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandtrybe.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandtrybe.org/overview",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-oakland-trybe",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name match: the organization's own website brands it 'Oakland Trybe', and its legal name in ProPublica Nonprofit Explorer is 'Trybe Inc' (EIN 46-4328520), a tax-exempt nonprofit in Oakland, CA",
+      "Location: its address is in Oakland, CA, which matches the agenda location",
+      "Mission fit: a community-based youth and family nonprofit in East Oakland, consistent with an OUSD workplace-training partner MOU for the High School Linked Learning Office's career program",
+      "No page I fetched mentions OUSD directly, so the OUSD link rests on name, city and mission fit"
+    ],
+    "key": "n-oakland-trybe",
+    "notes": "The California Secretary of State entity number and SAM.gov UEI were not looked up, so they are null. The website also lists a separate donation and mailing address: 3542 Fruitvale Ave, #135, Oakland, CA 94602-2327. I used the physical address. An unrelated, similarly named organization, Friends of Trybe Ecotherapy Inc, also appeared in search results, and I did not use it.",
+    "profile": {
+      "address": "1701 E 19th Street, Oakland, CA 94606",
+      "caEntityNumber": null,
+      "ein": "46-4328520",
+      "email": "info@oaklandtrybe.org",
+      "headquarters": "Oakland, CA",
+      "legalName": "Trybe Inc",
+      "orgType": "nonprofit",
+      "phone": "(510) 985-9915",
+      "samUei": null,
+      "summary": "Trybe (Oakland Trybe) is a community-based nonprofit rooted in East Oakland. It works with youth and families through programs and resources meant to strengthen families and the community.",
+      "website": "https://www.oaklandtrybe.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Trybe Inc - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/464328520"
+      },
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "website",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact - Oakland Trybe",
+        "url": "https://www.oaklandtrybe.org/contact"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Overview - Oakland Trybe",
+        "url": "https://www.oaklandtrybe.org/overview"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-14",
+  "review": {
+    "key": "n-oakland-trybe",
+    "notes": "The site oaklandtrybe.org calls itself Trybe Inc., a community-based nonprofit in East Oakland, and lists the cited Oakland address, phone and general info@ email. Its youth internship and job-readiness programs fit OUSD's workplace-training MOU, and ProPublica lists Trybe Inc in Oakland, CA as a 501(c)(3) with EIN 46-4328520. No source mentions OUSD, and the EIN is tied to the website only by the matching name and city, but nothing points to a different organization, and the summary is supported and neutral.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
