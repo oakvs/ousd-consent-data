@@ -1,0 +1,112 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://lawrencehallofscience.org/about/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lawrencehallofscience.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://lawrencehallofscience.org/educators/center-for-k-12-science/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-lawrence-hall-of-science",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: 'The Lawrence Hall of Science', the public science center of UC Berkeley (own website).",
+      "The agenda says Oakland, CA, but the Hall is at 1 Centennial Drive, Berkeley, CA, next to Oakland. Its Center for K-12 Science page lists Oakland Unified School District as a partner, so it clearly serves Oakland.",
+      "Its work is science education and youth programs, including teen internship programs. That fits an OUSD memorandum of understanding for classroom and academic programs and the ECCCO (Exploring College, Career, and Community Options) workplace-training program.",
+      "The Hall's teen internship pages and a Lawrence Berkeley National Laboratory page both mention the OUSD ECCCO application, which ties Bay Area science internship programs to the same OUSD program."
+    ],
+    "key": "n-lawrence-hall-of-science",
+    "notes": "The Hall is a unit of UC Berkeley (the Regents of the University of California), not a separately registered nonprofit or company. I did not look for an EIN, California entity number or SAM UEI, so those are null. The agenda says Oakland, CA, but the Hall's address is Berkeley. The contract may be signed through UC Berkeley or the Regents, so a reviewer may want to check that. Phone and email are the Hall's general inquiry line and inbox.",
+    "profile": {
+      "address": "1 Centennial Drive Berkeley, CA 94720",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": "lawrenceinfo@berkeley.edu",
+      "headquarters": "Berkeley, CA",
+      "legalName": "The Lawrence Hall of Science",
+      "orgType": "public_agency",
+      "phone": "510-642-5132",
+      "samUei": null,
+      "summary": "The Lawrence Hall of Science is the public science center of the University of California, Berkeley. It runs hands-on science exhibits, camps, classes and teen programs for the public. It also does research and works with school districts and teachers to improve science education.",
+      "website": "https://lawrencehallofscience.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "email",
+          "address",
+          "headquarters",
+          "website"
+        ],
+        "title": "Contact – The Lawrence Hall of Science",
+        "url": "https://lawrencehallofscience.org/about/contact/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "legalName",
+          "website"
+        ],
+        "title": "The Lawrence Hall of Science – The public science center of the University of California, Berkeley.",
+        "url": "https://lawrencehallofscience.org/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Center for K-12 Science – The Lawrence Hall of Science",
+        "url": "https://lawrencehallofscience.org/educators/center-for-k-12-science/"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-14",
+  "review": {
+    "key": "n-lawrence-hall-of-science",
+    "notes": "The cited pages show that The Lawrence Hall of Science is UC Berkeley's public science center at 1 Centennial Drive, Berkeley. They also list Oakland Unified School District as a K-12 partner, so the Berkeley/Oakland location difference is not a concern. The summary, phone, email, address, website and public-agency type are all supported by the sources. I dropped legalName because the Hall is a unit of UC Berkeley, and the site's footer names The Regents of the University of California as the legal entity, not the Hall itself.",
+    "sameOrganization": true,
+    "unsupportedFields": [
+      "legalName"
+    ],
+    "verdict": "confirmed"
+  }
+}
