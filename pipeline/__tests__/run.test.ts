@@ -83,7 +83,7 @@ describe('meeting discovery from future-dated matters', () => {
 })
 
 describe('commit messages', () => {
-  const base: TRunChanges = { upcoming: { changed: false, date: null, consentItems: null }, discovered: [], resolved: [], meetings: [], pendingSummaries: 0 }
+  const base: TRunChanges = { upcoming: { changed: false, date: null, consentItems: null }, discovered: [], resolved: [], meetings: [], official: [], overdueDrafts: [], pendingSummaries: 0, draftItemsWaiting: 0 }
   const meeting = (m: Partial<TMeetingChange>): TMeetingChange => ({ key: '2026-10-14', eventId: 5825, items: 87, diff: null, unchanged: false, final: false, ...m })
   const noDiff = { added: [], removed: [], revised: [], outcomes: [] }
 
@@ -100,6 +100,20 @@ describe('commit messages', () => {
     expect(commitMessage({ ...base, upcoming: { changed: true, date: '2026-10-14', consentItems: 74 } }).subject)
       .toBe('upcoming: 2026-10-14, 74 consent items filed so far')
     expect(commitMessage({ ...base, meetings: [meeting({ unchanged: true })] }).subject).toBe('registry: routine check')
+  })
+
+  it('marks draft agendas, and puts a draft going official first', () => {
+    expect(meetingLine(meeting({ key: '2026-10-28', items: 71, draft: true }))).toBe('2026-10-28: draft agenda posted — 71 items')
+    const c = commitMessage({
+      ...base,
+      official: [{ key: '2026-10-28', items: 71 }],
+      meetings: [meeting({ key: '2026-10-28', items: 71, diff: { ...noDiff, revised: ['a'] } })],
+      overdueDrafts: ['2026-11-12'],
+      draftItemsWaiting: 40,
+    })
+    expect(c.subject).toBe('2026-10-28: official agenda posted — 71 items; 2026-10-28: agenda revised — 1 revised')
+    expect(c.body).toContain('- 2026-11-12: agenda still a draft past its posting deadline')
+    expect(c.body).toContain('- 40 draft items wait for the official agenda')
   })
 
   it('lists pending summaries in the body', () => {

@@ -12,7 +12,7 @@
  *   notify-failure --previous CONCLUSION      Alert when this and the previous run both failed
  *   notify-text --title T --message M [--priority P]
  *   events-check                              Quarterly: is Legistar's /events endpoint working for OUSD again?
- *   announce [--dry-run]                      Schedule a subscriber email (Listmonk) for each meeting whose summaries are ready
+ *   announce [--dry-run]                      Schedule a subscriber email (Listmonk) for each official meeting whose summaries are ready
  *   announce --test [--key K]                 Send a [Test] email for a published meeting to the live list and wait for it to finish
  *   llm [--key K]                             Run the LLM step (summaries, second readings) and rebuild; no git
  *   llm-compare --key K [--sample N] [--files A,B]
@@ -23,6 +23,7 @@
  *   backfill --from D --to D [--limit N]      resolve → ingest for every registry meeting in range, then build
  *   import-prototype --dir <dir>              Seed 2026-06-24 from the v1 prototype files
  *   build                                     Rebuild every published file
+ *   calendar-backfill [--dry-run]             Fill Legistar meeting and agenda PDF links for official meetings from the public calendar
  *   enrich-export [--key K] [--size 30] [--all]  Write agent input chunks (.cache/enrich); --all = every item, for a re-run
  *   enrich-check --chunk ID                   Validate one agent output chunk (exit 1 on errors)
  *   enrich-import [--key K] --model M [--replace]  Merge validated chunk outputs into data/enrichments; --replace overwrites
@@ -217,6 +218,13 @@ async function main(): Promise<void> {
     case 'events-check': {
       const { eventsCheck } = await import('./ops/commands')
       await eventsCheck()
+      break
+    }
+    case 'calendar-backfill': {
+      const { backfillAgendaLinks } = await import('./legistar/calendar-backfill')
+      const r = await backfillAgendaLinks({ dryRun: values['dry-run'] })
+      console.log(`${r.filled.length} meetings linked${values['dry-run'] ? ' (dry run, registry unchanged)' : ''}`)
+      for (const u of r.unmatched) console.log(`${u.key}: not matched (${u.reason})`)
       break
     }
     case 'announce': {

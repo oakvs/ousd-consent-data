@@ -1,13 +1,17 @@
 /* eslint-disable no-console -- CLI output */
 /**
  * Subscriber emails: one Listmonk campaign per meeting, scheduled once that
- * meeting's summaries are ready.
+ * meeting's agenda is official and its summaries are ready.
  *
- * A meeting is ready when it hasn't started yet and every item has a summary,
+ * A meeting is ready when its agenda is official (never a draft), it hasn't
+ * started yet, and every item has a summary,
  * or when it starts within a day and at least one does (so a single stuck item
  * doesn't hold up the email). The campaign is named `consent-<key>`; an
  * existing campaign with that name means the meeting was already announced,
- * so no state is kept here. It's scheduled a few minutes out, so the site
+ * so no state is kept here. A meeting announced before its agenda went
+ * official (only possible before drafts were tracked) gets one follow-up,
+ * `consent-<key>-final`, saying the official agenda replaces the draft. It's
+ * scheduled a few minutes out, so the site
  * rebuild that the run's deploy hook started lands before the email does.
  *
  * Configure with LISTMONK_URL, LISTMONK_API_USER, LISTMONK_API_TOKEN (a
@@ -36,9 +40,12 @@ const KIND: Record<TMeetingKind, string> = { regular: 'Regular', special: 'Speci
 const plural = (n: number, word: string): string => `${n} ${word}${n === 1 ? '' : 's'}`
 
 export const campaignName = (key: string): string => `consent-${key}`
+/** The one follow-up for a meeting whose first email went out while its agenda was a draft. */
+export const finalCampaignName = (key: string): string => `consent-${key}-final`
 
 /** Should this meeting's email go out now? */
 export function isReady(m: TIndexEntry, now: Date): boolean {
+  if (m.agendaStatus !== 'official') return false
   if (m.items === 0 || m.enrichedItems === 0) return false
   const untilStart = oaklandInstant(m.date, BOARD_START_TIME).getTime() - now.getTime()
   if (untilStart <= 0) return false
@@ -47,8 +54,13 @@ export function isReady(m: TIndexEntry, now: Date): boolean {
 
 export type TEmail = { subject: string; html: string; text: string }
 
+export type TEmailOptions = {
+  /** Set for the follow-up: the date (ISO) the draft agenda was emailed. */
+  replacesDraftSentOn?: string | null
+}
+
 /** The subject and body for one meeting. Listmonk's template adds the footer and unsubscribe link. */
-export function renderEmail(m: TIndexEntry): TEmail {
+export function renderEmail(m: TIndexEntry, { replacesDraftSentOn = null }: TEmailOptions = {}): TEmail {
   const url = `${SITE}/${m.key}`
   const date = formatDate(m.date, 'full')
   const spending = formatMoney(m.spendingTotal) || '$0'
@@ -61,6 +73,9 @@ export function renderEmail(m: TIndexEntry): TEmail {
   const pending = m.items - m.enrichedItems
 
   const lines = [
+    ...(replacesDraftSentOn
+      ? [`The district has published the official agenda for this meeting. It replaces the draft we emailed you on ${formatDate(replacesDraftSentOn, 'long')}, which could still change.`]
+      : []),
     `The General Consent Report for the OUSD Board of Education's ${KIND[m.kind].toLowerCase()} meeting on ${date}, is posted, with plain-English summaries.`,
     `${plural(m.items, 'item')}: ${spending} going out and ${revenue} coming in.`,
     ...(notes.length ? [`Worth a look: ${notes.join(', ')}.`] : []),
@@ -76,7 +91,7 @@ export function renderEmail(m: TIndexEntry): TEmail {
   const text = [...lines, '', `Read it: ${url}`, '', disclaimer].join('\n')
 
   return {
-    subject: `OUSD consent report for ${date}: ${plural(m.items, 'item')}, ${spending} going out`,
+    subject: `${replacesDraftSentOn ? 'Final agenda: ' : ''}OUSD consent report for ${date}: ${plural(m.items, 'item')}, ${spending} going out`,
     html,
     text,
   }
@@ -158,7 +173,7 @@ export async function checkList(cfg: TListmonkConfig, doFetch: TFetch = fetch): 
   return { name: list.name, type: list.type ?? '?', optin: list.optin ?? '?', subscribers: list.subscriber_count ?? 0 }
 }
 
-export type TCampaign = { id: number; name: string; status: string }
+export type TCampaign = { id: number; name: string; status: string; created_at?: string }
 
 /** Campaigns with exactly this name. */
 export async function findCampaigns(cfg: TListmonkConfig, name: string, doFetch: TFetch = fetch): Promise<TCampaign[]> {
@@ -172,6 +187,19 @@ export async function findCampaigns(cfg: TListmonkConfig, name: string, doFetch:
  * the campaign and failed before scheduling it, and the next run finishes it.
  */
 export const isAnnounced = (campaigns: TCampaign[]): boolean => campaigns.some(c => c.status !== 'draft')
+
+/**
+ * Did every email for this meeting go out before its agenda was official? Then subscribers
+ * saw a draft. Returns the date (ISO) of the first one, or null. A campaign without a
+ * creation time can't be placed, so it's taken as sent after (no follow-up, never a double).
+ */
+export function draftAnnouncedOn(campaigns: TCampaign[], m: TIndexEntry): string | null {
+  if (!m.agendaPublishedAt) return null
+  const officialAt = Date.parse(m.agendaPublishedAt)
+  const sent = campaigns.filter(c => c.status !== 'draft').map(c => Date.parse(c.created_at ?? ''))
+  if (!sent.length || !sent.every(t => Number.isFinite(t) && t < officialAt)) return null
+  return new Date(Math.min(...sent)).toISOString().slice(0, 10)
+}
 
 const campaignFields = (cfg: TListmonkConfig, name: string, email: TEmail, sendAt: Date, tags: string[]): Record<string, unknown> => ({
   name,
@@ -242,16 +270,29 @@ export async function announceReady(options: TAnnounceOptions = {}): Promise<str
   const scheduled: string[] = []
 
   for (const m of ready) {
-    const email = renderEmail(m)
-    const name = campaignName(m.key)
+    let email = renderEmail(m)
+    let name = campaignName(m.key)
     if (options.dryRun || !cfg) {
       console.log(`${options.dryRun ? '(dry run)' : '(Listmonk not configured)'} would announce ${m.key}\n  ${email.subject}\n\n${email.text}\n`)
       continue
     }
-    const existing = await findCampaigns(cfg, name, doFetch)
+    let existing = await findCampaigns(cfg, name, doFetch)
     if (isAnnounced(existing)) {
-      console.log(`${m.key}: already announced (${existing.map(c => `campaign ${c.id} ${c.status}`).join(', ')})`)
-      continue
+      const describe = existing.map(c => `campaign ${c.id} ${c.status}`).join(', ')
+      const sentOn = draftAnnouncedOn(existing, m)
+      if (!sentOn) {
+        console.log(`${m.key}: already announced (${describe})`)
+        continue
+      }
+      // Subscribers were emailed the draft agenda: send the official one, once.
+      name = finalCampaignName(m.key)
+      email = renderEmail(m, { replacesDraftSentOn: sentOn })
+      existing = await findCampaigns(cfg, name, doFetch)
+      if (isAnnounced(existing)) {
+        console.log(`${m.key}: official agenda already announced (${existing.map(c => `campaign ${c.id} ${c.status}`).join(', ')})`)
+        continue
+      }
+      console.log(`${m.key}: announced as a draft (${describe}); sending the official agenda`)
     }
     const draft = existing.find(c => c.status === 'draft') ?? null
     if (draft) console.log(`${m.key}: finishing campaign ${draft.id}, left as a draft by an earlier run`)

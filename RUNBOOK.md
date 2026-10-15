@@ -58,7 +58,9 @@ You'll see these commits:
 | `upcoming: 2026-10-14, 74 consent items filed so far` | Staff are filing items for the next meeting. |
 | `2026-10-14: meeting detected from future-dated items` | A new meeting date has enough consent items to count. |
 | `2026-10-14: meeting found (event 5825, via probe)` | Its Legistar EventId was found. The agenda is being built. |
-| `2026-10-14: agenda posted — 87 items` | The official text is live, with "Summary pending" on each item. |
+| `2026-10-28: draft agenda posted — 71 items` | Legistar shows the items, but the agenda isn't on the public calendar yet. The text is live as a draft; no summaries or email yet. |
+| `2026-10-28: official agenda posted — 71 items` | The agenda is on the public calendar with "Agenda status: Final". Summaries follow in the LLM step, then the subscriber email. |
+| `2026-10-14: agenda posted — 87 items` | A first ingest of a meeting that's already official (e.g. a backfill). The official text is live, with "Summary pending" on each item. |
 | `2026-10-14: summaries — 87 items, 24 second readings (2 flagged for review)` | The LLM step finished for those items. |
 | `Vendors: 1 duplicate merged, 3 researched, 2 profiles published, 12 Legistar histories updated` | The vendor steps ran: the duplicate judge merged a vendor (the commit body says which and why), new vendors were looked up and independently reviewed (only confirmed profiles show on vendor pages), and Legistar histories were updated for vendors with new items. |
 | `2026-10-14: agenda revised — 2 added, 1 revised` | Staff changed the agenda after it was posted. |
@@ -128,7 +130,9 @@ Also set a monthly spend limit on the Anthropic API key itself, in the Claude Co
 
 ### Subscriber emails
 
-When a meeting's summaries are all in (or the meeting starts within a day and at least some are), the `Subscriber emails` step schedules one Listmonk campaign named `consent-<meeting key>` for 20 minutes later, so the site rebuild lands first. A campaign with that name that's scheduled, sending, sent, paused or cancelled means the meeting was already announced, so a meeting is never emailed twice; to resend, delete or rename its campaign in Listmonk. A campaign still in draft means an earlier run created it and failed before scheduling it, so the next run schedules that draft. Each call to Listmonk is retried twice (after 2 and 5 seconds) when it can't connect or gets a server error, so a brief outage doesn't fail the step; if the step does fail, the next run, 30 minutes later, tries again. Every run first reads the subscriber list with the API credentials and logs it (`Listmonk OK at …: list "OUSD Consent Report" (public, double opt-in, N subscribers)`), so a wrong URL, token or list id fails the step and alerts right away. Without the Listmonk secrets the step only logs what it would send. Preview with `npx tsx pipeline/cli.ts announce --dry-run`.
+When a meeting's agenda is official and its summaries are all in (or the meeting starts within a day and at least some are), the `Subscriber emails` step schedules one Listmonk campaign named `consent-<meeting key>` for 20 minutes later, so the site rebuild lands first. A campaign with that name that's scheduled, sending, sent, paused or cancelled means the meeting was already announced, so a meeting is never emailed twice; to resend, delete or rename its campaign in Listmonk. A campaign still in draft means an earlier run created it and failed before scheduling it, so the next run schedules that draft. Each call to Listmonk is retried twice (after 2 and 5 seconds) when it can't connect or gets a server error, so a brief outage doesn't fail the step; if the step does fail, the next run, 30 minutes later, tries again. Every run first reads the subscriber list with the API credentials and logs it (`Listmonk OK at …: list "OUSD Consent Report" (public, double opt-in, N subscribers)`), so a wrong URL, token or list id fails the step and alerts right away. Without the Listmonk secrets the step only logs what it would send. Preview with `npx tsx pipeline/cli.ts announce --dry-run`.
+
+A draft agenda is never emailed. Meetings announced before drafts were tracked (Oct 28, 2026) went out as drafts; when such a meeting's agenda goes official, and every `consent-<key>` campaign was created before `agendaPublishedAt`, the step sends one follow-up, `consent-<key>-final`, saying the official agenda replaces the draft. The same once-only rule applies to that name.
 
 To test the whole path, run the **test subscriber email** workflow by hand (Actions → test subscriber email → Run workflow). It sends a `[Test]` email for an already-published meeting (the latest with summaries, or the one you name) to the live list, then waits until Listmonk reports it sent, and fails if nothing went out. Its campaign is named `consent-test-…`, so it never blocks a meeting's real announcement. Everyone on the list gets it.
 
@@ -225,6 +229,15 @@ Renaming or removing anything in `packages/consent-schema` is breaking: the site
 - **Legistar errors (429 or 5xx)**: the client retries with backoff. If Legistar is down, the run fails and the next one tries again.
 - **"push rejected 3 times"**: something else keeps pushing to the data repo. Find it; only one scheduler should push.
 - **The LLM step failed part-way** (e.g. an API outage): whatever it finished was committed, marked "(partial: LLM step failed)", and the next run continues.
+
+### A meeting stays draft
+
+A draft becomes official when `consent run` finds it on [the public calendar](https://ousd.legistar.com/Calendar.aspx) (Board of Education, its year) with an agenda link, and its meeting page says "Agenda status: Final" and lists the same file numbers. The run log says why a meeting is still a draft (`2026-10-28: agenda still a draft (not on the public calendar)`). A high-priority alert fires when a draft passes its legal posting deadline (72 hours before a regular meeting, 24 before a special one) without going official, which usually means the page markup changed.
+
+1. Look at the calendar. If the meeting isn't there, or has no agenda, the district hasn't posted it; wait.
+2. If it's there and Final, the scrape is broken. Fix `pipeline/legistar/calendar.ts` (its tests use trimmed copies of the real markup), or as a stopgap set the meeting's `agendaStatus` to `"official"`, `agendaPublishedAt` to now, and `meetingDetailId`, `meetingDetailGuid` and `agendaPdfUrl` from the calendar links in `data/meetings.json`, and commit. The next run summarizes it and emails subscribers.
+
+Fill missing meeting and agenda links for official meetings with `npx tsx pipeline/cli.ts calendar-backfill [--dry-run]`.
 
 ### A meeting never becomes final
 

@@ -31,8 +31,8 @@ import { cp, mkdir, mkdtemp, open, readdir, readFile, rm, stat, unlink } from 'n
 import os from 'node:os'
 import path from 'node:path'
 
-import { oaklandToday } from '@oakvs/consent-schema/format'
-import type { TRegistryEntry } from '@oakvs/consent-schema/schema'
+import { agendaDeadline, oaklandToday } from '@oakvs/consent-schema/format'
+import type { TRegistry, TRegistryEntry } from '@oakvs/consent-schema/schema'
 
 import { regenerateAliasFile } from '../build/aliases'
 import { buildAll } from '../build/write'
@@ -44,16 +44,18 @@ import { candidateGroups } from '../build/vendor-candidates'
 import { historyPerRun, updateVendorHistories, vendorHistoriesDue } from '../legistar/vendor-history'
 import { unresearchedVendors } from '../research/vendor-research'
 import { ingestMeeting } from '../ingest'
+import { checkOfficial, fetchBoardCalendar } from '../legistar/calendar'
 import { getEventItems, stats } from '../legistar/client'
 import { ANCHOR_EVENT_ID, claimedEventIds, probeEvents, resolveEventId } from '../legistar/discover'
 import { updateUpcoming } from '../legistar/upcoming'
 import { isSettled, registerFutureDates } from '../registry/entries'
-import { getDataRoot, readRegistry, setDataRoot, stableStringify, writeRegistry } from '../store'
+import { getDataRoot, readRaw, readRegistry, setDataRoot, stableStringify, writeRegistry } from '../store'
 
 import { changedPaths, git, hasUpstream, head, trackedChanges, tryGit } from './git'
 import { commitMessage, llmCommitMessage } from './message'
 
 import type { TBuildSummary } from '../build/write'
+import type { TCalendarRow } from '../legistar/calendar'
 import type { TProbedEvents } from '../legistar/discover'
 import type { ILlm } from '../llm/client'
 import type { TLlmPhaseResult } from '../llm/phase'
@@ -130,6 +132,46 @@ export const hashEventItems = (items: unknown): string =>
 
 const isOpen = (m: TRegistryEntry): boolean => m.eventId != null && m.status !== 'final' && m.status !== 'skipped'
 
+/** Alert once if a draft is still a draft this long past its legal posting deadline (one run's window). */
+const OVERDUE_WINDOW_MS = 31 * 60 * 1000
+
+/**
+ * Step 1d: promote drafts whose agenda is now public on the Legistar calendar.
+ * One calendar search per year that has a draft, shared across meetings. Any
+ * failure leaves the meeting a draft and is logged, never thrown: a broken
+ * scrape mustn't stop the official text from updating.
+ */
+async function promoteOfficialAgendas(registry: TRegistry, now: Date): Promise<{ official: TRunChanges['official']; overdueDrafts: string[] }> {
+  const official: TRunChanges['official'] = []
+  const overdueDrafts: string[] = []
+  const drafts = registry.meetings.filter(m => m.agendaStatus === 'draft' && m.eventId != null && m.status !== 'skipped' && m.lastIngestedAt != null)
+  const calendars = new Map<string, Promise<TCalendarRow[]>>()
+  for (const entry of drafts) {
+    try {
+      const raw = await readRaw(entry.key)
+      if (!raw) continue
+      const year = entry.date.slice(0, 4) as `${number}`
+      if (!calendars.has(year)) calendars.set(year, fetchBoardCalendar(year))
+      const result = await checkOfficial(entry.date, new Set(raw.items.map(i => i.file)), await calendars.get(year)!)
+      if (result.official) {
+        entry.agendaStatus = 'official'
+        entry.agendaPublishedAt = now.toISOString()
+        entry.meetingDetailId = result.agenda.meetingDetailId
+        entry.meetingDetailGuid = result.agenda.meetingDetailGuid
+        entry.agendaPdfUrl = result.agenda.agendaPdfUrl
+        official.push({ key: entry.key, items: raw.items.length })
+        continue
+      }
+      console.log(`${entry.key}: agenda still a draft (${result.reason})`)
+    } catch (error) {
+      console.log(`${entry.key}: agenda status check failed: ${(error as Error).message}`)
+    }
+    const late = now.getTime() - agendaDeadline(entry.date, entry.kind === 'special' ? 'special' : 'regular').getTime()
+    if (late >= 0 && late < OVERDUE_WINDOW_MS) overdueDrafts.push(entry.key)
+  }
+  return { official, overdueDrafts }
+}
+
 /** One check → ingest → build pass over the current data root. Writes files; never touches git. */
 export async function cycle(now: Date = new Date()): Promise<TRunChanges> {
   const today = oaklandToday(now)
@@ -183,21 +225,31 @@ export async function cycle(now: Date = new Date()): Promise<TRunChanges> {
     entry.lastIngestedAt = snapshot.fetchedAt
     const final = isSettled(entry, snapshot, now)
     entry.status = final ? 'final' : 'ingested'
-    meetings.push({ key: entry.key, eventId: entry.eventId!, items: snapshot.items.length, diff, unchanged: !changed, final })
+    meetings.push({ key: entry.key, eventId: entry.eventId!, items: snapshot.items.length, diff, unchanged: !changed, final, draft: entry.agendaStatus === 'draft' })
   }
+
+  // 1d. Drafts whose agenda has gone public.
+  const { official, overdueDrafts } = await promoteOfficialAgendas(registry, now)
+  for (const m of meetings) m.draft = registry.meetings.find(e => e.key === m.key)?.agendaStatus === 'draft'
 
   await writeRegistry(registry)
 
   // 2. Rebuild everything. The build is deterministic, so an unchanged input gives byte-identical output.
   const built = await buildAll()
-  const pendingSummaries = built.meetings.reduce((n, m) => n + m.totals.items - m.totals.enrichedItems, 0)
+  const isDraft = new Set(registry.meetings.filter(m => m.agendaStatus === 'draft').map(m => m.key))
+  const pending = (official: boolean): number => built.meetings
+    .filter(m => isDraft.has(m.meeting.key) !== official)
+    .reduce((n, m) => n + m.totals.items - m.totals.enrichedItems, 0)
 
   return {
     upcoming: { changed: upcoming.changed, date: upcoming.file.meeting?.date ?? null, consentItems: upcoming.file.meeting?.consentItems ?? null },
     discovered,
     resolved,
     meetings,
-    pendingSummaries,
+    official,
+    overdueDrafts,
+    pendingSummaries: pending(true),
+    draftItemsWaiting: pending(false),
   }
 }
 

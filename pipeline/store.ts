@@ -145,6 +145,17 @@ export async function readVendorAliases(): Promise<TVendorAliases> {
   }
 }
 
+/**
+ * Meeting keys with a raw snapshot whose agenda is official. Draft agendas
+ * (see `agendaStatus`) are published with official text only; their AI
+ * summaries wait until the agenda is public.
+ */
+export async function officialRawKeys(): Promise<string[]> {
+  const [keys, registry] = await Promise.all([listRawKeys(), readRegistry()])
+  const drafts = new Set(registry.meetings.filter(m => m.agendaStatus === 'draft').map(m => m.key))
+  return keys.filter(k => !drafts.has(k))
+}
+
 /** Meeting keys that have a raw snapshot. */
 export async function listRawKeys(): Promise<string[]> {
   try {

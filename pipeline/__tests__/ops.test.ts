@@ -11,7 +11,10 @@ const baseSummary: TRunSummary = {
   discovered: [],
   resolved: [],
   meetings: [],
+  official: [],
+  overdueDrafts: [],
   pendingSummaries: 0,
+  draftItemsWaiting: 0,
   startedAt: NOW.toISOString(),
   dryRun: false,
   changedFiles: [],
@@ -31,6 +34,16 @@ describe('alerts for a run', () => {
     expect(posted[0].message).toContain('87 consent items')
     expect(runNotices({ ...baseSummary, meetings: [{ key: '2026-10-14', eventId: 5825, items: 87, diff: null, unchanged: true, final: false }] })).toEqual([])
     expect(runNotices({ ...baseSummary, dryRun: true, meetings: [{ key: '2026-10-14', eventId: 5825, items: 87, diff: null, unchanged: false, final: false }] })).toEqual([])
+  })
+
+  it('marks a draft agenda as low priority, announces it going official, and warns when a draft is overdue', () => {
+    const draft = runNotices({ ...baseSummary, meetings: [{ key: '2026-10-28', eventId: 5825, items: 71, diff: null, unchanged: false, final: false, draft: true }] })
+    expect(draft).toEqual([expect.objectContaining({ title: 'October 28, 2026 draft agenda posted', priority: 'low' })])
+    expect(draft[0].message).toContain('Summaries wait for the official agenda')
+    const official = runNotices({ ...baseSummary, official: [{ key: '2026-10-28', items: 71 }] })
+    expect(official).toEqual([expect.objectContaining({ title: 'October 28, 2026 official agenda posted', priority: 'default' })])
+    const overdue = runNotices({ ...baseSummary, overdueDrafts: ['2026-10-28'] })
+    expect(overdue).toEqual([expect.objectContaining({ title: 'October 28, 2026 agenda still a draft', priority: 'high' })])
   })
 
   it('reports summaries with the flagged count, items needing a human, and the 80% spend line once', () => {

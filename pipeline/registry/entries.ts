@@ -17,7 +17,11 @@ export function blankEntry(key: string, kind: TMeetingKind = key.endsWith('-spec
     eventId: null,
     resolvedBy: null,
     meetingDetailId: null,
+    meetingDetailGuid: null,
     agendaPdfUrl: null,
+    // A draft until `consent run` finds the agenda public on the Legistar calendar.
+    agendaStatus: 'draft',
+    agendaPublishedAt: null,
     status: 'discovered',
     lastIngestedAt: null,
     note: null,

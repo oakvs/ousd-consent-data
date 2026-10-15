@@ -11,6 +11,12 @@
  * SCHEMA_VERSION's major number, and the site's build stops with a clear
  * message until the site is updated for it. Published files are fully derived
  * from raw + enrichments + overrides, so a bump means `build --all`.
+ *
+ * Agenda status: OUSD's Legistar API exposes agendas while staff are still
+ * building them, so a meeting is `draft` from its first ingest until its agenda
+ * is on the public Legistar calendar with "Agenda status: Final". It's
+ * `official` from then on. Drafts publish official text only; AI summaries and
+ * the subscriber email wait for the official agenda.
  */
 import { z } from 'zod'
 
@@ -342,6 +348,10 @@ export type TVerificationsFile = z.infer<typeof VerificationsFile>
 export const MeetingStatus = z.enum(['discovered', 'ingested', 'published', 'final', 'skipped'])
 export type TMeetingStatus = z.infer<typeof MeetingStatus>
 
+/** `draft` until the agenda is public on the Legistar calendar as Final; see the header comment. */
+export const AgendaStatus = z.enum(['draft', 'official'])
+export type TAgendaStatus = z.infer<typeof AgendaStatus>
+
 export const RegistryEntry = z.object({
   key: MeetingKey,
   date: IsoDate,
@@ -350,7 +360,13 @@ export const RegistryEntry = z.object({
   eventId: z.number().nullable(),
   resolvedBy: z.enum(['history', 'probe', 'manual', 'prototype']).nullable(),
   meetingDetailId: z.number().nullable(),
+  /** Legistar's GUID for the MeetingDetail page, which goes with `meetingDetailId` in its links. */
+  meetingDetailGuid: z.string().nullable().default(null),
   agendaPdfUrl: z.url().nullable(),
+  /** Entries from before agenda status was tracked were all public already, hence the default. */
+  agendaStatus: AgendaStatus.default('official'),
+  /** When `consent run` first saw the agenda as official (null for meetings from before it checked). */
+  agendaPublishedAt: z.string().nullable().default(null),
   status: MeetingStatus,
   lastIngestedAt: z.string().nullable(),
   note: z.string().nullable(),
@@ -478,6 +494,10 @@ export const MeetingMeta = z.object({
   eventId: z.number().nullable(),
   agendaPdfUrl: z.url().nullable(),
   legistarMeetingUrl: z.url().nullable(),
+  /** `draft`: Legistar shows the items, but the agenda isn't public yet and can still change. */
+  agendaStatus: AgendaStatus,
+  /** When the agenda was first seen as official; null for drafts and for meetings from before it was checked. */
+  agendaPublishedAt: z.string().nullable(),
   revision: z.number(),
   /** Last time the source data was fetched — not the build time, to keep builds deterministic. */
   updatedAt: z.string(),
@@ -568,6 +588,10 @@ export const IndexEntry = z.object({
   title: z.string(),
   /** e.g. "2025-26" — for grouping the archive. */
   schoolYear: z.string(),
+  /** `draft`: published early from Legistar, before the agenda is public. */
+  agendaStatus: AgendaStatus,
+  agendaPublishedAt: z.string().nullable(),
+  agendaPdfUrl: z.url().nullable(),
   items: z.number(),
   enrichedItems: z.number(),
   spendingTotal: z.number(),
