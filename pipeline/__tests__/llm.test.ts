@@ -9,9 +9,10 @@ import type { TEnrichment, TRawSnapshot, TVerifiedMoney } from '@oakvs/consent-s
 import { enrichmentCacheKey } from '../import/prototype'
 import { anthropicLlm, MODELS } from '../llm/client'
 import { ENRICH_PROMPT_VERSION, needsEnrichment } from '../llm/enrich'
-import { llmPhase } from '../llm/phase'
+import { llmPhase, llmPlan } from '../llm/phase'
 import { EnrichmentReply, toEnrichmentCandidate } from '../llm/schemas'
 import { readLlmState, retryDecision } from '../llm/state'
+import { blankEntry } from '../registry/entries'
 import { llmCommitMessage } from '../run/message'
 import { getDataRoot, listRawKeys, readEnrichments, readRaw, readVerifications, setDataRoot, stableStringify } from '../store'
 
@@ -210,6 +211,21 @@ describe('LLM step', () => {
     const again = fakeLlm()
     await llmPhase({ llm: again, today: '2026-10-14', keys: [KEY] })
     expect(again.asked).toEqual([])
+  })
+
+  it('leaves a draft agenda alone unless its key is given', async () => {
+    const registry = { lastKnownEventId: null, meetings: [{ ...blankEntry(KEY), eventId: 5800, status: 'ingested' as const }] }
+    await writeFile(path.join(getDataRoot(), 'meetings.json'), stableStringify(registry))
+    const skipped = fakeLlm()
+    expect((await llmPhase({ llm: skipped, today: '2026-10-14' })).meetings).toEqual([])
+    expect(skipped.asked).toEqual([])
+    expect(await llmPlan()).toEqual([])
+
+    await writeFile(path.join(getDataRoot(), 'meetings.json'), stableStringify({ ...registry, meetings: [{ ...registry.meetings[0], agendaStatus: 'official' }] }))
+    expect((await llmPlan()).map(p => p.key)).toEqual([KEY])
+    const forced = fakeLlm()
+    await writeFile(path.join(getDataRoot(), 'meetings.json'), stableStringify(registry))
+    expect((await llmPhase({ llm: forced, today: '2026-10-14', keys: [KEY] })).meetings[0].enrich.done.sort()).toEqual(FILES)
   })
 
   it('asks a different model for a third reading when two readings disagree on totals', async () => {

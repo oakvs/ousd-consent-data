@@ -1,8 +1,9 @@
 /**
  * Alerts, sent to ntfy.
  *
- *   new agenda posted, with counts            default priority
- *   agenda revised                            low
+ *   new agenda posted, or a draft went official default priority
+ *   draft agenda posted, agenda revised       low
+ *   draft past its posting deadline           high
  *   summaries published, and how many flagged default, high when any are flagged
  *   items still failing after 3 days          high
  *   LLM step failed part-way, or capped       high
@@ -31,9 +32,34 @@ const meetingLabel = (key: string): string => `${formatDate(key.slice(0, 10), 'l
 export function runNotices(s: TRunSummary): TNotice[] {
   if (s.dryRun) return []
   const notices: TNotice[] = []
+  for (const o of s.official) {
+    notices.push({
+      title: `${meetingLabel(o.key)} official agenda posted`,
+      message: `${plural(o.items, 'consent item')}. The agenda is public on Legistar; summaries follow.`,
+      priority: 'default',
+      tags: ['page_facing_up'],
+      click: SITE,
+    })
+  }
+  for (const key of s.overdueDrafts) {
+    notices.push({
+      title: `${meetingLabel(key)} agenda still a draft`,
+      message: 'Its posting deadline has passed but the Legistar calendar check hasn\'t found it. Check the calendar; see "A meeting stays draft" in the RUNBOOK.',
+      priority: 'high',
+      tags: ['warning'],
+    })
+  }
   for (const m of s.meetings) {
     if (m.unchanged) continue
-    if (!m.diff) {
+    if (!m.diff && m.draft) {
+      notices.push({
+        title: `${meetingLabel(m.key)} draft agenda posted`,
+        message: `${plural(m.items, 'consent item')}, published as a draft. Summaries wait for the official agenda.`,
+        priority: 'low',
+        tags: ['memo'],
+        click: SITE,
+      })
+    } else if (!m.diff) {
       notices.push({
         title: `${meetingLabel(m.key)} agenda posted`,
         message: `${plural(m.items, 'consent item')}. The official text is live; summaries follow.`,

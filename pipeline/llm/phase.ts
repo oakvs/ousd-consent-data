@@ -1,11 +1,11 @@
 /**
  * The LLM step of `consent run`: summaries for new or
- * changed items, then second readings, for every meeting. Raw data is
- * already public by now; if this step fails or is capped, the next run
- * retries it.
+ * changed items, then second readings, for every meeting whose agenda is
+ * official (drafts wait; pass `keys` to override). Raw data is already
+ * public by now; if this step fails or is capped, the next run retries it.
  */
 import { tasksForMeeting } from '../enrich/verify-io'
-import { listRawKeys } from '../store'
+import { officialRawKeys } from '../store'
 
 import { anthropicLlm, hasLlmCredentials } from './client'
 import { monthSpend, newContext } from './context'
@@ -38,7 +38,7 @@ export async function llmPhase({ llm, today, keys }: { llm?: ILlm; today: string
   const ctx = newContext(llm ?? anthropicLlm(), state, today, capUsd)
   const meetings: TLlmMeetingResult[] = []
   try {
-    for (const key of keys ?? await listRawKeys()) {
+    for (const key of keys ?? await officialRawKeys()) {
       const enrich = await enrichMeeting(ctx, key)
       const verify = await verifyMeeting(ctx, key)
       if (active(enrich) || active(verify)) meetings.push({ key, enrich, verify })
@@ -61,7 +61,7 @@ export async function llmPhase({ llm, today, keys }: { llm?: ILlm; today: string
 /** What the LLM step would do now, without calling the API (for --dry-run). */
 export async function llmPlan(keys?: string[]): Promise<{ key: string; enrich: number; verify: number }[]> {
   const out: { key: string; enrich: number; verify: number }[] = []
-  for (const key of keys ?? await listRawKeys()) {
+  for (const key of keys ?? await officialRawKeys()) {
     const [enrich, verify] = await Promise.all([pendingEnrichments(key), tasksForMeeting(key)])
     if (enrich.length || verify.length) out.push({ key, enrich: enrich.length, verify: verify.length })
   }

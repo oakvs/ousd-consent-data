@@ -26,7 +26,7 @@ export const stats = { network: 0, cache: 0 }
 let active = 0
 const queue: (() => void)[] = []
 
-async function withSlot<T>(fn: () => Promise<T>): Promise<T> {
+export async function withSlot<T>(fn: () => Promise<T>): Promise<T> {
   if (active >= MAX_CONCURRENCY) await new Promise<void>(resolve => queue.push(resolve))
   active++
   try {

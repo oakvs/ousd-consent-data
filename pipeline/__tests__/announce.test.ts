@@ -1,9 +1,14 @@
-import { beforeAll, describe, expect, it } from 'vitest'
+import { mkdir, mkdtemp, readFile, writeFile } from 'node:fs/promises'
+import os from 'node:os'
+import path from 'node:path'
 
-import { RETRY, announceReady, announceTest, campaignName, checkList, findCampaigns, isAnnounced, isReady, listmonkConfig, listmonkConfigProblems, renderEmail, scheduleCampaign } from '../ops/announce'
+import { afterAll, beforeAll, describe, expect, it } from 'vitest'
+
+import { RETRY, announceReady, announceTest, campaignName, checkList, draftAnnouncedOn, finalCampaignName, findCampaigns, isAnnounced, isReady, listmonkConfig, listmonkConfigProblems, renderEmail, scheduleCampaign } from '../ops/announce'
+import { getDataRoot, setDataRoot } from '../store'
 
 import type { TListmonkConfig } from '../ops/announce'
-import type { TIndexEntry } from '@oakvs/consent-schema/schema'
+import type { TIndexEntry, TIndexFile } from '@oakvs/consent-schema/schema'
 
 const meeting = (over: Partial<TIndexEntry> = {}): TIndexEntry => ({
   key: '2026-10-14',
@@ -11,6 +16,9 @@ const meeting = (over: Partial<TIndexEntry> = {}): TIndexEntry => ({
   kind: 'regular',
   title: 'Board of Education',
   schoolYear: '2026-27',
+  agendaStatus: 'official',
+  agendaPublishedAt: '2026-10-11T19:37:00.000Z',
+  agendaPdfUrl: null,
   items: 87,
   enrichedItems: 87,
   spendingTotal: 12_400_000,
@@ -32,6 +40,20 @@ beforeAll(() => {
   RETRY.sleep = async () => undefined
 })
 
+const REAL = getDataRoot()
+
+/** Point the data root at a scratch copy whose index holds only these meetings. */
+function onlyMeetings(pick: (real: TIndexEntry[]) => TIndexEntry[]): void {
+  beforeAll(async () => {
+    const real = JSON.parse(await readFile(path.join(REAL, 'published', 'index.json'), 'utf8')) as TIndexFile
+    const dir = await mkdtemp(path.join(os.tmpdir(), 'announce-'))
+    await mkdir(path.join(dir, 'published'), { recursive: true })
+    await writeFile(path.join(dir, 'published', 'index.json'), JSON.stringify({ ...real, meetings: pick(real.meetings) }))
+    setDataRoot(dir)
+  })
+  afterAll(() => setDataRoot(REAL))
+}
+
 describe('isReady', () => {
   it('sends once every item has a summary, before the meeting', () => {
     expect(isReady(meeting(), SUNDAY)).toBe(true)
@@ -41,6 +63,10 @@ describe('isReady', () => {
     const partial = meeting({ enrichedItems: 80 })
     expect(isReady(partial, SUNDAY)).toBe(false)
     expect(isReady(partial, new Date('2026-10-14T00:00:00Z'))).toBe(true) // Tue 5 p.m., 23 hours out
+  })
+
+  it('never sends for a draft agenda, even with every summary in', () => {
+    expect(isReady(meeting({ agendaStatus: 'draft', agendaPublishedAt: null }), SUNDAY)).toBe(false)
   })
 
   it('never sends without any summaries, or once the meeting has started', () => {
@@ -197,6 +223,8 @@ describe('announce --test', () => {
 })
 
 describe('announce: failures between creating and scheduling', () => {
+  // Only Sept 23: later meetings in the real index are ready on this date too.
+  onlyMeetings(real => real.filter(m => m.key === '2026-09-23'))
   const cfg: TListmonkConfig = { url: 'https://lists.example.org', user: 'bot', token: 't', listId: 7 }
   const reply = (data: unknown): Response => new Response(JSON.stringify({ data }), { status: 200 })
   // The day before the Sept 23 meeting, whose summaries are all in.
@@ -242,5 +270,59 @@ describe('announce: failures between creating and scheduling', () => {
     const fake = listmonk([], { postFails: 'lost-reply' })
     expect(await announceReady({ now: BEFORE, config: cfg, fetch: fake })).toEqual(['2026-09-23'])
     expect(writes(fake.calls)).toEqual(['POST /campaigns', 'PUT /campaigns/41', 'PUT /campaigns/41/status'])
+  })
+})
+
+describe('announce: a meeting first emailed while its agenda was a draft', () => {
+  const KEY = '2026-10-28'
+  const OFFICIAL_AT = '2026-10-25T00:07:00.000Z'
+  onlyMeetings(() => [meeting({ key: KEY, date: KEY, agendaPublishedAt: OFFICIAL_AT })])
+  const cfg: TListmonkConfig = { url: 'https://lists.example.org', user: 'bot', token: 't', listId: 7 }
+  const reply = (data: unknown): Response => new Response(JSON.stringify({ data }), { status: 200 })
+  const NOW = new Date('2026-10-25T01:00:00Z')
+
+  type TCampaignRow = { id: number; name: string; status: string; created_at?: string }
+  function listmonk(campaigns: TCampaignRow[]): typeof fetch & { created: Record<string, unknown>[] } {
+    const created: Record<string, unknown>[] = []
+    const fake = (async (url: string, init: RequestInit) => {
+      const method = init.method ?? 'GET'
+      if (url.endsWith('/lists/7')) return reply({ name: 'OUSD Consent Report', type: 'public', optin: 'double', subscriber_count: 2 })
+      if (url.includes('/campaigns?query=')) return reply({ results: campaigns })
+      if (method === 'POST') {
+        created.push(JSON.parse(init.body as string))
+        return reply({ id: 50 })
+      }
+      return reply(true)
+    }) as typeof fetch & { created: typeof created }
+    fake.created = created
+    return fake
+  }
+
+  it('dates the draft email only when every sent campaign predates the official agenda', () => {
+    const m = meeting({ key: KEY, agendaPublishedAt: OFFICIAL_AT })
+    expect(draftAnnouncedOn([{ id: 9, name: campaignName(KEY), status: 'finished', created_at: '2026-10-14T21:00:00.000000Z' }], m)).toBe('2026-10-14')
+    expect(draftAnnouncedOn([{ id: 9, name: campaignName(KEY), status: 'finished', created_at: '2026-10-25T00:30:00Z' }], m)).toBeNull()
+    expect(draftAnnouncedOn([{ id: 9, name: campaignName(KEY), status: 'finished' }], m)).toBeNull()
+    expect(draftAnnouncedOn([{ id: 9, name: campaignName(KEY), status: 'finished', created_at: '2026-10-14T21:00:00Z' }], meeting({ agendaPublishedAt: null }))).toBeNull()
+  })
+
+  it('sends the official agenda once, under its own name', async () => {
+    const fake = listmonk([{ id: 9, name: campaignName(KEY), status: 'finished', created_at: '2026-10-14T21:00:00.000000Z' }])
+    expect(await announceReady({ now: NOW, config: cfg, fetch: fake })).toEqual([KEY])
+    expect(fake.created).toHaveLength(1)
+    expect(fake.created[0]).toMatchObject({ name: finalCampaignName(KEY) })
+    expect(fake.created[0].subject).toMatch(/^Final agenda: OUSD consent report for/)
+    expect(fake.created[0].altbody).toContain('replaces the draft we emailed you on October 14, 2026')
+  })
+
+  it('sends nothing once the follow-up went out, or when the first email came after the agenda was official', async () => {
+    const sentFinal = listmonk([
+      { id: 9, name: campaignName(KEY), status: 'finished', created_at: '2026-10-14T21:00:00Z' },
+      { id: 12, name: finalCampaignName(KEY), status: 'finished', created_at: '2026-10-25T00:40:00Z' },
+    ])
+    expect(await announceReady({ now: NOW, config: cfg, fetch: sentFinal })).toEqual([])
+    const sentAfter = listmonk([{ id: 9, name: campaignName(KEY), status: 'finished', created_at: '2026-10-25T00:40:00Z' }])
+    expect(await announceReady({ now: NOW, config: cfg, fetch: sentAfter })).toEqual([])
+    expect([...sentFinal.created, ...sentAfter.created]).toEqual([])
   })
 })

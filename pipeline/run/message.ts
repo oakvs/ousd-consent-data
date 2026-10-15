@@ -1,6 +1,8 @@
 /**
  * Commit messages for `consent run`. The subject says what a reader of the
  * data repo's history wants to know at a glance:
+ *   2026-10-28: draft agenda posted — 71 items
+ *   2026-10-28: official agenda posted — 71 items
  *   2026-10-14: agenda posted — 87 items
  *   2026-10-14: agenda revised — 2 added, 1 revised
  *   2026-10-14: outcomes updated — 85 items
@@ -16,6 +18,8 @@ export type TMeetingChange = {
   /** True when the item data didn't change (only bookkeeping, e.g. the daily outcome check). */
   unchanged: boolean
   final: boolean
+  /** The agenda isn't public yet (see `agendaStatus`). */
+  draft?: boolean
 }
 
 export type TRunChanges = {
@@ -23,8 +27,14 @@ export type TRunChanges = {
   discovered: string[]
   resolved: { key: string; eventId: number; resolvedBy: string }[]
   meetings: TMeetingChange[]
-  /** Items across all meetings that have no AI summary yet. */
+  /** Meetings whose agenda became official (public on the Legistar calendar) this run. */
+  official: { key: string; items: number }[]
+  /** Drafts that just passed their legal posting deadline without going public: the calendar check may be broken. */
+  overdueDrafts: string[]
+  /** Items in official meetings that have no AI summary yet. */
   pendingSummaries: number
+  /** Items in draft meetings with no summary; they wait for the official agenda. */
+  draftItemsWaiting: number
 }
 
 const plural = (n: number, word: string, many = `${word}s`): string => `${n} ${n === 1 ? word : many}`
@@ -40,7 +50,7 @@ function revisionParts(diff: TItemDiff): string[] {
 /** One line per meeting whose items changed, or null when only bookkeeping changed. */
 export function meetingLine(m: TMeetingChange): string | null {
   if (m.unchanged) return m.final ? `${m.key}: final` : null
-  if (!m.diff) return `${m.key}: agenda posted — ${plural(m.items, 'item')}`
+  if (!m.diff) return `${m.key}: ${m.draft ? 'draft agenda' : 'agenda'} posted — ${plural(m.items, 'item')}`
   const revision = revisionParts(m.diff)
   const suffix = m.final ? ' [final]' : ''
   if (revision.length) return `${m.key}: agenda revised — ${revision.join(', ')}${suffix}`
@@ -49,7 +59,10 @@ export function meetingLine(m: TMeetingChange): string | null {
 }
 
 export function commitMessage(c: TRunChanges): { subject: string; body: string } {
-  const lines = c.meetings.map(meetingLine).filter((l): l is string => l != null)
+  const lines = [
+    ...c.official.map(o => `${o.key}: official agenda posted — ${plural(o.items, 'item')}`),
+    ...c.meetings.map(meetingLine).filter((l): l is string => l != null),
+  ]
   const found = c.resolved.map(r => `${r.key}: meeting found (event ${r.eventId}, via ${r.resolvedBy})`)
   const detected = c.discovered
     .filter(k => !c.resolved.some(r => r.key === k))
@@ -69,7 +82,9 @@ export function commitMessage(c: TRunChanges): { subject: string; body: string }
     ...detected,
     ...(upcoming ? [upcoming] : []),
     ...c.meetings.filter(m => m.unchanged && !m.final).map(m => `${m.key}: checked, no item changes`),
+    ...c.overdueDrafts.map(k => `${k}: agenda still a draft past its posting deadline`),
     ...(c.pendingSummaries ? [`${plural(c.pendingSummaries, 'item')} awaiting AI summaries`] : []),
+    ...(c.draftItemsWaiting ? [`${plural(c.draftItemsWaiting, 'draft item')} wait for the official agenda`] : []),
   ]
   return { subject, body: body.map(l => `- ${l}`).join('\n') }
 }

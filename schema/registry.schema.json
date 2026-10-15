@@ -66,6 +66,13 @@
               "null"
             ]
           },
+          "meetingDetailGuid": {
+            "default": null,
+            "type": [
+              "string",
+              "null"
+            ]
+          },
           "agendaPdfUrl": {
             "anyOf": [
               {
@@ -75,6 +82,21 @@
               {
                 "type": "null"
               }
+            ]
+          },
+          "agendaStatus": {
+            "default": "official",
+            "type": "string",
+            "enum": [
+              "draft",
+              "official"
+            ]
+          },
+          "agendaPublishedAt": {
+            "default": null,
+            "type": [
+              "string",
+              "null"
             ]
           },
           "status": {

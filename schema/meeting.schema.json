@@ -65,6 +65,19 @@
             }
           ]
         },
+        "agendaStatus": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "official"
+          ]
+        },
+        "agendaPublishedAt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "revision": {
           "type": "number"
         },
@@ -154,6 +167,8 @@
         "eventId",
         "agendaPdfUrl",
         "legistarMeetingUrl",
+        "agendaStatus",
+        "agendaPublishedAt",
         "revision",
         "updatedAt",
         "note",

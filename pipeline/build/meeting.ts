@@ -23,6 +23,7 @@ import type {
 import { NO_ALIASES, vendorKey } from '@oakvs/consent-schema/vendor-key'
 import type { TVendorAliases } from '@oakvs/consent-schema/vendor-key'
 
+import { meetingDetailUrl } from '../legistar/calendar'
 import { legistarItemUrl } from '../normalize/raw-item'
 import { assess } from '../validate/alerts'
 import { runChecks, routeReview } from '../validate/checks'
@@ -276,8 +277,10 @@ export function buildMeeting({ raw, enrichments, overrides, verifications, share
       eventId: raw.eventId,
       agendaPdfUrl: registry?.agendaPdfUrl ?? null,
       legistarMeetingUrl: registry?.meetingDetailId
-        ? `https://ousd.legistar.com/MeetingDetail.aspx?ID=${registry.meetingDetailId}`
+        ? meetingDetailUrl(registry.meetingDetailId, registry.meetingDetailGuid)
         : null,
+      agendaStatus: registry?.agendaStatus ?? 'official',
+      agendaPublishedAt: registry?.agendaPublishedAt ?? null,
       revision: 1,
       updatedAt: raw.fetchedAt,
       consentVotes: raw.consentVotes,

@@ -29,7 +29,7 @@ const PROBE_AHEAD = 40
 const PROBE_MAX_EMPTY = 8
 /** Also check this many EventIds at and below the last known one (skipping claimed ones): events aren't created in date order. */
 export const PROBE_BEHIND = 30
-const MIN_OVERLAP = 0.8
+export const MIN_OVERLAP = 0.8
 /** June 24, 2026 — a known-good anchor when the registry is empty. */
 export const ANCHOR_EVENT_ID = 5785
 
@@ -47,7 +47,8 @@ async function historyCandidates(date: string, matterIds: number[]): Promise<num
   return [...votes.entries()].sort((a, b) => b[1] - a[1]).map(([id]) => id)
 }
 
-function overlap(eventFiles: Set<string>, dateFiles: Set<string>): number {
+/** Share of `eventFiles` that also appear in `dateFiles` (0 when `eventFiles` is empty). */
+export function overlap(eventFiles: Set<string>, dateFiles: Set<string>): number {
   if (eventFiles.size === 0) return 0
   let hits = 0
   for (const f of eventFiles) if (dateFiles.has(f)) hits++

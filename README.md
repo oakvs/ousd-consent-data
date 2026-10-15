@@ -48,7 +48,9 @@ Legistar's meeting listings are broken for OUSD for whatever reason, so this pip
 
 ### 2. Reading the agenda
 
-Once an agenda is official, the pipeline in this repo pulls the consent section of the agenda (via the Legistar public API) and each item's full record. The section is found by its heading and agenda letter, because Legistar's own "consent" marker isn't reliable. What comes back is saved as a snapshot in `data/raw/`, and that snapshot is the official record the rest of the process works from. Open meetings are re-checked every 30 minutes, so agenda changes show up within the hour, and outcomes are refreshed daily until every item has been acted on.
+As soon as an agenda's items show up in Legistar, the pipeline in this repo pulls the consent section of the agenda (via the Legistar public API) and each item's full record. The section is found by its heading and agenda letter, because Legistar's own "consent" marker isn't reliable. What comes back is saved as a snapshot in `data/raw/`, and that snapshot is the official record the rest of the process works from. Open meetings are re-checked every 30 minutes, so agenda changes show up within the hour, and outcomes are refreshed daily until every item has been acted on.
+
+Legistar's API shows an agenda while district staff are still putting it together, often a week or two before it's posted, so a newly found meeting starts out as a **draft agenda** (`agendaStatus: "draft"`). Its official text is published right away, clearly marked as a draft that can still change. Every run checks Legistar's public calendar, and once the meeting is listed there with its agenda, and the meeting page says "Agenda status: Final", it becomes **official** (`agendaStatus: "official"`, with the time it was first seen in `agendaPublishedAt`). That page's link and the agenda PDF are saved with the meeting. AI summaries and the subscriber email wait for the official agenda, so the AI only ever summarizes what the Board will actually take up.
 
 ### 3. Summarizing each item
 
@@ -84,7 +86,7 @@ One organization can show up as several vendors when Legistar spells its name di
 
 ### 9. Publishing
 
-Every change becomes a commit in this repository with a readable message, like `2026-10-14: agenda posted — 87 items`, and the website rebuilds afterward. The official text goes up first, usually within half an hour of an agenda appearing in Legistar, and the summaries follow once they pass their checks. Between the two, the git history is a complete record of every agenda revision, outcome and correction.
+Every change becomes a commit in this repository with a readable message, like `2026-10-28: draft agenda posted — 71 items` or `2026-10-28: official agenda posted — 71 items`, and the website rebuilds afterward. The official text goes up first, usually within half an hour of an agenda appearing in Legistar, marked as a draft until the district posts the agenda publicly, and the summaries follow once the agenda is official and they pass their checks. Between the two, the git history is a complete record of every agenda revision, outcome and correction.
 
 ### Which models wrote what
 
@@ -137,7 +139,7 @@ Flags point out how something was done. They don't say anything about anyone's m
 | Time extension only | Moves the end date without adding money | AI, from the text |
 | Emergency | The text describes emergency work or contracting | AI, from the text |
 
-Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet. <!-- generated:review -->Right now 12,102 items are `auto_ok`, 117 are `human_reviewed` and 11 are `needs_review`.<!-- /generated:review -->
+Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet (always the case for new items on a draft agenda). <!-- generated:review -->Right now 12,102 items are `auto_ok`, 117 are `human_reviewed` and 11 are `needs_review`.<!-- /generated:review -->
 
 ## Known limitations
 

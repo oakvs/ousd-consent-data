@@ -222,7 +222,7 @@ describe('vendors', () => {
     const adopted = { action: 'Adopted', date: '2026-06-29', meetingEventId: 5786, adopted: true }
     const meeting = (key: string, items: TPublishedItem[]): TMeetingFile => ({
       schemaVersion: SCHEMA_VERSION,
-      meeting: { key, date: key, time: null, kind: 'regular', title: 't', eventId: null, agendaPdfUrl: null, legistarMeetingUrl: null, revision: 1, updatedAt: key, note: null, consentVotes: [] },
+      meeting: { key, date: key, time: null, kind: 'regular', title: 't', eventId: null, agendaPdfUrl: null, legistarMeetingUrl: null, agendaStatus: 'official', agendaPublishedAt: null, revision: 1, updatedAt: key, note: null, consentVotes: [] },
       totals: computeTotals(items),
       items,
     })
@@ -240,7 +240,7 @@ describe('vendor pages', () => {
   const adopted = { action: 'Adopted', date: '2026-06-24', meetingEventId: 5785, adopted: true }
   const meeting = (key: string, items: TPublishedItem[]): TMeetingFile => ({
     schemaVersion: SCHEMA_VERSION,
-    meeting: { key, date: key, time: null, kind: 'regular', title: 't', eventId: null, agendaPdfUrl: null, legistarMeetingUrl: null, revision: 1, updatedAt: key, note: null, consentVotes: [] },
+    meeting: { key, date: key, time: null, kind: 'regular', title: 't', eventId: null, agendaPdfUrl: null, legistarMeetingUrl: null, agendaStatus: 'official', agendaPublishedAt: null, revision: 1, updatedAt: key, note: null, consentVotes: [] },
     totals: computeTotals(items),
     items,
   })

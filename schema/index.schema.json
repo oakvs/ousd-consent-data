@@ -36,6 +36,30 @@
           "schoolYear": {
             "type": "string"
           },
+          "agendaStatus": {
+            "type": "string",
+            "enum": [
+              "draft",
+              "official"
+            ]
+          },
+          "agendaPublishedAt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "agendaPdfUrl": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
           "items": {
             "type": "number"
           },
@@ -118,6 +142,9 @@
           "kind",
           "title",
           "schoolYear",
+          "agendaStatus",
+          "agendaPublishedAt",
+          "agendaPdfUrl",
           "items",
           "enrichedItems",
           "spendingTotal",
