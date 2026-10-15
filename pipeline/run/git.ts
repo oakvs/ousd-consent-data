@@ -36,3 +36,7 @@ export const hasUpstream = async (): Promise<boolean> =>
   (await tryGit(['rev-parse', '--abbrev-ref', '--symbolic-full-name', '@{u}'])).ok
 
 export const head = (): Promise<string> => git(['rev-parse', 'HEAD'])
+
+/** Files that differ between two commits, leaving out `exclude` (paths or folders). */
+export const changedBetween = async (from: string, to: string, exclude: string[] = []): Promise<string[]> =>
+  lines(await git(['diff', '--name-only', from, to, '--', '.', ...exclude.map(p => `:(exclude)${p}`)]))

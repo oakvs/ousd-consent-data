@@ -228,6 +228,7 @@ Renaming or removing anything in `packages/consent-schema` is breaking: the site
 - **"another consent run holds .cache/run.lock"**: a run is in progress, or one crashed. Locks older than 2 hours are cleared automatically; delete the file if you're sure no run is going.
 - **Legistar errors (429 or 5xx)**: the client retries with backoff. If Legistar is down, the run fails and the next one tries again.
 - **"push rejected 3 times"**: something else keeps pushing to the data repo. Find it; only one scheduler should push.
+- **"stopped: main has newer code …"**: a code change landed on main while the run was going. The run only writes data with the code it started with, so it stops and the next run, on the new code, does the work. If the LLM step had already paid for summaries, they're kept and pushed with "(build deferred: newer code on main)", and the next run rebuilds the published files. You don't need to do anything, and you don't need to pause the schedule to merge code.
 - **The LLM step failed part-way** (e.g. an API outage): whatever it finished was committed, marked "(partial: LLM step failed)", and the next run continues.
 
 ### A meeting stays draft

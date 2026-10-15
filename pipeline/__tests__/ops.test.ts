@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
+import { normalizeRunSummary } from '../ops/commands'
 import { failureNotice, runNotices, sendNotice } from '../ops/notify'
 
 import type { TRunSummary } from '../run/run'
@@ -44,6 +45,14 @@ describe('alerts for a run', () => {
     expect(official).toEqual([expect.objectContaining({ title: 'October 28, 2026 official agenda posted', priority: 'default' })])
     const overdue = runNotices({ ...baseSummary, overdueDrafts: ['2026-10-28'] })
     expect(overdue).toEqual([expect.objectContaining({ title: 'October 28, 2026 agenda still a draft', priority: 'high' })])
+  })
+
+  it('reads a summary written by older code, without the agenda-status fields', () => {
+    const { official, overdueDrafts, draftItemsWaiting, ...older } = baseSummary
+    void official; void overdueDrafts; void draftItemsWaiting
+    const meetings = [{ key: '2026-10-14', eventId: 5825, items: 87, diff: null, unchanged: false, final: false }]
+    expect(() => runNotices(normalizeRunSummary({ ...older, meetings }))).not.toThrow()
+    expect(runNotices(normalizeRunSummary({ ...older, meetings }))).toEqual([expect.objectContaining({ title: 'October 14, 2026 agenda posted' })])
   })
 
   it('reports summaries with the flagged count, items needing a human, and the 80% spend line once', () => {
