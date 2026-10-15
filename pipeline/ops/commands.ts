@@ -13,9 +13,28 @@ async function sendAll(notices: Parameters<typeof sendNotice>[0][]): Promise<voi
   for (const n of notices) await sendNotice(n)
 }
 
+/**
+ * A run summary as the alerts step reads it. The summary is written by the run
+ * step, which may have loaded older code than this step (a pull mid-run brings
+ * new code to disk), so fields added since then get their empty defaults.
+ */
+export function normalizeRunSummary(raw: Partial<TRunSummary>): TRunSummary {
+  return {
+    discovered: [],
+    resolved: [],
+    meetings: [],
+    official: [],
+    overdueDrafts: [],
+    pendingSummaries: 0,
+    draftItemsWaiting: 0,
+    changedFiles: [],
+    ...raw,
+  } as TRunSummary
+}
+
 /** `notify --summary F`: alerts for one run, plus the GitHub Actions step summary. */
 export async function notifyFromSummary(file: string): Promise<void> {
-  const summary = JSON.parse(await readFile(file, 'utf8')) as TRunSummary
+  const summary = normalizeRunSummary(JSON.parse(await readFile(file, 'utf8')) as Partial<TRunSummary>)
   const notices = runNotices(summary)
   await sendAll(notices)
   const target = process.env.GITHUB_STEP_SUMMARY

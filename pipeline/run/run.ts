@@ -25,6 +25,12 @@
  * `--no-push` commits locally and stops there.
  * If a push is rejected, the run resets to where it started, pulls, and runs
  * again (up to 3 times).
+ *
+ * A run only ever writes data with the code it started with. If a pull brings
+ * new code (anything outside data/ and README.md), that code isn't loaded, so
+ * the run stops instead of rebuilding with the old code, and leaves the work to
+ * the next run. The LLM step keeps what it paid for (summaries, readings,
+ * research) but not the files it built, which the next run rebuilds.
  */
 import { createHash } from 'node:crypto'
 import { cp, mkdir, mkdtemp, open, readdir, readFile, rm, stat, unlink } from 'node:fs/promises'
@@ -51,7 +57,7 @@ import { updateUpcoming } from '../legistar/upcoming'
 import { isSettled, registerFutureDates } from '../registry/entries'
 import { getDataRoot, readRaw, readRegistry, setDataRoot, stableStringify, writeRegistry } from '../store'
 
-import { changedPaths, git, hasUpstream, head, trackedChanges, tryGit } from './git'
+import { changedBetween, changedPaths, git, hasUpstream, head, trackedChanges, tryGit } from './git'
 import { commitMessage, llmCommitMessage } from './message'
 
 import type { TBuildSummary } from '../build/write'
@@ -71,6 +77,8 @@ const RESOLVE_AHEAD_DAYS = 14
 const MAX_PUSH_ATTEMPTS = 3
 /** What a run may change and commit: the data, and the README's generated numbers. */
 const PUBLISH_PATHS = ['data', 'README.md']
+/** What the build writes; everything else under PUBLISH_PATHS is an input. */
+const BUILT_PATHS = ['data/published', 'data/exports', 'README.md']
 const LOCK_FILE = path.join(process.cwd(), '.cache', 'run.lock')
 /** A lock older than this is from a crashed run. */
 const LOCK_STALE_MS = 2 * 60 * 60 * 1000
@@ -110,6 +118,8 @@ export type TLlmSummary =
 
 export type TRunSummary = TRunChanges & {
   startedAt: string
+  /** Set when the run stopped because main has newer code than this process loaded. */
+  staleCode?: string | null
   dryRun: boolean
   /** Files under data/ the cycle changed. */
   changedFiles: string[]
@@ -383,6 +393,35 @@ export function toLlmChanges(phase: TLlmPhaseResult, built: TBuildSummary, { mer
   }
 }
 
+/** Code files (anything outside PUBLISH_PATHS) that changed since `codeCommit`, the commit this process loaded. */
+async function newCode(codeCommit: string, to = 'HEAD'): Promise<string[]> {
+  return changedBetween(codeCommit, to, PUBLISH_PATHS)
+}
+
+const staleMessage = (files: string[]): string =>
+  `main has newer code (${files.slice(0, 3).join(', ')}${files.length > 3 ? `, +${files.length - 3} more` : ''}); leaving this run's work to the next run`
+
+const stoppedSummary = (startedAt: string, staleCode: string): TRunSummary => ({
+  upcoming: { changed: false, date: null, consentItems: null },
+  discovered: [],
+  resolved: [],
+  meetings: [],
+  official: [],
+  overdueDrafts: [],
+  pendingSummaries: 0,
+  draftItemsWaiting: 0,
+  startedAt,
+  staleCode,
+  dryRun: false,
+  changedFiles: [],
+  publishedChanged: false,
+  commit: null,
+  pushed: false,
+  deployed: false,
+  legistarRequests: stats.network,
+  llm: { status: 'disabled' },
+})
+
 async function commitData(subject: string, body: string): Promise<{ sha: string; subject: string }> {
   await git(['add', '--all', '--', ...PUBLISH_PATHS])
   await git(['commit', '--quiet', '-m', subject, '-m', body])
@@ -390,7 +429,7 @@ async function commitData(subject: string, body: string): Promise<{ sha: string;
 }
 
 /** Step 1–2: check, ingest, build, commit, push. Re-runs from scratch if the push is rejected. */
-async function fastPublish(now: Date, push: boolean, deployHookUrl: string | undefined, startedAt: string): Promise<TRunSummary> {
+async function fastPublish(now: Date, push: boolean, deployHookUrl: string | undefined, startedAt: string, codeCommit: string): Promise<TRunSummary> {
   for (let attempt = 1; ; attempt++) {
     const base = await head()
     const changes = await cycle(now)
@@ -425,6 +464,13 @@ async function fastPublish(now: Date, push: boolean, deployHookUrl: string | und
     await git(['reset', '--quiet', '--hard', base])
     await git(['clean', '--quiet', '-fd', '--', 'data'])
     await git(['pull', '--ff-only'])
+    // The rejection may have been a code change landing: this process still runs the old code.
+    const code = await newCode(codeCommit)
+    if (code.length) {
+      const why = staleMessage(code)
+      console.log(why)
+      return stoppedSummary(startedAt, why)
+    }
   }
 }
 
@@ -433,7 +479,7 @@ async function fastPublish(now: Date, push: boolean, deployHookUrl: string | und
  * rebased rather than thrown away. If the step dies part-way, what it
  * finished is still committed and pushed, then the error is re-thrown.
  */
-async function llmPublish(now: Date, push: boolean, deployHookUrl: string | undefined, llmClient: ILlm | undefined): Promise<TLlmSummary> {
+async function llmPublish(now: Date, push: boolean, deployHookUrl: string | undefined, llmClient: ILlm | undefined, codeCommit: string): Promise<TLlmSummary> {
   const today = oaklandToday(now)
   let phase: TLlmPhaseResult | null = null
   let merge: TMergePhaseResult | null = null
@@ -507,13 +553,31 @@ async function llmPublish(now: Date, push: boolean, deployHookUrl: string | unde
     summary.commit = await commitData(failure ? `${subject} (partial: LLM step failed)` : subject, body)
     if (push) {
       let pushed = await tryGit(['push', '--quiet'])
+      let buildDeferred = false
       if (!pushed.ok) {
         await git(['pull', '--rebase', '--quiet'])
-        pushed = await tryGit(['push', '--quiet'])
+        const code = await newCode(codeCommit)
+        if (code.length) {
+          // Keep the paid inputs, but not files this (old) code built: the next run rebuilds them.
+          console.log(`${staleMessage(code)}; keeping the summaries, dropping this run's build`)
+          // `restore` also removes built files that upstream doesn't have (e.g. a new vendor page).
+          await git(['restore', '--source=@{u}', '--staged', '--worktree', '--', ...BUILT_PATHS])
+          buildDeferred = true
+          if ((await tryGit(['diff', '--cached', '--quiet', '@{u}'])).ok) {
+            // Nothing but built files: no commit is left to push.
+            await git(['reset', '--quiet', '--hard', '@{u}'])
+            summary.commit = null
+          } else {
+            const deferred = `${subject}${failure ? ' (partial: LLM step failed)' : ''} (build deferred: newer code on main)`
+            await git(['commit', '--quiet', '--amend', '-m', deferred, '-m', body])
+            summary.commit = { sha: await head(), subject: deferred }
+          }
+        }
+        pushed = summary.commit ? await tryGit(['push', '--quiet']) : { ok: true, stdout: '', stderr: '' }
       }
       if (!pushed.ok) throw new Error(`LLM publish: push rejected after a rebase: ${pushed.stderr}`)
-      summary.pushed = true
-      if (deployHookUrl && changedFiles.some(f => f.startsWith('data/published/'))) summary.deployed = await deploy(deployHookUrl)
+      summary.pushed = summary.commit != null
+      if (!buildDeferred && deployHookUrl && changedFiles.some(f => f.startsWith('data/published/'))) summary.deployed = await deploy(deployHookUrl)
     }
   }
   if (failure) throw failure
@@ -527,10 +591,20 @@ async function liveRun(now: Date, push: boolean, deployHookUrl: string | undefin
   const strayData = await changedPaths('data')
   if (strayData.length) throw new Error(`data/ has untracked files; commit or remove them first:\n${strayData.join('\n')}`)
   if (push && !(await hasUpstream())) throw new Error('this branch has no upstream to push to; set one or use --no-push')
-  if (push) await git(['pull', '--ff-only'])
+  // The code this process loaded; any pull that changes it ends the run (see the header).
+  const codeCommit = await head()
+  if (push) {
+    await git(['pull', '--ff-only'])
+    const code = await newCode(codeCommit)
+    if (code.length) {
+      const why = staleMessage(code)
+      console.log(why)
+      return stoppedSummary(startedAt, why)
+    }
+  }
 
-  const summary = await fastPublish(now, push, deployHookUrl, startedAt)
-  if (llm) summary.llm = await llmPublish(now, push, deployHookUrl, llmClient)
+  const summary = await fastPublish(now, push, deployHookUrl, startedAt, codeCommit)
+  if (llm && !summary.staleCode) summary.llm = await llmPublish(now, push, deployHookUrl, llmClient, codeCommit)
   return summary
 }
 
@@ -541,6 +615,7 @@ export async function run({ dryRun: dry = false, push = true, now = new Date(), 
 export function printSummary(s: TRunSummary): void {
   const { subject, body } = commitMessage(s)
   console.log(`consent run${s.dryRun ? ' (dry run)' : ''}: ${s.legistarRequests} Legistar request(s)`)
+  if (s.staleCode) console.log(`stopped: ${s.staleCode}`)
   if (s.changedFiles.length === 0) {
     console.log('no changes')
   } else {
