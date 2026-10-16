@@ -23,6 +23,7 @@
  *   backfill --from D --to D [--limit N]      resolve → ingest for every registry meeting in range, then build
  *   import-prototype --dir <dir>              Seed 2026-06-24 from the v1 prototype files
  *   build                                     Rebuild every published file
+ *   consent-votes [--key K]                   Re-read consent votes from the minutes into data/raw (items untouched), then build
  *   calendar-backfill [--dry-run]             Fill Legistar meeting and agenda PDF links for official meetings from the public calendar
  *   enrich-export [--key K] [--size 30] [--all]  Write agent input chunks (.cache/enrich); --all = every item, for a re-run
  *   enrich-check --chunk ID                   Validate one agent output chunk (exit 1 on errors)
@@ -218,6 +219,17 @@ async function main(): Promise<void> {
     case 'events-check': {
       const { eventsCheck } = await import('./ops/commands')
       await eventsCheck()
+      break
+    }
+    case 'consent-votes': {
+      const { refreshConsentVotes } = await import('./ingest')
+      const { listRawKeys } = await import('./store')
+      const registry = await readRegistry()
+      const live = new Set(registry.meetings.filter(m => m.status !== 'final' && m.status !== 'skipped').map(m => m.key))
+      const changed = await refreshConsentVotes(values.key ? [values.key] : await listRawKeys(), live)
+      for (const k of changed) console.log(`${k}: consent votes updated`)
+      console.log(`${changed.length} meeting(s) changed`)
+      if (changed.length) await buildAll()
       break
     }
     case 'calendar-backfill': {

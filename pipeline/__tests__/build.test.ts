@@ -175,7 +175,10 @@ describe('consent report votes', () => {
   it('every published meeting carries its consent votes', () => {
     for (const f of readdirSync(path.join(PUBLISHED, 'meetings')).filter(n => !n.endsWith('.list.json'))) {
       const m = MeetingFile.parse(JSON.parse(readFileSync(path.join(PUBLISHED, 'meetings', f), 'utf8')))
-      for (const v of m.meeting.consentVotes) expect(v.title).toMatch(/general consent report/i)
+      for (const v of m.meeting.consentVotes) {
+        expect(v.section ?? v.title).toMatch(/gen[a-z]*\s+consent report|consent report - general obligation/i)
+        expect(`${v.title} ${v.section ?? ''}`).not.toMatch(/pupil/i)
+      }
     }
   })
 })

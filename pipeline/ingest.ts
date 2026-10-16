@@ -13,7 +13,7 @@ import type { TConsentVote, THistoryEntry, TRawItem, TRawSnapshot } from '@oakvs
 
 import { getEventItems, getHistories, getMatter, getVotes, mapConcurrent } from './legistar/client'
 import { normalizeHistory, toRawItem } from './normalize/raw-item'
-import { cleanTitle, findConsentRows } from './normalize/sections'
+import { findConsentRows, findConsentVoteRows } from './normalize/sections'
 import { readRaw, stableStringify, writeJson, paths } from './store'
 import { votedActions } from './validate/separate-vote'
 
@@ -87,6 +87,52 @@ async function attachVotes(history: THistoryEntry[], meetingDate: string, fresh:
   }
 }
 
+/**
+ * The votes on each General Consent Report as a whole, from the minutes rows (no agenda
+ * sequence); see findConsentVoteRows. Pupil Discipline votes are excluded.
+ */
+export async function readConsentVotes(eventItems: TLegistarEventItem[], fresh: boolean): Promise<TConsentVote[]> {
+  const consentVotes: TConsentVote[] = []
+  const clean = (v: string | null | undefined): string | null => v?.replace(/\s+/g, ' ').trim() || null
+  for (const { row: r, title, section } of findConsentVoteRows(eventItems)) {
+    const votes = await getVotes(r.EventItemId, { fresh }).catch(() => [])
+    consentVotes.push({
+      title,
+      section,
+      action: r.EventItemActionName!.trim(),
+      motion: clean(r.EventItemActionText),
+      mover: clean(r.EventItemMover),
+      seconder: clean(r.EventItemSeconder),
+      passed: clean(r.EventItemPassedFlagName),
+      votes: votes
+        .filter(v => v.VotePersonName && v.VoteValueName)
+        .map(v => ({ name: v.VotePersonName!.trim(), vote: v.VoteValueName!.trim() })),
+    })
+  }
+  return consentVotes
+}
+
+/**
+ * `consent-votes`: re-read the consent votes of every meeting (or one) and rewrite its raw
+ * snapshot when they changed; the items are left as they are. For a change to how votes are
+ * read: open meetings would pick it up on their own, but final ones are never re-ingested.
+ * Event items come from the cache except for `live` keys (open meetings).
+ */
+export async function refreshConsentVotes(keys: string[], live: ReadonlySet<string>): Promise<string[]> {
+  const changed: string[] = []
+  for (const key of keys) {
+    const raw = await readRaw(key)
+    if (!raw || raw.eventId == null) continue
+    const fresh = live.has(key)
+    const consentVotes = await readConsentVotes(await getEventItems(raw.eventId, { fresh }), fresh)
+    if (stableStringify(consentVotes) === stableStringify(raw.consentVotes)) continue
+    // Re-read from the cache, nothing was fetched: keep the snapshot's fetch time.
+    await writeJson(paths.raw(key), { ...raw, consentVotes, fetchedAt: fresh ? new Date().toISOString() : raw.fetchedAt })
+    changed.push(key)
+  }
+  return changed
+}
+
 export async function ingestMeeting(
   meetingKey: string,
   eventId: number,
@@ -123,28 +169,7 @@ export async function ingestMeeting(
     return item
   })
 
-  // The vote on each General Consent Report as a whole lives in a minutes row (no agenda
-  // sequence) like "Approval of the General Consent Report". Pupil Discipline votes are excluded.
-  const voteRows = eventItems
-    .filter(r => r.EventItemAgendaSequence == null && r.EventItemActionName)
-    .filter(r => /general consent report/i.test(r.EventItemTitle ?? '') && !/pupil/i.test(r.EventItemTitle ?? ''))
-    .sort((a, b) => (a.EventItemMinutesSequence ?? 0) - (b.EventItemMinutesSequence ?? 0))
-  const consentVotes: TConsentVote[] = []
-  for (const r of voteRows) {
-    const votes = await getVotes(r.EventItemId, { fresh }).catch(() => [])
-    const clean = (v: string | null | undefined): string | null => v?.replace(/\s+/g, ' ').trim() || null
-    consentVotes.push({
-      title: cleanTitle(r.EventItemTitle),
-      action: r.EventItemActionName!.trim(),
-      motion: clean(r.EventItemActionText),
-      mover: clean(r.EventItemMover),
-      seconder: clean(r.EventItemSeconder),
-      passed: clean(r.EventItemPassedFlagName),
-      votes: votes
-        .filter(v => v.VotePersonName && v.VoteValueName)
-        .map(v => ({ name: v.VotePersonName!.trim(), vote: v.VoteValueName!.trim() })),
-    })
-  }
+  const consentVotes = await readConsentVotes(eventItems, fresh)
 
   const changed = !previous
     || stableStringify(previous.items) !== stableStringify(items)
