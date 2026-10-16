@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 
 import { FILE_NUMBER, agendaLabel, cleanFileNumber, legistarItemUrl, normalizeCode } from '../normalize/raw-item'
-import { cleanTitle, findConsentRows } from '../normalize/sections'
+import { cleanTitle, findConsentRows, findConsentVoteRows } from '../normalize/sections'
 import { blankEntry, registerFutureDates } from '../registry/entries'
 
 import type { TLegistarEventItem } from '../legistar/client'
@@ -136,5 +136,60 @@ describe('legistarItemUrl', () => {
   // MatterId/MatterGuid; built from API fields it shows "Invalid parameters!".
   it('links through gateway.aspx, which takes the API MatterId', () => {
     expect(legistarItemUrl(70157)).toBe('https://ousd.legistar.com/gateway.aspx?M=L&ID=70157')
+  })
+})
+
+describe('consent votes from the minutes', () => {
+  // Shapes from real meetings: Oct 14, 2026 titles both votes "Approval of the Consent Agenda",
+  // and Sept 25, 2024 titles its Pupil Discipline vote "Approval of the General Consent Report".
+  let minutes = 0
+  const header = (number: string, title: string): TLegistarEventItem => ({ ...row(number, title), EventItemMinutesSequence: ++minutes })
+  const vote = (title: string, action = 'Adopted on the General Consent Report'): TLegistarEventItem =>
+    ({ ...row(null, title), EventItemAgendaSequence: null, EventItemActionName: action, EventItemMinutesSequence: ++minutes })
+  const titles = (items: TLegistarEventItem[]): { title: string; section: string | null }[] =>
+    findConsentVoteRows(items).map(({ title, section }) => ({ title, section }))
+
+  it('places each vote under its agenda section, leaving out Pupil Discipline', () => {
+    minutes = 0
+    expect(titles([
+      header('I.', 'Adoption of the Pupil Discipline Consent Report #comment'),
+      vote('Approval of the Consent Agenda'),
+      header('J.', 'Public Comment on All Non-Agenda Items'),
+      header('R.', 'Adoption of the General Consent Report #comment'),
+      vote('Approval of the Consent Agenda'),
+      header('S.', 'Adoption of General Consent Report - General Obligation Bonds Measures B, J and Y'),
+      vote('Approval of the General  Consent Report'),
+    ])).toEqual([
+      { title: 'Adoption of the General Consent Report', section: 'Adoption of the General Consent Report' },
+      { title: 'Approval of the General Consent Report', section: 'Adoption of General Consent Report - General Obligation Bonds Measures B, J and Y' },
+    ])
+  })
+
+  it('drops a Pupil Discipline vote titled as the General Consent Report, keeps typos under the right header', () => {
+    minutes = 0
+    expect(titles([
+      header('S.', 'Adoption of the Pupil Discipline Consent Report'),
+      vote('Approval of the General Consent Report'),
+      header('T.', 'Adoption of the General Consent Report'),
+      vote('Approval of the Geneal Consent Report'),
+    ])).toEqual([{ title: 'Approval of the Geneal Consent Report', section: 'Adoption of the General Consent Report' }])
+  })
+
+  it('keeps a motion on the whole report taken elsewhere when its own title names the report', () => {
+    minutes = 0
+    const postpone = 'Adoption by the Board of Education of Motion - Postponement of Consideration of All Agenda Items: V. General Consent Report'
+    expect(titles([
+      header('J.', 'Modification(s) To Agenda'),
+      vote(postpone, 'Adopted'),
+      vote('Adoption by the Board of Education to take up Public Comment', 'Failed'),
+      header('K.', 'Approval of the Consent Agenda for Closed Session Items'),
+      vote('Approval of the Consent Agenda'),
+    ])).toEqual([{ title: postpone, section: null }])
+  })
+
+  it('without a minutes order, goes by the title alone', () => {
+    const loose = { ...vote('Approval of the General Consent Report'), EventItemMinutesSequence: null }
+    const vague = { ...vote('Approval of the Consent Agenda'), EventItemMinutesSequence: null }
+    expect(titles([vague, loose])).toEqual([{ title: 'Approval of the General Consent Report', section: null }])
   })
 })

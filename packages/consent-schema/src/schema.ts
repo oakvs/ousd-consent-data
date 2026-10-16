@@ -213,7 +213,15 @@ export type TRawItem = z.infer<typeof RawItem>
 
 /** A vote on a consent report as a whole, from the meeting minutes. */
 export const ConsentVote = z.object({
+  /** Legistar's minutes title, or the section's when that doesn't name a consent report ("Approval of the Consent Agenda"). */
   title: z.string(),
+  /**
+   * The agenda section the vote falls under, which says which report it was: e.g. "Adoption of
+   * the General Consent Report" or "Adoption of General Consent Report - General Obligation Bonds
+   * Measures B, J and Y". Null when the minutes don't place it under a consent report header
+   * (e.g. a motion to postpone the whole report, taken under Modifications to Agenda).
+   */
+  section: z.string().nullable().default(null),
   action: z.string(),
   /** Official motion sentence, e.g. "…to Approve O. General Consent Report minus O.-121 …". */
   motion: z.string().nullable(),
@@ -573,6 +581,8 @@ export type TMeetingListFile = z.infer<typeof MeetingListFile>
 /** A consent-report vote, reduced to what a badge shows. */
 export const VoteSummary = z.object({
   title: z.string(),
+  /** See ConsentVote.section. */
+  section: z.string().nullable(),
   outcome: z.enum(['carried', 'failed', 'other']),
   /** "Passed", "Failed", or Legistar's action name for anything else (e.g. "Postponed"). */
   status: z.string(),

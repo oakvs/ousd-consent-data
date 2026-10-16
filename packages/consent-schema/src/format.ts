@@ -158,6 +158,7 @@ export function summarizeConsentVotes(votes: TConsentVote[]): TVoteSummary[] {
     const hasRollCall = v.votes.length > 0
     return {
       title: v.title,
+      section: v.section ?? null,
       outcome: outcome ?? 'other',
       status: outcome === 'failed' ? 'Failed' : outcome === 'carried' ? 'Passed' : v.action,
       ayes: hasRollCall ? counts.Aye ?? 0 : null,

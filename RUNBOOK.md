@@ -79,6 +79,7 @@ npm run consent:llm -- --key 2026-10-14          # just the LLM step for one mee
 npm run consent:build                            # rebuild published/ and exports/ from the inputs
 npm run consent:discover -- --date 2026-10-14    # find a meeting's EventId by hand
 npm run consent:ingest -- --key 2026-10-14 [--event 5825]
+npx tsx pipeline/cli.ts consent-votes [--key K]   # re-read whole-report votes from the minutes (all meetings, items untouched), then rebuild
 npm run consent:llm-compare -- --key 2026-09-23 --sample 20
 npm run consent:enrich-export -- --all             # chunk every item for a swarm re-run; snapshots data/enrichments to .cache/enrich/previous
 npm run consent:enrich-import -- --model sonnet-agent --replace   # merge swarm output, overwriting existing records

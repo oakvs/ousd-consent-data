@@ -78,3 +78,57 @@ export function findConsentRows(eventItems: TLegistarEventItem[]): TSectionRow[]
 
   return out
 }
+
+const PUPIL = /pupil/i
+const CONSENT = /consent/i
+const NAMES_REPORT = /consent report/i
+
+export type TConsentVoteRow = {
+  row: TLegistarEventItem
+  /** Legistar's title, or the section's when the row's doesn't name a consent report ("Approval of the Consent Agenda"). */
+  title: string
+  /** The agenda section the vote falls under, e.g. "Adoption of General Consent Report - General Obligation Bonds …". */
+  section: string | null
+}
+
+/**
+ * The minutes rows that record a vote on a General Consent Report as a whole (including a
+ * General Obligation Bond one), never the Pupil Discipline Consent Report's.
+ *
+ * Vote rows have no agenda sequence and an action. Their titles vary: "Approval of the General
+ * Consent Report", typos ("Geneal"), a bare "Approval of the Consent Agenda" that both reports
+ * use at the same meeting, and now and then a Pupil Discipline vote titled "General Consent
+ * Report". So each row is placed, by minutes order, under the top-level agenda header before it.
+ * It counts when that header is a General Consent Report, or when its own title names the
+ * General Consent Report (a motion to postpone the whole report, say) and it isn't under the
+ * Pupil Discipline header. Each vote records that header as its `section`; a row whose own
+ * title doesn't name a consent report also takes the section as its title.
+ */
+export function findConsentVoteRows(eventItems: TLegistarEventItem[]): TConsentVoteRow[] {
+  const titleOf = (r: TLegistarEventItem): string => r.EventItemTitle ?? ''
+  const isVote = (r: TLegistarEventItem): boolean =>
+    r.EventItemAgendaSequence == null && !!r.EventItemActionName && CONSENT.test(titleOf(r)) && !PUPIL.test(titleOf(r))
+
+  const sequenced = eventItems
+    .filter(r => r.EventItemMinutesSequence != null)
+    .sort((a, b) => a.EventItemMinutesSequence! - b.EventItemMinutesSequence!)
+  const unsequenced = eventItems.filter(r => r.EventItemMinutesSequence == null)
+
+  const out: TConsentVoteRow[] = []
+  let header: TLegistarEventItem | null = null
+  for (const row of [...sequenced, ...unsequenced]) {
+    if (row.EventItemMinutesSequence == null) header = null
+    if (row.EventItemMatterId == null && TOP_LEVEL.test(row.EventItemAgendaNumber ?? '')) {
+      header = row
+      continue
+    }
+    if (!isVote(row)) continue
+    const underReport = header != null && isConsentHeader(header) && !PUPIL.test(titleOf(header))
+    const underPupil = header != null && PUPIL.test(titleOf(header))
+    if (!underReport && (underPupil || !GENERAL_CONSENT.test(titleOf(row)))) continue
+    const own = cleanTitle(row.EventItemTitle)
+    const section = underReport ? cleanTitle(header!.EventItemTitle) : null
+    out.push({ row, title: section && !NAMES_REPORT.test(own) ? section : own, section })
+  }
+  return out
+}
