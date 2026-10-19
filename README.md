@@ -139,7 +139,7 @@ Flags point out how something was done. They don't say anything about anyone's m
 | Time extension only | Moves the end date without adding money | AI, from the text |
 | Emergency | The text describes emergency work or contracting | AI, from the text |
 
-Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet (always the case for new items on a draft agenda). <!-- generated:review -->Right now 12,096 items are `auto_ok`, 117 are `human_reviewed`, 11 are `needs_review`, 2 are `blocked` and 1 is `pending`.<!-- /generated:review -->
+Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet (always the case for new items on a draft agenda). <!-- generated:review -->Right now 12,095 items are `auto_ok`, 117 are `human_reviewed`, 11 are `needs_review`, 3 are `blocked` and 1 is `pending`.<!-- /generated:review -->
 
 ## Known limitations
 
