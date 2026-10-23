@@ -6,7 +6,7 @@ The data backs the [Consent Report Tracker on the Oakland vs. the World blog](ht
 
 The blog and this tracker are independent projects. It isn't an official OUSD platform and isn't affiliated with the district. All engineering, compute and hosting costs are donated by [Aleph](https://aleph.dev).
 
-<!-- generated:stats -->As of October 23, 2026, it covers 164 Board meetings, from August 14, 2019 to October 28, 2026. That's 12,236 consent items authorizing $2.03 billion in spending, plus $502.5 million in grants and other money coming in, across 2,220 vendors and partners. Not counted in those totals: $257.4 million in grant applications, $153.3 million in budget allocations such as Measure N and G1 plans, and $3.76 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
+<!-- generated:stats -->As of October 23, 2026, it covers 164 Board meetings, from August 14, 2019 to October 28, 2026. That's 12,237 consent items authorizing $2.03 billion in spending, plus $503.2 million in grants and other money coming in, across 2,220 vendors and partners. Not counted in those totals: $257.4 million in grant applications, $153.3 million in budget allocations such as Measure N and G1 plans, and $3.76 billion in payroll and vendor checks the Board ratified after they were paid.<!-- /generated:stats -->
 
 ## Why this exists
 
@@ -139,7 +139,7 @@ Flags point out how something was done. They don't say anything about anyone's m
 | Time extension only | Moves the end date without adding money | AI, from the text |
 | Emergency | The text describes emergency work or contracting | AI, from the text |
 
-Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet (always the case for new items on a draft agenda). <!-- generated:review -->Right now 12,093 items are `auto_ok`, 117 are `human_reviewed`, 11 are `needs_review`, 5 are `blocked` and 20 are `pending`.<!-- /generated:review -->
+Every item also has a review status. `auto_ok` means it passed every check. `needs_review` means something is waiting on a person, and `review.alerts` says what. `blocked` means it failed a hard check, so only the official text is shown. `human_reviewed` means a person signed off, and `pending` means there's no summary yet (always the case for new items on a draft agenda). <!-- generated:review -->Right now 12,094 items are `auto_ok`, 117 are `human_reviewed`, 11 are `needs_review`, 5 are `blocked` and 20 are `pending`.<!-- /generated:review -->
 
 ## Known limitations
 
