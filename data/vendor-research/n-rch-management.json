@@ -1,0 +1,56 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP error (fields supported only by this page will be dropped)",
+      "field": "source:https://www.rchmanagement.com/about-us",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP error",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "n-rch-management",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "low",
+    "identitySignals": [
+      "Name match: RCH Management, a property management company in Oakland, CA, with its own website (rchmanagement.com). This is the only candidate found.",
+      "Location: the company says it is based in Oakland, CA, which matches the agenda text.",
+      "No public page links RCH Management to OUSD, the ECCCO program or workplace training. A property manager could plausibly host student internships, but I could not confirm it.",
+      "No registry record (California Secretary of State, IRS or SAM.gov) was found for this exact name, so legal name and IDs are unverified."
+    ],
+    "key": "n-rch-management",
+    "notes": "Low confidence, so not publishable. web_fetch was blocked (url_not_allowed) for rchmanagement.com, so I relied on search-result snippets only. The snippets show a main phone (510.474.3800) and a Gmail address (rchmanagement1@gmail.com), but I left them out because I could not confirm the identity or fetch the pages. A reviewer should check for an OUSD tie, such as the ECCCO Workplace Training Partners list or the MOU itself, and look up the entity in the California Secretary of State business search.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "RCH Management appears to be a property management company serving Oakland, California and nearby areas. Its website describes full-service property management for residential tenants. This is an unconfirmed match to the OUSD vendor.",
+      "website": "https://www.rchmanagement.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "headquarters",
+          "website"
+        ],
+        "title": "Property Management With Decades of Experience",
+        "url": "https://www.rchmanagement.com/about-us"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-25",
+  "review": null
+}
