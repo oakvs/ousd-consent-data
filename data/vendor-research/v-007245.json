@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://dynamicedservices.net/about-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dynamicedservices.net/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://dynamicedservices.net/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bizprofile.net/ca/placentia/dynamic-education-services-inc",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"caEntityNumber\" failed to load",
+      "field": "caEntityNumber",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-007245",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The name matches an active California general corporation, 'Dynamic Education Services, Inc', filed 2018 with entity number 4221140 and based in Placentia, CA (a registry-data aggregator, bizprofile.net).",
+      "The organization's own website, dynamicedservices.net, says it is a state-certified Non-Public Agency that provides special education teachers and therapists. This matches OUSD's 'Services Agreement 2026-2027 - Special Education Department' and the special education funding source.",
+      "A search result from an OUSD Board of Education agenda (2025-26 Nonpublic Agencies list) names Dynamic Education Services, Inc. among special education nonpublic providers. I did not fetch that page, so it is not cited.",
+      "The website's contact page names the same company officer who the registry data lists as CEO and registered agent."
+    ],
+    "key": "v-007245",
+    "notes": "The agenda gave no city, and the vendor name came from the item title only. The California entity number and address come from bizprofile.net, which says it copies California Secretary of State data. I did not check bizfileonline directly. The website's only listed email is a named person's address, so email is null. The website does not show a street address. No EIN or SAM UEI was found; the company is for-profit, so no nonprofit EIN is expected. The phone is copied as the website shows it. The website lists the same number for office and fax.",
+    "profile": {
+      "address": "701 W. Kimberly Ave Suite 115, Placentia, CA 92870",
+      "caEntityNumber": "4221140",
+      "ein": null,
+      "email": null,
+      "headquarters": "Placentia, CA",
+      "legalName": "Dynamic Education Services, Inc",
+      "orgType": "company",
+      "phone": "714-823-3361",
+      "samUei": null,
+      "summary": "A California company that provides special education teachers and therapists, called education specialists. They give one-to-one instruction, therapy and transition services to students ages 5-22, in homes, public libraries or other facilities. It is a state-certified Non-Public Agency (NPA) that also offers assessments.",
+      "website": "https://dynamicedservices.net/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Us – Dynamic Education Services",
+        "url": "https://dynamicedservices.net/about-us/"
+      },
+      {
+        "supports": [
+          "website",
+          "summary"
+        ],
+        "title": "Dynamic Education Services",
+        "url": "https://dynamicedservices.net/"
+      },
+      {
+        "supports": [
+          "phone",
+          "website"
+        ],
+        "title": "Contact Us – Dynamic Education Services",
+        "url": "https://dynamicedservices.net/contact-us/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Dynamic Education Services, Inc Placentia, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/placentia/dynamic-education-services-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-29",
+  "review": {
+    "key": "v-007245",
+    "notes": "This is the same organization. OUSD's 2025-26 nonpublic agency board item lists Dynamic Education Services, Inc. by name, and the company's site and outside sources (a Main Street Launch profile, an SFUSD master contract) show this Placentia company provides NPA special education services across California. Every field checks out against the cited sources: legal name, entity number 4221140, address and headquarters from bizprofile, the phone from the contact page, and a neutral summary from the homepage and About page.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
