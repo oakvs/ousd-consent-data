@@ -96,7 +96,7 @@ Every change becomes a commit in this repository with a readable message, like `
 | Summaries, August 2019 – September 2026 (12,063 items) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`, prompt `enrich.v5`) |
 | Summaries, October 2026 (182 items) | Claude Opus 5.5 through the Claude API (`claude-opus-5-5`, prompt `enrich.v6`) |
 | Second readings, August 2019 – October 2026 (3,510 items) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`, prompt `verify.v2`) |
-| Vendor research (119 vendors, 63 published) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`) |
+| Vendor research (121 vendors, 63 published) | Claude Sonnet 5.5 through the Claude API (`claude-sonnet-5-5`) |
 | Vendor research (1,911 vendors, 1,284 published) | Claude Sonnet, run as Claude Code agents (`sonnet-agent`) |
 <!-- /generated:models -->
 
