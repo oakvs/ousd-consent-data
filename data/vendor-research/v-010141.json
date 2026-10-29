@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.novoco.com/company",
+      "pass": false
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.novoco.com/products/faqs-and-feedback",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-010141",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda title names 'Novogradac & Company LLP'. That name matches the San Francisco accounting and consulting firm exactly, and the name is distinctive.",
+      "The agenda item is for a Solar Investment Tax Credit service. The firm's own About page says its energy practice covers the investment tax credit for solar, including consulting, tax and accounting.",
+      "The firm is headquartered in San Francisco, in the Bay Area and the same state as OUSD. Nothing found contradicts the match."
+    ],
+    "key": "v-010141",
+    "notes": "The main phone (415.356.8000) and the street address (1160 Battery Street, East Building, Suite 225, San Francisco, CA 94111) appeared in search results. The pages showing them could not be fetched, so phone and address are left null. The FAQ page shows only a Products Desk phone number and a PO Box, not the main line, so I did not use them. I did not find or verify the EIN, California Secretary of State entity number or SAM.gov UEI. The agenda gave no city, and the identity match rests on the firm name and the service described. The only Secretary of State result was for 'Novogradac Consulting LLP', a Maryland entity in Florida records. That may be a different entity, so I did not use it.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "San Francisco, CA",
+      "legalName": "Novogradac & Company LLP",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "Novogradac & Company LLP is a certified public accounting and consulting firm. It provides audit, tax, valuation and consulting services. Its clients are mostly in real estate, affordable housing, community development and renewable energy. It is headquartered in San Francisco, California.",
+      "website": "https://www.novoco.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "headquarters"
+        ],
+        "title": "About Novogradac",
+        "url": "https://www.novoco.com/company"
+      },
+      {
+        "supports": [
+          "legalName"
+        ],
+        "title": "FAQs and Feedback",
+        "url": "https://www.novoco.com/products/faqs-and-feedback"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-29",
+  "review": {
+    "key": "v-010141",
+    "notes": "The agenda names Novogradac & Company LLP, a distinctive name, for Solar Investment Tax Credit work. The firm's About page says its practice covers the investment tax credit for solar, says it is headquartered in San Francisco, and supports the CPA, audit, tax, valuation and consulting summary with its focus on real estate, affordable housing, community development and renewable energy. The FAQ page names Novogradac & Company LLP and gives a San Francisco PO Box, which supports the legal name. One caveat: the About page describes the wider Novogradac organization, which calls the LLP its largest constituent company, and says it has a 'major emphasis' on real estate, so the summary's 'mostly' slightly overstates the source but is still acceptable.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

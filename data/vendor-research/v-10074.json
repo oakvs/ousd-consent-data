@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.obrelectric.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bbb.org/us/ca/oakland/profile/electrical-contractors/obr-electric-limited-liability-co-1116-951862",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-10074",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name match: the agenda's 'OBR Electric, LLC' matches 'OBR Electric Limited Liability Co', an electrical contractor in Oakland, CA (BBB profile, which lists California contractor license 1094999).",
+      "Business type match: OUSD's agreement is for site improvements at Montera Middle School, handled by Facilities. OBR Electric's website describes commercial and industrial electrical work in the East Bay.",
+      "Not confirmed: no California Secretary of State record, no OUSD or Montera mention, and no city in the agenda text. The match rests on the name and the type of work."
+    ],
+    "key": "v-10074",
+    "notes": "Medium confidence, so this should not be published as is. I could not reach the California Secretary of State record, so the entity number is missing, and SAM.gov was not checked. The only email found is a named person's address (Oscar@...), so I left it out. No street address is on the fetched website pages. Other directories list 447 17th St, Oakland, CA 94612, and 3397 Arkansas St, Oakland, CA 94602 is also listed, so I left the address null. The website contact page could not be fetched.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "OBR Electric Limited Liability Co",
+      "orgType": "company",
+      "phone": "510-566-8106",
+      "samUei": null,
+      "summary": "OBR Electric is an electrical contractor based in Oakland, California. It provides residential, commercial and industrial electrical services in the San Francisco Bay Area. These include service upgrades, electric vehicle charger installation and new construction work. The website says it has operated since 2015.",
+      "website": "https://www.obrelectric.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "headquarters"
+        ],
+        "title": "OBR Electric",
+        "url": "https://www.obrelectric.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "orgType",
+          "headquarters",
+          "phone"
+        ],
+        "title": "OBR Electric Limited Liability Co - BBB Business Profile",
+        "url": "https://www.bbb.org/us/ca/oakland/profile/electrical-contractors/obr-electric-limited-liability-co-1116-951862"
+      }
+    ]
+  },
+  "researchedAt": "2026-10-29",
+  "review": null
+}
