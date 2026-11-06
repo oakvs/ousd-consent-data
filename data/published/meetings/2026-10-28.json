@@ -843,9 +843,9 @@
           "pass": true
         },
         {
-          "detail": "evidence not found verbatim: \"in the cumulative not-to-exceed amount of $19,743.61\"",
+          "detail": null,
           "name": "evidence_substring",
-          "pass": false
+          "pass": true
         },
         {
           "detail": null,
@@ -880,10 +880,44 @@
       ],
       "consentSection": "general",
       "countsTowardTotals": false,
-      "enrichment": null,
+      "enrichment": {
+        "actionType": "change_order",
+        "category": "School buildings & construction",
+        "flags": [],
+        "headline": "Adds $19,743.61 to Next Generation of Builders' Markham Elementary boys' restroom renovation and extends it 40 days",
+        "money": {
+          "amountType": "not_to_exceed",
+          "byYear": {},
+          "direction": "expense",
+          "evidence": "in the not-to-exceed amount of $19,743.61, increasing the contract price from $250,271.39 to $270,015.00",
+          "newTotal": 270015,
+          "priorTotal": 250271.39,
+          "thisAction": 19743.61,
+          "thisActionRange": null
+        },
+        "schools": [
+          "Markham Elementary School"
+        ],
+        "sourceIssueCandidate": null,
+        "subcategory": null,
+        "summary": "This change order pays Next Generation of Builders for extra work on the Markham Elementary boys' restroom renovation: removing hallway tile, work on a drinking fountain, and trim, cleaning, ceiling and paint work around windows. It raises the contract from $250,271.39 to $270,015.00 and extends the end date by 40 days, from August 21 to September 30, 2026. The work is paid from deferred maintenance funds, and the new end date falls before this October 28, 2026 board meeting.",
+        "term": {
+          "addedStart": "2026-08-22",
+          "end": "2026-09-30",
+          "start": "2026-07-29"
+        },
+        "uncertain": [],
+        "vendor": {
+          "kind": "organization",
+          "location": "Santa Clara, CA",
+          "name": "Next Generation of Builders, LLC"
+        }
+      },
       "file": "26-2124",
       "flags": [
-        "pulled_from_consent"
+        "pulled_from_consent",
+        "after_work_began",
+        "raises_existing_contract"
       ],
       "fundingSource": "Fund 140, Deferred Maintenance",
       "group": "Chief Systems and Services Officer",
@@ -932,7 +966,7 @@
         "modelId": "claude-opus-5-5",
         "promptVersion": "enrich.v6.md",
         "reviewedAt": null,
-        "status": "blocked",
+        "status": "auto_ok",
         "verifiedBy": null
       },
       "sourceIssue": null,
@@ -12580,14 +12614,14 @@
     },
     "bySubcategory": {},
     "decreaseTotal": 63000,
-    "enrichedItems": 90,
+    "enrichedItems": 91,
     "flagCounts": {
-      "after_work_began": 75,
+      "after_work_began": 76,
       "budget_allocation": 1,
       "large_increase": 2,
       "multi_year": 26,
       "pulled_from_consent": 2,
-      "raises_existing_contract": 4,
+      "raises_existing_contract": 5,
       "time_extension_only": 4,
       "yearly_cap": 1
     },
