@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bizprofile.net/ca/santa-clara/moka-engineering-and-construction",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://ousd.legistar.com/MeetingDetail.aspx?GUID=851A5268-ECE1-4DF9-AB28-BD8F0C1253EF&ID=1407715&Options=&Search=",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"address\" failed to load",
+      "field": "address",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"caEntityNumber\" failed to load",
+      "field": "caEntityNumber",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    }
+  ],
+  "key": "v-26010",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Agenda names \"Moka Engineering Construction, Inc., Santa Clara, CA\" as the contractor for the Prescott Elementary School site improvement project. A California Secretary of State-derived record (BizProfile) lists \"Moka Engineering And Construction LLC\" in Santa Clara, CA. The city matches.",
+      "Business directories and a school-district approved-contractor list show a general contractor named Moka Engineering and Construction at 3315 Montgomery Dr., Unit 312, Santa Clara, which fits OUSD's construction-services contract.",
+      "Mismatch: the agenda says \"Inc.\" but the registry entity found is an LLC. I could not confirm they are the same legal entity, or whether a separate corporation exists."
+    ],
+    "key": "v-26010",
+    "notes": "Not publishable. The agenda says \"Moka Engineering Construction, Inc.\", but the only registry record found is for \"Moka Engineering And Construction LLC\" (CA entity 202027910050, a Texas-formed LLC). They may be the same business with the agenda naming it loosely, or a separate entity. I did not verify this on the California Secretary of State site itself. The CSLB license (#1079408) was listed under the LLC name on BuildZoom, which I did not fetch. A likely website, mokaconstruction.com, appeared only in search snippets and I could not fetch it, so website, phone and email are left null. No EIN or SAM UEI was found. A human reviewer should check the entity name on the CSLB or Secretary of State site and the OUSD contract before publishing.",
+    "profile": {
+      "address": "3315 Montgomery Dr., Unit 312, Santa Clara, CA 95054",
+      "caEntityNumber": "202027910050",
+      "ein": null,
+      "email": null,
+      "headquarters": "Santa Clara, CA",
+      "legalName": "Moka Engineering And Construction LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A general contractor based in Santa Clara, California. It provides construction services, and public contractor listings show it works on building projects in the San Francisco Bay Area.",
+      "website": null
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "address",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "Moka Engineering And Construction LLC Santa Clara, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/santa-clara/moka-engineering-and-construction"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "OUSD Board of Education meeting 5/13/2026, item O.-8",
+        "url": "https://ousd.legistar.com/MeetingDetail.aspx?GUID=851A5268-ECE1-4DF9-AB28-BD8F0C1253EF&ID=1407715&Options=&Search="
+      }
+    ]
+  },
+  "researchedAt": "2026-11-07",
+  "review": null
+}
