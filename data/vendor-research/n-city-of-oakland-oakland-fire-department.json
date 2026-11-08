@@ -1,0 +1,92 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.oaklandca.gov/Public-Safety-Streets/Fire",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://business.oaklandchamber.com/list/member/oakland-fire-department-9104",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-city-of-oakland-oakland-fire-department",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names 'City of Oakland (Oakland Fire Department)' in Oakland, CA. The City of Oakland's official website has a page for the Oakland Fire Department, a city department that serves Oakland.",
+      "The Oakland Chamber of Commerce directory lists the Oakland Fire Department as a City of Oakland government entity at 150 Frank H Ogawa Plaza, Oakland, CA. That matches the agenda's city.",
+      "The agenda item is a Site Use Agreement for fire department training on District property, handled by Facilities Planning and Management. This fits a municipal fire agency's work, and both parties are public bodies in Oakland."
+    ],
+    "key": "n-city-of-oakland-oakland-fire-department",
+    "notes": "This is a city department, not a separate legal entity. The legal entity is the City of Oakland, a public agency. It has no EIN, California Secretary of State entity number or SAM UEI that I verified, so those are null. The fetched copy of the city's Fire page did not show the contact block, though the search snippet did. The phone and address are therefore cited to the Oakland Chamber directory page, and both match the city's Departments listing. No general department email was found.",
+    "profile": {
+      "address": "150 Frank H Ogawa Plaza, Suite 3354 Oakland CA 94612",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Oakland, CA",
+      "legalName": "Oakland Fire Department",
+      "orgType": "public_agency",
+      "phone": "(510) 238-3856",
+      "samUei": null,
+      "summary": "The Oakland Fire Department is the City of Oakland's emergency response agency, serving the city since 1869. It provides fire suppression, emergency medical services, disaster response and fire prevention from 26 fire stations. It also runs specialized units such as urban search and rescue, hazardous materials and wildland firefighting.",
+      "website": "https://www.oaklandca.gov/Public-Safety-Streets/Fire"
+    },
+    "sources": [
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website",
+          "legalName"
+        ],
+        "title": "Fire | City of Oakland, CA",
+        "url": "https://www.oaklandca.gov/Public-Safety-Streets/Fire"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "orgType",
+          "website"
+        ],
+        "title": "Oakland Fire Department - Oakland Chamber of Commerce",
+        "url": "https://business.oaklandchamber.com/list/member/oakland-fire-department-9104"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-07",
+  "review": {
+    "key": "n-city-of-oakland-oakland-fire-department",
+    "notes": "This is the same organization: the Oakland Fire Department is the City of Oakland's fire department, and that fits a site use agreement for fire training on District property in Oakland. The city's Fire page (its full text came from a search result, because the direct fetch returned only the site menu) confirms the summary, including service since 1869, 26 fire stations and the USAR, HazMat and wildland units, and the Chamber directory confirms the phone number and the Suite 3354 Frank H Ogawa Plaza address.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

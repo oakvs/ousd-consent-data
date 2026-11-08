@@ -1,0 +1,78 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.fresnostate.edu/about.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.fresnostate.edu/directions.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "n-california-state-university-fresno",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches exactly: the Fresno State About Us page names the institution 'California State University, Fresno (Fresno State)'.",
+      "Location matches the agenda: the university's Directions page places the campus in Fresno, CA, and the agenda gives Fresno, CA.",
+      "The About page describes it as a public university serving California's Central Valley. That fits a public CSU campus signing a no-cost services agreement with a school district."
+    ],
+    "key": "n-california-state-university-fresno",
+    "notes": "This is a public university and state agency, not a nonprofit, so no IRS EIN or California Secretary of State entity number was sought. I did not search SAM.gov. Phone and mailing address are left null: search snippets showed a main line of 559.278.4240 and an address of 5241 N. Maple Ave., Fresno, CA 93740, but the fetched pages did not show them exactly. The Directions page text gives ZIP 93710, which conflicts with the 93740 in the search snippet. Related entities such as the California State University Fresno Foundation (EIN 94-6003272) are separate organizations and were not used. The agreement is with the Health Services Department, but no public page confirming that department's link to OUSD was checked.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Fresno, CA",
+      "legalName": "California State University, Fresno",
+      "orgType": "public_agency",
+      "phone": null,
+      "samUei": null,
+      "summary": "California State University, Fresno (Fresno State) is a public university serving California's Central Valley. It was founded in 1911 and has nearly 25,000 students. It offers bachelor's, master's and doctoral degree programs and is part of the California State University system.",
+      "website": "https://www.fresnostate.edu"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "About Us - Fresno State",
+        "url": "https://www.fresnostate.edu/about.html"
+      },
+      {
+        "supports": [
+          "headquarters"
+        ],
+        "title": "Directions - California State University, Fresno",
+        "url": "https://www.fresnostate.edu/directions.html"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-07",
+  "review": {
+    "key": "n-california-state-university-fresno",
+    "notes": "I fetched both cited pages. The About page confirms the official name and that it is a public university serving the Central Valley, founded in 1911, with nearly 25,000 students and bachelor's, master's and doctoral programs. The Directions page places the campus at 5241 N. Maple Ave., Fresno, matching the agenda's Fresno, CA. The About page never says outright that the school is in the CSU system, but its official name and the agenda title ('California State University (CSU), Fresno') make that claim safe.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
