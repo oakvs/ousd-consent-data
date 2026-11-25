@@ -1,0 +1,121 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://craig-communications.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://craig-communications.com/about/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bizprofile.net/ca/oakland/craig-communications-inc",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://craig-communications.com/about/team/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"caEntityNumber\" failed to load",
+      "field": "caEntityNumber",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-9587",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a California registered corporation, 'Craig Communications, Inc.' (entity no. 3343654, active, filed 2010, Oakland address on file), via the bizprofile.net mirror of Secretary of State data.",
+      "The Secretary of State record lists Tracy Craig as CEO and director, and the company website's team page lists Tracy Craig as Principal / Owner.",
+      "The company is based in the Oakland / East Bay area, a plausible match for an OUSD facilities contractor.",
+      "An OUSD board agenda (11 March 2026) lists a separate General Services Agreement with 'Craig Communications, Inc.' for community engagement services. This shows the same named firm works for OUSD. It was seen only in search results, not fetched.",
+      "The company's website describes environmental and development community engagement work, which fits an engagement contract tied to Prescott Elementary School."
+    ],
+    "key": "v-9587",
+    "notes": "The California entity record (bizprofile.net mirror, updated 7/15/2025) shows a principal address of 344 20th Street, Oakland, CA 94612. The company website shows 1900 Powell Street, Suite 700, Emeryville, CA 94608. I used the website address and listed Emeryville as headquarters. A reviewer may want to check this against the live Secretary of State record. The website shows its email as 'hello(at)craig-communications.com', which is not an exact email string, so I left email null. The Secretary of State data came from a third-party mirror, not bizfileonline.sos.ca.gov. This is a company, so there is no EIN. I did not search SAM.gov, so no UEI is given. The 2026 OUSD agreement and the yespress.io article appeared only in search results and were not fetched, so they are not cited.",
+    "profile": {
+      "address": "1900 Powell Street, Suite 700 Emeryville, CA 94608",
+      "caEntityNumber": "3343654",
+      "ein": null,
+      "email": null,
+      "headquarters": "Emeryville, CA",
+      "legalName": "Craig Communications, Inc.",
+      "orgType": "company",
+      "phone": "+1 (510) 680-0769",
+      "samUei": null,
+      "summary": "Craig Communications is a woman-owned public affairs agency in the San Francisco Bay Area. It helps clients on environmental, development and energy projects build relationships with communities and regulatory agencies. Its services include community outreach and engagement, public participation and media relations.",
+      "website": "https://craig-communications.com/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "summary",
+          "orgType"
+        ],
+        "title": "Home | Craig Communications",
+        "url": "https://craig-communications.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "What Sets Us Apart | Craig Communications",
+        "url": "https://craig-communications.com/about/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "orgType"
+        ],
+        "title": "Craig Communications, Inc. Oakland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/oakland/craig-communications-inc"
+      },
+      {
+        "supports": [],
+        "title": "Team | Craig Communications",
+        "url": "https://craig-communications.com/about/team/"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-25",
+  "review": {
+    "key": "v-9587",
+    "notes": "This is the same organization. Craig Communications, Inc. is an active East Bay public affairs firm (California entity no. 3343654), and an OUSD agenda from March 2026 shows a separate agreement with the same corporation for community engagement under the Division of Facilities Planning and Management, which fits the Prescott facilities item. The company website supports the summary, phone, Emeryville address and headquarters, and bizprofile supports the legal name, entity number and company type. The website's Emeryville address differs from the Oakland address in the state record, but the website is the more current business contact source.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

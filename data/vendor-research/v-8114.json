@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.bsafeinspection.com/",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://www.bizprofile.net/ca/sunland/b-safe-playground-inspection",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": "every page cited for \"caEntityNumber\" failed to load",
+      "field": "caEntityNumber",
+      "pass": false
+    },
+    {
+      "detail": "every page cited for \"legalName\" failed to load",
+      "field": "legalName",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-8114",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda name 'BSAFE Playground Inspection Services, Inc.' matches an active California corporation, 'B Safe Playground Inspection Services, Inc.' (entity number 4672063, Sunland, CA). The registry spells the name 'B Safe' with a space.",
+      "The company's website, bsafeinspection.com, says BSAFE inspects playgrounds and tests surface impact throughout California, with a Bay Area service region. This fits OUSD's playground inspection contracts at elementary schools.",
+      "The website is for 'BSAFE Playground Inspection Services', a name that closely matches the agenda text and the registry name. It lists a general email and phone number.",
+      "The OUSD contracts were presented by the Facilities Planning and Management office, which fits a playground safety inspection service."
+    ],
+    "key": "v-8114",
+    "notes": "The registry data comes from bizprofile.net, a third-party copy of California Secretary of State records, not the official bizfileonline site. The registry name is 'B Safe', while the agenda and website use 'BSAFE'. I left the address blank on purpose: the registry lists a Sunland street address that is also the registered agent's address, which may be a home address. The website gives no street address. No EIN or SAM.gov UEI was found. This is a for-profit corporation, so an EIN is not expected from nonprofit registries.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": "4672063",
+      "ein": null,
+      "email": "admin@bsafeinspection.com",
+      "headquarters": "Sunland, CA",
+      "legalName": "B Safe Playground Inspection Services, Inc.",
+      "orgType": "company",
+      "phone": "(818)208-1894",
+      "samUei": null,
+      "summary": "A California company that inspects playgrounds and tests the impact absorption of playground surfacing. It serves schools and community playgrounds across California, including the Bay Area. It was incorporated in California in December 2020.",
+      "website": "https://www.bsafeinspection.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "summary",
+          "orgType"
+        ],
+        "title": "BSAFE Playground Inspection Services",
+        "url": "https://www.bsafeinspection.com/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "caEntityNumber",
+          "headquarters",
+          "orgType"
+        ],
+        "title": "B Safe Playground Inspection Services, Inc. Sunland, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/sunland/b-safe-playground-inspection"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-25",
+  "review": {
+    "key": "v-8114",
+    "notes": "The website bsafeinspection.com describes playground inspections and surfacing impact testing for school playgrounds across California, including the Bay Area, and lists (818)208-1894 and admin@bsafeinspection.com. The 818 area code matches the Sunland, CA corporation, which bizprofile.net (a third-party copy of state records) lists as entity 4672063, active, incorporated December 21, 2020. The website itself never names the corporation, but the matching name, matching services and Los Angeles–area phone number make this very likely the same company OUSD contracts with, and the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.apenaengineering.com",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.bizprofile.net/ca/san-leandro/apena-construction-inc",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-9905",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": false,
+  "research": {
+    "confidence": "medium",
+    "identitySignals": [
+      "Name matches exactly: the agenda says 'Apena Engineering, Inc.' and the company's own website footer says 'APENA Engineering, Inc.'",
+      "A California general corporation with the same name is registered in San Leandro, CA (entity no. 5563271, active, per a registry-data aggregator), so it is in the Bay Area near Oakland",
+      "The website describes a Bay Area general engineering contractor doing grading, paving and underground utility work. That is plausible for a demolition and site contract with OUSD Facilities",
+      "The company has bid on other East Bay public-agency projects, including the City of San Leandro. I found no page that links it directly to OUSD."
+    ],
+    "key": "v-9905",
+    "notes": "Confidence is medium because I found no page directly tying this company to OUSD or the Ethel Moore demolition. The California entity number and address come from a third-party aggregator of Secretary of State data (bizprofile.net), not the Secretary of State site itself. A phone number, (510) 575-2547, appears in directory listings but not on the company's own website, so I left it null. The EIN and SAM UEI were not found. The name on the registry differs slightly from the agenda ('Apena Engineering Inc.' without the comma).",
+    "profile": {
+      "address": "207 Oakes Blvd, San Leandro, CA 94577",
+      "caEntityNumber": "5563271",
+      "ein": null,
+      "email": "info@apenaengineering.com",
+      "headquarters": "San Leandro, CA",
+      "legalName": "APENA Engineering, Inc.",
+      "orgType": "company",
+      "phone": null,
+      "samUei": null,
+      "summary": "A Bay Area general engineering contractor. It specializes in small-to-medium grading and paving projects, plus underground utility installation and repair. It says it is licensed to work throughout California.",
+      "website": "https://apenaengineering.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "email"
+        ],
+        "title": "APEÑA Engineering",
+        "url": "https://www.apenaengineering.com"
+      },
+      {
+        "supports": [
+          "address",
+          "headquarters",
+          "caEntityNumber"
+        ],
+        "title": "Apena Engineering Inc. San Leandro, CA - filing information",
+        "url": "https://www.bizprofile.net/ca/san-leandro/apena-construction-inc"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-25",
+  "review": null
+}
