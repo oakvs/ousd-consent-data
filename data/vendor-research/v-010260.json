@@ -1,0 +1,138 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://vertosoft.com/contact-us/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://vertosoft.com/about-vertosoft/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://vertosoft.com/cmas/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://opencorporates.com/companies/us_ca/202001310124",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://sossecinc.com/company/vertosoft-llc/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "caEntityNumber",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "samUei",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010260",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda name 'Vertosoft LLC' exactly matches the registered company 'Vertosoft, LLC', which is registered in California as an out-of-state LLC (CA entity 202001310124).",
+      "The agenda item is a 'CMAS Information Technology Purchase Agreement'. Vertosoft's own website lists the California Multiple Award Schedule (CMAS) as one of its state contract vehicles for selling software to public agencies.",
+      "Vertosoft describes itself as a distributor of software to government agencies, which fits a software procurement project bought through a state schedule.",
+      "The agenda gives no city. The company is based in Leesburg, VA but is registered to do business in California, so the match rests on the name and the contract type."
+    ],
+    "key": "v-010260",
+    "notes": "The phone is left null. The company site shows it as '(571) 707 – 4130', with spaced dashes, so I could not copy it exactly. Third-party pages list the same number. The California registration is as an out-of-state LLC, a branch of the Virginia entity Vertosoft, LLC (VA S6390514). The SAM.gov UEI comes from a third-party mirror, because the SAM.gov and GovTribe pages could not be fetched. A reviewer may want to confirm it on SAM.gov. This is a for-profit company, so no EIN applies. The OUSD record gives only the vendor name and no vendor-specific details such as the project owner's contact.",
+    "profile": {
+      "address": "1602 Village Market Blvd SE Suite 320, Leesburg, VA 20175",
+      "caEntityNumber": "202001310124",
+      "ein": null,
+      "email": "info@vertosoft.com",
+      "headquarters": "Leesburg, VA",
+      "legalName": "Vertosoft, LLC",
+      "orgType": "company",
+      "phone": null,
+      "samUei": "Y7D5MXRU2839",
+      "summary": "Vertosoft is a company that distributes and resells software and technology products to government and public sector customers. Founded in 2016, it sells through government contract vehicles such as the California Multiple Award Schedule (CMAS) and the federal General Services Administration (GSA) schedule. It is based in Leesburg, Virginia.",
+      "website": "https://vertosoft.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "website",
+          "email",
+          "address",
+          "headquarters"
+        ],
+        "title": "Contact Us - Vertosoft",
+        "url": "https://vertosoft.com/contact-us/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType"
+        ],
+        "title": "About Vertosoft",
+        "url": "https://vertosoft.com/about-vertosoft/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "CMAS: California Multiple Award Schedule - Vertosoft",
+        "url": "https://vertosoft.com/cmas/"
+      },
+      {
+        "supports": [
+          "caEntityNumber",
+          "headquarters"
+        ],
+        "title": "VERTOSOFT, LLC :: California (US) :: OpenCorporates",
+        "url": "https://opencorporates.com/companies/us_ca/202001310124"
+      },
+      {
+        "supports": [
+          "samUei"
+        ],
+        "title": "Vertosoft LLC - SOSSEC",
+        "url": "https://sossecinc.com/company/vertosoft-llc/"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-25",
+  "review": {
+    "key": "v-010260",
+    "notes": "The cited sources support every field, so nothing needs to be dropped. Vertosoft's own CMAS page lists its California Multiple Award Schedule contract (3-23-06-1020, based on GSA schedule GS-35F-688GA), and its site confirms the 2016 founding, the focus on selling software to government, the Leesburg, VA address and info@vertosoft.com. OpenCorporates confirms CA entity 202001310124 as a California branch of the Virginia LLC, and the SOSSEC page lists UEI Y7D5MXRU2839 (SOSSEC is a third-party site, and I did not check the UEI on SAM.gov).",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

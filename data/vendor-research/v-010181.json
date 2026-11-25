@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://cardeaservices.org/contact/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/942401949",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "email",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-010181",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "Name matches a registered nonprofit: 'Cardea Services' (ProPublica Nonprofit Explorer, EIN 94-2401949, 501(c)(3), health-sector category), the same name the agenda uses",
+      "Cardea's own contact page lists staff based in Oakland, CA, and says it partners with public agencies on public health and human services, which fits a Community Schools and Student Services contract funded by Healthy Oakland Teens",
+      "Search results show Cardea Services with an Oakland office at 614 Grand Ave and federal HHS reproductive and sexual health grants, which fits a sexual health education program like Healthy Oakland Teens"
+    ],
+    "key": "v-010181",
+    "notes": "No direct page was found linking Cardea Services to OUSD. The match rests on the exact name, the Oakland presence and the subject-matter fit. The agenda gave no vendor location. Registry (IRS) lists Seattle, WA. Older sources show an Oakland office at 614 Grand Ave Ste 400, but no current mailing address was confirmed on a fetched page, so address is null. A related older Oakland entity, 'Cardea Center for Health and Human Services' (EIN 93-1220473), exists and was not used. CA Secretary of State and SAM.gov were not checked, so caEntityNumber and samUei are null.",
+    "profile": {
+      "address": null,
+      "caEntityNumber": null,
+      "ein": "94-2401949",
+      "email": "connect@cardeaservices.org",
+      "headquarters": "Seattle, WA",
+      "legalName": "Cardea Services",
+      "orgType": "nonprofit",
+      "phone": "(206) 447-9538",
+      "samUei": null,
+      "summary": "Cardea Services is a nonprofit that works with public agencies, nonprofits and community organizations on public health and human services. It offers evaluation, capacity building and professional learning, and policy support. It has staff in Seattle, Oakland, Austin and Washington, D.C.",
+      "website": "https://cardeaservices.org"
+    },
+    "sources": [
+      {
+        "supports": [
+          "website",
+          "phone",
+          "email",
+          "summary",
+          "headquarters"
+        ],
+        "title": "Contact | Cardea Services",
+        "url": "https://cardeaservices.org/contact/"
+      },
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Cardea Services - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/942401949"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-25",
+  "review": {
+    "key": "v-010181",
+    "notes": "Both cited sources back every field. ProPublica shows Cardea Services in Seattle, WA as a 501(c)(3) with EIN 94-2401949, and the contact page gives the phone, email, service areas, public health and human services focus, and staff in Austin, Oakland, Seattle and D.C. The OUSD match is not confirmed by any document linking the two, but it rests on the exact name, Cardea's Oakland staff and its fit with sexual health and student services work funded by Healthy Oakland Teens. I found no similarly named organization that fits better.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
