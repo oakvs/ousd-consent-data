@@ -1,0 +1,100 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.familieslearning.org/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.familieslearning.org/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-008137",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The name 'National Center for Families Learning' matches the agenda's service-agreement title exactly. The organization's own website lists it as a 501(c)(3) with EIN 61-1159549, and Charity Navigator (a search result I did not fetch) lists the same EIN.",
+      "The website describes family literacy and education programs for families and adults. This fits a services agreement with OUSD's Adult and Career Education Department, funded by the Adult Education Program.",
+      "The agenda gives no city, so location could not be checked. The name is distinctive, and I found no other organization with a similar name."
+    ],
+    "key": "v-008137",
+    "notes": "The agenda gave no location or description, so the match rests on the exact name and a program fit with adult and family education. I did not check the California Secretary of State or SAM.gov, so the CA entity number and UEI are null. No general email address was found on the pages fetched. The 'nonprofit' label rests on the EIN shown on the organization's site and on Charity Navigator's 501(c)(3) listing. I did not check ProPublica or IRS records.",
+    "profile": {
+      "address": "325 West Main Street Suite 300 Louisville, KY 40202",
+      "caEntityNumber": null,
+      "ein": "61-1159549",
+      "email": null,
+      "headquarters": "Louisville, KY",
+      "legalName": "National Center for Families Learning",
+      "orgType": "nonprofit",
+      "phone": "(502) 584-1133",
+      "samUei": null,
+      "summary": "The National Center for Families Learning (NCFL) is a nonprofit based in Louisville, Kentucky. It develops family learning and family literacy programs, resources, and professional learning for educators. Its stated aim is to reduce poverty through education solutions for families.",
+      "website": "https://www.familieslearning.org/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "summary",
+          "orgType",
+          "website",
+          "phone",
+          "address",
+          "headquarters",
+          "ein"
+        ],
+        "title": "National Center for Families Learning - Home",
+        "url": "https://www.familieslearning.org/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address",
+          "headquarters",
+          "legalName"
+        ],
+        "title": "Contact - National Center for Families Learning",
+        "url": "https://www.familieslearning.org/contact"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-25",
+  "review": {
+    "key": "v-008137",
+    "notes": "I fetched both cited pages. The homepage and contact page show the exact name National Center for Families Learning, 325 West Main St. Suite 300 in Louisville, KY 40202, the phone number 502-584-1133 and EIN 61-1159549. They also describe family learning, professional learning and resources work, and the aim to eradicate poverty through education solutions for families, which fits OUSD's Adult and Career Education services agreement. The pages never use the words 'nonprofit' or '501(c)(3)', contrary to what the researcher said. I still accepted orgType and the summary's 'nonprofit' label because the site lists an EIN and asks for 'tax-deductible' donations, which strongly suggests charitable status, but it's an inference.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

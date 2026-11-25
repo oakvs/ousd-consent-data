@@ -1,0 +1,119 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://www.aveanna.com/contact-us.html",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aveanna.com/locations/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aveanna.com/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.aveanna.com/locations/191/west-covina-california-91790/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://www.privateequitywire.co.uk/aveanna-healthcare-completes-acquisition-premier-healthcare-services/",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "website",
+      "pass": true
+    }
+  ],
+  "key": "v-006216",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda names the vendor as 'Premier Healthcare Services, LLC dba Aveanna Healthcare'. The dba matches Aveanna Healthcare, which runs aveanna.com.",
+      "Trade press says Aveanna Healthcare acquired Premier Healthcare Services, a California pediatric home health provider, in 2018. This links the legal name to the Aveanna brand.",
+      "Aveanna's California location pages list school nursing and pediatric nursing services, and it has an Oakland-area office. This fits a special education nonpublic agency services contract."
+    ],
+    "key": "v-006216",
+    "notes": "legalName is null because I found no cited page that shows 'Premier Healthcare Services, LLC' exactly. The agenda text gives that name. I could not check the California Secretary of State, SAM.gov, or IRS registries, so caEntityNumber, ein, and samUei are null. This is a for-profit LLC, so it has no nonprofit EIN. The contact details are for Aveanna Healthcare's corporate headquarters in Atlanta. They are not for the Premier LLC entity or a local office, and no general email was found. A reviewer may want to confirm the entity in the California Secretary of State records.",
+    "profile": {
+      "address": "400 Interstate North Parkway, SE Suite 1600, Atlanta, GA 30339",
+      "caEntityNumber": null,
+      "ein": null,
+      "email": null,
+      "headquarters": "Atlanta, GA",
+      "legalName": null,
+      "orgType": "company",
+      "phone": "(770) 441-1580",
+      "samUei": null,
+      "summary": "Aveanna Healthcare is a company that provides home health care, private duty nursing, and hospice services for children and adults. It has locations in 39 states. In California, its services include pediatric nursing, including nursing during the school day.",
+      "website": "https://www.aveanna.com"
+    },
+    "sources": [
+      {
+        "supports": [
+          "phone",
+          "address",
+          "website"
+        ],
+        "title": "Aveanna Healthcare - Contact Us",
+        "url": "https://www.aveanna.com/contact-us.html"
+      },
+      {
+        "supports": [
+          "summary",
+          "headquarters"
+        ],
+        "title": "Aveanna Locations",
+        "url": "https://www.aveanna.com/locations/"
+      },
+      {
+        "supports": [
+          "summary",
+          "orgType",
+          "website"
+        ],
+        "title": "Home Health Care and Services",
+        "url": "https://www.aveanna.com/"
+      },
+      {
+        "supports": [
+          "summary"
+        ],
+        "title": "Aveanna - West Covina, California (Pediatrics - Private Duty Nursing)",
+        "url": "https://www.aveanna.com/locations/191/west-covina-california-91790/"
+      },
+      {
+        "supports": [],
+        "title": "Aveanna Healthcare completes acquisition of Premier Healthcare Services - Private Equity Wire",
+        "url": "https://www.privateequitywire.co.uk/aveanna-healthcare-completes-acquisition-premier-healthcare-services/"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-25",
+  "review": {
+    "key": "v-006216",
+    "notes": "The agenda's 'Premier Healthcare Services, LLC dba Aveanna Healthcare' matches Aveanna Healthcare, and Private Equity Wire confirms Aveanna acquired Premier Healthcare Services, a California pediatric provider. Aveanna's own pages support the summary (home health, hospice and private duty nursing for children and adults, 39 states, school-day nursing in California) as well as the Atlanta corporate address, phone number and website.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}

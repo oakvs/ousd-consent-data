@@ -1,0 +1,122 @@
+{
+  "checks": [
+    {
+      "detail": null,
+      "field": "source:https://projects.propublica.org/nonprofits/organizations/954457939",
+      "pass": true
+    },
+    {
+      "detail": "HTTP 403 (fields supported only by this page will be dropped)",
+      "field": "source:https://tzuchimedical.us/",
+      "pass": false
+    },
+    {
+      "detail": null,
+      "field": "source:https://tzuchimedical.us/contact",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "source:https://global.tzuchi.org/protecting-student-vision-in-oakland-with-icare-510",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "phone",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "address",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "ein",
+      "pass": true
+    },
+    {
+      "detail": null,
+      "field": "legalName",
+      "pass": true
+    },
+    {
+      "detail": "website returned HTTP 403",
+      "field": "website",
+      "pass": false
+    }
+  ],
+  "key": "v-009397",
+  "modelId": "claude-sonnet-5-5",
+  "promptVersion": "vendor-research.v3.md",
+  "publishable": true,
+  "research": {
+    "confidence": "high",
+    "identitySignals": [
+      "The agenda title names 'Buddhist Tzu Chi Medical Foundation', an exact match to a registered 501(c)(3) nonprofit in ProPublica Nonprofit Explorer (EIN 95-4457939, El Monte, CA).",
+      "The organization's own website, tzuchimedical.us, uses the same legal name. It describes affordable, charitable health care for underserved communities.",
+      "A Tzu Chi page says its Oakland Service Center team ran a vision-screening outreach at Franklin Elementary School in Oakland. That is the school named in the OUSD agreement title.",
+      "The Medical Foundation's site has a news page about its Northern California Oakland Service Center, so it is active in Oakland."
+    ],
+    "key": "v-009397",
+    "notes": "The name came from the agenda title only, since no vendor name or city was given. The Franklin Elementary link comes from a Tzu Chi global page that credits the 'Tzu Chi USA Oakland Service Center', not the Medical Foundation by name. The exact name match to the registered nonprofit and the Oakland Service Center news on the Medical Foundation site are the stronger signals. No general email or California Secretary of State entity number was found, and SAM.gov UEI was not checked. The phone and address are the Foundation's El Monte main office, not an Oakland location.",
+    "profile": {
+      "address": "9620 Flair Dr, El Monte, CA 91731",
+      "caEntityNumber": null,
+      "ein": "95-4457939",
+      "email": null,
+      "headquarters": "El Monte, CA",
+      "legalName": "Buddhist Tzu Chi Medical Foundation",
+      "orgType": "nonprofit",
+      "phone": "(626) 281-3383",
+      "samUei": null,
+      "summary": "A nonprofit that provides affordable, charitable health care for underserved communities. It runs Tzu Chi Health Centers in the Los Angeles area, mobile clinics in several cities, and medical outreach programs. It is part of the Tzu Chi (Buddhist Compassion Relief) humanitarian network.",
+      "website": "https://tzuchimedical.us/"
+    },
+    "sources": [
+      {
+        "supports": [
+          "legalName",
+          "ein",
+          "orgType",
+          "headquarters"
+        ],
+        "title": "Buddhist Tzu Chi Medical Foundation - Nonprofit Explorer - ProPublica",
+        "url": "https://projects.propublica.org/nonprofits/organizations/954457939"
+      },
+      {
+        "supports": [
+          "website",
+          "phone",
+          "address",
+          "summary",
+          "orgType",
+          "legalName"
+        ],
+        "title": "Tzu Chi Medical",
+        "url": "https://tzuchimedical.us/"
+      },
+      {
+        "supports": [
+          "phone",
+          "address"
+        ],
+        "title": "Contact Us - Tzu Chi Medical",
+        "url": "https://tzuchimedical.us/contact"
+      },
+      {
+        "supports": [],
+        "title": "Protecting student vision in Oakland with iCare 510",
+        "url": "https://global.tzuchi.org/protecting-student-vision-in-oakland-with-icare-510"
+      }
+    ]
+  },
+  "researchedAt": "2026-11-25",
+  "review": {
+    "key": "v-009397",
+    "notes": "The agenda title names Buddhist Tzu Chi Medical Foundation exactly, and ProPublica confirms that name with EIN 95-4457939, 501(c)(3) status and an El Monte, CA location. The Foundation's own site confirms the 9620 Flair Dr address, the (626) 281-3383 phone, its LA-area health centers, mobile clinics in several cities, TIMA medical outreach, and its ties to the Tzu Chi global network, and a Tzu Chi article describes a vision-screening outreach at Franklin Elementary in Oakland, supported by the mobile clinic team, which fits the agreement; the summary is neutral and supported.",
+    "sameOrganization": true,
+    "unsupportedFields": [],
+    "verdict": "confirmed"
+  }
+}
